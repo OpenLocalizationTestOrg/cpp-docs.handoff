@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1f24e4aafcb0bceb6c1fd4f2daa920019041610f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\managing-a-library.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">06927990988fe41aa35049751798ea6e678a35db</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0c7bb511f2b68f6b65cdc5af0409d599896c38c2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Managing a Library | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Managing a Library</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The default mode for LIB is to build or modify a library of COFF objects.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>LIB runs in this mode when you do not specify /EXTRACT (to copy an object to a file) or /DEF (to build an import library).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>To build a library from objects and/or libraries, use the following syntax:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This command creates a library from one or more input <bpt id="p1">*</bpt>files<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>files<ept id="p1">*</ept> can be COFF object files, 32-bit OMF object files, or existing COFF libraries.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>LIB creates one library that contains all objects in the specified files.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If an input file is a 32-bit OMF object file, LIB converts it to COFF before building the library.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>LIB cannot accept a 32-bit OMF object that is in a library created by the 16-bit version of LIB.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You must first use the 16-bit LIB to extract the object; then you can use the extracted object file as input to the 32-bit LIB.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>By default, LIB names the output file using the base name of the first object or library file and the extension .lib.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The output file is put in the current directory.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If a file already exists with the same name, the output file replaces the existing file.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To preserve an existing library, use the /OUT option to specify a name for the output file.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The following options apply to building and modifying a library:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>/LIBPATH:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Overrides the environment library path.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For details, see the description of the LINK <bpt id="p1">[</bpt>/LIBPATH<ept id="p1">](../../build/reference/libpath-additional-libpath.md)</ept> option.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>/LIST</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Displays information about the output library to standard output.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The output can be redirected to a file.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You can use /LIST to determine the contents of an existing library without modifying it.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>/NAME: <bpt id="p1">*</bpt>filename<ept id="p1">*</ept></source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>When building an import library, specifies the name of the DLL for which the import library is being built.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>/NODEFAULTLIB</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Removes one or more default libraries from the list of libraries it searches when resolving external references.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>/NODEFAULTLIB<ept id="p1">](../../build/reference/nodefaultlib-ignore-libraries.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>/OUT: <bpt id="p1">*</bpt>filename<ept id="p1">*</ept></source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Overrides the default output filename.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>By default, the output library is created in the current directory, with the base name of the first library or object file on the command line and the extension .lib.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>/REMOVE: <bpt id="p1">*</bpt>object<ept id="p1">*</ept></source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Omits the specified <bpt id="p1">*</bpt>object<ept id="p1">*</ept> from the output library.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>LIB creates an output library by combining all objects (whether in object files or libraries), and then deleting any objects specified with /REMOVE.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>/SUBSYSTEM:{CONSOLE &amp;#124; EFI_APPLICATION &amp;#124; EFI_BOOT_SERVICE_DRIVER &amp;#124; EFI_ROM &amp;#124; EFI_RUNTIME_DRIVER &amp;#124; NATIVE &amp;#124; POSIX &amp;#124; WINDOWS &amp;#124; WINDOWSCE}[,#[.##]]</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Tells the operating system how to run a program created by linking to the output library.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>For more information, see the description of the LINK <bpt id="p1">[</bpt>/SUBSYSTEM<ept id="p1">](../../build/reference/subsystem-specify-subsystem.md)</ept> option.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>LIB options specified on the command line are not case sensitive.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>You can use LIB to perform the following library-management tasks:</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To add objects to a library, specify the file name for the existing library and the filenames for the new objects.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>To combine libraries, specify the library file names.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>You can add objects and combine libraries with a single LIB command.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>To replace a library member with a new object, specify the library containing the member object to be replaced and the file name for the new object (or the library that contains it).</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When an object that has the same name exists in more than one input file, LIB puts the last object specified in the LIB command into the output library.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>When you replace a library member, be sure to specify the new object or library after the library that contains the old object.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>To delete a member from a library, use the /REMOVE option.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>LIB processes any specifications of /REMOVE after combining all input objects, regardless of command-line order.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>You cannot both delete a member and extract it to a file in the same step.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>You must first extract the member object using /EXTRACT, then run LIB again using /REMOVE.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This behavior differs from that of the 16-bit LIB (for OMF libraries) provided in other Microsoft products.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>LIB Reference</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

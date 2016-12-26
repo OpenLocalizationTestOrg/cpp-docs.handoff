@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8088b57e6d4e0c0c93f45144a92c0acd14754972</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\parallel-patterns-library-ppl.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">91a5a9ea9e6db732b4b76066295c9accf74ee7b7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8bfeebacf7f4c43d0fe82188f9df0a84a94f88c1</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library (PPL) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library (PPL)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The Parallel Patterns Library (PPL) provides an imperative programming model that promotes scalability and ease-of-use for developing concurrent applications.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The PPL builds on the scheduling and resource management components of the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>It raises the level of abstraction between your application code and the underlying threading mechanism by providing generic, type-safe algorithms and containers that act on data in parallel.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The PPL also lets you develop applications that scale by providing alternatives to shared state.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The PPL provides the following features:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Task Parallelism<ept id="p1">*</ept>: a mechanism that works on top of the Windows ThreadPool to execute several work items (tasks) in parallel</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Parallel algorithms<ept id="p1">*</ept>: generic algorithms that works on top of the Concurrency Runtime to act on collections of data in parallel</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Parallel containers and objects<ept id="p1">*</ept>: generic container types that provide safe concurrent access to their elements</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The PPL provides a programming model that resembles the Standard Template Library (STL).</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates many features of the PPL.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>It computes several Fibonacci numbers serially and in parallel.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Both computations act on a <bpt id="p1">[</bpt>std::array<ept id="p1">](../../standard-library/array-class-stl.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The example also prints to the console the time that is required to perform both computations.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The serial version uses the STL <bpt id="p1">[</bpt>std::for_each<ept id="p1">](http://msdn.microsoft.com/Library/8cb2ae72-bef6-488b-b011-0475c0787e33)</ept> algorithm to traverse the array and stores the results in a <bpt id="p2">[</bpt>std::vector<ept id="p2">](../../standard-library/vector-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The parallel version performs the same task, but uses the PPL <bpt id="p1">[</bpt>concurrency::parallel_for_each<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for_each)</ept> algorithm and stores the results in a <bpt id="p2">[</bpt>concurrency::concurrent_vector<ept id="p2">](../../parallel/concrt/reference/concurrent-vector-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`concurrent_vector`</ph> class enables each loop iteration to concurrently add elements without the requirement to synchronize write access to the container.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Because <ph id="ph1">`parallel_for_each`</ph> acts concurrently, the parallel version of this example must sort the <ph id="ph2">`concurrent_vector`</ph> object to produce the same results as the serial version.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Note that the example uses a naïve method to compute the Fibonacci numbers; however, this method illustrates how the Concurrency Runtime can improve the performance of long computations.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-fibonacci#1</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The following sample output is for a computer that has four processors.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Each iteration of the loop requires a different amount of time to finish.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The performance of <ph id="ph1">`parallel_for_each`</ph> is bounded by the operation that finishes last.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Therefore, you should not expect linear performance improvements between the serial and parallel versions of this example.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Related Topics</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Title</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Task Parallelism</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Describes the role of tasks and task groups in the PPL.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Describes how to use parallel algorithms such as <ph id="ph1">`parallel_for`</ph> and <ph id="ph2">`parallel_for_each`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Parallel Containers and Objects</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Describes the various parallel containers and objects that are provided by the PPL.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Explains how to cancel the work that is being performed by a parallel algorithm.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Describes the Concurrency Runtime, which simplifies parallel programming, and contains links to related topics.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

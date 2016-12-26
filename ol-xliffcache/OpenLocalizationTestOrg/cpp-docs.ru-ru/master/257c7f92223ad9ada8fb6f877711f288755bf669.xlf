@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">257c7f92223ad9ada8fb6f877711f288755bf669</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">331ace4bc5f158275df54e9e2286fbb14febc865</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">600b78ead926215fa330c53f8cd4819d5b59529f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Reads formatted data from a stream.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>These versions of <bpt id="p1">[</bpt>fscanf, _fscanf_l, fwscanf, _fwscanf_l<ept id="p1">](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)</ept> have security enhancements, as described in <bpt id="p2">[</bpt>Security Features in the CRT<ept id="p2">](../../c-runtime-library/security-features-in-the-crt.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Pointer to <ph id="ph1">`FILE`</ph> structure.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Format-control string.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Optional arguments.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The locale to use.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Each of these functions returns the number of fields that are successfully converted and assigned; the return value does not include fields that were read but not assigned.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A return value of 0 indicates that no fields were assigned.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If an error occurs, or if the end of the file stream is reached before the first conversion, the return value is <ph id="ph1">`EOF`</ph> for <ph id="ph2">`fscanf_s`</ph> and <ph id="ph3">`fwscanf_s`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>These functions validate their parameters.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`stream`</ph> is an invalid file pointer, or <ph id="ph2">`format`</ph> is a null pointer, these functions invoke the invalid parameter handler, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, these functions return <ph id="ph1">`EOF`</ph> and set <ph id="ph2">`errno`</ph> to <ph id="ph3">`EINVAL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`fscanf_s`</ph> function reads data from the current position of <ph id="ph2">`stream`</ph> into the locations that are given by <ph id="ph3">`argument`</ph> (if any).</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Each <ph id="ph1">`argument`</ph> must be a pointer to a variable of a type that corresponds to a type specifier in <ph id="ph2">`format`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>controls the interpretation of the input fields and has the same form and function as the <ph id="ph1">`format`</ph> argument for <ph id="ph2">`scanf_s`</ph>; see <bpt id="p1">[</bpt>Format Specification Fields: scanf and wscanf Functions<ept id="p1">](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)</ept> for a description of <ph id="ph3">`format`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>is a wide-character version of <ph id="ph1">`fscanf_s`</ph>; the format argument to <ph id="ph2">`fwscanf_s`</ph> is a wide-character string.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>These functions behave identically if the stream is opened in ANSI mode.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>doesn't currently support input from a UNICODE stream.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The main difference between the more secure functions (that have the <ph id="ph1">`_s`</ph> suffix) and the other versions is that the more secure functions require the size in characters of each <ph id="ph2">`c`</ph>, <ph id="ph3">`C`</ph>, <ph id="ph4">`s`</ph>, <ph id="ph5">`S`</ph>, and <ph id="ph6">`[`</ph> type field to be passed as an argument immediately following the variable.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l<ept id="p1">](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)</ept> and <bpt id="p2">[</bpt>scanf Width Specification<ept id="p2">](../../c-runtime-library/scanf-width-specification.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The size parameter is of type <ph id="ph1">`unsigned`</ph>, not <ph id="ph2">`size_t`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The versions of these functions that have the <ph id="ph1">`_l`</ph> suffix are identical except that they use the locale parameter that's passed in instead of the current thread locale.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Generic-Text Routine Mappings</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>TCHAR.H routine</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>_UNICODE &amp; _MBCS not defined</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>_MBCS defined</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>_UNICODE defined</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>stdio.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>stdio.h&gt; or <ph id="ph1">\&lt;</ph>wchar.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::StreamReader::ReadLine<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>See also <ph id="ph1">`Parse`</ph> methods, such as <bpt id="p1">[</bpt>System::Double::Parse<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Stream I/O</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>fscanf, _fscanf_l, fwscanf, _fwscanf_l</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bc91098946adf08ede3c314174b8fa7361908192</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\connection-points.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6bb26c910a0b553a770ea046c48dd618e1a2db79</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">405b1cb2baaebd94d6fe297dc17d704fcd87a79d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Connection Points | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Connection Points</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article explains how to implement connection points (formerly known as OLE connection points) using the MFC classes <ph id="ph1">`CCmdTarget`</ph> and <ph id="ph2">`CConnectionPoint`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In the past, the Component Object Model (COM) defined a general mechanism (<bpt id="p1">**</bpt>IUnknown::QueryInterface<ept id="p1">**</ept>) that allowed objects to implement and expose functionality in interfaces.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>However, a corresponding mechanism that allowed objects to expose their capability to call specific interfaces was not defined.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>That is, COM defined how incoming pointers to objects (pointers to that object's interfaces) were handled, but it did not have an explicit model for outgoing interfaces (pointers the object holds to other objects' interfaces).</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>COM now has a model, called connection points, that supports this functionality.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A connection has two parts: the object calling the interface, called the source, and the object implementing the interface, called the sink.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>A connection point is the interface exposed by the source.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>By exposing a connection point, a source allows sinks to establish connections to itself (the source).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Through the connection point mechanism (the <bpt id="p1">**</bpt>IConnectionPoint<ept id="p1">**</ept> interface), a pointer to the sink interface is passed to the source object.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>This pointer provides the source with access to the sink's implementation of a set of member functions.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For example, to fire an event implemented by the sink, the source can call the appropriate method of the sink's implementation.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following figure demonstrates the connection point just described.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Implemented connection point</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>An Implemented Connection Point</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>MFC implements this model in the <bpt id="p1">[</bpt>CConnectionPoint<ept id="p1">](../mfc/reference/cconnectionpoint-class.md)</ept> and <bpt id="p2">[</bpt>CCmdTarget<ept id="p2">](../mfc/reference/ccmdtarget-class.md)</ept> classes.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Classes derived from <bpt id="p1">**</bpt>CConnectionPoint<ept id="p1">**</ept> implement the <bpt id="p2">**</bpt>IConnectionPoint<ept id="p2">**</ept> interface, used to expose connection points to other objects.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Classes derived from <ph id="ph1">`CCmdTarget`</ph> implement the <bpt id="p1">**</bpt>IConnectionPointContainer<ept id="p1">**</ept> interface, which can enumerate all of an object's available connection points or find a specific connection point.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For each connection point implemented in your class, you must declare a connection part that implements the connection point.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If you implement one or more connection points, you must also declare a single connection map in your class.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>A connection map is a table of connection points supported by the ActiveX control.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The following examples demonstrate a simple connection map and one connection point.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The first example declares the connection map and point; the second example implements the map and point.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Note that <ph id="ph1">`CMyClass`</ph> must be a <ph id="ph2">`CCmdTarget`</ph>-derived class.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In the first example, code is inserted in the class declaration, under the <bpt id="p1">**</bpt>protected<ept id="p1">**</ept> section:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>NVC_MFCConnectionPoints#1</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`BEGIN_CONNECTION_PART`</ph> and <bpt id="p1">**</bpt>END_CONNECTION_PART<ept id="p1">**</ept> macros declare an embedded class, <ph id="ph2">`XSampleConnPt`</ph> (derived from <ph id="ph3">`CConnectionPoint`</ph>), that implements this particular connection point.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>If you want to override any <ph id="ph1">`CConnectionPoint`</ph> member functions or add member functions of your own, declare them between these two macros.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, the <ph id="ph1">`CONNECTION_IID`</ph> macro overrides the <ph id="ph2">`CConnectionPoint::GetIID`</ph> member function when placed between these two macros.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In the second example, code is inserted in the control's implementation file (.cpp file).</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This code implements the connection map, which includes the connection point, <ph id="ph1">`SampleConnPt`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>NVC_MFCConnectionPoints#2</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>If your class has more than one connection point, insert additional <ph id="ph1">`CONNECTION_PART`</ph> macros between the <ph id="ph2">`BEGIN_CONNECTION_MAP`</ph> and <ph id="ph3">`END_CONNECTION_MAP`</ph> macros.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Finally, add a call to <ph id="ph1">`EnableConnections`</ph> in the class's constructor.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>NVC_MFCConnectionPoints#3</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Once this code has been inserted, your <ph id="ph1">`CCmdTarget`</ph>-derived class exposes a connection point for the <bpt id="p1">**</bpt>ISampleSink<ept id="p1">**</ept> interface.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The following figure illustrates this example.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Connection point implemented by using MFC</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>A Connection Point Implemented with MFC</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Usually, connection points support "multicasting" — the ability to broadcast to multiple sinks connected to the same interface.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The following example fragment demonstrates how to multicast by iterating through each sink on a connection point:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>NVC_MFCConnectionPoints#4</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This example retrieves the current set of connections on the <ph id="ph1">`SampleConnPt`</ph> connection point with a call to <ph id="ph2">`CConnectionPoint::GetConnections`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>It then iterates through the connections and calls <bpt id="p1">**</bpt>ISampleSink::SinkFunc<ept id="p1">**</ept> on every active connection.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>MFC COM</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4a1cf411119b59c004981143801f5f59fdef01e6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\summary-of-scope-rules.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5db10480b76acea5333254a150f7075016157b30</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9289fcb2f34a0f67df2592ea6fad478c8867dfa1</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Summary of Scope Rules | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Summary of Scope Rules</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The use of a name must be unambiguous within its scope (up to the point where overloading is determined).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If the name denotes a function, the function must be unambiguous with respect to number and type of parameters.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If the name remains unambiguous, <bpt id="p1">[</bpt>member-access<ept id="p1">](../cpp/member-access-control-cpp.md)</ept> rules are applied.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Constructor initializers</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Constructor initializers (described in <bpt id="p1">[</bpt>Initializing Bases and Members<ept id="p1">](http://msdn.microsoft.com/en-us/2f71377e-2b6b-49da-9a26-18e9b40226a1)</ept>) are evaluated in the scope of the outermost block of the constructor for which they are specified.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Therefore, they can use the constructor's parameter names.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Global names</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A name of an object, function, or enumerator is global if it is introduced outside any function or class or prefixed by the global unary scope operator (<ph id="ph1">`::`</ph>), and if it is not used in conjunction with any of these binary operators:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Scope-resolution (<ph id="ph1">`::`</ph>)</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Member-selection for objects and references (<bpt id="p1">**</bpt>.<ept id="p1">**</ept>)</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Member-selection for pointers (<bpt id="p1">**</bpt>–&gt;<ept id="p1">**</ept>)</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Qualified names</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Names used with the binary scope-resolution operator (<ph id="ph1">`::`</ph>) are called "qualified names."</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The name specified after the binary scope-resolution operator must be a member of the class specified on the left of the operator or a member of its base class(es).</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Names specified after the member-selection operator (<bpt id="p1">**</bpt>.<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>or <bpt id="p1">**</bpt>–&gt;<ept id="p1">**</ept>) must be members of the class type of the object specified on the left of the operator or members of its base class(es).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Names specified on the right of the member-selection operator (<bpt id="p1">**</bpt>–&gt;<ept id="p1">**</ept>) can also be objects of another class type, provided that the left-hand side of <bpt id="p2">**</bpt>–&gt;<ept id="p2">**</ept> is a class object and that the class defines an overloaded member-selection operator (<bpt id="p3">**</bpt>–&gt;<ept id="p3">**</ept>) that evaluates to a pointer to some other class type.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>(This provision is discussed in more detail in <bpt id="p1">[</bpt>Class Member Access<ept id="p1">](../cpp/member-access.md)</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The compiler searches for names in the following order, stopping when the name is found:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Current block scope if name is used inside a function; otherwise, global scope.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Outward through each enclosing block scope, including the outermost function scope (which includes function parameters).</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If the name is used inside a member function, the class's scope is searched for the name.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The class's base classes are searched for the name.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The enclosing nested class scope (if any) and its bases are searched.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The search continues until the outermost enclosing class scope is searched.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Global scope is searched.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>However, you can make modifications to this search order as follows:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Names preceded by <ph id="ph1">`::`</ph> force the search to begin at global scope.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Names preceded by the <bpt id="p1">**</bpt>class<ept id="p1">**</ept>, <ph id="ph1">`struct`</ph>, and <bpt id="p2">**</bpt>union<ept id="p2">**</ept> keywords force the compiler to search only for <bpt id="p3">**</bpt>class<ept id="p3">**</ept>, <ph id="ph2">`struct`</ph>, or <bpt id="p4">**</bpt>union<ept id="p4">**</ept> names.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Names on the left side of the scope-resolution operator (<ph id="ph1">`::`</ph>) can be only <bpt id="p1">**</bpt>class<ept id="p1">**</ept>, <ph id="ph2">`struct`</ph>, <bpt id="p2">**</bpt>namespace<ept id="p2">**</ept>, or <bpt id="p3">**</bpt>union<ept id="p3">**</ept> names.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>If the name refers to a nonstatic member but is used in a static member function, an error message is generated.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Similarly, if the name refers to any nonstatic member in an enclosing class, an error message is generated because enclosed classes do not have enclosing-class <bpt id="p1">**</bpt>this<ept id="p1">**</ept> pointers.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Function parameter names</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Function parameter names in function definitions are considered to be in the scope of the outermost block of the function.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Therefore, they are local names and go out of scope when the function is exited.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Function parameter names in function declarations (prototypes) are in local scope of the declaration and go out of scope at the end of the declaration.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Default parameters are in the scope of the parameter for which they are the default, as described in the preceding two paragraphs.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>However, they cannot access local variables or nonstatic class members.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Default parameters are evaluated at the point of the function call, but they are evaluated in the function declaration's original scope.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Therefore, the default parameters for member functions are always evaluated in class scope.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Inheritance</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

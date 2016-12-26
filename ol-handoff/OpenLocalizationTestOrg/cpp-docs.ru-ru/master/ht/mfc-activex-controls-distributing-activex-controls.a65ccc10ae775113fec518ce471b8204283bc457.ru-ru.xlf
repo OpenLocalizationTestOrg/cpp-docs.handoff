@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bd4a754979ff395761ab42d80f7e0bc8ff97ef28</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\mfc-activex-controls-distributing-activex-controls.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ea02f01d8590e5dedf5d0c6289a06216e66a32b4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">725863a7bef314f7e109bf307267459cdf65f9e4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Distributing ActiveX Controls | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Distributing ActiveX Controls</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article discusses several issues related to redistributing ActiveX controls:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>ANSI or Unicode Control Versions</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Installing ActiveX Controls and Redistributable DLLs</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Registering Controls</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For additional information on redistributing ActiveX controls, see <bpt id="p1">[</bpt>Redistributing Controls<ept id="p1">](../data/ado-rdo/redistributing-controls.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>ANSI or Unicode Control Versions</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You must decide whether to ship an ANSI or Unicode version of the control, or both.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This decision is based on portability factors inherent in ANSI and Unicode character sets.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>ANSI controls, which work on all Win32 operating systems, allow for maximum portability between the various Win32 operating systems.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Unicode controls work on only Windows NT (version 3.51 or later), but not on Windows 95 or Windows 98.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If portability is your primary concern, ship ANSI controls.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If your controls will run only on Windows NT, you can ship Unicode controls.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You could also choose to ship both and have your application install the version most appropriate for the user's operating system.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Installing ActiveX Controls and Redistributable DLLs</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The setup program you provide with your ActiveX controls should create a special subdirectory of the Windows directory and install the controls' .OCX files in it.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Use the Windows <bpt id="p1">**</bpt>GetWindowsDirectory<ept id="p1">**</ept> API in your setup program to obtain the name of the Windows directory.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You may want to derive the subdirectory name from the name of your company or product.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The setup program must install the necessary redistributable DLL files in the Windows system directory.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If any of the DLLs are already present on the user's machine, the setup program should compare their versions with the versions you are installing.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Reinstall a file only if its version number is higher than the file already installed.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Because ActiveX controls can be used only in OLE container applications, there is no need to distribute the full set of OLE DLLs with your controls.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You can assume that the containing application (or the operating system itself) has the standard OLE DLLs installed.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Registering Controls</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Before a control can be used, appropriate entries must be created for it in the Windows registration database.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Some ActiveX control containers provide a menu item for users to register new controls, but this feature may not be available in all containers.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Therefore, you may want your setup program to register the controls when they are installed.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>If you prefer, you can write your setup program to register the control directly instead.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>LoadLibrary<ept id="p1">**</ept> Windows API to load the control DLL.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Next, use <bpt id="p1">**</bpt>GetProcAddress<ept id="p1">**</ept> to obtain the address of the "DllRegisterServer" function.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Finally, call the <ph id="ph1">`DllRegisterServer`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The following code sample demonstrates one possible method, where <ph id="ph1">`hLib`</ph> stores the handle of the control library, and <ph id="ph2">`lpDllEntryPoint`</ph> stores the address of the "DllRegisterServer" function.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxCont#16</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The advantage of registering the control directly is that you do not need to invoke and load a separate process (namely, REGSVR32), reducing installation time.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In addition, because registration is an internal process, the setup program can handle errors and unforeseen situations better than an external process can.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Before your setup program installs an ActiveX control, it should call <bpt id="p1">**</bpt>OleInitialize<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>When your setup program is finished, call <bpt id="p1">**</bpt>OleUnitialize<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>This ensures that the OLE system DLLs are in the proper state for registering an ActiveX control.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>You should register MFCx0.DLL.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

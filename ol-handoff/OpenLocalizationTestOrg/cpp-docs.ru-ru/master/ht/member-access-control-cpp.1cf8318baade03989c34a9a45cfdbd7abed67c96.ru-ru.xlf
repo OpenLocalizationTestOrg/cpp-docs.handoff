@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">39d0bbed8046f81f3f0a5656c647c33e39fff026</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\member-access-control-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7143e65271ae3cbc8568af2be529903146a07048</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a85db4a0e7df4ac55e23b326dc70ba1be472d32a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Member Access Control (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Member Access Control (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Access controls enable you to separate the <bpt id="p1">[</bpt>public<ept id="p1">](../cpp/public-cpp.md)</ept> interface of a class from the <bpt id="p2">[</bpt>private<ept id="p2">](../cpp/private-cpp.md)</ept> implementation details and the <bpt id="p3">[</bpt>protected<ept id="p3">](../cpp/protected-cpp.md)</ept> members that are only for use by derived classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The access specifier applies to all members declared after it until the next access specifier is encountered.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The default access is <ph id="ph1">`private`</ph> in a class, and <ph id="ph2">`public`</ph> in a struct or union.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Access specifiers in a class can be used any number of times in any order.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The allocation of storage for objects of class types is implementation dependent, but members are guaranteed to be assigned successively higher memory addresses between access specifiers.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Member-Access Control</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Type of Access</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Meaning</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>private</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Class members declared as <ph id="ph1">`private`</ph> can be used only by member functions and friends (classes or functions) of the class.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>protected</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Class members declared as <ph id="ph1">`protected`</ph> can be used by member functions and friends (classes or functions) of the class.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Additionally, they can be used by classes derived from the class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>public</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Class members declared as <bpt id="p1">**</bpt>public<ept id="p1">**</ept> can be used by any function.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Access control helps prevent you from using objects in ways they were not intended to be used.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This protection is lost when explicit type conversions (casts) are performed.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Access control is equally applicable to all names: member functions, member data, nested classes, and enumerators.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Access Control in Derived Classes</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Two factors control which members of a base class are accessible in a derived class; these same factors control access to the inherited members in the derived class:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Whether the derived class declares the base class using the <bpt id="p1">**</bpt>public<ept id="p1">**</ept> access specifier in the <bpt id="p2">*</bpt>class-head<ept id="p2">*</ept> (<bpt id="p3">*</bpt>class-head<ept id="p3">*</ept> is described in the Grammar section in <bpt id="p4">[</bpt>Defining Class Types<ept id="p4">](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>What the access to the member is in the base class.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The following table shows the interaction between these factors and how to determine base-class member access.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Member Access in Base Class</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>private</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>protected</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Public</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Always inaccessible regardless of derivation access</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Private in derived class if you use private derivation</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Private in derived class if you use private derivation</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Protected in derived class if you use protected derivation</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Protected in derived class if you use protected derivation</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Protected in derived class if you use public derivation</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Public in derived class if you use public derivation</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The following example illustrates this:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">`DerivedClass1`</ph>, the member function <ph id="ph2">`PublicFunc`</ph> is a public member and <ph id="ph3">`ProtectedFunc`</ph> is a protected member because <ph id="ph4">`BaseClass`</ph> is a public base class.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>is private to <ph id="ph1">`BaseClass`</ph>, and it is inaccessible to any derived classes.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">`DerivedClass2`</ph>, the functions <ph id="ph2">`PublicFunc`</ph> and <ph id="ph3">`ProtectedFunc`</ph> are considered private members because <ph id="ph4">`BaseClass`</ph> is a private base class.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Again, <ph id="ph1">`PrivateFunc`</ph> is private to <ph id="ph2">`BaseClass`</ph>, and it is inaccessible to any derived classes.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>You can declare a derived class without a base-class access specifier.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>In such a case, the derivation is considered private if the derived class declaration uses the <bpt id="p1">**</bpt>class<ept id="p1">**</ept> keyword.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The derivation is considered public if the derived class declaration uses the <ph id="ph1">`struct`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For example, the following code:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>is equivalent to:</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Similarly, the following code:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>is equivalent to:</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Note that members declared as having private access are not accessible to functions or derived classes unless those functions or classes are declared using the <ph id="ph1">`friend`</ph> declaration in the base class.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>union<ept id="p1">**</ept> type cannot have a base class.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>When specifying a private base class, it is advisable to explicitly use the <ph id="ph1">`private`</ph> keyword so users of the derived class understand the member access.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Access control and static members</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>When you specify a base class as <ph id="ph1">`private`</ph>, it affects only nonstatic members.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Public static members are still accessible in the derived classes.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>However, accessing members of the base class using pointers, references, or objects can require a conversion, at which time access control is again applied.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Consider the following example:</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>In the preceding code, access control prohibits conversion from a pointer to <ph id="ph1">`Derived2`</ph> to a pointer to <ph id="ph2">`Base`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>this<ept id="p1">**</ept> pointer is implicitly of type <ph id="ph1">`Derived2 *`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>To select the <ph id="ph1">`CountOf`</ph> function, <bpt id="p1">**</bpt>this<ept id="p1">**</ept> must be converted to type <ph id="ph2">`Base *`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Such a conversion is not permitted because <ph id="ph1">`Base`</ph> is a private indirect base class to <ph id="ph2">`Derived2`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Conversion to a private base class type is acceptable only for pointers to immediate derived classes.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Therefore, pointers of type <ph id="ph1">`Derived1 *`</ph> can be converted to type <ph id="ph2">`Base *`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Note that calling the <ph id="ph1">`CountOf`</ph> function explicitly, without using a pointer, reference, or object to select it, implies no conversion.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Therefore, the call is allowed.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Members and friends of a derived class, <ph id="ph1">`T`</ph>, can convert a pointer to <ph id="ph2">`T`</ph> to a pointer to a private direct base class of <ph id="ph3">`T`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Access to virtual functions</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The access control applied to <bpt id="p1">[</bpt>virtual<ept id="p1">](../cpp/virtual-cpp.md)</ept> functions is determined by the type used to make the function call.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Overriding declarations of the function do not affect the access control for a given type.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>In the preceding example, calling the virtual function <ph id="ph1">`GetState`</ph> using a pointer to type <ph id="ph2">`VFuncBase`</ph> calls <ph id="ph3">`VFuncDerived::GetState`</ph>, and <ph id="ph4">`GetState`</ph> is treated as public.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>However, calling <ph id="ph1">`GetState`</ph> using a pointer to type <ph id="ph2">`VFuncDerived`</ph> is an access-control violation because <ph id="ph3">`GetState`</ph> is declared private in class <ph id="ph4">`VFuncDerived`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The virtual function <ph id="ph1">`GetState`</ph> can be called using a pointer to the base class <ph id="ph2">`VFuncBase`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>This does not mean that the function called is the base-class version of that function.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Access control with multiple inheritance</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>In multiple-inheritance lattices involving virtual base classes, a given name can be reached through more than one path.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Because different access control can be applied along these different paths, the compiler chooses the path that gives the most access.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>See the following figure.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Access along paths of an inheritance graph</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Access Along Paths of an Inheritance Graph</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>In the figure, a name declared in class <ph id="ph1">`VBase`</ph> is always reached through class <ph id="ph2">`RightPath`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The right path is more accessible because <ph id="ph1">`RightPath`</ph> declares <ph id="ph2">`VBase`</ph> as a public base class, whereas <ph id="ph3">`LeftPath`</ph> declares <ph id="ph4">`VBase`</ph> as private.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>C++ Language Reference</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
