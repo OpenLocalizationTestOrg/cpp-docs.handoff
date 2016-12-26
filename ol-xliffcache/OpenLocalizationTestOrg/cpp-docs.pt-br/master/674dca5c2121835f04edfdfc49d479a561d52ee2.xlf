@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">674dca5c2121835f04edfdfc49d479a561d52ee2</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\how-to-marshal-strings-using-pinvoke.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">07905aff5a3e8a2c6e848a5782b8d1b629ca89f3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">16c266826002b1ead4b648f7a0e901b2a2f888e1</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Marshal Strings Using PInvoke | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Marshal Strings Using PInvoke</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic explains how native functions that accept C-style strings can be called using the CLR string type System::String using .NET Framework Platform Invoke support.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Visual C++ programmers are encouraged to use the C++ Interop features instead (when possible) because P/Invoke provides little compile-time error reporting, is not type-safe, and can be tedious to implement.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If the unmanaged API is packaged as a DLL, and the source code is not available, then P/Invoke is the only option, but otherwise see <bpt id="p1">[</bpt>Using C++ Interop (Implicit PInvoke)<ept id="p1">](../dotnet/using-cpp-interop-implicit-pinvoke.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Managed and unmanaged strings are laid out differently in memory, so passing strings from managed to unmanaged functions requires the &lt;xref:System.Runtime.InteropServices.MarshalAsAttribute&gt; attribute to instruct the compiler to insert the required conversion mechanisms for marshaling the string data correctly and safely.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>As with functions that use only intrinsic data types, &lt;xref:System.Runtime.InteropServices.DllImportAttribute&gt; is used to declare managed entry points into the native functions, but--for passing strings--instead of defining these entry points as taking C-style strings, a handle to the &lt;xref:System.String&gt; type can be used instead.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This prompts the compiler to insert code that performs the required conversion.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For each function argument in an unmanaged function that takes a string, the &lt;xref:System.Runtime.InteropServices.MarshalAsAttribute&gt; attribute should be used to indicate that the String object should be marshaled to the native function as a C-style string.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The following code consists of a unmanaged and a managed module.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The unmanaged module is a DLL that defines a function called TakesAString that accepts a C-style ANSI string in the form of a char*.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The managed module is a command-line application that imports the TakesAString function, but defines it as taking a managed System.String instead of a char<ph id="ph1">\*</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The &lt;xref:System.Runtime.InteropServices.MarshalAsAttribute&gt; attribute is used to indicate how the managed string should be marshaled when TakesAString is called.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The managed module is compiled with /clr, but /clr:pure works as well.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>This technique causes a copy of the string to be constructed on the unmanaged heap, so changes made to the string by the native function will not be reflected in the managed copy of the string.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Note that no portion of the DLL is exposed to the managed code via the traditional #include directive.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In fact, the DLL is accessed at runtime only, so problems with functions imported with <ph id="ph1">`DllImport`</ph> will not be detected at compile time.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Using Explicit PInvoke in C++ (DllImport Attribute)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

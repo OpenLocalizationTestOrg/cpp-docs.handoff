@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">281ab28bf03b9481b05cff3d5c3c0806734a58db</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\ln-create-msil-module.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a9e7367563ba152553f15277975e05592a455e1e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">17a3bb0c576da74e380b5b9e707b72fdc199d707</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-LN (Create MSIL Module) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/LN (Create MSIL Module)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Specifies that an assembly manifest should not be inserted into the output file.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>By default, <bpt id="p1">**</bpt>/LN<ept id="p1">**</ept> is not in effect (an assembly manifest is inserted into the output file).</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/LN<ept id="p1">**</ept> is used, one of the <bpt id="p2">[</bpt>/clr (Common Language Runtime Compilation)<ept id="p2">](../../build/reference/clr-common-language-runtime-compilation.md)</ept> options must also be used.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A managed program that does not have an assembly metadata in the manifest is called a module.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you compile with <bpt id="p1">[</bpt>/c (Compile Without Linking)<ept id="p1">](../../build/reference/c-compile-without-linking.md)</ept> and <bpt id="p2">**</bpt>/LN<ept id="p2">**</ept>, specify <bpt id="p3">[</bpt>/NOASSEMBLY (Create a MSIL Module)<ept id="p3">](../../build/reference/noassembly-create-a-msil-module.md)</ept> in the linker phase to create the output file.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You may want to create modules if you want to take a component-based approach to building assemblies.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>That is, you can author types and compile them into modules.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Then, you can generate an assembly from one or more modules.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For more information on creating assemblies from modules, see <bpt id="p1">[</bpt>.netmodule Files as Linker Input<ept id="p1">](../../build/reference/netmodule-files-as-linker-input.md)</ept> or <bpt id="p2">[</bpt>Al.exe (Assembly Linker)<ept id="p2">](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The default file extension for a module is .netmodule.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]</ph> releases before Visual C++ 2005, a module was created with <bpt id="p1">**</bpt>/clr:noAssembly<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The Visual C++ linker accepts .netmodule files as input and the output file produced by the linker will be an assembly or .netmodule with no run-time dependence on any of the .netmodules that were input to the linker.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>.netmodule Files as Linker Input<ept id="p1">](../../build/reference/netmodule-files-as-linker-input.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To set this compiler option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Specify <bpt id="p1">[</bpt>/NOASSEMBLY (Create a MSIL Module)<ept id="p1">](../../build/reference/noassembly-create-a-msil-module.md)</ept> in the linker phase to create the output file.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To set this compiler option programmatically</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>This compiler option cannot be changed programmatically.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Compiler Options</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Setting Compiler Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

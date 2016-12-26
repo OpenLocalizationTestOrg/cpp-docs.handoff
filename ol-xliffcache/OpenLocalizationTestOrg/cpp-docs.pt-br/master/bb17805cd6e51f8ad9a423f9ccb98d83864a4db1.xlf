@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb17805cd6e51f8ad9a423f9ccb98d83864a4db1</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\mfc-using-database-classes-without-documents-and-views.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b34c74578ac2de2f90e7895813394a0d0285ffd8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3ec2499650bbc62c32811f1d43f2c1a49d2fb162</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>MFC: Using Database Classes Without Documents and Views | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>MFC: Using Database Classes Without Documents and Views</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Sometimes you might not want to use the framework's document/view architecture in your database applications.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic explains:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>When you do not need to use documents<ept id="p1">](#_core_when_you_don.92.t_need_documents)</ept> such as document serialization.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Application wizard options<ept id="p1">](#_core_appwizard_options_for_documents_and_views)</ept> to support applications without serialization and without document-related <bpt id="p2">**</bpt>File<ept id="p2">**</ept> menu commands such as <bpt id="p3">**</bpt>New<ept id="p3">**</ept>, <bpt id="p4">**</bpt>Open<ept id="p4">**</ept>, <bpt id="p5">**</bpt>Save<ept id="p5">**</ept>, and <bpt id="p6">**</bpt>Save As<ept id="p6">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>How to work with an application that uses a minimal document<ept id="p1">](#_core_applications_with_minimal_documents)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>How to structure an application with no document or view<ept id="p1">](#_core_applications_with_no_document)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>When You Do Not Need Documents</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Some applications have a distinct concept of a document.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>These applications typically load all or most of a file from storage into memory with a <bpt id="p1">**</bpt>File Open<ept id="p1">**</ept> command.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>They write the updated file back to storage all at once with a <bpt id="p1">**</bpt>File Save<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Save As<ept id="p2">**</ept> command.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>What the user sees is a data file.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Some categories of applications, however, do not require a document.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Database applications operate in terms of transactions.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The application selects records from a database and presents them to the user, often one at a time.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>What the user sees is usually a single current record, which might be the only one in memory.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If your application does not require a document for storing data, you can dispense with some or all of the framework's document/view architecture.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>How much you dispense with depends on the approach you prefer.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>You might:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Use a minimal document as a place to store a connection to your data source but dispense with normal document features such as serialization.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This is useful when you want several views of the data and want to synchronize all the views, updating them all at once and so on.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Use a frame window, into which you draw directly, rather than using a view.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In this case, you omit the document and store any data or data connections in the frame-window object.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Application Wizard Options for Documents and Views</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The MFC Application Wizard has several options in <bpt id="p1">**</bpt>Select database support<ept id="p1">**</ept>, which are listed in the following table.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>If you use the MFC Application Wizard to create an application, all these options produce applications with documents and views.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Some options provide documents and views that omit unneeded document functionality.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Database Support, MFC Application Wizard<ept id="p1">](../mfc/reference/database-support-mfc-application-wizard.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Option</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>View</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Document</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>None</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Derived from <ph id="ph1">`CView`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Provides no database support.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This is the default option.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If you select the <bpt id="p1">**</bpt>Document/view architecture support<ept id="p1">**</ept> option on the <bpt id="p2">[</bpt>Application Type, MFC Application Wizard<ept id="p2">](../mfc/reference/application-type-mfc-application-wizard.md)</ept> page, you get full document support including serialization and <ph id="ph1">`New`</ph>, <bpt id="p3">**</bpt>Open<ept id="p3">**</ept>, <bpt id="p4">**</bpt>Save<ept id="p4">**</ept>, and <bpt id="p5">**</bpt>Save As<ept id="p5">**</ept> commands on the <bpt id="p6">**</bpt>File<ept id="p6">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Applications with No Document<ept id="p1">](#_core_applications_with_no_document)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Header files only</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Derived from <ph id="ph1">`CView`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Provides the basic level of database support for your application.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Includes Afxdb.h.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Adds link libraries, but does not create any database-specific classes.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>You can create recordsets later and use them to examine and update records.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Database view without file support</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Derived from</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Provides document support but no serialization support.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Document can store recordset and coordinate multiple views; does not support serialization or the <ph id="ph1">`New`</ph>, <bpt id="p1">**</bpt>Open<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Save<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>Save As<ept id="p3">**</ept> commands.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Applications with Minimal Documents<ept id="p1">](#_core_applications_with_minimal_documents)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>If you include a database view, you must specify the source of the data.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Includes database header files, link libraries, a record view, and a recordset.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>(Available only for applications with the <bpt id="p1">**</bpt>Document/view architecture support<ept id="p1">**</ept> option selected on the <bpt id="p2">[</bpt>Application Type, MFC Application Wizard<ept id="p2">](../mfc/reference/application-type-mfc-application-wizard.md)</ept> page.)</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Database view with file support</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Derived from</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Provides full document support, including serialization and document-related <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu commands.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Database applications typically operate on a per-record basis rather than on a per-file basis and so do not need serialization.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>However, you might have a special use for serialization.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Applications with Minimal Documents<ept id="p1">](#_core_applications_with_minimal_documents)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>If you include a database view, you must specify the source of the data.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Includes database header files, link libraries, a record view, and a recordset.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>(Available only for applications with the <bpt id="p1">**</bpt>Document/view architecture support<ept id="p1">**</ept> option selected on the <bpt id="p2">[</bpt>Application Type, MFC Application Wizard<ept id="p2">](../mfc/reference/application-type-mfc-application-wizard.md)</ept> page.)</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>For a discussion of alternatives to serialization and alternative uses for serialization, see <bpt id="p1">[</bpt>Serialization: Serialization vs. Database Input/Output<ept id="p1">](../mfc/serialization-serialization-vs-database-input-output.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Applications with Minimal Documents</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The MFC Application Wizard has two options that support form-based data access applications.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Each option creates a <ph id="ph1">`CRecordView`</ph>-derived view class and a document.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>They differ in what they leave out of the document.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Document Without File Support</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Select the application wizard database option <bpt id="p1">**</bpt>Database view without file support<ept id="p1">**</ept> if you do not need document serialization.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The document serves the following useful purposes:</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>It is a convenient place to store a <ph id="ph1">`CRecordset`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>This usage parallels ordinary document concepts: the document stores the data  (or, in this case, a set of records) and the view is a view of the document.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>If your application presents multiple views (such as multiple record views), a document supports coordinating the views.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>If multiple views show the same data, you can use the <ph id="ph1">`CDocument::UpdateAllViews`</ph> member function to coordinate updates to all views when any view changes the data.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>You usually use this option for simple form-based applications.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The application wizard supports a convenient structure for such applications automatically.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Document with File Support</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Select the application wizard database option <bpt id="p1">**</bpt>Database view with file support<ept id="p1">**</ept> when you have an alternative use for the document-related <bpt id="p2">**</bpt>File<ept id="p2">**</ept> menu commands and document serialization.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>For the data-access portion of your program, you can use the document in the same way as described in <bpt id="p1">[</bpt>Document Without File Support<ept id="p1">](#_core_a_document_without_file_support)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>You can use the document's serialization capability, for example, to read and write a serialized user profile document that stores the user's preferences or other useful information.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>For more ideas, see <bpt id="p1">[</bpt>Serialization: Serialization vs. Database Input/Output<ept id="p1">](../mfc/serialization-serialization-vs-database-input-output.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The application wizard supports this option, but you must write the code that serializes the document.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Store the serialized information in document data members.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Applications with No Document</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>You might sometimes want to write an application that does not use documents or views.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Without documents, you store your data (such as a <ph id="ph1">`CRecordset`</ph> object) in your frame-window class or your application class.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Any additional requirements depend on whether the application presents a user interface.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Database Support with a User Interface</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>If you have a user interface (other than, for example, a console command-line interface), your application draws directly into the frame window's client area rather than into a view.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Such an application does not use <ph id="ph1">`CRecordView`</ph>, <ph id="ph2">`CFormView`</ph>, or <ph id="ph3">`CDialog`</ph> for its main user interface, but it normally use <ph id="ph4">`CDialog`</ph> for ordinary dialogs.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Writing Applications Without Documents</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Because the application wizard does not support creating applications without documents, you must write your own <ph id="ph1">`CWinApp`</ph>-derived class and, if needed, also create a <ph id="ph2">`CFrameWnd`</ph> or <ph id="ph3">`CMDIFrameWnd`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Override <ph id="ph1">`CWinApp::InitInstance`</ph> and declare an application object as:</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The framework still supplies the message-map mechanism and many other features.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Database Support Separate from the User Interface</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Some applications need no user interface or only a minimal one.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>For example, suppose you are writing:</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>An intermediate data-access object that other applications (clients) call for special processing of data between the application and the data source.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>An application that processes data without user intervention, such as an application that moves data from one database format to another or one that does calculations and performs batch updates.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Because no document owns the <ph id="ph1">`CRecordset`</ph> or <ph id="ph2">`CDaoRecordset`</ph> object, you probably want to store it as an embedded data member in your <ph id="ph3">`CWinApp`</ph>-derived application class.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Alternatives include:</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Not keeping a permanent <ph id="ph1">`CRecordset`</ph> or <ph id="ph2">`CDaoRecordset`</ph> object at all.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>You can pass <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> to your recordset class constructors.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>In that case, the framework creates a temporary <ph id="ph1">`CDatabase`</ph> or <ph id="ph2">`CDaoDatabase`</ph> object using the information in the recordset's <ph id="ph3">`GetDefaultConnect`</ph> member function.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>This is the most likely alternative approach.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Making the <ph id="ph1">`CRecordset`</ph> or <ph id="ph2">`CDaoRecordset`</ph> object a global variable.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>This variable should be a pointer to a recordset object that you create dynamically in your <ph id="ph1">`CWinApp::InitInstance`</ph> override.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>This avoids attempting to construct the object before the framework is initialized.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Using recordset objects as you would within the context of a document or a view.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Create recordsets in the member functions of your application or frame-window objects.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>MFC Database Classes (ODBC and DAO)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">69670d808e1f421609b3af3a61e9479775809fa7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\preprocessor\hdrstop.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a18bd0ccd4ca50b16aef4e23b324e0448a442d32</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fd6158402cb895de1464aa873103724e027114e3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>hdrstop | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>hdrstop</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Gives you additional control over precompilation file names and over the location at which the compilation state is saved.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>filename<ept id="p1">*</ept> is the name of the precompiled header file to use or create (depending on whether <bpt id="p2">[</bpt>/Yu<ept id="p2">](../build/reference/yu-use-precompiled-header-file.md)</ept> or <bpt id="p3">[</bpt>/Yc<ept id="p3">](../build/reference/yc-create-precompiled-header-file.md)</ept> is specified).</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">*</bpt>filename<ept id="p1">*</ept> does not contain a path specification, the precompiled header file is assumed to be in the same directory as the source file.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If a C or C++ file contains a <bpt id="p1">**</bpt>hdrstop<ept id="p1">**</ept> pragma when compiled with /Yc, the compiler saves the state of the compilation up to the location of the pragma.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The compiled state of any code that follows the pragma is not saved.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">*</bpt>filename<ept id="p1">*</ept> to name the precompiled header file in which the compiled state is saved.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A space between <bpt id="p1">**</bpt>hdrstop<ept id="p1">**</ept> and <bpt id="p2">*</bpt>filename<ept id="p2">*</ept> is optional.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The file name specified in the <bpt id="p1">**</bpt>hdrstop<ept id="p1">**</ept> pragma is a string and is therefore subject to the constraints of any C or C++ string.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In particular, you must enclose it in quotation marks and use the escape character (backslash) to specify directory names.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The name of the precompiled header file is determined according to the following rules, in order of precedence:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The argument to the /Fp compiler option</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>filename<ept id="p1">*</ept> argument to #<bpt id="p2">**</bpt>pragma hdrstop<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The base name of the source file with a .PCH extension</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For the /Yc and /Yu options, if neither of the two compilation options nor the <bpt id="p1">**</bpt>hdrstop<ept id="p1">**</ept> pragma specifies a file name, the base name of the source file is used as the base name of the precompiled header file.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>You can also use preprocessing commands to perform macro replacement as follows:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The following rules govern where the <bpt id="p1">**</bpt>hdrstop<ept id="p1">**</ept> pragma can be placed:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>It must appear outside any data or function declaration or definition.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>It must be specified in the source file, not within a header file.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In this example, the <bpt id="p1">**</bpt>hdrstop<ept id="p1">**</ept> pragma appears after two files have been included and an inline function has been defined.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This might, at first, seem to be an odd placement for the pragma.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Consider, however, that using the manual precompilation options, /Yc and /Yu, with the <bpt id="p1">**</bpt>hdrstop<ept id="p1">**</ept> pragma makes it possible for you to precompile entire source files — even inline code.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The Microsoft compiler does not limit you to precompiling only data declarations.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Pragma Directives and the __Pragma Keyword</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

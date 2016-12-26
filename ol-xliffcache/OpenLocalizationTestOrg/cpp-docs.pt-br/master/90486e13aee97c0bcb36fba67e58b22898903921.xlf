@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">90486e13aee97c0bcb36fba67e58b22898903921</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\profile-guided-optimizations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">32db681531e718a9b9214d580ac27a7a7251ae30</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">88774479598f2ee686ae800a7aeb4f34844b8d21</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Profile-Guided Optimizations | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Profile-Guided Optimizations</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Profile-guided optimization lets you optimize an output file, where the optimizer uses data from test runs of the .exe or .dll file.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The data represents how the program is likely to perform in a production environment.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Profile-guided optimizations are only available for x86 or <ph id="ph1">[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]</ph> native targets.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Profile-guided optimizations are not available for output files that will run on the common language runtime.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Even if you produce an assembly with mixed native and managed code (compile with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>), you cannot use profile-guided optimization on just the native code.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If you attempt to build a project with these options set in the IDE, a build error will result.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Information that is gathered from profiling test runs will override optimizations that would otherwise be in effect if you specify <bpt id="p1">**</bpt>/Ob<ept id="p1">**</ept>, <bpt id="p2">**</bpt>/Os<ept id="p2">**</ept>, or <bpt id="p3">**</bpt>/Ot<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/Ob (Inline Function Expansion)<ept id="p1">](../../build/reference/ob-inline-function-expansion.md)</ept> and <bpt id="p2">[</bpt>/Os, /Ot (Favor Small Code, Favor Fast Code)<ept id="p2">](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You can use the automated Profile Guided Optimization for Visual C++ plug-in in the Performance and Diagnostics Hub to simplify and streamline the optimization process within Visual Studio, or you can perform the optimization steps manually in Visual Studio or on the command line.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>We recommend the plug-in because it is easier to use.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For information on how to get the plug-in and use it to optimize your app, see <bpt id="p1">[</bpt>Profile Guided Optimization Plug-In<ept id="p1">](../../build/reference/profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Both the Profile Guided Optimization plug-in and manual profile-guided optimization follow these steps to optimize your app:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Compile one or more source code files with <bpt id="p1">[</bpt>/GL<ept id="p1">](../../build/reference/gl-whole-program-optimization.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Each module built with /GL can be examined during profile-guided optimization test runs to capture run-time behavior.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Every module in a profile-guided optimization build does not have to be compiled with /GL.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>However, only those modules compiled with /GL will be instrumented and later available for profile-guided optimizations.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Link using <bpt id="p1">[</bpt>/LTCG<ept id="p1">](../../build/reference/ltcg-link-time-code-generation.md)</ept> and <bpt id="p2">[</bpt>/GENPROFILE<ept id="p2">](../../build/reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Using both /LTCG and /GENPROFILE creates an empty .pgd file.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>After test-run data is added to the .pgd file, it can be used as input to the next link step (creating the optimized image).</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>When specifying /GENPROFILE, you can optionally add :PGD=<ph id="ph1">`filename`</ph> to specify a nondefault name or location for the .pgd file.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Profile the application.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Each time a profiled EXE session ends or a profiled DLL is unloaded, a <bpt id="p1">*</bpt>appname<ept id="p1">*</ept>!#.pgc file is created.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>A .pgc file contains information about a particular application test run.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>is a number starting with 1 that is incremented based on the number of other <bpt id="p1">*</bpt>appname<ept id="p1">*</ept>!#.pgc files in the directory.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>You can delete a .pgc file if the test run does not represent a scenario you want to optimize.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>During a test run, you can force closure of the currently open .pgc file and the creation of a new .pgc file with the <bpt id="p1">[</bpt>pgosweep<ept id="p1">](../../build/reference/pgosweep.md)</ept> utility (for example, when the end of a test scenario does not coincide with application shutdown).</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>You can use the <ph id="ph1">`PogoSafeMode`</ph> option when you profile your application.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>This option enables you to specify whether you want to profile the application in safe mode or fast mode.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For more information about these modes, see <bpt id="p1">[</bpt>PogoSafeMode<ept id="p1">](../../build/reference/pogosafemode.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Link using /LTCG and /USEPROFILE.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Using both /LTCG and /USEPROFILE creates the optimized image.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>This step takes as input the .pgd file.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>When specifying /USEPROFILE, you can optionally add :PGD=<ph id="ph1">`filename`</ph> to specify a nondefault name or location for the .pgd file.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/LTCG<ept id="p1">](../../build/reference/ltcg-link-time-code-generation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>It is even possible to create the optimized output file and later determine that additional profiling would be useful to create a more optimized image.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If the instrumented image and its .pgd file are available, you can do additional test runs and rebuilt the optimized image with the newer .pgd file.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The following is a list of the profile-guided optimizations:</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Inlining<ept id="p1">**</ept> – For example, if there exists a function A that frequently calls function B, and function B is relatively small, then profile-guided optimizations will inline function B in function A.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Virtual Call Speculation<ept id="p1">**</ept> – If a virtual call, or other call through a function pointer, frequently targets a certain function, a profile-guided optimization can insert a conditionally-executed direct call to the frequently-targeted function, and the direct call can be inlined.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Register Allocation<ept id="p1">**</ept> – Optimizing with profile data results in better register allocation.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Basic Block Optimization<ept id="p1">**</ept> – Basic block optimization allows commonly executed basic blocks that temporally execute within a given frame to be placed in the same set of pages (locality).</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This minimizes the number of pages used, thus minimizing memory overhead.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Size/Speed Optimization<ept id="p1">**</ept> – Functions where the program spends a lot of time can be optimized for speed.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Function Layout<ept id="p1">**</ept> – Based on the call graph and profiled caller/callee behavior, functions that tend to be along the same execution path are placed in the same section.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Conditional Branch Optimization<ept id="p1">**</ept> – With the value probes, profile-guided optimizations can find if a given value in a switch statement is used more often than other values.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This value can then be pulled out of the switch statement.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The same can be done with if/else instructions where the optimizer can order the if/else so that either the if or else block is placed first depending on which block is more frequently true.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Dead Code Separation<ept id="p1">**</ept> – Code that is not called during profiling is moved to a special section that is appended to the end of the set of sections.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>This effectively keeps this section out of the often-used pages.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>EH Code Separation<ept id="p1">**</ept> – The EH code, being exceptionally executed, can often be moved to a separate section when profile-guided optimizations can determine that the exceptions occur only on exceptional conditions.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Memory Intrinsics<ept id="p1">**</ept> – The expansion of intrinsics can be decided better if it can be determined if an intrinsic is called frequently.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>An intrinsic can also be optimized based on the block size of moves or copies.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>For more information on performing manual optimization in the IDE or on the command line, see <bpt id="p1">[</bpt>Profile Guided Optimization Plug-In<ept id="p1">](../../build/reference/profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>In This Section</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Profile Guided Optimization Plug-In</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Tools for Manual Profile-Guided Optimization</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>How to: Merge Multiple PGO Profiles into a Single Profile</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>C/C++ Build Tools</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

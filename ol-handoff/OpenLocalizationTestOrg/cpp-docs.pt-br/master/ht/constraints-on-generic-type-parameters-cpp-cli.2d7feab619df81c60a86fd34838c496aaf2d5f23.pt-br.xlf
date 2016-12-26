@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">28fff3637eb7258780d5a1f97314dafb246c890b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\windows\constraints-on-generic-type-parameters-cpp-cli.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d5b5ee80c70081067b399b8dbe02ef9b2776595a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c023572b17eef7c43ad3a9980322aa973464e081</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Constraints on Generic Type Parameters (C++-CLI) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Constraints on Generic Type Parameters (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In generic type or method declarations, you can qualify a type parameter with constraints.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A constraint is a requirement that types used as type arguments must satisfy.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, a constraint might be that the type argument must implement a certain interface or inherit from a specific class.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Constraints are optional; not specifying a constraint on a parameter is equivalent to constraining that parameter to &lt;xref:System.Object&gt;.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>type-parameter</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>One of the type parameters, to be constrained.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>constraint list</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1"> *</bpt>constraint list<ept id="p1">*</ept> is a comma-separated list of constraint specifications.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The list can include interfaces to be implemented by the type parameter.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The list can also include a class.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For the type argument to satisfy a base class constraint, it must be the same class as the constraint or derive from the constraint.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You can also specify <ph id="ph1">`gcnew()`</ph> to indicate the type argument must have a public parameterless constructor; or <ph id="ph2">`ref class`</ph> to indicate the type argument must be a reference type, including any class, interface, delegate, or array type; or <ph id="ph3">`value class`</ph> to indicate the type argument must be a value type.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Any value type except Nullable<ph id="ph1">\&lt;</ph>T&gt; can be specified.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You can also specify a generic parameter as a constraint.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The type argument supplied for the type you are constraining must be or derive from the type of the constraint.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This is called a naked type constraint.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The constraint clause consists of <bpt id="p1">**</bpt>where<ept id="p1">**</ept> followed by a type parameter, a colon (<bpt id="p2">**</bpt>:<ept id="p2">**</ept>), and the constraint, which specifies the nature of the restriction on the type parameter.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>where<ept id="p1">**</ept> is a context-sensitive keyword; see <bpt id="p2">[</bpt>Context-Sensitive Keywords<ept id="p2">](../windows/context-sensitive-keywords-cpp-component-extensions.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Separate multiple <bpt id="p1">**</bpt>where<ept id="p1">**</ept> clauses with a space.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Constraints are applied to type parameters to place limitations on the types that can be used as arguments for a generic type or method.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Class and interface constraints specify that the argument types must be or inherit from a specified class or implement a specified interface.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The application of constraints to a generic type or method allows code in that type or method to take advantage of the known features of the constrained types.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For example, you can declare a generic class such that the type parameter implements the <bpt id="p1">**</bpt>IComparable<ph id="ph1">\&lt;</ph>T&gt;<ept id="p1">**</ept> interface:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>This constraint requires that a type argument used for <ph id="ph1">`T`</ph> implements <ph id="ph2">`IComparable&lt;T&gt;`</ph> at compile time.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>It also allows interface methods, such as <bpt id="p1">**</bpt>CompareTo<ept id="p1">**</ept>, to be called.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>No cast is needed on an instance of the type parameter to call interface methods.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Static methods in the type argument's class cannot be called through the type parameter; they can be called only through the actual named type.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A constraint cannot be a value type, including built-in types such as <ph id="ph1">`int`</ph> or <bpt id="p1">**</bpt>double<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Since value types cannot have derived classes, only one class would ever be able to satisfy the constraint.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>In that case, the generic can be rewritten with the type parameter replaced by the specific value type.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Constraints are required in some cases since the compiler will not allow the use of methods or other features of an unknown type unless the constraints imply that the unknown type supports the methods or interfaces.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Multiple constraints for the same type parameter can be specified in a comma-separated list</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>With multiple type parameters, use one <bpt id="p1">**</bpt>where<ept id="p1">**</ept> clause for each type parameter.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To summarize, use constraints in your code according to the following rules:</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>If multiple constraints are listed, the constraints may be listed in any order.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Constraints can also be class types, such as abstract base classes.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>However, constraints cannot be value types or sealed classes.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Constraints cannot themselves be type parameters, but they can involve the type parameters in an open constructed type.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates using constraints to call instance methods on type parameters.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>When a generic type parameter is used as a constraint, it is called a naked type constraint.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Naked type constraints are useful when a member function with its own type parameter needs to constrain that parameter to the type parameter of the containing type.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>In the following example, T is a naked type constraint in the context of the Add method.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Naked type constraints can also be used in generic class definitions.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The usefulness of naked type constraints with generic classes is limited because the compiler can assume nothing about a naked type constraint except that it derives from &lt;xref:System.Object&gt;.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Use naked type constraints on generic classes in scenarios in which you wish to enforce an inheritance relationship between two type parameters.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Generics</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

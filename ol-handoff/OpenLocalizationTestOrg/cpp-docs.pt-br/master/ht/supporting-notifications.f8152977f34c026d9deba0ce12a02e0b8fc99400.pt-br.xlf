@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4620e663abfcafa32b3ab2dca405c04dc5a904ca</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\supporting-notifications.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b84944ff298940e0f8b3b5fb829f8cf234086f91</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b213ff0c6884e805eb3d3b60b2098fea87d4d263</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Supporting Notifications | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Supporting Notifications</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Implementing Connection Point Interfaces on the Provider and Consumer</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To implement notifications, a provider class must inherit from <bpt id="p1">[</bpt>IRowsetNotifyCP<ept id="p1">](../../data/oledb/irowsetnotifycp-class.md)</ept> and <bpt id="p2">[</bpt>IConnectionPointContainer<ept id="p2">](../../atl/reference/iconnectionpointcontainerimpl-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>implements the provider site for the connection point interface <bpt id="p1">[</bpt>IRowsetNotify<ept id="p1">](https://msdn.microsoft.com/en-us/library/ms712959.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>implements broadcast functions to advise listeners on the connection point <bpt id="p1">**</bpt>IID_IRowsetNotify<ept id="p1">**</ept> of changes to the contents of the rowset.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Note that you must also implement and register <ph id="ph1">`IRowsetNotify`</ph> on the consumer (also known as the sink) using <bpt id="p1">[</bpt>IRowsetNotifyImpl<ept id="p1">](../../data/oledb/irowsetnotifyimpl-class.md)</ept> so that the consumer can handle notifications.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For information about implementing the connection point interface on the consumer, see <bpt id="p1">[</bpt>Receiving Notifications<ept id="p1">](../../data/oledb/receiving-notifications.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In addition, the class must also contain a map that defines the connection point entry, like this:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Adding IRowsetNotify</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>To add <ph id="ph1">`IRowsetNotify`</ph>, you need to add <ph id="ph2">`IConnectionPointContainerImpl&lt;rowset-name&gt;`</ph> and <ph id="ph3">`IRowsetNotifyCP&lt;rowset-name&gt;`</ph> to your inheritance chain.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For example, here is the inheritance chain for <ph id="ph1">`RUpdateRowset`</ph> in <bpt id="p1">[</bpt>UpdatePV<ept id="p1">](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)</ept>:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The sample code might differ from what is listed here; you should regard the sample code as the more up-to-date version.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Setting COM Map Entries</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You also need to add the following to the COM map in your rowset:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>These macros allow anyone calling <ph id="ph1">`QueryInterface`</ph> for your connection point container (the basis of <ph id="ph2">`IRowsetNotify`</ph>) to find the requested interface on your provider.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For an example of how to use connection points, see the ATL POLYGON sample and tutorial.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Setting Connection Point Map Entries</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You also need to add a connection point map.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>It should look something like:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>This connection point map allows a component looking for the <ph id="ph1">`IRowsetNotify`</ph> interface to find it in your provider.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Setting Properties</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You also need to add the following properties to your provider.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You only need to add properties based on the interfaces that you support.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Property</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Add if you support</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>DBPROP_IConnectionPointContainer</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Always</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFICATIONGRANULARITY</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Always</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFICATIONPHASES</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Always</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYCOLUMNSET</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWDELETE</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWINSERT</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Always</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWFIRSTCHANGE</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWSETRELEASE</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Always</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWUNDOCHANGE</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWUNDODELETE</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWUNDOINSERT</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>DBPROP_NOTIFYROWUPDATE</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Most of the implementation for the notifications is already embedded in the OLE DB Provider Templates.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Due to a compiler feature in Visual C++ .NET, if you do not add <ph id="ph1">`IRowsetNotifyCP`</ph> to your inheritance chain, the compiler removes all that code from your compilation stream, thus making your code size smaller.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Advanced Provider Techniques</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

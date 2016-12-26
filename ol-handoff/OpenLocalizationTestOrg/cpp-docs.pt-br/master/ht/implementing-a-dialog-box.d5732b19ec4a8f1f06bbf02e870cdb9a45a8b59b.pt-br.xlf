@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7468d03f8e4c2c52a5035c9b0b43c1182930ccf3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\implementing-a-dialog-box.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fce16dabad1e476a320a0f940c4777bb7f399dd7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dfd02bec0713bb72ec6f4a5bd228e5118780170d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Implementing a Dialog Box | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Implementing a Dialog Box</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>There are two ways to add a dialog box to your ATL project: use the ATL Dialog Wizard or add it manually.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Adding a Dialog Box with the ATL Dialog Wizard</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">[</bpt>Add Class dialog box<ept id="p1">](../ide/add-class-dialog-box.md)</ept>, select the ATL Dialog object to add a dialog box to your ATL project.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Fill in the ATL Dialog Wizard as appropriate and click <bpt id="p1">**</bpt>Finish<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The wizard adds a class derived from <bpt id="p1">[</bpt>CAxDialogImpl<ept id="p1">](../atl/reference/caxdialogimpl-class.md)</ept> to your project.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Open the Resource View from the <bpt id="p1">**</bpt>View<ept id="p1">**</ept> menu, locate your dialog, and double-click it to open it in the resource editor.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If your dialog box is derived from <ph id="ph1">`CAxDialogImpl`</ph>, it can host both ActiveX and Windows controls.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If you don't want the overhead of ActiveX control support in your dialog box class, use <bpt id="p1">[</bpt>CSimpleDialog<ept id="p1">](../atl/reference/csimpledialog-class.md)</ept> or <bpt id="p2">[</bpt>CDialogImpl<ept id="p2">](../atl/reference/cdialogimpl-class.md)</ept> instead.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Message and event handlers can be added to your dialog class from Class View.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Adding an ATL Message Handler<ept id="p1">](../atl/adding-an-atl-message-handler.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Adding a Dialog Box Manually</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Implementing a dialog box is similar to implementing a window.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You derive a class from either <bpt id="p1">[</bpt>CAxDialogImpl<ept id="p1">](../atl/reference/caxdialogimpl-class.md)</ept>, <bpt id="p2">[</bpt>CDialogImpl<ept id="p2">](../atl/reference/cdialogimpl-class.md)</ept>, or <bpt id="p3">[</bpt>CSimpleDialog<ept id="p3">](../atl/reference/csimpledialog-class.md)</ept> and declare a <bpt id="p4">[</bpt>message map<ept id="p4">](../atl/message-maps-atl.md)</ept> to handle messages.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>However, you must also specify a dialog template resource ID in your derived class.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Your class must have a data member called <ph id="ph1">`IDD`</ph> to hold this value.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>When you create a dialog box using the ATL Dialog Wizard, the wizard automatically adds the <ph id="ph1">`IDD`</ph> member as an <ph id="ph2">`enum`</ph> type.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>allows you to implement a modal or a modeless dialog box that hosts Windows controls.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>allows you to implement a modal or a modeless dialog box that hosts both ActiveX and Windows controls.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To create a modal dialog box, create an instance of your <ph id="ph1">`CDialogImpl`</ph>-derived (or <ph id="ph2">`CAxDialogImpl`</ph>-derived) class and then call the <bpt id="p1">[</bpt>DoModal<ept id="p1">](../atl/reference/cdialogimpl-class.md#cdialogimpl__domodal)</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To close a modal dialog box, call the <bpt id="p1">[</bpt>EndDialog<ept id="p1">](../atl/reference/cdialogimpl-class.md#cdialogimpl__enddialog)</ept> method from a message handler.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To create a modeless dialog box, call the <bpt id="p1">[</bpt>Create<ept id="p1">](../atl/reference/cdialogimpl-class.md#cdialogimpl__create)</ept> method instead of <ph id="ph1">`DoModal`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>To destroy a modeless dialog box, call <bpt id="p1">[</bpt>DestroyWindow<ept id="p1">](../atl/reference/cdialogimpl-class.md#cdialogimpl__destroywindow)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Sinking events is automatically done in <bpt id="p1">[</bpt>CAxDialogImpl<ept id="p1">](../atl/reference/caxdialogimpl-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Implement the dialog box's message handlers as you would the handlers in a <ph id="ph1">`CWindowImpl`</ph>-derived class.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>If there is a message-specific return value, return it as an <ph id="ph1">`LRESULT`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The returned <ph id="ph1">`LRESULT`</ph> values are mapped by ATL for proper handling by the Windows dialog manager.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For details, see the source code for <bpt id="p1">[</bpt>CDialogImplBaseT::DialogProc<ept id="p1">](../atl/reference/cdialogimpl-class.md#cdialogimpl__dialogproc)</ept> in atlwin.h.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The following class implements a dialog box:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#66</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Window Classes</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

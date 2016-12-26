@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d8b9f1c969407b797e1c3efd08f96e2419846449</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\data-objects-and-data-sources-manipulation.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">65d46f7f191df946002f17b8a756dda9cf9cf465</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a73010084bf0ec060e8844561a844e89cf39c21b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Data Objects and Data Sources: Manipulation | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Data Objects and Data Sources: Manipulation</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>After a data object or data source has been created, you can perform a number of common operations on the data, such as inserting and removing data, enumerating the formats the data is in, and more.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This article describes the techniques necessary to complete the most common operations.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Topics include:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Inserting data into a data source</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Determining the formats available in a data object</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Retrieving data from a data object</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Inserting Data into a Data Source</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>How data is inserted into a data source depends on whether the data is supplied immediately or on demand, and in which medium it is supplied.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The possibilities are as follows.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Supplying Data Immediately (Immediate Rendering)</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`COleDataSource::CacheGlobalData`</ph> repeatedly for every Clipboard format in which you are supplying data.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Pass the Clipboard format to be used, a handle to the memory containing the data and, optionally, a <bpt id="p1">**</bpt>FORMATETC<ept id="p1">**</ept> structure describing the data.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you want to work directly with <bpt id="p1">**</bpt>STGMEDIUM<ept id="p1">**</ept> structures, you call <ph id="ph1">`COleDataSource::CacheData`</ph> instead of <ph id="ph2">`COleDataSource::CacheGlobalData`</ph> in the option above.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Supplying Data on Demand (Delayed Rendering)</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This is an advanced topic.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`COleDataSource::DelayRenderData`</ph> repeatedly for every Clipboard format in which you are supplying data.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Pass the Clipboard format to be used and, optionally, a <bpt id="p1">**</bpt>FORMATETC<ept id="p1">**</ept> structure describing the data.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When the data is requested, the framework will call <ph id="ph1">`COleDataSource::OnRenderData`</ph>, which you must override.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If you use a <ph id="ph1">`CFile`</ph> object to supply the data, call <ph id="ph2">`COleDataSource::DelayRenderFileData`</ph> instead of <ph id="ph3">`COleDataSource::DelayRenderData`</ph> in the previous option.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When the data is requested, the framework will call <ph id="ph1">`COleDataSource::OnRenderFileData`</ph>, which you must override.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Determining the Formats Available in a Data Object</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Before an application allows the user to paste data into it, it needs to know if there are formats on the Clipboard that it can handle.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To do this, your application should do the following:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Create a <ph id="ph1">`COleDataObject`</ph> object and a <bpt id="p1">**</bpt>FORMATETC<ept id="p1">**</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Call the data object's <ph id="ph1">`AttachClipboard`</ph> member function to associate the data object with the data on the Clipboard.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Do one of the following:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Call the data object's <ph id="ph1">`IsDataAvailable`</ph> member function if there are only one or two formats you need.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This will save you time in cases where the data on the Clipboard supports significantly more formats than your application.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Call the data object's <ph id="ph1">`BeginEnumFormats`</ph> member function to start enumerating the formats available on the Clipboard.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Then call <ph id="ph1">`GetNextFormat`</ph> until the Clipboard returns a format your application supports or there are no more formats.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If you are using <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph>, you can now enable the Paste and, possibly, Paste Special items on the Edit menu.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>To do this, call either <ph id="ph1">`CMenu::EnableMenuItem`</ph> or <ph id="ph2">`CCmdUI::Enable`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For more information about what container applications should do with menu items and when, see <bpt id="p1">[</bpt>Menus and Resources: Container Additions<ept id="p1">](../mfc/menus-and-resources-container-additions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Retrieving Data from a Data Object</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Once you have decided on a data format, all that remains is to retrieve the data from the data object.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>To do this, the user decides where to put the data, and the application calls the appropriate function.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The data will be available in one of the following mediums:</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Medium</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Function to call</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Global Memory (<ph id="ph1">`HGLOBAL`</ph>)</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>File (<ph id="ph1">`CFile`</ph>)</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>STGMEDIUM<ept id="p1">**</ept> structure (<ph id="ph1">`IStorage`</ph>)</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Commonly, the medium will be specified along with its Clipboard format.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>For example, a <bpt id="p1">**</bpt>CF_EMBEDDEDSTRUCT<ept id="p1">**</ept> object is always in an <ph id="ph1">`IStorage`</ph> medium that requires an <bpt id="p2">**</bpt>STGMEDIUM<ept id="p2">**</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Therefore, you would use <ph id="ph1">`GetData`</ph> because it is the only one of these functions that can accept an <bpt id="p1">**</bpt>STGMEDIUM<ept id="p1">**</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>For cases where the Clipboard format is in an <ph id="ph1">`IStream`</ph> or <ph id="ph2">`HGLOBAL`</ph> medium, the framework can provide a <ph id="ph3">`CFile`</ph> pointer that references the data.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The application can then use file read to get the data in much the same way as it might import data from a file.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Essentially, this is the client-side interface to the <ph id="ph1">`OnRenderData`</ph> and <ph id="ph2">`OnRenderFileData`</ph> routines in the data source.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The user can now insert data into the document just like for any other data in the same format.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Drag and drop</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Clipboard</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Data Objects and Data Sources (OLE)</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>COleDataObject Class</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>COleDataSource Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

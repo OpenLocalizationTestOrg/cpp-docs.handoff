@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">72b0904a0aaef9a655aac1c2e6c1671e5758aa23</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\one-dimensional-arrays.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1849fe9f27d2ad68934860e686e0ea66c88494a8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2557704ce362a8d903fffd09816a33df3401450e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>One-Dimensional Arrays | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>One-Dimensional Arrays</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A postfix expression followed by an expression in square brackets (<bpt id="p1">**</bpt>[ ]<ept id="p1">**</ept>) is a subscripted representation of an element of an array object.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A subscript expression represents the value at the address that is <bpt id="p1">*</bpt>expression<ept id="p1">*</ept> positions beyond <bpt id="p2">*</bpt>postfix-expression<ept id="p2">*</ept> when expressed as</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Usually, the value represented by <bpt id="p1">*</bpt>postfix-expression<ept id="p1">*</ept> is a pointer value, such as an array identifier, and <bpt id="p2">*</bpt>expression<ept id="p2">*</ept> is an integral value.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>However, all that is required syntactically is that one of the expressions be of pointer type and the other be of integral type.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Thus the integral value could be in the <bpt id="p1">*</bpt>postfix-expression<ept id="p1">*</ept> position and the pointer value could be in the brackets in the <bpt id="p2">*</bpt>expression<ept id="p2">*</ept>, or "subscript," position.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, this code is legal:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Subscript expressions are generally used to refer to array elements, but you can apply a subscript to any pointer.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Whatever the order of values, <bpt id="p1">*</bpt>expression<ept id="p1">*</ept> must be enclosed in brackets (<bpt id="p2">**</bpt>[ ]<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The subscript expression is evaluated by adding the integral value to the pointer value, then applying the indirection operator (<bpt id="p1">**</bpt><ph id="ph1">\*</ph><ept id="p1">**</ept>) to the result.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>(See <bpt id="p1">[</bpt>Indirection and Address-of Operators<ept id="p1">](../c-language/indirection-and-address-of-operators.md)</ept> for a discussion of the indirection operator.) In effect, for a one-dimensional array, the following four expressions are equivalent, assuming that <ph id="ph1">`a`</ph> is a pointer and <ph id="ph2">`b`</ph> is an integer:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>According to the conversion rules for the addition operator (given in <bpt id="p1">[</bpt>Additive Operators<ept id="p1">](../c-language/c-additive-operators.md)</ept>), the integral value is converted to an address offset by multiplying it by the length of the type addressed by the pointer.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For example, suppose the identifier <ph id="ph1">`line`</ph> refers to an array of <ph id="ph2">`int`</ph> values.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following procedure is used to evaluate the subscript expression <ph id="ph1">`line[ i ]`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The integer value <ph id="ph1">`i`</ph> is multiplied by the number of bytes defined as the length of an <ph id="ph2">`int`</ph> item.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The converted value of <ph id="ph1">`i`</ph> represents <ph id="ph2">`i`</ph> <ph id="ph3">`int`</ph> positions.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This converted value is added to the original pointer value (<ph id="ph1">`line`</ph>) to yield an address that is offset <ph id="ph2">`i`</ph> <ph id="ph3">`int`</ph> positions from <ph id="ph4">`line`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The indirection operator is applied to the new address.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The result is the value of the array element at that position (intuitively, <ph id="ph1">`line [ i ]`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The subscript expression <ph id="ph1">`line[0]`</ph> represents the value of the first element of line, since the offset from the address represented by <ph id="ph2">`line`</ph> is 0.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Similarly, an expression such as <ph id="ph1">`line[5]`</ph> refers to the element offset five positions from line, or the sixth element of the array.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Subscript Operator:</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

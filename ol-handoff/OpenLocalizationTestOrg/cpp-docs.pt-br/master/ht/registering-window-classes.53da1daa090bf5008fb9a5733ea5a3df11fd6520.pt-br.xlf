@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fede1e4d01b32bab34460b3d3cc7791abe7d9eb3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\registering-window-classes.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7f4c48e9c7b33f2934e2bc97404c94a67cf6db30</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ec6fda8676a7aff7be87b7a87fafd30555d12447</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Registering Window Classes | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Registering Window Classes</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Window "classes" in traditional programming for Windows define the characteristics of a "class" (not a C++ class) from which any number of windows can be created.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This kind of class is a template or model for creating windows.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Window Class Registration in Traditional Programs for Windows</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In a traditional program for Windows, without MFC, you process all messages to a window in its "window procedure" or "<bpt id="p1">**</bpt>WndProc<ept id="p1">**</ept>."</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>WndProc<ept id="p1">**</ept> is associated with a window by means of a "window class registration" process.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The main window is registered in the <ph id="ph1">`WinMain`</ph> function, but other classes of windows can be registered anywhere in the application.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Registration depends on a structure that contains a pointer to the <bpt id="p1">**</bpt>WndProc<ept id="p1">**</ept> function together with specifications for the cursor, background brush, and so forth.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The structure is passed as a parameter, along with the string name of the class, in a prior call to the <bpt id="p1">**</bpt>RegisterClass<ept id="p1">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Thus, a registration class can be shared by multiple windows.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Window Class Registration in MFC Programs</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In contrast, most window class registration activity is done automatically in an MFC framework program.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If you are using MFC, you typically derive a C++ window class from an existing library class using the normal C++ syntax for class inheritance.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The framework still uses traditional "registration classes," and it provides several standard ones, registered for you when needed.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You can register additional registration classes by calling the <bpt id="p1">[</bpt>AfxRegisterWndClass<ept id="p1">](../mfc/reference/application-information-and-management.md#afxregisterwndclass)</ept> global function and then passing the registered class to the <bpt id="p2">**</bpt>Create<ept id="p2">**</ept> member function of <ph id="ph1">`CWnd`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>As described here, the traditional "registration class" in Windows is not to be confused with a C++ class.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Technical Note 1<ept id="p1">](../mfc/tn001-window-class-registration.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Creating Windows</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6349b3c471f74a5a66c49560a6e1189097610bb1</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\auto-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4c3b830f0d3485a486b500c4d5568e1f1e617e74</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8ce20b14e206db8a6ba39d9db3f8ba6da69ab7ba</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>auto (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>auto (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Deduces the type of a declared variable from its initialization expression.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`auto`</ph> keyword directs the compiler to use the initialization expression of a declared variable, or lambda expression parameter, to deduce its type.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>We recommend that you use the <ph id="ph1">`auto`</ph> keyword for most situations—unless you really want a conversion—because it provides these benefits:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Robustness:<ept id="p1">**</ept> If the expression’s type is changed—this includes when a function return type is changed—it just works.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Performance:<ept id="p1">**</ept> You’re guaranteed that there will be no conversion.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Usability:<ept id="p1">**</ept> You don't have to worry about type name spelling difficulties and typos.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Efficiency:<ept id="p1">**</ept> Your coding can be more efficient.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Conversion cases in which you might not want to use <ph id="ph1">`auto`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When you want a specific type and nothing else will do.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Expression template helper types—for example, <ph id="ph1">`(valarray+valarray)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To use the <ph id="ph1">`auto`</ph> keyword, use it instead of a type to declare a variable, and specify an initialization expression.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In addition, you can modify the <ph id="ph1">`auto`</ph> keyword by using specifiers and declarators such as <ph id="ph2">`const`</ph>, <ph id="ph3">`volatile`</ph>, pointer (<ph id="ph4">`*`</ph>), reference (<ph id="ph5">`&amp;`</ph>), and rvalue reference <ph id="ph6">`(&amp;&amp;`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The compiler evaluates the initialization expression and then uses that information to deduce the type of the variable.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The initialization expression can be an assignment (equal-sign syntax), a direct initialization (function-style syntax), an <bpt id="p1">[</bpt>operator new<ept id="p1">](new-operator-cpp.md)</ept> expression, or the initialization expression can be the <bpt id="p2">*</bpt>for-range-declaration<ept id="p2">*</ept> parameter in a <bpt id="p3">[</bpt>Range-based for Statement (C++)<ept id="p3">](../cpp/range-based-for-statement-cpp.md)</ept> statement.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Initializers<ept id="p1">](../cpp/initializers.md)</ept> and the code examples later in this document.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`auto`</ph> keyword is a placeholder for a type, but it is not itself a type.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Therefore, the <ph id="ph1">`auto`</ph> keyword cannot be used in casts or operators such as <bpt id="p1">[</bpt>sizeof<ept id="p1">](../cpp/sizeof-operator.md)</ept> and <bpt id="p2">[</bpt>typeid<ept id="p2">](../windows/typeid-cpp-component-extensions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Usefulness</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`auto`</ph> keyword is a simple way to declare a variable that has a complicated type.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For example, you can use <ph id="ph1">`auto`</ph> to declare a variable where the initialization expression involves templates, pointers to functions, or pointers to members.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can also use <ph id="ph1">`auto`</ph> to declare and initialize a variable to a lambda expression.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You can't declare the type of the variable yourself because the type of a lambda expression is known only to the compiler.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Examples of Lambda Expressions<ept id="p1">](../cpp/examples-of-lambda-expressions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Trailing Return Types</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>You can use <ph id="ph1">`auto`</ph>, together with the <ph id="ph2">`decltype`</ph> type specifier, to help write template libraries.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`auto`</ph> and <ph id="ph2">`decltype`</ph> to declare a template function whose return type depends on the types of its template arguments.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Or, use <ph id="ph1">`auto`</ph> and <ph id="ph2">`decltype`</ph> to declare a template function that wraps a call to another function, and then returns whatever is the return type of that other function.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>decltype<ept id="p1">](../cpp/decltype-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>References and cv-qualifiers</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Note that using <ph id="ph1">`auto`</ph> drops references, const qualifiers, and volatile qualifiers.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Consider the following example:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In the previous example, myAuto is an int, not an int reference, so the output is <ph id="ph1">`11 11`</ph>, not <ph id="ph2">`11 12`</ph> as would be the case if the reference qualifier had not been dropped by <ph id="ph3">`auto`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Type deduction with braced initializers (C++14)</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The following code exmample shows how to intialize an auto variable using braces.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Note the difference between B and C and between A and E.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Restrictions and Error Messages</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The following table lists the restrictions on the use of the <ph id="ph1">`auto`</ph> keyword, and the corresponding diagnostic error message that the compiler emits.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Error number</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>C3530</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`auto`</ph> keyword cannot be combined with any other type-specifier.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>C3531</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>A symbol that is declared with the <ph id="ph1">`auto`</ph> keyword must have an initializer.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>C3532</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>You incorrectly used the <ph id="ph1">`auto`</ph> keyword to declare a type.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For example, you declared a method return type or an array.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>C3533<ept id="p1">](../error-messages/compiler-errors-2/compiler-error-c3533.md)</ept>, <bpt id="p2">[</bpt>C3539<ept id="p2">](../error-messages/compiler-errors-2/compiler-error-c3539.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>A parameter or template argument cannot be declared with the <ph id="ph1">`auto`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>C3534</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>A symbol that is declared with the <ph id="ph1">`auto`</ph> keyword in a <ph id="ph2">`new`</ph> expression must have an initializer.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>operator new<ept id="p1">](new-operator-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>C3535</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>A method or template parameter cannot be declared with the <ph id="ph1">`auto`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>C3536</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>A symbol cannot be used before it is initialized.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>In practice, this means that a variable cannot be used to initialize itself.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>C3537</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>You cannot cast to a type that is declared with the <ph id="ph1">`auto`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>C3538</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>All the symbols in a declarator list that is declared with the <ph id="ph1">`auto`</ph> keyword must resolve to the same type.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Declarations and Definitions<ept id="p1">](declarations-and-definitions-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>C3540<ept id="p1">](../error-messages/compiler-errors-2/compiler-error-c3540.md)</ept>, <bpt id="p2">[</bpt>C3541<ept id="p2">](../error-messages/compiler-errors-2/compiler-error-c3541.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>sizeof<ept id="p1">](../cpp/sizeof-operator.md)</ept> and <bpt id="p2">[</bpt>typeid<ept id="p2">](../windows/typeid-cpp-component-extensions.md)</ept> operators cannot be applied to a symbol that is declared with the <ph id="ph1">`auto`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Examples</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>These code fragments illustrate some of the ways in which the <ph id="ph1">`auto`</ph> keyword can be used.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The following declarations are equivalent.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>In the first statement, variable <ph id="ph1">`j`</ph> is declared to be type <ph id="ph2">`int`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>In the second statement, variable <ph id="ph1">`k`</ph> is deduced to be type <ph id="ph2">`int`</ph> because the initialization expression (0) is an integer.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The following declarations are equivalent, but the second declaration is simpler than the first.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>One of the most compelling reasons to use the <ph id="ph1">`auto`</ph> keyword is simplicity.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The following code fragment declares the type of variables <ph id="ph1">`iter`</ph> and <ph id="ph2">`elem`</ph> when the <ph id="ph3">`for`</ph> and range <ph id="ph4">`for`</ph> loops start.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The following code fragment uses the <ph id="ph1">`new`</ph> operator and pointer declaration to declare pointers.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The next code fragment declares multiple symbols in each declaration statement.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Notice that all of the symbols in each statement resolve to the same type.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>This code fragment uses the conditional operator (<ph id="ph1">`?:`</ph>) to declare variable <ph id="ph2">`x`</ph> as an integer that has a value of 200:</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The following code fragment initializes variable <ph id="ph1">`x`</ph> to type <ph id="ph2">`int`</ph>, variable <ph id="ph3">`y`</ph> to a reference to type <ph id="ph4">`const``int`</ph>, and variable <ph id="ph5">`fp`</ph> to a pointer to a function that returns type <ph id="ph6">`int`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>auto Keyword</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Keywords</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>/Zc:auto (Deduce Variable Type)</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>sizeof Operator</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>typeid</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>operator new</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Declarations and Definitions</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Examples of Lambda Expressions</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Initializers</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>decltype</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
