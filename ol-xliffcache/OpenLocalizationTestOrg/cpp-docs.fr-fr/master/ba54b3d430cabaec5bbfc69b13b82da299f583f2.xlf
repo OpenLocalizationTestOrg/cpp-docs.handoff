@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ba54b3d430cabaec5bbfc69b13b82da299f583f2</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\implicit-boxing-of-value-types.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">81e5c7c5afe9e9b20d853f7a9b6517648e608832</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6b5a2cdf4354d8f37bbf0841f4d39234c7c37b65</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Implicit Boxing of Value Types | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Implicit Boxing of Value Types</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The boxing of value types has changed from Managed Extensions for C++ to <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In language design, we imposed a philosophical position in lieu of practical experience with the feature and, in practice, it was a mistake.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>As an analogy, in the original multiple inheritance language design, Stroustrup decided that a virtual base class sub-object could not be initialized within a derived class constructor, and therefore the language required that any class serving as a virtual base class must define a default constructor.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>It is that default constructor that would be invoked by any subsequent virtual derivation.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The problem of a virtual base class hierarchy is that responsibility for the initialization of the shared virtual sub-object shifts with each subsequent derivation.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, if I define a base class for which initialization requires the allocation of a buffer, the user-specified size of that buffer might be passed as an argument to the constructor.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If I then provide two subsequent virtual derivations, call them <ph id="ph1">`inputb`</ph> and <ph id="ph2">`outputb`</ph>, each provides a particular value to the base class constructor.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Now, when I derived an <ph id="ph1">`in_out`</ph> class from both <ph id="ph2">`inputb`</ph> and <ph id="ph3">`outputb`</ph>, neither of those values to the shared virtual base class sub-object can sensibly be allowed to evaluate.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Therefore, in the original language design, Stroustrup disallowed the explicit initialization of a virtual base class within the member initialization list of the derived class constructor.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>While this solved the problem, in practice the inability to direct the initialization of the virtual base class proved impracticable.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Keith Gorlen of the National Institute of Health, who had implemented a freeware version of the SmallTalk collection library called nihcl, was a principle voice in convincing Stroustrup that he had to come up with a more flexible language design.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A principle of Object-Oriented hierarchical design holds that a derived class should concern itself only with the non-private implementation of its immediate base classes.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>In order to support a flexible initialization design for virtual inheritance, Stroustrup had to violate this principle.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The most derived class in a hierarchy assumes responsibility for all virtual sub-object initialization regardless of how deep into the hierarchy it occurs.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For example, <ph id="ph1">`inputb`</ph> and <ph id="ph2">`outputb`</ph> are both responsible for explicitly initializing their immediate virtual base class.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>When <ph id="ph1">`in_out`</ph> derives from both <ph id="ph2">`inputb`</ph> and <ph id="ph3">`outputb`</ph>, <ph id="ph4">`in_out`</ph> becomes responsible for the initialization of the once removed virtual base class, and the initialization made explicit within <ph id="ph5">`inputb`</ph> and <ph id="ph6">`outputb`</ph> is suppressed.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This provides the flexibility required by language developers, but at the cost of a complicated semantics.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This burden of complication is stripped away if we restrict a virtual base class to be without state and simply allow it to specify an interface.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>This is a recommended design idiom within C++.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Within CLR programming, it is raised to policy with the Interface type.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Here is a simple code sample– and in this case, the explicit boxing is unnecessary:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>As you can see, there is a whole lot of boxing going on.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Under <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>, value type boxing is implicit:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Value Types and Their Behaviors (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Boxing</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d7fd6a078a3ab63d606d1f15294a1eb156f75730</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tree-control-item-labels.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7091b648aa3f6ee3fc7406896301df20b455ed5d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7ba3a11cb19d2bc20e16469cf94b5e3424823435</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Tree Control Item Labels | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Tree Control Item Labels</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>You typically specify the text of an item's label when adding the item to the tree control (<bpt id="p1">[</bpt>CTreeCtrl<ept id="p1">](../mfc/reference/ctreectrl-class.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`InsertItem`</ph> member function can pass a <bpt id="p1">[</bpt>TVITEM<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb773456)</ept> structure that defines the item's properties, including a string containing the text of the label.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>has several overloads that can be called with various combinations of parameters.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>A tree control allocates memory for storing each item; the text of the item labels takes up a significant portion of this memory.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If your application maintains a copy of the strings in the tree control, you can decrease the memory requirements of the control by specifying the <bpt id="p1">**</bpt>LPSTR_TEXTCALLBACK<ept id="p1">**</ept> value in the <bpt id="p2">**</bpt>pszText<ept id="p2">**</ept> member of <ph id="ph1">`TV_ITEM`</ph> or the <ph id="ph2">`lpszItem`</ph> parameter instead of passing actual strings to the tree control.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Using <bpt id="p1">**</bpt>LPSTR_TEXTCALLBACK<ept id="p1">**</ept> causes the tree control to retrieve the text of an item's label from the application whenever the item needs to be redrawn.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To retrieve the text, the tree control sends a <bpt id="p1">[</bpt>TVN_GETDISPINFO<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb773518)</ept> notification message, which includes the address of a <bpt id="p2">[</bpt>NMTVDISPINFO<ept id="p2">](http://msdn.microsoft.com/library/windows/desktop/bb773418)</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You must respond by setting the appropriate members of the included structure.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A tree control uses memory allocated from the heap of the process that creates the tree control.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The maximum number of items in a tree control is based on the amount of memory available in the heap.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Each item takes 64 bytes.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Using CTreeCtrl</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">44265e275ebf52914349b26f4e7cdc670cfa21ea</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\using-contained-windows.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1db4460367299a92da1e4511840227c4a64a2000</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">76bd61cec58b3239985209c24058e12478b510a1</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using Contained Windows | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using Contained Windows</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>ATL implements contained windows with <bpt id="p1">[</bpt>CContainedWindowT<ept id="p1">](../atl/reference/ccontainedwindowt-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A contained window represents a window that delegates its messages to a container object instead of handling them in its own class.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You do not need to derive a class from <ph id="ph1">`CContainedWindowT`</ph> in order to use contained windows.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>With contained windows, you can either superclass an existing Windows class or subclass an existing window.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To create a window that superclasses an existing Windows class, first specify the existing class name in the constructor for the <ph id="ph1">`CContainedWindowT`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Then call <ph id="ph1">`CContainedWindowT::Create`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To subclass an existing window, you don't need to specify a Windows class name (pass <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> to the constructor).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Simply call the <ph id="ph1">`CContainedWindowT::SubclassWindow`</ph> method with the handle to the window being subclassed.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You typically use contained windows as data members of a container class.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The container does not need to be a window; however, it must derive from <bpt id="p1">[</bpt>CMessageMap<ept id="p1">](../atl/reference/cmessagemap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A contained window can use alternate message maps to handle its messages.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If you have more than one contained window, you should declare several alternate message maps, each corresponding to a separate contained window.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Following is an example of a container class with two contained windows:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#67</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For more information about contained windows, see the <bpt id="p1">[</bpt>SUBEDIT<ept id="p1">](../visual-cpp-samples.md)</ept> sample.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Window Classes</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

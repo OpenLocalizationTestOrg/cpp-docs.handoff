@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a2e63f83658ab4f0854ce5edb0d69923c03bb1c5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c25b9c09c3c9f0b568264ab06e13c455923a7bb9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bcced3310991be4346e6bacb243d4cb3eb78ccc4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Gets information about an open file.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>File descriptor of the open file.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Pointer to the structure to store results.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Returns 0 if the file-status information is obtained.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A return value of –1 indicates an error.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If the file descriptor is invalid or <ph id="ph1">`buffer`</ph> is <ph id="ph2">`NULL`</ph>, the invalid parameter handler is invoked, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, <ph id="ph1">`errno`</ph> is set to <ph id="ph2">`EBADF`</ph>, in the case of an invalid file descriptor, or to <ph id="ph3">`EINVAL`</ph>, if <ph id="ph4">`buffer`</ph> is <ph id="ph5">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_fstat`</ph> function obtains information about the open file associated with <ph id="ph2">`fd`</ph> and stores it in the structure pointed to by <ph id="ph3">`buffer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_stat`</ph> structure, defined in SYS\Stat.h, contains the following fields.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Time of the last file access.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Time of the creation of the file.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If a device, <ph id="ph1">`fd`</ph>; otherwise 0.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Bit mask for file-mode information.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_S_IFCHR`</ph> bit is set if <ph id="ph2">`fd`</ph> refers to a device.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_S_IFREG`</ph> bit is set if <ph id="ph2">`fd`</ph> refers to an ordinary file.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The read/write bits are set according to the file's permission mode.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>and other constants are defined in SYS\Stat.h.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Time of the last modification of the file.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Always 1 on non-NTFS file systems.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If a device, <ph id="ph1">`fd`</ph>; otherwise 0.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Size of the file in bytes.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`fd`</ph> refers to a device, the <ph id="ph2">`st_atime`</ph>, <ph id="ph3">`st_ctime`</ph>, <ph id="ph4">`st_mtime`</ph>, and <ph id="ph5">`st_size`</ph> fields are not meaningful.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Because Stat.h uses the <bpt id="p1">[</bpt>_dev_t<ept id="p1">](../../c-runtime-library/standard-types.md)</ept> type, which is defined in Types.h, you must include Types.h before Stat.h in your code.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>, which uses the <ph id="ph1">`__stat64`</ph> structure, allows file-creation dates to be expressed up through 23:59:59, December 31, 3000, UTC; whereas the other functions only represent dates through 23:59:59 January 18, 2038, UTC.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Midnight, January 1, 1970, is the lower bound of the date range for all these functions.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Variations of these functions support 32-bit or 64-bit time types and 32-bit or 64-bit file lengths.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The first numerical suffix (<ph id="ph1">`32`</ph> or <ph id="ph2">`64`</ph>) indicates the size of the time type used; the second suffix is either <ph id="ph3">`i32`</ph> or <ph id="ph4">`i64`</ph>, indicating whether the file size is represented as a 32-bit or 64-bit integer.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>is equivalent to <ph id="ph1">`_fstat64i32`</ph>, and <ph id="ph2">`struct``_stat`</ph> contains a 64-bit time.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>This is true unless <ph id="ph1">`_USE_32BIT_TIME_T`</ph> is defined, in which case the old behavior is in effect; <ph id="ph2">`_fstat`</ph> uses a 32-bit time, and <ph id="ph3">`struct``_stat`</ph> contains a 32-bit time.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The same is true for <ph id="ph1">`_fstati64`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Time Type and File Length Type Variations of _stat</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Functions</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>_USE_32BIT_TIME_T defined?</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Time type</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>File length type</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Not defined</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>64-bit</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>32-bit</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Defined</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>32-bit</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>32-bit</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Not affected by the macro definition</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>32-bit</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>32-bit</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Not affected by the macro definition</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>64-bit</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>64-bit</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Not defined</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>64-bit</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>64-bit</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Defined</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>32-bit</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>64-bit</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Not affected by the macro definition</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>32-bit</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>64-bit</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Not affected by the macro definition</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>64-bit</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>32-bit</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>sys/stat.h&gt; and <ph id="ph1">\&lt;</ph>sys/types.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>sys/stat.h&gt; and <ph id="ph1">\&lt;</ph>sys/types.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>sys/stat.h&gt; and <ph id="ph1">\&lt;</ph>sys/types.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>sys/stat.h&gt; and <ph id="ph1">\&lt;</ph>sys/types.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>sys/stat.h&gt; and <ph id="ph1">\&lt;</ph>sys/types.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>sys/stat.h&gt; and <ph id="ph1">\&lt;</ph>sys/types.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>For more compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>File Handling</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>_access, _waccess</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>_chmod, _wchmod</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>_filelength, _filelengthi64</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>_stat, _wstat Functions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

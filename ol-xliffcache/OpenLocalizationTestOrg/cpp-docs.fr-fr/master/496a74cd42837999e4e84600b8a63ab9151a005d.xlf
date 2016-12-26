@@ -1,0 +1,564 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">496a74cd42837999e4e84600b8a63ab9151a005d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\walkthrough-updating-the-mfc-scribble-application-part-1.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">509732d660e31912fe1e33ed1e6d85d389c44496</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2c5d3102b9aa3f8fc7cb4d9d28643324be0a86ad</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Updating the MFC Scribble Application (Part 1) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Updating the MFC Scribble Application (Part 1)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This walkthrough demonstrates how to modify an existing MFC application to use the Ribbon user interface.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Visual Studio supports both the Office 2007 Ribbon and the Windows 7 Scenic Ribbon.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For more information about the Ribbon user interface, see <bpt id="p1">[</bpt>Ribbons<ept id="p1">](http://go.microsoft.com/fwlink/linkid=129233)</ept> on the MSDN Web site.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This walkthrough modifies the classic Scribble 1.0 MFC sample that lets you use the mouse to create line drawings.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This part of the walkthrough shows how to modify the Scribble sample so that it displays a ribbon bar.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Part 2<ept id="p1">](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)</ept> adds more buttons to the ribbon bar.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Visual C++ Samples</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Visual C++ Samples</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Sections</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This part of the walkthrough has the following sections:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Replacing the Base Classes</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Adding Bitmaps to the Project</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Adding a Ribbon Resource to the Project</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Creating an Instance of the Ribbon Bar</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Adding a Ribbon Category</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Setting the Look of the Application</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Replacing the Base Classes</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To convert an application that supports a menu to an application that supports a ribbon, you must derive the application, frame window, and toolbar classes from updated base classes.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>(We suggest that you do not modify the original Scribble sample; instead, clean the Scribble project, copy it to another directory, and then modify the copy.)</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To replace the base classes in the Scribble application</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In scribble.cpp, verify that <ph id="ph1">`CScribbleApp::InitInstance`</ph> includes a call to <bpt id="p1">[</bpt>AfxOleInit<ept id="p1">](../mfc/reference/ole-initialization.md#afxoleinit)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Add the following code to the stdafx.h file.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In scribble.h, modify the definition for the <ph id="ph1">`CScribbleApp`</ph> class so that it is derived from <bpt id="p1">[</bpt>CWinAppEx Class<ept id="p1">](../mfc/reference/cwinappex-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Scribble 1.0 was written when Windows applications used an initialization (.ini) file to save user preference data.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Instead of an initialization file, modify Scribble to store user preferences in the registry.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>To set the registry key and base, type the following code in <ph id="ph1">`CScribbleApp::InitInstance`</ph> after the <ph id="ph2">`LoadStdProfileSettings()`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The main frame for a multiple document interface (MDI) application is no longer derived from the <ph id="ph1">`CMDIFrameWnd`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Instead, it is derived from the <bpt id="p1">[</bpt>CMDIFrameWndEx<ept id="p1">](../mfc/reference/cmdiframewndex-class.md)</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>In the mainfrm.h and mainfrm.cpp files, replace all references to <ph id="ph1">`CMDIFrameWnd`</ph> with <ph id="ph2">`CMDIFrameWndEx`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In the childfrm.h and childfrm.cpp files, replace <ph id="ph1">`CMDIChildWnd`</ph> with <ph id="ph2">`CMDIChildWndEx`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>In the childfrm.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>h file, replace <ph id="ph1">`CSplitterWnd`</ph> with <ph id="ph2">`CSplitterWndEx`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Modify toolbars and status bars to use the new MFC classes.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>In the mainfrm.h file:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Replace <ph id="ph1">`CToolBar`</ph> with <ph id="ph2">`CMFCToolBar`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Replace <ph id="ph1">`CStatusBar`</ph> with <ph id="ph2">`CMFCStatusBar`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In the mainfrm.cpp file:</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Replace <ph id="ph1">`m_wndToolBar.SetBarStyle`</ph> with</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Replace <ph id="ph1">`m_wndToolBar.GetBarStyle`</ph> with</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Replace <ph id="ph1">`DockControlBar(&amp;m_wndToolBar)`</ph> with</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>In the ipframe.cpp file, comment out the following three lines of code.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>If you intend to link your application statically, add the following code to the start of the project resource (.rc) file.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The afxribbon.rc file contains resources that are required at run time.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>MFC Application Wizard<ept id="p1">](../mfc/reference/mfc-application-wizard.md)</ept> includes this file automatically when you create an application.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Save the changes and then build and run the application.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Adding Bitmaps to the Project</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The next four steps of this walkthrough require bitmap resources.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>You can obtain appropriate bitmaps in various ways:</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>Resource Editors<ept id="p1">](../mfc/resource-editors.md)</ept> to invent your own bitmaps.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Or use the resource editors to assemble bitmaps from the portable network graphics (.png) images that are included with <ph id="ph1">[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>These images are in the <ph id="ph1">`VS2008ImageLibrary`</ph> directory.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>However, the Ribbon user interface requires that certain bitmaps support transparent images.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Transparent bitmaps use 32-bit pixels, where 24 bits specify the red, green, and blue components of the color, and 8 bits define an <bpt id="p1">*</bpt>alpha channel<ept id="p1">*</ept> that specifies the transparency of the color.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The current resource editors can view, but not modify bitmaps with 32-bit pixels.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Consequently, use an external image editor instead of the resource editors to manipulate transparent bitmaps.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Copy an appropriate resource file from another application to your project and then import bitmaps from that file.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>This walkthrough copies resource files from an application in the Samples directory.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>To add bitmaps to the Project</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Use File Explorer to copy the following .bmp files from the resources directory (<ph id="ph1">`res`</ph>) of the RibbonGadgets sample:</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Copy main.bmp to your Scribble project.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Copy filesmall.bmp and filelarge.bmp to your Scribble project.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Make new copies of the filelarge.bmp and filesmall.bmp files, but save the copies in the RibbonGadgets sample.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Rename the copies homesmall.bmp and homelarge.bmp and then move the copies to your Scribble project.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Make a copy of the toolbar.bmp file, but save the copy in the RibbonGadgets sample.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Rename the copy panelicons.bmp and then move the copy to your Scribble project.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Import the bitmap for an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Resource View<ept id="p1">**</ept>, double-click the <bpt id="p2">**</bpt>scribble.rc<ept id="p2">**</ept> node, double-click the <bpt id="p3">**</bpt>Bitmap<ept id="p3">**</ept> node, and then click <bpt id="p4">**</bpt>Add resource<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>On the dialog box that appears, click <bpt id="p1">**</bpt>Import<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Browse to the <ph id="ph1">`res`</ph> directory, select the main.bmp file, and then click <bpt id="p1">**</bpt>Open<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The main.bmp bitmap contains a 26x26 image.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Change the ID of the bitmap to IDB_RIBBON_MAIN.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Import the bitmaps for the file menu that is attached to the Application button.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Import the filesmall.bmp file, which contains ten 16x16 (16x160) images.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Because we need only eight 16x16 images (16x128),  use the <bpt id="p1">**</bpt>Resource View<ept id="p1">**</ept> to change the width of that bitmap from 160 to 128.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Change the ID of the bitmap to IDB_RIBBON_FILESMALL.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Import the filelarge.bmp, which contains eight 32x32 (32x256) images.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Change the ID of the bitmap to IDB_RIBBON_FILELARGE.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Import the bitmaps for the ribbon categories and panels.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Each tab on the ribbon bar is a category, and consists of a text label and an optional image.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Import the homesmall.bmp bitmap, which contains eight 16x16 images for small button bitmaps.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Change the ID of the bitmap to IDB_RIBBON_HOMESMALL.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Import the homelarge.bmp bitmap, which contains eight 32x32 images for large button bitmaps.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Change the ID of the bitmap to IDB_RIBBON_HOMELARGE.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Import bitmaps for the resized ribbon panels.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>These bitmaps, or panel icons, are used after a resize operation if the ribbon is too small to display the entire panel.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Import the panelicons.bmp bitmap, which contains eight 16x16 images.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept> window of the <bpt id="p2">**</bpt>Bitmap Editor<ept id="p2">**</ept>, adjust the width of the bitmap to 64 (16x64).</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Change the ID of the bitmap to IDB_PANEL_ICONS.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Adding a Ribbon Resource to the Project</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>When you convert an application that uses menus to an application that uses a ribbon, you do not have to remove or disable the existing menus.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Instead, you create a ribbon resource, add ribbon buttons, and then associate the new buttons with the existing menu items.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Although the menus are no longer visible, messages from the ribbon bar are routed through the menus.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>In addition, menu shortcuts continue to work.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>A ribbon consists of the Application button, which is the large button on the upper-left side of the ribbon, and one or more category tabs.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Each category tab contains one or more panels that act as containers for ribbon buttons and controls.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The following procedure shows how to create a ribbon resource and then customize the Application button.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>To add a ribbon resource to the project</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Project<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Add Resource<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Add Resource<ept id="p1">**</ept> dialog box, select <bpt id="p2">**</bpt>Ribbon<ept id="p2">**</ept> and then click <bpt id="p3">**</bpt>New<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Visual Studio creates a ribbon resource and opens it in the design view.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The ribbon resource ID is IDR_RIBBON1, which is displayed in <bpt id="p1">**</bpt>Resource View<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The ribbon contains one category and one panel.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>You can customize the Application button by modifying its properties.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>The message IDs that are used in this code are already defined in the menu for Scribble 1.0.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>In the design view, click the Application Button to display its properties.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Change property values as follows: <bpt id="p1">**</bpt>Image<ept id="p1">**</ept> to <ph id="ph1">`IDB_RIBBON_MAIN`</ph>, <bpt id="p2">**</bpt>Prompt<ept id="p2">**</ept> to <ph id="ph2">`File`</ph>, <bpt id="p3">**</bpt>Keys<ept id="p3">**</ept> to <ph id="ph3">`f`</ph>, <bpt id="p4">**</bpt>Large Images<ept id="p4">**</ept> to <ph id="ph4">`IDB_RIBBON_FILELARGE`</ph>, and <bpt id="p5">**</bpt>Small Images<ept id="p5">**</ept> to <ph id="ph5">`IDB_RIBBON_FILESMALL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The following modifications create the menu that appears when the user clicks the Application button.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>Click the ellipsis (<bpt id="p1">**</bpt>...<ept id="p1">**</ept>) next to <bpt id="p2">**</bpt>Main Items<ept id="p2">**</ept> to open the <bpt id="p3">**</bpt>Items Editor<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> to add a button.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`&amp;New`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_FILE_NEW`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to <ph id="ph3">`0`</ph>, <bpt id="p4">**</bpt>Image Large<ept id="p4">**</ept> to <ph id="ph4">`0`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> to add a second button.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`&amp;Save`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_FILE_SAVE`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to <ph id="ph3">`2`</ph>, and <bpt id="p4">**</bpt>Image Large<ept id="p4">**</ept> to <ph id="ph4">`2`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> to add a third button.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Save &amp;As`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_FILE_SAVE_AS`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to <ph id="ph3">`3`</ph>, and <bpt id="p4">**</bpt>Image Large<ept id="p4">**</ept> to <ph id="ph4">`3`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> to add a fourth  button.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`&amp;Print`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_FILE_PRINT`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to <ph id="ph3">`4`</ph>, and <bpt id="p4">**</bpt>Image Large<ept id="p4">**</ept> to <ph id="ph4">`4`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Change the <bpt id="p1">**</bpt>Item<ept id="p1">**</ept> type to <bpt id="p2">**</bpt>Separator<ept id="p2">**</ept> and then click <bpt id="p3">**</bpt>Add<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Change the <bpt id="p1">**</bpt>Item<ept id="p1">**</ept> type to <bpt id="p2">**</bpt>Button<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> to add a fifth button.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`&amp;Close`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_FILE_CLOSE`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to <ph id="ph3">`5`</ph>, and <bpt id="p4">**</bpt>Image Large<ept id="p4">**</ept> to <ph id="ph4">`5`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>The following modifications create a submenu under the Print button that you created in the previous step.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Print<ept id="p1">**</ept> button, change the <bpt id="p2">**</bpt>Item<ept id="p2">**</ept> type to <bpt id="p3">**</bpt>Label<ept id="p3">**</ept>, and then click <bpt id="p4">**</bpt>Insert<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Preview and print the document`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Print<ept id="p1">**</ept> button, change the <bpt id="p2">**</bpt>Item<ept id="p2">**</ept> type to <bpt id="p3">**</bpt>Button<ept id="p3">**</ept>, and click <bpt id="p4">**</bpt>Insert<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`&amp;Print`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_FILE_PRINT`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to <ph id="ph3">`4`</ph>, and <bpt id="p4">**</bpt>Image Large<ept id="p4">**</ept> to <ph id="ph4">`4`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Print<ept id="p1">**</ept> button and then click <bpt id="p2">**</bpt>Insert<ept id="p2">**</ept> to add a button.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`&amp;Quick Print`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_FILE_PRINT_DIRECT`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to <ph id="ph3">`7`</ph>, and <bpt id="p4">**</bpt>Image Large<ept id="p4">**</ept> to <ph id="ph4">`7`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Print<ept id="p1">**</ept> button and then click <bpt id="p2">**</bpt>Insert<ept id="p2">**</ept> to add another button.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Print Pre&amp;view`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_FILE_PRINT_PREVIEW`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to <ph id="ph3">`6`</ph>, and <bpt id="p4">**</bpt>Image Large<ept id="p4">**</ept> to<ph id="ph4">`6`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>You have now modified the <bpt id="p1">**</bpt>Main Items<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Close<ept id="p1">**</ept> to exit the <bpt id="p2">**</bpt>Items Editor<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>The following modification creates an exit button that appears at the bottom of the Application button menu.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept> window, click the ellipsis (<bpt id="p2">**</bpt>...<ept id="p2">**</ept>) next to <bpt id="p3">**</bpt>Button<ept id="p3">**</ept> to open the <bpt id="p4">**</bpt>Items Editor<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> to add a button.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`E&amp;xit`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_APP_EXIT`</ph>, <bpt id="p3">**</bpt>Image<ept id="p3">**</ept> to<ph id="ph3">`8`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Creating an Instance of the Ribbon Bar</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>The following steps show how to create an instance of the ribbon bar when your application starts.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>To add a ribbon bar to an application, declare the ribbon bar in the mainfrm.h file.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>Then, in the mainfrm.cpp file, write code to load the ribbon resource.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>To create an instance of the ribbon bar</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>In the mainfrm.h file, add a data member to the protected section of <ph id="ph1">`CMainFrame`</ph>, the class definition for the main frame.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>This member represents the ribbon bar.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>``` *// Ribbon bar for the application</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>CMFCRibbonBar m_wndRibbonBar;</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Customizing the Ribbon Resource</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Now that you have created the Application button, you can add elements to the ribbon.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>This walkthrough uses the same panel icon for all panels.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>However, you can use other image list indexes to display other icons.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>To add a Home category and Edit panel</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>The Scribble program requires only one category.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>In the design view, click <bpt id="p1">**</bpt>Category<ept id="p1">**</ept> to display its properties.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Change property values as follows: <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`&amp;Home`</ph>, <bpt id="p2">**</bpt>Large Images<ept id="p2">**</ept> to <ph id="ph2">`IDB_RIBBON_HOMELARGE`</ph>, <bpt id="p3">**</bpt>Small Images<ept id="p3">**</ept> to <ph id="ph3">`IDB_RIBBON_HOMESMALL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>Each ribbon category is organized into named panels.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Each panel contains a set of controls that perform related operations.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>This category has one panel.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Panel<ept id="p1">**</ept>, and then change <bpt id="p2">**</bpt>Caption<ept id="p2">**</ept> to <ph id="ph1">`Edit`</ph> and <bpt id="p3">**</bpt>Image Index<ept id="p3">**</ept> to <ph id="ph2">`0`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>To the <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> panel, add a button that is responsible for clearing the contents of the document.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>The message ID for this button has already been defined in the IDR_SCRIBBTYPE menu resource.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>Specify <ph id="ph1">`Clear All`</ph> as the button text and the index of the bitmap that decorates the button.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Open the <bpt id="p1">**</bpt>Toolbox<ept id="p1">**</ept>, and then drag a <bpt id="p2">**</bpt>Button<ept id="p2">**</ept> to the <bpt id="p3">**</bpt>Edit<ept id="p3">**</ept> panel.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>Click the button  and then change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Clear All`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_EDIT_CLEAR_ALL`</ph>, <bpt id="p3">**</bpt>Image Index<ept id="p3">**</ept> to <ph id="ph3">`0`</ph>, <bpt id="p4">**</bpt>Large Image Index<ept id="p4">**</ept> to <ph id="ph4">`0`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>Save the changes, and then build and run the application.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>The Scribble application should be displayed, and it should have a ribbon bar at the top of the window instead of a menu bar.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>The ribbon bar should have one category, <bpt id="p1">**</bpt>Home<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>Home<ept id="p2">**</ept> should have one panel, <bpt id="p3">**</bpt>Edit<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>The ribbon buttons that you added should be associated with the existing event handlers, and the <bpt id="p1">**</bpt>Open<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Close<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Save<ept id="p3">**</ept>, <bpt id="p4">**</bpt>Print<ept id="p4">**</ept>, and <bpt id="p5">**</bpt>Clear All<ept id="p5">**</ept> buttons should work as expected.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>Setting the Look of the Application</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>visual manager<ept id="p1">*</ept> is a global object that controls all drawing for an application.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>Because the original Scribble application uses the Office 2000 user interface (UI) style, the application may look old-fashioned.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>You can reset the application to use the Office 2007 visual manager so that it resembles an Office 2007 application.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>To set the look of the application</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`CMainFrame::OnCreate`</ph> function, type the following code to change the default visual manager and style.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>``` *// Set the default manager to Office 2007</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerOffice2007));</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_LunaBlue);</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

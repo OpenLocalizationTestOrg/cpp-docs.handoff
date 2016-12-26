@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2c937de2e0a31f185530fb1a24e7eb5863725ca6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\modifying-the-atl-dhtml-control.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f840d918b06cbf4d50b66c0a09167683d7b6f475</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5b25e3e36fad5ab9c07ab134ee2c1a3cd64634dd</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Modifying the ATL DHTML Control | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Modifying the ATL DHTML Control</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The ATL Control Wizard provides starter code so you can build and run the control, and so you can see how the methods are written in the project files and how the DHTML calls into the control's C++ code using the dispatch methods.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>You can add any dispatch method to the interface.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Then, you can call the methods in the HTML resource.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To modify the ATL DHTML control</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In Class View, expand the control project.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Note that the interface that ends in "UI" has one method, <ph id="ph1">`OnClick`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The interface that does not end in "UI" does not have any methods.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Add a method called <ph id="ph1">`MethodInvoked`</ph> to the interface that does not end in "UI."</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This method will be added to the interface that is used in the control container for container interaction, not to the interface used by DHTML to interact with the control.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Only the container can invoke this method.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Find the stubbed-out method in the .cpp file and add code to display a message box, for example:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#5</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Add another method called <ph id="ph1">`HelloHTML`</ph>, only this time, add it to the interface that ends in "UI."</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Find the stubbed-out <ph id="ph1">`HelloHTML`</ph> method in the .cpp file and add code to display a message box, for example:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#6</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Add a third method, <ph id="ph1">`GoToURL`</ph>, to the interface that does not end in "UI."</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Implement this method by calling <bpt id="p1">[</bpt>IWebBrowser2::Navigate<ept id="p1">](https://msdn.microsoft.com/library/aa752133.aspx)</ept>, as follows:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#7</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">**</bpt>IWebBrowser2<ept id="p1">**</ept> methods because ATL provides a pointer to that interface for you in your .h file.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Next, modify the HTML resource to invoke the methods you created.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You will add three buttons for invoking these methods.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>To modify the HTML resource</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In Solution Explorer, double-click the .htm file to display the HTML resource.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Examine the HTML, especially the calls to the external Windows dispatch methods.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The HTML calls the project's <ph id="ph1">`OnClick`</ph> method, and the parameters indicate the body of the control (<ph id="ph2">`theBody`</ph>) and the color to assign ("<ph id="ph3">`red`</ph>").</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The text following the method call is the label that appears on the button.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Add another <ph id="ph1">`OnClick`</ph> method, only change the color.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This method will create a button, labeled <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept>, that the user can click to return the control to the original, white background.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Add the call to the <ph id="ph1">`HelloHTML`</ph> method you created.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>This method will create a button, labeled <bpt id="p1">**</bpt>HelloHTML<ept id="p1">**</ept>, that the user can click to display the <ph id="ph1">`HelloHTML`</ph> message box.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>You can now build and <bpt id="p1">[</bpt>test the modified DHTML control<ept id="p1">](../atl/testing-the-modified-atl-dhtml-control.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Support for DHTML Control</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

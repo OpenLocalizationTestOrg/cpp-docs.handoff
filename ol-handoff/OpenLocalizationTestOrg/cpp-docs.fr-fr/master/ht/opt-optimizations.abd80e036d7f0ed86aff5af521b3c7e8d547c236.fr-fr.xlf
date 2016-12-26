@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2c87069f1a36f711f0f7b858185d3433e90d36b9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\opt-optimizations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e927ceae5f7e7f035fd17ef77eda3c4436a5cf15</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6604c36d843bf35f17cc7f5e5c06511b649aee15</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-OPT (Optimizations) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/OPT (Optimizations)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Controls the optimizations that LINK performs during a build.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Arguments</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>REF<ept id="p1">**</ept> &amp;#124; <bpt id="p2">**</bpt>NOREF<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1"> **</bpt>/OPT:REF<ept id="p1">**</ept> eliminates functions and data that are never referenced; <bpt id="p2">**</bpt>/OPT:NOREF<ept id="p2">**</ept> keeps functions and data that are never referenced.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>When /OFT:REF is enabled, LINK removes unreferenced packaged functions and data.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>An object contains packaged functions and data (COMDATs) if it was compiled by using the <bpt id="p1">[</bpt>/Gy<ept id="p1">](../../build/reference/gy-enable-function-level-linking.md)</ept> option.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This optimization is known as transitive COMDAT elimination.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>By default, <bpt id="p1">**</bpt>/OPT:REF<ept id="p1">**</ept> is enabled in non-debug builds.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To override this default and keep unreferenced COMDATs in the program, specify <bpt id="p1">**</bpt>/OPT:NOREF<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">[</bpt>/INCLUDE<ept id="p1">](../../build/reference/include-force-symbol-references.md)</ept> option to override the removal of a specific symbol.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/OPT:REF<ept id="p1">**</ept> is enabled either explicitly or by default, a limited form of <bpt id="p2">**</bpt>/OPT:ICF<ept id="p2">**</ept> is enabled that only folds identical functions.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If you want <bpt id="p1">**</bpt>/OPT:REF<ept id="p1">**</ept> but not <bpt id="p2">**</bpt>/OPT:ICF<ept id="p2">**</ept>, you must specify either <bpt id="p3">**</bpt>/OPT:REF,NOICF<ept id="p3">**</ept> or <bpt id="p4">**</bpt>/OPT:NOICF<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">[</bpt>/DEBUG<ept id="p1">](../../build/reference/debug-generate-debug-info.md)</ept> is specified, the default for <bpt id="p2">**</bpt>/OPT<ept id="p2">**</ept> is <bpt id="p3">**</bpt>NOREF<ept id="p3">**</ept>, and all functions are preserved in the image.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To override this default and optimize a debugging build, specify <bpt id="p1">**</bpt>/OPT:REF<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Because <bpt id="p1">**</bpt>/OPT:REF<ept id="p1">**</ept> implies <bpt id="p2">**</bpt>/OPT:ICF<ept id="p2">**</ept>, we recommend that you also specify <bpt id="p3">**</bpt>/OPT:NOICF<ept id="p3">**</ept> to preserve identical functions in debugging builds.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This makes it easier to read stack traces and set breakpoints in functions that would otherwise be folded together.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>/OPT:REF<ept id="p1">**</ept> option disables incremental linking.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>You have to explicitly mark <ph id="ph1">`const`</ph> data as a COMDAT; use <bpt id="p1">[</bpt>__declspec(selectany)<ept id="p1">](../../cpp/selectany.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Specifying <bpt id="p1">**</bpt>/OPT:ICF<ept id="p1">**</ept> does not enable the <bpt id="p2">**</bpt>/OPT:REF<ept id="p2">**</ept> option.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>ICF[=<ept id="p1">**</ept>  <ph id="ph1">`iterations`</ph> <bpt id="p2">**</bpt>] &amp;#124; NOICF<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">**</bpt>/OPT:ICF[=<ept id="p1">**</ept><ph id="ph1">`iterations`</ph><bpt id="p2">**</bpt>]<ept id="p2">**</ept> to perform identical COMDAT folding.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Redundant COMDATs can be removed from the linker output.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The optional <ph id="ph1">`iterations`</ph> parameter specifies the number of times to traverse the symbols for duplicates.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The default number of iterations is two.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Additional iterations may locate more duplicates that are uncovered through folding in the previous iteration.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The linker behaves differently when <bpt id="p1">**</bpt>/OPT:REF<ept id="p1">**</ept> is specified—and <bpt id="p2">**</bpt>ICF<ept id="p2">**</ept> is in effect by default—than it does when <bpt id="p3">**</bpt>/OPT:REF,ICF<ept id="p3">**</ept> is specified explicitly.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The form of <bpt id="p1">**</bpt>ICF<ept id="p1">**</ept> that's enabled with <bpt id="p2">**</bpt>/OPT:REF<ept id="p2">**</ept> alone does not fold read-only data—this includes .rdata, .pdata, and .xdata.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Therefore, fewer functions are folded when images are produced for <ph id="ph1">[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]</ph> because functions in these modules are more dependent on read-only data—for example, .pdata and .xdata.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>To get full <bpt id="p1">**</bpt>ICF<ept id="p1">**</ept> folding behavior, explicitly specify <bpt id="p2">**</bpt>/OPT:ICF<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>To place functions in COMDATs, you use the <bpt id="p1">**</bpt>/Gy<ept id="p1">**</ept> compiler option; to place <ph id="ph1">`const`</ph> data, you declare it <ph id="ph2">`__declspec(selectany)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For information about how to specify data for folding, see <bpt id="p1">[</bpt>selectany<ept id="p1">](../../cpp/selectany.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>By default, <bpt id="p1">**</bpt>ICF<ept id="p1">**</ept> is on if <bpt id="p2">**</bpt>REF<ept id="p2">**</ept> is on.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>To override this default if <bpt id="p1">**</bpt>REF<ept id="p1">**</ept> is specified, use <bpt id="p2">**</bpt>NOICF<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/OPT:REF<ept id="p1">**</ept> is not specified in a debug build, you must explicitly specify <bpt id="p2">**</bpt>/OPT:ICF<ept id="p2">**</ept> to enable COMDAT folding.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>However, because <bpt id="p1">**</bpt>/OPT:ICF<ept id="p1">**</ept> can merge identical data or functions, it can change the function names that appear in stack traces.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>It can also make it impossible to set breakpoints in certain functions or to examine some data in the debugger, and take you into unexpected functions when you single-step through code.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Therefore, we do not recommend that you use <bpt id="p1">**</bpt>/OPT:ICF<ept id="p1">**</ept> in debug builds unless the advantages of smaller code outweigh these disadvantages.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Because <bpt id="p1">**</bpt>/OPT:ICF<ept id="p1">**</ept> can cause the same address to be assigned to different functions or read-only data members (<ph id="ph1">`const`</ph> variables compiled by using <bpt id="p2">**</bpt>/Gy<ept id="p2">**</ept>), it can break a program that depends on unique addresses for functions or read-only data members.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/Gy (Enable Function-Level Linking)<ept id="p1">](../../build/reference/gy-enable-function-level-linking.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>LBR<ept id="p1">**</ept> &amp;#124; <bpt id="p2">**</bpt>NOLBR<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>/OPT:LBR<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/OPT:NOLBR<ept id="p2">**</ept> options apply only to ARM binaries.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Because certain ARM processor branch instructions have a limited range, if the linker detects a jump to an out-of-range address, it replaces the branch instruction’s destination address with the address of a code "island" that contains a branch instruction that targets the actual destination.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>You can use <bpt id="p1">**</bpt>/OPT:LBR<ept id="p1">**</ept> to optimize the detection of long branch instructions and the placement of intermediate code islands to minimize overall code size.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/OPT:NOLBR<ept id="p1">**</ept> instructs the linker to generate code islands for long branch instructions as they are encountered, without optimization.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>By default, the <bpt id="p1">**</bpt>/OPT:LBR<ept id="p1">**</ept> option is set when incremental linking is not enabled.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>If you want a non-incremental link but not long branch optimizations, specify <bpt id="p1">**</bpt>/OPT:NOLBR<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>/OPT:LBR<ept id="p1">**</ept> option disables incremental linking.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Optimizations generally decrease the image size and increase the program speed at a cost of increased link time.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">[</bpt>/VERBOSE<ept id="p1">](../../build/reference/verbose-print-progress-messages.md)</ept> option to see the functions that are removed by <bpt id="p2">**</bpt>/OPT:REF<ept id="p2">**</ept> and the functions that are folded by <bpt id="p3">**</bpt>/OPT:ICF<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>To set the OPT:ICF or OPT:REF linker option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Working with Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>In the left pane, expand <bpt id="p1">**</bpt>Configuration Properties<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Linker<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Optimization<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Modify one of these properties:</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Enable COMDAT Folding</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>References</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>To set the OPT:LBR linker option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Setting Visual C++ Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Linker<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Command Line<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Enter the option in <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>To set this linker option programmatically</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>See &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A&gt; and &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A&gt; properties.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Setting Linker Options</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Linker Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

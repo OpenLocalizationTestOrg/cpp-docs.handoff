@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c3175632eaa93e9b8551cf40bb0762c083419c86</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b1e98ba87090c06ad326bd7218dcad4fc102767d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6bd689c3cf16829218d20b805a401a5d9596b2b9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using Database, OLE, and Sockets Extension DLLs in Regular DLLs | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using Database, OLE, and Sockets Extension DLLs in Regular DLLs</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When using an extension DLL from a regular DLL, if the extension DLL is not wired into the <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object chain of the regular DLL, you might run into one or more of a set of related problems.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Because the debug versions of the MFC Database, OLE, and Sockets support DLLs are implemented as extension DLLs, you might see similar problems if you are using these MFC features, even if you are not explicitly using any of your own extension DLLs.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Some symptoms are:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When attempting to deserialize an object of a type of class defined in the extension DLL, the message "Warning: Cannot load CYourClass from archive.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Class not defined."</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>appears in the TRACE debug window and the object fails to serialize.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>An exception indicating bad class might be thrown.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Resources stored in the extension DLL fail to load because <ph id="ph1">`AfxFindResourceHandle`</ph> returns <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> or an incorrect resource handle.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`DllCanUnloadNow`</ph>, and the <ph id="ph2">`UpdateRegistry`</ph>, <ph id="ph3">`Revoke`</ph>, <ph id="ph4">`RevokeAll`</ph>, and <ph id="ph5">`RegisterAll`</ph> member functions of <ph id="ph6">`COleObjectFactory`</ph> fail to locate a class factory defined in the extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>does not work for any classes in the extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Standard MFC database, sockets, or OLE resources fail to load.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For example, <bpt id="p1">**</bpt>AfxLoadString<ept id="p1">**</ept>(<bpt id="p2">**</bpt>AFX_IDP_SQL_CONNECT_FAIL<ept id="p2">**</ept>) returns an empty string, even when the regular DLL is properly using the MFC Database classes.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The solution to these problems is to create and export an initialization function in the extension DLL that creates a <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Call this initialization function exactly once from each regular DLL that uses the extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>MFC OLE, MFC Database (or DAO), or MFC Sockets Support</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If you are using any MFC OLE, MFC Database (or DAO), or MFC Sockets support in your regular DLL, respectively, the MFC debug extension DLLs MFCOxxD.dll, MFCDxxD.dll, and MFCNxxD.dll (where xx is the version number) are linked automatically.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You must call a predefined initialization function for each of these DLLs that you are using.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For database support, add a call to <ph id="ph1">`AfxDbInitModule`</ph> to your regular DLL's <ph id="ph2">`CWinApp::InitInstance`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Make sure this call occurs before any base-class call or any added code which accesses the MFCDxxD.dll.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This function takes no parameters and returns void.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For OLE support, add a call to <ph id="ph1">`AfxOleInitModule`</ph> to your regular DLL's <ph id="ph2">`CWinApp::InitInstance`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Note that the <bpt id="p1">**</bpt>COleControlModule InitInstance<ept id="p1">**</ept> function calls <ph id="ph1">`AfxOleInitModule`</ph> already, so if you are building an OLE control and are using <ph id="ph2">`COleControlModule`</ph>, you should not add this call to <ph id="ph3">`AfxOleInitModule`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For Sockets support, add a call to <ph id="ph1">`AfxNetInitModule`</ph> to your regular DLL's <ph id="ph2">`CWinApp::InitInstance`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Note that release builds of MFC DLLs and applications do not use separate DLLs for database, sockets, or OLE support.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>However, it is safe to call these initialization functions in release mode.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>CDynLinkLibrary Objects</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>During each of the operations mentioned at the beginning of this topic, MFC needs to search for a desired value or object.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, during deserialization, MFC needs to search through all the currently available run-time classes to match objects in the archive with their proper run-time class.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>As a part of these searches, MFC scans through all the extension DLLs in use by walking a chain of <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> objects attach automatically to a chain during their construction and are created by each extension DLL in turn during initialization.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In addition, every module (application or regular DLL) has its own chain of <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For an extension DLL to get wired into a <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> chain, it must create a <bpt id="p2">**</bpt>CDynLinkLibrary<ept id="p2">**</ept> object in the context of every module that uses the extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Therefore, if an extension DLL is going to be used from regular DLLs, it must provide an exported initialization function that creates a <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Every regular DLL that uses the extension DLL must call the exported initialization function.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If an extension DLL is only going to be used from an MFC application (.exe) and never from a regular DLL, then it is sufficient to create the <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object in the extension DLL's <ph id="ph1">`DllMain`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This is what the MFC DLL Wizard extension DLL code does.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>When loading an extension DLL implicitly, <ph id="ph1">`DllMain`</ph> loads and executes before the application ever starts.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Any <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> creations are wired into a default chain that the MFC DLL reserves for an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Note that it is a bad idea to have multiple <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> objects from one extension DLL in any one chain, especially if the extension DLL will be dynamically unloaded from memory.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Do not call the initialization function more than once from any one module.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Sample Code</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This sample code assumes that the regular DLL is implicitly linking to the extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This is accomplished by linking to the import library (.lib) of the extension DLL when building the regular DLL.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The following lines should be in the source of the extension DLL:</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Be sure to export the <bpt id="p1">**</bpt>InitYourExtDLL<ept id="p1">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This could be done using <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept> or in your DLL's .def file as follows:</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Add a call to the <ph id="ph1">`InitInstance`</ph> member of the <ph id="ph2">`CWinApp`</ph>-derived object in each regular DLL using the extension DLL:</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>What do you want to do?</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Initialize an extension DLL</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Initialize regular DLLs</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about?</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Extension DLLs</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Regular DLLs Statically Linked to MFC</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Regular DLLs Dynamically Linked to MFC</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Using MFC as Part of a DLL</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>DLL Version of MFC</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Extension DLLs</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

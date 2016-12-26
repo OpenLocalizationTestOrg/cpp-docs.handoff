@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">04021bc5255cc0419f84e3f5ce6ea0cc86338a6c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\best-practices-in-the-asynchronous-agents-library.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f54c094383b8a1eaf4580654bc7d85f98ee9d630</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bac14a27027a73a50b5782bd6b338d2db8cf70c3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Best Practices in the Asynchronous Agents Library | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Best Practices in the Asynchronous Agents Library</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document describes how to make effective use of the Asynchronous Agents Library.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The Agents Library promotes an actor-based programming model and in-process message passing for coarse-grained dataflow and pipelining tasks.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For more information about the Agents Library, see <bpt id="p1">[</bpt>Asynchronous Agents Library<ept id="p1">](../../parallel/concrt/asynchronous-agents-library.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Sections</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This document contains the following sections:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Use Agents to Isolate State</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Use a Throttling Mechanism to Limit the Number of Messages in a Data Pipeline</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Do Not Perform Fine-Grained Work in a Data Pipeline</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Do Not Pass Large Message Payloads by Value</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Use shared_ptr in a Data Network When Ownership Is Undefined</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Use Agents to Isolate State</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The Agents Library provides alternatives to shared state by letting you connect isolated components through an asynchronous message-passing mechanism.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Asynchronous agents are most effective when they isolate their internal state from other components.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>By isolating state, multiple components do not typically act on shared data.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>State isolation can enable your application to scale because it reduces contention on shared memory.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>State isolation also reduces the chance of deadlock and race conditions because components do not have to synchronize access to shared data.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You typically isolate state in an agent by holding data members in the <ph id="ph1">`private`</ph> or <ph id="ph2">`protected`</ph> sections of the agent class and by using message buffers to communicate state changes.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The following example shows the <ph id="ph1">`basic_agent`</ph> class, which derives from <bpt id="p1">[</bpt>concurrency::agent<ept id="p1">](../../parallel/concrt/reference/agent-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`basic_agent`</ph> class uses two message buffers to communicate with external components.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>One message buffer holds incoming messages; the other message buffer holds outgoing messages.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>concrt-simple-agent#1</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For complete examples about how to define and use agents, see <bpt id="p1">[</bpt>Walkthrough: Creating an Agent-Based Application<ept id="p1">](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)</ept> and <bpt id="p2">[</bpt>Walkthrough: Creating a Dataflow Agent<ept id="p2">](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Use a Throttling Mechanism to Limit the Number of Messages in a Data Pipeline</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Many message-buffer types, such as <bpt id="p1">[</bpt>concurrency::unbounded_buffer<ept id="p1">](reference/unbounded-buffer-class.md)</ept>, can hold an unlimited number of messages.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>When a message producer sends messages to a data pipeline faster than the consumer can process these messages, the application can enter a low-memory or out-of-memory state.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>You can use a throttling mechanism, for example, a semaphore, to limit the number of messages that are concurrently active in a data pipeline.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The following basic example demonstrates how to use a semaphore to limit the number of messages in a data pipeline.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The data pipeline uses the <bpt id="p1">[</bpt>concurrency::wait<ept id="p1">](reference/concurrency-namespace-functions.md#wait)</ept> function to simulate an operation that takes at least 100 milliseconds.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Because the sender produces messages faster than the consumer can process those messages, this example defines the <ph id="ph1">`semaphore`</ph> class to enable the application to limit the number of active messages.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>concrt-message-throttling#1</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`semaphore`</ph> object limits the pipeline to process at most two messages at the same time.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The producer in this example sends relatively few messages to the consumer.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Therefore, this example does not demonstrate a potential low-memory or out-of-memory condition.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>However, this mechanism is useful when a data pipeline contains a relatively high number of messages.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For more information about how to create the semaphore class that is used in this example, see <bpt id="p1">[</bpt>How to: Use the Context Class to Implement a Cooperative Semaphore<ept id="p1">](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Do Not Perform Fine-Grained Work in a Data Pipeline</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The Agents Library is most useful when the work that is performed by a data pipeline is fairly coarse-grained.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For example, one application component might read data from a file or a network connection and occasionally send that data to another component.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The protocol that the Agents Library uses to propagate messages causes the message-passing mechanism to have more overhead than the task parallel constructs that are provided by the <bpt id="p1">[</bpt>Parallel Patterns Library<ept id="p1">](../../parallel/concrt/parallel-patterns-library-ppl.md)</ept> (PPL).</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Therefore, make sure that the work that is performed by a data pipeline is long enough to offset this overhead.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Although a data pipeline is most effective when its tasks are coarse-grained, each stage of the data pipeline can use PPL constructs such as task groups and parallel algorithms to perform more fine-grained work.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>For an example of a coarse-grained data network that uses fine-grained parallelism at each processing stage, see <bpt id="p1">[</bpt>Walkthrough: Creating an Image-Processing Network<ept id="p1">](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Do Not Pass Large Message Payloads by Value</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>In some cases, the runtime creates a copy of every message that it passes from one message buffer to another message buffer.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For example, the <bpt id="p1">[</bpt>concurrency::overwrite_buffer<ept id="p1">](../../parallel/concrt/reference/overwrite-buffer-class.md)</ept> class offers a copy of every message that it receives to each of its targets.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The runtime also creates a copy of the message data when you use message-passing functions such as <bpt id="p1">[</bpt>concurrency::send<ept id="p1">](reference/concurrency-namespace-functions.md#send)</ept> and <bpt id="p2">[</bpt>concurrency::receive<ept id="p2">](reference/concurrency-namespace-functions.md#receive)</ept> to write messages to and read messages from a message buffer.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Although this mechanism helps eliminate the risk of concurrently writing to shared data, it could lead to poor memory performance when the message payload is relatively large.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>You can use pointers or references to improve memory performance when you pass messages that have a large payload.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The following example compares passing large messages by value to passing pointers to the same message type.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The example defines two agent types, <ph id="ph1">`producer`</ph> and <ph id="ph2">`consumer`</ph>, that act on <ph id="ph3">`message_data`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The example compares the time that is required for the producer to send several <ph id="ph1">`message_data`</ph> objects to the consumer to the time that is required for the producer agent to send several pointers to <ph id="ph2">`message_data`</ph> objects to the consumer.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>concrt-message-payloads#1</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>This example produces the following sample output:</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The version that uses pointers performs better because it eliminates the requirement for the runtime to create a full copy of every <ph id="ph1">`message_data`</ph> object that it passes from the producer to the consumer.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Use shared_ptr in a Data Network When Ownership Is Undefined</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>When you send messages by pointer through a message-passing pipeline or network, you typically allocate the memory for each message at the front of the network and free that memory at the end of the network.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Although this mechanism frequently works well, there are cases in which it is difficult or not possible to use it.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>For example, consider the case in which the data network contains multiple end nodes.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>In this case, there is no clear location to free the memory for the messages.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>To solve this problem, you can use a mechanism, for example, <bpt id="p1">[</bpt>std::shared_ptr<ept id="p1">](../../standard-library/shared-ptr-class.md)</ept>, that enables a pointer to be owned by multiple components.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>When the final <ph id="ph1">`shared_ptr`</ph> object that owns a resource is destroyed, the resource is also freed.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates how to use <ph id="ph1">`shared_ptr`</ph> to share pointer values among multiple message buffers.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The example connects a <bpt id="p1">[</bpt>concurrency::overwrite_buffer<ept id="p1">](../../parallel/concrt/reference/overwrite-buffer-class.md)</ept> object to three <bpt id="p2">[</bpt>concurrency::call<ept id="p2">](../../parallel/concrt/reference/call-class.md)</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`overwrite_buffer`</ph> class offers messages to each of its targets.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Because there are multiple owners of the data at the end of the data network, this example uses <ph id="ph1">`shared_ptr`</ph> to enable each <ph id="ph2">`call`</ph> object to share ownership of the messages.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>concrt-message-sharing#1</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>This example produces the following sample output:</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime Best Practices</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents Library</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Creating an Agent-Based Application</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Creating a Dataflow Agent</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Creating an Image-Processing Network</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Best Practices in the Parallel Patterns Library</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>General Best Practices in the Concurrency Runtime</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

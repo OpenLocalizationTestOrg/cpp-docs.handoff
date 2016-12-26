@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">aef2cb7cff40e87a7ade51b2d986f06aa0e6891f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\mfc-activex-controls-property-pages.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1a6c817b36d5fa6c5354202943b1569688cca4bd</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6e790affbe872816233483bf9ef54ad0776b9998</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Property Pages | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Property Pages</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Property pages allow an ActiveX control user to view and change ActiveX control properties.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>These properties are accessed by invoking a control properties dialog box, which contains one or more property pages that provide a customized, graphical interface for viewing and editing the control properties.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>ActiveX control property pages are displayed in two ways:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When the control's Properties verb (<bpt id="p1">**</bpt>OLEIVERB_PROPERTIES<ept id="p1">**</ept>) is invoked, the control opens a modal property dialog box that contains the control's property pages.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The container can display its own modeless dialog box that shows the property pages of the selected control.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The properties dialog box (illustrated in the following figure) consists of an area for displaying the current property page, tabs for switching between property pages, and a collection of buttons that perform common tasks such as closing the property page dialog, canceling any changes made, or immediately applying any changes to the ActiveX control.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Properties dialog box for Circ3</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Properties Dialog Box</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This article covers topics related to using property pages in an ActiveX control.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>These include:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Implementing the default property page for an ActiveX control</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Adding controls to a property page</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Customizing the DoDataExchange function</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information on using property pages in an ActiveX control, see the following articles:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Adding Another Custom Property Page</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Using Stock Property Pages</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For information on using property sheets in an MFC application other than an ActiveX control, see <bpt id="p1">[</bpt>Property Sheets<ept id="p1">](../mfc/property-sheets-mfc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Implementing the Default Property Page</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If you use the ActiveX Control Wizard to create your control project, the ActiveX Control Wizard provides a default property page class for the control derived from <bpt id="p1">[</bpt>COlePropertyPage Class<ept id="p1">](../mfc/reference/colepropertypage-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Initially, this property page is blank, but you can add any dialog box control or set of controls to it.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Because the ActiveX Control Wizard creates only one property page class by default, additional property page classes (also derived from <ph id="ph1">`COlePropertyPage`</ph>) must be created using Class View.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For more information on this procedure, see <bpt id="p1">[</bpt>MFC ActiveX Controls: Adding Another Custom Property Page<ept id="p1">](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Implementing a property page (in this case, the default) is a three-step process:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To implement a property page</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Add a <ph id="ph1">`COlePropertyPage`</ph>-derived class to the control project.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If the project was created using the ActiveX Control Wizard (as in this case), the default property page class already exists.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Use the dialog editor to add any controls to the property page template.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Customize the <ph id="ph1">`DoDataExchange`</ph> function of the <ph id="ph2">`COlePropertyPage`</ph>-derived class to exchange values between the property page control and the ActiveX control.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For example purposes, the following procedures use a simple control (named "Sample").</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Sample was created using the ActiveX Control Wizard and contains only the stock Caption property.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Adding Controls to a Property Page</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>To add controls to a property page</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>With your control project open, open Resource View.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Double-click the <bpt id="p1">**</bpt>Dialog<ept id="p1">**</ept> directory icon.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Open the <bpt id="p1">**</bpt>IDD_PROPPAGE_SAMPLE<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The ActiveX Control Wizard appends the name of the project to the end of the dialog ID, in this case, Sample.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Drag and drop the selected control from the Toolbox onto the dialog box area.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>For this example, a text label control "Caption :" and an edit box control with an <bpt id="p1">**</bpt>IDC_CAPTION<ept id="p1">**</ept> identifier are sufficient.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> on the Toolbar to save your changes.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Now that the user interface has been modified, you need to link the edit box with the Caption property.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>This is done in the following section by editing the <ph id="ph1">`CSamplePropPage::DoDataExchange`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Customizing the DoDataExchange Function</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Your property page <bpt id="p1">[</bpt>CWnd::DoDataExchange<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__dodataexchange)</ept> function allows you to link property page values with the actual values of properties in the control.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>To establish links, you must map the appropriate property page fields to their respective control properties.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>These mappings are implemented using the property page <bpt id="p1">**</bpt>DDP_<ept id="p1">**</ept> functions.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>DDP_<ept id="p1">**</ept> functions work like the <bpt id="p2">**</bpt>DDX_<ept id="p2">**</ept> functions used in standard MFC dialogs, with one exception.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>In addition to the reference to a member variable, <bpt id="p1">**</bpt>DDP_<ept id="p1">**</ept> functions take the name of the control property.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The following is a typical entry in the <ph id="ph1">`DoDataExchange`</ph> function for a property page.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxUI#31</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>This function associates the property page's <ph id="ph1">`m_caption`</ph> member variable with the Caption, using the <ph id="ph2">`DDP_TEXT`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>After you have the property page control inserted, you need to establish a link between the property page control, <ph id="ph1">`IDC_CAPTION`</ph>, and the actual control property, Caption, using the <bpt id="p1">**</bpt>DDP_Text<ept id="p1">**</ept> function as described above.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Property Pages<ept id="p1">](../mfc/reference/property-pages-mfc.md)</ept> are available for other dialog control types, such as check boxes, radio buttons, and list boxes.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The table below lists the entire set of property page <bpt id="p1">**</bpt>DDP_<ept id="p1">**</ept> functions and their purposes:</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Property Page Functions</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Function name</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Use this function to link</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The selected string's index in a combo box with a control property.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The selected string in a combo box with a control property.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The selected string can begin with the same letters as the property's value but need not match it fully.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The selected string in a combo box with a control property.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The selected string and the property's string value must match exactly.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>A check box with a control property.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The selected string's index in a list box with a control property.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The selected string in a list box with a control property.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The selected string can begin with the same letters as the property's value but need not match it fully.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The selected string in a list box with a control property.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The selected string and the property's string value must match exactly.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>A radio button with a control property.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>DDP_Text</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Text with a control property.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>COlePropertyPage Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

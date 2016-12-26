@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">97ff18c88f58add080516040f9def90f0068ab0b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl-mfc-shared\using-cstring.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e9a9d488f0cfbabf3bdbf9cb4aafcd9e4ef8e16c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f589412754ecd8d0e50abfd863c1b1b72ee0423c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using CString | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using CString</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The topics in this section describe how to program with <ph id="ph1">`CString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For reference documentation about the <ph id="ph1">`CString`</ph> class, see the documentation for <bpt id="p1">[</bpt>CStringT<ept id="p1">](../atl-mfc-shared/reference/cstringt-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>To use <ph id="ph1">`CString`</ph>, include the <ph id="ph2">`atlstr.h`</ph> header.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CString`</ph>, <ph id="ph2">`CStringA`</ph>, and <ph id="ph3">`CStringW`</ph> classes are specializations of a class template called <bpt id="p1">[</bpt>CStringT<ept id="p1">](../atl-mfc-shared/reference/cstringt-class.md)</ept> based on the type of character data they support.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`CStringW`</ph> object contains the <ph id="ph2">`wchar_t`</ph> type and supports Unicode strings.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`CStringA`</ph> object contains the <ph id="ph2">`char`</ph> type, and supports single-byte and multi-byte (MBCS) strings.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`CString`</ph> object supports either the <ph id="ph2">`char`</ph> type or the <ph id="ph3">`wchar_t`</ph> type, depending on whether the <ph id="ph4">`MBCS`</ph> symbol or the <ph id="ph5">`UNICODE`</ph> symbol is defined at compile time.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`CString`</ph> object keeps character data in a <ph id="ph2">`CStringData`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>accepts <ph id="ph1">`null`</ph>-terminated C-style strings, but does not retain the <ph id="ph2">`null`</ph> character in the stored character data.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Instead, <ph id="ph1">`CString`</ph> tracks string length.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>does provide a null terminator when it exports a C-style string.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You can insert a <ph id="ph1">`null`</ph> in a <ph id="ph2">`CString`</ph>, but it may produce unexpected results.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following set of string classes can be used without linking an MFC library, with or without CRT support: <ph id="ph1">`CAtlString`</ph>, <ph id="ph2">`CAtlStringA`</ph>, and <ph id="ph3">`CAtlStringW`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>is used in native projects.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For managed-code (C++/CLI) projects, use <ph id="ph1">`System::String`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To add more capabilities than <ph id="ph1">`CString`</ph>, <ph id="ph2">`CStringA`</ph>, or <ph id="ph3">`CStringW`</ph> currently offer, you should create a subclass of <ph id="ph4">`CStringT`</ph> that contains the additional features.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The following code shows how to create a <ph id="ph1">`CString`</ph> and print it to standard output:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In This Section</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Basic CString Operations</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Describes basic <ph id="ph1">`CString`</ph> operations, including creating objects from C literal strings, accessing individual characters in a <ph id="ph2">`CString`</ph>, concatenating two objects, and comparing <ph id="ph3">`CString`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>String Data Management</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Discusses using Unicode and MBCS with <ph id="ph1">`CString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>CString Semantics</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Explains how <ph id="ph1">`CString`</ph> objects are used.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>CString Operations Relating to C-Style Strings</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Describes manipulating the contents of a <ph id="ph1">`CString`</ph> object like a C-style null-terminated string.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Allocating and Releasing Memory for a BSTR</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Discusses using memory for a <ph id="ph1">`BSTR`</ph> and COM objects.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>CString Exception Cleanup</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Explains that explicit cleanup in MFC 3.0 and later is no longer necessary.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>CString Argument Passing</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Explains how to pass CString objects to functions and how to return <ph id="ph1">`CString`</ph> objects from functions.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Unicode and Multibyte Character Set (MBCS) Support</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Discusses how MFC is enabled for Unicode and MBCS support.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Reference</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>CStringT</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Provides reference information about the <ph id="ph1">`CStringT`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>CSimpleStringT Class</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Provides reference information about the <ph id="ph1">`CSimpleStringT`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Related Sections</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Strings (ATL/MFC)</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Contains links to topics that describe several ways to manage string data.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Strings (ATL/MFC)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

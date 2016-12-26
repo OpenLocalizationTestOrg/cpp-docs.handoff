@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3e71ff8e4286d5a07f50c15b28fee47ab31dc8f9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\mfc-activex-controls-serializing.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">383ec8ac9a3f3c2b0b1ff9ce24e947b1a49565d9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">73644351dfc0e3d73ce69dc3a78d44c2b4b95eb3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Serializing | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Serializing</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article discusses how to serialize an ActiveX control.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Serialization is the process of reading from or writing to a persistent storage medium, such as a disk file.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The Microsoft Foundation Class (MFC) Library provides built-in support for serialization in class <ph id="ph1">`CObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>extends this support to ActiveX controls through the use of a property exchange mechanism.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Serialization for ActiveX controls is implemented by overriding <bpt id="p1">[</bpt>COleControl::DoPropExchange<ept id="p1">](../mfc/reference/colecontrol-class.md#colecontrol__dopropexchange)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This function, called during the loading and saving of the control object, stores all properties implemented with a member variable or a member variable with change notification.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The following topics cover the main issues related to serializing an ActiveX control:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Implementing <ph id="ph1">`DoPropExchange`</ph> function to serialize your control object</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Customizing the Serialization Process</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Implementing Version Support</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Implementing the DoPropExchange Function</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When you use the ActiveX Control Wizard to generate the control project, several default handler functions are automatically added to the control class, including the default implementation of <bpt id="p1">[</bpt>COleControl::DoPropExchange<ept id="p1">](../mfc/reference/colecontrol-class.md#colecontrol__dopropexchange)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following example shows the code added to classes created with the ActiveX Control Wizard:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxUI#43</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If you want to make a property persistent, modify <ph id="ph1">`DoPropExchange`</ph> by adding a call to the property exchange function.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates the serialization of a custom Boolean CircleShape property, where the CircleShape property has a default value of <bpt id="p1">**</bpt>TRUE<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxSer#1</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxSer#2</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The following table lists the possible property exchange functions you can use to serialize the control's properties:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Property exchange functions</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Purpose</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>PX_Blob( )</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Serializes a type Binary Large Object (BLOB) data property.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>PX_Bool( )</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Serializes a type Boolean property.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>PX_Color( )</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Serializes a type color property.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>PX_Currency( )</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Serializes a type <bpt id="p1">**</bpt>CY<ept id="p1">**</ept> (currency) property.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>PX_Double( )</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Serializes a type <bpt id="p1">**</bpt>double<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>PX_Font( )</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Serializes a Font type property.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>PX_Float( )</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Serializes a type <bpt id="p1">**</bpt>float<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>PX_IUnknown( )</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Serializes a property of type <ph id="ph1">`LPUNKNOWN`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>PX_Long( )</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Serializes a type <bpt id="p1">**</bpt>long<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>PX_Picture( )</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Serializes a type Picture property.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>PX_Short( )</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Serializes a type <bpt id="p1">**</bpt>short<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>PXstring( )</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Serializes a type <ph id="ph1">`CString`</ph> property.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>PX_ULong( )</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Serializes a type <bpt id="p1">**</bpt>ULONG<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>PX_UShort( )</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Serializes a type <bpt id="p1">**</bpt>USHORT<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>For more information on these property exchange functions, see <bpt id="p1">[</bpt>Persistence of OLE Controls<ept id="p1">](../mfc/reference/persistence-of-ole-controls.md)</ept> in the <bpt id="p2">*</bpt>MFC Reference<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Customizing the Default Behavior of DoPropExchange</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The default implementation of <bpt id="p1">**</bpt>DoPropertyExchange<ept id="p1">**</ept> (as shown in the previous topic) makes a call to base class <ph id="ph1">`COleControl`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>This serializes the set of properties automatically supported by <ph id="ph1">`COleControl`</ph>, which uses more storage space than serializing only the custom properties of the control.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Removing this call allows your object to serialize only those properties you consider important.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Any stock property states the control has implemented will not be serialized when saving or loading the control object unless you explicitly add <bpt id="p1">**</bpt>PX_<ept id="p1">**</ept> calls for them.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Implementing Version Support</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Version support enables a revised ActiveX control to add new persistent properties, and still be able to detect and load the persistent state created by an earlier version of the control.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>To make a control's version available as part of its persistent data, call <bpt id="p1">[</bpt>COleControl::ExchangeVersion<ept id="p1">](../mfc/reference/colecontrol-class.md#colecontrol__exchangeversion)</ept> in the control's <ph id="ph1">`DoPropExchange`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>This call is automatically inserted if the ActiveX control was created using the ActiveX Control Wizard.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>It can be removed if version support is not needed.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>However, the cost in control size is very small (4 bytes) for the added flexibility that version support provides.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>If the control was not created with the ActiveX Control Wizard, add a call to <ph id="ph1">`COleControl::ExchangeVersion`</ph> by inserting the following line at the beginning of your <ph id="ph2">`DoPropExchange`</ph> function (before the call to <ph id="ph3">`COleControl::DoPropExchange`</ph>):</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxSer#1</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxSer#3</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>You can use any <ph id="ph1">`DWORD`</ph> as the version number.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Projects generated by the ActiveX Control Wizard use <bpt id="p1">**</bpt>_wVerMinor<ept id="p1">**</ept> and <bpt id="p2">**</bpt>_wVerMajor<ept id="p2">**</ept> as the default.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>These are global constants defined in the implementation file of the project's ActiveX control class.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Within the remainder of your <ph id="ph1">`DoPropExchange`</ph> function, you can call <bpt id="p1">[</bpt>CPropExchange::GetVersion<ept id="p1">](../mfc/reference/cpropexchange-class.md#cpropexchange__getversion)</ept> at any time to retrieve the version you are saving or retrieving.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>In the following example, version 1 of this sample control has only a "ReleaseDate" property.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Version 2 adds an "OriginalDate" property.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>If the control is instructed to load the persistent state from the old version, it initializes the member variable for the new property to a default value.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxSer#4</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxSer#3</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>By default, a control "converts" old data to the latest format.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>For example, if version 2 of a control loads data that was saved by version 1, it will write the version 2 format when it is saved again.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>If you want the control to save data in the format last read, pass <bpt id="p1">**</bpt>FALSE<ept id="p1">**</ept> as a third parameter when calling <ph id="ph1">`ExchangeVersion`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>This third parameter is optional and is <bpt id="p1">**</bpt>TRUE<ept id="p1">**</ept> by default.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

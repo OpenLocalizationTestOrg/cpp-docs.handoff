@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">277d6f05bf824b35f66f0416ccce24203d3fab2a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\text\unicode-programming-summary.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">875bf192adb42e58c5d5ee34dd27cb4117cac842</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">240cc21f413738dcbe491f411045e79b86dac20f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Unicode Programming Summary | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Unicode Programming Summary</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>To take advantage of the MFC and C run-time support for Unicode, you need to:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Define <bpt id="p1">**</bpt>_UNICODE<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Define the symbol <bpt id="p1">**</bpt>_UNICODE<ept id="p1">**</ept> before you build your program.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Specify entry point.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Output<ept id="p1">**</ept> page of the Linker folder in the project's <bpt id="p2">[</bpt>Property Pages<ept id="p2">](../ide/property-pages-visual-cpp.md)</ept> dialog box, set the Entry Point symbol to <bpt id="p3">**</bpt>wWinMainCRTStartup<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Use portable run-time functions and types.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Use the proper C run-time functions for Unicode string handling.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">**</bpt>wcs<ept id="p1">**</ept> family of functions, but you might prefer the fully portable (internationally enabled) <bpt id="p2">**</bpt>_TCHAR<ept id="p2">**</ept> macros.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>These macros are all prefixed with <bpt id="p1">**</bpt>_tcs<ept id="p1">**</ept>; they substitute, one for one, for the <bpt id="p2">**</bpt>str<ept id="p2">**</ept> family of functions.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>These functions are described in detail in the <bpt id="p1">[</bpt>Internationalization<ept id="p1">](../c-runtime-library/internationalization.md)</ept> section of the <bpt id="p2">*</bpt>Run-Time Library Reference<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Generic-Text Mappings in Tchar.h<ept id="p1">](../text/generic-text-mappings-in-tchar-h.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">**</bpt>_TCHAR<ept id="p1">**</ept> and the related portable data types described in <bpt id="p2">[</bpt>Support for Unicode<ept id="p2">](../text/support-for-unicode.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Handle literal strings properly.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The Visual C++ compiler interprets a literal string coded as:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>to mean a string of Unicode characters.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You can use the same prefix for literal characters.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>_T<ept id="p1">**</ept> macro to code literal strings generically, so they compile as Unicode strings under Unicode or as ANSI strings (including MBCS) without Unicode.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For example, instead of:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>use:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>_UNICODE<ept id="p1">**</ept> defined, <bpt id="p2">**</bpt>_T<ept id="p2">**</ept> translates the literal string to the L-prefixed form; otherwise, <bpt id="p3">**</bpt>_T<ept id="p3">**</ept> translates the string without the L prefix.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>_T<ept id="p1">**</ept> macro is identical to the <ph id="ph1">`_TEXT`</ph> macro.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Be careful passing string lengths to functions.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Some functions want the number of characters in a string; others want the number of bytes.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For example, if <bpt id="p1">**</bpt>_UNICODE<ept id="p1">**</ept> is defined, the following call to a <ph id="ph1">`CArchive`</ph> object will not work (<ph id="ph2">`str`</ph> is a <ph id="ph3">`CString`</ph>):</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In a Unicode application, the length gives you the number of characters but not the correct number of bytes, because each character is 2 bytes wide.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Instead, you must use:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>which specifies the correct number of bytes to write.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>However, MFC member functions that are character-oriented, rather than byte-oriented, work without this extra coding:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>takes a number of characters, not a number of bytes.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">[</bpt>fopen_s, _wfopen_s<ept id="p1">](../c-runtime-library/reference/fopen-s-wfopen-s.md)</ept> to open Unicode files.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>To summarize, MFC and the run-time library provide the following support for Unicode programming under Windows 2000:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Except for database class member functions, all MFC functions are Unicode-enabled, including <ph id="ph1">`CString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>also provides Unicode/ANSI conversion functions.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The run-time library supplies Unicode versions of all string-handling functions.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>(The run-time library also supplies portable versions suitable for Unicode or for MBCS.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>These are the <bpt id="p1">**</bpt>_tcs<ept id="p1">**</ept> macros.)</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Tchar.h supplies portable data types and the <bpt id="p1">**</bpt>_T<ept id="p1">**</ept> macro for translating literal strings and characters.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Generic-Text Mappings in Tchar.h<ept id="p1">](../text/generic-text-mappings-in-tchar-h.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The run-time library provides a wide-character version of <bpt id="p1">**</bpt>main<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">**</bpt>wmain<ept id="p1">**</ept> to make your application Unicode-aware.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Support for Unicode</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

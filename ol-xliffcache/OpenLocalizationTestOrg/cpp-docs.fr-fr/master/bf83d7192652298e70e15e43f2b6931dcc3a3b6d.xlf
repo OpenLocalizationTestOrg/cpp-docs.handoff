@@ -1,0 +1,843 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bf83d7192652298e70e15e43f2b6931dcc3a3b6d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\reference\com-map-macros.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6eccaba4a5c125d79c9630a0fefdb3cb39e24a65</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b9644a1d61f0ed7b369866341e995c9b2c6c82bd</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>COM Map Macros | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>COM Map Macros</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>These macros define COM interface maps.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>BEGIN_COM_MAP</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Marks the beginning of the COM interface map entries.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Enters interfaces into the COM interface map.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY2</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Use this macro to disambiguate two branches of inheritance.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_IID</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Use this macro to enter the interface into the COM map and specify its IID.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY2_IID</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY2<ept id="p1">](#com_interface_entry2)</ept>, except you can specify a different IID.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AGGREGATE</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>When the interface identified by <ph id="ph1">`iid`</ph> is queried for, <ph id="ph2">`COM_INTERFACE_ENTRY_AGGREGATE`</ph> forwards to <ph id="ph3">`punk`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AGGREGATE_BLIND</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_AGGREGATE<ept id="p1">](#com_interface_entry_aggregate)</ept>, except that querying for any IID results in forwarding the query to <ph id="ph1">`punk`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AUTOAGGREGATE</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_AGGREGATE<ept id="p1">](#com_interface_entry_aggregate)</ept>, except if <ph id="ph1">`punk`</ph> is <bpt id="p2">**</bpt>NULL<ept id="p2">**</ept>, it automatically creates the aggregate described by the <ph id="ph2">`clsid`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_AUTOAGGREGATE<ept id="p1">](#com_interface_entry_autoaggregate)</ept>, except that querying for any IID results in forwarding the query to <ph id="ph1">`punk`</ph>, and if <ph id="ph2">`punk`</ph> is <bpt id="p2">**</bpt>NULL<ept id="p2">**</ept>, automatically creating the aggregate described by the <ph id="ph3">`clsid`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_BREAK</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Causes your program to call <bpt id="p1">[</bpt>DebugBreak<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms679297)</ept> when the specified interface is queried for.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_CACHED_TEAR_OFF</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Saves the interface-specific data for every instance.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_TEAR_OFF</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Exposes your tear-off interfaces.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_CHAIN</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Processes the COM map of the base class when the processing reaches this entry in the COM map.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_FUNC</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>A general mechanism for hooking into ATL's <ph id="ph1">`QueryInterface`</ph> logic.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_FUNC_BLIND</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_FUNC<ept id="p1">](#com_interface_entry_func)</ept>, except that querying for any IID results in a call to <ph id="ph1">`func`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_NOINTERFACE</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Returns <bpt id="p1">**</bpt>E_NOINTERFACE<ept id="p1">**</ept> and terminates COM map processing when the specified interface is queried for.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>END_COM_MAP</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Marks the end of the COM interface map entries.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>BEGIN_COM_MAP</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The COM map is the mechanism that exposes interfaces on an object to a client through <ph id="ph1">`QueryInterface`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>[in] The name of the class object you are exposing interfaces on.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CComObjectRootEx::InternalQueryInterface<ept id="p1">](ccomobjectrootex-class.md#ccomobjectrootex__internalqueryinterface)</ept> only returns pointers for interfaces in the COM map.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Start your interface map with the <ph id="ph1">`BEGIN_COM_MAP`</ph> macro, add entries for each of your interfaces with the <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY<ept id="p1">](http://msdn.microsoft.com/library/c5363b8b-a1a2-471e-ad3a-d472f6c356c5)</ept> macro or one of its variants, and complete the map with the <bpt id="p2">[</bpt>END_COM_MAP<ept id="p2">](#end_com_map)</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>From the ATL <bpt id="p1">[</bpt>BEEPER<ept id="p1">](../../visual-cpp-samples.md)</ept> sample:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#1</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY Macros</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>These macros enter an object's interfaces into its COM map so that they can be accessed by <ph id="ph1">`QueryInterface`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The order of entries in the COM map is the order interfaces will be checked for a matching <bpt id="p1">**</bpt>IID<ept id="p1">**</ept> during <ph id="ph1">`QueryInterface`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY2</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Use this macro to disambiguate two branches of inheritance.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>[in] The name of an interface you want to expose from your object.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>[in] The name of the inheritance branch from which <bpt id="p1">*</bpt>x<ept id="p1">*</ept> is exposed.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>For example, if you derive your class object from two dual interfaces, you expose <ph id="ph1">`IDispatch`</ph> using <ph id="ph2">`COM_INTERFACE_ENTRY2`</ph> since <ph id="ph3">`IDispatch`</ph> can be obtained from either one of the interfaces.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#118</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_IID</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Use this macro to enter the interface into the COM map and specify its IID.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the interface exposed.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>[in] The name of the class whose vtable will be exposed as the interface identified by <ph id="ph1">`iid`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#117</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY2_IID</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY2<ept id="p1">](#com_interface_entry2)</ept>, except you can specify a different IID.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>[in] The GUID you are specifying for the interface.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>[in] The name of an interface that your class object derives from directly.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>[in] The name of a second interface that your class object derives from directly.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY2</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Use this macro to disambiguate two branches of inheritance.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>[in] The name of an interface you want to expose from your object.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>[in] The name of the inheritance branch from which <bpt id="p1">*</bpt>x<ept id="p1">*</ept> is exposed.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>For example, if you derive your class object from two dual interfaces, you expose <ph id="ph1">`IDispatch`</ph> using <ph id="ph2">`COM_INTERFACE_ENTRY2`</ph> since <ph id="ph3">`IDispatch`</ph> can be obtained from either one of the interfaces.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#118</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AGGREGATE</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>When the interface identified by <ph id="ph1">`iid`</ph> is queried for, <ph id="ph2">`COM_INTERFACE_ENTRY_AGGREGATE`</ph> forwards to <ph id="ph3">`punk`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the interface queried for.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>[in] The name of an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`punk`</ph> parameter is assumed to point to the inner unknown of an aggregate or to <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>, in which case the entry is ignored.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Typically, you would <bpt id="p1">**</bpt>CoCreate<ept id="p1">**</ept> the aggregate in <ph id="ph1">`FinalConstruct`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#112</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AGGREGATE_BLIND</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_AGGREGATE<ept id="p1">](#com_interface_entry_aggregate)</ept>, except that querying for any IID results in forwarding the query to <ph id="ph1">`punk`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>[in] The name of an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>If the interface query fails, processing of the COM map continues.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#113</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AGGREGATE</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>When the interface identified by <ph id="ph1">`iid`</ph> is queried for, <ph id="ph2">`COM_INTERFACE_ENTRY_AGGREGATE`</ph> forwards to <ph id="ph3">`punk`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the interface queried for.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>[in] The name of an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`punk`</ph> parameter is assumed to point to the inner unknown of an aggregate or to <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>, in which case the entry is ignored.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Typically, you would <bpt id="p1">**</bpt>CoCreate<ept id="p1">**</ept> the aggregate in <ph id="ph1">`FinalConstruct`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#112</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AUTOAGGREGATE</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_AGGREGATE<ept id="p1">](#com_interface_entry_aggregate)</ept>, except if <ph id="ph1">`punk`</ph> is <bpt id="p2">**</bpt>NULL<ept id="p2">**</ept>, it automatically creates the aggregate described by the <ph id="ph2">`clsid`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the interface queried for.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>[in] The name of an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Must be a member of the class containing the COM map.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>[in] The identifier of the aggregate that will be created if <ph id="ph1">`punk`</ph> is <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#114</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AGGREGATE</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>When the interface identified by <ph id="ph1">`iid`</ph> is queried for, <ph id="ph2">`COM_INTERFACE_ENTRY_AGGREGATE`</ph> forwards to <ph id="ph3">`punk`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the interface queried for.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>[in] The name of an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`punk`</ph> parameter is assumed to point to the inner unknown of an aggregate or to <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>, in which case the entry is ignored.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Typically, you would <bpt id="p1">**</bpt>CoCreate<ept id="p1">**</ept> the aggregate in <ph id="ph1">`FinalConstruct`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#112</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_AUTOAGGREGATE<ept id="p1">](#com_interface_entry_autoaggregate)</ept>, except that querying for any IID results in forwarding the query to <ph id="ph1">`punk`</ph>, and if <ph id="ph2">`punk`</ph> is <bpt id="p2">**</bpt>NULL<ept id="p2">**</ept>, automatically creating the aggregate described by the <ph id="ph3">`clsid`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>[in] The name of an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>Must be a member of the class containing the COM map.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>[in] The identifier of the aggregate that will be created if <ph id="ph1">`punk`</ph> is <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>If the interface query fails, processing of the COM map continues.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#115</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_AUTOAGGREGATE</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_AGGREGATE<ept id="p1">](#com_interface_entry_aggregate)</ept>, except if <ph id="ph1">`punk`</ph> is <bpt id="p2">**</bpt>NULL<ept id="p2">**</ept>, it automatically creates the aggregate described by the <ph id="ph2">`clsid`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the interface queried for.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>[in] The name of an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Must be a member of the class containing the COM map.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>[in] The identifier of the aggregate that will be created if <ph id="ph1">`punk`</ph> is <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#114</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_BREAK</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>Causes your program to call <bpt id="p1">[</bpt>DebugBreak<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms679297)</ept> when the specified interface is queried for.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>[in] Text used to construct the interface identifier.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>The interface IID will be constructed by appending <bpt id="p1">*</bpt>x<ept id="p1">*</ept> to <ph id="ph1">`IID_`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>For example, if <bpt id="p1">*</bpt>x<ept id="p1">*</ept> is <ph id="ph1">`IPersistStorage`</ph>, the IID will be <ph id="ph2">`IID_IPersistStorage`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_CACHED_TEAR_OFF</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>Saves the interface-specific data for every instance.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the tear-off interface.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>[in] The name of the class implementing the interface.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>[in] The name of an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>Must be a member of the class containing the COM map.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>Should be initialized to <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> in the class object's constructor.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>If the interface is not used, this lowers the overall instance size of your object.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#54</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_TEAR_OFF</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>Exposes your tear-off interfaces.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the tear-off interface.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>[in] The name of the class implementing the interface.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>A tear-off interface is implemented as a separate object that is instantiated every time the interface it represents is queried for.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>Typically, you build your interface as a tear-off if the interface is rarely used, since this saves a vtable pointer in every instance of your main object.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>The tear-off is deleted when its reference count becomes zero.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>The class implementing the tear-off should be derived from <ph id="ph1">`CComTearOffObjectBase`</ph> and have its own COM map.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#1</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_CHAIN</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>Processes the COM map of the base class when the processing reaches this entry in the COM map.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>classname</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>[in] A base class of the current object.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>For example, in the following code:</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#116</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>Note that the first entry in the COM map must be an interface on the object containing the COM map.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>Thus, you cannot start your COM map entries with <ph id="ph1">`COM_INTERFACE_ENTRY_CHAIN`</ph>, which causes the COM map of a different object to be searched at the point where <bpt id="p1">**</bpt>COM_INTERFACE_ENTRY_CHAIN(<ept id="p1">**</ept><ph id="ph2">`COtherObject`</ph><bpt id="p2">**</bpt>)<ept id="p2">**</ept> appears in your object's COM map.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>If you want to search the COM map of another object first, add an interface entry for <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> to your COM map, then chain the other object's COM map.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#111</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_FUNC</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>A general mechanism for hooking into ATL's <ph id="ph1">`QueryInterface`</ph> logic.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the interface exposed.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>[in] A parameter passed through to the <ph id="ph1">`func`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>[in] The function pointer that will return <ph id="ph1">`iid`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">*</bpt>iid<ept id="p1">*</ept> matches the IID of the interface queried for, then the function specified by <ph id="ph1">`func`</ph> is called.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>The declaration for the function should be:</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>When your function is called, <ph id="ph1">`pv`</ph> points to your class object.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`riid`</ph> parameter refers to the interface being queried for, <ph id="ph2">`ppv`</ph> is the pointer to the location where the function should store the pointer to the interface, and <ph id="ph3">`dw`</ph> is the parameter you specified in the entry.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>The function should set <ph id="ph1">\*</ph> <ph id="ph2">`ppv`</ph> to <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> and return <bpt id="p2">**</bpt>E_NOINTERFACE<ept id="p2">**</ept> or <bpt id="p3">**</bpt>S_FALSE<ept id="p3">**</ept> if it chooses not to return an interface.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>E_NOINTERFACE<ept id="p1">**</ept>, COM map processing terminates.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>S_FALSE<ept id="p1">**</ept>, COM map processing continues, even though no interface pointer was returned.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>If the function returns an interface pointer, it should return <ph id="ph1">`S_OK`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_FUNC_BLIND</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>Same as <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY_FUNC<ept id="p1">](#com_interface_entry_func)</ept>, except that querying for any IID results in a call to <ph id="ph1">`func`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source>[in] A parameter passed through to the <ph id="ph1">`func`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>[in] The function that gets called when this entry in the COM map is processed.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>Any failure will cause processing to continue on the COM map.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>If the function returns an interface pointer, it should return <ph id="ph1">`S_OK`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_FUNC</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>A general mechanism for hooking into ATL's <ph id="ph1">`QueryInterface`</ph> logic.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>[in] The GUID of the interface exposed.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve">
+          <source>[in] A parameter passed through to the <ph id="ph1">`func`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source>[in] The function pointer that will return <ph id="ph1">`iid`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">*</bpt>iid<ept id="p1">*</ept> matches the IID of the interface queried for, then the function specified by <ph id="ph1">`func`</ph> is called.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve">
+          <source>The declaration for the function should be:</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>When your function is called, <ph id="ph1">`pv`</ph> points to your class object.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`riid`</ph> parameter refers to the interface being queried for, <ph id="ph2">`ppv`</ph> is the pointer to the location where the function should store the pointer to the interface, and <ph id="ph3">`dw`</ph> is the parameter you specified in the entry.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>The function should set <ph id="ph1">\*</ph> <ph id="ph2">`ppv`</ph> to <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> and return <bpt id="p2">**</bpt>E_NOINTERFACE<ept id="p2">**</ept> or <bpt id="p3">**</bpt>S_FALSE<ept id="p3">**</ept> if it chooses not to return an interface.</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>E_NOINTERFACE<ept id="p1">**</ept>, COM map processing terminates.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>S_FALSE<ept id="p1">**</ept>, COM map processing continues, even though no interface pointer was returned.</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>If the function returns an interface pointer, it should return <ph id="ph1">`S_OK`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_NOINTERFACE</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve">
+          <source>Returns <bpt id="p1">**</bpt>E_NOINTERFACE<ept id="p1">**</ept> and terminates COM map processing when the specified interface is queried for.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>[in] Text used to construct the interface identifier.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>You can use this macro to prevent an interface from being used in a particular case.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>For example, you can insert this macro into your COM map right before <ph id="ph1">`COM_INTERFACE_ENTRY_AGGREGATE_BLIND`</ph> to prevent a query for the interface from being forwarded to the aggregate's inner unknown.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>The interface IID will be constructed by appending <bpt id="p1">*</bpt>x<ept id="p1">*</ept> to <ph id="ph1">`IID_`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source>For example, if <bpt id="p1">*</bpt>x<ept id="p1">*</ept> is <ph id="ph1">`IPersistStorage`</ph>, the IID will be <ph id="ph2">`IID_IPersistStorage`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept> for remarks about COM map entries.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source>END_COM_MAP</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source>Ends the definition of your COM interface map.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>Macros</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>COM Map Global Functions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

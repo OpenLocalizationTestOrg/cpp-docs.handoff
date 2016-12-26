@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7bb9ed04bbc67d69d5a29c71acf4f25bba900ea4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\attributes2.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">42b0088a3ec689c66ff601cd793bf6416ca946eb</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7482af6a47d309a931027570afaeda578dae1a86</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Attributes2 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Attributes</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In C++11, attributes provide a standardized way to annotate C++ constructs (including but not limited to classes, functions, variables, and blocks) with additional information that may or may not be vendor-specific.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A compiler can use this information to generate informational messages, or to apply special logic when compiling the attributed code.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The compiler ignores any attributes that it does not recognize, which means that you cannot define your own custom attributes using this syntax.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Attributes are enclosed by double square brackets:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Attributes represent a standardized alternative to vendor-specific extensions such as #pragma directives,  __declspec() (Visual C++),  or <ph id="ph1">\_</ph>_attribute<ph id="ph2">\_\_</ph> (GNU).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>However,  you will still need to use the vendor-specific constructs for most purposes.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The standard currently specifies three attributes that a conforming compiler should recognize:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>-- specifies that a function never returns; in other words it always throws an exception.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The compiler can adjust its compilation rules for [[noreturn]] entities.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>--specifies that the function propagates data dependency ordering with respect to thread synchronization.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The attribute can be applied to one or more parameters, to specify that the passed-in argument carries a dependency into the function body.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The attribute can be applied to the function itself, to specify that the return value carries a dependency out of the function.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The compiler can use this information to generate more efficient code.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>– specifies that a function is not intended to be used, and might not exist in future versions of a library interface.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The compiler can use this to generate an informational message when client code attempts to call the function.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Can be applied to declaration of a class, a typedef-name, a variable, a non-static data member, a function, a namespace, an enumeration, an enumerator, or a template specialization.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>-- this Microsoft-specific attribute is used for suppressing warnings from checkers that enforce <bpt id="p1">[</bpt>Guidelines Support Library (GSL)<ept id="p1">](https://github.com/Microsoft/GSL)</ept> rules in code.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For example, consider the code snippet below</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The example raises these warnings:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>26494 (Type Rule 5: Always initialize an object.)</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>26485 (Bounds Rule 3: No array to pointer decay.)</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>26481 (Bounds Rule 1: Don't use pointer arithmetic.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Use span instead.)</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The first two warnings fire when you compile this code with the CppCoreCheck code analysis tool installed and activated.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>But the third warning doesn't fire because of the attribute.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>You can suppress the entire bounds profile by writing [[gsl::suppress(bounds)]] without including a specific rule number.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The C++ Core Guidelines are designed to help you write better and safer code.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The suppress attribute makes it easy to turn off the warnings when they are not wanted.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The C++ standard allows compiler vendors to define their own attribute parameters (within a vendor-specific namespace), but compilers are required to recognize only those attributes defined in the standard.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>In Visual C++, you can use the [[deprecated]] attribute instead of using declspec (deprecated) and the attribute will be recognized by any conformant compiler.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For all other declspec parameters such as dllimport and dllexport, there is as yet no standard attribute equivalent so you must continue to use declspec syntax.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Attributes do not affect the type system, and they don’t change the meaning of a program.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Compilers ignore attribute values they don't recognize.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">848104d4f6afbf70b501918563ee58085024e11e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\setlocale-wsetlocale.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e1745b70ec979a139401314a90aa0fbbe479e9d0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a5525b43548974aa694297ad84feaa3a00612e33</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>setlocale, _wsetlocale | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>setlocale, _wsetlocale</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Sets or retrieves the run-time locale.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Category affected by locale.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Locale specifier.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If a valid <ph id="ph1">`locale`</ph> and <ph id="ph2">`category`</ph> are given, returns a pointer to the string associated with the specified <ph id="ph3">`locale`</ph> and <ph id="ph4">`category`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`locale`</ph> or <ph id="ph2">`category`</ph> is not valid, returns a null pointer and the current locale settings of the program are not changed.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For example, the call</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>sets all categories, returning only the string</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You can copy the string returned by <ph id="ph1">`setlocale`</ph> to restore that part of the program's locale information.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Global or thread local storage is used for the string returned by <ph id="ph1">`setlocale`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Later calls to <ph id="ph1">`setlocale`</ph> overwrite the string, which invalidates string pointers returned by earlier calls.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`setlocale`</ph> function to set, change, or query some or all of the current program locale information specified by <ph id="ph2">`locale`</ph> and <ph id="ph3">`category`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>refers to the locality (country/region and language) for which you can customize certain aspects of your program.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Some locale-dependent categories include the formatting of dates and the display format for monetary values.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If you set <ph id="ph1">`locale`</ph> to the default string for a language that has multiple forms supported on your computer, you should check the <ph id="ph2">`setlocale`</ph> return value to see which language is in effect.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For example, if you set <ph id="ph1">`locale`</ph> to "chinese" the return value could be either "chinese-simplified" or "chinese-traditional".</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>is a wide-character version of <ph id="ph1">`setlocale`</ph>; the <ph id="ph2">`locale`</ph> argument and return value of <ph id="ph3">`_wsetlocale`</ph> are wide-character strings.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>and <ph id="ph1">`setlocale`</ph> behave identically otherwise.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Generic-Text Routine Mappings</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>TCHAR.H routine</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>_UNICODE &amp; _MBCS not defined</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>_MBCS defined</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>_UNICODE defined</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`category`</ph> argument specifies the parts of a program's locale information that are affected.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The macros used for <ph id="ph1">`category`</ph> and the parts of the program they affect are as follows:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>All categories in the following list.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`strcoll`</ph>, <ph id="ph2">`_stricoll`</ph>, <ph id="ph3">`wcscoll`</ph>, <ph id="ph4">`_wcsicoll`</ph>, <ph id="ph5">`strxfrm`</ph>, <ph id="ph6">`_strncoll`</ph>, <ph id="ph7">`_strnicoll`</ph>, <ph id="ph8">`_wcsncoll`</ph>, <ph id="ph9">`_wcsnicoll`</ph>, and <ph id="ph10">`wcsxfrm`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The character-handling functions (except <ph id="ph1">`isdigit`</ph>, <ph id="ph2">`isxdigit`</ph>, <ph id="ph3">`mbstowcs`</ph>, and <ph id="ph4">`mbtowc`</ph>, which are unaffected).</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Monetary-formatting information returned by the <ph id="ph1">`localeconv`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Decimal-point character for the formatted output routines (such as <ph id="ph1">`printf`</ph>), for the data-conversion routines, and for the non-monetary formatting information returned by <ph id="ph2">`localeconv`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In addition to the decimal-point character, <ph id="ph1">`LC_NUMERIC`</ph> also sets the thousands separator and the grouping control string returned by <bpt id="p1">[</bpt>localeconv<ept id="p1">](../../c-runtime-library/reference/localeconv.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`strftime`</ph> and <ph id="ph2">`wcsftime`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This function validates the category parameter.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If the category parameter is not one of the values given in the previous table, the invalid parameter handler is invoked, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, the function sets <ph id="ph1">`errno`</ph> to <ph id="ph2">`EINVAL`</ph> and returns <ph id="ph3">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`locale`</ph> argument is a pointer to a string that specifies the locale.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For information about the format of the <ph id="ph1">`locale`</ph> argument, see <bpt id="p1">[</bpt>Locale Names, Languages, and Country/Region Strings<ept id="p1">](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`locale`</ph> points to an empty string, the locale is the implementation-defined native environment.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>A value of <ph id="ph1">`C`</ph> specifies the minimal ANSI conforming environment for C translation.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`C`</ph> locale assumes that all <ph id="ph2">`char`</ph> data types are 1 byte and that their value is always less than 256.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>At program startup, the equivalent of the following statement is executed:</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`locale`</ph> argument can take a locale name, a language string, a language string and country/region code, a code page, or a language string, country/region code, and code page.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The set of available locale names, languages, country/region codes, and code pages includes all those supported by the Windows NLS API except code pages that require more than two bytes per character, such as UTF-7 and UTF-8.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>If you provide a code page value of UTF-7 or UTF-8, <ph id="ph1">`setlocale`</ph> will fail, returning NULL.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The set of locale names supported by <ph id="ph1">`setlocale`</ph> are described in <bpt id="p1">[</bpt>Locale Names, Languages, and Country/Region Strings<ept id="p1">](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The set of language and country/region strings supported by <ph id="ph1">`setlocale`</ph> are listed in <bpt id="p1">[</bpt>Language Strings<ept id="p1">](../../c-runtime-library/language-strings.md)</ept> and <bpt id="p2">[</bpt>Country/Region Strings<ept id="p2">](../../c-runtime-library/country-region-strings.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>We recommend the locale name form for performance and for maintainability of locale strings embedded in code or serialized to storage.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The locale name strings are less likely to be changed by an operating system update than the language and country/region name form.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>A null pointer that's passed as the <ph id="ph1">`locale`</ph> argument tells <ph id="ph2">`setlocale`</ph> to query instead of to set the international environment.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`locale`</ph> argument is a null pointer, the program's current locale setting is not changed.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Instead, <ph id="ph1">`setlocale`</ph> returns a pointer to the string that's associated with the <ph id="ph2">`category`</ph> of the thread's current locale.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`category`</ph> argument is <ph id="ph2">`LC_ALL`</ph>, the function returns a string that indicates the current setting of each category, separated by semicolons.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>For example, the sequence of calls</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>which is the string that's associated with the <ph id="ph1">`LC_ALL`</ph> category.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The following examples pertain to the <ph id="ph1">`LC_ALL`</ph> category.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Either of the strings ".OCP" and ".ACP" can be used instead of a code page number to specify use of the user-default OEM code page and user-default ANSI code page, respectively.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Sets the locale to the default, which is the user-default ANSI code page obtained from the operating system.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Explicitly sets the locale to the current OEM code page obtained from the operating system.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Sets the locale to the ANSI code page obtained from the operating system.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Sets the locale to the locale name that's indicated by <bpt id="p1">*</bpt><ph id="ph1">\&lt;</ph>localename&gt;<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Sets the locale to the language and country/region indicated by <bpt id="p1">*</bpt><ph id="ph1">\&lt;</ph>language&gt;<ept id="p1">*</ept> and <bpt id="p2">*</bpt><ph id="ph2">\&lt;</ph>country&gt;<ept id="p2">*</ept>, together with the default code page obtained from the host operating system.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Sets the locale to the language, country/region, and code page indicated by the <bpt id="p1">*</bpt><ph id="ph1">\&lt;</ph>language&gt;<ept id="p1">*</ept>, <bpt id="p2">*</bpt><ph id="ph2">\&lt;</ph>country&gt;<ept id="p2">*</ept>, and <bpt id="p3">*</bpt>&lt;code_page&gt;<ept id="p3">*</ept> strings.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>You can use various combinations of language, country/region, and code page.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>For example, this call sets the locale to French Canada with code page 1252:</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>This call sets the locale to French Canada with the default ANSI code page:</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>This call sets the locale to French Canada with the default OEM code page:</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Sets the locale to the language that's indicated by <bpt id="p1">*</bpt><ph id="ph1">\&lt;</ph>language&gt;<ept id="p1">*</ept>, and uses the default country/region for the specified language and the user-default ANSI code page for that country/region as obtained from the host operating system.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>For example, the following calls to <ph id="ph1">`setlocale`</ph> are functionally equivalent:</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>We recommend the first form for performance and maintainability.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Sets the code page to the value indicated by <bpt id="p1">*</bpt>&lt;code_page&gt;<ept id="p1">*</ept>, together with the default country/region and language (as defined by the host operating system) for the specified code page.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The category must be either <ph id="ph1">`LC_ALL`</ph> or <ph id="ph2">`LC_CTYPE`</ph> to effect a change of code page.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>For example, if the default country/region and language of the host operating system are "United States" and "English," the following two calls to <ph id="ph1">`setlocale`</ph> are functionally equivalent:</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>For more information, see the <bpt id="p1">[</bpt>setlocale<ept id="p1">](../../preprocessor/setlocale.md)</ept> pragma directive in the <bpt id="p2">[</bpt>C/C++ Preprocessor Reference<ept id="p2">](../../preprocessor/c-cpp-preprocessor-reference.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The function <bpt id="p1">[</bpt>_configthreadlocale<ept id="p1">](../../c-runtime-library/reference/configthreadlocale.md)</ept> is used to control whether <ph id="ph1">`setlocale`</ph> affects the locale of all threads in a program or only the locale of the calling thread.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>locale.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>locale.h&gt; or <ph id="ph1">\&lt;</ph>wchar.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>System::Globalization::CultureInfo Class</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Locale Names, Languages, and Country/Region Strings</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>_configthreadlocale</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>_create_locale, _wcreate_locale</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Locale</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>localeconv</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>_mbclen, mblen, _mblen_l</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>mbstowcs, _mbstowcs_l</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>mbtowc, _mbtowc_l</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>_setmbcp</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>strcoll Functions</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>strftime, wcsftime, _strftime_l, _wcsftime_l</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>wcstombs, _wcstombs_l</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>wctomb, _wctomb_l</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
