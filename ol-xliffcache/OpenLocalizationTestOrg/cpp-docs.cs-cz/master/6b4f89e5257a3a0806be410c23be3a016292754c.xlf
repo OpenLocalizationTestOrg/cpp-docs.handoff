@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6b4f89e5257a3a0806be410c23be3a016292754c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\providing-mouse-interaction-while-inactive.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e7dadfdc4bb26114ae9c1eba5483edbd99ca09f5</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6bcc3eea175edd93fa4908cbcf14b88230274f58</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Providing Mouse Interaction While Inactive | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Providing Mouse Interaction While Inactive</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>If your control is not immediately activated, you may still want it to process <ph id="ph1">`WM_SETCURSOR`</ph> and <ph id="ph2">`WM_MOUSEMOVE`</ph> messages, even though the control has no window of its own.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This can be accomplished by enabling <ph id="ph1">`COleControl`</ph>'s implementation of the <ph id="ph2">`IPointerInactive`</ph> interface, which is disabled by default.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>(See the <bpt id="p1">*</bpt>ActiveX SDK<ept id="p1">*</ept> for a description of this interface.) To enable it, include the <ph id="ph1">`pointerInactive`</ph> flag in the set of flags returned by <bpt id="p2">[</bpt>COleControl::GetControlFlags<ept id="p2">](../mfc/reference/colecontrol-class.md#colecontrol__getcontrolflags)</ept>:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#5</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#10</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#7</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The code to include this flag is automatically generated if you select the <bpt id="p1">**</bpt>Mouse Pointer Notifications When Inactive<ept id="p1">**</ept> option on the <bpt id="p2">[</bpt>Control Settings<ept id="p2">](../mfc/reference/control-settings-mfc-activex-control-wizard.md)</ept> page when creating your control with the <bpt id="p3">**</bpt>MFC ActiveX Control Wizard<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>When the <ph id="ph1">`IPointerInactive`</ph> interface is enabled, the container delegates <ph id="ph2">`WM_SETCURSOR`</ph> and <ph id="ph3">`WM_MOUSEMOVE`</ph> messages to it.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>'s implementation of <ph id="ph1">`IPointerInactive`</ph> dispatches the messages through your control's message map after adjusting the mouse coordinates appropriately.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>You can process the messages just like ordinary window messages by adding the corresponding entries to the message map.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In your handlers for these messages, avoid using the <ph id="ph1">`m_hWnd`</ph> member variable (or any member function that uses it) without first checking that its value is not <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You may also want an inactive control to be the target of an OLE drag-and-drop operation.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This requires activating the control at the moment the user drags an object over it, so that the control's window can be registered as a drop target.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To cause activation to occur during a drag, override <bpt id="p1">[</bpt>COleControl::GetActivationPolicy<ept id="p1">](../mfc/reference/colecontrol-class.md#colecontrol__getactivationpolicy)</ept>, and return the <bpt id="p2">**</bpt>POINTERINACTIVE_ACTIVATEONDRAG<ept id="p2">**</ept> flag:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#11</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Enabling the <ph id="ph1">`IPointerInactive`</ph> interface typically means that you want the control to be capable of processing mouse messages at all times.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>To get this behavior in a container that doesn't support the <ph id="ph1">`IPointerInactive`</ph> interface, you need to have your control always activated when visible, which means the control should include the <bpt id="p1">**</bpt>OLEMISC_ACTIVATEWHENVISIBLE<ept id="p1">**</ept> flag among its miscellaneous flags.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>However, to prevent this flag from taking effect in a container that does support <ph id="ph1">`IPointerInactive`</ph>, you can also specify the <bpt id="p1">**</bpt>OLEMISC_IGNOREACTIVATEWHENVISIBLE<ept id="p1">**</ept> flag:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#12</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Optimization</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

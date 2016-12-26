@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ac9ad246bc770a15c346d9b95b660dba3817ecdb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\best-practices-in-the-parallel-patterns-library.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">758f6643dddcbf7625d4d74ca4ee5c22a4179ffe</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e9a09a2bddd144fb9ff2d63188b72cdd8629be06</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Best Practices in the Parallel Patterns Library | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Best Practices in the Parallel Patterns Library</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document describes how best to make effective use of the Parallel Patterns Library (PPL).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The PPL provides general-purpose containers, objects, and algorithms for performing fine-grained parallelism.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For more information about the PPL, see <bpt id="p1">[</bpt>Parallel Patterns Library (PPL)<ept id="p1">](../../parallel/concrt/parallel-patterns-library-ppl.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Sections</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This document contains the following sections:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Do Not Parallelize Small Loop Bodies</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Express Parallelism at the Highest Possible Level</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Use parallel_invoke to Solve Divide-and-Conquer Problems</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Use Cancellation or Exception Handling to Break from a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Understand how Cancellation and Exception Handling Affect Object Destruction</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Do Not Block Repeatedly in a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Do Not Perform Blocking Operations When You Cancel Parallel Work</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Do Not Write to Shared Data in a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When Possible, Avoid False Sharing</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Make Sure That Variables Are Valid Throughout the Lifetime of a Task</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Do Not Parallelize Small Loop Bodies</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The parallelization of relatively small loop bodies can cause the associated scheduling overhead to outweigh the benefits of parallel processing.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Consider the following example, which adds each pair of elements in two arrays.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>concrt-small-loops#1</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The workload for each parallel loop iteration is too small to benefit from the overhead for parallel processing.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You can improve the performance of this loop by performing more work in the loop body or by performing the loop serially.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Express Parallelism at the Highest Possible Level</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>When you parallelize code only at the low level, you can introduce a fork-join construct that does not scale as the number of processors increases.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>fork-join<ept id="p1">*</ept> construct is a construct where one task divides its work into smaller parallel subtasks and waits for those subtasks to finish.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Each subtask can recursively divide itself into additional subtasks.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Although the fork-join model can be useful for solving a variety of problems, there are situations where the synchronization overhead can decrease scalability.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, consider the following serial code that processes image data.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>concrt-image-processing-filter#20</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Because each loop iteration is independent, you can parallelize much of the work, as shown in the following example.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">[</bpt>concurrency::parallel_for<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for)</ept> algorithm to parallelize the outer loop.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>concrt-image-processing-filter#3</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The following example illustrates a fork-join construct by calling the <ph id="ph1">`ProcessImage`</ph> function in a loop.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Each call to <ph id="ph1">`ProcessImage`</ph> does not return until each subtask finishes.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>concrt-image-processing-filter#21</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If each iteration of the parallel loop either performs almost no work, or the work that is performed by the parallel loop is imbalanced, that is, some loop iterations take longer than others, the scheduling overhead that is required to frequently fork and join work can outweigh the benefit to parallel execution.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>This overhead increases as the number of processors increases.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To reduce the amount of scheduling overhead in this example, you can parallelize outer loops before you parallelize inner loops or use another parallel construct such as pipelining.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The following example modifies the <ph id="ph1">`ProcessImages`</ph> function to use the <bpt id="p1">[</bpt>concurrency::parallel_for_each<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for_each)</ept> algorithm to parallelize the outer loop.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>concrt-image-processing-filter#22</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For a similar example that uses a pipeline to perform image processing in parallel, see <bpt id="p1">[</bpt>Walkthrough: Creating an Image-Processing Network<ept id="p1">](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Use parallel_invoke to Solve Divide-and-Conquer Problems</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>divide-and-conquer<ept id="p1">*</ept> problem is a form of the fork-join construct that uses recursion to break a task into subtasks.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>In addition to the <bpt id="p1">[</bpt>concurrency::task_group<ept id="p1">](reference/task-group-class.md)</ept> and <bpt id="p2">[</bpt>concurrency::structured_task_group<ept id="p2">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> classes, you can also use the <bpt id="p3">[</bpt>concurrency::parallel_invoke<ept id="p3">](reference/concurrency-namespace-functions.md#parallel_invoke)</ept> algorithm to solve divide-and-conquer problems.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_invoke`</ph> algorithm has a more succinct syntax than task group objects, and is useful when you have a fixed number of parallel tasks.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The following example illustrates the use of the <ph id="ph1">`parallel_invoke`</ph> algorithm to implement the bitonic sorting algorithm.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-bitonic-sort#12</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>To reduce overhead, the <ph id="ph1">`parallel_invoke`</ph> algorithm performs the last of the series of tasks on the calling context.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>For the complete version of this example, see <bpt id="p1">[</bpt>How to: Use parallel_invoke to Write a Parallel Sort Routine<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>For more information about the <ph id="ph1">`parallel_invoke`</ph> algorithm, see <bpt id="p1">[</bpt>Parallel Algorithms<ept id="p1">](../../parallel/concrt/parallel-algorithms.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Use Cancellation or Exception Handling to Break from a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The PPL provides two ways to cancel the parallel work that is performed by a task group or parallel algorithm.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>One way is to use the cancellation mechanism that is provided by the <bpt id="p1">[</bpt>concurrency::task_group<ept id="p1">](reference/task-group-class.md)</ept> and <bpt id="p2">[</bpt>concurrency::structured_task_group<ept id="p2">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> classes.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The other way is to throw an exception in the body of a task work function.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The cancellation mechanism is more efficient than exception handling at canceling a tree of parallel work.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>parallel work tree<ept id="p1">*</ept> is a group of related task groups in which some task groups contain other task groups.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The cancellation mechanism cancels a task group and its child task groups in a top-down manner.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Conversely, exception handling works in a bottom-up manner and must cancel each child task group independently as the exception propagates upward.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>When you work directly with a task group object, use the <bpt id="p1">[</bpt>concurrency::task_group::cancel<ept id="p1">](reference/task-group-class.md#cancel)</ept> or <bpt id="p2">[</bpt>concurrency::structured_task_group::cancel<ept id="p2">](reference/structured-task-group-class.md#cancel)</ept> methods to cancel the work that belongs to that task group.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>To cancel a parallel algorithm, for example, <ph id="ph1">`parallel_for`</ph>, create a parent task group and cancel that task group.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>For example, consider the following function, <ph id="ph1">`parallel_find_any`</ph>, which searches for a value in an array in parallel.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-array-search#2</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Because parallel algorithms use task groups, when one of the parallel iterations cancels the parent task group, the overall task is canceled.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>For the complete version of this example, see <bpt id="p1">[</bpt>How to: Use Cancellation to Break from a Parallel Loop<ept id="p1">](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Although exception handling is a less efficient way to cancel parallel work than the cancellation mechanism, there are cases where exception handling is appropriate.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>For example, the following method, <ph id="ph1">`for_all`</ph>, recursively performs a work function on each node of a <ph id="ph2">`tree`</ph> structure.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>In this example, the <ph id="ph1">`_children`</ph> data member is a <bpt id="p1">[</bpt>std::list<ept id="p1">](../../standard-library/list-class.md)</ept> that contains <ph id="ph2">`tree`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree-search#6</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The caller of the <ph id="ph1">`tree::for_all`</ph> method can throw an exception if it does not require the work function to be called on each element of the tree.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The following example shows the <ph id="ph1">`search_for_value`</ph> function, which searches for a value in the provided <ph id="ph2">`tree`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`search_for_value`</ph> function uses a work function that throws an exception when the current element of the tree matches the provided value.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`search_for_value`</ph> function uses a <ph id="ph2">`try-catch`</ph> block to capture the exception and print the result to the console.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree-search#3</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>For the complete version of this example, see <bpt id="p1">[</bpt>How to: Use Exception Handling to Break from a Parallel Loop<ept id="p1">](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>For more general information about the cancellation and exception-handling mechanisms that are provided by the PPL, see <bpt id="p1">[</bpt>Cancellation in the PPL<ept id="p1">](cancellation-in-the-ppl.md)</ept> and <bpt id="p2">[</bpt>Exception Handling<ept id="p2">](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Understand how Cancellation and Exception Handling Affect Object Destruction</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>In a tree of parallel work, a task that is canceled prevents child tasks from running.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>This can cause problems if one of the child tasks performs an operation that is important to your application, such as freeing a resource.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>In addition, task cancellation can cause an exception to propagate through an object destructor and cause undefined behavior in your application.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>In the following example, the <ph id="ph1">`Resource`</ph> class describes a resource and the <ph id="ph2">`Container`</ph> class describes a container that holds resources.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>In its destructor, the <ph id="ph1">`Container`</ph> class calls the <ph id="ph2">`cleanup`</ph> method on two of its <ph id="ph3">`Resource`</ph> members in parallel and then calls the <ph id="ph4">`cleanup`</ph> method on its third <ph id="ph5">`Resource`</ph> member.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-resource-destruction#1</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Although this pattern has no problems on its own, consider the following code that runs two tasks in parallel.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The first task creates a <ph id="ph1">`Container`</ph> object and the second task cancels the overall task.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>For illustration, the example uses two <bpt id="p1">[</bpt>concurrency::event<ept id="p1">](../../parallel/concrt/reference/event-class.md)</ept> objects to make sure that the cancellation occurs after the <ph id="ph1">`Container`</ph> object is created and that the <ph id="ph2">`Container`</ph> object is destroyed after the cancellation operation occurs.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-resource-destruction#2</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>This example produces the following output:</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>This code example contains the following issues that may cause it to behave differently than you expect:</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The cancellation of the parent task causes the child task, the call to <bpt id="p1">[</bpt>concurrency::parallel_invoke<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_invoke)</ept>, to also be canceled.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Therefore, these two resources are not freed.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The cancellation of the parent task causes the child task to throw an internal exception.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`Container`</ph> destructor does not handle this exception, the exception is propagated upward and the third resource is not freed.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The exception that is thrown by the child task propagates through the <ph id="ph1">`Container`</ph> destructor.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Throwing from a destructor puts the application in an undefined state.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>We recommend that you do not perform critical operations, such as the freeing of resources, in tasks unless you can guarantee that these tasks will not be canceled.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>We also recommend that you do not use runtime functionality that can throw in the destructor of your types.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Do Not Block Repeatedly in a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>A parallel loop such as <bpt id="p1">[</bpt>concurrency::parallel_for<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for)</ept> or <bpt id="p2">[</bpt>concurrency::parallel_for_each<ept id="p2">](reference/concurrency-namespace-functions.md#parallel_for_each)</ept> that is dominated by blocking operations may cause the runtime to create many threads over a short time.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime performs additional work when a task finishes or cooperatively blocks or yields.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>When one parallel loop iteration blocks, the runtime might begin another iteration.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>When there are no available idle threads, the runtime creates a new thread.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>When the body of a parallel loop occasionally blocks, this mechanism helps maximize the overall task throughput.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>However, when many iterations block, the runtime may create many threads to run the additional work.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>This could lead to low-memory conditions or poor utilization of hardware resources.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Consider the following example that calls the <bpt id="p1">[</bpt>concurrency::send<ept id="p1">](reference/concurrency-namespace-functions.md#send)</ept> function in each iteration of a <ph id="ph1">`parallel_for`</ph> loop.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Because <ph id="ph1">`send`</ph> blocks cooperatively, the runtime creates a new thread to run additional work every time <ph id="ph2">`send`</ph> is called.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>concrt-repeated-blocking#1</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>We recommend that you refactor your code to avoid this pattern.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>In this example, you can avoid the creation of additional threads by calling <ph id="ph1">`send`</ph> in a serial <ph id="ph2">`for`</ph> loop.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Do Not Perform Blocking Operations When You Cancel Parallel Work</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>When possible, do not perform blocking operations before you call the <bpt id="p1">[</bpt>concurrency::task_group::cancel<ept id="p1">](reference/task-group-class.md#cancel)</ept> or <bpt id="p2">[</bpt>concurrency::structured_task_group::cancel<ept id="p2">](reference/structured-task-group-class.md#cancel)</ept> method to cancel parallel work.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>When a task performs a cooperative blocking operation, the runtime can perform other work while the first task waits for data.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The runtime reschedules the waiting task when it unblocks.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The runtime typically reschedules tasks that were more recently unblocked before it reschedules tasks that were less recently unblocked.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Therefore, the runtime could schedule unnecessary work during the blocking operation, which leads to decreased performance.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Accordingly, when you perform a blocking operation before you cancel parallel work, the blocking operation can delay the call to <ph id="ph1">`cancel`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>This causes other tasks to perform unnecessary work.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Consider the following example that defines the <ph id="ph1">`parallel_find_answer`</ph> function, which searches for an element of the provided array that satisfies the provided predicate function.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>When the predicate function returns <ph id="ph1">`true`</ph>, the parallel work function creates an <ph id="ph2">`Answer`</ph> object and cancels the overall task.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>concrt-blocking-cancel#1</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`new`</ph> operator performs a heap allocation, which might block.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>The runtime performs other work only when the task performs a cooperative blocking call, such as a call to <bpt id="p1">[</bpt>concurrency::critical_section::lock<ept id="p1">](reference/critical-section-class.md#lock)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>The following example shows how to prevent unnecessary work, and thereby improve performance.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>This example cancels the task group before it allocates the storage for the <ph id="ph1">`Answer`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>concrt-blocking-cancel#2</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Do Not Write to Shared Data in a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime provides several data structures, for example, <bpt id="p1">[</bpt>concurrency::critical_section<ept id="p1">](../../parallel/concrt/reference/critical-section-class.md)</ept>, that synchronize concurrent access to shared data.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>These data structures are useful in many cases, for example, when multiple tasks infrequently require shared access to a resource.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Consider the following example that uses the <bpt id="p1">[</bpt>concurrency::parallel_for_each<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for_each)</ept> algorithm and a <ph id="ph1">`critical_section`</ph> object to compute the count of prime numbers in a <bpt id="p2">[</bpt>std::array<ept id="p2">](../../standard-library/array-class-stl.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>This example does not scale because each thread must wait to access the shared variable <ph id="ph1">`prime_sum`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sum-of-primes#2</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>This example can also lead to poor performance because the frequent locking operation effectively serializes the loop.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>In addition, when a Concurrency Runtime object performs a blocking operation, the scheduler might create an additional thread to perform other work while the first thread waits for data.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>If the runtime creates many threads because many tasks are waiting for shared data, the application can perform poorly or enter a low-resource state.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>The PPL defines the <bpt id="p1">[</bpt>concurrency::combinable<ept id="p1">](../../parallel/concrt/reference/combinable-class.md)</ept> class, which helps you eliminate shared state by providing access to shared resources in a lock-free manner.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`combinable`</ph> class provides thread-local storage that lets you perform fine-grained computations and then merge those computations into a final result.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>You can think of a <ph id="ph1">`combinable`</ph> object as a reduction variable.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>The following example modifies the previous one by using a <ph id="ph1">`combinable`</ph> object instead of a <ph id="ph2">`critical_section`</ph> object to compute the sum.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>This example scales because each thread holds its own local copy of the sum.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">[</bpt>concurrency::combinable::combine<ept id="p1">](reference/combinable-class.md#combine)</ept> method to merge the local computations into the final result.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sum-of-primes#3</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>For the complete version of this example, see <bpt id="p1">[</bpt>How to: Use combinable to Improve Performance<ept id="p1">](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>For more information about the <ph id="ph1">`combinable`</ph> class, see <bpt id="p1">[</bpt>Parallel Containers and Objects<ept id="p1">](../../parallel/concrt/parallel-containers-and-objects.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>When Possible, Avoid False Sharing</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>False sharing<ept id="p1">*</ept> occurs when multiple concurrent tasks that are running on separate processors write to variables that are located on the same cache line.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>When one task writes to one of the variables, the cache line for both variables is invalidated.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>Each processor must reload the cache line every time that the cache line is invalidated.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Therefore, false sharing can cause decreased performance in your application.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>The following basic example shows two concurrent tasks that each increment a shared counter variable.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>concrt-false-sharing#1</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>To eliminate the sharing of data between the two tasks, you can modify the example to use two counter variables.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>This example computes the final counter value after the tasks finish.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>However, this example illustrates false sharing because the variables <ph id="ph1">`count1`</ph> and <ph id="ph2">`count2`</ph> are likely to be located on the same cache line.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>concrt-false-sharing#2</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>One way to eliminate false sharing is to make sure that the counter variables are on separate cache lines.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>The following example aligns the variables <ph id="ph1">`count1`</ph> and <ph id="ph2">`count2`</ph> on 64-byte boundaries.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>concrt-false-sharing#3</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>This example assumes that the size of the memory cache is 64 or fewer bytes.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>We recommend that you use the <bpt id="p1">[</bpt>concurrency::combinable<ept id="p1">](../../parallel/concrt/reference/combinable-class.md)</ept> class when you must share data among tasks.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`combinable`</ph> class creates thread-local variables in such a way that false sharing is less likely.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>For more information about the <ph id="ph1">`combinable`</ph> class, see <bpt id="p1">[</bpt>Parallel Containers and Objects<ept id="p1">](../../parallel/concrt/parallel-containers-and-objects.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Make Sure That Variables Are Valid Throughout the Lifetime of a Task</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>When you provide a lambda expression to a task group or parallel algorithm, the capture clause specifies whether the body of the lambda expression accesses variables in the enclosing scope by value or by reference.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>When you pass variables to a lambda expression by reference, you must guarantee that the lifetime of that variable persists until the task finishes.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>Consider the following example that defines the <ph id="ph1">`object`</ph> class and the <ph id="ph2">`perform_action`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`perform_action`</ph> function creates an <ph id="ph2">`object`</ph> variable and performs some action on that variable asynchronously.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>Because the task is not guaranteed to finish before the <ph id="ph1">`perform_action`</ph> function returns, the program will crash or exhibit unspecified behavior if the <ph id="ph2">`object`</ph> variable is destroyed when the task is running.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>concrt-lambda-lifetime#1</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>Depending on the requirements of your application, you can use one of the following techniques to guarantee that variables remain valid throughout the lifetime of every task.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>The following example passes the <ph id="ph1">`object`</ph> variable by value to the task.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>Therefore, the task operates on its own copy of the variable.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>concrt-lambda-lifetime#2</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`object`</ph> variable is passed by value, any state changes that occur to this variable do not appear in the original copy.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>The following example uses the <bpt id="p1">[</bpt>concurrency::task_group::wait<ept id="p1">](reference/task-group-class.md#wait)</ept> method to make sure that the task finishes before the <ph id="ph1">`perform_action`</ph> function returns.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>concrt-lambda-lifetime#3</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>Because the task now finishes before the function returns, the <ph id="ph1">`perform_action`</ph> function no longer behaves asynchronously.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>The following example modifies the <ph id="ph1">`perform_action`</ph> function to take a reference to the <ph id="ph2">`object`</ph> variable.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>The caller must guarantee that the lifetime of the <ph id="ph1">`object`</ph> variable is valid until the task finishes.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>concrt-lambda-lifetime#4</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>You can also use a pointer to control the lifetime of an object that you pass to a task group or parallel algorithm.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>For more information about lambda expressions, see <bpt id="p1">[</bpt>Lambda Expressions<ept id="p1">](../../cpp/lambda-expressions-in-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime Best Practices</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library (PPL)</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>Parallel Containers and Objects</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Creating an Image-Processing Network</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>How to: Use parallel_invoke to Write a Parallel Sort Routine</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>How to: Use Cancellation to Break from a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>How to: Use combinable to Improve Performance</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>Best Practices in the Asynchronous Agents Library</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>General Best Practices in the Concurrency Runtime</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

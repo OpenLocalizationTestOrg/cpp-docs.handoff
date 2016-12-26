@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6530ede51278247209cb6725c8f9fef42ce19c2b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\support-for-activation-contexts-in-the-mfc-module-state.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2ae5aec91961056f0ea6310df5a2b18650399cfd</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f6994712774d8a5dd45676aa39d8bb2740d53850</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Support for Activation Contexts in the MFC Module State | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Support for Activation Contexts in the MFC Module State</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>MFC creates an activation context using a manifest resource provided by the user module.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For more information on how activation contexts are created, see the following topics:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Activation Contexts</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Application Manifests</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Assembly Manifests</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>When reading these <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph> topics, note that the MFC activation context mechanism resembles the <ph id="ph2">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph> activation context except that MFC does not use the <ph id="ph3">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph> Activation Context API.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Activation context works in MFC applications, user DLLs, and extension DLLs in the following ways:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>MFC applications use resource ID 1 for their manifest resource.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In this case, the MFC does not create its own activation context, but uses the default application context.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>MFC user DLLs use resource ID 2 for their manifest resource.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Here, MFC creates an activation context for each User DLL, so different user DLLs can use different versions of the same libraries (for example, the Common Controls library).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>MFC extension DLLs rely on their hosting applications or user DLLs to establish their activation context.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Although the activation context state can be modified using the processes described under <bpt id="p1">[</bpt>Using the Activation Context API<ept id="p1">](http://msdn.microsoft.com/library/aa376620)</ept>, using the MFC activation context mechanism can be useful when developing DLL-based plug-in architectures where it is not easy (or not possible) to manually switch activation state before and after individual calls to external plug-ins.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The activation context is created in <bpt id="p1">[</bpt>AfxWinInit<ept id="p1">](../mfc/reference/application-information-and-management.md#afxwininit)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>It is destroyed in the <ph id="ph1">`AFX_MODULE_STATE`</ph> destructor.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>An activation context handle is kept in <ph id="ph1">`AFX_MODULE_STATE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>(<ph id="ph1">`AFX_MODULE_STATE`</ph> is described in <bpt id="p1">[</bpt>AfxGetStaticModuleState<ept id="p1">](http://msdn.microsoft.com/library/8b6c7c95-9d57-4337-9378-9b65e60d5c3b)</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>AFX_MANAGE_STATE<ept id="p1">](http://msdn.microsoft.com/library/620cb840-4227-4a75-b36d-f7d507f44606)</ept> macro activates and deactivates the activation context.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>is enabled for static MFC libraries, as well as MFC DLLs, to allow MFC code to execute in the proper activation context selected by the User DLL.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Activation Contexts</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Application Manifests</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Assembly Manifests</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>AfxWinInit</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>AfxGetStaticModuleState</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>AFX_MANAGE_STATE</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

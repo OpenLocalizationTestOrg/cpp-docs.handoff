@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3e3b98cdf00cddb33808c55574addff11a27e78a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn025-document-view-and-frame-creation.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3fbba7e0ed0e47dabd84a02a8396ee7128581cd5</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b54ae59d1df81e8980d6658711c963c630ac0ebe</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN025: Document, View, and Frame Creation | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN025: Document, View, and Frame Creation</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following technical note has not been updated since it was first included in the online documentation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, some procedures and topics might be out of date or incorrect.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For the latest information, it is recommended that you search for the topic of interest in the online documentation index.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This note describes the creation and ownership issues for WinApps, DocTemplates, Documents, Frames and Views.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>WinApp</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>There is one <ph id="ph1">`CWinApp`</ph> object in the system.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>It is statically constructed and initialized by the framework's internal implementation of <ph id="ph1">`WinMain`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You must derive from <ph id="ph1">`CWinApp`</ph> to do anything useful (exception: extension DLLs should not have a <ph id="ph2">`CWinApp`</ph> instance — initialization is done in <ph id="ph3">`DllMain`</ph> instead).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The one <ph id="ph1">`CWinApp`</ph> object owns a list of document templates (a <ph id="ph2">`CPtrList`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>There is one or more document template per application.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>DocTemplates are usually loaded from the resource file (that is, a string array) in <ph id="ph1">`CWinApp::InitInstance`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The one <ph id="ph1">`CWinApp`</ph> object owns all frame windows in the application.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The main frame window for the application should be stored in <bpt id="p1">**</bpt>CWinApp::m_pMainWnd<ept id="p1">**</ept>; usually you set <ph id="ph1">`m_pMainWnd`</ph> in the <ph id="ph2">`InitInstance`</ph> implementation if you have not let AppWizard do it for you.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For single document interface (SDI) this is one <ph id="ph1">`CFrameWnd`</ph> that serves as the main application frame window as well as the only document frame window.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For multiple document interface (MDI) this is an MDI-Frame (class <ph id="ph1">`CMDIFrameWnd`</ph>) that serves as the main application frame window that contains all the child <ph id="ph2">`CFrameWnd`</ph>s.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Each child window is of class <ph id="ph1">`CMDIChildWnd`</ph> (derived from <ph id="ph2">`CFrameWnd`</ph>) and serves as one of potentially many document frame windows.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>DocTemplates</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CDocTemplate`</ph> is the creator and manager of documents.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>It owns the documents that it creates.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If your application uses the resource-based approach described below, it will not need to derive from <ph id="ph1">`CDocTemplate`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For an SDI application, the class <ph id="ph1">`CSingleDocTemplate`</ph> keeps track of one open document.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For an MDI application, the class <ph id="ph1">`CMultiDocTemplate`</ph> keeps a list (a <ph id="ph2">`CPtrList`</ph>) of all the currently open documents created from that template.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>and <ph id="ph1">`CDocTemplate::RemoveDocument`</ph> provide the virtual member functions for adding or removing a document from the template.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>is a friend of <bpt id="p1">**</bpt>CDocument<ept id="p1">**</ept> so we can set the protected <bpt id="p2">**</bpt>CDocument::m_pDocTemplate<ept id="p2">**</ept> back pointer to point back to the doc template that created the document.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>handles the default <ph id="ph1">`OnFileOpen`</ph> implementation, which will in turn query all the doc templates.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The implementation includes looking for already open documents and deciding what format to open new documents in.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>manages the UI binding for documents and frames.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>keeps a count of the number of unnamed documents.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>CDocument</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>CDocument<ept id="p1">**</ept> is owned by a <ph id="ph1">`CDocTemplate`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Documents have a list of currently open views (derived from <ph id="ph1">`CView`</ph>) that are viewing the document (a <ph id="ph2">`CPtrList`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Documents do not create/destroy the views, but they are attached to each other after they are created.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>When a document is closed (that is, through File/Close), all attached views will be closed.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>When the last view on a document is closed (that is, Window/Close) the document will be closed.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CDocument::AddView`</ph>, <ph id="ph2">`RemoveView`</ph> interface is used to maintain the view list.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>CDocument<ept id="p1">**</ept> is a friend of <ph id="ph1">`CView`</ph> so we can set the <bpt id="p2">**</bpt>CView::m_pDocument<ept id="p2">**</ept> back pointer.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>CFrameWnd</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`CFrameWnd`</ph> (also known as a frame) plays the same role as in MFC 1.0, but now the <ph id="ph2">`CFrameWnd`</ph> class is designed to be used in many cases without deriving a new class.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The derived classes <ph id="ph1">`CMDIFrameWnd`</ph> and <ph id="ph2">`CMDIChildWnd`</ph> are also enhanced so many standard commands are already implemented.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CFrameWnd`</ph> is responsible for creating windows in the client area of the frame.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Normally there is one main window filling the client area of the frame.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>For an MDI-Frame window, the client area is filled with the MDICLIENT control which is in turn the parent of all the MDI-Child frame windows.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For an SDI-Frame window or an MDI-Child frame window, the client area is usually filled with a <ph id="ph1">`CView`</ph>-derived window object.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In the case of <ph id="ph1">`CSplitterWnd`</ph>, the client area of the view is filled with the <ph id="ph2">`CSplitterWnd`</ph> window object, and the <ph id="ph3">`CView`</ph>-derived window objects (one per split pane) are created as child windows of the <ph id="ph4">`CSplitterWnd`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fb3f3f6d71f2a25f6612a5f4886758c0bc78777a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\destroying-frame-windows.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8fc7a75f48990fb2c6ba59688bd8503cf72907e3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7c0c373b32cde16d7f7c8cdb6ce6394a389c0d8b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Destroying Frame Windows | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Destroying Frame Windows</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The MFC framework manages window destruction as well as creation for those windows associated with framework documents and views.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If you create additional windows, you are responsible for destroying them.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In the framework, when the user closes the frame window, the window's default <bpt id="p1">[</bpt>OnClose<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__onclose)</ept> handler calls <bpt id="p2">[</bpt>DestroyWindow<ept id="p2">](../mfc/reference/cwnd-class.md#cwnd__destroywindow)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The last member function called when the Windows window is destroyed is <bpt id="p1">[</bpt>OnNcDestroy<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__onncdestroy)</ept>, which does some cleanup, calls the <bpt id="p2">[</bpt>Default<ept id="p2">](../mfc/reference/cwnd-class.md#cwnd__default)</ept> member function to perform Windows cleanup, and lastly calls the virtual member function <bpt id="p3">[</bpt>PostNcDestroy<ept id="p3">](../mfc/reference/cwnd-class.md#cwnd__postncdestroy)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>CFrameWnd<ept id="p1">](../mfc/reference/cframewnd-class.md)</ept> implementation of <ph id="ph1">`PostNcDestroy`</ph> deletes the C++ window object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You should never use the C++ <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> operator on a frame window.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`DestroyWindow`</ph> instead.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>When the main window closes, the application closes.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If there are modified unsaved documents, the framework displays a message box to ask if the documents should be saved and ensures that the appropriate documents are saved if necessary.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Creating document frame windows</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Using Frame Windows</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

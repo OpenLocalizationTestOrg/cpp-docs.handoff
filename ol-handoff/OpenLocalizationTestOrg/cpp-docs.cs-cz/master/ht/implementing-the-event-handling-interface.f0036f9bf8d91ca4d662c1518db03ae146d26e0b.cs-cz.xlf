@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">af4522937f95dcee5f5ae8689090cf56efd671fb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\implementing-the-event-handling-interface.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4dd6ffbe8d792e9bf0b102d78712e25625206fb7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f1a1dd7cfd2dbf3e87083e20078cb06d1a6313ee</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Implementing the Event Handling Interface | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Implementing the Event Handling Interface</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>ATL helps you with all three elements required for handling events: implementing the event interface, advising the event source, and unadvising the event source.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The precise steps you'll need to take depend on the type of the event interface and the performance requirements of your application.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The most common ways of implementing an interface using ATL are:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Deriving from a custom interface directly.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Deriving from <bpt id="p1">[</bpt>IDispatchImpl<ept id="p1">](../atl/reference/idispatchimpl-class.md)</ept> for dual interfaces described in a type library.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Deriving from <bpt id="p1">[</bpt>IDispEventImpl<ept id="p1">](../atl/reference/idispeventimpl-class.md)</ept> for dispinterfaces described in a type library.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Deriving from <bpt id="p1">[</bpt>IDispEventSimpleImpl<ept id="p1">](../atl/reference/idispeventsimpleimpl-class.md)</ept> for dispinterfaces not described in a type library or when you want to improve efficiency by not loading the type information at run time.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If you are implementing a custom or dual interface, you should advise the event source by calling <bpt id="p1">[</bpt>AtlAdvise<ept id="p1">](http://msdn.microsoft.com/Library/625a2f03-6b7f-4761-be5d-d2871d1d3254)</ept> or <bpt id="p2">[</bpt>CComPtrBase::Advise<ept id="p2">](../atl/reference/ccomptrbase-class.md#ccomptrbase__advise)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You will need to keep track of the cookie returned by the call yourself.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">[</bpt>AtlUnadvise<ept id="p1">](http://msdn.microsoft.com/Library/939d2e50-e2df-4e8f-a16a-e9650b8f0340)</ept> to break the connection.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If you are implementing a dispinterface using <ph id="ph1">`IDispEventImpl`</ph> or <ph id="ph2">`IDispEventSimpleImpl`</ph>, you should advise the event source by calling <bpt id="p1">[</bpt>IDispEventSimpleImpl::DispEventAdvise<ept id="p1">](../atl/reference/idispeventsimpleimpl-class.md#idispeventsimpleimpl__dispeventadvise)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">[</bpt>IDispEventSimpleImpl::DispEventUnadvise<ept id="p1">](../atl/reference/idispeventsimpleimpl-class.md#idispeventsimpleimpl__dispeventunadvise)</ept> to break the connection.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If you are using <ph id="ph1">`IDispEventImpl`</ph> as a base class of a composite control, the event sources listed in the sink map will be advised and unadvised automatically using <bpt id="p1">[</bpt>CComCompositeControl::AdviseSinkMap<ept id="p1">](../atl/reference/ccomcompositecontrol-class.md#ccomcompositecontrol__advisesinkmap)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IDispEventImpl`</ph> and <ph id="ph2">`IDispEventSimpleImpl`</ph> classes manage the cookie for you.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Event Handling</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

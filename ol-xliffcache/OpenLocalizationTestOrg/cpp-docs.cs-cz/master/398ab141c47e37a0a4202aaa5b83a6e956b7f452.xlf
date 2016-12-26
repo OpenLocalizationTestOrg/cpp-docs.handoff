@@ -1,0 +1,441 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">398ab141c47e37a0a4202aaa5b83a6e956b7f452</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn053-custom-dfx-routines-for-dao-database-classes.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e5eb0e0af9e2719368cdc27728b82806d1ee7d89</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c95dc694f1ab55275565889c307d2b7014c8a2c2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN053: Custom DFX Routines for DAO Database Classes | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN053: Custom DFX Routines for DAO Database Classes</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Microsoft recommends that you use <bpt id="p1">[</bpt>OLE DB Templates<ept id="p1">](../data/oledb/ole-db-templates.md)</ept> or <bpt id="p2">[</bpt>ODBC and MFC<ept id="p2">](../data/odbc/odbc-and-mfc.md)</ept> for new projects.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You should only use DAO in maintaining existing applications.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This technical note describes the DAO record field exchange (DFX) mechanism.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To help understand what is happening in the DFX routines, the <ph id="ph1">`DFX_Text`</ph> function will be explained in detail as an example.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>As an additional source of information to this technical note, you can examine the code for the other the individual DFX functions.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You probably will not need a custom DFX routine as often as you might need a custom RFX routine (used with ODBC database classes).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This technical note contains:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>DFX Overview</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Examples<ept id="p1">](#_mfcnotes_tn053_examples)</ept> using DAO Record Field Exchange and Dynamic Binding</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>How DFX Works</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>What Your Custom DFX Routine Does</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Details of DFX_Text</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>DFX Overview</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The DAO record field exchange mechanism (DFX) is used to simplify the procedure of retrieving and updating data when using the <ph id="ph1">`CDaoRecordset`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The process is simplified using data members of the <ph id="ph1">`CDaoRecordset`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>By deriving from <ph id="ph1">`CDaoRecordset`</ph>, you can add data members to the derived class representing each field in a table or query.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This "static binding" mechanism is simple, but it may not be the data fetch/update method of choice for all applications.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>DFX retrieves every bound field each time the current record is changed.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If you are developing a performance-sensitive application that does not require fetching every field when currency is changed, "dynamic binding" via <ph id="ph1">`CDaoRecordset::GetFieldValue`</ph> and <ph id="ph2">`CDaoRecordset::SetFieldValue`</ph> may be the data access method of choice.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>DFX and dynamic binding are not mutually exclusive, so a hybrid use of static and dynamic binding can be used.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Example 1 — Use of DAO Record Field Exchange only</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>(assumes <ph id="ph1">`CDaoRecordset`</ph> — derived class <ph id="ph2">`CMySet`</ph> already open)</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Example 2 — Use of dynamic binding only</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>(assumes using <ph id="ph1">`CDaoRecordset`</ph> class, <ph id="ph2">`rs`</ph>, and it is already open)</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Example 3 — Use of DAO Record Field Exchange and dynamic binding</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>(assumes browsing employee data with <ph id="ph1">`CDaoRecordset`</ph>-derived class <ph id="ph2">`emp`</ph>)</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>How DFX Works</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The DFX mechanism works in a similar fashion to the record field exchange (RFX) mechanism used by the MFC ODBC classes.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The principles of DFX and RFX are the same but there are numerous internal differences.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The design of the DFX functions was such that virtually all the code is shared by the individual DFX routines.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>At the highest level DFX only does a few things.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>DFX constructs the SQL <bpt id="p1">**</bpt>SELECT<ept id="p1">**</ept> clause and SQL <bpt id="p2">**</bpt>PARAMETERS<ept id="p2">**</ept> clause if necessary.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>DFX constructs the binding structure used by DAO's <ph id="ph1">`GetRows`</ph> function (more on this later).</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>DFX manages the data buffer used to detect dirty fields (if double-buffering is being used)</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>DFX manages the <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> and <bpt id="p2">**</bpt>DIRTY<ept id="p2">**</ept> status arrays and sets values if necessary on updates.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>At the heart of the DFX mechanism is the <ph id="ph1">`CDaoRecordset`</ph> derived class's <ph id="ph2">`DoFieldExchange`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This function dispatches calls to the individual DFX functions of an appropriate operation type.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Before calling <ph id="ph1">`DoFieldExchange`</ph> the internal MFC functions set the operation type.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The following list shows the various operation types and a brief description.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Operation</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>AddToParameterList</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Builds PARAMETERS clause</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>AddToSelectList</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Builds SELECT clause</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>BindField</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Sets up binding structure</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>BindParam</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Sets parameter values</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Fixup</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Sets NULL status</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>AllocCache</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Allocates cache for dirty check</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>StoreField</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Saves current record to cache</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>LoadField</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Restores cache to member values</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>FreeCache</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Frees cache</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Sets field status &amp; value to NULL</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>MarkForAddNew</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Marks fields dirty if not PSEUDO NULL</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>MarkForEdit</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Marks fields dirty if don't match cache</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>SetDirtyField</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Sets field values marked as dirty</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>In the next section, each operation will be explained in more detail for <ph id="ph1">`DFX_Text`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The most important feature to understand about the DAO record field exchange process is that it uses the <ph id="ph1">`GetRows`</ph> function of the <ph id="ph2">`CDaoRecordset`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The DAO <ph id="ph1">`GetRows`</ph> function can work in several ways.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>This technical note will only briefly describe <ph id="ph1">`GetRows`</ph> as it is outside of the scope of this technical note.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>DAO <ph id="ph1">`GetRows`</ph> can work in several ways.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>It can fetch multiple records and multiple fields of data at one time.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>This allows for faster data access with the complication of dealing with a large data structure and the appropriate offsets to each field and for each record of data in the structure.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>MFC does not take advantage of this multiple record fetching mechanism.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Another way <ph id="ph1">`GetRows`</ph> can work is to allow programmers to specify binding addresses for the retrieved data of each field for one record of data.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>DAO will also "call back" into the caller for variable length columns in order to allow the caller to allocate memory.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>This second feature has the benefit of minimizing the number of copies of data as well as allowing direct storage of data into members of a class (the <ph id="ph1">`CDaoRecordset`</ph> derived class).</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>This second mechanism is the method MFC uses to bind to data members in <ph id="ph1">`CDaoRecordset`</ph> derived classes.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>What Your Custom DFX Routine Does</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>It is apparent from this discussion that the most important operation implemented in any DFX function must be the ability to set up the required data structures to successfully call <ph id="ph1">`GetRows`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>There are a number of other operations that a DFX function must support as well, but none as important or complex as correctly preparing for the <ph id="ph1">`GetRows`</ph> call.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The use of DFX is described in the online documentation.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Essentially, there are two requirements.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>First, members must be added to the <ph id="ph1">`CDaoRecordset`</ph> derived class for each bound field and parameter.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Following this <ph id="ph1">`CDaoRecordset::DoFieldExchange`</ph> should be overridden.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Note that the data type of the member is important.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>It should match the data from the field in the database or at least be convertible to that type.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>For example a numeric field in database, such as a long integer, can always be converted to text and bound to a <ph id="ph1">`CString`</ph> member, but a text field in a database may not necessarily be converted to a numeric representation, such as long integer and bound to a long integer member.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>DAO and the Microsoft Jet database engine are responsible for the conversion (rather than MFC).</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Details of DFX_Text</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>As mentioned previously, the best way to explain how DFX works is to work through an example.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>For this purpose going through the internals of <ph id="ph1">`DFX_Text`</ph> should work quite well to help provide at least a basic understanding of DFX.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>AddToParameterList</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>This operation builds the SQL <bpt id="p1">**</bpt>PARAMETERS<ept id="p1">**</ept> clause ("<ph id="ph1">`Parameters &lt;param name&gt;, &lt;param type&gt; ... ;`</ph>") required by Jet.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Each parameter is named and typed (as specified in the RFX call).</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>See the function <bpt id="p1">**</bpt>CDaoFieldExchange::AppendParamType<ept id="p1">**</ept> function to see the names of the individual types.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>In the case of <ph id="ph1">`DFX_Text`</ph>, the type used is <ph id="ph2">`text`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>AddToSelectList</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Builds the SQL <bpt id="p1">**</bpt>SELECT<ept id="p1">**</ept> clause.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>This is pretty straight forward as the column name specified by the DFX call is simply appended ("<ph id="ph1">`SELECT &lt;column name&gt;, ...`</ph>").</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>BindField</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The most complex of the operations.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>As mentioned previously this is where the DAO binding structure used by <ph id="ph1">`GetRows`</ph> is set up.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>As you can see from the code in <ph id="ph1">`DFX_Text`</ph> the types of information in the structure include the DAO type used (<bpt id="p1">**</bpt>DAO_CHAR<ept id="p1">**</ept> or <bpt id="p2">**</bpt>DAO_WCHAR<ept id="p2">**</ept> in the case of <ph id="ph2">`DFX_Text`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Additionally, the type of binding used is also set up.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>In an earlier section <ph id="ph1">`GetRows`</ph> was described only briefly, but it was sufficient to explain that the type of binding used by MFC is always direct address binding (<bpt id="p1">**</bpt>DAOBINDING_DIRECT<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>In addition for variable-length column binding (like <ph id="ph1">`DFX_Text`</ph>) callback binding is used so that MFC can control the memory allocation and specify an address of the correct length.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>What this means is that MFC can always tell DAO "where" to put the data, thus allowing binding directly to member variables.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The rest of the binding structure is filled in with things like the address of the memory allocation callback function and the type of column binding (binding by column name).</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>BindParam</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>This is a simple operation that calls <ph id="ph1">`SetParamValue`</ph> with the parameter value specified in your parameter member.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Fixup</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Fills in the <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> status for each field.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>This operation only marks each field status as <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> and sets the member variable's value to <bpt id="p2">**</bpt>PSEUDO_NULL<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>SetDirtyField</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Calls <ph id="ph1">`SetFieldValue`</ph> for each field marked dirty.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>All the remaining operations only deal with using the data cache.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The data cache is an extra buffer of the data in the current record that is used to make certain things simpler.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>For instance, "dirty" fields can be automatically detected.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>As described in the online documentation it can be turned off completely or at the field level.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The implementation of the buffer utilizes a map.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>This map is used to match up dynamically allocated copies of the data with the address of the "bound" field (or <ph id="ph1">`CDaoRecordset`</ph> derived data member).</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>AllocCache</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Dynamically allocates the cached field value and adds it to the map.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>FreeCache</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Deletes the cached field value and removes it from the map.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>StoreField</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Copies the current field value into the data cache.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>LoadField</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>Copies the cached value into the field member.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>MarkForAddNew</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>Checks if current field value is non-<bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> and marks it dirty if necessary.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>MarkForEdit</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Compares current field value with data cache and marks dirty if necessary.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Model your custom DFX routines on the existing DFX routines for standard data types.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

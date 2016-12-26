@@ -1,0 +1,2088 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d93669a7bc20ec04e177d32a605511f43847e58b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\hash-multimap-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3da8a315d8a3584ca4f1ff8e1fa0e2fed5ce3726</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4eb08e9d22c963e512beddfbc6cd28908219fa4f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>hash_multimap Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>hash_multimap Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The container class hash_multimap is an extension of the Standard Template Library and is used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value need not be unique and an associated data value.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The key data type to be stored in the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The element data type to be stored in the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The type that includes two function objects, one of class <ph id="ph1">`Traits`</ph> that is able to compare two element values as sort keys to determine their relative order and a hash function that is a unary predicate mapping key values of the elements to unsigned integers of type <bpt id="p1">**</bpt>size_t<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This argument is optional, and the <ph id="ph1">`hash_compare``&lt;Key, less&lt;Key&gt; &gt;`</ph> is the default value.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The type that represents the stored allocator object that encapsulates details about the hash_multimap's allocation and deallocation of memory.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This argument is optional, and the default value is <ph id="ph1">`allocator&lt;pair &lt;const Key, Type&gt; &gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The hash_multimap is:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>An associative container, which a variable size container that supports the efficient retrieval of element values based on an associated key value.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Reversible, because it provides a bidirectional iterator to access its elements.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Hashed, because its elements are grouped into buckets based on the value of a hash function applied to the key values of the elements.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Multiple, because its elements do not need to have a unique keys, so that one key value may have many element data values associated with it.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>A pair associative container, because its element values are distinct from its key values.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A template class, because the functionality it provides is generic and so independent of the specific type of data contained as elements or keys.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The data types to be used for elements and keys are, instead, specified as parameters in the class template along with the comparison function and allocator.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The main advantage of hashing over sorting is greater efficiency; a successful hashing performs insertions, deletions, and finds in constant average time as compared with a time proportional to the logarithm of the number of elements in the container for sorting techniques.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The value of an element in a hash_multimap, but not its associated key value, may be changed directly.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Instead, key values associated with old elements must be deleted and new key values associated with new elements inserted.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The choice of container type should be based in general on the type of searching and inserting required by the application.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Hashed associative containers are optimized for the operations of lookup, insertion and removal.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The member functions that explicitly support these operations are efficient when used with a well-designed hash function, performing them in a time that is on average constant and not dependent on the number of elements in the container.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A well-designed hash function produces a uniform distribution of hashed values and minimizes the number of collisions, where a collision is said to occur when distinct key values are mapped into the same hashed value.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In the worst case, with the worst possible hash function, the number of operations is proportional to the number of elements in the sequence (linear time).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The hash_multimap should be the associative container of choice when the conditions associating the values with their keys are satisfied by the application.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A model for this type of structure is an ordered list of key words with associated string values providing, say, definitions, where the words were not always uniquely defined.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>If, instead, the keywords were uniquely defined so that keys were unique, then a hash_map would be the container of choice.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>If, on the other hand, just the list of words were being stored, then a hash_set would be the correct container.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If multiple occurrences of the words were allowed, then a hash_multiset would be the appropriate container structure.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The hash_multimap orders the sequence it controls by calling a stored hash <ph id="ph1">`Traits`</ph> object of type <bpt id="p1">[</bpt>value_compare<ept id="p1">](../standard-library/value-compare-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This stored object may be accessed by calling the member function <bpt id="p1">[</bpt>key_comp<ept id="p1">](../standard-library/hash-map-class.md#hash_map__key_comp)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Such a function object must behave the same as an object of class <bpt id="p1">[</bpt>hash_compare<ept id="p1">](../standard-library/hash-compare-class.md)</ept><ph id="ph1">`&lt;Key,  less&lt;Key&gt; &gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Specifically, for all values <ph id="ph1">`Key`</ph> of type <ph id="ph2">`Key`</ph>, the call <ph id="ph3">`Traits (Key)`</ph> yields a distribution of values of type <ph id="ph4">`size_t`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In general, the elements need be merely less than comparable to establish this order: so that, given any two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This results in an ordering between the non-equivalent elements.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>On a more technical note, the comparison function is a binary predicate that induces a strict weak ordering in the standard mathematical sense.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>A binary predicate f(x, y) is a function object that has two argument objects <ph id="ph1">`x`</ph> and <ph id="ph2">`y`</ph> and a return value of <ph id="ph3">`true`</ph> or <ph id="ph4">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>An ordering imposed on a hash_multimap is a strict weak ordering if the binary predicate is irreflexive, antisymmetric, and transitive and if equivalence is transitive, where two objects <ph id="ph1">`x`</ph> and <ph id="ph2">`y`</ph> are defined to be equivalent when both f(x, y) and f(y, x) are <ph id="ph3">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>If the stronger condition of equality between keys replaces that of equivalence, then the ordering becomes total (in the sense that all the elements are ordered with respect to each other) and the keys matched will be indiscernible from each other.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The actual order of elements in the controlled sequence depends on the hash function, the ordering function, and the current size of the hash table stored in the container object.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>You cannot determine the current size of the hash table, so you cannot in general predict the order of elements in the controlled sequence.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Inserting elements invalidates no iterators, and removing elements invalidates only those iterators that had specifically pointed at the removed elements.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The iterator provided by the hash_multimap class is a bidirectional iterator, but the class member functions <bpt id="p1">[</bpt>insert<ept id="p1">](#hash_multimap__insert)</ept> and <bpt id="p2">[</bpt>hash_multimap<ept id="p2">](#hash_multimap__hash_multimap)</ept> have versions that take as template parameters a weaker input iterator, whose functionality requirements are more minimal than those guaranteed by the class of bidirectional iterators.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The different iterator concepts form a family related by refinements in their functionality.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Each iterator concept has its own hash_multimap of requirements, and the algorithms that work with them must limit their assumptions to the requirements provided by that type of iterator.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>It may be assumed that an input iterator may be dereferenced to refer to some object and that it may be incremented to the next iterator in the sequence.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>This is a minimal hash_multimap of functionality, but it is enough to be able to talk meaningfully about a range of iterators <ph id="ph1">`[First, Last)`</ph> in the context of the member functions.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Constructors</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>hash_multimap</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Constructs a list of a specific size or with elements of a specific value or with a specific <ph id="ph1">`allocator`</ph> or as a copy of some other <ph id="ph2">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Typedefs</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>allocator_type</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>A type that represents the <ph id="ph1">`allocator`</ph> class for the <ph id="ph2">`hash_multimap`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>const_iterator</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>A type that provides a bidirectional iterator that can read a <ph id="ph1">`const`</ph> element in the <ph id="ph2">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>const_pointer</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>A type that provides a pointer to a <ph id="ph1">`const`</ph> element in a <ph id="ph2">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>const_reference</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>A type that provides a reference to a <ph id="ph1">`const`</ph> element stored in a <ph id="ph2">`hash_multimap`</ph> for reading and performing <ph id="ph3">`const`</ph> operations.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>const_reverse_iterator</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>A type that provides a bidirectional iterator that can read any <ph id="ph1">`const`</ph> element in the <ph id="ph2">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>difference_type</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>A signed integer type that can be used to represent the number of elements of a <ph id="ph1">`hash_multimap`</ph> in a range between elements pointed to by iterators.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>iterator</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>A type that provides a bidirectional iterator that can read or modify any element in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>key_compare</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>key_type</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>A type that describes the sort key object that constitutes each element of the <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>mapped_type</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>A type that represents the data type stored in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>pointer</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>A type that provides a pointer to an element in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>reference</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>A type that provides a reference to an element stored in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>reverse_iterator</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>A type that provides a bidirectional iterator that can read or modify an element in a reversed <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>size_type</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>An unsigned integer type that can represent the number of elements in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>value_type</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>A type that provides a function object that can compare two elements as sort keys to determine their relative order in the <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Member Functions</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>begin</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Returns an iterator addressing the first element in the <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>hash_multimap::cbegin</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Returns a const iterator addressing the first element in the <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>hash_multimap::cend</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Returns a const iterator that addresses the location succeeding the last element in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>clear</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Erases all the elements of a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>count</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Returns the number of elements in a <ph id="ph1">`hash_multimap`</ph> whose key matches a parameter-specified key.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>hash_multimap::crbegin</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Returns a const iterator addressing the first element in a reversed <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>hash_multimap::crend</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Returns a const iterator that addresses the location succeeding the last element in a reversed <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>hash_multimap::emplace</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Inserts an element constructed in place into a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>hash_multimap::emplace_hint</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Inserts an element constructed in place into a <ph id="ph1">`hash_multimap`</ph>, with a placement hint.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>empty</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Tests if a <ph id="ph1">`hash_multimap`</ph> is empty.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>end</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Returns an iterator that addresses the location succeeding the last element in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>equal_range</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Returns an iterator that addresses the location succeeding the last element in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>erase</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Removes an element or a range of elements in a <ph id="ph1">`hash_multimap`</ph> from specified positions</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>find</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Returns an iterator addressing the location of an element in a <ph id="ph1">`hash_multimap`</ph> that has a key equivalent to a specified key.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>get_allocator</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Returns a copy of the <ph id="ph1">`allocator`</ph> object used to construct the <ph id="ph2">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>insert</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Inserts an element or a range of elements into the <ph id="ph1">`hash_multimap`</ph> at a specified position.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>key_comp</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Retrieves a copy of the comparison object used to order keys in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>lower_bound</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Returns an iterator to the first element in a <ph id="ph1">`hash_multimap`</ph> that with a key value that is equal to or greater than that of a specified key.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>max_size</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Returns the maximum length of the <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>rbegin</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Returns an iterator addressing the first element in a reversed <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>rend</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Returns an iterator that addresses the location succeeding the last element in a reversed <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>size</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Specifies a new size for a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>swap</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Exchanges the elements of two <ph id="ph1">`hash_multimap`</ph>s.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>upper_bound</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Returns an iterator to the first element in a <ph id="ph1">`hash_multimap`</ph> that with a key value that is greater than that of a specified key.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>value_comp</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Retrieves a copy of the comparison object used to order element values in a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>Operators</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>hash_multimap::operator=</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>Replaces the elements of a <ph id="ph1">`hash_multimap`</ph> with a copy of another <ph id="ph2">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> &lt;hash_map&gt;</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> stdext</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>hash_multimap::allocator_type</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>A type that represents the allocator class for the hash_multimap object.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>is a synonym for the template parameter <ph id="ph1">`Allocator`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>For more information on <ph id="ph1">`Allocator`</ph>, see the Remarks section of the <bpt id="p1">[</bpt>hash_multimap Class<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>get_allocator<ept id="p1">](#hash_multimap__get_allocator)</ept> for an example using <ph id="ph1">`allocator_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>hash_multimap::begin</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Returns an iterator addressing the first element in the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>A bidirectional iterator addressing the first element in the hash_multimap or the location succeeding an empty hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>If the return value of <bpt id="p1">**</bpt>begin<ept id="p1">**</ept> is assigned to a <ph id="ph1">`const_iterator`</ph>, the elements in the hash_multimap object cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>If the return value of <bpt id="p1">**</bpt>begin<ept id="p1">**</ept> is assigned to an <bpt id="p2">**</bpt>iterator<ept id="p2">**</ept>, the elements in the hash_multimap object can be modified.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>hash_multimap::cbegin</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>Returns a const iterator addressing the first element in the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>A const bidirectional iterator addressing the first element in the <bpt id="p1">[</bpt>hash_multimap<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> or the location succeeding an empty <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>hash_multimap::cend</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>Returns a const iterator that addresses the location succeeding the last element in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>A const bidirectional iterator that addresses the location succeeding the last element in a <bpt id="p1">[</bpt>hash_multimap<ept id="p1">](../standard-library/hash-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`hash_multimap`</ph> is empty, then <ph id="ph2">`hash_multimap::cend == hash_multimap::begin`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>is used to test whether an iterator has reached the end of its hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>The value returned by <ph id="ph1">`cend`</ph> should not be dereferenced.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>hash_multimap::clear</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>Erases all the elements of a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates the use of the hash_multimap::clear member function.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>hash_multimap::const_iterator</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>A type that provides a bidirectional iterator that can read a <bpt id="p1">**</bpt>const<ept id="p1">**</ept> element in the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>A type <ph id="ph1">`const_iterator`</ph> cannot be used to modify the value of an element.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`const_iterator`</ph> defined by hash_multimap points to objects of <bpt id="p1">[</bpt>value_type<ept id="p1">](#hash_multimap__value_type)</ept>, which are of type <ph id="ph2">`pair`</ph><bpt id="p2">*</bpt><ph id="ph3">\&lt;</ph><ept id="p2">*</ept><bpt id="p3">**</bpt>constKey, Type<ept id="p3">**</ept><bpt id="p4">*</bpt><ph id="ph4">&gt;</ph><ept id="p4">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>The value of the key is available through the first member pair, and the value of the mapped element is available through the second member of the pair.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>To dereference a <ph id="ph1">`const_iterator``cIter`</ph> pointing to an element in a hash_multimap, use the <bpt id="p1">**</bpt><ph id="ph2">-&gt;</ph><ept id="p1">**</ept> operator.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>To access the value of the key for the element, use <ph id="ph1">`cIter` -&gt; </ph><bpt id="p1">**</bpt>first<ept id="p1">**</ept>, which is equivalent to (<ph id="ph2">\*</ph> <ph id="ph3">`cIter`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>first<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>To access the value of the mapped datum for the element, use <ph id="ph1">`cIter` -&gt; </ph><bpt id="p1">**</bpt>second<ept id="p1">**</ept>, which is equivalent to (<ph id="ph2">\*</ph> <ph id="ph3">`cIter`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>first<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>begin<ept id="p1">](#hash_multimap__begin)</ept> for an example using <ph id="ph1">`const_iterator`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>hash_multimap::const_pointer</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>A type that provides a pointer to a <bpt id="p1">**</bpt>const<ept id="p1">**</ept> element in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>A type <ph id="ph1">`const_pointer`</ph> cannot be used to modify the value of an element.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>In most cases, an <bpt id="p1">[</bpt>iterator<ept id="p1">](#hash_multimap__iterator)</ept> should be used to access the elements in a hash_multimap object.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>hash_multimap::const_reference</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>A type that provides a reference to a <bpt id="p1">**</bpt>const<ept id="p1">**</ept> element stored in a hash_multimap for reading and performing <bpt id="p2">**</bpt>const<ept id="p2">**</ept> operations.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>hash_multimap::const_reverse_iterator</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>A type that provides a bidirectional iterator that can read any <bpt id="p1">**</bpt>const<ept id="p1">**</ept> element in the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source>A type <ph id="ph1">`const_reverse_iterator`</ph> cannot modify the value of an element and is use to iterate through the hash_multimap in reverse.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`const_reverse_iterator`</ph> defined by hash_multimap points to objects of <bpt id="p1">[</bpt>value_type<ept id="p1">](#hash_multimap__value_type)</ept>, which are of type <ph id="ph2">`pair`</ph><bpt id="p2">*</bpt><ph id="ph3">\&lt;</ph><ept id="p2">*</ept><bpt id="p3">**</bpt>const Key, Type&gt;<ept id="p3">**</ept>, whose first member is the key to the element and whose second member is the mapped datum held by the element.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>To dereference a <ph id="ph1">`const_reverse_iterator``crIter`</ph> pointing to an element in a hash_multimap, use the <bpt id="p1">**</bpt><ph id="ph2">-&gt;</ph><ept id="p1">**</ept> operator.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>To access the value of the key for the element, use <ph id="ph1">`crIter` -&gt; </ph><bpt id="p1">**</bpt>first<ept id="p1">**</ept>, which is equivalent to (<ph id="ph2">\*</ph> <ph id="ph3">`crIter`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>first<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>To access the value of the mapped datum for the element, use <ph id="ph1">`crIter` -&gt; </ph><bpt id="p1">**</bpt>second<ept id="p1">**</ept>, which is equivalent to (<ph id="ph2">\*</ph> <ph id="ph3">`crIter`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>first<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>rend<ept id="p1">](#hash_multimap__rend)</ept> for an example of how to declare and use the <ph id="ph1">`const_reverse_iterator`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source>hash_multimap::count</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve">
+          <source>Returns the number of elements in a hash_multimap whose key matches a parameter-specified key.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>The key of the elements to be matched from the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>1 if the hash_multimap contains an element whose sort key matches the parameter key; 0 if the hash_multimap doesn't contain an element with a matching key.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>The member function returns the number of elements in the range</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>[lower_bound (<ept id="p1">**</ept> <ph id="ph1">` key`</ph> <bpt id="p2">**</bpt>), upper_bound (<ept id="p2">**</ept> <ph id="ph2">` key`</ph> <bpt id="p3">**</bpt>) )<ept id="p3">**</ept></source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve">
+          <source>which have a key value <ph id="ph1">` key`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates the use of the hash_multimap::count member function.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>hash_multimap::crbegin</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>Returns a const iterator addressing the first element in a reversed hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source>A const reverse bidirectional iterator addressing the first element in a reversed <bpt id="p1">[</bpt>hash_multimap<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> or addressing what had been the last element in the unreversed <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source>is used with a reversed hash_multimap just as <bpt id="p1">[</bpt>hash_multimap::begin<ept id="p1">](#hash_multimap__begin)</ept> is used with a <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>With the return value of <ph id="ph1">`crbegin`</ph>, the <ph id="ph2">`hash_multimap`</ph> object cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>can be used to iterate through a <ph id="ph1">`hash_multimap`</ph> backwards.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>hash_multimap::crend</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve">
+          <source>Returns a const iterator that addresses the location succeeding the last element in a reversed hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve">
+          <source>A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed <bpt id="p1">[</bpt>hash_multimap<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> (the location that had preceded the first element in the unreversed <ph id="ph1">`hash_multimap`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>is used with a reversed hash_multimap just as <bpt id="p1">[</bpt>hash_multimap::end<ept id="p1">](#hash_multimap__end)</ept> is used with a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>With the return value of <ph id="ph1">`crend`</ph>, the <ph id="ph2">`hash_multimap`</ph> object cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve">
+          <source>can be used to test to whether a reverse iterator has reached the end of its hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve">
+          <source>The value returned by <ph id="ph1">`crend`</ph> should not be dereferenced.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve">
+          <source>hash_multimap::difference_type</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve">
+          <source>A signed integer type that can be used to represent the number of elements of a hash_multimap in a range between elements pointed to by iterators.</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`difference_type`</ph> is the type returned when subtracting or incrementing through iterators of the container.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`difference_type`</ph> is typically used to represent the number of elements in the range <bpt id="p1">*</bpt>[ first,  last)<ept id="p1">*</ept> between the iterators <ph id="ph2">` first`</ph> and <ph id="ph3">` last`</ph>, includes the element pointed to by <ph id="ph4">` first`</ph> and the range of elements up to, but not including, the element pointed to by <ph id="ph5">` last`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve">
+          <source>Note that although <ph id="ph1">`difference_type`</ph> is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers such as set, subtraction between iterators is only supported by random-access iterators provided by a random-access container such as vector.</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve">
+          <source>hash_multimap::emplace</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve">
+          <source>Inserts an element constructed in place into a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve">
+          <source>Parameter</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="410" translate="yes" xml:space="preserve">
+          <source>The value used to move construct an element to be inserted into the <bpt id="p1">[</bpt>hash_multimap<ept id="p1">](../standard-library/hash-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="411" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="412" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`emplace`</ph> member function returns an iterator that points to the position where the new element was inserted.</source>
+        </trans-unit>
+        <trans-unit id="413" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="414" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>hash_multimap::value_type<ept id="p1">](#hash_multimap__value_type)</ept> of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.</source>
+        </trans-unit>
+        <trans-unit id="415" translate="yes" xml:space="preserve">
+          <source>Beginning with Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="416" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="417" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="418" translate="yes" xml:space="preserve">
+          <source>hash_multimap::emplace_hint</source>
+        </trans-unit>
+        <trans-unit id="419" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="420" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="421" translate="yes" xml:space="preserve">
+          <source>Inserts an element constructed in place into a hash_multimap, with a placement hint.</source>
+        </trans-unit>
+        <trans-unit id="422" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="423" translate="yes" xml:space="preserve">
+          <source>Parameter</source>
+        </trans-unit>
+        <trans-unit id="424" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="425" translate="yes" xml:space="preserve">
+          <source>The value used to move construct an element to be inserted into the <bpt id="p1">[</bpt>hash_multimap<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> unless the <ph id="ph1">`hash_multimap`</ph> already contains that element (or, more generally, an element whose key is equivalently ordered).</source>
+        </trans-unit>
+        <trans-unit id="426" translate="yes" xml:space="preserve">
+          <source>A hint regarding the place to start searching for the correct point of insertion.</source>
+        </trans-unit>
+        <trans-unit id="427" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="428" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>hash_multimap::emplace<ept id="p1">](#hash_multimap__emplace)</ept> member function returns an iterator that points to the position where the new element was inserted into the <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="429" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="430" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>hash_multimap::value_type<ept id="p1">](#hash_multimap__value_type)</ept> of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.</source>
+        </trans-unit>
+        <trans-unit id="431" translate="yes" xml:space="preserve">
+          <source>Insertion can occur in amortized constant time, instead of logarithmic time, if the insertion point immediately follows <ph id="ph1">`_Where`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="432" translate="yes" xml:space="preserve">
+          <source>Beginning with Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="433" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="434" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="435" translate="yes" xml:space="preserve">
+          <source>hash_multimap::empty</source>
+        </trans-unit>
+        <trans-unit id="436" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="437" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="438" translate="yes" xml:space="preserve">
+          <source>Tests if a hash_multimap is empty.</source>
+        </trans-unit>
+        <trans-unit id="439" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="440" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>true<ept id="p1">**</ept> if the hash_multimap is empty; <bpt id="p2">**</bpt>false<ept id="p2">**</ept> if the hash_multimap is nonempty.</source>
+        </trans-unit>
+        <trans-unit id="441" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="442" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="443" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="444" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="445" translate="yes" xml:space="preserve">
+          <source>hash_multimap::end</source>
+        </trans-unit>
+        <trans-unit id="446" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="447" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="448" translate="yes" xml:space="preserve">
+          <source>Returns an iterator that addresses the location succeeding the last element in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="449" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="450" translate="yes" xml:space="preserve">
+          <source>A bidirectional iterator that addresses the location succeeding the last element in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="451" translate="yes" xml:space="preserve">
+          <source>If the hash_multimap is empty, then hash_multimap::end == hash_multimap::begin.</source>
+        </trans-unit>
+        <trans-unit id="452" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="453" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>end<ept id="p1">**</ept> is used to test whether an iterator has reached the end of its hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="454" translate="yes" xml:space="preserve">
+          <source>The value returned by <bpt id="p1">**</bpt>end<ept id="p1">**</ept> should not be dereferenced.</source>
+        </trans-unit>
+        <trans-unit id="455" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="456" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="457" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="458" translate="yes" xml:space="preserve">
+          <source>hash_multimap::equal_range</source>
+        </trans-unit>
+        <trans-unit id="459" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="460" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="461" translate="yes" xml:space="preserve">
+          <source>Returns a pair of iterators respectively to the first element in a hash_multimap with a key that is greater than a specified key and to the first element in the hash_multimap with a key that is equal to or greater than the key.</source>
+        </trans-unit>
+        <trans-unit id="462" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="463" translate="yes" xml:space="preserve">
+          <source>The argument key to be compared with the sort key of an element from the hash_multimap being searched.</source>
+        </trans-unit>
+        <trans-unit id="464" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="465" translate="yes" xml:space="preserve">
+          <source>A pair of iterators such that the first is the <bpt id="p1">[</bpt>lower_bound<ept id="p1">](#hash_multimap__lower_bound)</ept> of the key and the second is the <bpt id="p2">[</bpt>upper_bound<ept id="p2">](#hash_multimap__upper_bound)</ept> of the key.</source>
+        </trans-unit>
+        <trans-unit id="466" translate="yes" xml:space="preserve">
+          <source>To access the first iterator of a pair <ph id="ph1">`pr`</ph> returned by the member function, use <ph id="ph2">`pr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="467" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>first<ept id="p1">**</ept> and to dereference the lower bound iterator, use <ph id="ph1">\*</ph>( <ph id="ph2">`pr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="468" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>first<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="469" translate="yes" xml:space="preserve">
+          <source>To access the second iterator of a pair <ph id="ph1">`pr`</ph> returned by the member function, use <ph id="ph2">`pr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="470" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>second<ept id="p1">**</ept> and to dereference the upper bound iterator, use <ph id="ph1">\*</ph>( <ph id="ph2">`pr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="471" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>second<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="472" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="473" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="474" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="475" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="476" translate="yes" xml:space="preserve">
+          <source>hash_multimap::erase</source>
+        </trans-unit>
+        <trans-unit id="477" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="478" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="479" translate="yes" xml:space="preserve">
+          <source>Removes an element or a range of elements in a hash_multimap from specified positions or removes elements that match a specified key.</source>
+        </trans-unit>
+        <trans-unit id="480" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="481" translate="yes" xml:space="preserve">
+          <source>Position of the element to be removed from the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="482" translate="yes" xml:space="preserve">
+          <source>Position of the first element removed from the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="483" translate="yes" xml:space="preserve">
+          <source>Position just beyond the last element removed from the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="484" translate="yes" xml:space="preserve">
+          <source>The key of the elements to be removed from the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="485" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="486" translate="yes" xml:space="preserve">
+          <source>For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or a pointer to the end of the hash_multimap if no such element exists.</source>
+        </trans-unit>
+        <trans-unit id="487" translate="yes" xml:space="preserve">
+          <source>For the third member function, returns the number of elements that have been removed from the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="488" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="489" translate="yes" xml:space="preserve">
+          <source>The member functions never throw an exception.</source>
+        </trans-unit>
+        <trans-unit id="490" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="491" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="492" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="493" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates the use of the hash_multimap::erase member function.</source>
+        </trans-unit>
+        <trans-unit id="494" translate="yes" xml:space="preserve">
+          <source>hash_multimap::find</source>
+        </trans-unit>
+        <trans-unit id="495" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="496" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="497" translate="yes" xml:space="preserve">
+          <source>Returns an iterator addressing the first location of an element in a hash_multimap that has a key equivalent to a specified key.</source>
+        </trans-unit>
+        <trans-unit id="498" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="499" translate="yes" xml:space="preserve">
+          <source>The key to be matched by the sort key of an element from the hash_multimap being searched.</source>
+        </trans-unit>
+        <trans-unit id="500" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="501" translate="yes" xml:space="preserve">
+          <source>An iterator that addresses the first location of an element with a specified key, or the location succeeding the last element in the hash_multimap if no match is found for the key.</source>
+        </trans-unit>
+        <trans-unit id="502" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="503" translate="yes" xml:space="preserve">
+          <source>The member function returns an iterator that addresses an element in the hash_multimap whose sort key is <bpt id="p1">**</bpt>equivalent<ept id="p1">**</ept> to the argument key under a binary predicate that induces an ordering based on a less than comparability relation.</source>
+        </trans-unit>
+        <trans-unit id="504" translate="yes" xml:space="preserve">
+          <source>If the return value of <bpt id="p1">**</bpt>find<ept id="p1">**</ept> is assigned to a <ph id="ph1">`const_iterator`</ph>, the hash_multimap object cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="505" translate="yes" xml:space="preserve">
+          <source>If the return value of <bpt id="p1">**</bpt>find<ept id="p1">**</ept> is assigned to an <bpt id="p2">**</bpt>iterator<ept id="p2">**</ept>, the hash_multimap object can be modified.</source>
+        </trans-unit>
+        <trans-unit id="506" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="507" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="508" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="509" translate="yes" xml:space="preserve">
+          <source>hash_multimap::get_allocator</source>
+        </trans-unit>
+        <trans-unit id="510" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="511" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="512" translate="yes" xml:space="preserve">
+          <source>Returns a copy of the allocator object used to construct the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="513" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="514" translate="yes" xml:space="preserve">
+          <source>The allocator used by the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="515" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="516" translate="yes" xml:space="preserve">
+          <source>Allocators for the hash_multimap class specify how the class manages storage.</source>
+        </trans-unit>
+        <trans-unit id="517" translate="yes" xml:space="preserve">
+          <source>The default allocators supplied with STL container classes is sufficient for most programming needs.</source>
+        </trans-unit>
+        <trans-unit id="518" translate="yes" xml:space="preserve">
+          <source>Writing and using your own allocator class is an advanced C++ topic.</source>
+        </trans-unit>
+        <trans-unit id="519" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="520" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="521" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="522" translate="yes" xml:space="preserve">
+          <source>hash_multimap::hash_multimap</source>
+        </trans-unit>
+        <trans-unit id="523" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="524" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="525" translate="yes" xml:space="preserve">
+          <source>Constructs a hash_multimap that is empty or is a copy of all or part of some other hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="526" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="527" translate="yes" xml:space="preserve">
+          <source>Parameter</source>
+        </trans-unit>
+        <trans-unit id="528" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="529" translate="yes" xml:space="preserve">
+          <source>The storage allocator class to be used for this hash_multimap object, which defaults to <ph id="ph1">`Allocator`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="530" translate="yes" xml:space="preserve">
+          <source>The comparison function of type <ph id="ph1">`const``Traits`</ph> used to order the elements in the map, which defaults to <ph id="ph2">`Traits`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="531" translate="yes" xml:space="preserve">
+          <source>The map of which the constructed set is to be a copy.</source>
+        </trans-unit>
+        <trans-unit id="532" translate="yes" xml:space="preserve">
+          <source>The position of the first element in the range of elements to be copied.</source>
+        </trans-unit>
+        <trans-unit id="533" translate="yes" xml:space="preserve">
+          <source>The position of the first element beyond the range of elements to be copied.</source>
+        </trans-unit>
+        <trans-unit id="534" translate="yes" xml:space="preserve">
+          <source>The initializer_list to copy from.</source>
+        </trans-unit>
+        <trans-unit id="535" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="536" translate="yes" xml:space="preserve">
+          <source>All constructors store a type of allocator object that manages memory storage for the hash_multimap and that can later be returned by calling <bpt id="p1">[</bpt>get_allocator<ept id="p1">](#hash_multimap__get_allocator)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="537" translate="yes" xml:space="preserve">
+          <source>The allocator parameter is often omitted in the class declarations and preprocessing macros are used to substitute alternative allocators.</source>
+        </trans-unit>
+        <trans-unit id="538" translate="yes" xml:space="preserve">
+          <source>All constructors initialize their hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="539" translate="yes" xml:space="preserve">
+          <source>All constructors store a function object of type <ph id="ph1">`Traits`</ph> that is used to establish an order among the keys of the hash_multimap and can later be returned by calling <bpt id="p1">[</bpt>key_comp<ept id="p1">](#hash_multimap__key_comp)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="540" translate="yes" xml:space="preserve">
+          <source>The first three constructors specify an empty initial hash_multimap; the second specifies the type of comparison function ( <ph id="ph1">`Comp`</ph>) to be used in establishing the order of the elements and the third explicitly specifies the allocator type ( <ph id="ph2">`_Al`</ph>) to be used.</source>
+        </trans-unit>
+        <trans-unit id="541" translate="yes" xml:space="preserve">
+          <source>The keyword <ph id="ph1">`explicit`</ph> suppresses certain kinds of automatic type conversion.</source>
+        </trans-unit>
+        <trans-unit id="542" translate="yes" xml:space="preserve">
+          <source>The fourth constructor specifies a copy of the hash_multimap <ph id="ph1">`Right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="543" translate="yes" xml:space="preserve">
+          <source>The next three constructors copy the range <ph id="ph1">`First, Last)`</ph> of a map with increasing explicitness in specifying the type of comparison function of class <bpt id="p1">**</bpt>Traits<ept id="p1">**</ept> and allocator.</source>
+        </trans-unit>
+        <trans-unit id="544" translate="yes" xml:space="preserve">
+          <source>The eighth constructor moves the hash_multimap <ph id="ph1">`Right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="545" translate="yes" xml:space="preserve">
+          <source>The final three constructors use an initializer_list.</source>
+        </trans-unit>
+        <trans-unit id="546" translate="yes" xml:space="preserve">
+          <source>hash_multimap::insert</source>
+        </trans-unit>
+        <trans-unit id="547" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="548" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="549" translate="yes" xml:space="preserve">
+          <source>Inserts an element or a range of elements into a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="550" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="551" translate="yes" xml:space="preserve">
+          <source>Parameter</source>
+        </trans-unit>
+        <trans-unit id="552" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="553" translate="yes" xml:space="preserve">
+          <source>The value of an element to be inserted into the hash_multimap unless it already contains that element, or more generally, unless it already contains an element whose key is equivalently ordered.</source>
+        </trans-unit>
+        <trans-unit id="554" translate="yes" xml:space="preserve">
+          <source>A hint about where to start searching for the correct point of insertion.</source>
+        </trans-unit>
+        <trans-unit id="555" translate="yes" xml:space="preserve">
+          <source>The position of the first element to be copied from a map.</source>
+        </trans-unit>
+        <trans-unit id="556" translate="yes" xml:space="preserve">
+          <source>The position just beyond the last element to be copied from a map.</source>
+        </trans-unit>
+        <trans-unit id="557" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="558" translate="yes" xml:space="preserve">
+          <source>The first two <ph id="ph1">`insert`</ph> member functions return an iterator that points to the position where the new element was inserted.</source>
+        </trans-unit>
+        <trans-unit id="559" translate="yes" xml:space="preserve">
+          <source>The third member function uses an initializer_list for the elements to be inserted.</source>
+        </trans-unit>
+        <trans-unit id="560" translate="yes" xml:space="preserve">
+          <source>The fourth member function inserts the sequence of element values into a map that corresponds to each element addressed by an iterator in the range <ph id="ph1">`[First, Last)`</ph> of a specified set.</source>
+        </trans-unit>
+        <trans-unit id="561" translate="yes" xml:space="preserve">
+          <source>The last two <ph id="ph1">`insert`</ph> member functions behave the same as the first two, except that they move-construct the inserted value.</source>
+        </trans-unit>
+        <trans-unit id="562" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="563" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>value_type<ept id="p1">](#hash_multimap__value_type)</ept> of an element is a pair, so that the value of an element will be an ordered pair in which the first component is equal to the key value and the second component is equal to the data value of the element.</source>
+        </trans-unit>
+        <trans-unit id="564" translate="yes" xml:space="preserve">
+          <source>Insertion can occur in amortized constant time for the hint version of <ph id="ph1">`insert`</ph>, instead of logarithmic time, if the insertion point immediately follows <ph id="ph2">`Where`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="565" translate="yes" xml:space="preserve">
+          <source>hash_multimap::iterator</source>
+        </trans-unit>
+        <trans-unit id="566" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="567" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="568" translate="yes" xml:space="preserve">
+          <source>A type that provides a bidirectional iterator that can read or modify any element in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="569" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="570" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>iterator<ept id="p1">**</ept> defined by hash_multimap points to objects of <bpt id="p2">[</bpt>value_type<ept id="p2">](#hash_multimap__value_type)</ept>, which are of type <ph id="ph1">`pair`\&lt;</ph> <bpt id="p3">**</bpt>const Key, Type<ept id="p3">**</ept>&gt;, whose first member is the key to the element and whose second member is the mapped datum held by the element.</source>
+        </trans-unit>
+        <trans-unit id="571" translate="yes" xml:space="preserve">
+          <source>To dereference an <bpt id="p1">**</bpt>iterator<ept id="p1">**</ept><ph id="ph1">`Iter`</ph> pointing to an element in a hash_multimap, use the <bpt id="p2">**</bpt><ph id="ph2">-&gt;</ph><ept id="p2">**</ept> operator.</source>
+        </trans-unit>
+        <trans-unit id="572" translate="yes" xml:space="preserve">
+          <source>To access the value of the key for the element, use <ph id="ph1">`Iter` -&gt; </ph><bpt id="p1">**</bpt>first<ept id="p1">**</ept>, which is equivalent to (<ph id="ph2">\*</ph> <ph id="ph3">`Iter`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="573" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>first<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="574" translate="yes" xml:space="preserve">
+          <source>To access the value of the mapped datum for the element, use <ph id="ph1">`Iter` -&gt; </ph><bpt id="p1">**</bpt>second<ept id="p1">**</ept>, which is equivalent to (<ph id="ph2">\*</ph> <ph id="ph3">`Iter`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="575" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>first<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="576" translate="yes" xml:space="preserve">
+          <source>A type <bpt id="p1">**</bpt>iterator<ept id="p1">**</ept> can be used to modify the value of an element.</source>
+        </trans-unit>
+        <trans-unit id="577" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="578" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="579" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="580" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>begin<ept id="p1">](#hash_multimap__begin)</ept> for an example of how to declare and use <bpt id="p2">**</bpt>iterator<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="581" translate="yes" xml:space="preserve">
+          <source>hash_multimap::key_comp</source>
+        </trans-unit>
+        <trans-unit id="582" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="583" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="584" translate="yes" xml:space="preserve">
+          <source>Retrieves a copy of the comparison object used to order keys in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="585" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="586" translate="yes" xml:space="preserve">
+          <source>Returns the function object that a hash_multimap uses to order its elements.</source>
+        </trans-unit>
+        <trans-unit id="587" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="588" translate="yes" xml:space="preserve">
+          <source>The stored object defines the member function</source>
+        </trans-unit>
+        <trans-unit id="589" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>bool operator(const Key&amp;<ept id="p1">**</ept> <ph id="ph1">` left`</ph> <bpt id="p2">**</bpt>, const Key&amp;<ept id="p2">**</ept> <ph id="ph2">` right`</ph> <bpt id="p3">**</bpt>);<ept id="p3">**</ept></source>
+        </trans-unit>
+        <trans-unit id="590" translate="yes" xml:space="preserve">
+          <source>which returns <bpt id="p1">**</bpt>true<ept id="p1">**</ept> if <ph id="ph1">` left`</ph> precedes and is not equal to <ph id="ph2">` right`</ph> in the sort order.</source>
+        </trans-unit>
+        <trans-unit id="591" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="592" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="593" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="594" translate="yes" xml:space="preserve">
+          <source>hash_multimap::key_compare</source>
+        </trans-unit>
+        <trans-unit id="595" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="596" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="597" translate="yes" xml:space="preserve">
+          <source>A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="598" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="599" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>key_compare<ept id="p1">**</ept> is a synonym for the template parameter <ph id="ph1">`Traits`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="600" translate="yes" xml:space="preserve">
+          <source>For more information on <ph id="ph1">`Traits`</ph> see the <bpt id="p1">[</bpt>hash_multimap Class<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="601" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="602" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="603" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="604" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>key_comp<ept id="p1">](#hash_multimap__key_comp)</ept> for an example of how to declare and use <ph id="ph1">`key_compare`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="605" translate="yes" xml:space="preserve">
+          <source>hash_multimap::key_type</source>
+        </trans-unit>
+        <trans-unit id="606" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="607" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="608" translate="yes" xml:space="preserve">
+          <source>A type that describes the sort key object that constitutes each element of the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="609" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="610" translate="yes" xml:space="preserve">
+          <source>is a synonym for the template parameter <ph id="ph1">`Key`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="611" translate="yes" xml:space="preserve">
+          <source>For more information on <ph id="ph1">`Key`</ph>, see the Remarks section of the <bpt id="p1">[</bpt>hash_multimap Class<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="612" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="613" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="614" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="615" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>value_type<ept id="p1">](#hash_multimap__value_type)</ept> for an example of how to declare and use <ph id="ph1">`key_compare`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="616" translate="yes" xml:space="preserve">
+          <source>hash_multimap::lower_bound</source>
+        </trans-unit>
+        <trans-unit id="617" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="618" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="619" translate="yes" xml:space="preserve">
+          <source>Returns an iterator to the first element in a hash_multimap with a key that is equal to or greater than a specified key.</source>
+        </trans-unit>
+        <trans-unit id="620" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="621" translate="yes" xml:space="preserve">
+          <source>The argument key to be compared with the sort key of an element from the hash_multimap being searched.</source>
+        </trans-unit>
+        <trans-unit id="622" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="623" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">[</bpt>iterator<ept id="p1">](#hash_multimap__iterator)</ept> or <bpt id="p2">[</bpt>const_iterator<ept id="p2">](#hash_multimap__const_iterator)</ept> that addresses the location of an element in a hash_multimap with a key that is equal to or greater than the argument key, or that addresses the location succeeding the last element in the hash_multimap if no match is found for the key.</source>
+        </trans-unit>
+        <trans-unit id="624" translate="yes" xml:space="preserve">
+          <source>If the return value of <ph id="ph1">`lower_bound`</ph> is assigned to a <ph id="ph2">`const_iterator`</ph>, the hash_multimap object cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="625" translate="yes" xml:space="preserve">
+          <source>If the return value of <ph id="ph1">`lower_bound`</ph> is assigned to an <bpt id="p1">**</bpt>iterator<ept id="p1">**</ept>, the hash_multimap object can be modified.</source>
+        </trans-unit>
+        <trans-unit id="626" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="627" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="628" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="629" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="630" translate="yes" xml:space="preserve">
+          <source>hash_multimap::mapped_type</source>
+        </trans-unit>
+        <trans-unit id="631" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="632" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="633" translate="yes" xml:space="preserve">
+          <source>A type that represents the data type stored in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="634" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="635" translate="yes" xml:space="preserve">
+          <source>is a synonym for the template parameter <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="636" translate="yes" xml:space="preserve">
+          <source>For more information on <ph id="ph1">`Type`</ph> see the <bpt id="p1">[</bpt>hash_multimap Class<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="637" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="638" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="639" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="640" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>value_type<ept id="p1">](#hash_multimap__value_type)</ept> for an example of how to declare and use <ph id="ph1">`key_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="641" translate="yes" xml:space="preserve">
+          <source>hash_multimap::max_size</source>
+        </trans-unit>
+        <trans-unit id="642" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="643" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="644" translate="yes" xml:space="preserve">
+          <source>Returns the maximum length of the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="645" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="646" translate="yes" xml:space="preserve">
+          <source>The maximum possible length of the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="647" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="648" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="649" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="650" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="651" translate="yes" xml:space="preserve">
+          <source>hash_multimap::operator=</source>
+        </trans-unit>
+        <trans-unit id="652" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="653" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="654" translate="yes" xml:space="preserve">
+          <source>Replaces the elements of the hash_multimap with a copy of another hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="655" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="656" translate="yes" xml:space="preserve">
+          <source>Parameter</source>
+        </trans-unit>
+        <trans-unit id="657" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="658" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>hash_multimap<ept id="p1">](../standard-library/hash-multimap-class.md)</ept> being copied into the <ph id="ph1">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="659" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="660" translate="yes" xml:space="preserve">
+          <source>After erasing any existing elements in a <ph id="ph1">`hash_multimap`</ph>, <ph id="ph2">`operator=`</ph> either copies or moves the contents of <ph id="ph3">` right`</ph> into the <ph id="ph4">`hash_multimap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="661" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="662" translate="yes" xml:space="preserve">
+          <source>hash_multimap::pointer</source>
+        </trans-unit>
+        <trans-unit id="663" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="664" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="665" translate="yes" xml:space="preserve">
+          <source>A type that provides a pointer to an element in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="666" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="667" translate="yes" xml:space="preserve">
+          <source>A type <bpt id="p1">**</bpt>pointer<ept id="p1">**</ept> can be used to modify the value of an element.</source>
+        </trans-unit>
+        <trans-unit id="668" translate="yes" xml:space="preserve">
+          <source>In most cases, an <bpt id="p1">[</bpt>iterator<ept id="p1">](#hash_multimap__iterator)</ept> should be used to access the elements in a hash_multimap object.</source>
+        </trans-unit>
+        <trans-unit id="669" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="670" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="671" translate="yes" xml:space="preserve">
+          <source>hash_multimap::rbegin</source>
+        </trans-unit>
+        <trans-unit id="672" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="673" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="674" translate="yes" xml:space="preserve">
+          <source>Returns an iterator addressing the first element in a reversed hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="675" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="676" translate="yes" xml:space="preserve">
+          <source>A reverse bidirectional iterator addressing the first element in a reversed hash_multimap or addressing what had been the last element in the unreversed hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="677" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="678" translate="yes" xml:space="preserve">
+          <source>is used with a reversed hash_multimap just as <bpt id="p1">[</bpt>begin<ept id="p1">](#hash_multimap__begin)</ept> is used with a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="679" translate="yes" xml:space="preserve">
+          <source>If the return value of <ph id="ph1">`rbegin`</ph> is assigned to a <ph id="ph2">`const_reverse_iterator`</ph>, then the hash_multimap object cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="680" translate="yes" xml:space="preserve">
+          <source>If the return value of <ph id="ph1">`rbegin`</ph> is assigned to a <ph id="ph2">`reverse_iterator`</ph>, then the hash_multimap object can be modified.</source>
+        </trans-unit>
+        <trans-unit id="681" translate="yes" xml:space="preserve">
+          <source>can be used to iterate through a hash_multimap backwards.</source>
+        </trans-unit>
+        <trans-unit id="682" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="683" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="684" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="685" translate="yes" xml:space="preserve">
+          <source>hash_multimap::reference</source>
+        </trans-unit>
+        <trans-unit id="686" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="687" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="688" translate="yes" xml:space="preserve">
+          <source>A type that provides a reference to an element stored in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="689" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="690" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="691" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="692" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="693" translate="yes" xml:space="preserve">
+          <source>hash_multimap::rend</source>
+        </trans-unit>
+        <trans-unit id="694" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="695" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="696" translate="yes" xml:space="preserve">
+          <source>Returns an iterator that addresses the location succeeding the last element in a reversed hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="697" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="698" translate="yes" xml:space="preserve">
+          <source>A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed hash_multimap (the location that had preceded the first element in the unreversed hash_multimap).</source>
+        </trans-unit>
+        <trans-unit id="699" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="700" translate="yes" xml:space="preserve">
+          <source>is used with a reversed hash_multimap just as <bpt id="p1">[</bpt>end<ept id="p1">](#hash_multimap__end)</ept> is used with a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="701" translate="yes" xml:space="preserve">
+          <source>If the return value of <ph id="ph1">`rend`</ph> is assigned to a <bpt id="p1">[</bpt>const_reverse_iterator<ept id="p1">](#hash_multimap__const_reverse_iterator)</ept>, then the hash_multimap object cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="702" translate="yes" xml:space="preserve">
+          <source>If the return value of <ph id="ph1">`rend`</ph> is assigned to a <bpt id="p1">[</bpt>reverse_iterator<ept id="p1">](#hash_multimap__reverse_iterator)</ept>, then the hash_multimap object can be modified.</source>
+        </trans-unit>
+        <trans-unit id="703" translate="yes" xml:space="preserve">
+          <source>can be used to test to whether a reverse iterator has reached the end of its hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="704" translate="yes" xml:space="preserve">
+          <source>The value returned by <ph id="ph1">`rend`</ph> should not be dereferenced.</source>
+        </trans-unit>
+        <trans-unit id="705" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="706" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="707" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="708" translate="yes" xml:space="preserve">
+          <source>hash_multimap::reverse_iterator</source>
+        </trans-unit>
+        <trans-unit id="709" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="710" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="711" translate="yes" xml:space="preserve">
+          <source>A type that provides a bidirectional iterator that can read or modify an element in a reversed hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="712" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="713" translate="yes" xml:space="preserve">
+          <source>A type <ph id="ph1">`reverse_iterator`</ph> is used to iterate through the hash_multimap in reverse.</source>
+        </trans-unit>
+        <trans-unit id="714" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`reverse_iterator`</ph> defined by hash_multimap points to objects of <bpt id="p1">[</bpt>value_type<ept id="p1">](#hash_multimap__value_type)</ept>, which are of type <ph id="ph2">`pair`\&lt;</ph> <bpt id="p2">**</bpt>const Key, Type<ept id="p2">**</ept>&gt;.</source>
+        </trans-unit>
+        <trans-unit id="715" translate="yes" xml:space="preserve">
+          <source>The value of the key is available through the first member pair and the value of the mapped element is available through the second member of the pair.</source>
+        </trans-unit>
+        <trans-unit id="716" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="717" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="718" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="719" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>rbegin<ept id="p1">](#hash_multimap__rbegin)</ept> for an example of how to declare and use <ph id="ph1">`reverse_iterator`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="720" translate="yes" xml:space="preserve">
+          <source>hash_multimap::size</source>
+        </trans-unit>
+        <trans-unit id="721" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="722" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="723" translate="yes" xml:space="preserve">
+          <source>Returns the number of elements in the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="724" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="725" translate="yes" xml:space="preserve">
+          <source>The current length of the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="726" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="727" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="728" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="729" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="730" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates the use of the hash_multimap::size member function.</source>
+        </trans-unit>
+        <trans-unit id="731" translate="yes" xml:space="preserve">
+          <source>hash_multimap::size_type</source>
+        </trans-unit>
+        <trans-unit id="732" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="733" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="734" translate="yes" xml:space="preserve">
+          <source>An unsigned integer type that counts the number of elements in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="735" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="736" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="737" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="738" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="739" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>size<ept id="p1">](#hash_multimap__size)</ept> for an example of how to declare and use</source>
+        </trans-unit>
+        <trans-unit id="740" translate="yes" xml:space="preserve">
+          <source>hash_multimap::swap</source>
+        </trans-unit>
+        <trans-unit id="741" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="742" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="743" translate="yes" xml:space="preserve">
+          <source>Exchanges the elements of two hash_multimaps.</source>
+        </trans-unit>
+        <trans-unit id="744" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="745" translate="yes" xml:space="preserve">
+          <source>The hash_multimap providing the elements to be swapped or the hash_multimap whose elements are to be exchanged with those of the hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="746" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="747" translate="yes" xml:space="preserve">
+          <source>The member function invalidates no references, pointers, or iterators that designate elements in the two hash_multimaps whose elements are being exchanged.</source>
+        </trans-unit>
+        <trans-unit id="748" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="749" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="750" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="751" translate="yes" xml:space="preserve">
+          <source>hash_multimap::upper_bound</source>
+        </trans-unit>
+        <trans-unit id="752" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="753" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="754" translate="yes" xml:space="preserve">
+          <source>Returns an iterator to the first element in a hash_multimap with a key that is greater than a specified key.</source>
+        </trans-unit>
+        <trans-unit id="755" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="756" translate="yes" xml:space="preserve">
+          <source>The argument key to be compared with the sort key of an element from the hash_multimap being searched.</source>
+        </trans-unit>
+        <trans-unit id="757" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="758" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">[</bpt>iterator<ept id="p1">](#hash_multimap__iterator)</ept> or <bpt id="p2">[</bpt>const_iterator<ept id="p2">](#hash_multimap__const_iterator)</ept> that addresses the location of an element in a hash_multimap with a key that is greater than the argument key, or that addresses the location succeeding the last element in the hash_multimap if no match is found for the key.</source>
+        </trans-unit>
+        <trans-unit id="759" translate="yes" xml:space="preserve">
+          <source>If the return value of <ph id="ph1">`upper_bound`</ph> is assigned to a <ph id="ph2">`const_iterator`</ph>, the hash_multimap object cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="760" translate="yes" xml:space="preserve">
+          <source>If the return value of <ph id="ph1">`upper_bound`</ph> is assigned to a <bpt id="p1">**</bpt>iterator<ept id="p1">**</ept>, the hash_multimap object can be modified.</source>
+        </trans-unit>
+        <trans-unit id="761" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="762" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="763" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="764" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="765" translate="yes" xml:space="preserve">
+          <source>hash_multimap::value_comp</source>
+        </trans-unit>
+        <trans-unit id="766" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="767" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="768" translate="yes" xml:space="preserve">
+          <source>The member function returns a function object that determines the order of elements in a hash_multimap by comparing their key values.</source>
+        </trans-unit>
+        <trans-unit id="769" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="770" translate="yes" xml:space="preserve">
+          <source>Returns the comparison function object that a hash_multimap uses to order its elements.</source>
+        </trans-unit>
+        <trans-unit id="771" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="772" translate="yes" xml:space="preserve">
+          <source>For a hash_multimap <bpt id="p1">*</bpt>m<ept id="p1">*</ept>, if two elements <bpt id="p2">*</bpt>e<ept id="p2">*</ept>1( <bpt id="p3">*</bpt>k<ept id="p3">*</ept>1 <bpt id="p4">*</bpt>, d<ept id="p4">*</ept>1) and <bpt id="p5">*</bpt>e<ept id="p5">*</ept>2( <bpt id="p6">*</bpt>k<ept id="p6">*</ept>2 <bpt id="p7">*</bpt>, d<ept id="p7">*</ept>2) are objects of type <bpt id="p8">[</bpt>value_type<ept id="p8">](#hash_multimap__value_type)</ept>, where <bpt id="p9">*</bpt>k<ept id="p9">*</ept>1 and <bpt id="p10">*</bpt>k<ept id="p10">*</ept>2 are their keys of type <bpt id="p11">[</bpt>key_type<ept id="p11">](#hash_multimap__key_type)</ept> and <ph id="ph1">`d`</ph>1 and <ph id="ph2">`d`</ph>2 are their data of type <bpt id="p12">[</bpt>mapped_type<ept id="p12">](#hash_multimap__mapped_type)</ept>, then <bpt id="p13">*</bpt>m.<ept id="p13">*</ept><ph id="ph3">`value_comp`</ph>( )( <bpt id="p14">*</bpt>e<ept id="p14">*</ept>1 <bpt id="p15">*</bpt>, e<ept id="p15">*</ept>2) is equivalent to <bpt id="p16">*</bpt>m.<ept id="p16">*</ept><ph id="ph4">`key_comp`</ph>( ) ( <bpt id="p17">*</bpt>k<ept id="p17">*</ept>1 <bpt id="p18">*</bpt>, k<ept id="p18">*</ept>2).</source>
+        </trans-unit>
+        <trans-unit id="773" translate="yes" xml:space="preserve">
+          <source>A stored object defines the member function</source>
+        </trans-unit>
+        <trans-unit id="774" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>bool operator<ept id="p1">**</ept>( <bpt id="p2">**</bpt>value_type&amp;<ept id="p2">**</ept><ph id="ph1">` left`</ph>, <bpt id="p3">**</bpt>value_type&amp;<ept id="p3">**</ept> <ph id="ph2">` right`</ph>);</source>
+        </trans-unit>
+        <trans-unit id="775" translate="yes" xml:space="preserve">
+          <source>which returns <bpt id="p1">**</bpt>true<ept id="p1">**</ept> if the key value of <ph id="ph1">` left`</ph> precedes and is not equal to the key value of <ph id="ph2">` right`</ph> in the sort order.</source>
+        </trans-unit>
+        <trans-unit id="776" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="777" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="778" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="779" translate="yes" xml:space="preserve">
+          <source>hash_multimap::value_type</source>
+        </trans-unit>
+        <trans-unit id="780" translate="yes" xml:space="preserve">
+          <source>This API is obsolete.</source>
+        </trans-unit>
+        <trans-unit id="781" translate="yes" xml:space="preserve">
+          <source>The alternative is <bpt id="p1">[</bpt>unordered_multimap Class<ept id="p1">](../standard-library/unordered-multimap-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="782" translate="yes" xml:space="preserve">
+          <source>A type that represents the type of object stored in a hash_multimap.</source>
+        </trans-unit>
+        <trans-unit id="783" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="784" translate="yes" xml:space="preserve">
+          <source>is declared to be <ph id="ph1">`pair`</ph> <bpt id="p1">*</bpt><ph id="ph2">\&lt;</ph><ept id="p1">*</ept><bpt id="p2">**</bpt>const<ept id="p2">**</ept><bpt id="p3">[</bpt>key_type<ept id="p3">](#hash_multimap__key_type)</ept>, <bpt id="p4">[</bpt>mapped_type<ept id="p4">](#hash_multimap__mapped_type)</ept>&gt; and not <ph id="ph3">`pair`</ph> <bpt id="p5">*</bpt><ph id="ph4">&lt;</ph><ept id="p5">*</ept><ph id="ph5">`key_type`</ph><bpt id="p6">*</bpt>,<ept id="p6">*</ept> <ph id="ph6">`mapped_type`</ph><bpt id="p7">*</bpt><ph id="ph7">&gt;</ph><ept id="p7">*</ept> because the keys of an associative container may not be changed using a nonconstant iterator or reference.</source>
+        </trans-unit>
+        <trans-unit id="785" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2003, members of the <bpt id="p1">[</bpt>&lt;hash_map&gt;<ept id="p1">](../standard-library/hash-map.md)</ept> and <bpt id="p2">[</bpt>&lt;hash_set&gt;<ept id="p2">](../standard-library/hash-set.md)</ept> header files are no longer in the std namespace, but rather have been moved into the stdext namespace.</source>
+        </trans-unit>
+        <trans-unit id="786" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The stdext Namespace<ept id="p1">](../standard-library/stdext-namespace.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="787" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="788" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="789" translate="yes" xml:space="preserve">
+          <source>Thread Safety in the C++ Standard Library</source>
+        </trans-unit>
+        <trans-unit id="790" translate="yes" xml:space="preserve">
+          <source>C++ Standard Library Reference</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
