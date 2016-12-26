@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">defca9aaa95a241723f525a33294654c4c7c7545</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\declaration-of-a-clr-array.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6c54685143cb51019a1c14b5a1e1701928adf8e2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ffc345f61af12f9ee27b722c60a7f4968d94ed3e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Declaration of a CLR Array | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Declaration of a CLR Array</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The syntax for declaring, instantiating, and initializing a managed array has changed from Managed Extensions for C++ to <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The declaration of a CLR array object in Managed Extensions was an extension of the standard array declaration in which a <ph id="ph1">`__gc`</ph> keyword was placed between the name of the array object and its possibly comma-filled dimension, as in the following pair of examples:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This has been simplified in the new syntax, in which we use a template-like declaration similar to the STL <ph id="ph1">`vector`</ph> declaration.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The first parameter indicates the element type.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The second parameter specifies the array dimension (with a default value of 1, so only multiple dimensions require a second argument).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The array object itself is a tracking handle, and so must be given a hat.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If the element type is also a reference type, it also requires a hat.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For example, the above example, when expressed in the new syntax, looks as follows:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Because a reference type is a tracking handle rather than an object, it is possible to specify a CLR array as the return type of a function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>(In contrast, it is not possible to specify the native array as the return type of a function.) The syntax for doing this in Managed Extensions was somewhat non-intuitive.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>, the declaration is much simpler.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For example,</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The shorthand initialization of a local managed array is supported in both versions of the language.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>is considerably simplified in the new syntax (note that because boxing is implicit in the new syntax, the <ph id="ph1">`__box`</ph> operator has been eliminated – see <bpt id="p1">[</bpt>Value Types and Their Behaviors (C++/CLI)<ept id="p1">](../dotnet/value-types-and-their-behaviors-cpp-cli.md)</ept> for a discussion):</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Because an array is a CLR reference type, the declaration of each array object is a tracking handle.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Therefore, array objects must be allocated on the CLR heap.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>(The shorthand notation hides the managed heap allocation.) Here is the explicit form of an array object initialization under Managed Extensions:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Under the new syntax, the <ph id="ph1">`new`</ph> expression is replaced with <ph id="ph2">`gcnew`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The dimension sizes are passed as parameters to the <ph id="ph1">`gcnew`</ph> expression, as follows:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In the new syntax, an explicit initialization list can follow the <ph id="ph1">`gcnew`</ph> expression; this was not supported in Managed Extensions.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Managed Types (C++/CL)</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Arrays</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

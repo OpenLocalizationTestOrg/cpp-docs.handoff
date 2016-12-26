@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3c832ce46a4d87278512b6ffa104384003ec090e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\setting-the-images-for-an-individual-item.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8c773f31fa1f75283effc9765a2bc99b79f685c0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bb3d2a2cc146a16428be7b7c48174480c8e63676</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Setting the Images for an Individual Item | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Setting the Images for an Individual Item</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The different types of images used by the extended combo box item are determined by the values in the <ph id="ph1">`iImage`</ph>, <bpt id="p1">**</bpt>iSelectedImage<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>iOverlay<ept id="p2">**</ept> members of the <bpt id="p3">[</bpt>COMBOBOXEXITEM<ept id="p3">](http://msdn.microsoft.com/library/windows/desktop/bb775746)</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Each value is the index of an image in the associated image list of the control.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>By default, these members are set to 0, causing the control to display no image for the item.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If you want to use images for a specific item, you can modify the structure accordingly, either when inserting the combo box item or by modifying an existing combo box item.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Setting the Image for a New Item</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If you are inserting a new item, initialize the <ph id="ph1">`iImage`</ph>, <bpt id="p1">**</bpt>iSelectedImage<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>iOverlay<ept id="p2">**</ept> structure members with the proper values and then insert the item with a call to <bpt id="p3">[</bpt>CComboBoxEx::InsertItem<ept id="p3">](../mfc/reference/ccomboboxex-class.md#ccomboboxex__insertitem)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The following example inserts a new extended combo box item (<ph id="ph1">`cbi`</ph>) into the extended combo box control (<ph id="ph2">`m_comboEx`</ph>), supplying indices for all three image states:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#12</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Setting the Image for an Existing Item</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If you are modifying an existing item, you need to work with the <bpt id="p1">**</bpt>mask<ept id="p1">**</ept> member of a <bpt id="p2">**</bpt>COMBOBOXEXITEM<ept id="p2">**</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To modify an existing item to use images</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Declare a <bpt id="p1">**</bpt>COMBOBOXEXITEM<ept id="p1">**</ept> structure and set the <bpt id="p2">**</bpt>mask<ept id="p2">**</ept> data member to the values you are interested in modifying.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Using this structure, make a call to <bpt id="p1">[</bpt>CComboBoxEx::GetItem<ept id="p1">](../mfc/reference/ccomboboxex-class.md#ccomboboxex__getitem)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Modify the <bpt id="p1">**</bpt>mask<ept id="p1">**</ept>, <ph id="ph1">`iImage`</ph>, and <bpt id="p2">**</bpt>iSelectedImage<ept id="p2">**</ept> members of the newly returned structure, using the appropriate values.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Make a call to <bpt id="p1">[</bpt>CComboBoxEx::SetItem<ept id="p1">](../mfc/reference/ccomboboxex-class.md#ccomboboxex__setitem)</ept>, passing in the modified structure.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates this procedure by swapping the selected and unselected images of the third extended combo box item:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#13</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Using CComboBoxEx</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

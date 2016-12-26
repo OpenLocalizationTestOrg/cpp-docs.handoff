@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">43a3b2cc6c654118e9798f4901562a3b967cc3cb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\how-to-use-schedule-groups-to-influence-order-of-execution.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">859c4b49c29cfe1e8e98db3690677e04a764e609</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9df699420caf1688ca42e1fa70d5f38470d1d505</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Use Schedule Groups to Influence Order of Execution | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Use Schedule Groups to Influence Order of Execution</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In the Concurrency Runtime, the order in which tasks are scheduled is non-deterministic.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>However, you can use scheduling policies to influence the order in which tasks run.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This topic shows how to use schedule groups together with the <bpt id="p1">[</bpt>concurrency::SchedulingProtocol<ept id="p1">](reference/concurrency-namespace-enums.md#policyelementkey)</ept> scheduler policy to influence the order in which tasks run.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The example runs a set of tasks two times, each with a different scheduling policy.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Both policies limit the maximum number of processing resources to two.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The first run uses the <ph id="ph1">`EnhanceScheduleGroupLocality`</ph> policy, which is the default, and the second run uses the <ph id="ph2">`EnhanceForwardProgress`</ph> policy.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Under the <ph id="ph1">`EnhanceScheduleGroupLocality`</ph> policy, the scheduler runs all tasks in one schedule group until each task finishes or yields.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Under the <ph id="ph1">`EnhanceForwardProgress`</ph> policy, the scheduler moves to the next schedule group in a round-robin manner after just one task finishes or yields.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When each schedule group contains related tasks, the <ph id="ph1">`EnhanceScheduleGroupLocality`</ph> policy typically results in improved performance because cache locality is preserved between tasks.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`EnhanceForwardProgress`</ph> policy enables tasks to make forward progress and is useful when you require scheduling fairness across schedule groups.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This example defines the <ph id="ph1">`work_yield_agent`</ph> class, which derives from <bpt id="p1">[</bpt>concurrency::agent<ept id="p1">](../../parallel/concrt/reference/agent-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`work_yield_agent`</ph> class performs a unit of work, yields the current context, and then performs another unit of work.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The agent uses the <bpt id="p1">[</bpt>concurrency::wait<ept id="p1">](reference/concurrency-namespace-functions.md#wait)</ept> function to cooperatively yield the current context so that other contexts can run.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This example creates four <ph id="ph1">`work_yield_agent`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To illustrate how to set scheduler policies to affect the order in which the agents run, the example associates the first two agents with one schedule group and the other two agents with another schedule group.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The example uses the <bpt id="p1">[</bpt>concurrency::CurrentScheduler::CreateScheduleGroup<ept id="p1">](reference/currentscheduler-class.md#createschedulegroup)</ept> method to create the <bpt id="p2">[</bpt>concurrency::ScheduleGroup<ept id="p2">](../../parallel/concrt/reference/schedulegroup-class.md)</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The example runs all four agents two times, each time with a different scheduling policy.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>concrt-scheduling-protocol#1</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This example produces the following output.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Both policies produce the same sequence of events.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>However, the policy that uses <ph id="ph1">`EnhanceScheduleGroupLocality`</ph> starts both agents that are part of the first schedule group before it starts the agents that are part of the second group.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The policy that uses <ph id="ph1">`EnhanceForwardProgress`</ph> starts one agent from the first group and then starts the first agent in the second group.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`scheduling-protocol.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc scheduling-protocol.cpp</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Schedule Groups</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

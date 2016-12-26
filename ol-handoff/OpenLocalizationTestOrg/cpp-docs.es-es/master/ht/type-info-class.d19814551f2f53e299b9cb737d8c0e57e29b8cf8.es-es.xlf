@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">926ffed9bca84e613e4b9210c216d8bc48ed6a15</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\type-info-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">508eb78f499316ea386904850d6889cd957b23d6</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">42894075189a1f4b20ae75a2f4fc06b69af9a15b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>type_info Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>type_info Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>type_info<ept id="p1">**</ept> class describes type information generated within the program by the compiler.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Objects of this class effectively store a pointer to a name for the type.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>type_info<ept id="p1">**</ept> class also stores an encoded value suitable for comparing two types for equality or collating order.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The encoding rules and collating sequence for types are unspecified and may differ between programs.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The &lt;<ph id="ph1">`typeinfo&gt;`</ph> header file must be included in order to use the <bpt id="p1">**</bpt>type_info<ept id="p1">**</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The interface for the <bpt id="p1">**</bpt>type_info<ept id="p1">**</ept> class is:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You cannot instantiate objects of the <bpt id="p1">**</bpt>type_info<ept id="p1">**</ept> class directly, because the class has only a private copy constructor.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The only way to construct a (temporary) <bpt id="p1">**</bpt>type_info<ept id="p1">**</ept> object is to use the <bpt id="p2">[</bpt>typeid<ept id="p2">](../cpp/typeid-operator.md)</ept> operator.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Since the assignment operator is also private, you cannot copy or assign objects of class <bpt id="p1">**</bpt>type_info<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>type_info::hash_code<ept id="p1">**</ept> defines a hash function suitable for mapping values of type <bpt id="p2">**</bpt>typeinfo<ept id="p2">**</ept> to a distribution of index values.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The operators <ph id="ph1">`==`</ph> and <ph id="ph2">`!=`</ph> can be used to compare for equality and inequality with other <bpt id="p1">**</bpt>type_info<ept id="p1">**</ept> objects, respectively.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>There is no link between the collating order of types and inheritance relationships.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>type_info::before<ept id="p1">**</ept> member function to determine the collating sequence of types.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>There is no guarantee that <bpt id="p1">**</bpt>type_info::before<ept id="p1">**</ept> will yield the same result in different programs or even different runs of the same program.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>In this manner, <bpt id="p1">**</bpt>type_info::before<ept id="p1">**</ept> is similar to the address-of <bpt id="p2">**</bpt>(&amp;)<ept id="p2">**</ept> operator.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>type_info::name<ept id="p1">**</ept> member function returns a <bpt id="p2">**</bpt>const char<ph id="ph1">\*</ph><ept id="p2">**</ept> to a null-terminated string representing the human-readable name of the type.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The memory pointed to is cached and should never be directly deallocated.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>type_info::raw_name<ept id="p1">**</ept> member function returns a <bpt id="p2">**</bpt>const char<ph id="ph1">\*</ph><ept id="p2">**</ept> to a null-terminated string representing the decorated name of the object type.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The name is actually stored in its decorated form to save space.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Consequently, this function is faster than <bpt id="p1">**</bpt>type_info::name<ept id="p1">**</ept> because it doesn't need to undecorate the name.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The string returned by the <bpt id="p1">**</bpt>type_info::raw_name<ept id="p1">**</ept> function is useful in comparison operations but is not readable.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If you need a human-readable string, use the <bpt id="p1">**</bpt>type_info::name<ept id="p1">**</ept> function instead.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Type information is generated for polymorphic classes only if the <bpt id="p1">[</bpt>/GR (Enable Run-Time Type Information)<ept id="p1">](../build/reference/gr-enable-run-time-type-information.md)</ept> compiler option is specified.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Run-Time Type Information</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

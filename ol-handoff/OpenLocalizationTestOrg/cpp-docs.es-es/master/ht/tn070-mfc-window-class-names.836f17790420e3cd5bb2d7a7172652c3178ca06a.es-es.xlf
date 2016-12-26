@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e9b75df2b0d6efb328e1341c7ba4b513d84dff95</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn070-mfc-window-class-names.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fc9ff11b89d9989846d0d35f8f40050b3b5dd7d7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9270360f4081dbe1b7f2f4998610f528cae96e2e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN070: MFC Window Class Names | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN070: MFC Window Class Names</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following technical note has not been updated since it was first included in the online documentation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, some procedures and topics might be out of date or incorrect.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For the latest information, it is recommended that you search for the topic of interest in the online documentation index.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>MFC windows use a dynamically created class name that reflects the features of the window.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>MFC generates class names dynamically for frame windows, views, and popup windows produced by the application.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Dialog boxes and controls produced by an MFC application have the Windows-supplied name for the class of window in question.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You can replace the dynamically provided class name by registering your own window class and using it in an override of <bpt id="p1">[</bpt>PreCreateWindow<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__precreatewindow)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Their MFC-supplied class names fit one of the two following forms:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The hex digits that replace the <ph id="ph1">`%x`</ph> characters are filled in from data from the <bpt id="p1">[</bpt>WNDCLASS<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms633576)</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>MFC uses this technique so that multiple C++ classes requiring identical <bpt id="p1">**</bpt>WNDCLASS<ept id="p1">**</ept> structures can share the same registered window class.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Unlike most simple Win32 applications, MFC applications have only one <bpt id="p1">**</bpt>WNDPROC<ept id="p1">**</ept>, so you can easily share <bpt id="p2">**</bpt>WNDCLASS<ept id="p2">**</ept> structures to save time and memory.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The replaceable values for the <ph id="ph1">`%x`</ph> characters shown above are as follows:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>WNDCLASS.hInstance</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>WNDCLASS.style</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>WNDCLASS.hCursor</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>WNDCLASS.hbrBackground</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>WNDCLASS.hIcon</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The first form (<ph id="ph1">`Afx:%x:%x`</ph>) is used when <bpt id="p1">**</bpt>hCursor<ept id="p1">**</ept>, <bpt id="p2">**</bpt>hbrBackground<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>hIcon<ept id="p3">**</ept> are all <bpt id="p4">**</bpt>NULL<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>TN020: ID Naming and Numbering Conventions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

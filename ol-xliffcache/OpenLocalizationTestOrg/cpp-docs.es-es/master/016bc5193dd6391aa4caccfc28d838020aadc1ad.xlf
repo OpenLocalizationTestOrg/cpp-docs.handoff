@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">016bc5193dd6391aa4caccfc28d838020aadc1ad</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\new-and-delete-operators.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">44eb5b428c77fc31fbc625eba258ecad9fdffeac</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cf48a94e4eb05ac7f669710a186611b8da0f216e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>new and delete Operators | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>new and delete Operators</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>C++ supports dynamic allocation and deallocation of objects using the <bpt id="p1">[</bpt>new<ept id="p1">](../cpp/new-operator-cpp.md)</ept> and <bpt id="p2">[</bpt>delete<ept id="p2">](../cpp/delete-operator-cpp.md)</ept> operators.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>These operators allocate memory for objects from a pool called the free store.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`new`</ph> operator calls the special function <bpt id="p1">[</bpt>operator new<ept id="p1">](../cpp/new-operator-cpp.md)</ept>, and the <ph id="ph2">`delete`</ph> operator calls the special function <bpt id="p2">[</bpt>operator delete<ept id="p2">](../cpp/delete-operator-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> .NET 2002, the <ph id="ph2">`new`</ph> function in the Standard C++ Library will support the behavior specified in the C++ standard, which is to throw a std::bad_alloc exception if the memory allocation fails.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If you still want the non-throwing version of <ph id="ph1">`new`</ph>, link your program with nothrownew.obj.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>However, when you link with nothrownew.obj, the default <ph id="ph1">`operator new`</ph> in the Standard C++ Library no longer functions.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For a list of the library files that comprise the C Runtime Library and the Standard C++ Library, see <bpt id="p1">[</bpt>CRT Library Features<ept id="p1">](../c-runtime-library/crt-library-features.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The new operator</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When a statement such as the following is encountered in a program, it translates into a call to the function <ph id="ph1">`operator new`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If the request is for zero bytes of storage, <bpt id="p1">**</bpt>operator new<ept id="p1">**</ept> returns a pointer to a distinct object (that is, repeated calls to <bpt id="p2">**</bpt>operator new<ept id="p2">**</ept> return different pointers).</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If there is insufficient memory for the allocation request, <bpt id="p1">**</bpt>operator new<ept id="p1">**</ept> throws a std::bad_alloc exception, or returns <bpt id="p2">**</bpt>nullptr<ept id="p2">**</ept> if you have linked in non-throwing <ph id="ph1">`operator new`</ph> support.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You can write a routine that attempts to free memory and retry the allocation; see <bpt id="p1">[</bpt>_set_new_handler<ept id="p1">](../c-runtime-library/reference/set-new-handler.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For more details on the recovery scheme, see the Handling insufficient memory section of this topic.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The two scopes for <ph id="ph1">`operator new`</ph> functions are described in the following table.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Scope for operator new Functions</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Operator</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Scope</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>::operator new</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Global</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>class-name<ept id="p1">*</ept> <bpt id="p2">**</bpt>::operator new<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Class</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The first argument to <bpt id="p1">**</bpt>operator new<ept id="p1">**</ept> must be of type <bpt id="p2">**</bpt>size_t<ept id="p2">**</ept> (a type defined in STDDEF.H), and the return type is always <bpt id="p3">**</bpt>void <ph id="ph1">\*</ph><ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The global <bpt id="p1">**</bpt>operator new<ept id="p1">**</ept> function is called when the <bpt id="p2">**</bpt>new<ept id="p2">**</ept> operator is used to allocate objects of built-in types, objects of class type that do not contain user-defined <bpt id="p3">**</bpt>operator new<ept id="p3">**</ept> functions, and arrays of any type.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>When the <bpt id="p1">**</bpt>new<ept id="p1">**</ept> operator is used to allocate objects of a class type where an <bpt id="p2">**</bpt>operator new<ept id="p2">**</ept> is defined, that class's <bpt id="p3">**</bpt>operator new<ept id="p3">**</ept> is called.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">**</bpt>operator new<ept id="p1">**</ept> function defined for a class is a static member function (which cannot, therefore, be virtual) that hides the global <bpt id="p2">**</bpt>operator new<ept id="p2">**</ept> function for objects of that class type.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Consider the case where <bpt id="p1">**</bpt>new<ept id="p1">**</ept> is used to allocate and set memory to a given value:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The argument supplied in parentheses to <bpt id="p1">**</bpt>new<ept id="p1">**</ept> is passed to <ph id="ph1">`Blanks::operator new`</ph> as the <ph id="ph2">`chInit`</ph> argument.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>However, the global <bpt id="p1">**</bpt>operator new<ept id="p1">**</ept> function is hidden, causing code such as the following to generate an error:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In Visual C++ 5.0 and earlier, nonclass types and all arrays (regardless of whether they were of <bpt id="p1">**</bpt>class<ept id="p1">**</ept> type) allocated using the <bpt id="p2">**</bpt>new<ept id="p2">**</ept> operator always used the global <bpt id="p3">**</bpt>operator new<ept id="p3">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Beginning with Visual C++ 5.0, the compiler supports member array <bpt id="p1">**</bpt>new<ept id="p1">**</ept> and <bpt id="p2">**</bpt>delete<ept id="p2">**</ept> operators in a class declaration.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Handling insufficient memory</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Testing for failed memory allocation can be done with code such as the following:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>There is another ways to handle failed memory allocation requests: write a custom recovery routine to handle such a failure, then register your function by calling the <bpt id="p1">[</bpt>_set_new_handler<ept id="p1">](../c-runtime-library/reference/set-new-handler.md)</ept> run-time function.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The delete operator</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Memory that is dynamically allocated using the <bpt id="p1">**</bpt>new<ept id="p1">**</ept> operator can be freed using the <bpt id="p2">**</bpt>delete<ept id="p2">**</ept> operator.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The delete operator calls the <bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept> function, which frees memory back to the available pool.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Using the <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> operator also causes the class destructor (if there is one) to be called.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>There are global and class-scoped <bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept> functions.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Only one <bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept> function can be defined for a given class; if defined, it hides the global <bpt id="p2">**</bpt>operator delete<ept id="p2">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The global <bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept> function is always called for arrays of any type.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The global <bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Two forms exist for the  global <bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept>  and class-member <bpt id="p2">**</bpt>operator delete<ept id="p2">**</ept> functions:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Only one of the preceding two forms can be present for a given class.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The first form takes a single argument of type <bpt id="p1">**</bpt>void <ph id="ph1">\*</ph><ept id="p1">**</ept>, which contains a pointer to the object to deallocate.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The second form—sized deallocation—takes two arguments, the first of which is a pointer to the memory block to deallocate and the second of which is the number of bytes to deallocate.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The return type of both forms is <ph id="ph1">`void`</ph> (<bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept> cannot return a value).</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The intent of the second form is to speed up searching for the correct size category of the object to be deleted, which is often not stored near the allocation itself and likely uncached; the second form is particularly useful when an <bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept> function from a base class is used to delete an object of a derived class.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>operator delete<ept id="p1">**</ept> function is static; therefore, it cannot be virtual.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`operator delete`</ph> function obeys access control, as described in <bpt id="p1">[</bpt>Member-Access Control<ept id="p1">](../cpp/member-access-control-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The following example shows user-defined <bpt id="p1">**</bpt>operator new<ept id="p1">**</ept> and <bpt id="p2">**</bpt>operator delete<ept id="p2">**</ept> functions designed to log allocations and deallocations of memory:</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The preceding code can be used to detect "memory leakage" — that is, memory that is allocated on the free store but never freed.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>To perform this detection, the global <bpt id="p1">**</bpt>new<ept id="p1">**</ept> and <bpt id="p2">**</bpt>delete<ept id="p2">**</ept> operators are redefined to count allocation and deallocation of memory.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Beginning with Visual C++ 5.0, the compiler supports member array <bpt id="p1">**</bpt>new<ept id="p1">**</ept> and <bpt id="p2">**</bpt>delete<ept id="p2">**</ept> operators in a class declaration.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

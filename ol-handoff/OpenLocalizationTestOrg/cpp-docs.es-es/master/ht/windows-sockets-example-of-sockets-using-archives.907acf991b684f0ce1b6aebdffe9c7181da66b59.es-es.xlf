@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">86875442e9fd07dca0ef6244805f4783cc0368ad</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\windows-sockets-example-of-sockets-using-archives.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dfed0789052d4898dd41d76b28f1144bdbf61f2f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5aa71e91bd074cb992e9853f199cb595a065f958</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Example of Sockets Using Archives | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Example of Sockets Using Archives</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article presents an example of using class <bpt id="p1">[</bpt>CSocket<ept id="p1">](../mfc/reference/csocket-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The example employs <ph id="ph1">`CArchive`</ph> objects to serialize data through a socket.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Note that this is not document serialization to or from a file.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The following example illustrates how you use the archive to send and receive data through <ph id="ph1">`CSocket`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The example is designed so that two instances of the application (on the same machine or on different machines on the network) exchange data.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>One instance sends data, which the other instance receives and acknowledges.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Either application can initiate an exchange, and either can act as server or as client to the other application.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The following function is defined in the application's view class:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSimpleSocket#1</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The most important thing about this example is that its structure parallels that of an MFC <ph id="ph1">`Serialize`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>PacketSerialize<ept id="p1">**</ept> member function consists of an <bpt id="p2">**</bpt>if<ept id="p2">**</ept> statement with an <bpt id="p3">**</bpt>else<ept id="p3">**</ept> clause.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The function receives two <bpt id="p1">[</bpt>CArchive<ept id="p1">](../mfc/reference/carchive-class.md)</ept> references as parameters: <ph id="ph1">`arData`</ph> and <ph id="ph2">`arAck`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`arData`</ph> archive object is set for storing (sending), the <bpt id="p1">**</bpt>if<ept id="p1">**</ept> branch executes; otherwise, if <ph id="ph2">`arData`</ph> is set for loading (receiving) the function takes the <bpt id="p2">**</bpt>else<ept id="p2">**</ept> branch.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information about serialization in MFC, see <bpt id="p1">[</bpt>Serialization<ept id="p1">](../mfc/how-to-make-a-type-safe-collection.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`arAck`</ph> archive object is assumed to be the opposite of <ph id="ph2">`arData`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`arData`</ph> is for sending, <ph id="ph2">`arAck`</ph> receives, and the converse is true.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For sending, the example function loops for a specified number of times, each time generating some random data for demonstration purposes.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Your application would obtain real data from some source, such as a file.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`arData`</ph> archive's insertion operator (<bpt id="p1">**</bpt><ph id="ph2">&lt;&lt;</ph><ept id="p1">**</ept>) is used to send a stream of three consecutive chunks of data:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>A "header" that specifies the nature of the data (in this case, the value of the <ph id="ph1">`bValue`</ph> variable and how many copies will be sent).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Both items are generated randomly for this example.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The specified number of copies of the data.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The inner <bpt id="p1">**</bpt>for<ept id="p1">**</ept> loop sends <ph id="ph1">`bValue`</ph> the specified number of times.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>A string called <ph id="ph1">`strText`</ph> that the receiver displays to its user.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For receiving, the function operates similarly, except that it uses the archive's extraction operator (<bpt id="p1">**</bpt><ph id="ph1">&gt;&gt;</ph><ept id="p1">**</ept>) to get data from the archive.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The receiving application verifies the data it receives, displays the final "Received" message, and then sends back a message that says "Sent" for the sending application to display.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In this communications model, the word "Received", the message sent in the <ph id="ph1">`strText`</ph> variable, is for display at the other end of the communication, so it specifies to the receiving user that a certain number of packets of data have been received.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The receiver replies with a similar string that says "Sent", for display on the original sender's screen.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Receipt of both strings indicates that successful communication has occurred.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>If you are writing an MFC client program to communicate with established (non-MFC) servers, do not send C++ objects through the archive.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Unless the server is an MFC application that understands the kinds of objects you want to send, it won't be able to receive and deserialize your objects.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>An example in the article <bpt id="p1">[</bpt>Windows Sockets: Byte Ordering<ept id="p1">](../mfc/windows-sockets-byte-ordering.md)</ept> shows a communication of this type.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For more information, see Windows Sockets Specification: <bpt id="p1">**</bpt>htonl<ept id="p1">**</ept>, <bpt id="p2">**</bpt>htons<ept id="p2">**</ept>, <bpt id="p3">**</bpt>ntohl<ept id="p3">**</ept>, <bpt id="p4">**</bpt>ntohs<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Also, for more information, see:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Deriving from Socket Classes</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: How Sockets with Archives Work</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Background</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Windows Sockets in MFC</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>CArchive::IsStoring</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>CArchive::operator &lt;&lt;</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>CArchive::operator &gt;&gt;</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>CArchive::Flush</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>CObject::Serialize</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

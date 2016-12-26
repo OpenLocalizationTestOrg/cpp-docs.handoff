@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">59bbd43a47a6b1d327bee4ff0809d71ff497b8d9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\using-setjmp-longjmp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c32be5e0bdf4fe32fcfdaf8f38a126e4232aa4c0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d0c7db72009b7eb84a340869d9859c78a08b3cf3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using setjmp-longjmp | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using setjmp/longjmp</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">[</bpt>setjmp<ept id="p1">](../c-runtime-library/reference/setjmp.md)</ept> and <bpt id="p2">[</bpt>longjmp<ept id="p2">](../c-runtime-library/reference/longjmp.md)</ept> are used together, they provide a way to execute a non-local <ph id="ph1">`goto`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>They are typically used to pass execution control to error-handling or recovery code in a previously called routine without using the standard calling or return conventions.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>However, because <ph id="ph1">`setjmp`</ph> and <ph id="ph2">`longjmp`</ph> do not support C++ object semantics, and because they might degrade performance by preventing optimization on local variables, we recommend that you do not use them in C++ programs.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>We recommend that you use <ph id="ph1">`try`/`catch`</ph> constructs instead.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If you decide to use <ph id="ph1">`setjmp`/`longjmp`</ph> in a C++ program, also include SETJMP.H or SETJMPEX.H to assure correct interaction between the functions and C++ exception handling.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If you use <bpt id="p1">[</bpt>/EH<ept id="p1">](../build/reference/eh-exception-handling-model.md)</ept> to compile, destructors for local objects are called during the stack unwind.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you use <bpt id="p1">**</bpt>/EHs<ept id="p1">**</ept> to compile, and one of your functions calls a function that uses <bpt id="p2">[</bpt>nothrow<ept id="p2">](../cpp/nothrow-cpp.md)</ept> and the function that uses <ph id="ph1">`nothrow`</ph> calls <ph id="ph2">`longjmp`</ph>, then the destructor unwind might not occur, depending on the optimizer.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In portable code, when a non-local <ph id="ph1">`goto`</ph> that calls <ph id="ph2">`longjmp`</ph> is executed, correct destruction of frame-based objects might be unreliable.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Mixing C (Structured) and C++ Exceptions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

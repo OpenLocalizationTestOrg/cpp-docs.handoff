@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">07483e0d9cc79a27a91fe262554d617431b39fe8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8effd3328dd6e4d241e26c6fe4283ecdb371214c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f281c0d3177bf699df4ba9c8aee01f08512c6616</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Using the Concurrency Runtime in a COM-Enabled Application | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Using the Concurrency Runtime in a COM-Enabled Application</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document demonstrates how to use the Concurrency Runtime in an application that uses the Component Object Model (COM).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Read the following documents before you start this walkthrough:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Task Parallelism</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For more information about COM, see <bpt id="p1">[</bpt>Component Object Model (COM)<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms680573)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Managing the Lifetime of the COM Library</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Although the use of COM with the Concurrency Runtime follows the same principles as any other concurrency mechanism, the following guidelines can help you use these libraries together effectively.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A thread must call <bpt id="p1">[</bpt>CoInitializeEx<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms695279)</ept> before it uses the COM library.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A thread can call <ph id="ph1">`CoInitializeEx`</ph> multiple times as long as it provides the same arguments to every call.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For each call to <ph id="ph1">`CoInitializeEx`</ph>, a thread must also call <bpt id="p1">[</bpt>CoUninitialize<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms688715)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In other words, calls to <ph id="ph1">`CoInitializeEx`</ph> and <ph id="ph2">`CoUninitialize`</ph> must be balanced.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To switch from one thread apartment to another, a thread must completely free the COM library before it calls <ph id="ph1">`CoInitializeEx`</ph> with the new threading specification.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Other COM principles apply when you use COM with the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For example, an application that creates an object in a single-threaded apartment (STA) and marshals that object to another apartment must also provide a message loop to process incoming messages.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Also remember that marshaling objects between apartments can decrease performance.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Using COM with the Parallel Patterns Library</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>When you use COM with a component in the Parallel Patterns Library (PPL), for example, a task group or parallel algorithm, call <ph id="ph1">`CoInitializeEx`</ph> before you use the COM library during each task or iteration, and call <ph id="ph2">`CoUninitialize`</ph> before each task or iteration finishes.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The following example shows how to manage the lifetime of the COM library with a <bpt id="p1">[</bpt>concurrency::structured_task_group<ept id="p1">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#1</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You must make sure that the COM library is correctly freed when a task or parallel algorithm is canceled or when the task body throws an exception.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To guarantee that the task calls <ph id="ph1">`CoUninitialize`</ph> before it exits, use a <ph id="ph2">`try-finally`</ph> block or the <bpt id="p1">*</bpt>Resource Acquisition Is Initialization<ept id="p1">*</ept> (RAII) pattern.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The following example uses a <ph id="ph1">`try-finally`</ph> block to free the COM library when the task completes or is canceled, or when an exception is thrown.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#2</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The following example uses the RAII pattern to define the <ph id="ph1">`CCoInitializer`</ph> class, which manages the lifetime of the COM library in a given scope.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#3</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You can use the <ph id="ph1">`CCoInitializer`</ph> class to automatically free the COM library when the task exits, as follows.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#4</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For more information about cancellation in the Concurrency Runtime, see <bpt id="p1">[</bpt>Cancellation in the PPL<ept id="p1">](cancellation-in-the-ppl.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Using COM with Asynchronous Agents</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>When you use COM with asynchronous agents, call <ph id="ph1">`CoInitializeEx`</ph> before you use the COM library in the <bpt id="p1">[</bpt>concurrency::agent::run<ept id="p1">](reference/agent-class.md#run)</ept> method for your agent.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Then call <ph id="ph1">`CoUninitialize`</ph> before the <ph id="ph2">`run`</ph> method returns.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Do not use COM management routines in the constructor or destructor of your agent, and do not override the <bpt id="p1">[</bpt>concurrency::agent::start<ept id="p1">](reference/agent-class.md#start)</ept> or <bpt id="p2">[</bpt>concurrency::agent::done<ept id="p2">](reference/agent-class.md#done)</ept> methods because these methods are called from a different thread than the <ph id="ph1">`run`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The following example shows a basic agent class, named <ph id="ph1">`CCoAgent`</ph>, which manages the COM library in the <ph id="ph2">`run`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#5</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>A complete example is provided later in this walkthrough.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Using COM with Lightweight Tasks</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The document <bpt id="p1">[</bpt>Task Scheduler<ept id="p1">](../../parallel/concrt/task-scheduler-concurrency-runtime.md)</ept> describes the role of lightweight tasks in the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>You can use COM with a lightweight task just as you would with any thread routine that you pass to the <ph id="ph1">`CreateThread`</ph> function in the Windows API.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This is shown in the following example.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#6</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>An Example of a COM-Enabled Application</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>This section shows a complete COM-enabled application that uses the <ph id="ph1">`IScriptControl`</ph> interface to execute a script that computes the n<ph id="ph2">&lt;sup&gt;</ph>th<ph id="ph3">&lt;/sup&gt;</ph> Fibonacci number.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This example first calls the script from the main thread, and then uses the PPL and agents to call the script concurrently.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Consider the following helper function, <ph id="ph1">`RunScriptProcedure`</ph>, which calls a procedure in an <ph id="ph2">`IScriptControl`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#7</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`wmain`</ph> function creates an <ph id="ph2">`IScriptControl`</ph> object, adds script code to it that computes the n<ph id="ph3">&lt;sup&gt;</ph>th<ph id="ph4">&lt;/sup&gt;</ph> Fibonacci number, and then calls the <ph id="ph5">`RunScriptProcedure`</ph> function to run that script.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#8</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Calling the Script from the PPL</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The following function, <ph id="ph1">`ParallelFibonacci`</ph>, uses the <bpt id="p1">[</bpt>concurrency::parallel_for<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for)</ept> algorithm to call the script in parallel.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>This function uses the <ph id="ph1">`CCoInitializer`</ph> class to manage the lifetime of the COM library during every iteration of the task.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#9</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>To use the <ph id="ph1">`ParallelFibonacci`</ph> function with the example, add the following code before the <ph id="ph2">`wmain`</ph> function returns.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#10</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Calling the Script from an Agent</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The following example shows the <ph id="ph1">`FibonacciScriptAgent`</ph> class, which calls a script procedure to compute the n<ph id="ph2">&lt;sup&gt;</ph>th<ph id="ph3">&lt;/sup&gt;</ph> Fibonacci number.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`FibonacciScriptAgent`</ph> class uses message passing to receive, from the main program, input values to the script function.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`run`</ph> method manages the lifetime of the COM library throughout the task.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#11</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The following function, <ph id="ph1">`AgentFibonacci`</ph>, creates several <ph id="ph2">`FibonacciScriptAgent`</ph> objects and uses message passing to send several input values to those objects.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#12</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>To use the <ph id="ph1">`AgentFibonacci`</ph> function with the example, add the following code before the <ph id="ph2">`wmain`</ph> function returns.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#13</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The Complete Example</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The following code shows the complete example, which uses parallel algorithms and asynchronous agents to call a script procedure that computes Fibonacci numbers.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-scripts#14</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The example produces the following sample output.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`parallel-scripts.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc parallel-scripts.cpp /link ole32.lib</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime Walkthroughs</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Task Parallelism</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Task Scheduler</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

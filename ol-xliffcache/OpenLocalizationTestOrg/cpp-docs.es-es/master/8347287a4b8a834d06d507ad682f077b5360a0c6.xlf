@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8347287a4b8a834d06d507ad682f077b5360a0c6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\transaction-performing-a-transaction-in-a-recordset-odbc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4ec30b74e79bb97b824099d68f56c54c45a3f717</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">57e4c8216cf78844f85a3ca43306ef16968e363b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Transaction: Performing a Transaction in a Recordset (ODBC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Transaction: Performing a Transaction in a Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic explains how to perform a transaction in a recordset.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Only one level of transactions is supported; you cannot nest transactions.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>To perform a transaction in a recordset</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Call the <ph id="ph1">`CDatabase`</ph> object's <bpt id="p1">**</bpt>BeginTrans<ept id="p1">**</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If you have not implemented bulk row fetching, call the <bpt id="p1">**</bpt>AddNew/Update<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Edit/Update<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>Delete<ept id="p3">**</ept> member functions of one or more recordset objects of the same database as many times as needed.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Recordset: Adding, Updating, and Deleting Records (ODBC)<ept id="p1">](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you have implemented bulk row fetching, you must write your own functions to update the data source.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Finally, call the <ph id="ph1">`CDatabase`</ph> object's <bpt id="p1">**</bpt>CommitTrans<ept id="p1">**</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If an error occurs in one of the updates or you decide to cancel the changes, call its <bpt id="p1">**</bpt>Rollback<ept id="p1">**</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The following example uses two recordsets to delete a student's enrollment from a school registration database, removing the student from all classes in which the student is enrolled.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Because the <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> calls in both recordsets must succeed, a transaction is required.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The example assumes the existence of <ph id="ph1">`m_dbStudentReg`</ph>, a member variable of type <ph id="ph2">`CDatabase`</ph> already connected to the data source, and the recordset classes <ph id="ph3">`CEnrollmentSet`</ph> and <ph id="ph4">`CStudentSet`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`strStudentID`</ph> variable contains a value obtained from the user.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Calling <bpt id="p1">**</bpt>BeginTrans<ept id="p1">**</ept> again without calling <bpt id="p2">**</bpt>CommitTrans<ept id="p2">**</ept> or <bpt id="p3">**</bpt>Rollback<ept id="p3">**</ept> is an error.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Transaction (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Transaction: How Transactions Affect Updates (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>CDatabase Class</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>CRecordset Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f60f6bb06a1e2c193868440e33fcd5ae77ac253b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\value-type-semantics.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">49127be4f8ebcbbebdf5c076ab92d0a445aec101</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">01b2d6627255ccb854028cb85ab4ff34a613725a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Value Type Semantics | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Value Type Semantics</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Value type semantics have changed from Managed Extensions for C++ to <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Here is the canonical simple value type used in the Managed Extensions for C++ spec:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, we can have four syntactic variants of a value type (where forms 2 and 3 are the same semantically):</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Invoking Inherited Virtual Methods</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>is the canonical value object, and it is reasonably well understood, except when someone attempts to invoke an inherited virtual method such as <ph id="ph1">`ToString()`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In order to invoke this method, because it is not overridden in <ph id="ph1">`V`</ph>, the compiler must have access to the associated virtual table of the base class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Because value types are in-state storage without the associated pointer to its virtual table (vptr), this requires that <ph id="ph1">`v`</ph> be boxed.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In the Managed Extensions language design, implicit boxing is not supported but must be explicitly specified by the programmer, as in</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The primary motive behind this design is pedagogical: underlying mechanism needs to be visible to the programmer so that she will understand the 'cost' of not providing an instance within her value type.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Were <ph id="ph1">`V`</ph> to contain an instance of <ph id="ph2">`ToString`</ph>, the boxing would not be necessary.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The lexical complexity of explicitly boxing the object, but not the underlying cost of the boxing itself, is removed in the new syntax:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>but at the cost of possibly misleading the class designer as to the cost of not having provided an explicit instance of the <ph id="ph1">`ToString`</ph> method within <ph id="ph2">`V`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The reason for preferring the implicit boxing is that while there is usually just one class designer, there are an unlimited number of users, none of whom would have the freedom to modify <ph id="ph1">`V`</ph> to eliminate the possibly onerous explicit box.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The criteria by which to determine whether or not to provide an overriding instance of <ph id="ph1">`ToString`</ph> within a value class should be the frequency and location of its uses.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If it is called very rarely, there is of course little benefit in its definition.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Similarly, if it is called in non-performant areas of the application, adding it will also not measurably add to the general performance of the application.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Alternatively, one can keep a tracking handle to the boxed value, and calls through that handle would not require boxing.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>There is No Longer a Value Class Default Constructor</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Another difference with a value type between Managed Extensions and the new syntax is the removal of support for a default constructor.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This is because there are occasions during execution in which the CLR can create an instance of the value type without invoking the associated default constructor.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>That is, the attempt under Managed Extensions to support a default constructor within a value type could not in practice be guaranteed.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Given that absence of guarantee, it was felt to be better to drop the support altogether rather than have it be non-deterministic in its application.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This is not as bad as it might initially seem.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This is because each object of a value type is zeroed out automatically (that is, each type is initialized to its default value).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>As a result, the members of a local instance are never undefined.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In this sense, the loss of the ability to define a trivial default constructor is really not a loss at all – and in fact is more efficient when performed by the CLR.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The problem is when a user of Managed Extensions defines a non-trivial default constructor.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This has no mapping to the new syntax.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The code within the constructor will need to be migrated into a named initialization method that would then need to be explicitly invoked by the user.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The declaration of a value type object within the new syntax is otherwise unchanged.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The down side of this is that value types are not satisfactory for the wrapping of native types for the following reasons:</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>There is no support for a destructor within a value type.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>That is, there is no way to automate a set of actions triggered by the end of an object's lifetime.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>A native class can be contained only within a managed type as a pointer which is then allocated on the native heap.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>We would like to wrap a small native class in a value type rather than a reference type to avoid a double heap allocation: the native heap to hold the native type, and the CLR heap to hold the managed wrapper.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Wrapping a native class within a value type allows you to avoid the managed heap, but provides no way to automate the reclamation of the native heap memory.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Reference types are the only practicable managed type within which to wrap non-trivial native classes.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Interior Pointers</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>and <ph id="ph1">`Form (3)`</ph> above can address nearly anything in this world or the next (that is, anything managed or native).</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>So, for example, all the following are permitted in Managed Extensions:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>So, a <ph id="ph1">`V*`</ph> can address a location within a local block (and therefore can be dangling), at global scope, within the native heap (for example, if the object it addresses has already been deleted), within the CLR heap (and therefore will be tracked if it should be relocated during garbage collection), and within the interior of a reference object on the CLR heap (an interior pointer, as this is called, is also transparently tracked).</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, there is no way to separate out the native aspects of a <ph id="ph1">`V*`</ph>; that is, it is treated at its inclusive, which handles the possibility of it addressing an object or subobject on the managed heap.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In the new syntax, a value type pointer is factored into two types: <ph id="ph1">`V*`</ph>, which is limited to non-CLR heap locations, and the interior pointer, <ph id="ph2">`interior_ptr&lt;V&gt;`</ph>, which allows for but does not require an address within the managed heap.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>and <ph id="ph1">`Form (3)`</ph> of Managed Extensions map into <ph id="ph2">`interior_ptr&lt;V&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>is a tracking handle.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>It addresses the whole object that has been boxed within the managed heap.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>It is translated in the new syntax into a <ph id="ph1">`V^`</ph>,</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The following declarations in Managed Extensions all map to interior pointers in the new syntax.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>(They are value types within the <ph id="ph1">`System`</ph> namespace.)</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The built-in types are not considered managed types, although they do serve as aliases to the types within the <ph id="ph1">`System`</ph> namespace.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Thus the following mappings hold true between Managed Extensions and the new syntax:</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>When translating a <ph id="ph1">`V*`</ph> in your existing program, the most conservative strategy is to always turn it to an <ph id="ph2">`interior_ptr&lt;V&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>This is how it was treated under Managed Extensions.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>In the new syntax, the programmer has the option of restricting a value type to non-managed heap addresses by specifying <ph id="ph1">`V*`</ph> rather than an interior pointer.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>If, on translating your program, you can do a transitive closure of all its uses and be sure that no assigned address is within the managed heap, then leaving it as <ph id="ph1">`V*`</ph> is fine.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Pinning Pointers</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The garbage collector may optionally move objects that reside on the CLR heap to different locations within the heap, usually during a compaction phase.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>This movement is not a problem to tracking handles, tracking references, and interior pointers which update these entities transparently.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>This movement is a problem, however, if the user has passed the address of an object on the CLR heap outside of the runtime environment.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>In this case, the volatile movement of the object is likely to cause a runtime failure.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>To exempt objects such as these from being moved, we must locally pin them to their location for the extent of their outside use.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, a <bpt id="p1">*</bpt>pinning pointer<ept id="p1">*</ept> is declared by qualifying a pointer declaration with the <ph id="ph1">`__pin`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Here is an example slightly modified from the Managed Extensions specification:</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>In the new language design, a pinning pointer is declared with syntax analogous to that of an interior pointer.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>A pinning pointer under the new syntax is a special case of an interior pointer.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The original constraints on a pinning pointer remain.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>For example, it cannot be used as a parameter or return type of a method; it can be declared only on a local object.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>A number of additional constraints, however, have been added in the new syntax.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The default value of a pinning pointer is <ph id="ph1">`nullptr`</ph>, not <ph id="ph2">`0`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`pin_ptr&lt;&gt;`</ph> cannot be initialized or assigned <ph id="ph2">`0`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>All assignments of <ph id="ph1">`0`</ph> in existing code will need to be changed to <ph id="ph2">`nullptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>A pinning pointer under Managed Extensions was permitted to address a whole object, as in the following example taken from the Managed Extensions specification:</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>In the new syntax, pinning the whole object returned by the <ph id="ph1">`new`</ph> expression is not supported.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Rather, the address of the interior member needs to be pinned.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>For example,</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Value Types and Their Behaviors (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Classes and Structs</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>interior_ptr (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>pin_ptr (C++/CLI)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

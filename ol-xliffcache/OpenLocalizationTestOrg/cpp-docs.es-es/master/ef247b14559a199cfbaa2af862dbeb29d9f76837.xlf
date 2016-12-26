@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ef247b14559a199cfbaa2af862dbeb29d9f76837</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\recordset-odbc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6f072be91cceca3b7071c95825a10170e0c2bb12</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">76518c155c593481a7e1ef14dc233ece4b8bfd86</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Recordset (ODBC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic applies to the MFC ODBC classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">[</bpt>CRecordset<ept id="p1">](../../mfc/reference/crecordset-class.md)</ept> object represents a set of records selected from a data source.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The records can be from:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>A table.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A query.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A stored procedure that accesses one or more tables.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>An example of a recordset based on a table is "all customers," which accesses a Customer table.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>An example of a query is "all invoices for Joe Smith."</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>An example of a recordset based on a stored procedure (sometimes called a predefined query) is "all of the delinquent accounts," which invokes a stored procedure in the back-end database.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A recordset can join two or more tables from the same data source, but not tables from different data sources.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For information about deriving recordset classes with the wizards, see <bpt id="p1">[</bpt>Adding an MFC ODBC Consumer<ept id="p1">](../../mfc/reference/adding-an-mfc-odbc-consumer.md)</ept> and <bpt id="p2">[</bpt>Database Support, MFC Application Wizard<ept id="p2">](../../mfc/reference/database-support-mfc-application-wizard.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Some ODBC drivers support views of the database.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A view in this sense is a query originally created with the SQL <ph id="ph1">`CREATE VIEW`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The wizards currently do not support views, but it is possible to code this support yourself.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Recordset Capabilities</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>All recordset objects share the following capabilities:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If the data source is not read-only, you can specify that your recordset be <bpt id="p1">[</bpt>updatable<ept id="p1">](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)</ept>, <bpt id="p2">[</bpt>appendable<ept id="p2">](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)</ept>, or read-only.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If the recordset is updateable, you can choose either pessimistic or optimistic <bpt id="p1">[</bpt>locking<ept id="p1">](../../data/odbc/recordset-locking-records-odbc.md)</ept> methods, provided the driver supplies the appropriate locking support.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If the data source is read-only, the recordset will be read-only.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>You can call member functions to <bpt id="p1">[</bpt>scroll<ept id="p1">](../../data/odbc/recordset-scrolling-odbc.md)</ept> through the selected records.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You can <bpt id="p1">[</bpt>filter<ept id="p1">](../../data/odbc/recordset-filtering-records-odbc.md)</ept> the records to constrain which records are selected from those available.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You can <bpt id="p1">[</bpt>sort<ept id="p1">](../../data/odbc/recordset-sorting-records-odbc.md)</ept> the records in ascending or descending order, based on one or more columns.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can <bpt id="p1">[</bpt>parameterize<ept id="p1">](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)</ept> the recordset to qualify the recordset selection at run time.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Snapshots and Dynasets</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>There are two principal types of recordsets: <bpt id="p1">[</bpt>snapshots<ept id="p1">](../../data/odbc/snapshot.md)</ept> and <bpt id="p2">[</bpt>dynasets<ept id="p2">](../../data/odbc/dynaset.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Both are supported by class <ph id="ph1">`CRecordset`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Each shares the common characteristics of all recordsets, but each also extends the common functionality in its own specialized way.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Snapshots provide a static view of the data and are useful for reports and other situations in which you want a view of the data as it existed at a particular time.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Dynasets are useful when you want updates made by other users to be visible in the recordset without having to requery or refresh the recordset.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Snapshots and dynasets can be updateable or read-only.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>To reflect records added or deleted by other users, call <bpt id="p1">[</bpt>CRecordset::Requery<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__requery)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>also allows for two other types of recordsets: dynamic recordsets and forward-only recordsets.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Dynamic recordsets are similar to dynasets; however, dynamic recordsets reflect any records added or deleted without calling <ph id="ph1">`CRecordset::Requery`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For this reason, dynamic recordsets are generally expensive with respect to processing time on the DBMS, and many ODBC drivers do not support them.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>In contrast, forward-only recordsets provide the most efficient method of data access for recordsets that do not require updates or backward scrolling.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For example, you might use a forward-only recordset to migrate data from one data source to another, where you only need to move through the data in a forward direction.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>To use a forward-only recordset, you must do both of the following:</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Pass the option <bpt id="p1">**</bpt>CRecordset::forwardOnly<ept id="p1">**</ept> as the <ph id="ph1">`nOpenType`</ph> parameter of the <bpt id="p2">[</bpt>Open<ept id="p2">](../../mfc/reference/crecordset-class.md#crecordset__open)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Specify <bpt id="p1">**</bpt>CRecordset::readOnly<ept id="p1">**</ept> in the <ph id="ph1">`dwOptions`</ph> parameter of <bpt id="p2">**</bpt>Open<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For information about ODBC driver requirements for dynaset support, see <bpt id="p1">[</bpt>ODBC<ept id="p1">](../../data/odbc/odbc-basics.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For a list of ODBC drivers included in this version of Visual C++ and for information about obtaining additional drivers, see <bpt id="p1">[</bpt>ODBC Driver List<ept id="p1">](../../data/odbc/odbc-driver-list.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Your Recordsets</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For every distinct table, view, or stored procedure that you want to access, you typically define a class derived from <ph id="ph1">`CRecordset`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>(The exception is a database join, in which one recordset represents columns from two or more tables.) When you derive a recordset class, you enable the record field exchange (RFX) mechanism or the bulk record field exchange (Bulk RFX) mechanism, which are similar to the dialog data exchange (DDX) mechanism.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>RFX and Bulk RFX simplify the transfer of data from the data source into your recordset; RFX additionally transfers data from your recordset to the data source.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Record Field Exchange (RFX)<ept id="p1">](../../data/odbc/record-field-exchange-rfx.md)</ept> and <bpt id="p2">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p2">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>A recordset object gives you access to all the selected records.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>You scroll through the multiple selected records using <ph id="ph1">`CRecordset`</ph> member functions, such as <ph id="ph2">`MoveNext`</ph> and <ph id="ph3">`MovePrev`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>At the same time, a recordset object represents only one of the selected records, the current record.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>You can examine the fields of the current record by declaring recordset class member variables that correspond to columns of the table or of the records that result from the database query.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>For information about recordset data members, see <bpt id="p1">[</bpt>Recordset: Architecture (ODBC)<ept id="p1">](../../data/odbc/recordset-architecture-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The following topics explain the details of using recordset objects.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The topics are listed in functional categories and a natural browse order to permit sequential reading.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Topics about the mechanics of opening, reading, and closing recordsets</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Recordset: Architecture (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Recordset: Declaring a Class for a Table (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Recordset: Creating and Closing Recordsets (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Recordset: Scrolling (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Recordset: Bookmarks and Absolute Positions (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Recordset: Filtering Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Recordset: Sorting Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Recordset: Parameterizing a Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Topics about the mechanics of modifying recordsets</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Recordset: Adding, Updating, and Deleting Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Recordset: Locking Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Recordset: Requerying a Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Topics about somewhat more advanced techniques</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Recordset: Performing a Join (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Recordset: Declaring a Class for a Predefined Query (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Recordset: Dynamically Binding Data Columns (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Recordset: Fetching Records in Bulk (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Recordset: Working with Large Data Items (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Recordset: Obtaining SUMs and Other Aggregate Results (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Topics about how recordsets work</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Recordset: How Recordsets Select Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Recordset: How Recordsets Update Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Open Database Connectivity (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>MFC ODBC Consume</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Transaction (ODBC)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

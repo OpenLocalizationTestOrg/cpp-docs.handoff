@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e0270d8f2022c99b1dcf59c4320e105990711efa</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\a-20-binding-of-barrier-directives.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2cde2db8e7822283cf8126276b058a02ece918b9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d4af1c88c9a15aebc0cced4bb4a6f746af594a98</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>A.20   Binding of barrier Directives | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>A.20   Binding of barrier Directives</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The directive binding rules call for a <bpt id="p1">**</bpt>barrier<ept id="p1">**</ept> directive to bind to the closest enclosing <ph id="ph1">`parallel`</ph> directive.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For more information on directive binding, see <bpt id="p1">[</bpt>Section 2.8<ept id="p1">](../../parallel/openmp/2-8-directive-binding.md)</ept> on page 32.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In the following example, the call from <bpt id="p1">*</bpt>main<ept id="p1">*</ept> to <bpt id="p2">*</bpt>sub2<ept id="p2">*</ept> is compliant because the <bpt id="p3">**</bpt>barrier<ept id="p3">**</ept> (in <bpt id="p4">*</bpt>sub3<ept id="p4">*</ept>) binds to the parallel region in <bpt id="p5">*</bpt>sub2<ept id="p5">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The call from <bpt id="p1">*</bpt>main<ept id="p1">*</ept> to <bpt id="p2">*</bpt>sub1<ept id="p2">*</ept> is compliant because the <bpt id="p3">**</bpt>barrier<ept id="p3">**</ept> binds to the parallel region in subroutine <bpt id="p4">*</bpt>sub2<ept id="p4">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The call from <bpt id="p1">*</bpt>main<ept id="p1">*</ept> to <bpt id="p2">*</bpt>sub3<ept id="p2">*</ept> is compliant because the <bpt id="p3">**</bpt>barrier<ept id="p3">**</ept> does not bind to any parallel region and is ignored.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Also note that the <bpt id="p1">**</bpt>barrier<ept id="p1">**</ept> only synchronizes the team of threads in the enclosing parallel region and not all the threads created in <bpt id="p2">*</bpt>sub1<ept id="p2">*</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
