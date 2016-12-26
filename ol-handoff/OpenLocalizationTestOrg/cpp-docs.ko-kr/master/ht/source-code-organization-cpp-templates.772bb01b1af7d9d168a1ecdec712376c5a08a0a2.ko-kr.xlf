@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6182cd80ddf472e7f27461ee3d0a1b50efe24bef</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\source-code-organization-cpp-templates.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ce71e4d26869dc9801b802e56dbc8cc17f9135f9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ec595f75b81eae3651c2b1f6c81df6b4e5bf44da</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Source code organization (C++ Templates) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Source code organization (C++ Templates)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When defining a class template, you must organize the source code in such a way that the member definitions are visible to the compiler when it needs them.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>You have the choice of using the <bpt id="p1">*</bpt>inclusion model<ept id="p1">*</ept> or the <bpt id="p2">*</bpt>explicit instantiation<ept id="p2">*</ept> model.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In the inclusion model, you include  the member definitions in every file that uses a template.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This approach is simplest and provides maximum flexibility in terms of what concrete types can be used with your template.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Its disadvantage is that it can increase compilation times.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The impact can be significant if a project and/or the included files themselves are large.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>With the explicit instantiation approach, the template itself instantiates concrete classes or class members for specific types.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This approach can speed up compilation times, but it limits usage to only those classes that the template implementer has enabled ahead of time.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In general, we recommend that you use the inclusion model  unless the compilation times become a problem.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Background</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Templates are not like ordinary classes in the sense that the compiler does not generate object code for a template or any of its members.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>There is nothing to generate until the template is instantiated with concrete types.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>When the compiler encounters a template instantiation such as <ph id="ph1">`MyClass&lt;int&gt; mc;`</ph>, and no class with that signature exists yet, then  it generates a new class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>It also attempts to generate code for any member functions that are used.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If those definitions are in a file that is not #included, directly or indirectly, in the .cpp file that is being compiled, the compiler can't see them.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>From the compiler's point of view, this isn't necessarily an error because the functions may be defined in another translation unit, in which case the linker will find them.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If the linker does not find that code, it raises an <bpt id="p1">**</bpt>unresolved external<ept id="p1">**</ept> error.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The inclusion model</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The simplest and most common way to make template definitions visible throughout a translation unit,  is to put the definitions in the header file itself.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Any .cpp file that uses the template simply has to #include the header.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This is the approach used in the Standard Library.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>With this approach,  the compiler has access to the complete template definition and can instantiate templates on-demand for any type.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>It is simple and relatively easy to maintain.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>However, the inclusion model does have a cost in terms of compilation times.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This cost can be significant in large programs, especially if the template header itself #includes other headers.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Every .cpp file that #includes the header will get its own copy of the function templates and all the definitions.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The linker will generally be able to sort things out so that you do not end up with multiple definitions for a function, but it takes time to do this work.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In smaller programs that extra compilation time is probably not significant.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Explicit instantiation</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>If the inclusion model is not viable for your project, and you know definitively the set of types that will be used to instantiate a template, then you can separate out the template code into an .h and .cpp file, and in the .cpp file explicitly instantiate the templates.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This will cause object code to be generated that the compiler will see when it encounters user instantiations.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>You create an explicit instantiation by using the keyword template followed by the signature of the entity you want to instantiate.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>This can be a type or a member.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If you explicitly instantiate a type, all members are instantiated.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>In the previous example, the explicit instantiations are at the bottom of the .cpp file.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>A MyArray may be used only for <ph id="ph1">`double`</ph> or <ph id="ph2">`string`</ph> types.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>In C++11 the <ph id="ph1">`export`</ph> keyword was deprecated in the context of template definitions.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In practical terms this has little impact because most compilers never supported it.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

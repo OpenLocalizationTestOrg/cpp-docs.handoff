@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">27a97f9723e30f992e6f8979e36816cbe11a9f82</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\asynchronous-agents.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f034d42273cfd044ec2baac1fe30fd25be3a1934</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6f8032ccead58e423e07a6e79705bc395e8f79de</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">*</bpt>asynchronous agent<ept id="p1">*</ept> (or just <bpt id="p2">*</bpt>agent<ept id="p2">*</ept>) is an application component that works asynchronously with other agents to solve larger computing tasks.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Think of an agent as a task that has a set life cycle.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, one agent might read data from an input/output device (such as the keyboard, a file on disk, or a network connection) and another agent might perform action on that data as it becomes available.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The first agent uses message passing to inform the second agent that more data is available.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime task scheduler provides an efficient mechanism to enable agents to block and yield cooperatively without requiring less efficient preemption.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The Agents Library defines the <bpt id="p1">[</bpt>concurrency::agent<ept id="p1">](../../parallel/concrt/reference/agent-class.md)</ept> class to represent an asynchronous agent.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>is an abstract class that declares the virtual method <bpt id="p1">[</bpt>concurrency::agent::run<ept id="p1">](reference/agent-class.md#run)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`run`</ph> method executes the task that is performed by the agent.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Because <ph id="ph1">`run`</ph> is abstract, you must implement this method in every class that you derive from <ph id="ph2">`agent`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Agent Life Cycle</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Agents have a set life cycle.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::agent_status<ept id="p1">](reference/concurrency-namespace-enums.md#agent_status)</ept> enumeration defines the various states of an agent.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following illustration is a state diagram that shows how agents progress from one state to another.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In this illustration, solid lines represent methods that you call from your application; dotted lines represent methods that are called from the runtime.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Agent State Diagram</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following table describes each state in the <ph id="ph1">`agent_status`</ph> enumeration.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Agent State</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The agent has not been scheduled for execution.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The runtime is scheduling the agent for execution.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The agent has started and is running.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The agent finished.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The agent was canceled before it entered the <ph id="ph1">`started`</ph> state.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>is the initial state of an agent, <ph id="ph1">`agent_runnable`</ph> and <ph id="ph2">`agent_started`</ph> are the active states, and <ph id="ph3">`agent_done`</ph> and <ph id="ph4">`agent_canceled`</ph> are the terminal states.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>concurrency::agent::status<ept id="p1">](reference/agent-class.md#status)</ept> method to retrieve the current state of an <ph id="ph1">`agent`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Although the <ph id="ph1">`status`</ph> method is concurrency-safe, the state of the agent can change by the time the <ph id="ph2">`status`</ph> method returns.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For example, an agent could be in the <ph id="ph1">`agent_started`</ph> state when you call the <ph id="ph2">`status`</ph> method, but moved to the <ph id="ph3">`agent_done`</ph> state just after the <ph id="ph4">`status`</ph> method returns.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Methods and Features</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The following table shows some of the important methods that belong to the <ph id="ph1">`agent`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information about all of the <ph id="ph1">`agent`</ph> class methods, see <bpt id="p1">[</bpt>agent Class<ept id="p1">](../../parallel/concrt/reference/agent-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Method</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>start<ept id="p1">](reference/agent-class.md#start)</ept>|Schedules the <ph id="ph1">`agent`</ph> object for execution and sets it to the <ph id="ph2">`agent_runnable`</ph> state.|</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>run<ept id="p1">](reference/agent-class.md#run)</ept>|Executes the task that is to be performed by the <ph id="ph1">`agent`</ph> object.|</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>done<ept id="p1">](reference/agent-class.md#done)</ept>|Moves an agent to the <ph id="ph1">`agent_done`</ph> state.|</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>cancel<ept id="p1">](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)</ept>|If the agent was not started, this method cancels execution of the agent and sets it to the <ph id="ph1">`agent_canceled`</ph> state.|</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>status<ept id="p1">](reference/agent-class.md#status)</ept>|Retrieves the current state of the <ph id="ph1">`agent`</ph> object.|</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>wait<ept id="p1">](reference/agent-class.md#wait)</ept>|Waits for the <ph id="ph1">`agent`</ph> object to enter the <ph id="ph2">`agent_done`</ph> or <ph id="ph3">`agent_canceled`</ph> state.|</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>wait_for_all<ept id="p1">](reference/agent-class.md#wait_for_all)</ept>|Waits for all provided <ph id="ph1">`agent`</ph> objects to enter the <ph id="ph2">`agent_done`</ph> or <ph id="ph3">`agent_canceled`</ph> state.|</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>wait_for_one<ept id="p1">](reference/agent-class.md#wait_for_one)</ept>|Waits for at least one of the provided <ph id="ph1">`agent`</ph> objects to enter the <ph id="ph2">`agent_done`</ph> or <ph id="ph3">`agent_canceled`</ph> state.|</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>After you create an agent object, call the <bpt id="p1">[</bpt>concurrency::agent::start<ept id="p1">](reference/agent-class.md#start)</ept> method to schedule it for execution.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The runtime calls the <ph id="ph1">`run`</ph> method after it schedules the agent and sets it to the <ph id="ph2">`agent_runnable`</ph> state.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The runtime does not manage exceptions that are thrown by asynchronous agents.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>For more information about exception handling and agents, see <bpt id="p1">[</bpt>Exception Handling<ept id="p1">](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>For an example that shows how to create a basic agent-based application, see <bpt id="p1">[</bpt>Walkthrough: Creating an Agent-Based Application<ept id="p1">](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents Library</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8831bfaa47066cf60bfb1dbe948f9b58475a894a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\how-to-create-the-user-control-and-host-in-a-dialog-box.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fda4d897a11c2a01bd7fce2d4dcc2617a7b4f2ed</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2a2658cb55484fd2a4b4b22f6131a14ad7bf843a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Create the User Control and Host in a Dialog Box | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Create the User Control and Host in a Dialog Box</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The steps in this article assume that you are creating a dialog-based (<bpt id="p1">[</bpt>CDialog Class<ept id="p1">](../mfc/reference/cdialog-class.md)</ept>) Microsoft Foundation Classes (MFC) project, but you can also add support for a Windows Forms control to an existing MFC dialog box.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To create the .NET user control</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Create a Visual C# Windows Forms Control Library project named <ph id="ph1">`WindowsFormsControlLibrary1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>New<ept id="p2">**</ept> and then click <bpt id="p3">**</bpt>Project<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Visual C#<ept id="p1">**</ept> folder, select <bpt id="p2">**</bpt>Windows Forms Control Library<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Accept the <ph id="ph1">`WindowsFormsControlLibrary1`</ph> project name by clicking <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>By default, the name of the .NET control will be <ph id="ph1">`UserControl1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Add child controls to <ph id="ph1">`UserControl1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Toolbox<ept id="p1">**</ept>, open the <bpt id="p2">**</bpt>All Windows Forms<ept id="p2">**</ept> list.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Drag a <bpt id="p1">**</bpt>Button<ept id="p1">**</ept> control to the <ph id="ph1">`UserControl1`</ph> design surface.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Also add a <bpt id="p1">**</bpt>TextBox<ept id="p1">**</ept> control.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept>, double-click <bpt id="p2">**</bpt>UserControl1.Designer.cs<ept id="p2">**</ept> to open it for editing.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Change the declarations of the TextBox and the Button from <ph id="ph1">`private`</ph> to <ph id="ph2">`public`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Build the project.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Build<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Build Solution<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To create the MFC host application</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Create an MFC Application project.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>New<ept id="p2">**</ept> and then click <bpt id="p3">**</bpt>Project<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Visual C++<ept id="p1">**</ept> folder, select <bpt id="p2">**</bpt>MFC Application<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Name<ept id="p1">**</ept> box, type <ph id="ph1">`MFC01`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Change the Solution setting to <bpt id="p1">**</bpt>Add to Solution<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>MFC Application Wizard<ept id="p1">**</ept>, for Application Type, select <bpt id="p2">**</bpt>Dialog based<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Accept the remaining default settings and click <bpt id="p1">**</bpt>Finish<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This creates an MFC application that has an MFC dialog box.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Add a placeholder control to the MFC dialog box.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>View<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Resource View<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Resource View<ept id="p1">**</ept>, expand the <bpt id="p2">**</bpt>Dialog<ept id="p2">**</ept> folder and double-click <ph id="ph1">`IDD_MFC01_DIALOG`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The dialog resource appears in <bpt id="p1">**</bpt>Resource Editor<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Toolbox<ept id="p1">**</ept>, open the <bpt id="p2">**</bpt>Dialog Editor<ept id="p2">**</ept> list.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Drag a <bpt id="p1">**</bpt>Static Text<ept id="p1">**</ept> control to the dialog resource.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>Static Text<ept id="p1">**</ept> control will serve as a placeholder for the .NET Windows Forms control.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Resize it to approximately the size of the Windows Forms control.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept> window, change the <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> of the <bpt id="p3">**</bpt>Static Text<ept id="p3">**</ept> control to <ph id="ph1">`IDC_CTRL1`</ph> and change the <bpt id="p4">**</bpt>TabStop<ept id="p4">**</ept> property to <bpt id="p5">**</bpt>True<ept id="p5">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Configure the project for Common Language Runtime (CLR) support.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept>, right-click the MFC01 project node, and then click <bpt id="p2">**</bpt>Properties<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box, under <bpt id="p2">**</bpt>Configuration Properties<ept id="p2">**</ept>, select <bpt id="p3">**</bpt>General<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Project Defaults<ept id="p1">**</ept> section, set <bpt id="p2">**</bpt>Common Language Runtime support<ept id="p2">**</ept> to <bpt id="p3">**</bpt>Common Language Runtime Support (/clr)<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Under <bpt id="p1">**</bpt>Configuration Properties<ept id="p1">**</ept>, expand <bpt id="p2">**</bpt>C/C++<ept id="p2">**</ept> and select the <bpt id="p3">**</bpt>General<ept id="p3">**</ept> node.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Set <bpt id="p1">**</bpt>Debug Information Format<ept id="p1">**</ept> to <bpt id="p2">**</bpt>Program Database (/Zi)<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Code Generation<ept id="p1">**</ept> node.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Set <bpt id="p1">**</bpt>Enable Minimal Rebuild<ept id="p1">**</ept> to <bpt id="p2">**</bpt>No (/Gm-)<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Also set <bpt id="p1">**</bpt>Basic Runtime Checks<ept id="p1">**</ept> to <bpt id="p2">**</bpt>Default<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept> to apply the changes.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Add a reference to the .NET control.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept>, right-click the MFC01 project node and then click <bpt id="p2">**</bpt>Add<ept id="p2">**</ept>, <bpt id="p3">**</bpt>References<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Property Page<ept id="p1">**</ept>, click <bpt id="p2">**</bpt>Add New Reference<ept id="p2">**</ept>, select <bpt id="p3">**</bpt>WindowsFormsControlLibrary1<ept id="p3">**</ept> (under the <bpt id="p4">**</bpt>Projects<ept id="p4">**</ept> tab), and click <bpt id="p5">**</bpt>OK<ept id="p5">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This adds a reference in the form of a <bpt id="p1">[</bpt>/FU<ept id="p1">](../build/reference/fu-name-forced-hash-using-file.md)</ept> compiler option so that the program will compile.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>It also puts a copy of WindowsFormsControlLibrary1.dll in the \MFC01\ project folder so that the program will run.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>In Stdafx.h, find this line:</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Above it, add these lines:</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Add code to create the managed control.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>First, declare the managed control.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>In MFC01Dlg.h, go to the declaration of the dialog class, and add a data member for the user control in Protected scope, as follows.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Next, provide an implementation for the managed control.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>In MFC01Dlg.cpp, in the dialog override of <ph id="ph1">`CMFC01Dlg::DoDataExchange`</ph> that was generated by the MFC Application wizard (not <ph id="ph2">`CAboutDlg::DoDataExchange`</ph>, which is in the same file), add the following code to create the managed control and associate it with the static place holder IDC_CTRL1.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Build and run the project.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept>, right-click <bpt id="p2">**</bpt>MFC01<ept id="p2">**</ept> and then click <bpt id="p3">**</bpt>Set as StartUp Project<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Build<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Build Solution<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Debug<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Start without debugging<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The MFC dialog box should display the Windows Forms control.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Hosting a Windows Form User Control in an MFC Dialog Box</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

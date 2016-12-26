@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">28e5b965fdd5aad131711c4112488ee86dbd88d5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn006-message-maps.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6359795a9e0e587f184173414e464e0a0a4507bb</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0c3bd04ce122d92f1a63ed93e478d75b0effae36</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN006: Message Maps | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN006: Message Maps</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This note describes the MFC message map facility.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The Problem</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Microsoft Windows implements virtual functions in window classes that use its messaging facility.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Due to the large number of messages involved, providing a separate virtual function for each Windows message would create a prohibitively large vtable.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Because the number of system-defined Windows messages changes over time, and because applications can define their own Windows messages, message maps provide a level of indirection that prevents interface changes from breaking existing code.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Overview</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>MFC provides an alternative to the switch statement that was used in traditional Windows-based programs to handle messages sent to a window.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A mapping from messages to methods can be defined so that when a message is received by a window, the appropriate method is called automatically.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This message-map facility is designed to resemble virtual functions but has additional benefits not possible with C++ virtual functions.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Defining a Message Map</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>DECLARE_MESSAGE_MAP<ept id="p1">](http://msdn.microsoft.com/library/c225e7e0-a81b-495c-97f9-3e0aa1f65036)</ept> macro declares three members for a class.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A private array of <ph id="ph1">`AFX_MSGMAP_ENTRY`</ph> entries called <ph id="ph2">`_messageEntries`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A protected <ph id="ph1">`AFX_MSGMAP`</ph> structure called <ph id="ph2">`messageMap`</ph> that points to the <ph id="ph3">`_messageEntries`</ph> array.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A protected virtual function called <ph id="ph1">`GetMessageMap`</ph> that returns the address of <ph id="ph2">`messageMap`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This macro should be put in the declaration of any class using message maps.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>By convention, it is at the end of the class declaration.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This is the format generated by AppWizard and ClassWizard when they create new classes.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The //{{ and //}} brackets are needed for ClassWizard.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The message map's table is defined by using a set of macros that expand to message map entries.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>A table starts with a <bpt id="p1">[</bpt>BEGIN_MESSAGE_MAP<ept id="p1">](http://msdn.microsoft.com/library/d9201e18-04e0-4639-9810-f15768627fc2)</ept> macro call, which defines the class that is handled by this message map and the parent class to which unhandled messages are passed.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The table ends with the <bpt id="p1">[</bpt>END_MESSAGE_MAP<ept id="p1">](http://msdn.microsoft.com/library/40f611f1-a3b4-4097-b683-091bf7cfab8b)</ept> macro call.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Between these two macro calls is an entry for each message to be handled by this message map.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Every standard Windows message has a macro of the form ON_WM_<bpt id="p1">*</bpt>MESSAGE_NAME<ept id="p1">*</ept> that generates an entry for that message.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>A standard function signature has been defined for unpacking the parameters of each Windows message and providing type safety.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>These signatures may be found in the file Afxwin.h in the declaration of <bpt id="p1">[</bpt>CWnd<ept id="p1">](../mfc/reference/cwnd-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Each one is marked with the keyword <ph id="ph1">`afx_msg`</ph> for easy identification.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>ClassWizard requires that you use the <ph id="ph1">`afx_msg`</ph> keyword in your message map handler declarations.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>These function signatures were derived by using a simple convention.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The name of the function always starts with <ph id="ph1">`"On`</ph>".</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This is followed by the name of the Windows message with the "WM_" removed and the first letter of each word capitalized.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The ordering of the parameters is <ph id="ph1">`wParam`</ph> followed by <ph id="ph2">`LOWORD`</ph>(<ph id="ph3">`lParam`</ph>) then <ph id="ph4">`HIWORD`</ph>(<ph id="ph5">`lParam`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Unused parameters are not passed.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Any handles that are wrapped by MFC classes are converted to pointers to the appropriate MFC objects.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The following example shows how to handle the <ph id="ph1">`WM_PAINT`</ph> message and cause the <ph id="ph2">`CMyWnd::OnPaint`</ph> function to be called:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The message map table must be defined outside the scope of any function or class definition.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>It should not be put in an extern "C" block.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>ClassWizard will modify the message map entries that occur between the //{{ and //}} comment bracket.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>User Defined Windows Messages</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>User-defined messages may be included in a message map by using the <bpt id="p1">[</bpt>ON_MESSAGE<ept id="p1">](http://msdn.microsoft.com/library/e2faeb13-9f6e-4c0d-9f6d-b2e141a0db1e)</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>This macro accepts a message number and a method of the form:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>``` *// inside the class declaration</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>afx_msg LRESULT OnMyMessage(WPARAM wParam, LPARAM lParam);</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>define WM_MYMESSAGE (WM_USER + 100)</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>ON_MESSAGE(WM_MYMESSAGE, OnMyMessage)</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>END_MESSAGE_MAP()</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>CWnd* pWnd = ...;</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>pWnd-&gt;SendMessage(WM_MYMESSAGE);</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>class CMyWnd : public CMyParentWndClass</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>{</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>public:</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>CMyWnd();</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>//{{AFX_MSG(CMyWnd) afx_msg LRESULT OnFind(WPARAM wParam, LPARAM lParam); <ept id="p1">*</ept>//}}AFX_MSG</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>};</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>static UINT NEAR WM_FIND = RegisterWindowMessage("COMMDLG_FIND");</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass) <bpt id="p1">*</bpt>//{{AFX_MSG_MAP(CMyWnd) ON_REGISTERED_MESSAGE(WM_FIND, OnFind) <ept id="p1">*</ept>//}}AFX_MSG_MAP</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>END_MESSAGE_MAP()</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>ON_COMMAND(id, memberFxn)</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>ON_UPDATE_COMMAND_UI(id, memberFxn)</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>define    ID_MYCMD      100</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>define    ID_COMPLEX    101</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>afx_msg void OnUpdateMyCommand(CCmdUI* pCmdUI);</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>{ *// handle the command</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>}</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>{ *// set the UI state with pCmdUI</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>}</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>{ *// handle the command</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>return TRUE;</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>}</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>ON_CONTROL(wNotificationCode, id, memberFxn)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

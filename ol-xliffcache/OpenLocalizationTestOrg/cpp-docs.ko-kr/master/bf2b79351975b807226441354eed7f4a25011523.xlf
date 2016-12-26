@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bf2b79351975b807226441354eed7f4a25011523</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\3-1-7-omp-set-dynamic-function.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">422b003230a590a8cee155e8991a85bdf6669cd6</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1ce7bb6e1a8e128e8598f09fe98f2818a813aaa6</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>3.1.7 omp_set_dynamic Function | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>3.1.7 omp_set_dynamic Function</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>omp_set_dynamic<ept id="p1">**</ept> function enables or disables dynamic adjustment of the number of threads available for execution of parallel regions.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The format is as follows:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">*</bpt>dynamic_threads<ept id="p1">*</ept> evaluates to a nonzero value, the number of threads that are used for executing subsequent parallel regions may be adjusted automatically by the run-time environment to best utilize system resources.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>As a consequence, the number of threads specified by the user is the maximum thread count.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The number of threads in the team executing a parallel region remains fixed for the duration of that parallel region and is reported by the <bpt id="p1">**</bpt>omp_get_num_threads<ept id="p1">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">*</bpt>dynamic_threads<ept id="p1">*</ept> evaluates to 0, dynamic adjustment is disabled.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This function has the effects described above when called from a portion of the program where the <bpt id="p1">**</bpt>omp_in_parallel<ept id="p1">**</ept> function returns zero.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If it is called from a portion of the program where the <bpt id="p1">**</bpt>omp_in_parallel<ept id="p1">**</ept> function returns a nonzero value, the behavior of this function is undefined.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A call to <bpt id="p1">**</bpt>omp_set_dynamic<ept id="p1">**</ept> has precedence over the <bpt id="p2">**</bpt>OMP_DYNAMIC<ept id="p2">**</ept> environment variable.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The default for the dynamic adjustment of threads is implementation-defined.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>As a result, user codes that depend on a specific number of threads for correct execution should explicitly disable dynamic threads.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Implementations are not required to provide the ability to dynamically adjust the number of threads, but they are required to provide the interface in order to support portability across all platforms.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Cross References:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>omp_get_num_threads<ept id="p1">**</ept> function, see <bpt id="p2">[</bpt>Section 3.1.2<ept id="p2">](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)</ept> on page 37.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>OMP_DYNAMIC<ept id="p1">**</ept> environment variable, see <bpt id="p2">[</bpt>Section 4.3<ept id="p2">](../../parallel/openmp/4-3-omp-dynamic.md)</ept> on page 49.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>omp_in_parallel<ept id="p1">**</ept> function, see <bpt id="p2">[</bpt>Section 3.1.6<ept id="p2">](../../parallel/openmp/3-1-6-omp-in-parallel-function.md)</ept> on page 38.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

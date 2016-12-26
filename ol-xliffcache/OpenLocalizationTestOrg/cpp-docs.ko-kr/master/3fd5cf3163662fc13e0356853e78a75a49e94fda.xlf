@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3fd5cf3163662fc13e0356853e78a75a49e94fda</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tool-tips-in-windows-not-derived-from-cframewnd.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6cbc34bbb5aa5654c037a2e15c5208704582b0f2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">85bfbd40d3474996c10e6bcf8caf3ea78769e7bb</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Tool Tips in Windows Not Derived from CFrameWnd | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Tool Tips in Windows Not Derived from CFrameWnd</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article family covers enabling tool tips for controls contained in a window that is not derived from <bpt id="p1">[</bpt>CFrameWnd<ept id="p1">](../mfc/reference/cframewnd-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The article <bpt id="p1">[</bpt>Toolbars Tool Tips<ept id="p1">](../mfc/toolbar-tool-tips.md)</ept> provides information about tool tips for controls in a <ph id="ph1">`CFrameWnd`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Topics covered in this article family include:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Enabling Tool Tips</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Handling TTN_NEEDTEXT Notification for Tool Tips</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The TOOLTIPTEXT Structure</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Tool tips are automatically displayed for buttons and other controls contained in a parent window derived from <ph id="ph1">`CFrameWnd`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This is because <ph id="ph1">`CFrameWnd`</ph> has a default handler for the <bpt id="p1">[</bpt>TTN_GETDISPINFO<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb760269)</ept> notification, which handles <bpt id="p2">**</bpt>TTN_NEEDTEXT<ept id="p2">**</ept> notifications from tool tip controls associated with controls.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>However, this default handler is not called when the <bpt id="p1">**</bpt>TTN_NEEDTEXT<ept id="p1">**</ept> notification is sent from a tool tip control associated with a control in a window that is not a <ph id="ph1">`CFrameWnd`</ph>, such as a control on a dialog box or a form view.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Therefore, it is necessary for you to provide a handler function for the <bpt id="p1">**</bpt>TTN_NEEDTEXT<ept id="p1">**</ept> notification message in order to display tool tips for child controls.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The default tool tips provided for your windows by <bpt id="p1">[</bpt>CWnd::EnableToolTips<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__enabletooltips)</ept> do not have text associated with them.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>To retrieve text for the tool tip to display, the <bpt id="p1">**</bpt>TTN_NEEDTEXT<ept id="p1">**</ept> notification is sent to the tool tip control's parent window just before the tool tip window is displayed.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If there is no handler for this message to assign some value to the <bpt id="p1">**</bpt>pszText<ept id="p1">**</ept> member of the <bpt id="p2">**</bpt>TOOLTIPTEXT<ept id="p2">**</ept> structure, there will be no text displayed for the tool tip.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Tool Tips</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

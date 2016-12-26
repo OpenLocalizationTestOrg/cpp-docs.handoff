@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">593dad6bf8d80ccc588a11c59fd737b55ae798c4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\crt-initialization.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">30ae8693877deae44a84070f031cebf11cdd7559</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">53bd4ab1911886b9d562040bd38d241969f72468</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CRT Initialization | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CRT Initialization</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic describes how the CRT initializes global states in native code.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>By default, the linker includes the CRT library, which provides its own startup code.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This startup code initializes the CRT library, calls global initializers, and then calls the user-provided <ph id="ph1">`main`</ph> function for console applications.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Initializing a Global Object</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Consider the following code:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>According to the C/C++ standard, <ph id="ph1">`func()`</ph> must be called before <ph id="ph2">`main()`</ph> is executed.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>But who calls it?</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>One way to determine this is to set a breakpoint in <ph id="ph1">`func()`</ph>, debug the application, and examine the stack.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This is possible because the CRT source code is included with Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When you browse the functions on the stack, you will find that the CRT is looping through a list of function pointers and calling each one as it encounters them.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>These functions are either similar to <ph id="ph1">`func()`</ph> or constructors for class instances.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The CRT obtains the list of function pointers from the Visual C++ compiler.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>When the compiler sees a global initializer, it generates a dynamic initializer in the <ph id="ph1">`.CRT$XCU`</ph> section (where <ph id="ph2">`CRT`</ph> is the section name and <ph id="ph3">`XCU`</ph> is the group name).</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To obtain a list of those dynamic initializers run the command <bpt id="p1">**</bpt>dumpbin /all main.obj<ept id="p1">**</ept>, and then search the <ph id="ph1">`.CRT$XCU`</ph> section (when main.cpp is compiled as a C++ file, not a C file).</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>It will be similar to the following:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The CRT defines two pointers:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>in</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>in</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Both groups do not have any other symbols defined except <ph id="ph1">`__xc_a`</ph> and <ph id="ph2">`__xc_z`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Now, when the linker reads various <ph id="ph1">`.CRT`</ph> groups, it combines them in one section and orders them alphabetically.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This means that the user-defined global initializers (which the Visual C++ compiler puts in <ph id="ph1">`.CRT$XCU`</ph>) will always come after <ph id="ph2">`.CRT$XCA`</ph> and before <ph id="ph3">`.CRT$XCZ`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The section will resemble the following:</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>So, the CRT library uses both <ph id="ph1">`__xc_a`</ph> and <ph id="ph2">`__xc_z`</ph> to determine the start and end of the global initializers list because of the way in which they are laid out in memory after the image is loaded.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>CRT Library Features</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

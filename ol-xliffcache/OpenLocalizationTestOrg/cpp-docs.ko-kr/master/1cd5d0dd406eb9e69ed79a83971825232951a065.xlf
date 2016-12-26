@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1cd5d0dd406eb9e69ed79a83971825232951a065</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\how-to-marshal-com-strings-using-cpp-interop.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4159eba7cfd9175c862c486e366537641ee6b187</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1c4a79ceb0986ac6923da0d65c6b50e5f27dc414</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Marshal COM Strings Using C++ Interop | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Marshal COM Strings Using C++ Interop</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic demonstrates how a BSTR (the basic string format favored in COM programming) can be passed from a managed to an unmanaged function, and vice versa.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For interoperating with other strings types, see the following topics:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>How to: Marshal Unicode Strings Using C++ Interop</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>How to: Marshal ANSI Strings Using C++ Interop</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The following code examples use the <bpt id="p1">[</bpt>managed, unmanaged<ept id="p1">](../preprocessor/managed-unmanaged.md)</ept> #pragma directives to implement managed and unmanaged functions in the same file, but these functions interoperate in the same manner if defined in separate files.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Files containing only unmanaged functions do not need to be compiled with <bpt id="p1">[</bpt>/clr (Common Language Runtime Compilation)<ept id="p1">](../build/reference/clr-common-language-runtime-compilation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates how a BSTR (a string format used in COM programming) can be passed from a managed to an unmanaged function.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The calling managed function uses &lt;xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A&gt; to obtain the address of a BSTR representation of the contents of a .NET System.String.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>This pointer is pinned using <bpt id="p1">[</bpt>pin_ptr (C++/CLI)<ept id="p1">](../windows/pin-ptr-cpp-cli.md)</ept> to ensure that its physical address is not changed during a garbage collection cycle while the unmanaged function executes.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The garbage collector is prohibited from moving the memory until the <bpt id="p1">[</bpt>pin_ptr (C++/CLI)<ept id="p1">](../windows/pin-ptr-cpp-cli.md)</ept> goes out of scope.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates how a BSTR can be passed from an unmanaged to an unmanaged function.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The receiving managed function can either use the string in as a BSTR or use &lt;xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A&gt; to convert it to a &lt;xref:System.String&gt; for use with other managed functions.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Because the memory representing the BSTR is allocated on the unmanaged heap, no pinning is necessary, because there is no garbage collection on the unmanaged heap.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Using C++ Interop (Implicit PInvoke)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">69ae7b09907e598f30597ae7178b1ae3bd7a7bd9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\clipboard-copying-and-pasting-data.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2d49bba067a26e1349b333563468f0faa270b13c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fcc613b9d0402710b1de8caad63c0115d5556376</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Clipboard: Copying and Pasting Data | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Clipboard: Copying and Pasting Data</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic describes the minimum work necessary to implement copying to and pasting from the Clipboard in your OLE application.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It is recommended that you read the <bpt id="p1">[</bpt>Data Objects and Data Sources (OLE)<ept id="p1">](../mfc/data-objects-and-data-sources-ole.md)</ept> topics before proceeding.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Before you can implement either copying or pasting, you must first provide functions to handle the Copy, Cut, and Paste options on the Edit menu.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Copying or Cutting Data</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To copy data to the Clipboard</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Determine whether the data to be copied is native data or is an embedded or linked item.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If the data is embedded or linked, obtain a pointer to the <ph id="ph1">`COleClientItem`</ph> object that has been selected.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If the data is native and the application is a server, create a new object derived from <ph id="ph1">`COleServerItem`</ph> containing the selected data.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Otherwise, create a <ph id="ph1">`COleDataSource`</ph> object for the data.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Call the selected item's <ph id="ph1">`CopyToClipboard`</ph> member function.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If the user chose a Cut operation instead of a Copy operation, delete the selected data from your application.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>To see an example of this sequence, see the <bpt id="p1">**</bpt>OnEditCut<ept id="p1">**</ept> and <bpt id="p2">**</bpt>OnEditCopy<ept id="p2">**</ept> functions in the MFC OLE sample programs <bpt id="p3">[</bpt>OCLIENT<ept id="p3">](../visual-cpp-samples.md)</ept> and <bpt id="p4">[</bpt>HIERSVR<ept id="p4">](../visual-cpp-samples.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Note that these samples maintain a pointer to the currently selected data, so step 1 is already complete.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Pasting Data</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Pasting data is more complicated than copying it because you need to choose the format to use in pasting the data into your application.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To paste data from the Clipboard</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In your view class, implement <bpt id="p1">**</bpt>OnEditPaste<ept id="p1">**</ept> to handle users choosing the Paste option from the Edit menu.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>OnEditPaste<ept id="p1">**</ept> function, create a <ph id="ph1">`COleDataObject`</ph> object and call its <ph id="ph2">`AttachClipboard`</ph> member function to link this object to the data on the Clipboard.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`COleDataObject::IsDataAvailable`</ph> to check whether a particular format is available.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Alternately, you can use <ph id="ph1">`COleDataObject::BeginEnumFormats`</ph> to look for other formats until you find one most suited to your application.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Perform the paste of the format.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For an example of how this works, see the implementation of the <bpt id="p1">**</bpt>OnEditPaste<ept id="p1">**</ept> member functions in the view classes defined in the MFC OLE sample programs <bpt id="p2">[</bpt>OCLIENT<ept id="p2">](../visual-cpp-samples.md)</ept> and <bpt id="p3">[</bpt>HIERSVR<ept id="p3">](../visual-cpp-samples.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The main benefit of separating the paste operation into its own function is that the same paste code can be used when data is dropped in your application during a drag-and-drop operation.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>As in OCLIENT and HIERSVR, your <ph id="ph1">`OnDrop`</ph> function can also call <bpt id="p1">**</bpt>DoPasteItem<ept id="p1">**</ept>, reusing the code written to implement Paste operations.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To handle the Paste Special option on the Edit menu, see the topic <bpt id="p1">[</bpt>Dialog Boxes in OLE<ept id="p1">](../mfc/dialog-boxes-in-ole.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Adding other formats</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>OLE data objects and data sources and uniform data transfer</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>OLE drag and drop</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>OLE</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Clipboard: Using the OLE Clipboard Mechanism</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

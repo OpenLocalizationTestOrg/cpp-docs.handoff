@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0c932531a5dca05ce5453999edea1a06d39b19c4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\reference\record-field-exchange-functions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">906065d1d77ce7cc600ba2b10aed64f74474aca0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a54a50555f7252850bcf28891cb9f22b7151cf1d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange Functions | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange Functions</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic lists the Record Field Exchange (RFX, Bulk RFX, and DFX) functions used to automate the transfer of data between a recordset object and its data source and to perform other operations on the data.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If you are using the ODBC-based classes and you have implemented bulk row fetching, you must manually override the <ph id="ph1">`DoBulkFieldExchange`</ph> member function of <ph id="ph2">`CRecordset`</ph> by calling the Bulk RFX functions for each data member corresponding to a data source column.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If you have not implemented bulk row fetching in the ODBC-based classes, or if you are using the DAO-based classes, then ClassWizard will override the <ph id="ph1">`DoFieldExchange`</ph> member function of <ph id="ph2">`CRecordset`</ph> or <ph id="ph3">`CDaoRecordset`</ph> by calling the RFX functions (for ODBC classes) or the DFX functions (for DAO classes) for each field data member in your recordset.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The record field exchange functions transfer data each time the framework calls <ph id="ph1">`DoFieldExchange`</ph> or <ph id="ph2">`DoBulkFieldExchange`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Each function transfers a specific data type.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For more information about how these functions are used, see the articles <bpt id="p1">[</bpt>Record Field Exchange: How RFX Works (ODBC)<ept id="p1">](../../data/odbc/record-field-exchange-how-rfx-works.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For more information about bulk row fetching, see the article <bpt id="p1">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p1">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For columns of data that you bind dynamically, you can also call the RFX or DFX functions yourself, as explained in the articles <bpt id="p1">[</bpt>Recordset: Dynamically Binding Data Columns (ODBC)<ept id="p1">](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Additionally, you can write your own custom RFX or DFX routines, as explained in Technical Note <bpt id="p1">[</bpt>43<ept id="p1">](../../mfc/tn043-rfx-routines.md)</ept> (for ODBC) and Technical Note <bpt id="p2">[</bpt>53<ept id="p2">](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)</ept> (for DAO).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For an example of RFX and Bulk RFX functions as they appear in the <ph id="ph1">`DoFieldExchange`</ph> and <ph id="ph2">`DoBulkFieldExchange`</ph> functions, see <bpt id="p1">[</bpt>RFX_Text<ept id="p1">](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6)</ept> and <bpt id="p2">[</bpt>RFX_Text_Bulk<ept id="p2">](http://msdn.microsoft.com/library/c5bed6e5-313d-4d3f-8a87-c032e41f63a7)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>DFX functions are very similar to the RFX functions.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>RFX Functions (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>RFX_Binary</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of bytes of type <bpt id="p1">[</bpt>CByteArray<ept id="p1">](../../mfc/reference/cbytearray-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>RFX_Bool</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Transfers Boolean data.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>RFX_Byte</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Transfers a single byte of data.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>RFX_Date</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Transfers time and date data using <bpt id="p1">[</bpt>CTime<ept id="p1">](../../atl-mfc-shared/reference/ctime-class.md)</ept> or <bpt id="p2">**</bpt>TIMESTAMP_STRUCT<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>RFX_Double</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Transfers double-precision float data.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>RFX_Int</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Transfers integer data.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>RFX_Long</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Transfers long integer data.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>RFX_LongBinary</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Transfers binary large object (BLOB) data with an object of the <bpt id="p1">[</bpt>CLongBinary<ept id="p1">](../../mfc/reference/clongbinary-class.md)</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>RFX_Single</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Transfers float data.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>RFX_Text</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Transfers string data.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Bulk RFX Functions (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>RFX_Binary_Bulk</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of byte data.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>RFX_Bool_Bulk</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of Boolean data.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>RFX_Byte_Bulk</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of single bytes.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>RFX_Date_Bulk</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of data of type <bpt id="p1">**</bpt>TIMESTAMP_STRUCT<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>RFX_Double_Bulk</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of double-precision, floating-point data.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>RFX_Int_Bulk</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of integer data.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>RFX_Long_Bulk</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of long integer data.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>RFX_Single_Bulk</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of floating-point data.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>RFX_Text_Bulk</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of data of type <bpt id="p1">**</bpt>LPSTR<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>DFX Functions (DAO)</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>DFX_Binary</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Transfers arrays of bytes of type <bpt id="p1">[</bpt>CByteArray<ept id="p1">](../../mfc/reference/cbytearray-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>DFX_Bool</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Transfers Boolean data.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>DFX_Byte</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Transfers a single byte of data.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>DFX_Currency</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Transfers currency data, of type <bpt id="p1">[</bpt>COleCurrency<ept id="p1">](../../mfc/reference/colecurrency-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>DFX_DateTime</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Transfers time and date data, of type <bpt id="p1">[</bpt>COleDateTime<ept id="p1">](../../atl-mfc-shared/reference/coledatetime-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>DFX_Double</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Transfers double-precision float data.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>DFX_Long</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Transfers long integer data.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>DFX_LongBinary</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Transfers binary large object (BLOB) data with an object of the <ph id="ph1">`CLongBinary`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>For DAO, it is recommended that you use <bpt id="p1">[</bpt>DFX_Binary<ept id="p1">](http://msdn.microsoft.com/library/678021a3-2e46-44d7-8528-71bb692dcc07)</ept> instead.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>DFX_Short</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Transfers short integer data.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>DFX_Single</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Transfers float data.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>DFX_Text</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Transfers string data.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Macros and Globals</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>CRecordset::DoFieldExchange</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>CRecordset::DoBulkFieldExchange</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>CDaoRecordset::DoFieldExchange</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

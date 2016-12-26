@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">243fc8d91a91a092145daa6ca04cd39eede26d16</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\printf-type-field-characters.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0e60fbf15a6bc2116a465adb4b5819b0a24b2f28</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9ac1f2036896776ebb1de4f1eb0273d8f1f0f72f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>printf Type Field Characters | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>printf Type Field Characters</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In a format specification, the <ph id="ph1">`type`</ph> character is a conversion specifier that specifies whether the corresponding argument is to be interpreted as a character, a string, a pointer, an integer, or a floating-point number.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`type`</ph> character is the only required format specification field, and it appears after any optional fields.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The arguments that follow the format string are interpreted according to the corresponding <ph id="ph1">`type`</ph> character and the optional <bpt id="p1">[</bpt>size<ept id="p1">](../c-runtime-library/size-specification.md)</ept> prefix.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Conversions for character types <ph id="ph1">`char`</ph> and <ph id="ph2">`wchar_t`</ph> are specified by using <ph id="ph3">`c`</ph> or <ph id="ph4">`C`</ph>, and single-byte and multi-byte or wide character strings are specified by using <ph id="ph5">`s`</ph> or <ph id="ph6">`S`</ph>, depending on which formatting function is being used.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Character and string arguments that are specified by using <ph id="ph1">`c`</ph> and <ph id="ph2">`s`</ph> are interpreted as <ph id="ph3">`char`</ph> and <ph id="ph4">`char*`</ph> by <ph id="ph5">`printf`</ph> family functions, or as <ph id="ph6">`wchar_t`</ph> and <ph id="ph7">`wchar_t*`</ph> by <ph id="ph8">`wprintf`</ph> family functions.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Character and string arguments that are specified by using <ph id="ph1">`C`</ph> and <ph id="ph2">`S`</ph> are interpreted as <ph id="ph3">`wchar_t`</ph> and <ph id="ph4">`wchar_t*`</ph> by <ph id="ph5">`printf`</ph> family functions, or as <ph id="ph6">`char`</ph> and <ph id="ph7">`char*`</ph> by <ph id="ph8">`wprintf`</ph> family functions.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Integer types such as <ph id="ph1">`short`</ph>, <ph id="ph2">`int`</ph>, <ph id="ph3">`long`</ph>, <ph id="ph4">`long long`</ph>, and their <ph id="ph5">`unsigned`</ph> variants, are specified by using <ph id="ph6">`d`</ph>, <ph id="ph7">`i`</ph>, <ph id="ph8">`o`</ph>, <ph id="ph9">`u`</ph>, <ph id="ph10">`x`</ph>, and <ph id="ph11">`X`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Floating-point types such as <ph id="ph1">`float`</ph>, <ph id="ph2">`double`</ph>, and <ph id="ph3">`long double`</ph>, are specified by using <ph id="ph4">`a`</ph>, <ph id="ph5">`A`</ph>, <ph id="ph6">`e`</ph>, <ph id="ph7">`E`</ph>, <ph id="ph8">`f`</ph>, <ph id="ph9">`g`</ph>, and <ph id="ph10">`G`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>By default, unless they are modified by a <ph id="ph1">`size`</ph> field length prefix, integer arguments are coerced to <ph id="ph2">`int`</ph> type, and floating-point arguments are coerced to <ph id="ph3">`double`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>On 64-bit systems, an <ph id="ph1">`int`</ph> is a 32-bit value; therefore, 64-bit integers will be truncated when they are formatted for output unless a <ph id="ph2">`size`</ph> prefix of <ph id="ph3">`ll`</ph> or <ph id="ph4">`I64`</ph> is used.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Pointer types that are specified by <ph id="ph1">`p`</ph> use the default length for the platform.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`C`</ph>, <ph id="ph2">`S`</ph>, and <ph id="ph3">`Z`</ph> type characters, and the behavior of the <ph id="ph4">`c`</ph> and <ph id="ph5">`s`</ph> type characters when they are used with the <ph id="ph6">`printf`</ph> and <ph id="ph7">`wprintf`</ph> functions, are Microsoft extensions and are not ANSI compatible.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>does not support the <ph id="ph1">`F`</ph> type character.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>printf Type Field Characters</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Type Character</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Argument</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Output format</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Character</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When used with <ph id="ph1">`printf`</ph> functions, specifies a single-byte character; when used with <ph id="ph2">`wprintf`</ph> functions, specifies a wide character.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Character</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>When used with <ph id="ph1">`printf`</ph> functions, specifies a wide character; when used with <ph id="ph2">`wprintf`</ph> functions, specifies a single-byte character.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Integer</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Signed decimal integer.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Integer</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Signed decimal integer.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Integer</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Unsigned octal integer.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Integer</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Unsigned decimal integer.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Integer</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Unsigned hexadecimal integer; uses "abcdef."</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Integer</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Unsigned hexadecimal integer; uses "ABCDEF."</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Floating-point</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Signed value that has the form [ – ]<ph id="ph1">`d`</ph><bpt id="p1">**</bpt>.<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>e [<bpt id="p1">*</bpt>sign<ept id="p1">*</ept>]<ph id="ph1">`dd[d]`</ph> where <ph id="ph2">`d`</ph> is one decimal digit, <ph id="ph3">`dddd`</ph> is one or more decimal digits, <ph id="ph4">`dd[d]`</ph> is two or three decimal digits depending on the <bpt id="p2">[</bpt>output format<ept id="p2">](../c-runtime-library/set-output-format.md)</ept> and size of the exponent, and <bpt id="p3">*</bpt>sign<ept id="p3">*</ept> is + or –.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Floating-point</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Identical to the <ph id="ph1">`e`</ph> format except that <bpt id="p1">**</bpt>E<ept id="p1">**</ept> rather than <bpt id="p2">**</bpt>e<ept id="p2">**</ept> introduces the exponent.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Floating-point</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Signed value that has the form [ – ]<ph id="ph1">`dddd`</ph><bpt id="p1">**</bpt>.<ept id="p1">**</ept><ph id="ph2">`dddd`</ph>, where <ph id="ph3">`dddd`</ph> is one or more decimal digits.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The number of digits before the decimal point depends on the magnitude of the number, and the number of digits after the decimal point depends on the requested precision.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Floating-point</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Signed values are displayed in <ph id="ph1">`f`</ph> or <ph id="ph2">`e`</ph> format, whichever is more compact for the given value and precision.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`e`</ph> format is used only when the exponent of the value is less than –4 or greater than or equal to the <ph id="ph2">`precision`</ph> argument.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Trailing zeros are truncated, and the decimal point appears only if one or more digits follow it.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Floating-point</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Identical to the <ph id="ph1">`g`</ph> format, except that <bpt id="p1">**</bpt>E<ept id="p1">**</ept>, rather than <bpt id="p2">**</bpt>e<ept id="p2">**</ept>, introduces the exponent (where appropriate).</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Floating-point</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Signed hexadecimal double-precision floating-point value that has the form [−]0x<bpt id="p1">*</bpt>h.hhhh<ept id="p1">*</ept> <bpt id="p2">**</bpt>p±<ept id="p2">**</ept><ph id="ph1">`dd`</ph>, where <bpt id="p3">*</bpt>h.hhhh<ept id="p3">*</ept> are the hex digits (using lower case letters) of the mantissa, and <ph id="ph2">`dd`</ph> are one or more digits for the exponent.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The precision specifies the number of digits after the point.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Floating-point</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Signed hexadecimal double-precision floating-point value that has the form [−]0X<bpt id="p1">*</bpt>h.hhhh<ept id="p1">*</ept> <bpt id="p2">**</bpt>P±<ept id="p2">**</ept><ph id="ph1">`dd`</ph>, where <bpt id="p3">*</bpt>h.hhhh<ept id="p3">*</ept> are the hex digits (using capital letters) of the mantissa, and <ph id="ph2">`dd`</ph> are one or more digits for the exponent.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The precision specifies the number of digits after the point.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Pointer to integer</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Number of characters that are successfully written so far to the stream or buffer.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>This value is stored in the integer whose address is given as the argument.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>See the Security Note later in this article.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Pointer type</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Displays the argument as an address in hexadecimal digits.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>String</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>When used with <ph id="ph1">`printf`</ph> functions, specifies a single-byte or multi-byte character string; when used with <ph id="ph2">`wprintf`</ph> functions, specifies a wide-character string.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Characters are displayed up to the first null character or until the <ph id="ph1">`precision`</ph> value is reached.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>String</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>When used with <ph id="ph1">`printf`</ph> functions, specifies a wide-character string; when used with <ph id="ph2">`wprintf`</ph> functions, specifies a single-byte or multi-byte character string.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Characters are displayed up to the first null character or until the <ph id="ph1">`precision`</ph> value is reached.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>or <ph id="ph1">`UNICODE_STRING`</ph> structure</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>When the address of an <bpt id="p1">[</bpt>ANSI_STRING<ept id="p1">](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx)</ept> or <bpt id="p2">[</bpt>UNICODE_STRING<ept id="p2">](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx)</ept> structure is passed as the argument, displays the string that's contained in the buffer that's pointed to by the <ph id="ph1">`Buffer`</ph> field of the structure.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Use a length modifier prefix of <ph id="ph1">`w`</ph> to specify a <ph id="ph2">`UNICODE_STRING`</ph> argument—for example, <ph id="ph3">`%wZ`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Length`</ph> field of the structure must be set to the length, in bytes, of the string.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`MaximumLength`</ph> field of the structure must be set to the length, in bytes, of the buffer.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Typically, the <ph id="ph1">`Z`</ph> type character is used only in driver debugging functions that use a format specification, such as <ph id="ph2">`dbgPrint`</ph> and <ph id="ph3">`kdPrint`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>If the argument that corresponds to a floating-point conversion specifier is infinite, indefinite, or NAN, the following table lists the formatted output.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Value</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Output</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>+ infinity</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>random-digits</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>– infinity</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>random-digits</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Indefinite (same as quiet NaN)</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>digit<ept id="p1">*</ept> <ph id="ph1">`.#IND`</ph> <bpt id="p2">*</bpt>random-digits<ept id="p2">*</ept></source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>NAN</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>digit<ept id="p1">*</ept> <ph id="ph1">`.#NAN`</ph> <bpt id="p2">*</bpt>random-digits<ept id="p2">*</ept></source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>If the the <ph id="ph1">`Buffer`</ph> field of the argument that corresponds to <ph id="ph2">`%Z`</ph>, or of the argument that corresponds to <ph id="ph3">`%s`</ph> or <ph id="ph4">`%S`</ph>, is a null pointer, "(null)" will be displayed.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>In all exponential formats, the default number of digits of exponent to display is three.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>By using the <bpt id="p1">[</bpt>_set_output_format<ept id="p1">](../c-runtime-library/set-output-format.md)</ept> function, you can set the number of digits displayed to two but expanding to three if demanded by the size of exponent.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`%n`</ph> format is inherently insecure, it is disabled by default.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`%n`</ph> is encountered in a format string, the invalid parameter handler is invoked, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>To enable <ph id="ph1">`%n`</ph> support, see <bpt id="p1">[</bpt>_set_printf_count_output<ept id="p1">](../c-runtime-library/reference/set-printf-count-output.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>printf, _printf_l, wprintf, _wprintf_l</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Format Specification Syntax: printf and wprintf Functions</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Flag Directives</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>printf Width Specification</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Precision Specification</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Size Specification</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>_set_output_format</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

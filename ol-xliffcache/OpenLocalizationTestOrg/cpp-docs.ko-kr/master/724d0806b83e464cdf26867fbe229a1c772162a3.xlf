@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">724d0806b83e464cdf26867fbe229a1c772162a3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\cimage-limitations-with-earlier-operating-systems.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1a3b6cfa970a4842eee3cde8ae90186773b6dee5</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7268962c2dfec553aa75b194dd89a88cc0f03795</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CImage Limitations with Earlier Operating Systems | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CImage Limitations with Earlier Operating Systems</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Many <ph id="ph1">`CImage`</ph> functions work only with newer versions of Windows: Windows 95/98 or Windows NT 4.0, or Windows 2000.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This article describes the version limitations of certain methods.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CImage::PlgBlt<ept id="p1">](../atl-mfc-shared/reference/cimage-class.md#cimage__plgblt)</ept> and <bpt id="p2">[</bpt>CImage::MaskBlt<ept id="p2">](../atl-mfc-shared/reference/cimage-class.md#cimage__maskblt)</ept> work with only Windows NT 4.0 or later.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>They will not work on applications running on Windows 95/98 or later.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CImage::AlphaBlend<ept id="p1">](../atl-mfc-shared/reference/cimage-class.md#cimage__alphablend)</ept> and <bpt id="p2">[</bpt>CImage::TransparentBlt<ept id="p2">](../atl-mfc-shared/reference/cimage-class.md#cimage__transparentblt)</ept> work with only Windows 2000 or later and Windows 98 or later because you must link with msimg32.lib to use these methods.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>(This library is available only to applications running Windows 2000 or later and Windows 98 or later.)</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You can include <ph id="ph1">`AlphaBlend`</ph> and <ph id="ph2">`TransparentBlt`</ph> in an application that runs on Windows 95 or Windows NT 4.0 only if these methods never get called.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If your application includes these methods, and it must run on earlier operating systems, you must use the linker's <bpt id="p1">[</bpt>/delayload<ept id="p1">](../build/reference/delayload-delay-load-import.md)</ept> to delay the loading of msimg32.lib.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>As long as your application does not call one of these methods while running under Windows NT 4.0 or Windows 95, it will not attempt to load msimg32.lib.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>You can check the whether transparency support is available using the <ph id="ph1">`CImage::IsTransparencySupported`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>NVC_MFCDocViewSDI#8</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To compile an application that calls these methods, insert a #define _WIN32_WINNT statement before #including any system headers, indicating that the version of Windows is equal to or greater than 5.0:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>NVC_MFCDocViewSDI#9</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If your application does not need to run on an operating system older than Windows 2000 or Windows 98, you can link directly to msimg32.lib without using <bpt id="p1">**</bpt>/delayload<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CImage::Draw<ept id="p1">](../atl-mfc-shared/reference/cimage-class.md#cimage__draw)</ept> behaves differently when used with Windows 2000 and Windows 98 than it does with Windows NT 4.0 or Windows 95.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If you compile your application with _WIN32_WINNT set to a value less than 0x0500, <bpt id="p1">**</bpt>Draw<ept id="p1">**</ept> will work, but it will not handle transparency automatically on systems running Windows 2000 and Windows 98 and later.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If you compile your application with _WIN32_WINNT set to 0x0500 or greater, <bpt id="p1">**</bpt>Draw<ept id="p1">**</ept> will handle transparency automatically on systems running Windows 2000 or Windows 98 and later.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>It will also work, but without transparency support, with Windows NT 4.0 and Windows 95; however, you must use <bpt id="p1">**</bpt>/delayload<ept id="p1">**</ept> to delay the loading of msimg32.LIB, as described above for <ph id="ph1">`AlphaBlend`</ph> and <ph id="ph2">`TransparentBlt`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>CImage Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
