@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0103f182de5d3424c9cd2edbe97b421d1d5c4c5c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\manifest-generation-in-visual-studio.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">30ba248aea7cf898ca8045091d59ef759179ecae</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8bbcff693428ca9887d717b9fad78e648033f1b9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Manifest Generation in Visual Studio | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Manifest Generation in Visual Studio</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Generation of a manifest file for a particular project can be controlled in the project <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Configuration Properties<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Linker<ept id="p2">**</ept>, then <bpt id="p3">**</bpt>Manifest File<ept id="p3">**</ept>, then <bpt id="p4">**</bpt>Generate Manifest<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>By default the project properties of new projects are set to generate a manifest file.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>However it is possible to disable generation of the manifest for a project using the <bpt id="p1">**</bpt>Generate Manifest<ept id="p1">**</ept> property of the project.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>When this property is set to <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept>, the manifest for this project is generated.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Otherwise the linker ignores assembly information when resolving dependencies of the application code, and does not generate the manifest.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The build system in Visual Studio allows the manifest to be embedded in the final binary application file, or generated as an external file.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This behavior is controlled by the <bpt id="p1">**</bpt>Embed Manifest<ept id="p1">**</ept> option in the <bpt id="p2">**</bpt>Project Properties<ept id="p2">**</ept> dialog.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>To set this property, open the <bpt id="p1">**</bpt>Manifest Tool<ept id="p1">**</ept> node, then select <bpt id="p2">**</bpt>Input and Output<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If the manifest is not embedded, it is generated as an external file and saved in the same directory as the final binary.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If the manifest is embedded, Visual Studio embeds the final manifests using the following process:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>After the source code is compiled to object files, the linker collects dependent assembly information.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>While linking the final binary, the linker generates an intermediate manifest that is used later to generate the final manifest.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>After the intermediate manifest and linking are finished, the manifest tool will be executed to merge a final manifest and save it as an external file.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The project build system then detects whether the manifest generated by the manifest tool contains different information than the manifest already embedded in the binary.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If the manifest embedded in the binary is different from the manifest generated by the manifest tool, or the binary does not contain an embedded manifest, Visual Studio will invoke the linker one more time to embed the external manifest file inside the binary as a resource.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If the manifest embedded in the binary is the same as the manifest generated by the manifest tool, the build will continue to the next build steps.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The manifest is embedded inside the final binary as a text resource and it can be viewed by opening the final binary as a file in Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To ensure that the manifest points to the correct libraries, follow the steps described in <bpt id="p1">[</bpt>Understanding the Dependencies of a Visual C++ Application<ept id="p1">](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)</ept> or follow the suggestions described in the <bpt id="p2">[</bpt>Troubleshooting<ept id="p2">](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)</ept> section.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>How to: Embed a Manifest Inside a C/C++ Application</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>About Private Assemblies</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Manifest Tool</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Understanding Manifest Generation for C/C++ Programs</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

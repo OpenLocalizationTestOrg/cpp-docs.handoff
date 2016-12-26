@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d4de22f2b85c8194e87151d1593cbc6a3ec4c4c8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\accessing-xml-data.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e48ccff9c96f96523ebcab1adbb8795e6e3d8566</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">18a01b5980611840409064f60ea7e3192dffb6a7</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Accessing XML Data | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Accessing XML Data</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>There are two separate methods of retrieving XML data from a data source: one uses <bpt id="p1">[</bpt>CStreamRowset<ept id="p1">](../../data/oledb/cstreamrowset-class.md)</ept> and the other uses <bpt id="p2">[</bpt>CXMLAccessor<ept id="p2">](../../data/oledb/cxmlaccessor-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Functionality</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>CStreamRowset</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>CXMLAccessor</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Amount of data transferred</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Retrieves data from all columns and rows at once.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Retrieves data from all columns but only one row at a time.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You must navigate rows using methods such as <ph id="ph1">`MoveNext`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Formatting the string</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>SQL Server formats the XML string and sends it to the consumer.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Retrieves rowset data in its native format (requests that the provider send it as Unicode strings) and then builds the string containing the data in XML format.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Control over formatting</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You have some level of control over how the XML string is formatted by setting some SQL Server 2000-specific properties.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You have no control over the format of the generated XML string.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>While <ph id="ph1">`CStreamRowset`</ph> provides a more overall efficient way of retrieving data in XML format, it is only supported by SQL Server 2000.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Retrieving XML Data Using CStreamRowset</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You specify <bpt id="p1">[</bpt>CStreamRowset<ept id="p1">](../../data/oledb/cstreamrowset-class.md)</ept> as the rowset type in your <ph id="ph1">`CCommand`</ph> or <ph id="ph2">`CTable`</ph> declaration.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>You can use it with your own accessor or no accessor, for example:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Normally when you call <ph id="ph1">`CCommand::Open`</ph> (specifying, for example, <ph id="ph2">`CRowset`</ph> as the <ph id="ph3">`TRowset`</ph> class), it obtains an <ph id="ph4">`IRowset`</ph>pointer.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>returns an <ph id="ph1">`IRowset`</ph>pointer, which is stored in the <ph id="ph2">`m_spRowset`</ph> member of the <ph id="ph3">`CRowset`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Methods such as <ph id="ph1">`MoveFirst`</ph>, <ph id="ph2">`MoveNext`</ph>, and <ph id="ph3">`GetData`</ph> use that pointer to retrieve the data.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>By contrast, when you call <ph id="ph1">`CCommand::Open`</ph> (but specify <ph id="ph2">`CStreamRowset`</ph> as the <ph id="ph3">`TRowset`</ph> class), <ph id="ph4">`ICommand::Execute`</ph> returns an <ph id="ph5">`ISequentialStream`</ph> pointer, which is stored in the <ph id="ph6">`m_spStream`</ph> data member of <bpt id="p1">[</bpt>CStreamRowset<ept id="p1">](../../data/oledb/cstreamrowset-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You then use the <ph id="ph1">`Read`</ph> method to retrieve the (Unicode string) data in XML format.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>SQL Server 2000 performs the XML formatting and returns all columns and all rows of the rowset as one XML string.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For an example using the <ph id="ph1">`Read`</ph> method, see "Adding XML Support to the Consumer" in <bpt id="p1">[</bpt>Implementing a Simple Consumer<ept id="p1">](../../data/oledb/implementing-a-simple-consumer.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>XML support using <ph id="ph1">`CStreamRowset`</ph> works with SQL Server 2000 only and requires that you have the OLE DB Provider for SQL Server 2000 (installed with MDAC).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Retrieving XML Data Using CXMLAccessor</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CXMLAccessor<ept id="p1">](../../data/oledb/cxmlaccessor-class.md)</ept> allows you to access data from a data source as string data when you have no knowledge of the data store's schema.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>works like <ph id="ph1">`CDynamicStringAccessorW`</ph> except that the former converts all data accessed from the data store as XML-formatted (tagged) data.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The XML tag names match the data store's column names as closely as possible.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`CXMLAccessor`</ph> as you would any other accessor class, passing it as a template parameter to <ph id="ph2">`CCommand`</ph> or <ph id="ph3">`CTable`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">[</bpt>GetXMLRowData<ept id="p1">](../../data/oledb/cxmlaccessor-getxmlrowdata.md)</ept> to retrieve data from the table one row at a time, and navigate rows using methods such as <ph id="ph1">`MoveNext`</ph>, for example:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>You can use <bpt id="p1">[</bpt>GetXMLColumnData<ept id="p1">](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)</ept> to retrieve the column (data type) information as XML-formatted string data.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Using Accessors</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

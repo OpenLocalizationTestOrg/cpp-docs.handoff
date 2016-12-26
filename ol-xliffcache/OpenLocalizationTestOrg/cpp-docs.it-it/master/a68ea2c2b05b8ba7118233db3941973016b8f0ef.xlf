@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a68ea2c2b05b8ba7118233db3941973016b8f0ef</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\virtual-functions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d1a72d8b6b5ddb991b568b0bc9b0d53ac9377bc9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1ab36d8b334bcbe43ecee13fef5bf497ed882ed1</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Virtual Functions | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Virtual Functions</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A virtual function is a member function that you expect to be redefined in derived classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class's version of the function.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Virtual functions ensure that the correct function is called for an object, regardless of the expression used to make the function call.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Suppose a base class contains a function declared as <bpt id="p1">[</bpt>virtual<ept id="p1">](../cpp/virtual-cpp.md)</ept> and a derived class defines the same function.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The function from the derived class is invoked for objects of the derived class, even if it is called using a pointer or reference to the base class.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The following example shows a base class that provides an implementation of the <ph id="ph1">`PrintBalance`</ph> function and two derived classes</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In the preceding code, the calls to <ph id="ph1">`PrintBalance`</ph> are identical, except for the object <ph id="ph2">`pAccount`</ph> points to.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Because <ph id="ph1">`PrintBalance`</ph> is virtual, the version of the function defined for each object is called.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`PrintBalance`</ph> function in the derived classes <ph id="ph2">`CheckingAccount`</ph> and <ph id="ph3">`SavingsAccount`</ph> "override" the function in the base class <ph id="ph4">`Account`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If a class is declared that does not provide an overriding implementation of the <ph id="ph1">`PrintBalance`</ph> function, the default implementation from the base class <ph id="ph2">`Account`</ph> is used.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Functions in derived classes override virtual functions in base classes only if their type is the same.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A function in a derived class cannot differ from a virtual function in a base class in its return type only; the argument list must differ as well.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>When calling a function using pointers or references, the following rules apply:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A call to a virtual function is resolved according to the underlying type of object for which it is called.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A call to a nonvirtual function is resolved according to the type of the pointer or reference.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following example shows how virtual and nonvirtual functions behave when called through pointers:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Output</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Note that regardless of whether the <ph id="ph1">`NameOf`</ph> function is invoked through a pointer to <ph id="ph2">`Base`</ph> or a pointer to <ph id="ph3">`Derived`</ph>, it calls the function for <ph id="ph4">`Derived`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>It calls the function for <ph id="ph1">`Derived`</ph> because <ph id="ph2">`NameOf`</ph> is a virtual function, and both <ph id="ph3">`pBase`</ph> and <ph id="ph4">`pDerived`</ph> point to an object of type <ph id="ph5">`Derived`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Because virtual functions are called only for objects of class types, you cannot declare global or static functions as <bpt id="p1">**</bpt>virtual<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>virtual<ept id="p1">**</ept> keyword can be used when declaring overriding functions in a derived class, but it is unnecessary; overrides of virtual functions are always virtual.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Virtual functions in a base class must be defined unless they are declared using the <bpt id="p1">*</bpt>pure-specifier<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>(For more information about pure virtual functions, see <bpt id="p1">[</bpt>Abstract Classes<ept id="p1">](../cpp/abstract-classes-cpp.md)</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The virtual function-call mechanism can be suppressed by explicitly qualifying the function name using the scope-resolution operator (<ph id="ph1">`::`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Consider the earlier example involving the <ph id="ph1">`Account`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To call <ph id="ph1">`PrintBalance`</ph> in the base class, use code such as the following:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Both calls to <ph id="ph1">`PrintBalance`</ph> in the preceding example suppress the virtual function-call mechanism.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

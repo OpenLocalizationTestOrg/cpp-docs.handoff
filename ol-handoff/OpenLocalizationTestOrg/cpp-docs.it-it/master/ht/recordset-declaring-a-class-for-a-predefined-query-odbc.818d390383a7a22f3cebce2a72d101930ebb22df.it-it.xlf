@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ff5d9d7e56ec68efd2ed76291c4ef429f8573f59</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\recordset-declaring-a-class-for-a-predefined-query-odbc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b399c4e3a1b4474d178e4d3a96e85a0ef65c1bd5</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ec523cd3511c0ae015baceb446307a4cdabf7fa3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Recordset: Declaring a Class for a Predefined Query (ODBC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Recordset: Declaring a Class for a Predefined Query (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic applies to the MFC ODBC classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic explains how to create a recordset class for a predefined query (sometimes called a stored procedure, as in Microsoft SQL Server).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This topic applies to objects derived from <ph id="ph1">`CRecordset`</ph> in which bulk row fetching has not been implemented.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If bulk row fetching is implemented, the process is very similar.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To understand the differences between recordsets that implement bulk row fetching and those that do not, see <bpt id="p1">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p1">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Some database management systems (DBMSs) allow you to create a predefined query and call it from your programs like a function.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The query has a name, might take parameters, and might return records.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The procedure in this topic describes how to call a predefined query that returns records (and perhaps takes parameters).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The database classes do not support updating predefined queries.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The difference between a snapshot predefined query and a dynaset predefined query is not updateability but whether changes made by other users (or other recordsets in your program) are visible in your recordset.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You do not need a recordset to call a predefined query that does not return records.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Prepare the SQL statement as described below, but execute it by calling the <ph id="ph1">`CDatabase`</ph> member function <bpt id="p1">[</bpt>ExecuteSQL<ept id="p1">](../../mfc/reference/cdatabase-class.md#cdatabase__executesql)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You can create a single recordset class to manage calling a predefined query, but you must do some of the work yourself.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The wizards do not support creating a class specifically for this purpose.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To create a class for calling a predefined query (stored procedure)</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>MFC ODBC Consumer Wizard<ept id="p1">](../../mfc/reference/adding-an-mfc-odbc-consumer.md)</ept> from <bpt id="p2">**</bpt>Add Class<ept id="p2">**</ept> to create a recordset class for the table that contributes the most columns returned by the query.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This gives you a head start.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Manually add field data members for any columns of any tables that the query returns but that the wizard did not create for you.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For example, if the query returns three columns each from two additional tables, add six field data members (of the appropriate data types) to the class.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Manually add <bpt id="p1">[</bpt>RFX<ept id="p1">](../../data/odbc/record-field-exchange-rfx.md)</ept> function calls in the <bpt id="p2">[</bpt>DoFieldExchange<ept id="p2">](../../mfc/reference/crecordset-class.md#crecordset__dofieldexchange)</ept> member function of the class, one corresponding to the data type of each added field data member.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You must know the data types and the order of columns returned in the result set.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The order of RFX function calls in <ph id="ph1">`DoFieldExchange`</ph> must match the order of result set columns.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Manually add initializations for the new field data members in the recordset class constructor.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You must also increment the initialization value for the <bpt id="p1">[</bpt>m_nFields<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__m_nfields)</ept> data member.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The wizard writes the initialization, but it only covers the field data members it adds for you.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Some data types should not be initialized here, for example, <ph id="ph1">`CLongBinary`</ph> or byte arrays.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If the query takes parameters, add a parameter data member for each parameter, an RFX function call for each, and an initialization for each.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You must increment <ph id="ph1">`m_nParams`</ph> for each added parameter, as you did <ph id="ph2">`m_nFields`</ph> for added fields in step 4 of this procedure.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Recordset: Parameterizing a Recordset (ODBC)<ept id="p1">](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Manually write a SQL statement string with the following form:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>where <bpt id="p1">**</bpt>CALL<ept id="p1">**</ept> is an ODBC keyword, <bpt id="p2">**</bpt>proc-name<ept id="p2">**</ept> is the name of the query as it is known on the data source, and the "?" items are placeholders for the parameter values you supply to the recordset at run time (if any).</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The following example prepares a placeholder for one parameter:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In the code that opens the recordset, set the values of the recordset's parameter data members and then call the <bpt id="p1">**</bpt>Open<ept id="p1">**</ept> member function, passing your SQL string for the <bpt id="p2">**</bpt>lpszSQL<ept id="p2">**</ept> parameter.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Or instead, replace the string returned by the <ph id="ph1">`GetDefaultSQL`</ph> member function in your class.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The following examples show the procedure for calling a predefined query, named <ph id="ph1">`Delinquent_Accts`</ph>, which takes one parameter for a sales district number.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>This query returns three columns: <ph id="ph1">`Acct_No`</ph>, <ph id="ph2">`L_Name`</ph>, <ph id="ph3">`Phone`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>All columns are from the Customers table.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The following recordset specifies field data members for the columns the query returns and a parameter for the sales district number requested at run time.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This class declaration is as the wizard writes it, except for the <ph id="ph1">`m_lDistParam`</ph> member added manually.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Other members are not shown here.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The next example shows the initializations for the data members in the <ph id="ph1">`CDelinquents`</ph> constructor.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Note the initializations for <bpt id="p1">[</bpt>m_nFields<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__m_nfields)</ept> and <bpt id="p2">[</bpt>m_nParams<ept id="p2">](../../mfc/reference/crecordset-class.md#crecordset__m_nparams)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The wizard initializes <ph id="ph1">`m_nFields`</ph>; you initialize <ph id="ph2">`m_nParams`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The next example shows the RFX functions in <ph id="ph1">`CDelinquents::DoFieldExchange`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Besides making the RFX calls for the three returned columns, this code manages binding the parameter you pass at run time.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The parameter is keyed to the <ph id="ph1">`Dist_No`</ph> (district number) column.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The next example shows how to set up the SQL string and how to use it to open the recordset.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>This code constructs a snapshot, passes it a parameter obtained earlier from the user, and calls the predefined query.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>When the query runs, it returns records for the specified sales district.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Each record contains columns for the account number, customer's last name, and customer's phone number.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>You might want to handle a return value (output parameter) from a stored procedure.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>For more information and an example, see <bpt id="p1">[</bpt>CFieldExchange::SetFieldType<ept id="p1">](../../mfc/reference/cfieldexchange-class.md#cfieldexchange__setfieldtype)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Recordset: Requerying a Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Recordset: Declaring a Class for a Table (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Recordset: Performing a Join (ODBC)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

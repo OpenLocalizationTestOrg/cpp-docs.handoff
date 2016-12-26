@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3df92bd7347f2b082e42c20302bbd3dd05fc6309</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\updating-rowsets.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">21df9b7bf9f162b25c61e5e9abf22c627da91f20</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7ac988905a9fc93574e60c2c2ac6a2a4dd8282eb</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Updating Rowsets | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Updating Rowsets</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A very basic database operation is to update, or write data to, the data store.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In OLE DB, the update mechanism is simple: your consumer application sets the values of bound data members and then writes those values to the rowset; the consumer then requests that the provider update the data store.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Consumers can perform the following kinds of updates on rowset data: setting column values within a row, inserting a row, and deleting a row.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To perform these operations, the OLE DB Template class <bpt id="p1">[</bpt>CRowset<ept id="p1">](../../data/oledb/crowset-class.md)</ept> implements the <bpt id="p2">[</bpt>IRowsetChange<ept id="p2">](https://msdn.microsoft.com/en-us/library/ms715790.aspx)</ept> interface and overrides the following interface methods:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>SetData<ept id="p1">](../../data/oledb/crowset-setdata.md)</ept> changes column values in a row of a rowset; it is equivalent to the SQL UPDATE command.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Insert<ept id="p1">](../../data/oledb/crowset-insert.md)</ept> inserts a row into a rowset; it is equivalent to the SQL INSERT command.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Delete<ept id="p1">](../../data/oledb/crowset-delete.md)</ept> deletes rows from a rowset; it is equivalent to the SQL DELETE command.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Supporting Update Operations</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When you create a consumer with the ATL OLE DB Consumer Wizard, you can support the update operations by selecting one or more of the three check boxes <bpt id="p1">**</bpt>Change<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Insert<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>Delete<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If you select these, the wizard modifies the code appropriately to support the type of changes you choose.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>However, if you do not use the wizard, you need to set the following rowset properties to <ph id="ph1">`VARIANT_TRUE`</ph> to support updates:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>DBPROPVAL_UP_CHANGE<ept id="p1">**</ept> allows you to change the data values in a row.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>DBPROPVAL_UP_INSERT<ept id="p1">**</ept> allows you to insert a row.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>DBPROPVAL_UP_DELETE<ept id="p1">**</ept> allows you to delete a row.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>You set the properties as follows:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Change, insert, or delete operations might fail if one or more columns is not writable.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Modify your cursor map to correct this.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Setting Data in Rows</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CRowset::SetData<ept id="p1">](../../data/oledb/crowset-setdata.md)</ept> sets data values in one or more columns of the current row.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The following code sets the values of data members bound to the columns "Name" and "Units in Stock" of the table Products and then calls <ph id="ph1">`SetData`</ph> to write those values to the 100th row of the rowset:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Inserting Rows into Rowsets</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CRowset::Insert<ept id="p1">](../../data/oledb/crowset-insert.md)</ept> creates and initializes a new row using data from the accessor.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Insert<ept id="p1">**</ept> creates an entirely new row after the current row; you need to specify whether to increment the current row to the next row or leave it unchanged.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You do this by setting the <bpt id="p1">*</bpt>bGetRow<ept id="p1">*</ept> parameter:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>false<ept id="p1">**</ept> (the default value) specifies that the current row increment to the next row (in which case it points to the inserted row).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>true<ept id="p1">**</ept> specifies that the current row remain where it is.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The following code sets the values of data members bound to the columns of the table Products and then calls <bpt id="p1">**</bpt>Insert<ept id="p1">**</ept> to insert a new row with those values after the 100th row of the rowset.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>It is recommended that you set all column values to avoid undefined data in the new row:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For a more detailed example, see <bpt id="p1">[</bpt>CRowset::Insert<ept id="p1">](../../data/oledb/crowset-insert.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information about setting the status and length data members, see <bpt id="p1">[</bpt>Field Status Data Members in Wizard-Generated Accessors<ept id="p1">](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Deleting Rows from Rowsets</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CRowset::Delete<ept id="p1">](../../data/oledb/crowset-delete.md)</ept> deletes the current row from the rowset.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The following code calls <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> to remove the 100th row of the rowset:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Immediate and Deferred Updates</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Unless you specify otherwise, calls to the <ph id="ph1">`SetData`</ph>, <bpt id="p1">**</bpt>Insert<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> methods update the data store immediately.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You can, however, defer updates so that the consumer stores all changes in a local cache and then transfers them to the data store when you call one of the following update methods:</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CRowset::Update<ept id="p1">](../../data/oledb/crowset-update.md)</ept> transfers any pending changes made to the current row since the last fetch or <bpt id="p2">**</bpt>Update<ept id="p2">**</ept> call on it.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CRowset::UpdateAll<ept id="p1">](../../data/oledb/crowset-updateall.md)</ept> transfers any pending changes made to all rows since the last fetch or <bpt id="p2">**</bpt>Update<ept id="p2">**</ept> call on it.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Note that update, as used by the update methods, has the specific meaning of making changes on command and is not to be confused with the SQL UPDATE command (<ph id="ph1">`SetData`</ph> is equivalent to the SQL UPDATE command).</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Deferred updates are useful, for example, in situations such as a series of banking transactions; if one transaction is canceled, you can undo the change, because you do not send the series of changes until after the last one is committed.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Also, the provider can bundle the changes into one network call, which is more efficient.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>To support deferred updates, you must set the <bpt id="p1">**</bpt>DBPROP_IRowsetChange<ept id="p1">**</ept> property in addition to the properties described in "Supporting Update Operations":</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>When you call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> or <ph id="ph1">`UpdateAll`</ph>, the methods transfer changes from the local cache to the data store and then wipe out the local cache.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Because update transfers changes only for the current row, it is important that your application keep track of which row to update and when to update it.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The following example shows how to update two consecutive rows:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>To ensure that pending changes are transferred, you should call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> before moving to another row.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>However, when this is tedious or inefficient, for example, when your application needs to update hundreds of rows, you can use <ph id="ph1">`UpdateAll`</ph> to update all the rows at once.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For example, if the first <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> call were missing from the above code, row 100 would remain unchanged, while row 101 would be changed.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>After that point, your application would either have to call <ph id="ph1">`UpdateAll`</ph> or move back to row 100 and call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> for that row to be updated.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Finally, one main reason to defer changes is to be able to undo them.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Calling <bpt id="p1">[</bpt>CRowset::Undo<ept id="p1">](../../data/oledb/crowset-undo.md)</ept> rolls back the state of the local change cache to the state of the data store before any pending changes were made.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>It is important to note that <bpt id="p1">**</bpt>Undo<ept id="p1">**</ept> does not roll back the state of the local cache by one step (the state before only the latest change); instead, it clears the local cache for that row.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Also, <bpt id="p1">**</bpt>Undo<ept id="p1">**</ept> affects only the current row.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Working with OLE DB Consumer Templates</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>CRowset Class</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>IRowsetChange</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b20e3d73099db09ab1b21e40f035e0f457ab5070</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\for-statement-c.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1bdc5415689676906d5cc328f461da38a1658311</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d22863c1a0793c2f9b60b93eb19a86b0c694d743</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>for Statement (C) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>for Statement (C)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`for`</ph> statement lets you repeat a statement or compound statement a specified number of times.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The body of a <ph id="ph1">`for`</ph> statement is executed zero or more times until an optional condition becomes false.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You can use optional expressions within the <ph id="ph1">`for`</ph> statement to initialize and change values during the <ph id="ph2">`for`</ph> statement's execution.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>iteration-statement<ept id="p1">*</ept>:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>( <ph id="ph1">`init-expression`</ph>opt ; <ph id="ph2">`cond-expression`</ph>opt ; <ph id="ph3">`loop-expression`</ph>opt )</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Execution of a <ph id="ph1">`for`</ph> statement proceeds as follows:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`init-expression`</ph>, if any, is evaluated.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This specifies the initialization for the loop.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>There is no restriction on the type of <ph id="ph1">`init-expression`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`cond-expression`</ph>, if any, is evaluated.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This expression must have arithmetic or pointer type.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It is evaluated before each iteration.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Three results are possible:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`cond-expression`</ph> is true (nonzero), <ph id="ph2">`statement`</ph> is executed; then <ph id="ph3">`loop-expression`</ph>, if any, is evaluated.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`loop-expression`</ph> is evaluated after each iteration.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>There is no restriction on its type.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Side effects will execute in order.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The process then begins again with the evaluation of <ph id="ph1">`cond-expression`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`cond-expression`</ph> is omitted, <ph id="ph2">`cond-expression`</ph> is considered true, and execution proceeds exactly as described in the previous paragraph.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`for`</ph> statement without a <ph id="ph2">`cond-expression`</ph> argument terminates only when a <ph id="ph3">`break`</ph> or <ph id="ph4">`return`</ph> statement within the statement body is executed, or when a <ph id="ph5">`goto`</ph> (to a labeled statement outside the <ph id="ph6">`for`</ph> statement body) is executed.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`cond-expression`</ph> is <ph id="ph2">`false`</ph> (0), execution of the <ph id="ph3">`for`</ph> statement terminates and control passes to the next statement in the program.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`for`</ph> statement also terminates when a <ph id="ph2">`break`</ph>, <ph id="ph3">`goto`</ph>, or <ph id="ph4">`return`</ph> statement within the statement body is executed.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`continue`</ph> statement in a <ph id="ph2">`for`</ph> loop causes <ph id="ph3">`loop-expression`</ph> to be evaluated.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>When a <ph id="ph1">`break`</ph> statement is executed inside a <ph id="ph2">`for`</ph> loop, <ph id="ph3">`loop-expression`</ph> is not evaluated or executed.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>This statement</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>is the customary way to produce an infinite loop which can only be exited with a <ph id="ph1">`break`</ph>, <ph id="ph2">`goto`</ph>, or <ph id="ph3">`return`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Code</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This example illustrates the <ph id="ph1">`for`</ph> statement:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Output</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Statements</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

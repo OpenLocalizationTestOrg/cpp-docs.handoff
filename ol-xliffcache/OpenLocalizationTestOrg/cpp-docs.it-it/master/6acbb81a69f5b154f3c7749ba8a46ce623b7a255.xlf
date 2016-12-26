@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6acbb81a69f5b154f3c7749ba8a46ce623b7a255</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\structured-exception-handling-c-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">97a0d72fa90e0b1b7365a6ba184f885efab05754</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7d391d9f6b903d724d47700aa4b13696069b2b07</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Structured Exception Handling (C-C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Structured Exception Handling (C/C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Although Windows and Visual C++ support structured exception handling (SEH), we recommend that you use ISO-standard C++ exception handling because it makes code more portable and flexible.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Nevertheless, in existing code or for particular kinds of programs, you still might have to use SEH.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Grammar</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>try-except-statement<ept id="p1">*</ept> :</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>compound-statement</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>( <ph id="ph1">`expression`</ph> ) <bpt id="p1">*</bpt>compound-statement<ept id="p1">*</ept></source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>With SEH, you can ensure that resources such as memory blocks and files are correctly if execution unexpectedly terminates.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>You can also handle specific problems—for example, insufficient memory—by using concise structured code that does not rely on <ph id="ph1">`goto`</ph> statements or elaborate testing of return codes.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The try-except and try-finally statements referred to in this article are Microsoft extensions to the C language.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>They support SEH by enabling applications to gain control of a program after events that would otherwise terminate execution.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Although SEH works with C++ source files, it's not specifically designed for C++.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you use SEH in a C++ program that you compile by using the <bpt id="p1">[</bpt>/EH<ept id="p1">](../build/reference/eh-exception-handling-model.md)</ept> option—together with certain modifiers—destructors for local objects are called but other execution behavior might not be what you expect.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>(For an illustration, see the example later in this article.) In most cases, instead of SEH we recommend that you use ISO-standard <bpt id="p1">[</bpt>C++ exception handling<ept id="p1">](../cpp/try-throw-and-catch-statements-cpp.md)</ept>, which Visual C++ also supports.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>By using C++ exception handling, you can ensure that your code is more portable, and you can handle exceptions of any type.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If you have C modules that use SEH, you can mix them with C++ modules that use C++ exception handling.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For information, see <bpt id="p1">[</bpt>Exception Handling Differences<ept id="p1">](../cpp/exception-handling-differences.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>There are two SEH mechanisms:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Exception handlers<ept id="p1">](../cpp/writing-an-exception-handler.md)</ept>, which can respond to or dismiss the exception.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Termination handlers<ept id="p1">](../cpp/writing-a-termination-handler.md)</ept>, which are called when an exception causes termination in a block of code.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>These two kinds of handlers are distinct, but are closely related through a process known as "unwinding the stack."</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>When an exception occurs, Windows looks for the most recently installed exception handler that is currently active.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The handler can do one of three things:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Fail to recognize the exception and pass control to other handlers.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Recognize the exception but dismiss it.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Recognize the exception and handle it.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The exception handler that recognizes the exception may not be in the function that was running when the exception occurred.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In some cases, it may be in a function much higher on the stack.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The currently running function and all other functions on the stack frame are terminated.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>During this process, the stack is "unwound;" that is, local variables of terminated functions—unless they are <ph id="ph1">`static`</ph>—are cleared from the stack.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>As it unwinds the stack, the operating system calls any termination handlers that you've written for each function.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>By using a termination handler, you can clean up resources that otherwise would remain open because of an abnormal termination.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If you've entered a critical section, you can exit in the termination handler.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If the program is going to shut down, you can perform other housekeeping tasks such as closing and removing temporary files.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For more information, see:</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Writing an Exception Handler</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Writing a Termination Handler</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Using Structured Exception Handling with C++</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>As stated earlier, destructors for local objects are called if you use SEH in a C++ program and compile it by using the <bpt id="p1">**</bpt>/EH<ept id="p1">**</ept> option with certain modifiers—for example, <bpt id="p2">**</bpt>/EHsc<ept id="p2">**</ept> and <bpt id="p3">**</bpt>/EHa<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>However, the behavior during execution may not be what you expect if you are also using C++ exceptions.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates these behavioral differences.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If you use <bpt id="p1">**</bpt>/EHsc<ept id="p1">**</ept> to compile this code but the local test control <ph id="ph1">`CPPEX`</ph> is undefined, there is no execution of the <ph id="ph2">`TestClass`</ph> destructor and the output looks like this:</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If you use <bpt id="p1">**</bpt>/EHsc<ept id="p1">**</ept> to compile the code and <ph id="ph1">`CPPEX`</ph> is defined by using <ph id="ph2">`/DCPPEX`</ph> (so that a C++ exception is thrown), the <ph id="ph3">`TestClass`</ph> destructor executes and the output looks like this:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>If you use <bpt id="p1">**</bpt>/EHa<ept id="p1">**</ept> to compile the code, the <ph id="ph1">`TestClass`</ph> destructor executes regardless of whether the exception was thrown by using <ph id="ph2">`std::throw`</ph> or by using SEH to trigger the exception (<ph id="ph3">`CPPEX`</ph> defined or not).</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The output looks like this:</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/EH (Exception Handling Model)<ept id="p1">](../build/reference/eh-exception-handling-model.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Keywords</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>exception&gt;</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Errors and Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Structured Exception Handling (Windows)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

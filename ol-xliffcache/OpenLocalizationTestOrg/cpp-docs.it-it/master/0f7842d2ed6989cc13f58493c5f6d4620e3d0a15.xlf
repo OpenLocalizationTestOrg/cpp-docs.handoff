@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0f7842d2ed6989cc13f58493c5f6d4620e3d0a15</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\constexpr-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0b322c6be039b7fd7361babf97210d73c5bbe284</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d182c73e247656e09fd4818df0f3e0172c217d31</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>constexpr (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>constexpr (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The keyword <ph id="ph1">`constexpr`</ph> was introduced in C++11 and improved in C++14.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It means <bpt id="p1">*</bpt>constant expression<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Like <ph id="ph1">`const`</ph>, it can be applied to variables so that a compiler error will be raised if any code attempts to modify the value.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Unlike <ph id="ph1">`const`</ph>, <ph id="ph2">`constexpr`</ph> can also be applied to functions and class constructors.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>indicates that the value, or return value, is constant and, if possible, will be computed at compile time.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`constexpr`</ph> integral value can be used wherever a const integer is required, such as in template arguments and array declarations.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>And when a value can be computed at compile time instead of run time, it can help your program can run faster and use less memory.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>One or more parameters which must be a literal type (as listed below) and must itself be a constant expression.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A constexpr variable or function must return one of the literal types, as listed below.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Literal types</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To limit the complexity of computing compile time constants, and their potential impacts of compilation time, the C++14 standard requires that the types involved in constant expressions be restricted to literal types.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A literal type is one whose layout can be determined at compile time.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following are the literal types:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>void</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>scalar types</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>references</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Arrays of void, scalar types or references</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>A class that has a trivial destructor, and one or more constexpr constructors that are not move or copy constructors.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Additionally, all its non-static data members and base classes must be literal types and not volatile.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>constexpr variables</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The primary difference between const and constexpr variables is that the initialization of a const variable can be deferred until run time whereas a constexpr variable must be initialized at compile time.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>All constexpr variables are const.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>constexpr functions</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`constexpr`</ph> function is one whose return value can be computed at compile when consuming code requires it.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`constexpr`</ph> function must accept and return only literal types.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>When its arguments are <ph id="ph1">`constexpr`</ph> values, and consuming code requires the return value at compile time, for example to initialize a <ph id="ph2">`constexpr`</ph> variable or provide a non-type template argument, it produces a compile-time constant.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>When called with non-<ph id="ph1">`constexpr`</ph> arguments, or when its value is not required at compile-time, it produces a value at run time like a regular function.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>(This dual behavior saves you from having to write <ph id="ph1">`constexpr`</ph> and non-<ph id="ph2">`constexpr`</ph> versions of the same function.)</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Note: In the Visual Studio debugger, you can tell whether a <ph id="ph1">`constexpr`</ph> function is being evaluated at compile time by putting a breakpoint inside it.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If the breakpoint is hit, the function was called at run-time.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If not, then the function was called at compile time.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>General constexpr rules</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For a function, variable, constructor or static data member to be defined as <ph id="ph1">`constexpr`</ph>, it must meet certain requirements:</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`constexpr`</ph> function can be recursive.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>It cannot be <bpt id="p1">[</bpt>virtual<ept id="p1">](../cpp/virtual-cpp.md)</ept>, and its return type and parameter types must all be literal types.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The body can be defined as <ph id="ph1">`= default`</ph> or <ph id="ph2">`= delete`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Otherwise it must follow these rules: it contains no <ph id="ph1">`goto`</ph> statements, try blocks, unitialized variables, or variable definitions that are not literal types, or that are static or thread-local.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Additionally, a constructor cannot be defined as constexpr if the enclosing class has any virtual base classes.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>A variable can be declared with <ph id="ph1">`constexpr`</ph>, if it has a literal type and is initialized.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>If the initialization is performed by a constructor, the constructor must be declared as <ph id="ph1">`constexpr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>A reference may be declared as constexpr if the object that it references has been initialized by a constant expression and any implicit conversions that are invoked during initialization are also constant expressions.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>All declarations of a <ph id="ph1">`constexpr`</ph> variable or function must have the <ph id="ph2">`constexpr`</ph> specifier.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>An explicit specialization of a non-constexpr template can be declared as <ph id="ph1">`constexpr`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>An explicit specialization of a <ph id="ph1">`constexpr`</ph> template does not have to also be <ph id="ph2">`constexpr`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`constexpr`</ph> function or constructor is implicitly <ph id="ph2">`inline`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The following example shows <ph id="ph1">`constexpr`</ph> variables, functions and a user-defined type.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Note that in the last statement in main(), the <ph id="ph1">`constexpr`</ph> member function GetValue() is a run-time call because the value is not required to be known at compile time.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Visual Studio 2015</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Declarations and Definitions</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>const</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

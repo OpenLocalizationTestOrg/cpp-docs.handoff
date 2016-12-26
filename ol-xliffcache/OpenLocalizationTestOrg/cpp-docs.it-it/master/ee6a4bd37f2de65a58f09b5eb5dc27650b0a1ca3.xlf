@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ee6a4bd37f2de65a58f09b5eb5dc27650b0a1ca3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\2-7-2-8-copyprivate.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6b8df71012b02b1849aadd2e41bbead5e61bcf85</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">446078b102dc159e223bdf5865b6ec6533728002</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>2.7.2.8 copyprivate | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>2.7.2.8 copyprivate</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>copyprivate<ept id="p1">**</ept> clause provides a mechanism to use a private variable to broadcast a value from one member of a team to the other members.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It is an alternative to using a shared variable for the value when providing such a shared variable would be difficult (for example, in a recursion requiring a different variable at each level).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>copyprivate<ept id="p1">**</ept> clause can only appear on the <bpt id="p2">**</bpt>single<ept id="p2">**</ept> directive.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The syntax of the <bpt id="p1">**</bpt>copyprivate<ept id="p1">**</ept> clause is as follows:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The effect of the <bpt id="p1">**</bpt>copyprivate<ept id="p1">**</ept> clause on the variables in its variable-list occurs after the execution of the structured block associated with the <bpt id="p2">**</bpt>single<ept id="p2">**</ept> construct, and before any of the threads in the team have left the barrier at the end of the construct.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Then, in all other threads in the team, for each variable in the <bpt id="p1">*</bpt>variable-list<ept id="p1">*</ept>, that variable becomes defined (as if by assignment) with the value of the corresponding variable in the thread that executed the construct's structured block.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Restrictions to the <bpt id="p1">**</bpt>copyprivate<ept id="p1">**</ept> clause are as follows:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A variable that is specified in the <bpt id="p1">**</bpt>copyprivate<ept id="p1">**</ept> clause must not appear in a <bpt id="p2">**</bpt>private<ept id="p2">**</ept> or <bpt id="p3">**</bpt>firstprivate<ept id="p3">**</ept> clause for the same <bpt id="p4">**</bpt>single<ept id="p4">**</ept> directive.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If a <bpt id="p1">**</bpt>single<ept id="p1">**</ept> directive with a <bpt id="p2">**</bpt>copyprivate<ept id="p2">**</ept> clause is encountered in the dynamic extent of a parallel region, all variables specified in the <bpt id="p3">**</bpt>copyprivate<ept id="p3">**</ept> clause must be private in the enclosing context.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A variable that is specified in the <bpt id="p1">**</bpt>copyprivate<ept id="p1">**</ept> clause must have an accessible unambiguous copy assignment operator.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

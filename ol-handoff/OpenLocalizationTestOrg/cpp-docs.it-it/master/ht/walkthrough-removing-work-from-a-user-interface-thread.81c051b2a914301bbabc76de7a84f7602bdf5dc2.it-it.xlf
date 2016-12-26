@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8dceb0f9963d703b36f28a84f66f85d58683d3ca</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\walkthrough-removing-work-from-a-user-interface-thread.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">acc012d15c56804d71d0634aac6e99897e94cc6a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">523125992ffb386c030a6b51811fa08d6ce2ae4e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Removing Work from a User-Interface Thread | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Removing Work from a User-Interface Thread</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document demonstrates how to use the Concurrency Runtime to move the work that is performed by the user-interface (UI) thread in a Microsoft Foundation Classes (MFC) application to a worker thread.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This document also demonstrates how to improve the performance of a lengthy drawing operation.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Removing work from the UI thread by offloading blocking operations, for example, drawing, to worker threads can improve the responsiveness of your application.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This walkthrough uses a drawing routine that generates the Mandelbrot fractal to demonstrate a lengthy blocking operation.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The generation of the Mandelbrot fractal is also a good candidate for parallelization because the computation of each pixel is independent of all other computations.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Read the following topics before you start this walkthrough:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Task Parallelism</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Asynchronous Message Blocks</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Message Passing Functions</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>We also recommend that you understand the basics of MFC application development and <ph id="ph1">[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)]</ph> before you start this walkthrough.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information about MFC, see <bpt id="p1">[</bpt>MFC Desktop Applications<ept id="p1">](../../mfc/mfc-desktop-applications.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For more information about <ph id="ph1">[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)]</ph>, see <bpt id="p1">[</bpt>GDI+<ept id="p1">](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Sections</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This walkthrough contains the following sections:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Creating the MFC Application</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Implementing the Serial Version of the Mandelbrot Application</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Removing Work from the User-Interface Thread</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Improving Drawing Performance</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Adding Support for Cancellation</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Creating the MFC Application</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This section describes how to create the basic MFC application.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To create a Visual C++ MFC application</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>New<ept id="p2">**</ept>, and then click <bpt id="p3">**</bpt>Project<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>New Project<ept id="p1">**</ept> dialog box, in the <bpt id="p2">**</bpt>Installed Templates<ept id="p2">**</ept> pane, select <bpt id="p3">**</bpt>Visual C++<ept id="p3">**</ept>, and then, in the <bpt id="p4">**</bpt>Templates<ept id="p4">**</ept> pane, select <bpt id="p5">**</bpt>MFC Application<ept id="p5">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Type a name for the project, for example, <ph id="ph1">`Mandelbrot`</ph>, and then click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept> to display the <bpt id="p2">**</bpt>MFC Application Wizard<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Application Type<ept id="p1">**</ept> pane, select <bpt id="p2">**</bpt>Single document<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Ensure that the <bpt id="p1">**</bpt>Document/View architecture support<ept id="p1">**</ept> check box is cleared.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Finish<ept id="p1">**</ept> to create the project and close the <bpt id="p2">**</bpt>MFC Application Wizard<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Verify that the application was created successfully by building and running it.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>To build the application, on the <bpt id="p1">**</bpt>Build<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Build Solution<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If the application builds successfully, run the application by clicking <bpt id="p1">**</bpt>Start Debugging<ept id="p1">**</ept> on the <bpt id="p2">**</bpt>Debug<ept id="p2">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Implementing the Serial Version of the Mandelbrot Application</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This section describes how to draw the Mandelbrot fractal.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>This version draws the Mandelbrot fractal to a <ph id="ph1">[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)]</ph> <bpt id="p1">[</bpt>Bitmap<ept id="p1">](https://msdn.microsoft.com/library/ms534420.aspx)</ept> object and then copies the contents of that bitmap to the client window.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To implement the serial version of the Mandelbrot application</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>In stdafx.h, add the following <ph id="ph1">`#include`</ph> directive:</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#1</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>In ChildView.h, after the <ph id="ph1">`pragma`</ph> directive, define the <ph id="ph2">`BitmapPtr`</ph> type.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`BitmapPtr`</ph> type enables a pointer to a <ph id="ph2">`Bitmap`</ph> object to be shared by multiple components.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Bitmap`</ph> object is deleted when it is no longer referenced by any component.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#2</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>In ChildView.h, add the following code to the <ph id="ph1">`protected`</ph> section of the <ph id="ph2">`CChildView`</ph> class:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#3</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>In ChildView.cpp, comment out or remove the following lines.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#4</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>In Debug builds, this step prevents the application from using the <ph id="ph1">`DEBUG_NEW`</ph> allocator, which is incompatible with <ph id="ph2">[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>In ChildView.cpp, add a <ph id="ph1">`using`</ph> directive to the <ph id="ph2">`Gdiplus`</ph> namespace.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#5</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Add the following code to the constructor and destructor of the <ph id="ph1">`CChildView`</ph> class to initialize and shut down <ph id="ph2">[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#6</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Implement the <ph id="ph1">`CChildView::DrawMandelbrot`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>This method draws the Mandelbrot fractal to the specified <ph id="ph1">`Bitmap`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#7</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Implement the <ph id="ph1">`CChildView::OnPaint`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>This method calls <ph id="ph1">`CChildView::DrawMandelbrot`</ph> and then copies the contents of the <ph id="ph2">`Bitmap`</ph> object to the window.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#8</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Verify that the application was updated successfully by building and running it.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the results of the Mandelbrot application.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The Mandelbrot Application</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Because the computation for each pixel is computationally expensive, the UI thread cannot process additional messages until the overall computation finishes.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>This could decrease responsiveness in the application.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>However, you can relieve this problem by removing work from the UI thread.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Removing Work from the UI Thread</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>This section shows how to remove the drawing work from the UI thread in the Mandelbrot application.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>By moving drawing work from the UI thread to a worker thread, the UI thread can process messages as the worker thread generates the image in the background.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime provides three ways to run tasks: <bpt id="p1">[</bpt>task groups<ept id="p1">](../../parallel/concrt/task-parallelism-concurrency-runtime.md)</ept>, <bpt id="p2">[</bpt>asynchronous agents<ept id="p2">](../../parallel/concrt/asynchronous-agents.md)</ept>, and <bpt id="p3">[</bpt>lightweight tasks<ept id="p3">](../../parallel/concrt/task-scheduler-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Although you can use any one of these mechanisms to remove work from the UI thread, this example uses a <bpt id="p1">[</bpt>concurrency::task_group<ept id="p1">](reference/task-group-class.md)</ept> object because task groups support cancellation.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>This walkthrough later uses cancellation to reduce the amount of work that is performed when the client window is resized, and to perform cleanup when the window is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>This example also uses a <bpt id="p1">[</bpt>concurrency::unbounded_buffer<ept id="p1">](reference/unbounded-buffer-class.md)</ept> object to enable the UI thread and the worker thread to communicate with each other.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>After the worker thread produces the image, it sends a pointer to the <ph id="ph1">`Bitmap`</ph> object to the <ph id="ph2">`unbounded_buffer`</ph> object and then posts a paint message to the UI thread.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The UI thread then receives from the <ph id="ph1">`unbounded_buffer`</ph> object the <ph id="ph2">`Bitmap`</ph> object and draws it to the client window.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>To remove the drawing work from the UI thread</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>In stdafx.h, add the following <ph id="ph1">`#include`</ph> directives:</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#101</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>In ChildView.h, add <ph id="ph1">`task_group`</ph> and <ph id="ph2">`unbounded_buffer`</ph> member variables to the <ph id="ph3">`protected`</ph> section of the <ph id="ph4">`CChildView`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`task_group`</ph> object holds the tasks that perform drawing; the <ph id="ph2">`unbounded_buffer`</ph> object holds the completed Mandelbrot image.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#102</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>In ChildView.cpp, add a <ph id="ph1">`using`</ph> directive to the <ph id="ph2">`concurrency`</ph> namespace.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#103</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`CChildView::DrawMandelbrot`</ph> method, after the call to <ph id="ph2">`Bitmap::UnlockBits`</ph>, call the <bpt id="p1">[</bpt>concurrency::send<ept id="p1">](reference/concurrency-namespace-functions.md#send)</ept> function to pass the <ph id="ph3">`Bitmap`</ph> object to the UI thread.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Then post a paint message to the UI thread and invalidate the client area.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#104</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Update the <ph id="ph1">`CChildView::OnPaint`</ph> method to receive the updated <ph id="ph2">`Bitmap`</ph> object and draw the image to the client window.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#105</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CChildView::OnPaint`</ph> method creates a task to generate the Mandelbrot image if one does not exist in the message buffer.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The message buffer will not contain a <ph id="ph1">`Bitmap`</ph> object in cases such as the initial paint message and when another window is moved in front of the client window.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Verify that the application was updated successfully by building and running it.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The UI is now more responsive because the drawing work is performed in the background.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Improving Drawing Performance</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The generation of the Mandelbrot fractal is a good candidate for parallelization because the computation of each pixel is independent of all other computations.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>To parallelize the drawing procedure, convert the outer <ph id="ph1">`for`</ph> loop in the <ph id="ph2">`CChildView::DrawMandelbrot`</ph> method to a call to the <bpt id="p1">[</bpt>concurrency::parallel_for<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for)</ept> algorithm, as follows.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#301</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Because the computation of each bitmap element is independent, you do not have to synchronize the drawing operations that access the bitmap memory.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>This enables performance to scale as the number of available processors increases.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Adding Support for Cancellation</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>This section describes how to handle window resizing and how to cancel any active drawing tasks when the window is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The document <bpt id="p1">[</bpt>Cancellation in the PPL<ept id="p1">](cancellation-in-the-ppl.md)</ept> explains how cancellation works in the runtime.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Cancellation is cooperative; therefore, it does not occur immediately.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>To stop a canceled task, the runtime throws an internal exception during a subsequent call from the task into the runtime.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>The previous section shows how to use the <ph id="ph1">`parallel_for`</ph> algorithm to improve the performance of the drawing task.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>The call to <ph id="ph1">`parallel_for`</ph> enables the runtime to stop the task, and therefore enables cancellation to work.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Cancelling Active Tasks</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The Mandelbrot application creates <ph id="ph1">`Bitmap`</ph> objects whose dimensions match the size of the client window.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Every time the client window is resized, the application creates an additional background task to generate an image for the new window size.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>The application does not require these intermediate images; it requires only the image for the final window size.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>To prevent the application from performing this additional work, you can cancel any active drawing tasks in the message handlers for the <ph id="ph1">`WM_SIZE`</ph> and <ph id="ph2">`WM_SIZING`</ph> messages and then reschedule drawing work after the window is resized.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>To cancel active drawing tasks when the window is resized, the application calls the <bpt id="p1">[</bpt>concurrency::task_group::cancel<ept id="p1">](reference/task-group-class.md#cancel)</ept> method in the handlers for the <ph id="ph1">`WM_SIZING`</ph> and <ph id="ph2">`WM_SIZE`</ph> messages.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The handler for the <ph id="ph1">`WM_SIZE`</ph> message also calls the <bpt id="p1">[</bpt>concurrency::task_group::wait<ept id="p1">](reference/task-group-class.md#wait)</ept> method to wait for all active tasks to complete and then reschedules the drawing task for the updated window size.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>When the client window is destroyed, it is good practice to cancel any active drawing tasks.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Canceling any active drawing tasks makes sure that worker threads do not post messages to the UI thread after the client window is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>The application cancels any active drawing tasks in the handler for the <ph id="ph1">`WM_DESTROY`</ph> message.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Responding to Cancellation</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CChildView::DrawMandelbrot`</ph> method, which performs the drawing task, must respond to cancellation.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Because the runtime uses exception handling to cancel tasks, the <ph id="ph1">`CChildView::DrawMandelbrot`</ph> method must use an exception-safe mechanism to guarantee that all resources are correctly cleaned-up.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">*</bpt>Resource Acquisition Is Initialization<ept id="p1">*</ept> (RAII) pattern to guarantee that the bitmap bits are unlocked when the task is canceled.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>To add support for cancellation in the Mandelbrot application</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>In ChildView.h, in the <ph id="ph1">`protected`</ph> section of the <ph id="ph2">`CChildView`</ph> class, add declarations for the <ph id="ph3">`OnSize`</ph>, <ph id="ph4">`OnSizing`</ph>, and <ph id="ph5">`OnDestroy`</ph> message map functions.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#201</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>In ChildView.cpp, modify the message map to contain handlers for the <ph id="ph1">`WM_SIZE`</ph>, <ph id="ph2">`WM_SIZING`</ph>, and <ph id="ph3">`WM_DESTROY`</ph> messages.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#202</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Implement the <ph id="ph1">`CChildView::OnSizing`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>This method cancels any existing drawing tasks.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#203</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Implement the <ph id="ph1">`CChildView::OnSize`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>This method cancels any existing drawing tasks and creates a new drawing task for the updated client window size.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#204</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>Implement the <ph id="ph1">`CChildView::OnDestroy`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>This method cancels any existing drawing tasks.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#205</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>In ChildView.cpp, define the <ph id="ph1">`scope_guard`</ph> class, which implements the RAII pattern.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#206</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Add the following code to the <ph id="ph1">`CChildView::DrawMandelbrot`</ph> method after the call to <ph id="ph2">`Bitmap::LockBits`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#207</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>This code handles cancellation by creating a <ph id="ph1">`scope_guard`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>When the object leaves scope, it unlocks the bitmap bits.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Modify the end of the <ph id="ph1">`CChildView::DrawMandelbrot`</ph> method to dismiss the <ph id="ph2">`scope_guard`</ph> object after the bitmap bits are unlocked, but before any messages are sent to the UI thread.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>This ensures that the UI thread is not updated before the bitmap bits are unlocked.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>concrt-mandelbrot#208</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>Verify that the application was updated successfully by building and running it.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>When you resize the window, drawing work is performed only for the final window size.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Any active drawing tasks are also canceled when the window is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime Walkthroughs</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Task Parallelism</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Asynchronous Message Blocks</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>Message Passing Functions</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>MFC Desktop Applications</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

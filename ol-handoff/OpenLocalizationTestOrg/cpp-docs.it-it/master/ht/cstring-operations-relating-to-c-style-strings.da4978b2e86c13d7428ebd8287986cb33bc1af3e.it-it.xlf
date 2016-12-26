@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">04327c423832e0ffd5030c2fd8e2372cd548cc47</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl-mfc-shared\cstring-operations-relating-to-c-style-strings.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6ce148f94da6e57040288a225eb56b8e1dc383df</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">548f4863a49feb8cbf758f75d80079ea79c27b30</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CString Operations Relating to C-Style Strings | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CString Operations Relating to C-Style Strings</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">[</bpt>CString<ept id="p1">](../atl-mfc-shared/using-cstring.md)</ept> object contains character string data.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>inherits the set of the <bpt id="p1">[</bpt>methods and operators<ept id="p1">](../atl-mfc-shared/reference/cstringt-class.md)</ept> that are defined in the class template <bpt id="p2">[</bpt>CStringT<ept id="p2">](../atl-mfc-shared/reference/cstringt-class.md)</ept> to work with string data.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>(<ph id="ph1">`CString`</ph> is a <ph id="ph2">`typedef`</ph> that specializes <ph id="ph3">`CStringT`</ph> to work with the kind of character data that <ph id="ph4">`CString`</ph> supports.)</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>does not store character data internally as a C-style null-terminated string.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Instead, <ph id="ph1">`CString`</ph> tracks the length of character data so that it can more securely watch the data and the space it requires.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>does accept C-style strings, and provides ways to access character data as a C-style string.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This topic contains the following sections that explain how to use a <ph id="ph1">`CString`</ph> object as if it were a C-style null-terminated string.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Converting to C-style null-terminated strings</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Working with standard run-time library string functions</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Modifying CString contents directly</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Using CString objects with variable argument functions</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Specifying CString formal parameters</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Using CString as a C-Style Null-Terminated String</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To use a <ph id="ph1">`CString`</ph> object as a C-style string, cast the object to <ph id="ph2">`LPCTSTR`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>In the following example, the <ph id="ph1">`CString`</ph> returns a pointer to a read-only C-style null-terminated string.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`strcpy`</ph> function puts a copy of the C-style string in the variable <ph id="ph2">`myString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You can use <ph id="ph1">`CString`</ph> methods, for example, <ph id="ph2">`SetAt`</ph>, to modify individual characters in the string object.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>However, the <ph id="ph1">`LPCTSTR`</ph> pointer is temporary and becomes invalid when any change is made to <ph id="ph2">`CString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CString`</ph> can also go out of scope and be automatically deleted.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>We recommend that you get a fresh <ph id="ph1">`LPCTSTR`</ph> pointer of a <ph id="ph2">`CString`</ph> object every time that you use one.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Sometimes you may require a copy of <ph id="ph1">`CString`</ph> data to modify directly.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Use the more secured function <ph id="ph1">`strcpy_s`</ph> (or the Unicode/MBCS-portable <ph id="ph2">`_tcscpy_s`</ph>) to copy the <ph id="ph3">`CString`</ph> object into a separate buffer.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This is where characters can be safely modified, as shown by the following example.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>NVC_ATLMFC_Utilities#189</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The third argument to <ph id="ph1">`strcpy_s`</ph> (or the Unicode/MBCS-portable <ph id="ph2">`_tcscpy_s`</ph>) is either a <ph id="ph3">`const``wchar_t*`</ph> (Unicode) or a <ph id="ph4">`const``char*`</ph> (ANSI).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The example above passes a <ph id="ph1">`CString`</ph> for this argument.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The C++ compiler automatically applies the conversion function defined for the <ph id="ph1">`CString`</ph> class that converts a <ph id="ph2">`CString`</ph> to an <ph id="ph3">`LPCTSTR`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The ability to define casting operations from one type to another is one of the most useful features of C++.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Working with Standard Run-Time Library String Functions</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>You should be able to find a <ph id="ph1">`CString`</ph> method to perform any string operation for which you might consider using the standard C run-time library string functions such as <ph id="ph2">`strcmp`</ph> (or the Unicode/MBCS-portable <ph id="ph3">`_tcscmp`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>If you must use the C run-time string functions, you can use the techniques described in _core_using_cstring_as_a_c.2d.style_null.2d.terminated_string.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>You can copy the <ph id="ph1">`CString`</ph> object to an equivalent C-style string buffer, perform your operations on the buffer, and then assign the resulting C-style string back to a <ph id="ph2">`CString`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Modifying CString Contents Directly</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In most situations, you should use <ph id="ph1">`CString`</ph> member functions to modify the contents of a <ph id="ph2">`CString`</ph> object or to convert the <ph id="ph3">`CString`</ph> to a C-style character string.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>There are some situations where it makes sense to directly modify the <ph id="ph1">`CString`</ph> contents, for example, when you work with operating-system functions that require a character buffer.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`GetBuffer`</ph> and <ph id="ph2">`ReleaseBuffer`</ph> methods offer access to the internal character buffer of a <ph id="ph3">`CString`</ph> object and let you modify it directly.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The following steps show how to use these functions for this purpose.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To use GetBuffer and ReleaseBuffer to access the internal character buffer of a CString object</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`GetBuffer`</ph> for a <ph id="ph2">`CString`</ph> object and specify the length of the buffer you require.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Use the pointer returned by <ph id="ph1">`GetBuffer`</ph> to write characters directly into the <ph id="ph2">`CString`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`ReleaseBuffer`</ph> for the <ph id="ph2">`CString`</ph> object to update all the internal <ph id="ph3">`CString`</ph> state information, for example, the length of the string.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>After you modify the contents of a <ph id="ph1">`CString`</ph> object directly, you must call <ph id="ph2">`ReleaseBuffer`</ph> before you call any other <ph id="ph3">`CString`</ph> member functions.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Using CString Objects with Variable Argument Functions</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Some C functions take a variable number of arguments.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>A notable example is <ph id="ph1">`printf_s`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Because of the way this kind of function is declared, the compiler cannot be sure of the type of the arguments and cannot determine which conversion operation to perform on each argument.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Therefore, it is essential that you use an explicit type cast when passing a <ph id="ph1">`CString`</ph> object to a function that takes a variable number of arguments.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>To use a <ph id="ph1">`CString`</ph> object in a variable argument function, explicitly cast the <ph id="ph2">`CString`</ph> to an <ph id="ph3">`LPCTSTR`</ph> string, as shown in the following example.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>NVC_ATLMFC_Utilities#190</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Specifying CString Formal Parameters</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>For most functions that need a string argument, it is best to specify the formal parameter in the function prototype as a <ph id="ph1">`const`</ph> pointer to a character (<ph id="ph2">`LPCTSTR`</ph>) instead of a <ph id="ph3">`CString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>When a formal parameter is specified as a <ph id="ph1">`const`</ph> pointer to a character, you can pass either a pointer to a <ph id="ph2">`TCHAR`</ph> array, a literal string [<ph id="ph3">`"hi there"`</ph>], or a <ph id="ph4">`CString`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CString`</ph> object will be automatically converted to an <ph id="ph2">`LPCTSTR`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Any place you can use an <ph id="ph1">`LPCTSTR`</ph>, you can also use a <ph id="ph2">`CString`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>You can also specify a formal parameter as a constant string reference (that is, <ph id="ph1">`const``CString&amp;`</ph>) if the argument will not be modified.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Drop the <ph id="ph1">`const`</ph> modifier if the string will be modified by the function.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>If a default null value is desired, initialize it to the null string [<ph id="ph1">`""`</ph>], as shown below:</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>NVC_ATLMFC_Utilities#191</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>For most function results, you can simply return a <ph id="ph1">`CString`</ph> object by value.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Strings (ATL/MFC)</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>CString Argument Passing</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

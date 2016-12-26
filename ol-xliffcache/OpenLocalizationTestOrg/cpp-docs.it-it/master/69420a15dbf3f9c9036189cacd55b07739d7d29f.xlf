@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">69420a15dbf3f9c9036189cacd55b07739d7d29f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\assembler\arm\arm-assembler-diagnostic-messages.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a39275bcc4e20acab85abfc35186342bf283b769</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ea11d536cc46753ccac67ff7864dc2381548203b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>ARM Assembler Diagnostic Messages | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>ARM Assembler Diagnostic Messages</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The Microsoft ARM assembler (<bpt id="p1">*</bpt>armasm<ept id="p1">*</ept>) emits diagnostic warnings and errors when it encounters them.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This article describes the most commonly-encountered messages.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Diagnostic Messages</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Errors</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A2193: this instruction generates unpredictable behavior</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The ARM architecture cannot guarantee what happens when this instruction is executed.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For details about the well-defined forms of this instruction, consult the <bpt id="p1">[</bpt>ARM Architecture Reference Manual<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=246464)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A2196: instruction cannot be encoded in 16 bits</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The specified instruction cannot be encoded as a 16-bit Thumb instruction.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Specify a 32-bit instruction, or rearrange code to bring the target label into the range of a 16-bit instruction.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The assembler may attempt to encode a branch in 16 bits and fail with this error, even though a 32-bit branch is encodable.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You can solve this problem by using the <ph id="ph1">`.W`</ph> specifier to explicitly mark the branch as 32-bit.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A2202: Pre-UAL instruction syntax not allowed in THUMB region</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Thumb code must use the Unified Assembler Language (UAL) syntax.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The old syntax is no longer accepted</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A2513: Rotation must be even</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In ARM mode, there is an alternate syntax for specifying constants.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Instead of writing <ph id="ph1">`#&lt;const&gt;`</ph>, you can write <ph id="ph2">`#&lt;byte&gt;,#&lt;rot&gt;`</ph>, which represents the constant value that is obtained by rotating the value <ph id="ph3">`&lt;byte&gt;`</ph> right by <ph id="ph4">`&lt;rot&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>When you use this syntax, you must make the value of <ph id="ph1">`&lt;rot&gt;`</ph> even.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>A2557: Incorrect number of bytes to write back</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>On the NEON structure load and store instructions (<ph id="ph1">`VLDn`</ph>, <ph id="ph2">`VSTn`</ph>), there is an alternate syntax for specifying writeback to the base register.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Instead of putting an exclamation point (!) after the address, you can specify an immediate value that indicates the offset to be added to the base register.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If you use this syntax, you must specify the exact number of bytes that were loaded or stored by the instruction.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Warnings</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>A4228: Alignment value exceeds AREA alignment; alignment not guaranteed</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The alignment that is specified in an <ph id="ph1">`ALIGN`</ph> directive is greater than the alignment of the enclosing <ph id="ph2">`AREA`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>As a result, the assembler cannot guarantee that the <ph id="ph1">`ALIGN`</ph> directive will be honored.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>To fix this, you can specify on the <ph id="ph1">`AREA`</ph> directive an <ph id="ph2">`ALIGN`</ph> attribute that is equal to or greater than the desired alignment.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A4508: Use of this rotated constant is deprecated</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In ARM mode, there is an alternate syntax for specifying constants.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Instead of writing <ph id="ph1">`#&lt;const&gt;`</ph>, you can write <ph id="ph2">`#&lt;byte&gt;,#&lt;rot&gt;`</ph>, which represents the constant value that is obtained by rotating the value <ph id="ph3">`&lt;byte&gt;`</ph> right by <ph id="ph4">`&lt;rot&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>In some contexts, ARM has deprecated the use of these rotated constants.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In these cases, use the basic <ph id="ph1">`#&lt;const&gt;`</ph> syntax instead.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>A4509: This form of conditional instruction is deprecated</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This form of conditional instruction has been deprecated by ARM in the ARMv8 architecture.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>We recommend that you change the code to use conditional branches.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To see which conditional instructions are still supported, consult the <bpt id="p1">[</bpt>ARM Architecture Reference Manual<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=246464)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This warning is not emitted when the <ph id="ph1">`-oldit`</ph> command-line switch is used.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>ARM Assembler Command-Line Reference</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>ARM Assembler Directives</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
