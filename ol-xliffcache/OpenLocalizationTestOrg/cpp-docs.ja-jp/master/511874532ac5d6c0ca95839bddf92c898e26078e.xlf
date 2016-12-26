@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">511874532ac5d6c0ca95839bddf92c898e26078e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\initializing-extension-dlls.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f30c9be632184e9a1bcd22e5caf8ef183c5428f3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c21300934f1e178a7c6f8335a146ba04dc0d9c68</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Initializing Extension DLLs | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Initializing Extension DLLs</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Because extension DLLs do not have a <ph id="ph1">`CWinApp`</ph>-derived object (as do regular DLLs), you should add your initialization and termination code to the <ph id="ph2">`DllMain`</ph> function that the MFC DLL Wizard generates.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The wizard provides the following code for extension DLLs.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In the code, <ph id="ph1">`PROJNAME`</ph> is a placeholder for the name of your project.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Creating a new <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object during initialization allows the extension DLL to export <ph id="ph1">`CRuntimeClass`</ph> objects or resources to the client application.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If you are going to use your extension DLL from one or more regular DLLs, you must export an initialization function that creates a <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>That function must be called from each of the regular DLLs that use the extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>An appropriate place to call this initialization function is in the <ph id="ph1">`InitInstance`</ph> member function of the regular DLL's <ph id="ph2">`CWinApp`</ph>-derived object before using any of the extension DLL's exported classes or functions.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`DllMain`</ph> that the MFC DLL Wizard generates, the call to <ph id="ph2">`AfxInitExtensionModule`</ph> captures the module's run-time classes (<ph id="ph3">`CRuntimeClass`</ph> structures) as well as its object factories (<ph id="ph4">`COleObjectFactory`</ph> objects) for use when the <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object is created.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You should check the return value of <ph id="ph1">`AfxInitExtensionModule`</ph>; if a zero value is returned from <ph id="ph2">`AfxInitExtensionModule`</ph>, return zero from your <ph id="ph3">`DllMain`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If your extension DLL will be explicitly linked to an executable (meaning the executable calls <ph id="ph1">`AfxLoadLibrary`</ph> to link to the DLL), you should add a call to <ph id="ph2">`AfxTermExtensionModule`</ph> on <bpt id="p1">**</bpt>DLL_PROCESS_DETACH<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This function allows MFC to clean up the extension DLL when each process detaches from the extension DLL (which happens when the process exits or when the DLL is unloaded as a result of a <ph id="ph1">`AfxFreeLibrary`</ph> call).</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If your extension DLL will be linked implicitly to the application, the call to <ph id="ph1">`AfxTermExtensionModule`</ph> is not necessary.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Applications that explicitly link to extension DLLs must call <bpt id="p1">**</bpt>AfxTermExtensionModule<ept id="p1">**</ept> when freeing the DLL.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>They should also use <ph id="ph1">`AfxLoadLibrary`</ph> and <ph id="ph2">`AfxFreeLibrary`</ph> (instead of the Win32 functions <bpt id="p1">**</bpt>LoadLibrary<ept id="p1">**</ept> and <bpt id="p2">**</bpt>FreeLibrary<ept id="p2">**</ept>) if the application uses multiple threads.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Using <ph id="ph1">`AfxLoadLibrary`</ph> and <ph id="ph2">`AfxFreeLibrary`</ph> ensures that the startup and shutdown code that executes when the extension DLL is loaded and unloaded does not corrupt the global MFC state.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Because the MFCx0.dll is fully initialized by the time <ph id="ph1">`DllMain`</ph> is called, you can allocate memory and call MFC functions within <ph id="ph2">`DllMain`</ph> (unlike the 16-bit version of MFC).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Extension DLLs can take care of multithreading by handling the <bpt id="p1">**</bpt>DLL_THREAD_ATTACH<ept id="p1">**</ept> and <bpt id="p2">**</bpt>DLL_THREAD_DETACH<ept id="p2">**</ept> cases in the <ph id="ph1">`DllMain`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>These cases are passed to <ph id="ph1">`DllMain`</ph> when threads attach and detach from the DLL.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Calling <bpt id="p1">[</bpt>TlsAlloc<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms686801)</ept> when a DLL is attaching allows the DLL to maintain thread local storage (TLS) indexes for every thread attached to the DLL.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Note that the header file Afxdllx.h contains special definitions for structures used in extension DLLs, such as the definition for <ph id="ph1">`AFX_EXTENSION_MODULE`</ph> and <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You should include this header file in your extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>It is important that you neither define nor undefine any of the _AFX_NO_XXX macros in Stdafx.h.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For more information, see the Knowledge Base article "PRB: Problems Occur When Defining _AFX_NO_XXX" (Q140751).</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You can find Knowledge Base articles in the MSDN Library or at <bpt id="p1">[</bpt>http://search.support.microsoft.com/<ept id="p1">](http://search.support.microsoft.com/)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>A sample initialization function that handles multithreading is included in <bpt id="p1">[</bpt>Using Thread Local Storage in a Dynamic-Link Library<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms686997)</ept> in the <ph id="ph1">[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Note that the sample contains an entry-point function called <bpt id="p1">**</bpt>LibMain<ept id="p1">**</ept>, but you should name this function <ph id="ph1">`DllMain`</ph> so that it works with the MFC and C run-time libraries.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The MFC sample <bpt id="p1">[</bpt>DLLHUSK<ept id="p1">](http://msdn.microsoft.com/en-us/dfcaa6ff-b8e2-4efd-8100-ee3650071f90)</ept> demonstrates the use of initialization functions.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>What do you want to do?</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Initialize regular DLLs</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Initialize non-MFC DLLs</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about?</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The C run-time library behavior and _DllMainCRTStartup</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Using Database, OLE, and Sockets Extension DLLs in Regular DLLs</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The function specification for DllMain (Windows SDK)</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Dynamic-link library entry-point function (Windows SDK)</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Initializing a DLL</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

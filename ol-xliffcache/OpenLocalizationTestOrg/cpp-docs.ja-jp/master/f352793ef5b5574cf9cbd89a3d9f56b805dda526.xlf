@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f352793ef5b5574cf9cbd89a3d9f56b805dda526</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\implementing-ccomobject-ccomaggobject-and-ccompolyobject.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">153fb46cf324db54961cb05b3491a7ae59af7f4a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0a9887e3daf91471e93df18370e52a2bfe88e688</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Implementing CComObject, CComAggObject, and CComPolyObject | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Implementing CComObject, CComAggObject, and CComPolyObject</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The template classes <bpt id="p1">[</bpt>CComObject<ept id="p1">](../atl/reference/ccomobject-class.md)</ept>, <bpt id="p2">[</bpt>CComAggObject<ept id="p2">](../atl/reference/ccomaggobject-class.md)</ept>, and <bpt id="p3">[</bpt>CComPolyObject<ept id="p3">](../atl/reference/ccompolyobject-class.md)</ept> are always the most derived classes in the inheritance chain.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It is their responsibility to handle all of the methods in <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept>: <ph id="ph1">`QueryInterface`</ph>, <ph id="ph2">`AddRef`</ph>, and <bpt id="p2">**</bpt>Release<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In addition, <ph id="ph1">`CComAggObject`</ph> and <ph id="ph2">`CComPolyObject`</ph> (when used for aggregated objects) provide the special reference counting and <ph id="ph3">`QueryInterface`</ph> semantics required for the inner unknown.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Whether <ph id="ph1">`CComObject`</ph>, <ph id="ph2">`CComAggObject`</ph>, or <ph id="ph3">`CComPolyObject`</ph> is used depends on whether you declare one (or none) of the following macros:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Macro</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Effect</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Always uses <ph id="ph1">`CComObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Uses <ph id="ph1">`CComAggObject`</ph> if the object is aggregated and <ph id="ph2">`CComObject`</ph> if it is not.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>contains this macro so if none of the <bpt id="p1">**</bpt>DECLARE_<ph id="ph1">\*</ph>_AGGREGATABLE<ept id="p1">**</ept> macros are declared in your class, this will be the default.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Always uses <ph id="ph1">`CComAggObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Returns an error if the object is not aggregated.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>ATL creates an instance of <bpt id="p1">**</bpt>CComPolyObject<ph id="ph1">\&lt;</ph>CYourClass&gt;<ept id="p1">**</ept> when <bpt id="p2">**</bpt>IClassFactory::CreateInstance<ept id="p2">**</ept> is called.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>During creation, the value of the outer unknown is checked.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If it is <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>, <bpt id="p2">**</bpt>IUnknown<ept id="p2">**</ept> is implemented for a nonaggregated object.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If the outer unknown is not <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>, <bpt id="p2">**</bpt>IUnknown<ept id="p2">**</ept> is implemented for an aggregated object.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The advantage of using <ph id="ph1">`CComAggObject`</ph> and <ph id="ph2">`CComObject`</ph> is that the implementation of <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> is optimized for the kind of object being created.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For instance, a nonaggregated object only needs a reference count, while an aggregated object needs both a reference count for the inner unknown and a pointer to the outer unknown.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The advantage of using <ph id="ph1">`CComPolyObject`</ph> is that you avoid having both <ph id="ph2">`CComAggObject`</ph> and <ph id="ph3">`CComObject`</ph> in your module to handle the aggregated and nonaggregated cases.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A single <ph id="ph1">`CComPolyObject`</ph> object handles both cases.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This means only one copy of the vtable and one copy of the functions exist in your module.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If your vtable is large, this can substantially decrease your module size.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>However, if your vtable is small, using <ph id="ph1">`CComPolyObject`</ph> can result in a slightly larger module size because it is not optimized for an aggregated or nonaggregated object, as are <ph id="ph2">`CComAggObject`</ph> and <ph id="ph3">`CComObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Fundamentals of ATL COM Objects</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Aggregation and Class Factory Macros</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

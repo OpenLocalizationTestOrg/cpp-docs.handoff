@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b70bb5f68354b56368b6e888c4e30333c919cf13</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\double-thunking-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c890f0c18e12aa85204ac7878a73b932f4e87bb6</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c0565090c6a7a7ecd1627931a912c69dae644a58</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Double Thunking (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Double Thunking (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Double thunking refers to the loss of performance you can experience when a function call in a managed context calls a Visual C++ managed function and where program execution calls the function's native entry point in order to call the managed function.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic discusses where double thunking occurs and how you can avoid it to improve performance.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>By default, when compiling with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> (not <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept>), the definition of a managed function causes the compiler to generate a managed entry point and a native entry point.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This allows the managed function to be called from native and managed call sites.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>However, when a native entry point exists, it can be the entry point for all calls to the function.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If a calling function is managed, the native entry point will then call the managed entry point.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In effect, two calls are required to invoke the function (hence, double thunking).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For example, virtual functions are always called through a native entry point.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>One resolution is to tell the compiler not to generate a native entry point for a managed function, that the function will only be called from a managed context, by using the <bpt id="p1">[</bpt>__clrcall<ept id="p1">](../cpp/clrcall.md)</ept> calling convention.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Similarly, if you export (<bpt id="p1">[</bpt>dllexport, dllimport<ept id="p1">](../cpp/dllexport-dllimport.md)</ept>) a managed function, a native entry point is generated and any function that imports and calls that function will call through the native entry point.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>To avoid double thunking in this situation, do not use native export/import semantics; simply reference the metadata via <ph id="ph1">`#using`</ph> (see <bpt id="p1">[</bpt>#using Directive<ept id="p1">](../preprocessor/hash-using-directive-cpp.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The compiler has been updated to reduce unnecessary double thunking.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For example, any function with a managed type in the signature (including return type) will implicitly be marked as <ph id="ph1">`__clrcall`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For more information on double thunk elimination, see <bpt id="p1">[</bpt>http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx<ept id="p1">](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The following sample demonstrates double thunking.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When compiled native (without <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>), the call to the virtual function in <ph id="ph1">`main`</ph> generates one call to <ph id="ph2">`T`</ph>'s copy constructor and one call to the destructor.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Similar behavior is achieved when the virtual function is declared with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> and <ph id="ph1">`__clrcall`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>However, when just compiled with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>, the function call generates a call to the copy constructor but there is another call to the copy constructor due to the native-to-managed thunk.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Code</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Sample Output</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The previous sample demonstrated the existence of double thunking.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>This sample shows its effect.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`for`</ph> loop calls the virtual function and the program reports execution time.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The slowest time is reported when the program is compiled with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The fastest times are reported when compiling without <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> or if the virtual function is declared with <ph id="ph1">`__clrcall`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Code</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Sample Output</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Mixed (Native and Managed) Assemblies</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

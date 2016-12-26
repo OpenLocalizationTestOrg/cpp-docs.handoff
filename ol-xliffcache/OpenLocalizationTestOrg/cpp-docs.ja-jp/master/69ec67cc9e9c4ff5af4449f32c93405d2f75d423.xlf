@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">69ec67cc9e9c4ff5af4449f32c93405d2f75d423</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tree-control-drag-and-drop-operations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">419deaaa77375addc45932f817b053752c6145f1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fa481687c1eb7d02deb369b7aae4bd820fdaf2b3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Tree Control Drag-and-Drop Operations | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Tree Control Drag-and-Drop Operations</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A tree control (<bpt id="p1">[</bpt>CTreeCtrl<ept id="p1">](../mfc/reference/ctreectrl-class.md)</ept>) sends a notification when the user starts to drag an item.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The control sends a <bpt id="p1">[</bpt>TVN_BEGINDRAG<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb773504)</ept> notification message when the user begins dragging an item with the left mouse button and a <bpt id="p2">[</bpt>TVN_BEGINRDRAG<ept id="p2">](http://msdn.microsoft.com/library/windows/desktop/bb773509)</ept> notification message when the user begins dragging with the right button.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You can prevent a tree control from sending these notifications by giving the tree control the <bpt id="p1">**</bpt>TVS_DISABLEDRAGDROP<ept id="p1">**</ept> style.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You obtain an image to display during a drag operation by calling the <bpt id="p1">[</bpt>CreateDragImage<ept id="p1">](../mfc/reference/ctreectrl-class.md#ctreectrl__createdragimage)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The tree control creates a dragging bitmap based on the label of the item being dragged.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Then the tree control creates an image list, adds the bitmap to it, and returns a pointer to the <bpt id="p1">[</bpt>CImageList<ept id="p1">](../mfc/reference/cimagelist-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You must provide the code that actually drags the item.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This typically involves using the dragging capabilities of the image list functions and processing the <bpt id="p1">[</bpt>WM_MOUSEMOVE<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms645616)</ept> and <bpt id="p2">[</bpt>WM_LBUTTONUP<ept id="p2">](http://msdn.microsoft.com/library/windows/desktop/ms645608)</ept> (or <bpt id="p3">[</bpt>WM_RBUTTONUP<ept id="p3">](http://msdn.microsoft.com/library/windows/desktop/ms646243)</ept>) messages sent after the drag operation has begun.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information about the image list functions, see <bpt id="p1">[</bpt>CImageList<ept id="p1">](../mfc/reference/cimagelist-class.md)</ept> in the <bpt id="p2">*</bpt>MFC Reference<ept id="p2">*</ept> and <bpt id="p3">[</bpt>Image Lists<ept id="p3">](http://msdn.microsoft.com/library/windows/desktop/bb761389)</ept> in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For more information about dragging a tree control item, see <bpt id="p1">[</bpt>Dragging the Tree View Item<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb760017)</ept>, also in the <ph id="ph1">[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If items in a tree control are to be the targets of a drag-and-drop operation, you need to know when the mouse cursor is on a target item.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You can find out by calling the <bpt id="p1">[</bpt>HitTest<ept id="p1">](../mfc/reference/ctreectrl-class.md#ctreectrl__hittest)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You specify either a point and integer, or the address of a <bpt id="p1">[</bpt>TVHITTESTINFO<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb773448)</ept> structure that contains the current coordinates of the mouse cursor.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When the function returns, the integer or structure contains a flag indicating the location of the mouse cursor relative to the tree control.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If the cursor is over an item in the tree control, the structure contains the handle of the item as well.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You can indicate that an item is the target of a drag-and-drop operation by calling the <bpt id="p1">[</bpt>SetItem<ept id="p1">](../mfc/reference/ctreectrl-class.md#ctreectrl__setitem)</ept> member function to set the state to the <ph id="ph1">`TVIS_DROPHILITED`</ph> value.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>An item that has this state is drawn in the style used to indicate a drag-and-drop target.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Using CTreeCtrl</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">554005ecf807324c361f6bf9bd6fbaa3274740bb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn024-mfc-defined-messages-and-resources.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7d5d8131899a704f817b5bde44d71c2039df6def</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a417545f04a39647b3ec37ad261882afcab22038</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN024: MFC-Defined Messages and Resources | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN024: MFC-Defined Messages and Resources</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following technical note has not been updated since it was first included in the online documentation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, some procedures and topics might be out of date or incorrect.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For the latest information, it is recommended that you search for the topic of interest in the online documentation index.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This note describes the internal Windows messages and resource formats used by MFC.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This information explains the implementation of the framework, and will assist you in debugging your application.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For the adventurous, even though all this information is officially unsupported, you may use some of this information for advanced implementations.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This note contains MFC private implementation details; all the contents are subject to change in the future.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>MFC private Windows messages have meaning in the scope of one application only but will change in the future to contain system-wide messages.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The range of MFC private Windows messages and resource types are in the reserved "system" range set aside by Microsoft Windows.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Currently not all numbers in the ranges are used and, in the future, new numbers in the range may be used.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The currently used numbers may be changed.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>MFC private Windows messages are in the range 0x360-&gt;0x37F.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>MFC private resource types are in the range 0xF0-&gt;0xFF.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>MFC Private Windows Messages</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>These Windows messages are used in place of C++ virtual functions where relatively loose coupling is required between window objects and where a C++ virtual function would not be appropriate.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>These private Windows messages and associated parameter structures are declared in the MFC private header 'AFXPRIV.H'.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Be warned that any of your code that includes this header may be relying on undocumented behavior and will likely break in future versions of MFC.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In the rare case of needing to handle one of these messages, you should use the <ph id="ph1">`ON_MESSAGE`</ph> message map macro and handle the message in the generic LRESULT/WPARAM/LPARAM format.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>WM_QUERYAFXWNDPROC</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This message is sent to a window that is being created.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This is sent very early in the creation process as a method of determining if the WndProc is <bpt id="p1">**</bpt>AfxWndProc. AfxWndProc<ept id="p1">**</ept> returns 1.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Not used</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Not used</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>1 if processed by <bpt id="p1">**</bpt>AfxWndProc<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>WM_SIZEPARENT</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This message is sent by a frame window to its immediate children during resizing (<bpt id="p1">**</bpt>CFrameWnd::OnSize<ept id="p1">**</ept> calls <ph id="ph1">`CFrameWnd::RecalcLayout`</ph> which calls <ph id="ph2">`CWnd::RepositionBars`</ph>) to reposition the control bars around the side of the frame.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>AFX_SIZEPARENTPARAMS<ept id="p1">**</ept> structure contains the current available client rectangle of the parent and a HDWP (which may be NULL) with which to call <ph id="ph1">`DeferWindowPos`</ph> to minimize repainting.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Not used</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Address of an <bpt id="p1">**</bpt>AFX_SIZEPARENTPARAMS<ept id="p1">**</ept> structure</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Ignoring the message indicates that the window doesn't take part in the layout.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>WM_SETMESSAGESTRING</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This message is sent to a frame window to ask it to update the message line in the status bar.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Either a string ID or a LPCSTR can be specified (but not both).</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>String ID (or zero)</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>LPCSTR for the string (or NULL)</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>WM_IDLEUPDATECMDUI</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This message is sent in idle time to implement the idle-time update of update-command UI handlers.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>If the window (usually a control bar) handles the message, it creates a <ph id="ph1">`CCmdUI`</ph> object (or an object of a derived class) and call <bpt id="p1">**</bpt>CCmdUI::DoUpdate<ept id="p1">**</ept> for each of the "items" in the window.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>This will in turn check for an <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler for the objects in the command-handler chain.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>BOOL bDisableIfNoHandler</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>bDisableIfNoHandler<ept id="p1">*</ept> is nonzero to disable the UI object if there is neither an <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> nor an <ph id="ph2">`ON_COMMAND`</ph> handler.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>WM_EXITHELPMODE</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>This message is posted to a <ph id="ph1">`CFrameWnd`</ph> that to exit context sensitive help mode.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The receipt of this message terminates the modal loop started by <bpt id="p1">**</bpt>CFrameWnd::OnContextHelp.<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Not used</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>WM_INITIALUPDATE</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>This message is sent by the document template to all descendants of a frame window when it is safe for them to do their initial update.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>It maps to a call to <ph id="ph1">`CView::OnInitialUpdate`</ph> but can be used in other <ph id="ph2">`CWnd`</ph>-derived classes for other one-shot updating.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>WM_RECALCPARENT</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>This message is sent by a view to its parent window (obtained via <ph id="ph1">`GetParent`</ph>) to force a layout recalculation (usually, the parent will call <ph id="ph2">`RecalcLayout`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>This is used in OLE server applications where it is necessary for the frame to grow in size as the view's total size grows.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>If the parent window processes this message it should return TRUE and fill the RECT passed in lParam with the new size of the client area.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>This is used in <ph id="ph1">`CScrollView`</ph> to properly handle scrollbars (place then on the outside of the window when they are added) when a server object is in-place activated.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>LPRECT rectClient, may be NULL</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>TRUE if new client rectangle returned, FALSE otherwise</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>WM_SIZECHILD</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>This message is sent by <ph id="ph1">`COleResizeBar`</ph> to its owner window (via <ph id="ph2">`GetOwner`</ph>) when the user resizes the resize bar with the resize handles.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>responds to this message by attempting to reposition the frame window as the user has requested.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The new rectangle, given in client coordinates relative to the frame window which contains the resize bar, is pointed at by lParam.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>LPRECT rectNew</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>WM_DISABLEMODAL</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>This message is sent to all pop-up windows owned by a frame window that is being deactivated.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The frame window uses the result to determine whether or not to disable the pop-up window.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>You can use this to perform special processing in your pop-up window when the frame enters a modal state or to keep certain pop-up windows from getting disabled.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Tooltips use this message to destroy themselves when the frame window goes into a modal state, for example.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>returns</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Non-zero to <bpt id="p1">**</bpt>NOT<ept id="p1">**</ept> disable the window, 0 indicates the window will be disabled</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>WM_FLOATSTATUS</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>This message is sent to all pop-up windows owned by a frame window when the frame is either activated or deactivated by another top-level frame window.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>This is used by the implementation of <bpt id="p1">**</bpt>MFS_SYNCACTIVE<ept id="p1">**</ept> in <ph id="ph1">`CMiniFrameWnd`</ph>, to keep the activation of these pop-up windows in sync with the activation of the top level frame window.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>wParam</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Is one of the following values:</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>FS_SHOW</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>FS_HIDE</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>FS_ACTIVATE</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>FS_DEACTIVATE</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>FS_ENABLEFS_DISABLE</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>FS_SYNCACTIVE</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>lParam</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Not used (0)</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>The return value should be non-zero if <bpt id="p1">**</bpt>FS_SYNCACTIVE<ept id="p1">**</ept> is set and the window syncronizes its activation with the parent frame.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>returns non-zero when the style is set to <bpt id="p1">**</bpt>MFS_SYNCACTIVE.<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>For more information, see the implementation of <ph id="ph1">`CMiniFrameWnd`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>WM_ACTIVATETOPLEVEL</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>This message is sent to a top-level window when a window in its "top-level group" is either activated or deactivated.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>A window is part of a top-level group if it is a top-level window (no parent or owner), or it is owned by such a window.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>This message is similar in use to <bpt id="p1">**</bpt>WM_ACTIVATEAPP,<ept id="p1">**</ept> but works in situations where windows belonging to different processes are mixed in a single window hierarchy (common in OLE applications).</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>These messages are used in the implementation of context-sensitive Help.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Please refer to <bpt id="p1">[</bpt>Technical Note 28<ept id="p1">](../mfc/tn028-context-sensitive-help-support.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>MFC Private Resource Formats</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Currently, MFC defines two private resource formats: <bpt id="p1">**</bpt>RT_TOOLBAR<ept id="p1">**</ept> and <bpt id="p2">**</bpt>RT_DLGINIT<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>RT_TOOLBAR Resource Format</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>The default toolbar supplied by AppWizard is based on an <bpt id="p1">**</bpt>RT_TOOLBAR<ept id="p1">**</ept> custom resource, which was introduced in MFC 4.0.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>You can edit this resource using the Toolbar editor.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>RT_DLGINIT Resource Format</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>One MFC private resource format is used to store extra dialog initialization information.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>This includes the initial strings stored in a combo box.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>The format of this resource is not designed to be manually edited, but is handled by Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Visual C++ and this <bpt id="p1">**</bpt>RT_DLGINIT<ept id="p1">**</ept> resource are not required to use the related features of MFC since there are API alternative to using the information in the resource.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>Using Visual C++ makes it much easier to write, maintain, and translate your application in the long run.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>The basic structure of a <bpt id="p1">**</bpt>RT_DLGINIT<ept id="p1">**</ept> resource is as follows:</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>A repeated section contains the control ID to send the message to, the Message # to send (a normal Windows message) and a variable length of data.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>The Windows message is sent in a form:</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>This is a very general format, allowing any Windows messages and data content.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>The Visual C++ resource editor and MFC only support a limited subset of Windows messages: CB_ADDSTRING for the initial list-choices for combo boxes (the data is a text string).</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

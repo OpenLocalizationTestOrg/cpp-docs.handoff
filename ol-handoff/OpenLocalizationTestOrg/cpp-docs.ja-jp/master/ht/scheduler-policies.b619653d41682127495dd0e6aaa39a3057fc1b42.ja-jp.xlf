@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5cef7025c9d14c7bb4d2c2e225cea25a6f93878b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\scheduler-policies.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">00529b083eadbcc56340d592ac1f3b387791b64a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">88f56ecafe63bbab69b8380c81c521db9c64290a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Scheduler Policies | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Scheduler Policies</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document describes the role of scheduler policies in the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>scheduler policy<ept id="p1">*</ept> controls the strategy that the scheduler uses when it manages tasks.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, consider an application that requires some tasks to execute at <ph id="ph1">`THREAD_PRIORITY_NORMAL`</ph> and other tasks to execute at <ph id="ph2">`THREAD_PRIORITY_HIGHEST`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You can create two scheduler instances: one that specifies the <ph id="ph1">`ContextPriority`</ph> policy to be <ph id="ph2">`THREAD_PRIORITY_NORMAL`</ph> and another that specifies the same policy to be <ph id="ph3">`THREAD_PRIORITY_HIGHEST`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>By using scheduler policies, you can divide the available processing resources and assign a fixed set of resources to each scheduler.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, consider a parallel algorithm that does not scale beyond four processors.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You can create a scheduler policy that limits its tasks to use no more than four processors concurrently.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime provides a default scheduler.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Therefore, you don't have to create one in your application.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Because the Task Scheduler helps you fine-tune the performance of your applications, we recommend that you start with the <bpt id="p1">[</bpt>Parallel Patterns Library (PPL)<ept id="p1">](../../parallel/concrt/parallel-patterns-library-ppl.md)</ept> or the <bpt id="p2">[</bpt>Asynchronous Agents Library<ept id="p2">](../../parallel/concrt/asynchronous-agents-library.md)</ept> if you are new to the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When you use the <bpt id="p1">[</bpt>concurrency::CurrentScheduler::Create<ept id="p1">](reference/currentscheduler-class.md#create)</ept>, <bpt id="p2">[</bpt>concurrency::Scheduler::Create<ept id="p2">](reference/scheduler-class.md#create)</ept>, or <bpt id="p3">[</bpt>concurrency::Scheduler::SetDefaultSchedulerPolicy<ept id="p3">](reference/scheduler-class.md#setdefaultschedulerpolicy)</ept> method to create a scheduler instance, you provide a <bpt id="p4">[</bpt>concurrency::SchedulerPolicy<ept id="p4">](../../parallel/concrt/reference/schedulerpolicy-class.md)</ept> object that contains a collection of key-value pairs that specify the behavior of the scheduler.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`SchedulerPolicy`</ph> constructor takes a variable number of arguments.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The first argument is the number of policy elements that you are about to specify.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The remaining arguments are key-value pairs for each policy element.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The following example creates a <ph id="ph1">`SchedulerPolicy`</ph> object that specifies three policy elements.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The runtime uses default values for the policy keys that are not specified.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>concrt-scheduler-policy#2</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::PolicyElementKey<ept id="p1">](reference/concurrency-namespace-enums.md#policyelementkey)</ept> enumeration defines the policy keys that are associated with the Task Scheduler.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The following table describes the policy keys and the default value that the runtime uses for each of them.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Policy Key</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Default Value</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">[</bpt>concurrency::SchedulerType<ept id="p1">](reference/concurrency-namespace-enums.md#schedulertype)</ept> value that specifies the type of threads to use to schedule tasks.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>(use normal threads).</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This is the only valid value for this key.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`unsigned int`</ph> value that specifies the maximum number of concurrency resources that the scheduler uses.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>concurrency::MaxExecutionResources</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`unsigned int`</ph> value that specifies the minimum number of concurrency resources that the scheduler uses.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`unsigned int`</ph> value that specifies how many threads to allocate to each processing resource.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`unsigned int`</ph> value that specifies the maximum number of contexts that can be cached in the local queue of each virtual processor.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`unsigned int`</ph> value that specifies the size of the stack, in kilobytes, to reserve for each context.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>(use the default stack size)</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`int`</ph> value that specifies the thread priority of each context.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This can be any value that you can pass to <bpt id="p1">[</bpt>SetThreadPriority<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms686277)</ept> or <ph id="ph1">`INHERIT_THREAD_PRIORITY`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>|A <bpt id="p1">[</bpt>concurrency::SchedulingProtocolType<ept id="p1">](reference/concurrency-namespace-enums.md#schedulingprotocoltype)</ept> value that specifies the scheduling algorithm to use.|</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>|A <bpt id="p1">[</bpt>concurrency::DynamicProgressFeedbackType<ept id="p1">](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype)</ept> value that specifies whether to rebalance resources according to statistics-based progress information.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Note<ept id="p1">**</ept> Do not set this policy to <ph id="ph1">`ProgressFeedbackDisabled`</ph> because it is reserved for use by the runtime.|</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Each scheduler uses its own policy when it schedules tasks.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The policies that are associated with one scheduler do not affect the behavior of any other scheduler.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>In addition, you cannot change the scheduler policy after you create the <ph id="ph1">`Scheduler`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Use only scheduler policies to control the attributes for threads that the runtime creates.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Do not change the thread affinity or priority of threads that are created by the runtime because that might cause undefined behavior.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The runtime creates a default scheduler for you if you do not explicitly create one.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If you want to use the default scheduler in your application, but you want to specify a policy for that scheduler to use, call the <bpt id="p1">[</bpt>concurrency::Scheduler::SetDefaultSchedulerPolicy<ept id="p1">](reference/scheduler-class.md#setdefaultschedulerpolicy)</ept> method before you schedule parallel work.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If you do not call the <ph id="ph1">`Scheduler::SetDefaultSchedulerPolicy`</ph> method, the runtime uses the default policy values from the table.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>concurrency::CurrentScheduler::GetPolicy<ept id="p1">](reference/currentscheduler-class.md#getpolicy)</ept> and the <bpt id="p2">[</bpt>concurrency::Scheduler::GetPolicy<ept id="p2">](reference/scheduler-class.md#getpolicy)</ept> methods to retrieve a copy of the scheduler policy.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The policy values that you receive from these methods can differ from the policy values that you specify when you create the scheduler.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>To examine examples that use specific scheduler policies to control the behavior of the scheduler, see <bpt id="p1">[</bpt>How to: Specify Specific Scheduler Policies<ept id="p1">](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)</ept> and <bpt id="p2">[</bpt>How to: Create Agents that Use Specific Scheduler Policies<ept id="p2">](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Task Scheduler</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>How to: Specify Specific Scheduler Policies</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>How to: Create Agents that Use Specific Scheduler Policies</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

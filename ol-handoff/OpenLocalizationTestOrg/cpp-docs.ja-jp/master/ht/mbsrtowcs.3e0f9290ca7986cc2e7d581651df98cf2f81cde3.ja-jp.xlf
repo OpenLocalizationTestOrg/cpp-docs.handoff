@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7c3e638d7c45918ba8fc3465e41a2df9d80f0be3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\mbsrtowcs.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e72a031b0690cde5d8e3d98445c9f5d48ec2dbc9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">aa35343b52789cb4d74f5fbcc1dad893ed124f06</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>mbsrtowcs | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>mbsrtowcs</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Converts a multibyte character string in the current locale to a corresponding wide character string, with the capability of restarting in the middle of a multibyte character.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A more secure version of this function is available; see <bpt id="p1">[</bpt>mbsrtowcs_s<ept id="p1">](../../c-runtime-library/reference/mbsrtowcs-s.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>[out]</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Address to store the resulting converted wide character string.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>[in, out]</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Indirect pointer to the location of the multibyte character string to convert.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>[in]</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The maximum number of characters (not bytes) to convert and store in <ph id="ph1">`wcstr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>[in, out]</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A pointer to an <ph id="ph1">`mbstate_t`</ph> conversion state object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If this value is a null pointer, a static internal conversion state object is used.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Because the internal <ph id="ph1">`mbstate_t`</ph> object is not thread-safe, we recommend that you always pass your own <ph id="ph2">`mbstate`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Returns the number of characters successfully converted, not including the terminating null character, if any.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Returns (size_t)(-1) if an error occurred, and sets <ph id="ph1">`errno`</ph> to EILSEQ.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`mbsrtowcs`</ph> function converts a string of multibyte characters indirectly pointed to by <ph id="ph2">`mbstr`</ph>, into wide characters stored in the buffer pointed to by <ph id="ph3">`wcstr`</ph>, by using the conversion state contained in <ph id="ph4">`mbstate`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The conversion continues for each character until either a terminating null multibyte character is encountered, a multibyte sequence that does not correspond to a valid character in the current locale is encountered, or until <ph id="ph1">`count`</ph> characters have been converted.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`mbsrtowcs`</ph> encounters the multibyte null character ('\0') either before or when <ph id="ph2">`count`</ph> occurs, it converts it to a 16-bit terminating null character and stops.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Thus, the wide character string at <ph id="ph1">`wcstr`</ph> is null-terminated only if <ph id="ph2">`mbsrtowcs`</ph> encounters a multibyte null character during conversion.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>If the sequences pointed to by <ph id="ph1">`mbstr`</ph> and <ph id="ph2">`wcstr`</ph> overlap, the behavior of <ph id="ph3">`mbsrtowcs`</ph> is undefined.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>is affected by the LC_TYPE category of the current locale.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`mbsrtowcs`</ph> function differs from <bpt id="p1">[</bpt>mbstowcs, _mbstowcs_l<ept id="p1">](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)</ept> by its restartability.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The conversion state is stored in <ph id="ph1">`mbstate`</ph> for subsequent calls to the same or other restartable functions.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Results are undefined when mixing the use of restartable and nonrestartable functions.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, an application should use <ph id="ph1">`mbsrlen`</ph> instead of <ph id="ph2">`mbslen`</ph>, if a subsequent call to <ph id="ph3">`mbsrtowcs`</ph> is used instead of</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`wcstr`</ph> is not a null pointer, the pointer object pointed to by <ph id="ph2">`mbstr`</ph> is assigned a null pointer if conversion stopped because a terminating null character was reached.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Otherwise, it is assigned the address just past the last multibyte character converted, if any.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This allows a subsequent function call to restart conversion where this call stopped.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`wcstr`</ph> argument is a null pointer, the <ph id="ph2">`count`</ph> argument is ignored and <ph id="ph3">`mbsrtowcs`</ph> returns the required size in wide characters for the destination string.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`mbstate`</ph> is a null pointer, the function uses a non-thread-safe static internal <ph id="ph2">`mbstate_t`</ph> conversion state object.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If the character sequence <ph id="ph1">`mbstr`</ph> does not have a corresponding multibyte character representation, a -1 is returned and the <ph id="ph2">`errno`</ph> is set to <ph id="ph3">`EILSEQ`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`mbstr`</ph> isa null pointer, the invalid parameter handler is invoked, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, this function sets <ph id="ph1">`errno`</ph> to <ph id="ph2">`EINVAL`</ph> and returns -1.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>In C++, this function has a template overload that invokes the newer, secure counterpart of this function.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Secure Template Overloads<ept id="p1">](../../c-runtime-library/secure-template-overloads.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Exceptions</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`mbsrtowcs`</ph> function is multithread safe as long as no function in the current thread calls <ph id="ph2">`setlocale`</ph> as long as this function is executing and the <ph id="ph3">`mbstate`</ph> argument is not a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>wchar.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Data Conversion</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Locale</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Interpretation of Multibyte-Character Sequences</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>mbrtowc</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>mbtowc, _mbtowc_l</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>mbstowcs, _mbstowcs_l</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>mbsinit</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

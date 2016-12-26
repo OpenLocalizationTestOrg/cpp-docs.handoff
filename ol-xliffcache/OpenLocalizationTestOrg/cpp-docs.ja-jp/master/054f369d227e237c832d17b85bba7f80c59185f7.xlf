@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">054f369d227e237c832d17b85bba7f80c59185f7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tree-control-item-states-overview.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">39455ee180dfaae9638d856cd6a874a468f31f99</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f985f062730ba3036a0349149a9534a09750eba3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Tree Control Item States Overview | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Tree Control Item States Overview</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Each item in a tree control (<bpt id="p1">[</bpt>CTreeCtrl<ept id="p1">](../mfc/reference/ctreectrl-class.md)</ept>) has a current state.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For example, an item can be selected, disabled, expanded, and so on.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For the most part, the tree control automatically sets an item's state to reflect user actions, such as selection of an item.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>However, you can also set an item's state by using the <bpt id="p1">[</bpt>SetItemState<ept id="p1">](../mfc/reference/ctreectrl-class.md#ctreectrl__setitemstate)</ept> member function and retrieve the current state of an item by using the <bpt id="p2">[</bpt>GetItemState<ept id="p2">](../mfc/reference/ctreectrl-class.md#ctreectrl__getitemstate)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For a complete list of item states, see <bpt id="p1">[</bpt>Tree-View Control Constants<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb759985)</ept> in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>An item's current state is specified by the <ph id="ph1">`nState`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>A tree control might change an item's state to reflect a user action, such as selecting the item or setting the focus to the item.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In addition, an application might change an item's state to disable or hide the item or to specify an overlay image or state image.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When you specify or change an item's state, the <ph id="ph1">`nStateMask`</ph> parameter specifies which state bits to set, and the <ph id="ph2">`nState`</ph> parameter contains the new values for those bits.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For example, the following example changes the current state of a parent item (specified by <ph id="ph1">`hParentItem`</ph>) in a <ph id="ph2">`CTreeCtrl`</ph> object (<ph id="ph3">`m_treeCtrl`</ph>) to <bpt id="p1">**</bpt>TVIS_EXPANDPARTIAL<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#71</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Another example of changing the state would be to set an item's overlay image.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To accomplish this, <ph id="ph1">`nStateMask`</ph> must include the <ph id="ph2">`TVIS_OVERLAYMASK`</ph> value, and <ph id="ph3">`nState`</ph> must include the one-based index of the overlay image shifted left eight bits by using the <bpt id="p1">[</bpt>INDEXTOOVERLAYMASK<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb761408)</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The index can be 0 to specify no overlay image.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The overlay image must have been added to the tree control's list of overlay images by a previous call to the <bpt id="p1">[</bpt>CImageList::SetOverlayImage<ept id="p1">](../mfc/reference/cimagelist-class.md#cimagelist__setoverlayimage)</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The function specifies the one-based index of the image to add; this is the index used with the <bpt id="p1">**</bpt>INDEXTOOVERLAYMASK<ept id="p1">**</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A tree control can have up to four overlay images.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To set an item's state image, <ph id="ph1">`nStateMask`</ph> must include the <ph id="ph2">`TVIS_STATEIMAGEMASK`</ph> value, and <ph id="ph3">`nState`</ph> must include the one-based index of the state image shifted left 12 bits by using the <bpt id="p1">[</bpt>INDEXTOSTATEIMAGEMASK<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/bb775597)</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The index can be 0 to specify no state image.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For more information about overlay and state images, see <bpt id="p1">[</bpt>Tree Control Image Lists<ept id="p1">](../mfc/tree-control-image-lists.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Using CTreeCtrl</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

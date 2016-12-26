@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ac1931d9d38aa0310494cfa9c28c70b3bc2b5a95</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\2-7-2-6-reduction.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1976553d674f1fbde8b085d7e8e67b43c3cc8225</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b03d8dbf1b06b0bd7db7f34d773cb74343358560</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>2.7.2.6 reduction | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>2.7.2.6 reduction</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This clause performs a reduction on the scalar variables that appear in <bpt id="p1">*</bpt>variable-list<ept id="p1">*</ept>, with the operator op.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The syntax of the <ph id="ph1">`reduction`</ph> clause is as follows:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>A reduction is typically specified for a statement with one of the following forms:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>where:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>x</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>One of the reduction variables specified in the <ph id="ph1">`list`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>variable-list</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A comma-separated list of scalar reduction variables.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>expr</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>An expression with scalar type that does not reference <bpt id="p1">*</bpt>x<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Not an overloaded operator but one of +, *, -, &amp;, ^, &amp;#124;, &amp;&amp;, or &amp;#124;&amp;#124;.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Not an overloaded operator but one of +, *, -, &amp;, ^, or &amp;#124;.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following is an example of the <ph id="ph1">`reduction`</ph> clause:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>As shown in the example, an operator may be hidden inside a function call.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The user should be careful that the operator specified in the <ph id="ph1">`reduction`</ph> clause matches the reduction operation.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Although the right operand of the &amp;#124;&amp;#124; operator has no side effects in this example, they are permitted, but should be used with care.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In this context, a side effect that is guaranteed not to occur during sequential execution of the loop may occur during parallel execution.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This difference can occur because the order of execution of the iterations is indeterminate.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The operator is used to determine the initial value of any private variables used by the compiler for the reduction and to determine the finalization operator.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Specifying the operator explicitly allows the reduction statement to be outside the lexical extent of the construct.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Any number of <ph id="ph1">`reduction`</ph> clauses may be specified on the directive, but a variable may appear in at most one <ph id="ph2">`reduction`</ph> clause for that directive.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>A private copy of each variable in <bpt id="p1">*</bpt>variable-list<ept id="p1">*</ept> is created, one for each thread, as if the <ph id="ph1">`private`</ph> clause had been used.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The private copy is initialized according to the operator (see the following table).</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>At the end of the region for which the <ph id="ph1">`reduction`</ph> clause was specified, the original object is updated to reflect the result of combining its original value with the final value of each of the private copies using the operator specified.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The reduction operators are all associative (except for subtraction), and the compiler may freely reassociate the computation of the final value.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>(The partial results of a subtraction reduction are added to form the final value.)</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The value of the original object becomes indeterminate when the first thread reaches the containing clause and remains so until the reduction computation is complete.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Normally, the computation will be complete at the end of the construct; however, if the <ph id="ph1">`reduction`</ph> clause is used on a construct to which <ph id="ph2">`nowait`</ph> is also applied, the value of the original object remains indeterminate until a barrier synchronization has been performed to ensure that all threads have completed the <ph id="ph3">`reduction`</ph> clause.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The following table lists the operators that are valid and their canonical initialization values.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The actual initialization value will be consistent with the data type of the reduction variable.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Operator</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Initialization</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>0</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>1</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>0</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>~0</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>&amp;#124;</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>0</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>0</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>1</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>&amp;#124;&amp;#124;</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>0</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The restrictions to the <ph id="ph1">`reduction`</ph> clause are as follows:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The type of the variables in the <ph id="ph1">`reduction`</ph> clause must be valid for the reduction operator except that pointer types and reference types are never permitted.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>A variable that is specified in the <ph id="ph1">`reduction`</ph> clause must not be <bpt id="p1">**</bpt>const<ept id="p1">**</ept>-qualified.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Variables that are private within a parallel region or that appear in the <ph id="ph1">`reduction`</ph> clause of a <bpt id="p1">**</bpt>parallel<ept id="p1">**</ept> directive cannot be specified in a <ph id="ph2">`reduction`</ph> clause on a work-sharing directive that binds to the parallel construct.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

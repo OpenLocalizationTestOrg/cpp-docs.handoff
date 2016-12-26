@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c58c44d6bfcec3f8d2aaab763f507cb903f84c67</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\atof-atof-l-wtof-wtof-l.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d9c34297106ea6e3052266a7e58e9372d3b76d07</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">900cbf07b9788eb1c89263bfbc8f167cc7f40a23</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>atof, _atof_l, _wtof, _wtof_l | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>atof, _atof_l, _wtof, _wtof_l</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Convert a string to double.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>String to be converted.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Locale to use.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Each function returns the <ph id="ph1">`double`</ph> value produced by interpreting the input characters as a number.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The return value is 0.0 if the input cannot be converted to a value of that type.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In all out-of-range cases, errno is set to <ph id="ph1">`ERANGE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If the parameter passed in is <ph id="ph1">`NULL`</ph>, the invalid parameter handler is invoked, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, these functions set <ph id="ph1">`errno`</ph> to <ph id="ph2">`EINVAL`</ph> and return 0.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>These functions convert a character string to a double-precision, floating-point value.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The input string is a sequence of characters that can be interpreted as a numerical value of the specified type.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The function stops reading the input string at the first character that it cannot recognize as part of a number.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This character may be the null character ('\0' or L'\0') terminating the string.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`str`</ph> argument to <ph id="ph2">`atof`</ph> and <ph id="ph3">`_wtof`</ph> has the following form:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>[<ph id="ph1">`whitespace`</ph>] [<ph id="ph2">`sign`</ph>] [<ph id="ph3">`digits`</ph>] [<ph id="ph4">`.digits`</ph>] [ {<ph id="ph5">`e`</ph> &amp;#124; <ph id="ph6">`E`</ph> }[<ph id="ph7">`sign`</ph>]<ph id="ph8">`digits`</ph>]</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`whitespace`</ph> consists of space or tab characters, which are ignored; <ph id="ph2">`sign`</ph> is either plus (+) or minus (–); and <ph id="ph3">`digits`</ph> are one or more decimal digits.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If no digits appear before the decimal point, at least one must appear after the decimal point.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The decimal digits may be followed by an exponent, which consists of an introductory letter (<ph id="ph1">`e`</ph>, or <ph id="ph2">`E`</ph>) and an optionally signed decimal integer.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The UCRT versions of these functions do not support conversion of Fortran-style (<ph id="ph1">`d`</ph> or <ph id="ph2">`D`</ph>) exponent letters.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This non-standard extension was supported by earlier versions of the CRT, and may be a breaking change for your code.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The versions of these functions with the <ph id="ph1">`_l`</ph> suffix are identical except that they use the locale parameter passed in instead of the current locale.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Generic-Text Routine Mappings</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>TCHAR.H routine</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>_UNICODE &amp; _MBCS not defined</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>_MBCS defined</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>_UNICODE defined</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Routine(s)</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>C: <ph id="ph1">\&lt;</ph>math.h&gt; or <ph id="ph2">\&lt;</ph>stdlib.h&gt; C++: <ph id="ph3">\&lt;</ph>cstdlib&gt;, <ph id="ph4">\&lt;</ph>stdlib.h&gt;, <ph id="ph5">\&lt;</ph>cmath&gt; or <ph id="ph6">\&lt;</ph>math.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>C: <ph id="ph1">\&lt;</ph>stdlib.h&gt; or <ph id="ph2">\&lt;</ph>wchar.h&gt; C++: <ph id="ph3">\&lt;</ph>cstdlib&gt;, <ph id="ph4">\&lt;</ph>stdlib.h&gt; or <ph id="ph5">\&lt;</ph>wchar.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This program shows how numbers stored as strings can be converted to numeric values using the <ph id="ph1">`atof`</ph> and <ph id="ph2">`_atof_l`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Data Conversion</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Floating-Point Support</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Locale</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>_ecvt</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>_fcvt</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>_gcvt</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>setlocale, _wsetlocale</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

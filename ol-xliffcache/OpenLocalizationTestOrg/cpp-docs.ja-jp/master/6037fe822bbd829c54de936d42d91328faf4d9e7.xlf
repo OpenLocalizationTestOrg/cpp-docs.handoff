@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6037fe822bbd829c54de936d42d91328faf4d9e7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\reference\csemaphore-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">92b89ae33b83ceffbcfa7b9981e9c7308a19a030</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">841b0485a3d2eec6f87e060a6f5149f505b4dbc3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CSemaphore Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CSemaphore Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>An object of class <ph id="ph1">`CSemaphore`</ph> represents a "semaphore" — a synchronization object that allows a limited number of threads in one or more processes to access a Maintains a count of the number of threads currently accessing a specified resource.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Members</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Public Constructors</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>CSemaphore::CSemaphore</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Constructs a <ph id="ph1">`CSemaphore`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Semaphores are useful in controlling access to a shared resource that can only support a limited number of users.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The current count of the <ph id="ph1">`CSemaphore`</ph> object is the number of additional users allowed.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When the count reaches zero, all attempts to use the resource controlled by the <bpt id="p1">**</bpt>CSemaphore<ept id="p1">**</ept> object will be inserted into a system queue and wait until they either time out or the count rises above 0.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The maximum number of users who can access the controlled resource at one time is specified during construction of the <ph id="ph1">`CSemaphore`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To use a <bpt id="p1">**</bpt>CSemaphore<ept id="p1">**</ept> object, construct the <ph id="ph1">`CSemaphore`</ph> object when it is needed.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Specify the name of the semaphore you wish to wait on, and that your application should initially own it.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You can then access the semaphore when the constructor returns.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">[</bpt>CSyncObject::Unlock<ept id="p1">](../../mfc/reference/csyncobject-class.md#csyncobject__unlock)</ept> when you are done accessing the controlled resource.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>An alternative method for using <ph id="ph1">`CSemaphore`</ph> objects is to add a variable of type <ph id="ph2">`CSemaphore`</ph> as a data member to the class you wish to control.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>During construction of the controlled object, call the constructor of the <ph id="ph1">`CSemaphore`</ph> data member specifying the initial access count, maximum access count, name of the semaphore (if it will be used across process boundaries), and desired security attributes.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To access resources controlled by <ph id="ph1">`CSemaphore`</ph> objects in this manner, first create a variable of either type <bpt id="p1">[</bpt>CSingleLock<ept id="p1">](../../mfc/reference/csinglelock-class.md)</ept> or type <bpt id="p2">[</bpt>CMultiLock<ept id="p2">](../../mfc/reference/cmultilock-class.md)</ept> in your resource's access member function.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Then call the lock object's <ph id="ph1">`Lock`</ph> member function (for example, <bpt id="p1">[</bpt>CSingleLock::Lock<ept id="p1">](../../mfc/reference/csinglelock-class.md#csinglelock__lock)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>At this point, your thread will either gain access to the resource, wait for the resource to be released and gain access, or wait for the resource to be released and time out, failing to gain access to the resource.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In any case, your resource has been accessed in a thread-safe manner.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To release the resource, use the lock object's <ph id="ph1">`Unlock`</ph> member function (for example, <bpt id="p1">[</bpt>CSingleLock::Unlock<ept id="p1">](../../mfc/reference/csinglelock-class.md#csinglelock__unlock)</ept>), or allow the lock object to fall out of scope.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Alternatively, you can create a <bpt id="p1">**</bpt>CSemaphore<ept id="p1">**</ept> object stand-alone, and access it explicitly before attempting to access the controlled resource.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>This method, while clearer to someone reading your source code, is more prone to error.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For more information on how to use <bpt id="p1">**</bpt>CSemaphore<ept id="p1">**</ept> objects, see the article <bpt id="p2">[</bpt>Multithreading: How to Use the Synchronization Classes<ept id="p2">](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Inheritance Hierarchy</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>CObject</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>CSyncObject</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> afxmt.h</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>CSemaphore::CSemaphore</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Constructs a named or unnamed <ph id="ph1">`CSemaphore`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>lInitialCount</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The initial usage count for the semaphore.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Must be greater than or equal to 0, and less than or equal to <ph id="ph1">`lMaxCount`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The maximum usage count for the semaphore.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Must be greater than 0.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The name of the semaphore.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Must be supplied if the semaphore will be accessed across process boundaries.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`NULL,`</ph> the object will be unnamed.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If the name matches an existing semaphore, the constructor builds a new <ph id="ph1">`CSemaphore`</ph> object which references the semaphore of that name.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If the name matches an existing synchronization object that is not a semaphore, the construction will fail.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>lpsaAttributes</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Security attributes for the semaphore object.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For a full description of this structure, see <bpt id="p1">[</bpt>SECURITY_ATTRIBUTES<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/aa379560)</ept> in the <ph id="ph1">[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>To access or release a <ph id="ph1">`CSemaphore`</ph> object, create a <bpt id="p1">[</bpt>CMultiLock<ept id="p1">](../../mfc/reference/cmultilock-class.md)</ept> or <bpt id="p2">[</bpt>CSingleLock<ept id="p2">](../../mfc/reference/csinglelock-class.md)</ept> object and call its <bpt id="p3">[</bpt>Lock<ept id="p3">](../../mfc/reference/csinglelock-class.md#csinglelock__lock)</ept> and <bpt id="p4">[</bpt>Unlock<ept id="p4">](../../mfc/reference/csinglelock-class.md#csinglelock__unlock)</ept> member functions.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>After creating the <ph id="ph1">`CSemaphore`</ph> object, use <bpt id="p1">[</bpt>GetLastError<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms679360)</ept> to ensure that the mutex did not already exist.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>If the mutex did exist unexpectedly, it may indicate a rogue process is squatting and may be intending to use the mutex maliciously.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>In this case, the recommended security-conscious procedure is to close the handle and continue as if there was a failure in creating the object.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>CSyncObject Class</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Hierarchy Chart</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

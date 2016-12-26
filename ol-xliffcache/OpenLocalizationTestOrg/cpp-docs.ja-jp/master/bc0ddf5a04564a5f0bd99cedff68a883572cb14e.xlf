@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bc0ddf5a04564a5f0bd99cedff68a883572cb14e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn039-mfc-ole-automation-implementation.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">142bf09572ce5e0631fb2a2c24ef8d3d10b9c5c1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6166b976b5eeac2411f56a281ceab3bb82a87ad6</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN039: MFC-OLE Automation Implementation | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN039: MFC/OLE Automation Implementation</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following technical note has not been updated since it was first included in the online documentation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, some procedures and topics might be out of date or incorrect.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For the latest information, it is recommended that you search for the topic of interest in the online documentation index.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Overview of OLE IDispatch Interface</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IDispatch`</ph> interface is the means by which applications expose methods and properties such that other applications such as Visual BASIC, or other languages, can make use of the application's features.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The most important part of this interface is the <bpt id="p1">**</bpt>IDispatch::Invoke<ept id="p1">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>MFC uses "dispatch maps" to implement <bpt id="p1">**</bpt>IDispatch::Invoke<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The dispatch map provides the MFC implementation information on the layout or "shape" of your <ph id="ph1">`CCmdTarget`</ph>-derived classes, such that it can directly manipulate the properties of the object, or call member functions within your object to satisfy <bpt id="p1">**</bpt>IDispatch::Invoke<ept id="p1">**</ept> requests.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For the most part, ClassWizard and MFC cooperate to hide most of the details of OLE automation from the application programmer.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The programmer concentrates on the actual functionality to expose in the application and doesn't have to worry about the underlying plumbing.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>There are cases, however, where it is necessary to understand what MFC is doing behind the scenes.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This note will address how the framework assigns <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept>s to member functions and properties.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Knowledge of the algorithm MFC uses for assigning <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept>s is only necessary when you need to know the IDs, such as when you create a "type library" for your application's objects.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>MFC DISPID assignment</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Although the end-user of automation (a Visual Basic user, for example), sees the actual names of the automation enabled properties and methods in their code (such as obj.ShowWindow), the implementation of <bpt id="p1">**</bpt>IDispatch::Invoke<ept id="p1">**</ept> does not receive the actual names.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For optimization reasons, it receives a <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept>, which is a 32-bit "magic cookie" that describes the method or property that is to be accessed.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>These <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept> values are returned from the <ph id="ph1">`IDispatch`</ph> implementation through another method, called <bpt id="p2">**</bpt>IDispatch::GetIDsOfNames<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>An automation client application will call <ph id="ph1">`GetIDsOfNames`</ph> once for each member or property it intends to access, and cache them for later calls to <bpt id="p1">**</bpt>IDispatch::Invoke<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>This way, the expensive string lookup is only done once per object use, instead of once per <bpt id="p1">**</bpt>IDispatch::Invoke<ept id="p1">**</ept> call.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>MFC determines the <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept>s for each method and property based on two things:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The distance from the top of the dispatch map (1 relative)</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The distance of the dispatch map from the most derived class (0 relative)</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept> is divided into two parts.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>LOWORD<ept id="p1">**</ept> of the <bpt id="p2">**</bpt>DISPID<ept id="p2">**</ept> contains the first component, the distance from the top of the dispatch map.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>HIWORD<ept id="p1">**</ept> contains the distance from the most derived class.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>As you can see, there are two classes, both of which expose OLE automation interfaces.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>One of these classes is derived from the other and thus leverages the base class's functionality, including the OLE automation part ("x" and "y" properties in this case).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>MFC will generate <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept>s for class CDispPoint as follows:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Since the properties are not in a base class, the <bpt id="p1">**</bpt>HIWORD<ept id="p1">**</ept> of the <bpt id="p2">**</bpt>DISPID<ept id="p2">**</ept> is always zero (the distance from the most derived class for CDispPoint is zero).</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>MFC will generate <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept>s for class CDisp3DPoint as follows:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The Z property is given a <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept> with a zero <bpt id="p2">**</bpt>HIWORD<ept id="p2">**</ept> since it is defined in the class that is exposing the properties, CDisp3DPoint.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Since the X and Y properties are defined in a base class, the <bpt id="p1">**</bpt>HIWORD<ept id="p1">**</ept> of the <bpt id="p2">**</bpt>DISPID<ept id="p2">**</ept> is 1, since the class in which these properties are defined is at a distance of one derivation from the most derived class.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>LOWORD<ept id="p1">**</ept> is always determined by the position in the map, even if there exist entries in the map with explicit <bpt id="p2">**</bpt>DISPID<ept id="p2">**</ept> (see next section for information on the <bpt id="p3">**</bpt>_ID<ept id="p3">**</ept> versions of the <ph id="ph1">`DISP_PROPERTY`</ph> and <ph id="ph2">`DISP_FUNCTION`</ph> macros).</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Advanced MFC Dispatch Map Features</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>There are a number of additional features that ClassWizard does not support with this release of Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>ClassWizard supports <ph id="ph1">`DISP_FUNCTION`</ph>, <ph id="ph2">`DISP_PROPERTY`</ph>, and <ph id="ph3">`DISP_PROPERTY_EX`</ph> which define a method, member variable property, and get/set member function property, respectively.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>These capabilities are usually all that is needed to create most automation servers.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The following additional macros can be used when the ClassWizard supported macros are not adequate: <ph id="ph1">`DISP_PROPERTY_NOTIFY`</ph>, and <ph id="ph2">`DISP_PROPERTY_PARAM`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>DISP_PROPERTY_NOTIFY — Macro Description</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Name of the class.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>External name of the property.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Name of the member variable in which the property is stored.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Name of member function to call when property is changed.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>A value specifying the property's type.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>This macro is much like <ph id="ph1">`DISP_PROPERTY`</ph>, except that it accepts an additional argument.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The additional argument, <bpt id="p1">*</bpt>pfnAfterSet,<ept id="p1">*</ept> should be a member function that returns nothing and takes no parameters, 'void OnPropertyNotify()'.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>It will be called <bpt id="p1">**</bpt>after<ept id="p1">**</ept> the member variable has been modified.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>DISP_PROPERTY_PARAM — Macro Description</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Name of the class.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>External name of the property.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Name of the member function used to get the property.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Name of the member function used to set the property.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>A value specifying the property's type.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>A string of space separated VTS_ for each parameter.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Much like the <ph id="ph1">`DISP_PROPERTY_EX`</ph> macro, this macro defines a property accessed with separate Get and Set member functions.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>This macro, however, allows you to specify a parameter list for the property.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>This is useful for implementing properties that are indexed or parameterized in some other way.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The parameters will always be placed first, followed by the new value for the property.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>would correspond to get and set member functions:</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>DISP_XXXX_ID — Macro Descriptions</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Name of the class.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>External name of the property.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The fixed DISPID for the property or method.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Name of the member function used to get the property.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Name of the member function used to set the property.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The name of the member variable to map to the property</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>A value specifying the property's type.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>A string of space separated VTS_ for each parameter.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>These macros allow you to specify a <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept> instead of letting MFC automatically assign one.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>These advanced macros have the same names except that ID is appended to the macro name (e.g. <bpt id="p1">**</bpt>DISP_PROPERTY_ID<ept id="p1">**</ept>) and the ID is determined by the parameter specified just after the <ph id="ph1">`pszName`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>See AFXDISP.H for more information on these macros.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>_ID<ept id="p1">**</ept> entries must be placed at the end of the dispatch map.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>They will affect the automatic <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept> generation in the same way as a non-<bpt id="p2">**</bpt>_ID<ept id="p2">**</ept> version of the macro would (the <bpt id="p3">**</bpt>DISPID<ept id="p3">**</ept>s are determined by position).</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>MFC will generate DISPIDs for class CDisp3DPoint as follows:</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Specifying a fixed <bpt id="p1">**</bpt>DISPID<ept id="p1">**</ept> is useful to maintain backward compatibility to a previously existing dispatch interface, or to implement certain system defined methods or properties (usually indicated by a negative <bpt id="p2">**</bpt>DISPID<ept id="p2">**</ept>, such as the <bpt id="p3">**</bpt>DISPID_NEWENUM<ept id="p3">**</ept> collection).</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Retrieving the IDispatch Interface for a COleClientItem</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Many servers will support automation within their document objects, along with the OLE server functionality.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>In order to gain access to this automation interface, it is necessary to directly access the <bpt id="p1">**</bpt>COleClientItem::m_lpObject<ept id="p1">**</ept> member variable.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The code below will retrieve the <ph id="ph1">`IDispatch`</ph> interface for an object derived from <ph id="ph2">`COleClientItem`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>You can include the code below in your application if you find this functionality necessary:</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The dispatch interface returned from this function could then be used directly or attached to a <ph id="ph1">`COleDispatchDriver`</ph> for type-safe access.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>If you use it directly, make sure that you call its <bpt id="p1">**</bpt>Release<ept id="p1">**</ept> member when through with the pointer (the <ph id="ph1">`COleDispatchDriver`</ph> destructor does this by default).</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

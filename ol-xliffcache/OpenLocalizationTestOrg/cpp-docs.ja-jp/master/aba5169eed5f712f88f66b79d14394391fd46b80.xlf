@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">aba5169eed5f712f88f66b79d14394391fd46b80</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\sample-container-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d90d0ae5904d87b32a448408e16d70d8fad7bda0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6ff0b8bc570e9adccb9ff75e6652949fe62e60c5</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Sample Container Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Sample Container Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the Standard C++ Library.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>STL Containers<ept id="p1">](../standard-library/stl-containers.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Describes an object that controls a varying-length sequence of elements, typically of type <bpt id="p1">**</bpt>Ty<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The sequence is stored in different ways, depending on the actual container.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A container constructor or member function may find occasion to call the constructor <bpt id="p1">**</bpt>Ty<ept id="p1">**</ept>(<bpt id="p2">**</bpt>const Ty&amp;<ept id="p2">**</ept>) or the function <bpt id="p3">**</bpt>Ty::operator=<ept id="p3">**</ept>(<bpt id="p4">**</bpt>const Ty&amp;<ept id="p4">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If such a call throws an exception, the container object is obliged to maintain its integrity, and to rethrow any exception it catches.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You can safely swap, assign to, erase, or destroy a container object after it throws one of these exceptions.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In general, however, you cannot otherwise predict the state of the sequence controlled by the container object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A few additional caveats:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If the expression <bpt id="p1">**</bpt>~Ty<ept id="p1">**</ept> throws an exception, the resulting state of the container object is undefined.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If the container stores an allocator object <bpt id="p1">*</bpt>al<ept id="p1">*</ept>, and <bpt id="p2">*</bpt>al<ept id="p2">*</ept> throws an exception other than as a result of a call to <bpt id="p3">*</bpt>al<ept id="p3">*</ept><bpt id="p4">**</bpt>.allocate<ept id="p4">**</ept>, the resulting state of the container object is undefined.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If the container stores a function object <bpt id="p1">*</bpt>comp<ept id="p1">*</ept>, to determine how to order the controlled sequence, and <bpt id="p2">*</bpt>comp<ept id="p2">*</ept> throws an exception of any kind, the resulting state of the container object is undefined.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The container classes defined by STL satisfy several additional requirements, as described in the following paragraphs.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Container template class <bpt id="p1">[</bpt>list<ept id="p1">](../standard-library/list-class.md)</ept> provides deterministic, and useful, behavior even in the presence of the exceptions described above.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For example, if an exception is thrown during the insertion of one or more elements, the container is left unaltered and the exception is rethrown.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For <bpt id="p1">*</bpt>all<ept id="p1">*</ept> the container classes defined by STL, if an exception is thrown during calls to the following member functions:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>the container is left unaltered and the exception is rethrown.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For <bpt id="p1">*</bpt>all<ept id="p1">*</ept> the container classes defined by STL, no exception is thrown during calls to the following member functions:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The member function <bpt id="p1">[</bpt>erase<ept id="p1">](../standard-library/container-class-erase.md)</ept> throws an exception only if a copy operation (assignment or copy construction) throws an exception.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Moreover, no exception is thrown while copying an iterator returned by a member function.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The member function <bpt id="p1">[</bpt>swap<ept id="p1">](../standard-library/container-class-swap.md)</ept> makes additional promises for <bpt id="p2">*</bpt>all<ept id="p2">*</ept> container classes defined by STL:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The member function throws an exception only if the container stores an allocator object al, and <ph id="ph1">`al`</ph> throws an exception when copied.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>References, pointers, and iterators that designate elements of the controlled sequences being swapped remain valid.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>An object of a container class defined by STL allocates and frees storage for the sequence it controls through a stored object of type <ph id="ph1">`Alloc`</ph>, which is typically a template parameter.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Such an allocator object must have the same external interface as an object of class <bpt id="p1">**</bpt>allocator<ph id="ph1">\&lt;</ph>Ty&gt;<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>In particular, <ph id="ph1">`Alloc`</ph> must be the same type as <bpt id="p1">**</bpt>Alloc::rebind&lt;value_type&gt;::other<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For <bpt id="p1">*</bpt>all<ept id="p1">*</ept> container classes defined by STL, the member function <bpt id="p2">**</bpt>Alloc get_allocator const;<ept id="p2">**</ept> returns a copy of the stored allocator object.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Note that the stored allocator object is <bpt id="p1">*</bpt>not<ept id="p1">*</ept> copied when the container object is assigned.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>All constructors initialize the value stored in <bpt id="p1">**</bpt>allocator<ept id="p1">**</ept>, to <ph id="ph1">`Alloc`</ph> if the constructor contains no allocator parameter.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>According to the C++ Standard, a container class defined by STL can assume that:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>All objects of class <ph id="ph1">`Alloc`</ph> compare equal.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Type <bpt id="p1">**</bpt>Alloc::const_pointer<ept id="p1">**</ept> is the same as <bpt id="p2">**</bpt>const Ty <ph id="ph1">\*</ph><ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Type <bpt id="p1">**</bpt>Alloc::const_reference<ept id="p1">**</ept> is the same as <bpt id="p2">**</bpt>const Ty&amp;<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Type <bpt id="p1">**</bpt>Alloc::pointer<ept id="p1">**</ept> is the same as <bpt id="p2">**</bpt>Ty <ph id="ph1">\*</ph><ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Type <bpt id="p1">**</bpt>Alloc::reference<ept id="p1">**</ept> is the same as <bpt id="p2">**</bpt>Ty&amp;<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>In this implementation, however, containers do not make such simplifying assumptions.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Thus, they work properly with allocator objects that are more ambitious:</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>All objects of class <ph id="ph1">`Alloc`</ph> does not need to compare equal.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>(You can maintain multiple pools of storage.)</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Type <bpt id="p1">**</bpt>Alloc::const_pointer<ept id="p1">**</ept> does not need to be the same as <bpt id="p2">**</bpt>const Ty <ph id="ph1">\*</ph><ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>(A const pointer can be a class.)</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Type <bpt id="p1">**</bpt>Alloc::pointer<ept id="p1">**</ept> does not need to be the same as <bpt id="p2">**</bpt>Ty <ph id="ph1">\*</ph><ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>(A pointer can be a class.)</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header<ept id="p1">**</ept>: <ph id="ph1">\&lt;</ph>sample container&gt;</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>sample container&gt;</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">841e65dba6fee5b00e95f8b8318a5edbd5526d7f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\preprocessor\hash-define-directive-c-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e4a73dee83c09d1519e96e601ba03e90844e9f71</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">20bc05ab5478ee34192b2bbc5631c8b28c7da7a7</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>define Directive (C-C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>define Directive (C/C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`#define`</ph> creates a <bpt id="p1">*</bpt>macro<ept id="p1">*</ept>, which is the association of an identifier or parameterized identifier with a token string.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>After the macro is defined, the compiler can substitute the token string for each occurrence of the identifier in the source file.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>identifier<ept id="p1">*</ept> <bpt id="p2">*</bpt>token-string<ept id="p2">*</ept>opt</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>identifier<ept id="p1">*</ept> <ph id="ph1">`(`</ph> <bpt id="p2">*</bpt>identifier<ept id="p2">*</ept>opt<ph id="ph2">`,`</ph><bpt id="p3">*</bpt>...<ept id="p3">*</ept><ph id="ph3">`,`</ph><bpt id="p4">*</bpt>identifier<ept id="p4">*</ept>opt<ph id="ph4">`)`</ph><bpt id="p5">*</bpt>token-string<ept id="p5">*</ept>opt</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`#define`</ph> directive causes the compiler to substitute <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept> for each occurrence of <bpt id="p2">*</bpt>identifier<ept id="p2">*</ept> in the source file.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>identifier<ept id="p1">*</ept> is replaced only when it forms a token.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>That is, <bpt id="p1">*</bpt>identifier<ept id="p1">*</ept> is not replaced if it appears in a comment, in a string, or as part of a longer identifier.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Tokens<ept id="p1">](../cpp/tokens-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept> argument consists of a series of tokens, such as keywords, constants, or complete statements.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>One or more white-space characters must separate <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept> from <bpt id="p2">*</bpt>identifier<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This white space is not considered part of the substituted text, nor is any white space that follows the last token of the text.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`#define`</ph> without a <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept> removes occurrences of <bpt id="p2">*</bpt>identifier<ept id="p2">*</ept> from the source file.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>identifier<ept id="p1">*</ept> remains defined and can be tested by using the <ph id="ph1">`#if defined`</ph> and <ph id="ph2">`#ifdef`</ph> directives.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The second syntax form defines a function-like macro with parameters.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This form accepts an optional list of parameters that must appear in parentheses.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>After the macro is defined, each subsequent occurrence of <bpt id="p1">*</bpt>identifier<ept id="p1">*</ept>( <bpt id="p2">*</bpt>identifier<ept id="p2">*</ept>opt, ..., <bpt id="p3">*</bpt>identifier<ept id="p3">*</ept>opt ) is replaced with a version of the <bpt id="p4">*</bpt>token-string<ept id="p4">*</ept> argument that has actual arguments substituted for formal parameters.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Formal parameter names appear in <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept> to mark the locations where actual values are substituted.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Each parameter name can appear multiple times in <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept>, and the names can appear in any order.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The number of arguments in the call must match the number of parameters in the macro definition.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Liberal use of parentheses guarantees that complex actual arguments are interpreted correctly.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The formal parameters in the list are separated by commas.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Each name in the list must be unique, and the list must be enclosed in parentheses.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>No spaces can separate <bpt id="p1">*</bpt>identifier<ept id="p1">*</ept> and the opening parenthesis.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Use line concatenation — place a backslash (<ph id="ph1">`\`</ph>) immediately before the newline character — for long directives on multiple source lines.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The scope of a formal parameter name extends to the new line that ends <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>When a macro has been defined in the second syntax form, subsequent textual instances followed by an argument list indicate a macro call.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The actual arguments that follows an instance of <bpt id="p1">*</bpt>identifier<ept id="p1">*</ept> in the source file are matched to the corresponding formal parameters in the macro definition.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Each formal parameter in <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept> that is not preceded by a stringizing (<ph id="ph1">`#`</ph>), charizing (<ph id="ph2">`#@`</ph>), or token-pasting (<ph id="ph3">`##`</ph>) operator, or not followed by a <ph id="ph4">`##`</ph> operator, is replaced by the corresponding actual argument.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Any macros in the actual argument are expanded before the directive replaces the formal parameter.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>(The operators are described in <bpt id="p1">[</bpt>Preprocessor Operators<ept id="p1">](../preprocessor/preprocessor-operators.md)</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The following examples of macros with arguments illustrate the second form of the <ph id="ph1">`#define`</ph> syntax:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Arguments with side effects sometimes cause macros to produce unexpected results.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>A given formal parameter may appear more than one time in <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If that formal parameter is replaced by an expression with side effects, the expression, with its side effects, may be evaluated more than one time.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>(See the examples under <bpt id="p1">[</bpt>Token-Pasting Operator (##)<ept id="p1">](../preprocessor/token-pasting-operator-hash-hash.md)</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`#undef`</ph> directive causes an identifier's preprocessor definition to be forgotten.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The #undef Directive<ept id="p1">](../preprocessor/hash-undef-directive-c-cpp.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If the name of the macro being defined occurs in <bpt id="p1">*</bpt>token-string<ept id="p1">*</ept> (even as a result of another macro expansion), it is not expanded.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>A second <ph id="ph1">`#define`</ph> for a macro with the same name generates a warning unless the second token sequence is identical to the first.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Microsoft C/C++ lets you redefine a macro if the new definition is syntactically identical to the original definition.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In other words, the two definitions can have different parameter names.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>This behavior differs from <ph id="ph1">[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]</ph> C, which requires that the two definitions be lexically identical.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>For example, the following two macros are identical except for the parameter names.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>C does not allow such a redefinition, but Microsoft C/C++ compiles it without error.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>On the other hand, the following two macros are not identical and will generate a warning in Microsoft C/C++.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>This example illustrates the <ph id="ph1">`#define`</ph> directive:</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The first statement defines the identifier <ph id="ph1">`WIDTH`</ph> as the integer constant 80 and defines <ph id="ph2">`LENGTH`</ph> in terms of <ph id="ph3">`WIDTH`</ph> and the integer constant 10.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Each occurrence of <ph id="ph1">`LENGTH`</ph> is replaced by (<ph id="ph2">`WIDTH + 10`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>In turn, each occurrence of <ph id="ph1">`WIDTH + 10`</ph> is replaced by the expression (<ph id="ph2">`80 + 10`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The parentheses around <ph id="ph1">`WIDTH + 10`</ph> are important because they control the interpretation in statements such as the following:</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>After the preprocessing stage the statement becomes:</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>which evaluates to 1800.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Without parentheses, the result is:</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>which evaluates to 280.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Defining macros and constants with the <bpt id="p1">[</bpt>/D<ept id="p1">](../build/reference/d-preprocessor-definitions.md)</ept> compiler option has the same effect as using a <ph id="ph1">`#define`</ph> preprocessing directive at the start of your file.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Up to 30 macros can be defined by using the /D option.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Preprocessor Directives</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

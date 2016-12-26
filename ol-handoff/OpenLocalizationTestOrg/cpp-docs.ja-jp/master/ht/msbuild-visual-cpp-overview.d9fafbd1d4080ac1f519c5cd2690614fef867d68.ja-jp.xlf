@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">453cba7b839d004c0d1dfbaf20f46109c9c8fd72</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\msbuild-visual-cpp-overview.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">79e5ba879f85cbce3a43cf9f5b9691db8e33a5db</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ceedfa6b312563621183bb1cae0e5b3e35b647c0</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>MSBuild (Visual C++) Overview | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>MSBuild (Visual C++) Overview</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>MSBuild is the standard build system for Visual C++ projects.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When you build a project in the Visual Studio integrated development environment (IDE), it uses the msbuild.exe tool, an XML-based project file, and optional settings files.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Although you can use msbuild.exe and a project file on the command line, the IDE provides a user interface so that you can more easily configure settings and build a project.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This overview describes how Visual C++ uses the MSBuild system.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Read the following documents about MSBuild.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>MSBuild</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Overview of MSBuild concepts.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>MSBuild Reference</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Reference information about the MSBuild system.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Project File Schema Reference</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Lists the MSBuild XML Schema elements, together with their attributes, and parent and child elements.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Especially note the <bpt id="p1">[</bpt>ItemGroup<ept id="p1">](/visualstudio/msbuild/itemgroup-element-msbuild)</ept>, <bpt id="p2">[</bpt>PropertyGroup<ept id="p2">](/visualstudio/msbuild/propertygroup-element-msbuild)</ept>, <bpt id="p3">[</bpt>Target<ept id="p3">](/visualstudio/msbuild/target-element-msbuild)</ept>, and <bpt id="p4">[</bpt>Task<ept id="p4">](/visualstudio/msbuild/task-element-msbuild)</ept> elements.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Command-Line Reference</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Describes the command-line arguments and options that you can use with msbuild.exe.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Task Reference</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Describes MSBuild tasks.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Especially note these tasks, which are specific to Visual C++: <bpt id="p1">[</bpt>BscMake Task<ept id="p1">](/visualstudio/msbuild/bscmake-task)</ept>, <bpt id="p2">[</bpt>CL Task<ept id="p2">](/visualstudio/msbuild/cl-task)</ept>, <bpt id="p3">[</bpt>CPPClean Task<ept id="p3">](/visualstudio/msbuild/cppclean-task)</ept>, <bpt id="p4">[</bpt>LIB Task<ept id="p4">](/visualstudio/msbuild/lib-task)</ept>, <bpt id="p5">[</bpt>Link Task<ept id="p5">](/visualstudio/msbuild/link-task)</ept>, <bpt id="p6">[</bpt>MIDL Task<ept id="p6">](/visualstudio/msbuild/midl-task)</ept>, <bpt id="p7">[</bpt>MT Task<ept id="p7">](/visualstudio/msbuild/mt-task)</ept>, <bpt id="p8">[</bpt>RC Task<ept id="p8">](/visualstudio/msbuild/rc-task)</ept>, <bpt id="p9">[</bpt>SetEnv Task<ept id="p9">](/visualstudio/msbuild/setenv-task)</ept>, <bpt id="p10">[</bpt>VCMessage Task<ept id="p10">](/visualstudio/msbuild/vcmessage-task)</ept>, <bpt id="p11">[</bpt>XDCMake Task<ept id="p11">](/visualstudio/msbuild/xdcmake-task)</ept>, <bpt id="p12">[</bpt>XSD Task<ept id="p12">](/visualstudio/msbuild/xsd-task)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>MSBuild on the Command Line</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The following statement from the <bpt id="p1">[</bpt>Command-Line Reference<ept id="p1">](/visualstudio/msbuild/msbuild-command-line-reference)</ept> document illustrates that the msbuild.exe tool takes an implicit or explicit <ph id="ph1">`project file`</ph> argument (a .vcxproj file for Visual C++ projects) and zero or more command-line <ph id="ph2">`options`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>msbuild.exe [<ept id="p1">**</ept> <ph id="ph1">`project file`</ph> <bpt id="p2">**</bpt>] [<ept id="p2">**</ept> <ph id="ph2">`options`</ph> <bpt id="p3">**</bpt>]<ept id="p3">**</ept></source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>/target<ept id="p1">**</ept> (or <bpt id="p2">**</bpt>/t<ept id="p2">**</ept>) and <bpt id="p3">**</bpt>/property<ept id="p3">**</ept> (or <bpt id="p4">**</bpt>/p<ept id="p4">**</ept>) command-line options to override properties and targets that are specified in the project file.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>An essential function of the project file is to specify a <bpt id="p1">*</bpt>target<ept id="p1">*</ept>, which is a particular operation applied to your project, and the inputs and outputs that are required to perform that operation.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>A project file can specify one or more targets, which can include a default target.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Each target consists of a sequence of one or more <bpt id="p1">*</bpt>tasks<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Each task is represented by a .NET Framework class that contains one executable command.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For example, the <bpt id="p1">[</bpt>CL task<ept id="p1">](/visualstudio/msbuild/cl-task)</ept> contains the <bpt id="p2">[</bpt>cl.exe<ept id="p2">](../build/reference/compiling-a-c-cpp-program.md)</ept> command.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>task parameter<ept id="p1">*</ept> is a property of the class task and typically represents a command-line option of the executable command.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For example, the <ph id="ph1">`FavorSizeOrSpeed`</ph> parameter of the <ph id="ph2">`CL`</ph> task corresponds to the <bpt id="p1">**</bpt>/Os<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/Ot<ept id="p2">**</ept> compiler options.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Additional task parameters support the MSBuild infrastructure.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For example, the <ph id="ph1">`Sources`</ph> task parameter specifies a set of tasks that can be consumed by other tasks.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more information about MSBuild tasks, see <bpt id="p1">[</bpt>Task Reference<ept id="p1">](/visualstudio/msbuild/msbuild-task-reference)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Most tasks require inputs and outputs, such as file names, paths, and string, numeric, or Boolean parameters.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For example, a common input is the name of a .cpp source file to compile.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>An important input parameter is a string that specifies the build configuration and platform, for example, "Debug&amp;#124;Win32".</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Inputs and outputs are specified by one or more user-defined XML <ph id="ph1">`Item`</ph> elements contained in an <ph id="ph2">`ItemGroup`</ph> element.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>A project file can also specify user-defined <bpt id="p1">*</bpt>properties<ept id="p1">*</ept> and <bpt id="p2">*</bpt>item-definition-group<ept id="p2">*</ept><bpt id="p3">*</bpt>items<ept id="p3">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Properties and items form name/value pairs that can be used as variables in the build.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The name component of a pair defines a <bpt id="p1">*</bpt>macro<ept id="p1">*</ept>, and the value component declares the <bpt id="p2">*</bpt>macro value<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>A property macro is accessed by using $(<bpt id="p1">*</bpt>name<ept id="p1">*</ept>) notation, and an item macro is accessed by using %(<bpt id="p2">*</bpt>name<ept id="p2">*</ept>) notation.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Other XML elements in a project file can test macros, and then conditionally set the value of any macro or control the execution of the build.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Macro names and literal strings can be concatenated to generate constructs such as a path and file name.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>On the command line, the <bpt id="p1">**</bpt>/property<ept id="p1">**</ept> option sets or overrides a project property.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Items cannot be referenced on the command line.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The MSBuild system can conditionally execute a target before or after another target.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Also, the system can build a target based on whether the files that the target consumes are newer than the files it emits.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>MSBuild in the IDE</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>When you set project properties in the IDE and then save the project, Visual C++ writes the project settings to your project file.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The project file contains settings that are unique to your project, but it does not contain all the settings that are required to build your project.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The project file contains <ph id="ph1">`Import`</ph> elements that include a network of additional <bpt id="p1">*</bpt>support files.<ept id="p1">*</ept></source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The support files contain the remaining properties, targets, and settings that are required to build the project.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Most targets and properties in the support files exist solely to implement the build system.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The following section discusses some useful targets and properties that you can specify on the MSBuild command line.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>To discover more targets and properties, explore the files in the support file directories.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Support File Directories</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>By default, the primary Visual C++ support files are located in the following directories.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Directory</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>drive<ept id="p1">*</ept>:\Program Files\MSBuild\Microsoft.Cpp\v4.0<ph id="ph1">\\</ph><bpt id="p2">*</bpt>version<ept id="p2">*</ept></source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Contains the primary target files (.targets) and property files (.props) that are used by the targets.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>By default, the $(VCTargetsPath) macro references this directory.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>drive<ept id="p1">*</ept>:\Program Files\MSBuild\Microsoft.Cpp\v4.0<ph id="ph1">\\</ph><bpt id="p2">*</bpt>version<ept id="p2">*</ept>\Platforms<ph id="ph2">\\</ph><bpt id="p3">*</bpt>platform<ept id="p3">*</ept></source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Contains platform-specific target and property files that override targets and properties in its parent directory.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>This directory also contains a .dll file that defines the tasks that are used by the targets in this directory.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>platform<ept id="p1">*</ept> placeholder represents the <ph id="ph1">`ARM`</ph>, <ph id="ph2">`Win32`</ph>, or <ph id="ph3">`x64`</ph> subdirectory.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>drive<ept id="p1">*</ept>:\Program Files\MSBuild\Microsoft.Cpp\v4.0<ph id="ph1">\\</ph><bpt id="p2">*</bpt>version<ept id="p2">*</ept>\Platforms<ph id="ph2">\\</ph><bpt id="p3">*</bpt>platform<ept id="p3">*</ept>\PlatformToolsets<ph id="ph3">\\</ph><bpt id="p4">*</bpt>toolset<ept id="p4">*</ept></source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Contains the directories that enable the build to generate Visual C++ applications with the specified <bpt id="p1">*</bpt>version<ept id="p1">*</ept> of the toolset.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>platform<ept id="p1">*</ept> placeholder represents the <ph id="ph1">`ARM`</ph>, <ph id="ph2">`Win32`</ph>, or <ph id="ph3">`x64`</ph> subdirectory.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>toolset<ept id="p1">*</ept> placeholder represents the toolset subdirectory for building Windows, Windows XP, or Windows Phone apps.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>drive<ept id="p1">*</ept>:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Platforms<ph id="ph1">\\</ph><bpt id="p2">*</bpt>platform<ept id="p2">*</ept>\PlatformToolsets<ph id="ph2">\\</ph><bpt id="p3">*</bpt>toolset<ept id="p3">*</ept></source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Contains the directories that enable the build to generate either 9.0 or Visual C++ 10.0 applications.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>platform<ept id="p1">*</ept> placeholder represents the <ph id="ph1">`Itanium`</ph>, <ph id="ph2">`Win32`</ph>, or <ph id="ph3">`x64`</ph> subdirectory.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>toolset<ept id="p1">*</ept> placeholder represents the <ph id="ph1">`v90`</ph> or <ph id="ph2">`v100`</ph> toolset subdirectory.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Support Files</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The support file directories contain files with the following extensions.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Extension</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>.targets</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Contains <ph id="ph1">`Target`</ph> XML elements that specify the tasks that are executed by the target.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>May also contain <ph id="ph1">`Property Group`</ph>, <ph id="ph2">`Item Group`</ph>, <ph id="ph3">`Item Definition Group`</ph>, and user-defined <ph id="ph4">`Item`</ph> elements that are used to assign files and command-line options to task parameters.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Target Element (MSBuild)<ept id="p1">](/visualstudio/msbuild/target-element-msbuild)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>.props</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Contains <ph id="ph1">`Property Group`</ph> and user-defined <ph id="ph2">`Property`</ph> XML elements that specify file and parameter settings that are used during a build.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>May also contain <ph id="ph1">`Item Definition Group`</ph> and user-defined <ph id="ph2">`Item`</ph> XML elements that specify additional settings.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Items defined in an item definition group resemble properties, but cannot be accessed from the command line.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Visual C++ project files frequently uses items instead of properties to represent settings.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>ItemGroup Element (MSBuild)<ept id="p1">](/visualstudio/msbuild/itemgroup-element-msbuild)</ept>, <bpt id="p2">[</bpt>ItemDefinitionGroup Element (MSBuild)<ept id="p2">](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)</ept>, and <bpt id="p3">[</bpt>Item Element (MSBuild)<ept id="p3">](/visualstudio/msbuild/item-element-msbuild)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>.xml</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Contains XML elements that declare and initialize IDE user interface elements such as property sheets and property pages, and text box and list box controls.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The .xml files directly support the IDE, not MSBuild.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>However, the values of IDE properties are assigned to build properties and items.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Most .xml files are in a locale-specific subdirectory.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>For example, files for the English-US region are in $(VCTargetsPath)\1033<ph id="ph1">\\</ph>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>User Targets and Properties</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>To use MSBuild most effectively on the command line, it helps to know which properties and targets are useful and relevant.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Most properties and targets help implement the Visual C++ build system, and consequently are not relevant to the user.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>This section describes some worthwhile user-oriented properties and targets.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>PlatformToolset Property</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`PlatformToolset`</ph> property determines which Visual C++ toolset is used in the build.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The value of the property is concatenated with literal strings to form the path of a directory that contains the property and target files that are required to build a project for a particular platform.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Set the <ph id="ph1">`PlatformToolset`</ph> property to <ph id="ph2">`v110`</ph> to use <ph id="ph3">[!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]</ph> tools and libraries to build your application.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Set the <ph id="ph1">`PlatformToolset`</ph> property to <ph id="ph2">`v100`</ph> to use <ph id="ph3">[!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)]</ph> tools and libraries to build your application.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Set the <ph id="ph1">`PlatformToolset`</ph> property to <ph id="ph2">`v90`</ph> to use Visual C++ 2008 tools and libraries to build your application.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The Visual C++ 2008 toolset must already be installed on your computer for this property to be effective.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>PreferredToolArchitecture Property</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`PreferredToolArchitecture`</ph> property determines whether the 32-bit or 64-bit compiler and tools are used in the build.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>This property does not affect the output platform architecture or configuration.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>By default, MSBuild uses the x86 version of the compiler and tools if this property is not set, or is set to any value other than <ph id="ph1">`x64`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Set the <ph id="ph1">`PreferredToolArchitecture`</ph> property to <ph id="ph2">`x64`</ph> to use the 64-bit compiler and tools to build your application.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>UseEnv Property</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>By default, the platform-specific settings for the current project override the PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION, and PLATFORM environment variables.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Set the <ph id="ph1">`UseEnv`</ph> property to <ph id="ph2">`true`</ph> to guarantee that the environment variables are not overridden.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Targets</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>There are hundreds of targets in the Visual C++ support files.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>However, most are system-oriented targets that the user can ignore.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Most system targets are prefixed by an underscore (_), or have a name that starts with "PrepareFor", "Compute", "Before", "After", "Pre", or "Post".</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>The following table lists several worthwhile user-oriented targets.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Target</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>BscMake</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Executes the Microsoft Browse Information Maintenance Utility tool, bscmake.exe.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Build</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Builds the project.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>This is the default target for a project.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>ClCompile</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Executes the Visual C++ compiler tool, cl.exe.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Clean</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Deletes temporary and intermediate build files.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Lib</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Executes the Microsoft 32-Bit Library Manager tool, lib.exe.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>Link</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Executes the Visual C++ linker tool, link.exe.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>ManifestResourceCompile</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Extracts a list of resources from a manifest and then executes the Microsoft Windows Resource Compiler tool, rc.exe.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Midl</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Executes the Microsoft Interface Definition Language (MIDL) compiler tool, midl.exe.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Rebuild</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Cleans and then builds your project.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>ResourceCompile</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Executes the Microsoft Windows Resource Compiler tool, rc.exe.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>XdcMake</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Executes the XML Documentation tool, xdcmake.exe.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>Xsd</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>Executes the XML Schema Definition tool, xsd.exe.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>MSBuild (Visual C++)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

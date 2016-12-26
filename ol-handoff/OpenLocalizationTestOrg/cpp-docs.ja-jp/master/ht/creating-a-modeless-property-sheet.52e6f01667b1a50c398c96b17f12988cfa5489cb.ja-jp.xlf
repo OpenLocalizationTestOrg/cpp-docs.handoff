@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cbf6d689179bf86ad63030ba16fcc695ec153799</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\creating-a-modeless-property-sheet.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c008918c31e808a9e3bab78617c46b78da5412ee</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1654e7d1ac1abc697052f729503f6975456a250e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Creating a Modeless Property Sheet | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Creating a Modeless Property Sheet</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Normally, the property sheets you create will be modal.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When using a modal property sheet, the user must close the property sheet before using any other part of the application.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This article describes methods you can use to create a modeless property sheet that allows the user to keep the property sheet open while using other parts of the application.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To display a property sheet as a modeless dialog box instead of as a modal dialog box, call <bpt id="p1">[</bpt>CPropertySheet::Create<ept id="p1">](../mfc/reference/cpropertysheet-class.md#cpropertysheet__create)</ept> instead of <bpt id="p2">[</bpt>DoModal<ept id="p2">](../mfc/reference/cpropertysheet-class.md#cpropertysheet__domodal)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You must also implement some extra tasks to support a modeless property sheet.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>One of the additional tasks is exchanging data between the property sheet and the external object it is modifying when the property sheet is open.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This is generally the same task as for standard modeless dialog boxes.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Part of this task is implementing a channel of communication between the modeless property sheet and the external object to which the property settings apply.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This implementation is far easier if you derive a class from <bpt id="p1">[</bpt>CPropertySheet<ept id="p1">](../mfc/reference/cpropertysheet-class.md)</ept> for your modeless property sheet.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>This article assumes you have done so.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>One method for communicating between the modeless property sheet and the external object (the current selection in a view, for example) is to define a pointer from the property sheet to the external object.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Define a function (called something like <ph id="ph1">`SetMyExternalObject`</ph>) in the <ph id="ph2">`CPropertySheet`</ph>-derived class to change the pointer whenever the focus changes from one external object to another.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`SetMyExternalObject`</ph> function needs to reset the settings for each property page to reflect the newly selected external object.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To accomplish this, the <ph id="ph1">`SetMyExternalObject`</ph> function must be able to access the <bpt id="p1">[</bpt>CPropertyPage<ept id="p1">](../mfc/reference/cpropertypage-class.md)</ept> objects belonging to the <ph id="ph2">`CPropertySheet`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The most convenient way to provide access to property pages within a property sheet is to embed the <ph id="ph1">`CPropertyPage`</ph> objects in the <ph id="ph2">`CPropertySheet`</ph>-derived object.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Embedding <ph id="ph1">`CPropertyPage`</ph> objects in the <ph id="ph2">`CPropertySheet`</ph>-derived object differs from the typical design for modal dialog boxes, where the owner of the property sheet creates the <ph id="ph3">`CPropertyPage`</ph> objects and passes them to the property sheet via <bpt id="p1">[</bpt>CPropertySheet::AddPage<ept id="p1">](../mfc/reference/cpropertysheet-class.md#cpropertysheet__addpage)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>There are many user-interface alternatives for determining when the settings of the modeless property sheet should be applied to an external object.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>One alternative is to apply the settings of the current property page whenever the user changes any value.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Another alternative is to provide an Apply button, which allows the user to accumulate changes in the property pages before committing them to the external object.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For information on ways to handle the Apply button, see the article <bpt id="p1">[</bpt>Handling the Apply Button<ept id="p1">](../mfc/handling-the-apply-button.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Property Sheets</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Exchanging Data</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Life Cycle of a Dialog Box</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b67b2f33931b9683547b570071623bab0441d674</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\how-to-migrate-to-clr-pure-cpp-cli.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ef1f9b8dfb15f9a3a9f3dbb756ecfbe6f8de390b</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">179f8aab328320386d8c54b0a75900f69398f847</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Migrate to -clr:pure (C++-CLI) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Migrate to /clr:pure (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic discusses issues likely to arise when migrating to pure MSIL using <bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept> (see <bpt id="p2">[</bpt>/clr (Common Language Runtime Compilation)<ept id="p2">](../build/reference/clr-common-language-runtime-compilation.md)</ept> for more information).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic assumes that the code being migrated is currently complied as mixed assembly using the <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> option, as the migration path from unmanaged code to pure MSIL is not a direct one.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For unmanaged code, see <bpt id="p1">[</bpt>How to: Migrate to /clr<ept id="p1">](../dotnet/how-to-migrate-to-clr.md)</ept> before attempting to migrate to pure MSIL.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Basic Changes</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Pure MSIL is comprised of MSIL instructions, so code containing functions that cannot be expressed in MSIL will prevent compilation.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This includes functions defined as using calling conventions other than <bpt id="p1">[</bpt>__clrcall<ept id="p1">](../cpp/clrcall.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>(Non __clrcall functions can be invoked in a pure MSIL component, but not defined.)</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To ensure no runtime errors, you should enable the C4412 warning.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Enable C4412 by adding <ph id="ph1">`#pragma warning (default : 4412)`</ph> to each compiland that you compile with <bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept> and that passes C++ types to and from IJW (<bpt id="p2">**</bpt>/clr)<ept id="p2">**</ept> or native code.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Compiler Warning (level 2) C4412<ept id="p1">](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Architectural Considerations</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Some of the limitations of pure MSIL assemblies listed in <bpt id="p1">[</bpt>Pure and Verifiable Code (C++/CLI)<ept id="p1">](../dotnet/pure-and-verifiable-code-cpp-cli.md)</ept> have high-level implications for application design and migration strategy.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Most notably, unlike mixed assemblies, pure MSIL assemblies don't enjoy full compatibility with unmanaged modules.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Pure MSIL assemblies can call unmanaged functions, but cannot be called by unmanaged functions.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>As a result, pure MSIL is a better candidate for client code that uses unmanaged functions than it is for server code that is used by unmanaged functions.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If functionality contained in a pure MSIL assembly is to be used by unmanaged functions, a mixed assembly must be used as an interface layer.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Applications that use ATL or MFC are not good candidates for migration to pure MSIL, as these libraries are not supported in this release.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Likewise, the <ph id="ph1">[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]</ph> contains header files that do not compile under <bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>While pure MSIL assemblies can call unmanaged functions, this ability is limited to simple C-style functions.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The use of more complex unmanaged APIs is likely to require the unmanaged functionality to be exposed in the form of a COM interface, or a mixed assembly that can act as an interface between the pure MSIL and unmanaged components.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Using a mixed assembly layer is the only way to use unmanaged functions that take callback functions, for example, as a pure assembly is unable to provide a native callable function for use as a callback.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Application Domains and Calling Conventions</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Although it is possible for pure MSIL assemblies use unmanaged functionality, functions and static data are handled differently.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In pure assemblies, functions are implemented with the <bpt id="p1">[</bpt>__clrcall<ept id="p1">](../cpp/clrcall.md)</ept> calling convention, and static data is stored per-application domain.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This differs from the default for unmanaged and mixed assemblies, which use the <bpt id="p1">[</bpt>__cdecl<ept id="p1">](../cpp/cdecl.md)</ept> calling convention for functions and store static data on a per-process basis.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Within the context of pure MSIL (and verifiable code compiled with /clr:safe) these defaults are transparent, as <bpt id="p1">[</bpt>__clrcall<ept id="p1">](../cpp/clrcall.md)</ept> is the default calling convention of the CLR, and application domains are the native scope for static and global data in .NET applications.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>However, when interfacing with unmanaged or mixed components, the differing treatment of functions and global data can cause problems.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, if a pure MSIL component is to call functions in an unmanaged or mixed DLL, a header file for the DLL will be used to compile the pure assembly.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>However, unless the calling convention for each function in the header is indicated explicitly, they will all be assumed to be <bpt id="p1">[</bpt>__clrcall<ept id="p1">](../cpp/clrcall.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This will later cause runtime failures, as these functions are likely implemented with the <bpt id="p1">[</bpt>__cdecl<ept id="p1">](../cpp/cdecl.md)</ept> convention.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The functions in the unmanaged header file can be explicitly marked as <bpt id="p1">[</bpt>__cdecl<ept id="p1">](../cpp/cdecl.md)</ept>, or the entire DLL source code must be recompiled under <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Similarly, function pointers are assumed to point to <bpt id="p1">[</bpt>__clrcall<ept id="p1">](../cpp/clrcall.md)</ept> functions under <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept> compilation.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>These too must be explicitly annotated with the correct calling convention.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Application Domains and Visual C++<ept id="p1">](../dotnet/application-domains-and-visual-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Linking Limitations</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The Visual C++ linker will not attempt to link mixed and pure OBJ files, as the storage scope and calling conventions are different.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Pure and Verifiable Code (C++/CLI)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

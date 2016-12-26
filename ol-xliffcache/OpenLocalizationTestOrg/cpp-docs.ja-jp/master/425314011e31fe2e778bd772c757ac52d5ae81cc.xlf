@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">425314011e31fe2e778bd772c757ac52d5ae81cc</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\gl-whole-program-optimization.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">befc60aba1f6bf3d3cea88cd2dea90a8536b995e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3f723fe519a48833c33c4e1d24348f2ff8b92a97</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-GL (Whole Program Optimization) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/GL (Whole Program Optimization)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Enables whole program optimization.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Whole program optimization allows the compiler to perform optimizations with information on all modules in the program.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Without whole program optimization, optimizations are performed on a per module (compiland) basis.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Whole program optimization is off by default and must be explicitly enabled.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>However, it is also possible to explicitly disable it with <bpt id="p1">**</bpt>/GL-<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>With information on all modules, the compiler can:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Optimize the use of registers across function boundaries.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Do a better job of tracking modifications to global data, allowing a reduction in the number of loads and stores.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Do a better job of tracking the possible set of items modified by a pointer dereference, reducing the numbers of loads and stores.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Inline a function in a module even when the function is defined in another module.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>.obj files produced with <bpt id="p1">**</bpt>/GL<ept id="p1">**</ept> will not be available to such linker utilities as <bpt id="p2">[</bpt>EDITBIN<ept id="p2">](../../build/reference/editbin-reference.md)</ept> and <bpt id="p3">[</bpt>DUMPBIN<ept id="p3">](../../build/reference/dumpbin-reference.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you compile your program with <bpt id="p1">**</bpt>/GL<ept id="p1">**</ept> and <bpt id="p2">[</bpt>/c<ept id="p2">](../../build/reference/c-compile-without-linking.md)</ept>, you should use the /LTCG linker option to create the output file.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>/ZI<ept id="p1">](../../build/reference/z7-zi-zi-debug-information-format.md)</ept> cannot be used with <bpt id="p2">**</bpt>/GL<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The format of files produced with <bpt id="p1">**</bpt>/GL<ept id="p1">**</ept> in the current version may not be readable by subsequent versions of Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You should not ship a .lib file comprised of .obj files that were produced with <bpt id="p1">**</bpt>/GL<ept id="p1">**</ept> unless you are willing to ship copies of the .lib file for all versions of Visual C++ you expect your users to use, now and in the future.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>.obj files produced with <bpt id="p1">**</bpt>/GL<ept id="p1">**</ept> and precompiled header files should not be used to build a .lib file unless the .lib file will be linked on the same machine that produced the <bpt id="p2">**</bpt>/GL<ept id="p2">**</ept> .obj file.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Information from the .obj file's precompiled header file will be needed at link time.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For more information on the optimizations available with and the limitations of whole program optimization, see <bpt id="p1">[</bpt>/LTCG<ept id="p1">](../../build/reference/ltcg-link-time-code-generation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/GL<ept id="p1">**</ept> also makes profile guided optimization available; see /LTCG.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When compiling for profile guided optimizations and if you want function ordering from your profile guided optimizations, you must compile with <bpt id="p1">[</bpt>/Gy<ept id="p1">](../../build/reference/gy-enable-function-level-linking.md)</ept> or a compiler option that implies /Gy.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>To set this linker option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>/LTCG (Link-time Code Generation)<ept id="p1">](../../build/reference/ltcg-link-time-code-generation.md)</ept> for information on how to specify <bpt id="p2">**</bpt>/GL<ept id="p2">**</ept> in the development environment.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To set this linker option programmatically</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>See &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Compiler Options</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Setting Compiler Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
