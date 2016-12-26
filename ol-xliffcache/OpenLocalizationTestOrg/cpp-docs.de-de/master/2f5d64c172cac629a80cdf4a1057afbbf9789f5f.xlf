@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2f5d64c172cac629a80cdf4a1057afbbf9789f5f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\reference\threadprivate.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">26d84c1f98fc34a556d0344fcdb009e23c543488</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8740eba54ae44a466f291d288f23955d4ef4c454</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>threadprivate | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>threadprivate</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Specifies that a variable is private to a thread.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>where,</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A comma-separated list of variables that you want to make private to a thread.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>must be either a global- or namespace-scoped variable or a local static variable.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`threadprivate`</ph> directive supports no OpenMP clauses.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>2.7.1 threadprivate Directive<ept id="p1">](../../../parallel/openmp/2-7-1-threadprivate-directive.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`threadprivate`</ph> directive is based on the <bpt id="p1">[</bpt>thread<ept id="p1">](../../../cpp/thread.md)</ept><ph id="ph2">`__declspec`</ph> attribute; limits on <bpt id="p2">**</bpt>__declspec(thread)<ept id="p2">**</ept> apply to <ph id="ph3">`threadprivate`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You cannot use <ph id="ph1">`threadprivate`</ph> in any DLL that will be loaded via <bpt id="p1">[</bpt>LoadLibrary<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms684175)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This includes DLLs that are loaded with <bpt id="p1">[</bpt>/DELAYLOAD (Delay Load Import)<ept id="p1">](../../../build/reference/delayload-delay-load-import.md)</ept>, which also uses <bpt id="p2">**</bpt>LoadLibrary<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You can use <ph id="ph1">`threadprivate`</ph> in a DLL that is statically loaded at process startup.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Because <ph id="ph1">`threadprivate`</ph> is based on <bpt id="p1">**</bpt>__declspec(thread)<ept id="p1">**</ept>, a <ph id="ph2">`threadprivate`</ph> variable will exist in any thread started in the process, not just those threads that are part of a thread team spawned by a parallel region.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This is an implementation detail that you may want to be aware of, since you may notice, for example, constructors for a <ph id="ph1">`threadprivate`</ph> user-defined type called more often then expected.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`threadprivate`</ph> variable of a destructable type is not guaranteed to have its destructor called.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Users have no control as to when the threads constituting the parallel region will terminate.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If those threads exist when the process exits, the threads will not be notified about the process exit, and the destructor will not be called for <ph id="ph1">`threaded_var`</ph> on any thread except the one that exits (here, the primary thread).</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>So code should not count on proper destruction of <ph id="ph1">`threadprivate`</ph> variables.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For a sample of using <ph id="ph1">`threadprivate`</ph>, see <bpt id="p1">[</bpt>private<ept id="p1">](../../../parallel/openmp/reference/private-openmp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Directives</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

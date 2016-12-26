@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e6551291d6c8f64c6fc11737e51df56e5ffddb37</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\reference-counting.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1325d17b6e333575606dae36bd0e9d7c28d3ee89</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6fb4135ba8563e0607d30f452e338b6b17d274c8</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Reference Counting | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Reference Counting</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>COM itself does not automatically try to remove an object from memory when it thinks the object is no longer being used.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Instead, the object programmer must remove the unused object.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The programmer determines whether an object can be removed based on a reference count.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>COM uses the <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> methods, <bpt id="p2">[</bpt>AddRef<ept id="p2">](http://msdn.microsoft.com/library/windows/desktop/ms691379)</ept> and <bpt id="p3">[</bpt>Release<ept id="p3">](http://msdn.microsoft.com/library/windows/desktop/ms682317)</ept>, to manage the reference count of interfaces on an object.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The general rules for calling these methods are:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Whenever a client receives an interface pointer, <ph id="ph1">`AddRef`</ph> must be called on the interface.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Whenever the client has finished using the interface pointer, it must call <bpt id="p1">**</bpt>Release<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In a simple implementation, each <ph id="ph1">`AddRef`</ph> call increments and each <bpt id="p1">**</bpt>Release<ept id="p1">**</ept> call decrements a counter variable inside the object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When the count returns to zero, the interface no longer has any users and is free to remove itself from memory.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Reference counting can also be implemented so that each reference to the object (not to an individual interface) is counted.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In this case, each <ph id="ph1">`AddRef`</ph> and <bpt id="p1">**</bpt>Release<ept id="p1">**</ept> call delegates to a central implementation on the object, and <bpt id="p2">**</bpt>Release<ept id="p2">**</ept> frees the entire object when its reference count reaches zero.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When a <ph id="ph1">`CComObject`</ph>-derived object is constructed using the <bpt id="p1">**</bpt>new<ept id="p1">**</ept> operator, the reference count is 0.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Therefore, a call to <ph id="ph1">`AddRef`</ph> must be made after successfully creating the <ph id="ph2">`CComObject`</ph>-derived object.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Introduction to COM</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Managing Object Lifetimes through Reference Counting</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

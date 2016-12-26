@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a71fb7f5f6afc65eac9012f49ce4c657d5f67bf2</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\assertion-and-user-supplied-messages-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f2c808be3ee349beef5aff0af38eef9a8eb7ea89</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9431bbd3f730b81e15e7bd918a068aae720e77dc</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Assertion and User-Supplied Messages (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Assertion and User-Supplied Messages (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The C++ language supports three error handling mechanisms that help you debug your application: the <bpt id="p1">[</bpt>#error directive<ept id="p1">](../preprocessor/hash-error-directive-c-cpp.md)</ept>, the <bpt id="p2">[</bpt>static_assert<ept id="p2">](../cpp/static-assert.md)</ept> keyword, and the <bpt id="p3">[</bpt>assert Macro, _assert, _wassert<ept id="p3">](../c-runtime-library/reference/assert-macro-assert-wassert.md)</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>All three mechanisms issue error messages, and two also test software assertions.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>A software assertion specifies a condition that you expect to be true at a particular point in your program.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If a compile time assertion fails, the compiler issues a diagnostic message and a compilation error.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If a run-time assertion fails, the operating system issues a diagnostic message and closes your application.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The lifetime of your application consists of a preprocessing, compile, and run time phase.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Each error handling mechanism accesses debug information that is available during one of these phases.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>To debug effectively, select the mechanism that provides appropriate information about that phase:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>#error directive<ept id="p1">](../preprocessor/hash-error-directive-c-cpp.md)</ept> is in effect at preprocessing time.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>It unconditionally emits a user-specified message and causes the compilation to fail with an error.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The message can contain text that is manipulated by preprocessor directives but any resulting expression is not evaluated.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>static_assert<ept id="p1">](../cpp/static-assert.md)</ept> declaration is in effect at compile time.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>It tests a software assertion that is represented by a user-specified integral expression that can be converted to a Boolean.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If the expression evaluates to zero (false), the compiler issues the user-specified message and the compilation fails with an error.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`static_assert`</ph> declaration is especially useful for debugging templates because template arguments can be included in the user-specified expression.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>assert Macro, _assert, _wassert<ept id="p1">](../c-runtime-library/reference/assert-macro-assert-wassert.md)</ept> macro is in effect at run time.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>It evaluates a user-specified expression, and if the result is zero, the system issues a diagnostic message and closes your application.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Many other macros, such as<bpt id="p1">[</bpt>_ASSERT<ept id="p1">](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)</ept> and <ph id="ph1">`_ASSERTE`</ph>, resemble this macro but issue different system-defined or user-defined diagnostic messages.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>error Directive (C/C++)</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>assert Macro, _assert, _wassert</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>_ASSERT, _ASSERTE, _ASSERT_EXPR Macros</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>static_assert</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>_STATIC_ASSERT Macro</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Templates</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">75b15102e3b5b7f408516b5fb9b20af8ba9160db</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn021-command-and-message-routing.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9c8987b1ec31dae764b8872b61ea85746790c5fd</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">db76ad5478b73b52c6a114dc9276c263d2b32872</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN021: Command and Message Routing | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN021: Command and Message Routing</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following technical note has not been updated since it was first included in the online documentation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, some procedures and topics might be out of date or incorrect.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For the latest information, it is recommended that you search for the topic of interest in the online documentation index.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This note describes the command routing and dispatch architecture as well as advanced topics in general window message routing.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Please refer to Visual C++ for general details on the architectures described here, especially the distinction between Windows messages, control notifications, and commands.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This note assumes you are very familiar with the issues described in the printed documentation and only addresses very advanced topics.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Command Routing and Dispatch MFC 1.0 Functionality Evolves to MFC 2.0 Architecture</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Windows has the <bpt id="p1">**</bpt>WM_COMMAND<ept id="p1">**</ept> message that is overloaded to provide notifications of menu commands, accelerator keys and dialog-control notifications.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>MFC 1.0 built on that a little by allowing a command handler (for example, "OnFileNew") in a <bpt id="p1">**</bpt>CWnd<ept id="p1">**</ept> derived class to get called in response to a specific <bpt id="p2">**</bpt>WM_COMMAND<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>This is glued together with a data structure called the message map, and results in a very space-efficient command mechanism.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>MFC 1.0 also provided additional functionality for separating control notifications from command messages.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Commands are represented by a 16-bit ID, sometimes known as a Command ID.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Commands normally start from a <bpt id="p1">**</bpt>CFrameWnd<ept id="p1">**</ept> (that is, a menu select or a translated accelerator) and get routed to a variety of other windows.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>MFC 1.0 used command routing in a limited sense for the implementation of Multiple Document Interface (MDI).</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>(An MDI frame window delegate commands to its active MDI Child window.)</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This functionality has been generalized and extended in MFC 2.0 to allow commands to be handled by a wider range of objects (not just window objects).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>It provides a more formal and extensible architecture for routing messages and reuses the command target routing for not only handling of commands, but also for updating UI objects (like menu items and toolbar buttons) to reflect the current availability of a command.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Command IDs</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>See Visual C++ for an explanation of the command routing and binding process.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Technical Note 20<ept id="p1">](../mfc/tn020-id-naming-and-numbering-conventions.md)</ept> contains information on ID naming.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>We use the generic prefix "ID_" for command IDs.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Command IDs are &gt;= 0x8000.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The message line or status bar will show the command description string if there is a STRINGTABLE resource with the same IDs as the command ID.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In the resources of your application, a command ID can appears in several places:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In one STRINGTABLE resource that has the same ID as the message-line prompt.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>In possibly many MENU resources that are attached to menu items that invoke the same command.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>(ADVANCED) in a dialog button for a GOSUB command.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In the source code of your application, a command ID can appears in several places:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In your RESOURCE.H (or other main symbol header file) to define application-specific command IDs.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>PERHAPS In an ID array used to create a toolbar.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In an <bpt id="p1">**</bpt>ON_COMMAND<ept id="p1">**</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>PERHAPS In an <bpt id="p1">**</bpt>ON_UPDATE_COMMAND_UI<ept id="p1">**</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Currently, the only implementation in MFC that requires command IDs be &gt;= 0x8000 is the implementation of GOSUB dialogs/commands.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>GOSUB Commands, Using Command Architecture in Dialogs</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The command architecture of routing and enabling commands works well with frame windows, menu items, toolbar buttons, dialog bar buttons, other control bars and other user-interface elements designed to update on demand and route commands or control IDs to a main command target (usually the main frame window).</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>That main command target may route the command or control notifications to other command target objects as appropriate.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>A dialog (modal or modeless) can benefit from some of the features of the command architecture if you assign the control ID of the dialog control to the appropriate command ID.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Support for dialogs is not automatic, so you may have to write some additional code.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Note that for all these features to work properly, your command IDs should be &gt;= 0x8000.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Since many dialogs could get routed to the same frame, shared commands should be &gt;= 0x8000, while the nonshared IDCs in a specific dialog should be &lt;= 0x7FFF.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>You can place a normal button in a normal modal dialog with the IDC of the button set to the appropriate command ID.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When the user selects the button, the owner of the dialog (usually the main frame window) gets the command just like any other command.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This is called a GOSUB command since it usually is used to bring up another dialog (a GOSUB of the first dialog).</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>You can also call the function <bpt id="p1">**</bpt>CWnd::UpdateDialogControls<ept id="p1">**</ept> on your dialog and pass it the address of your main frame window.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>This function will enable or disable your dialog controls based on whether they have command handlers in the frame.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This function is called automatically for you for control bars in your application's idle loop, but you must call it directly for normal dialogs that you wish to have this feature.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>When ON_UPDATE_COMMAND_UI is Called</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Maintaining the enabled/checked state of all a program's menu items all the time can be a computationally expensive problem.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>A common technique is to enable/check menu items only when the user selects the POPUP.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The MFC 2.0 implementation of <bpt id="p1">**</bpt>CFrameWnd<ept id="p1">**</ept> handles the <bpt id="p2">**</bpt>WM_INITMENUPOPUP<ept id="p2">**</ept> message and uses the command routing architecture to determine the states of menus through <bpt id="p3">**</bpt>ON_UPDATE_COMMAND_UI<ept id="p3">**</ept> handlers.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>CFrameWnd<ept id="p1">**</ept> also handles the <bpt id="p2">**</bpt>WM_ENTERIDLE<ept id="p2">**</ept> message to describe the current menu item selected on the status bar (also known as the message line).</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>An application's menu structure, edited by Visual C++, is used to represent the potential commands available at <bpt id="p1">**</bpt>WM_INITMENUPOPUP<ept id="p1">**</ept> time.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>ON_UPDATE_COMMAND_UI<ept id="p1">**</ept> handlers can modify the state or text of a menu, or for advanced uses (like the File MRU list or the OLE Verbs pop-up menu), actually modify the menu structure before the menu is drawn.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The same sort of <bpt id="p1">**</bpt>ON_UPDATE_COMMAND_UI<ept id="p1">**</ept> processing is done for toolbars (and other control bars) when the application enters its idle loop.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>See the <bpt id="p1">*</bpt>Class Library Reference<ept id="p1">*</ept> and <bpt id="p2">[</bpt>Technical Note 31<ept id="p2">](../mfc/tn031-control-bars.md)</ept> for more information on control bars.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Nested Pop-up Menus</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>If you are using a nested menu structure, you will notice that the <bpt id="p1">**</bpt>ON_UPDATE_COMMAND_UI<ept id="p1">**</ept> handler for the first menu item in the pop-up menu is called in two different cases.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>First, it is called for the pop-up menu itself.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>This is necessary because pop-up menus do not have IDs and we use the ID of the first menu item of the pop-up menu to refer to the entire pop-up menu.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>In this case, the <bpt id="p1">**</bpt>m_pSubMenu<ept id="p1">**</ept> member variable of the <bpt id="p2">**</bpt>CCmdUI<ept id="p2">**</ept> object will be non-NULL and will point to the pop-up menu.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Second, it is called just before the menu items in the pop-up menu are to be drawn.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>In this case, the ID refers just to the first menu item and the <bpt id="p1">**</bpt>m_pSubMenu<ept id="p1">**</ept> member variable of the <bpt id="p2">**</bpt>CCmdUI<ept id="p2">**</ept> object will be NULL.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>This allows you to enable the pop-up menu distinct from its menu items, but requires that you write some menu aware code.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>For example, in a nested menu with the following structure:</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The ID_NEW_SHEET and ID_NEW_CHART commands can be independently enabled or disabled.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>New<ept id="p1">**</ept> pop-up menu should be enabled if either of the two is enabled.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The command handler for ID_NEW_SHEET (the first command in the pop-up) would look something like:</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The command handler for ID_NEW_CHART would be a normal update command handler and look something like:</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>ON_COMMAND and ON_BN_CLICKED</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The message map macros for <bpt id="p1">**</bpt>ON_COMMAND<ept id="p1">**</ept> and <bpt id="p2">**</bpt>ON_BN_CLICKED<ept id="p2">**</ept> are the same.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The MFC command and control notification routing mechanism only uses the command ID to decide where to route to.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Control notifications with control notification code of zero (<bpt id="p1">**</bpt>BN_CLICKED<ept id="p1">**</ept>) are interpreted as commands.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>In fact, all control notification messages go through the command handler chain.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>For example, it is technically possible for you to write a control notification handler for <bpt id="p1">**</bpt>EN_CHANGE<ept id="p1">**</ept> in your document class.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>This is not generally advisable because the practical applications of this feature are few, the feature is not supported by ClassWizard, and use of the feature can result in fragile code.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Disabling the Automatic Disabling of Button Controls</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>If you place a button control on a dialog bar, or in a dialog using where you are calling <bpt id="p1">**</bpt>CWnd::UpdateDialogControls<ept id="p1">**</ept> on your own, you will notice that buttons which do not have <bpt id="p2">**</bpt>ON_COMMAND<ept id="p2">**</ept> or <bpt id="p3">**</bpt>ON_UPDATE_COMMAND_UI<ept id="p3">**</ept> handlers will be automatically disabled for you by the framework.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>In some cases, you will not need to have a handler, but you will want the button to remain enabled.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The easiest way to achieve this is to add a dummy command handler (easy to do with ClassWizard) and do nothing in it.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Window Message Routing</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The following describes some more advanced topics on the MFC classes and how Windows message routing and other topics impact them.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The information here is only described briefly.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Refer to the <bpt id="p1">*</bpt>Class Library Reference<ept id="p1">*</ept> for details about public APIs.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Please refer to the MFC library source code for more information on implementation details.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Please refer to <bpt id="p1">[</bpt>Technical Note 17<ept id="p1">](../mfc/tn017-destroying-window-objects.md)</ept> for details on Window cleanup, a very important topic for all <bpt id="p2">**</bpt>CWnd<ept id="p2">**</ept>-derived classes.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>CWnd Issues</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The implementation member function <bpt id="p1">**</bpt>CWnd::OnChildNotify<ept id="p1">**</ept> provides a powerful and extensible architecture for child windows (also known as controls) to hook or otherwise be informed of messages, commands, and control notifications that go to their parent (or "owner").</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>If the child window (/control) is a C++ <bpt id="p1">**</bpt>CWnd<ept id="p1">**</ept> object itself, the virtual function <bpt id="p2">**</bpt>OnChildNotify<ept id="p2">**</ept> is called first with the parameters from the original message (that is, a <bpt id="p3">**</bpt>MSG<ept id="p3">**</ept> structure).</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>The child window can leave the message alone, eat it, or modify the message for the parent (rare).</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The default <bpt id="p1">**</bpt>CWnd<ept id="p1">**</ept> implementation handles the following messages and uses the <bpt id="p2">**</bpt>OnChildNotify<ept id="p2">**</ept> hook to allow child windows (controls) to first access at the message:</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>WM_MEASUREITEM<ept id="p1">**</ept> and <bpt id="p2">**</bpt>WM_DRAWITEM<ept id="p2">**</ept> (for self-draw)</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>WM_COMPAREITEM<ept id="p1">**</ept> and <bpt id="p2">**</bpt>WM_DELETEITEM<ept id="p2">**</ept> (for self-draw)</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>WM_HSCROLL<ept id="p1">**</ept> and <bpt id="p2">**</bpt>WM_VSCROLL<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>WM_CTLCOLOR</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>WM_PARENTNOTIFY</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>You will notice the <bpt id="p1">**</bpt>OnChildNotify<ept id="p1">**</ept> hook is used for changing owner-draw messages into self-draw messages.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>In addition to the <bpt id="p1">**</bpt>OnChildNotify<ept id="p1">**</ept> hook, scroll messages have further routing behavior.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Please see below for more details on scroll bars and sources of <bpt id="p1">**</bpt>WM_HSCROLL<ept id="p1">**</ept> and <bpt id="p2">**</bpt>WM_VSCROLL<ept id="p2">**</ept> messages.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>CFrameWnd Issues</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>CFrameWnd<ept id="p1">**</ept> class provides most of the command routing and user-interface updating implementation.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>This is primarily used for the main frame window of the application (<bpt id="p1">**</bpt>CWinApp::m_pMainWnd<ept id="p1">**</ept>) but applies to all frame windows.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The main frame window is the window with the menu bar and is the parent of the status bar or message line.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Please refer to the above discussion on command routing and <bpt id="p1">**</bpt>WM_INITMENUPOPUP.<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>CFrameWnd<ept id="p1">**</ept> class provides management of the active view.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The following messages are routed through the active view:</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>All command messages (the active view gets first access to them).</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>WM_HSCROLL<ept id="p1">**</ept> and <bpt id="p2">**</bpt>WM_VSCROLL<ept id="p2">**</ept> messages from sibling scroll bars (see below).</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>WM_ACTIVATE<ept id="p1">**</ept> (and <bpt id="p2">**</bpt>WM_MDIACTIVATE<ept id="p2">**</ept> for MDI) get turned into calls to the virtual function <bpt id="p3">**</bpt>CView::OnActivateView<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>CMDIFrameWnd/CMDIChildWnd Issues</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Both MDI frame window classes derive from <bpt id="p1">**</bpt>CFrameWnd<ept id="p1">**</ept> and therefore are both enabled for the same sort of command routing and user-interface updating provided in <bpt id="p2">**</bpt>CFrameWnd<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>In a typical MDI application, only the main frame window (that is, the <bpt id="p1">**</bpt>CMDIFrameWnd<ept id="p1">**</ept> object) holds the menu bar and the status bar and therefore is the main source of the command routing implementation.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>The general routing scheme is that the active MDI child window gets first access to commands.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>The default <bpt id="p1">**</bpt>PreTranslateMessage<ept id="p1">**</ept> functions handle accelerator tables for both MDI child windows (first) and the MDI frame (second) as well as the standard MDI system-command accelerators normally handled by <bpt id="p2">**</bpt>TranslateMDISysAccel<ept id="p2">**</ept> (last).</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Scroll Bar Issues</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>When handling scroll-message (<bpt id="p1">**</bpt>WM_HSCROLL<ept id="p1">**</ept><ph id="ph1">/</ph><bpt id="p2">**</bpt>OnHScroll<ept id="p2">**</ept> and/or <bpt id="p3">**</bpt>WM_VSCROLL<ept id="p3">**</ept><ph id="ph2">/</ph><bpt id="p4">**</bpt>OnVScroll<ept id="p4">**</ept>), you should try to write the handler code so it does not rely on where the scroll bar message came from.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>This is not only a general Windows issue, since scroll messages can come from true scroll bar controls or from <bpt id="p1">**</bpt>WS_HSCROLL<ept id="p1">**</ept><ph id="ph1">/</ph><bpt id="p2">**</bpt>WS_VSCROLL<ept id="p2">**</ept> scroll bars which are not scroll bar controls.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>MFC extends that to allow for scroll bar controls to be either child or siblings of the window being scrolled (in fact, the parent/child relationship between the scroll bar and window being scrolled can be anything).</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>This is especially important for shared scroll bars with splitter windows.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Please refer to <bpt id="p1">[</bpt>Technical Note 29<ept id="p1">](../mfc/tn029-splitter-windows.md)</ept> for details on the implementation of <bpt id="p2">**</bpt>CSplitterWnd<ept id="p2">**</ept> including more information on shared scroll bar issues.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>On a side note, there are two <bpt id="p1">**</bpt>CWnd<ept id="p1">**</ept> derived classes where the scroll bar styles specified at create time are trapped and not passed to Windows.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>When passed to a creation routine, <bpt id="p1">**</bpt>WS_HSCROLL<ept id="p1">**</ept> and <bpt id="p2">**</bpt>WS_VSCROLL<ept id="p2">**</ept> can be independently set, but after creation cannot be changed.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Of course, you should not directly test or set the WS_SCROLL style bits of the window that they created.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>For <bpt id="p1">**</bpt>CMDIFrameWnd<ept id="p1">**</ept> the scroll bar styles you pass in to <bpt id="p2">**</bpt>Create<ept id="p2">**</ept> or <bpt id="p3">**</bpt>LoadFrame<ept id="p3">**</ept> are used to create the MDICLIENT.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>If you wish to have a scrollable MDICLIENT area (like the Windows Program Manager) be sure to set both scroll bar styles (<bpt id="p1">**</bpt>WS_HSCROLL<ept id="p1">**</ept> &amp;#124; <bpt id="p2">**</bpt>WS_VSCROLL<ept id="p2">**</ept>) for the style used to create the <bpt id="p3">**</bpt>CMDIFrameWnd<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>For <bpt id="p1">**</bpt>CSplitterWnd<ept id="p1">**</ept> the scroll bar styles apply to the special shared scroll bars for the splitter regions.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>For static splitter windows, you will normally not set either scroll bar style.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>For dynamic splitter windows, you will usually have the scroll bar style set for the direction you will split, That is, <bpt id="p1">**</bpt>WS_HSCROLL<ept id="p1">**</ept> if you can split rows, <bpt id="p2">**</bpt>WS_VSCROLL<ept id="p2">**</ept> if you can split columns.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

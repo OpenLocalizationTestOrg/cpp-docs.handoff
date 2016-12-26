@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0cd480b913a4935e3974d1dcd8e0ed8c4908df50</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\reference\structured-task-group-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f3fa8d845fabf2c692b223249298684953dd8466</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a4226eba5a6d9bf5692d32d1fe58904b76d5d8e6</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>structured_task_group Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>structured_task_group Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`structured_task_group`</ph> class represents a highly structured collection of parallel work.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>You can queue individual parallel tasks to a <ph id="ph1">`structured_task_group`</ph> using <ph id="ph2">`task_handle`</ph> objects, and wait for them to complete, or cancel the task group before they have finished executing, which will abort any tasks that have not begun execution.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Members</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Public Constructors</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>structured_task_group::structured_task_group Constructor</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Overloaded.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Constructs a new <ph id="ph1">`structured_task_group`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>structured_task_group::~structured_task_group Destructor</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Destroys a <ph id="ph1">`structured_task_group`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You are expected to call either the <ph id="ph1">`wait`</ph> or <ph id="ph2">`run_and_wait`</ph> method on the object prior to the destructor executing, unless the destructor is executing as a result of stack unwinding due to an exception.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Public Methods</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>structured_task_group::cancel Method</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Makes a best effort attempt to cancel the sub-tree of work rooted at this task group.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Every task scheduled on the task group will get canceled transitively if possible.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>structured_task_group::is_canceling Method</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Informs the caller whether or not the task group is currently in the midst of a cancellation.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This does not necessarily indicate that the <ph id="ph1">`cancel`</ph> method was called on the <ph id="ph2">`structured_task_group`</ph> object (although such certainly qualifies this method to return <ph id="ph3">`true`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>It may be the case that the <ph id="ph1">`structured_task_group`</ph> object is executing inline and a task group further up in the work tree was canceled.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In cases such as these where the runtime can determine ahead of time that cancellation will flow through this <ph id="ph1">`structured_task_group`</ph> object, <ph id="ph2">`true`</ph> will be returned as well.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>structured_task_group::run Method</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Overloaded.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Schedules a task on the <ph id="ph1">`structured_task_group`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The caller manages the lifetime of the <ph id="ph1">`task_handle`</ph> object passed in the <ph id="ph2">`_Task_handle`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The version that takes the parameter <ph id="ph1">`_Placement`</ph> causes the task to be biased towards executing at the location specified by that parameter.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>structured_task_group::run_and_wait Method</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Overloaded.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Schedules a task to be run inline on the calling context with the assistance of the <ph id="ph1">`structured_task_group`</ph> object for full cancellation support.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If a <ph id="ph1">`task_handle`</ph> object is passed as a parameter to <ph id="ph2">`run_and_wait`</ph>, the caller is responsible for managing the lifetime of the <ph id="ph3">`task_handle`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The function then waits until all work on the <ph id="ph1">`structured_task_group`</ph> object has either completed or been canceled.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>structured_task_group::wait Method</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Waits until all work on the <ph id="ph1">`structured_task_group`</ph> has completed or is canceled.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>There are a number of severe restrictions placed on usage of a <ph id="ph1">`structured_task_group`</ph> object in order to gain performance:</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>A single <ph id="ph1">`structured_task_group`</ph> object cannot be used by multiple threads.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>All operations on a <ph id="ph1">`structured_task_group`</ph> object must be performed by the thread that created the object.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The two exceptions to this rule are the member functions <ph id="ph1">`cancel`</ph> and <ph id="ph2">`is_canceling`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The object may not be in the capture list of a lambda expression and be used within a task, unless the task is using one of the cancellation operations.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>All tasks scheduled to a <ph id="ph1">`structured_task_group`</ph> object are scheduled through the use of <ph id="ph2">`task_handle`</ph> objects which you must explicitly manage the lifetime of.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Multiple groups may only be used in absolutely nested order.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If two <ph id="ph1">`structured_task_group`</ph> objects are declared, the second one being declared (the inner one) must destruct before any method except <ph id="ph2">`cancel`</ph> or <ph id="ph3">`is_canceling`</ph> is called on the first one (the outer one).</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This condition holds true in both the case of simply declaring multiple <ph id="ph1">`structured_task_group`</ph> objects within the same or functionally nested scopes as well as the case of a task that was queued to the <ph id="ph2">`structured_task_group`</ph> via the <ph id="ph3">`run`</ph> or <ph id="ph4">`run_and_wait`</ph> methods.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Unlike the general <ph id="ph1">`task_group`</ph> class, all states in the <ph id="ph2">`structured_task_group`</ph> class are final.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>After you have queued tasks to the group and waited for them to complete, you may not use the same group again.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Task Parallelism<ept id="p1">](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Inheritance Hierarchy</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> ppl.h</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> concurrency</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>structured_task_group::cancel Method</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Makes a best effort attempt to cancel the sub-tree of work rooted at this task group.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Every task scheduled on the task group will get canceled transitively if possible.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Cancellation<ept id="p1">](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>structured_task_group::is_canceling Method</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Informs the caller whether or not the task group is currently in the midst of a cancellation.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>This does not necessarily indicate that the <ph id="ph1">`cancel`</ph> method was called on the <ph id="ph2">`structured_task_group`</ph> object (although such certainly qualifies this method to return <ph id="ph3">`true`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>It may be the case that the <ph id="ph1">`structured_task_group`</ph> object is executing inline and a task group further up in the work tree was canceled.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>In cases such as these where the runtime can determine ahead of time that cancellation will flow through this <ph id="ph1">`structured_task_group`</ph> object, <ph id="ph2">`true`</ph> will be returned as well.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>An indication of whether the <ph id="ph1">`structured_task_group`</ph> object is in the midst of a cancellation (or is guaranteed to be shortly).</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Cancellation<ept id="p1">](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>structured_task_group::run Method</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Schedules a task on the <ph id="ph1">`structured_task_group`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The caller manages the lifetime of the <ph id="ph1">`task_handle`</ph> object passed in the <ph id="ph2">`_Task_handle`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The version that takes the parameter <ph id="ph1">`_Placement`</ph> causes the task to be biased towards executing at the location specified by that parameter.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The type of the function object that will be invoked to execute the body of the task handle.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>A handle to the work being scheduled.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Note that the caller has responsibility for the lifetime of this object.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The runtime will continue to expect it to live until either the <ph id="ph1">`wait`</ph> or <ph id="ph2">`run_and_wait`</ph> method has been called on this <ph id="ph3">`structured_task_group`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>A reference to the location where the task represented by the <ph id="ph1">`_Task_handle`</ph> parameter should execute.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The runtime creates a copy of the work function that you pass to this method.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Any state changes that occur in a function object that you pass to this method will not appear in your copy of that function object.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`structured_task_group`</ph> destructs as the result of stack unwinding from an exception, you do not need to guarantee that a call has been made to either the <ph id="ph2">`wait`</ph> or <ph id="ph3">`run_and_wait`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>In this case, the destructor will appropriately cancel and wait for the task represented by the <ph id="ph1">`_Task_handle`</ph> parameter to complete.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Throws an <bpt id="p1">[</bpt>invalid_multiple_scheduling<ept id="p1">](invalid-multiple-scheduling-class.md)</ept> exception if the task handle given by the <ph id="ph1">`_Task_handle`</ph> parameter has already been scheduled onto a task group object via the <ph id="ph2">`run`</ph> method and there has been no intervening call to either the <ph id="ph3">`wait`</ph> or <ph id="ph4">`run_and_wait`</ph> method on that task group.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>structured_task_group::run_and_wait Method</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Schedules a task to be run inline on the calling context with the assistance of the <ph id="ph1">`structured_task_group`</ph> object for full cancellation support.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>If a <ph id="ph1">`task_handle`</ph> object is passed as a parameter to <ph id="ph2">`run_and_wait`</ph>, the caller is responsible for managing the lifetime of the <ph id="ph3">`task_handle`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The function then waits until all work on the <ph id="ph1">`structured_task_group`</ph> object has either completed or been canceled.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>The type of the function object that will be invoked to execute the task.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>A handle to the task which will be run inline on the calling context.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Note that the caller has responsibility for the lifetime of this object.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The runtime will continue to expect it to live until the <ph id="ph1">`run_and_wait`</ph> method finishes execution.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>A function which will be called to invoke the body of the work.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>This may be a lambda or other object which supports a version of the function call operator with the signature <ph id="ph1">`void operator()()`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>An indication of whether the wait was satisfied or the task group was canceled, due to either an explicit cancel operation or an exception being thrown from one of its tasks.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>task_group_status<ept id="p1">](concurrency-namespace-enums.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Note that one or more of the tasks scheduled to this <ph id="ph1">`structured_task_group`</ph> object may execute inline on the calling context.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>If one or more of the tasks scheduled to this <ph id="ph1">`structured_task_group`</ph> object throws an exception, the runtime will select one such exception of its choosing and propagate it out of the call to the <ph id="ph2">`run_and_wait`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>After this function returns, the <ph id="ph1">`structured_task_group`</ph> object is considered in a final state and should not be used.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Note that utilization after the <ph id="ph1">`run_and_wait`</ph> method returns will result in undefined behavior.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>In the non-exceptional path of execution, you have a mandate to call either this method or the <ph id="ph1">`wait`</ph> method before the destructor of the <ph id="ph2">`structured_task_group`</ph> executes.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>structured_task_group::structured_task_group Constructor</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Constructs a new <ph id="ph1">`structured_task_group`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>A cancellation token to associate with this structured task group.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>The structured task group will be canceled when the token is canceled.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The constructor that takes a cancellation token creates a <ph id="ph1">`structured_task_group`</ph> that will be canceled when the source associated with the token is canceled.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>Providing an explicit cancellation token also isolates this structured task group from participating in an implicit cancellation from a parent group with a different token or no token.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>structured_task_group::~structured_task_group Destructor</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Destroys a <ph id="ph1">`structured_task_group`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>You are expected to call either the <ph id="ph1">`wait`</ph> or <ph id="ph2">`run_and_wait`</ph> method on the object prior to the destructor executing, unless the destructor is executing as a result of stack unwinding due to an exception.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>If the destructor runs as the result of normal execution (for example, not stack unwinding due to an exception) and neither the <ph id="ph1">`wait`</ph> nor <ph id="ph2">`run_and_wait`</ph> methods have been called, the destructor may throw a <bpt id="p1">[</bpt>missing_wait<ept id="p1">](missing-wait-class.md)</ept> exception.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>structured_task_group::wait Method</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Waits until all work on the <ph id="ph1">`structured_task_group`</ph> has completed or is canceled.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>An indication of whether the wait was satisfied or the task group was canceled, due to either an explicit cancel operation or an exception being thrown from one of its tasks.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>task_group_status<ept id="p1">](concurrency-namespace-enums.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Note that one or more of the tasks scheduled to this <ph id="ph1">`structured_task_group`</ph> object may execute inline on the calling context.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>If one or more of the tasks scheduled to this <ph id="ph1">`structured_task_group`</ph> object throws an exception, the runtime will select one such exception of its choosing and propagate it out of the call to the <ph id="ph2">`wait`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>After this function returns, the <ph id="ph1">`structured_task_group`</ph> object is considered in a final state and should not be used.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Note that utilization after the <ph id="ph1">`wait`</ph> method returns will result in undefined behavior.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>In the non-exceptional path of execution, you have a mandate to call either this method or the <ph id="ph1">`run_and_wait`</ph> method before the destructor of the <ph id="ph2">`structured_task_group`</ph> executes.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>concurrency Namespace</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>task_group Class</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>task_handle Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">496e4d582668bb34e93297021dde2f32aa664446</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\windows\com-interface-entry-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7803e69c36ba36a7a8b36c7a839a972b13cc4f07</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bfff92bc5bef7d2980c0d30b68800ddce0c24cde</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>com_interface_entry (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>com_interface_entry (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Adds an interface entry into the COM map of the target class.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>com_interface_entry</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A string containing the actual text of the entry.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For a list of possible values, see <bpt id="p1">[</bpt>COM_INTERFACE_ENTRY Macros<ept id="p1">](http://msdn.microsoft.com/Library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`com_interface_entry`</ph> C++ attribute inserts the unabridged contents of a character string into the COM interface map of the target object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If the attribute is applied once to the target object, the entry is inserted into the beginning of the existing interface map.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If the attribute is applied repeatedly to the same target object, the entries are inserted at the beginning of the interface map in the order they are received.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This attribute requires that the <bpt id="p1">[</bpt>coclass<ept id="p1">](../windows/coclass.md)</ept>, <bpt id="p2">[</bpt>progid<ept id="p2">](../windows/progid.md)</ept>, or <bpt id="p3">[</bpt>vi_progid<ept id="p3">](../windows/vi-progid.md)</ept> attribute (or another attribute that implies one of these) also be applied to the same element.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If any single attribute is used, the other two are automatically applied.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For example, if <bpt id="p1">**</bpt>progid<ept id="p1">**</ept> is applied, <bpt id="p2">**</bpt>vi_progid<ept id="p2">**</ept> and <bpt id="p3">**</bpt>coclass<ept id="p3">**</ept> are also applied.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Because the first usage of <ph id="ph1">`com_interface_entry`</ph> causes the new interface to be inserted at the beginning of the interface map, it must be one of the following COM_INTERFACE_ENTRY types:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY_IID</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY2</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>COM_INTERFACE_ENTRY2_IID</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Additional usages of the <ph id="ph1">`com_interface_entry`</ph> attribute can use all supported COM_INTERFACE_ENTRY types.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This restriction is necessary because ATL uses the first entry in the interface map as the identity <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept>; therefore, the entry must be a valid interface.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For example, the following code sample is invalid because the first entry in the interface map does not specify an actual COM interface.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The following code adds two entries to the existing COM interface map of <bpt id="p1">**</bpt>CMyBaseClass<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The first is a standard interface, and the second hides the <bpt id="p1">**</bpt>IDebugTest<ept id="p1">**</ept> interface.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The resulting COM object map for <bpt id="p1">**</bpt>CMyBaseClass<ept id="p1">**</ept> is as follows:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Attribute Context</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Applies to</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>class<ept id="p1">**</ept>,</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Repeatable</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Required attributes</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>One or more of the following: <bpt id="p1">**</bpt>coclass<ept id="p1">**</ept>, <bpt id="p2">**</bpt>progid<ept id="p2">**</ept>, or <bpt id="p3">**</bpt>vi_progid<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Invalid attributes</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>None</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For more information about the attribute contexts, see <bpt id="p1">[</bpt>Attribute Contexts<ept id="p1">](../windows/attribute-contexts.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>COM Attributes</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Class Attributes</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Typedef, Enum, Union, and Struct Attributes</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Attributes Samples</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

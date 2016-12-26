@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4b48af27f95c728e0293e3cc84de7732f7b80fbd</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\how-to-select-among-completed-tasks.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f07a56d6e5c1cddf791ba63e18fb1ebb10e8bc49</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">05084502dd83529e9258691a4153a8fc67514d91</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Select Among Completed Tasks | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Select Among Completed Tasks</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This example shows how to use the <bpt id="p1">[</bpt>concurrency::choice<ept id="p1">](../../parallel/concrt/reference/choice-class.md)</ept> and <bpt id="p2">[</bpt>concurrency::join<ept id="p2">](../../parallel/concrt/reference/join-class.md)</ept> classes to select the first task to complete a search algorithm.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The following example performs two search algorithms in parallel and selects the first algorithm to complete.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This example defines the <ph id="ph1">`employee`</ph> type, which holds a numeric identifier and a salary for an employee.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`find_employee`</ph> function finds the first employee that has the provided identifier or the provided salary.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`find_employee`</ph> function also handles the case where no employee has the provided identifier or salary.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`wmain`</ph> function creates an array of <ph id="ph2">`employee`</ph> objects and searches for several identifier and salary values.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The example uses a <ph id="ph1">`choice`</ph> object to select among the following cases:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>An employee who has the provided identifier exists.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>An employee who has the provided salary exists.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>No employee who has the provided identifier or salary exists.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For the first two cases, the example uses a <bpt id="p1">[</bpt>concurrency::single_assignment<ept id="p1">](../../parallel/concrt/reference/single-assignment-class.md)</ept> object to hold the identifier and another <ph id="ph1">`single_assignment`</ph> object to hold the salary.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The example uses a <ph id="ph1">`join`</ph> object for the third case.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`join`</ph> object is composed of two additional <ph id="ph2">`single_assignment`</ph> objects, one for the case where no employee who has the provided identifier exists, and one for the case where no employee who has the provided salary exists.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`join`</ph> object sends a message when each of its members receives a message.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In this example, the <ph id="ph1">`join`</ph> object sends a message when no employee who has the provided identifier or salary exists.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The example uses a <bpt id="p1">[</bpt>concurrency::structured_task_group<ept id="p1">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> object to run both search algorithms in parallel.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Each search task writes to one of the <ph id="ph1">`single_assignment`</ph> objects to indicate whether the given employee exists.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The example uses the <bpt id="p1">[</bpt>concurrency::receive<ept id="p1">](reference/concurrency-namespace-functions.md#receive)</ept> function to obtain the index of the first buffer that contains a message and a <ph id="ph1">`switch`</ph> block to print the result.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>concrt-find-employee#1</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This example produces the following output.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">[</bpt>concurrency::make_choice<ept id="p1">](reference/concurrency-namespace-functions.md#make_choice)</ept> helper function to create <ph id="ph1">`choice`</ph> objects and the <bpt id="p2">[</bpt>concurrency::make_join<ept id="p2">](reference/concurrency-namespace-functions.md#make_join)</ept> helper function to create <ph id="ph2">`join`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`find-employee.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc find-employee.cpp</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents Library</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Asynchronous Message Blocks</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Message Passing Functions</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>choice Class</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>join Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

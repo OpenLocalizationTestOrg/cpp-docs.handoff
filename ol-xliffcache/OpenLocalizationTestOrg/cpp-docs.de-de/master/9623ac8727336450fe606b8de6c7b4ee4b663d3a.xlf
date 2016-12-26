@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9623ac8727336450fe606b8de6c7b4ee4b663d3a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\getenv-wgetenv.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">84fd3650996a2256cddd033fb7b9b9fcea03dfb5</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1ff584ead5d845b23a3d83b4a13d153398536c5b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>getenv, _wgetenv | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>getenv, _wgetenv</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Gets a value from the current environment.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>More secure versions of these functions are available; see <bpt id="p1">[</bpt>getenv_s, _wgetenv_s<ept id="p1">](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This API cannot be used in applications that execute in the Windows Runtime.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>CRT functions not supported with /ZW<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Environment variable name.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Returns a pointer to the environment table entry containing <ph id="ph1">`varname`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>It is not safe to modify the value of the environment variable using the returned pointer.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`_putenv`</ph> function to modify the value of an environment variable.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The return value is <ph id="ph1">`NULL`</ph> if <ph id="ph2">`varname`</ph> is not found in the environment table.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`getenv`</ph> function searches the list of environment variables for <ph id="ph2">`varname`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>is not case sensitive in the Windows operating system.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>and <ph id="ph1">`_putenv`</ph> use the copy of the environment pointed to by the global variable <ph id="ph2">`_environ`</ph> to access the environment.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>operates only on the data structures accessible to the run-time library and not on the environment "segment" created for the process by the operating system.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Therefore, programs that use the <ph id="ph1">`envp`</ph> argument to <bpt id="p1">[</bpt>main<ept id="p1">](../../cpp/main-program-startup.md)</ept> or <bpt id="p2">[</bpt>wmain<ept id="p2">](../../cpp/main-program-startup.md)</ept> may retrieve invalid information.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`varname`</ph> is <ph id="ph2">`NULL`</ph>, this function invokes an invalid parameter handler, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, this function sets <ph id="ph1">`errno`</ph> to <ph id="ph2">`EINVAL`</ph> and returns <ph id="ph3">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>is a wide-character version of <ph id="ph1">`getenv`</ph>; the argument and return value of <ph id="ph2">`_wgetenv`</ph> are wide-character strings.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_wenviron`</ph> global variable is a wide-character version of <ph id="ph2">`_environ`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In an MBCS program (for example, in an SBCS ASCII program), <ph id="ph1">`_wenviron`</ph> is initially <ph id="ph2">`NULL`</ph> because the environment is composed of multibyte-character strings.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Then, on the first call to <ph id="ph1">`_wputenv`</ph>, or on the first call to <ph id="ph2">`_wgetenv`</ph> if an (MBCS) environment already exists, a corresponding wide-character string environment is created and is then pointed to by <ph id="ph3">`_wenviron`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Similarly in a Unicode (<ph id="ph1">`_wmain`</ph>) program, <ph id="ph2">`_environ`</ph> is initially <ph id="ph3">`NULL`</ph> because the environment is composed of wide-character strings.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Then, on the first call to <ph id="ph1">`_putenv`</ph>, or on the first call to <ph id="ph2">`getenv`</ph> if a (Unicode) environment already exists, a corresponding MBCS environment is created and is then pointed to by <ph id="ph3">`_environ`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>When two copies of the environment (MBCS and Unicode) exist simultaneously in a program, the run-time system must maintain both copies, resulting in slower execution time.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, whenever you call <ph id="ph1">`_putenv`</ph>, a call to <ph id="ph2">`_wputenv`</ph> is also executed automatically, so that the two environment strings correspond.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In rare instances, when the run-time system is maintaining both a Unicode version and a multibyte version of the environment, these two environment versions may not correspond exactly.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This is because, although any unique multibyte-character string maps to a unique Unicode string, the mapping from a unique Unicode string to a multibyte-character string is not necessarily unique.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>_environ, _wenviron<ept id="p1">](../../c-runtime-library/environ-wenviron.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_putenv`</ph> and <ph id="ph2">`_getenv`</ph> families of functions are not thread-safe.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>could return a string pointer while <ph id="ph1">`_putenv`</ph> is modifying the string, causing random failures.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Make sure that calls to these functions are synchronized.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Generic-Text Routine Mappings</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>TCHAR.H routine</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>_UNICODE &amp; _MBCS not defined</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>_MBCS defined</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>_UNICODE defined</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>To check or change the value of the <ph id="ph1">`TZ`</ph> environment variable, use <ph id="ph2">`getenv`</ph>, <ph id="ph3">`_putenv`</ph> and <ph id="ph4">`_tzset`</ph> as necessary.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For more information about <ph id="ph1">`TZ`</ph>, see <bpt id="p1">[</bpt>_tzset<ept id="p1">](../../c-runtime-library/reference/tzset.md)</ept> and <bpt id="p2">[</bpt>_daylight, timezone, and _tzname<ept id="p2">](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>stdlib.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>stdlib.h&gt; or <ph id="ph1">\&lt;</ph>wchar.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>System::Environment::GetEnvironmentVariable</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Process and Environment Control</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>_putenv, _wputenv</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Environmental Constants</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

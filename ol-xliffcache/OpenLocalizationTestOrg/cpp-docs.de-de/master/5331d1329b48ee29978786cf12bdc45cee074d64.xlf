@@ -1,0 +1,708 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5331d1329b48ee29978786cf12bdc45cee074d64</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\cancellation-in-the-ppl.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">08e7a998e4857696c26934ddf0e2ba2929fda556</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ea56cd2f8e42c2f676dff028e0ceb47d0a949c43</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document explains the role of cancellation in the Parallel Patterns Library (PPL), how to cancel parallel work, and how to determine when parallel work is canceled.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The runtime uses exception handling to implement cancellation.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Do not catch or handle these exceptions in your code.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In addition, we recommend that you write exception-safe code in the function bodies for your tasks.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For instance, you can use the <bpt id="p1">*</bpt>Resource Acquisition Is Initialization<ept id="p1">*</ept> (RAII) pattern to ensure that resources are correctly handled when an exception is thrown in the body of a task.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For a complete example that uses the RAII pattern to clean up a resource in a cancelable task, see <bpt id="p1">[</bpt>Walkthrough: Removing Work from a User-Interface Thread<ept id="p1">](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Key Points</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Cancellation is cooperative and involves coordination between the code that requests cancellation and the task that responds to cancellation.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When possible, use cancellation tokens to cancel work.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::cancellation_token<ept id="p1">](../../parallel/concrt/reference/cancellation-token-class.md)</ept> class defines a cancellation token.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When you use cancellation tokens, use the <bpt id="p1">[</bpt>concurrency::cancellation_token_source::cancel<ept id="p1">](reference/cancellation-token-source-class.md#cancel)</ept> method to initiate cancellation and the <bpt id="p2">[</bpt>concurrency::cancel_current_task<ept id="p2">](reference/concurrency-namespace-functions.md#cancel_current_task)</ept> function to respond to cancellation.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Cancellation does not occur immediately.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Although new work is not started if a task or task group is cancelled, active work must check for and respond to cancellation.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A value-based continuation inherits the cancellation token of its antecedent task.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A task-based continuation never inherits the token of its antecedent task.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>concurrency::cancellation_token::none<ept id="p1">](reference/cancellation-token-class.md#none)</ept> method when you call a constructor or function that takes a <ph id="ph1">`cancellation_token`</ph> object but you do not want the operation to be cancellable.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Also, if you do not pass a cancellation token to the <bpt id="p1">[</bpt>concurrency::task<ept id="p1">](../../parallel/concrt/reference/task-class.md)</ept> constructor or the <bpt id="p2">[</bpt>concurrency::create_task<ept id="p2">](reference/concurrency-namespace-functions.md#create_task)</ept> function, that task is not cancellable.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In this Document</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Parallel Work Trees</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Canceling Parallel Tasks</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Using a Cancellation Token to Cancel Parallel Work</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Using the cancel Method to Cancel Parallel Work</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Using Exceptions to Cancel Parallel Work</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Canceling Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>When Not to Use Cancellation</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Parallel Work Trees</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The PPL uses tasks and task groups to manage fine-grained tasks and computations.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>You can nest task groups to form <bpt id="p1">*</bpt>trees<ept id="p1">*</ept> of parallel work.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The following illustration shows a parallel work tree.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>In this illustration, <ph id="ph1">`tg1`</ph> and <ph id="ph2">`tg2`</ph> represent task groups; <ph id="ph3">`t1`</ph>, <ph id="ph4">`t2`</ph>, <ph id="ph5">`t3`</ph>, <ph id="ph6">`t4`</ph>, and <ph id="ph7">`t5`</ph> represent the work that the task groups perform.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A parallel work tree</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The following example shows the code that is required to create the tree in the illustration.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>In this example, <ph id="ph1">`tg1`</ph> and <ph id="ph2">`tg2`</ph> are <bpt id="p1">[</bpt>concurrency::structured_task_group<ept id="p1">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> objects; <ph id="ph3">`t1`</ph>, <ph id="ph4">`t2`</ph>, <ph id="ph5">`t3`</ph>, <ph id="ph6">`t4`</ph>, and <ph id="ph7">`t5`</ph> are <bpt id="p2">[</bpt>concurrency::task_handle<ept id="p2">](../../parallel/concrt/reference/task-handle-class.md)</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#1</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>You can also use the <bpt id="p1">[</bpt>concurrency::task_group<ept id="p1">](reference/task-group-class.md)</ept> class to create a similar work tree.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::task<ept id="p1">](../../parallel/concrt/reference/task-class.md)</ept> class also supports the notion of a tree of work.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>However, a <ph id="ph1">`task`</ph> tree is a dependency tree.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In a <ph id="ph1">`task`</ph> tree, future works completes after current work.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>In a task group tree, internal work completes before outer work.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For more information about the differences between tasks and task groups, see <bpt id="p1">[</bpt>Task Parallelism<ept id="p1">](../../parallel/concrt/task-parallelism-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Canceling Parallel Tasks</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>There are multiple ways to cancel parallel work.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The preferred way is to use a cancellation token.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Task groups also support the <bpt id="p1">[</bpt>concurrency::task_group::cancel<ept id="p1">](reference/task-group-class.md#cancel)</ept> method and the <bpt id="p2">[</bpt>concurrency::structured_task_group::cancel<ept id="p2">](reference/structured-task-group-class.md#cancel)</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The final way is to throw an exception in the body of a task work function.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>No matter which method you choose, understand that cancellation does not occur immediately.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Although new work is not started if a task or task group is cancelled, active work must check for and respond to cancellation.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>For more examples that cancel parallel tasks, see <bpt id="p1">[</bpt>Walkthrough: Connecting Using Tasks and XML HTTP Requests<ept id="p1">](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)</ept>, <bpt id="p2">[</bpt>How to: Use Cancellation to Break from a Parallel Loop<ept id="p2">](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)</ept>, and <bpt id="p3">[</bpt>How to: Use Exception Handling to Break from a Parallel Loop<ept id="p3">](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Using a Cancellation Token to Cancel Parallel Work</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`task`</ph>, <ph id="ph2">`task_group`</ph>, and <ph id="ph3">`structured_task_group`</ph> classes support cancellation through the use of cancellation tokens.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The PPL defines the <bpt id="p1">[</bpt>concurrency::cancellation_token_source<ept id="p1">](../../parallel/concrt/reference/cancellation-token-source-class.md)</ept> and <bpt id="p2">[</bpt>concurrency::cancellation_token<ept id="p2">](../../parallel/concrt/reference/cancellation-token-class.md)</ept> classes for this purpose.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>When you use a cancellation token to cancel work, the runtime does not start new work that subscribes to that token.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Work that is already active can monitor its cancellation token and stop when it can.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>To initiate cancellation, call the <bpt id="p1">[</bpt>concurrency::cancellation_token_source::cancel<ept id="p1">](reference/cancellation-token-source-class.md#cancel)</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>You respond to cancellation in these ways:</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>For <ph id="ph1">`task`</ph> objects, use the <bpt id="p1">[</bpt>concurrency::cancel_current_task<ept id="p1">](reference/concurrency-namespace-functions.md#cancel_current_task)</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>cancels the current task and any of its value-based continuations.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>(It does not cancel the cancellation <bpt id="p1">*</bpt>token<ept id="p1">*</ept> that is associated with the task or its continuations.)</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>For task groups and parallel algorithms, use the <bpt id="p1">[</bpt>concurrency::is_current_task_group_canceling<ept id="p1">](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)</ept> function to detect cancellation and return as soon as possible from the task body when this function returns <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>(Do not call <ph id="ph1">`cancel_current_task`</ph> from a task group.)</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The following example shows the first basic pattern for task cancellation.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The task body occasionally checks for cancellation inside a loop.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>concrt-task-basic-cancellation#1</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`cancel_current_task`</ph> function throws; therefore, you do not need to explicitly return from the current loop or function.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Alternatively, you can call the <bpt id="p1">[</bpt>concurrency::interruption_point<ept id="p1">](reference/concurrency-namespace-functions.md#interruption_point)</ept> function instead of <ph id="ph1">`cancel_current_task`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>It is important to call <ph id="ph1">`cancel_current_task`</ph> when you respond to cancellation because it transitions the task to the canceled state.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>If you return early instead of calling <ph id="ph1">`cancel_current_task`</ph>, the operation transitions to the completed state and any value-based continuations are run.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Never throw <ph id="ph1">`task_canceled`</ph> from your code.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`cancel_current_task`</ph> instead.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>When a task ends in the canceled state, the <bpt id="p1">[</bpt>concurrency::task::get<ept id="p1">](reference/task-class.md#get)</ept> method throws <bpt id="p2">[</bpt>concurrency::task_canceled<ept id="p2">](../../parallel/concrt/reference/task-canceled-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>(Conversely, <bpt id="p1">[</bpt>concurrency::task::wait<ept id="p1">](reference/task-class.md#wait)</ept> returns <bpt id="p2">[</bpt>task_status::canceled<ept id="p2">](reference/concurrency-namespace-enums.md#task_group_status)</ept> and does not throw.) The following example illustrates this behavior for a task-based continuation.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>A task-based continuation is always called, even when the antecedent task is canceled.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>concrt-task-canceled#1</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Because value-based continuations inherit the token of their antecedent task unless they were created with an explicit token, the continuations immediately enter the canceled state even when the antecedent task is still executing.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Therefore, any exception that is thrown by the antecedent task after cancellation is not propagated to the continuation tasks.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Cancellation always overrides the state of the antecedent task.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The following example resembles the previous, but illustrates the behavior for a value-based continuation.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>concrt-task-canceled#2</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>If you do not pass a cancellation token to the <ph id="ph1">`task`</ph> constructor or the <bpt id="p1">[</bpt>concurrency::create_task<ept id="p1">](reference/concurrency-namespace-functions.md#create_task)</ept> function, that task is not cancellable.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>In addition, you must pass the same cancellation token to the constructor of any nested tasks (that is, tasks that are created in the body of another task) to cancel all tasks simultaneously.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>You might want to run arbitrary code when a cancellation token is canceled.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>For example, if your user chooses a <bpt id="p1">**</bpt>Cancel<ept id="p1">**</ept> button on the user interface to cancel the operation, you could disable that button until the user starts another operation.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The following example shows how to use the <bpt id="p1">[</bpt>concurrency::cancellation_token::register_callback<ept id="p1">](reference/cancellation-token-class.md#register_callback)</ept> method to register a callback function that runs when a cancellation token is canceled.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>concrt-task-cancellation-callback#1</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The document <bpt id="p1">[</bpt>Task Parallelism<ept id="p1">](../../parallel/concrt/task-parallelism-concurrency-runtime.md)</ept> explains the difference between value-based and task-based continuations.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>If you do not provide a <ph id="ph1">`cancellation_token`</ph> object to a continuation task, the continuation inherits the cancellation token from the antecedent task in the following ways:</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>A value-based continuation always inherits the cancellation token of the antecedent task.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>A task-based continuation never inherits the cancellation token of the antecedent task.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The only way to make a task-based continuation cancelable is to explicitly pass a cancellation token.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>These behaviors are not affected by a faulted task (that is, one that throws an exception).</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>In this case, a value-based continuation is cancelled; a task-based continuation is not cancelled.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>A task that is created in another task (in other words, a nested task) does not inherit the cancellation token of the parent task.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Only a value-based continuation inherits the cancellation token of its antecedent task.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>concurrency::cancellation_token::none<ept id="p1">](reference/cancellation-token-class.md#none)</ept> method when you call a constructor or function that takes a <ph id="ph1">`cancellation_token`</ph> object and you do not want the operation to be cancellable.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>You can also provide a cancellation token to the constructor of a <ph id="ph1">`task_group`</ph> or <ph id="ph2">`structured_task_group`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>An important aspect of this is that child task groups inherit this cancellation token.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>For an example that demonstrates this concept by using the <bpt id="p1">[</bpt>concurrency::run_with_cancellation_token<ept id="p1">](reference/concurrency-namespace-functions.md#run_with_cancellation_token)</ept> function to run to call <ph id="ph1">`parallel_for`</ph>, see <bpt id="p2">[</bpt>Canceling Parallel Algorithms<ept id="p2">](#algorithms)</ept> later in this document.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Cancellation Tokens and Task Composition</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all<ept id="p1">](reference/concurrency-namespace-functions.md#when_all)</ept> and <bpt id="p2">[</bpt>concurrency::when_any<ept id="p2">](reference/concurrency-namespace-functions.md#when_all)</ept> functions can help you compose multiple tasks to implement common patterns.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>This section describes how these functions work with cancellation tokens.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>When you provide a cancellation token to either the <ph id="ph1">`when_all`</ph> and <ph id="ph2">`when_any`</ph> function, that function cancels only when that cancellation token is cancelled or when one of the participant tasks ends in a canceled state or throws an exception.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`when_all`</ph> function inherits the cancellation token from each task that composes the overall operation when you do not provide a cancellation token to it.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The task that is returned from <ph id="ph1">`when_all`</ph> is canceled when any of these tokens are cancelled and at least one of the participant tasks has not yet started or is running.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>A similar behavior occurs when one of the tasks throws an exception – the task that is returned from <ph id="ph1">`when_all`</ph> is immediately canceled with that exception.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>The runtime chooses the cancellation token for the task that is returned from <ph id="ph1">`when_any`</ph> function when that task completes.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>If none of the participant tasks finish in a completed state and one or more of the tasks throws an exception, one of the tasks that threw is chosen to complete the <ph id="ph1">`when_any`</ph> and its token is chosen as the token for the final task.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>If more than one task finishes in the completed state, the task that is returned from <ph id="ph1">`when_any`</ph> task ends in a completed state.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The runtime tries to pick a completed task whose token is not canceled at the time of completion so that the task that is returned from <ph id="ph1">`when_any`</ph> is not immediately canceled even though other executing tasks might complete at a later point.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Using the cancel Method to Cancel Parallel Work</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::task_group::cancel<ept id="p1">](reference/task-group-class.md#cancel)</ept> and <bpt id="p2">[</bpt>concurrency::structured_task_group::cancel<ept id="p2">](reference/structured-task-group-class.md#cancel)</ept> methods set a task group to the canceled state.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>After you call <ph id="ph1">`cancel`</ph>, the task group does not start future tasks.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`cancel`</ph> methods can be called by multiple child tasks.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>A canceled task causes the <bpt id="p1">[</bpt>concurrency::task_group::wait<ept id="p1">](reference/task-group-class.md#wait)</ept> and <bpt id="p2">[</bpt>concurrency::structured_task_group::wait<ept id="p2">](reference/structured-task-group-class.md#wait)</ept> methods to return <bpt id="p3">[</bpt>concurrency::canceled<ept id="p3">](reference/concurrency-namespace-enums.md#task_group_status)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>If a task group is canceled, calls from each child task into the runtime can trigger an <bpt id="p1">*</bpt>interruption point<ept id="p1">*</ept>, which causes the runtime to throw and catch an internal exception type to cancel active tasks.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime does not define specific interruption points; they can occur in any call to the runtime.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The runtime must handle the exceptions that it throws in order to perform cancellation.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Therefore, do not handle unknown exceptions in the body of a task.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>If a child task performs a time-consuming operation and does not call into the runtime, it must periodically check for cancellation and exit in a timely manner.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The following example shows one way to determine when work is canceled.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Task <ph id="ph1">`t4`</ph> cancels the parent task group when it encounters an error.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Task <ph id="ph1">`t5`</ph> occasionally calls the <ph id="ph2">`structured_task_group::is_canceling`</ph> method to check for cancellation.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>If the parent task group is canceled, task <ph id="ph1">`t5`</ph> prints a message and exits.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#6</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>This example checks for cancellation on every 100<ph id="ph1">&lt;sup&gt;</ph>th<ph id="ph2">&lt;/sup&gt;</ph> iteration of the task loop.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>The frequency with which you check for cancellation depends on the amount of work your task performs and how quickly you need for tasks to respond to cancellation.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>If you do not have access to the parent task group object, call the <bpt id="p1">[</bpt>concurrency::is_current_task_group_canceling<ept id="p1">](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)</ept> function to determine whether the parent task group is canceled.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`cancel`</ph> method only affects child tasks.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>For example, if you cancel the task group <ph id="ph1">`tg1`</ph> in the illustration of the parallel work tree, all tasks in the tree (<ph id="ph2">`t1`</ph>, <ph id="ph3">`t2`</ph>, <ph id="ph4">`t3`</ph>, <ph id="ph5">`t4`</ph>, and <ph id="ph6">`t5`</ph>) are affected.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>If you cancel the nested task group, <ph id="ph1">`tg2`</ph>, only tasks <ph id="ph2">`t4`</ph> and <ph id="ph3">`t5`</ph> are affected.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>When you call the <ph id="ph1">`cancel`</ph> method, all child task groups are also canceled.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>However, cancellation does not affect any parents of the task group in a parallel work tree.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>The following examples show this by building on the parallel work tree illustration.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>The first of these examples creates a work function for the task <ph id="ph1">`t4`</ph>, which is a child of the task group <ph id="ph2">`tg2`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>The work function calls the function <ph id="ph1">`work`</ph> in a loop.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>If any call to <ph id="ph1">`work`</ph> fails, the task cancels its parent task group.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>This causes task group <ph id="ph1">`tg2`</ph> to enter the canceled state, but it does not cancel task group <ph id="ph2">`tg1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#2</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>This second example resembles the first one, except that the task cancels task group <ph id="ph1">`tg1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>This affects all tasks in the tree (<ph id="ph1">`t1`</ph>, <ph id="ph2">`t2`</ph>, <ph id="ph3">`t3`</ph>, <ph id="ph4">`t4`</ph>, and <ph id="ph5">`t5`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#3</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`structured_task_group`</ph> class is not thread-safe.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>Therefore, a child task that calls a method of its parent <ph id="ph1">`structured_task_group`</ph> object produces unspecified behavior.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>The exceptions to this rule are the <ph id="ph1">`structured_task_group::cancel`</ph> and <bpt id="p1">[</bpt>concurrency::structured_task_group::is_canceling<ept id="p1">](reference/structured-task-group-class.md#is_canceling)</ept> methods.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>A child task can call these methods to cancel the parent task group and check for cancellation.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>Although you can use a cancellation token to cancel work that is performed by a task group that runs as a child of a <ph id="ph1">`task`</ph> object, you cannot use the <ph id="ph2">`task_group::cancel`</ph> or <ph id="ph3">`structured_task_group::cancel`</ph> methods to cancel <ph id="ph4">`task`</ph> objects that run in a task group.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Using Exceptions to Cancel Parallel Work</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>The use of cancellation tokens and the <ph id="ph1">`cancel`</ph> method are more efficient than exception handling at canceling a parallel work tree.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Cancellation tokens and the <ph id="ph1">`cancel`</ph> method cancel a task and any child tasks in a top-down manner.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>Conversely, exception handling works in a bottom-up manner and must cancel each child task group independently as the exception propagates upward.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>The topic <bpt id="p1">[</bpt>Exception Handling<ept id="p1">](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)</ept> explains how the Concurrency Runtime uses exceptions to communicate errors.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>However, not all exceptions indicate an error.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>For example, a search algorithm might cancel its associated task when it finds the result.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>However, as mentioned previously, exception handling is less efficient than using the <ph id="ph1">`cancel`</ph> method to cancel parallel work.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>We recommend that you use exceptions to cancel parallel work only when necessary.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Cancellation tokens and the task group <ph id="ph1">`cancel`</ph> methods are more efficient and less prone to error.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>When you throw an exception in the body of a work function that you pass to a task group, the runtime stores that exception and marshals the exception to the context that waits for the task group to finish.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>As with the <ph id="ph1">`cancel`</ph> method, the runtime discards any tasks that have not yet started, and does not accept new tasks.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>This third example resembles the second one, except that task <ph id="ph1">`t4`</ph> throws an exception to cancel the task group <ph id="ph2">`tg2`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>This example uses a <ph id="ph1">`try`-`catch`</ph> block to check for cancellation when the task group <ph id="ph2">`tg2`</ph> waits for its child tasks to finish.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>Like the first example, this causes the task group <ph id="ph1">`tg2`</ph> to enter the canceled state, but it does not cancel task group <ph id="ph2">`tg1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#4</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>This fourth example uses exception handling to cancel the whole work tree.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>The example catches the exception when task group <ph id="ph1">`tg1`</ph> waits for its child tasks to finish instead of when task group <ph id="ph2">`tg2`</ph> waits for its child tasks.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>Like the second example, this causes both tasks groups in the tree, <ph id="ph1">`tg1`</ph> and <ph id="ph2">`tg2`</ph>, to enter the canceled state.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#5</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`task_group::wait`</ph> and <ph id="ph2">`structured_task_group::wait`</ph> methods throw when a child task throws an exception, you do not receive a return value from them.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>Canceling Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>Parallel algorithms in the PPL, for example, <ph id="ph1">`parallel_for`</ph>, build on task groups.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>Therefore, you can use many of the same techniques to cancel a parallel algorithm.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>The following examples illustrate several ways to cancel a parallel algorithm.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>The following example uses the <ph id="ph1">`run_with_cancellation_token`</ph> function to call the <ph id="ph2">`parallel_for`</ph> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`run_with_cancellation_token`</ph> function takes a cancellation token as an argument and calls the provided work function synchronously.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>Because parallel algorithms are built upon tasks, they inherit the cancellation token of the parent task.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>Therefore, <ph id="ph1">`parallel_for`</ph> can respond to cancellation.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>concrt-cancel-parallel-for#1</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>The following example uses the <bpt id="p1">[</bpt>concurrency::structured_task_group::run_and_wait<ept id="p1">](reference/structured-task-group-class.md#run_and_wait)</ept> method to call the <ph id="ph1">`parallel_for`</ph> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`structured_task_group::run_and_wait`</ph> method waits for the provided task to finish.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`structured_task_group`</ph> object enables the work function to cancel the task.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#7</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>This example produces the following output.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>The following example uses exception handling to cancel a <ph id="ph1">`parallel_for`</ph> loop.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>The runtime marshals the exception to the calling context.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#9</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>This example produces the following output.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>The following example uses a Boolean flag to coordinate cancellation in a <ph id="ph1">`parallel_for`</ph> loop.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>Every task runs because this example does not use the <ph id="ph1">`cancel`</ph> method or exception handling to cancel the overall set of tasks.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Therefore, this technique can have more computational overhead than a cancelation mechanism.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>concrt-task-tree#8</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>Each cancellation method has advantages over the others.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Choose the method that fits your specific needs.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>When Not to Use Cancellation</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>The use of cancellation is appropriate when each member of a group of related tasks can exit in a timely manner.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>However, there are some scenarios where cancellation may not be appropriate for your application.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>For example, because task cancellation is cooperative, the overall set of tasks will not cancel if any individual task is blocked.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>For example, if one task has not yet started, but it unblocks another active task, it will not start if the task group is canceled.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>This can cause deadlock to occur in your application.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>A second example of where the use of cancellation may not be appropriate is when a task is canceled, but its child task performs an important operation, such as freeing a resource.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>Because the overall set of tasks is canceled when the parent task is canceled, that operation will not execute.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>For an example that illustrates this point, see the <bpt id="p1">[</bpt>Understand how Cancellation and Exception Handling Affect Object Destruction<ept id="p1">](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)</ept> section in the Best Practices in the Parallel Patterns Library topic.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Related Topics</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>Title</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>How to: Use Cancellation to Break from a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>Shows how to use cancellation to implement a parallel search algorithm.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>How to: Use Exception Handling to Break from a Parallel Loop</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>Shows how to use the <ph id="ph1">`task_group`</ph> class to write a search algorithm for a basic tree structure.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>Describes how the runtime handles exceptions that are thrown by task groups, lightweight tasks, and asynchronous agents, and how to respond to exceptions in your applications.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>Task Parallelism</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>Describes how tasks relate to task groups and how you can use unstructured and structured tasks in your applications.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>Describes the parallel algorithms, which concurrently perform work on collections of data</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library (PPL)</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>Provides an overview of the Parallel Patterns Library.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>Reference</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>task Class (Concurrency Runtime)</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>cancellation_token_source Class</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>cancellation_token Class</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>task_group Class</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>structured_task_group Class</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>parallel_for Function</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

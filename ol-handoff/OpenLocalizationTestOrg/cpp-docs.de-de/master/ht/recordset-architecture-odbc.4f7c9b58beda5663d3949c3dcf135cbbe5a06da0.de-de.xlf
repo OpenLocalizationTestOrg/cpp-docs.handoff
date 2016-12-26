@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ff8f7092f356b911962eb3d97b0923b147a65fee</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\recordset-architecture-odbc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bbee8295fa0460f8882c61c0059d7a01034f41c0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2778cacfa9d0b88b5965e9f6cfa97d1971468fad</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Recordset: Architecture (ODBC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Recordset: Architecture (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic applies to the MFC ODBC classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic describes the data members that comprise the architecture of a recordset object:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Field data members</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Parameter data members</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Using m_nFields and m_nParams data members</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This topic applies to objects derived from <ph id="ph1">`CRecordset`</ph> in which bulk row fetching has not been implemented.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If bulk row fetching is implemented, the architecture is similar.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To understand the differences, see <bpt id="p1">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p1">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Sample Class</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When you use the <bpt id="p1">[</bpt>MFC ODBC Consumer Wizard<ept id="p1">](../../mfc/reference/adding-an-mfc-odbc-consumer.md)</ept> from <bpt id="p2">**</bpt>Add Class<ept id="p2">**</ept> wizard to declare a recordset class derived from <ph id="ph1">`CRecordset`</ph>, the resulting class has the general structure shown in the following simple class:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>At the beginning of the class, the wizard writes a set of <bpt id="p1">[</bpt>field data members<ept id="p1">](#_core_field_data_members)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When you create the class, you must specify one or more field data members.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If the class is parameterized, as the sample class is (with the data member <ph id="ph1">`m_strIDParam`</ph>), you must manually add <bpt id="p1">[</bpt>parameter data members<ept id="p1">](#_core_parameter_data_members)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The wizard does not support adding parameters to a class.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Field Data Members</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The most important members of your recordset class are the field data members.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For each column you select from the data source, the class contains a data member of the appropriate data type for that column.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For example, the <bpt id="p1">[</bpt>sample class<ept id="p1">](#_core_a_sample_class)</ept> shown at the beginning of this topic has two field data members, both of type <ph id="ph1">`CString`</ph>, called <ph id="ph2">`m_strCourseID`</ph> and <ph id="ph3">`m_strCourseTitle`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When the recordset selects a set of records, the framework automatically binds the columns of the current record (after the <bpt id="p1">**</bpt>Open<ept id="p1">**</ept> call, the first record is current) to the field data members of the object.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>That is, the framework uses the appropriate field data member as a buffer in which to store the contents of a record column.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>As the user scrolls to a new record, the framework uses the field data members to represent the current record.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The framework refreshes the field data members, replacing the previous record's values.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The field data members are also used for updating the current record and for adding new records.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>As part of the process of updating a record, you specify the update values by assigning values directly to the appropriate field data member or members.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Parameter Data Members</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If the class is parameterized, it has one or more parameter data members.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A parameterized class lets you base a recordset query on information obtained or calculated at run time.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Typically, the parameter helps narrow the selection, as in the following example.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Based on the <bpt id="p1">[</bpt>sample class<ept id="p1">](#_core_a_sample_class)</ept> at the beginning of this topic, the recordset object might execute the following SQL statement:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The "?" is a placeholder for a parameter value that you supply at run time.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>When you construct the recordset and set its <ph id="ph1">`m_strIDParam`</ph> data member to MATH101, the effective SQL statement for the recordset becomes:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>By defining parameter data members, you tell the framework about parameters in the SQL string.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The framework binds the parameter, which lets ODBC know where to get values to substitute for the placeholder.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In the example, the resulting recordset contains only the record from the Course table with a CourseID column whose value is MATH101.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>All specified columns of this record are selected.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You can specify as many parameters (and placeholders) as you need.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>MFC does nothing itself with the parameters — in particular, it does not perform a text substitution.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Instead, MFC tells ODBC where to get the parameter; ODBC retrieves the data and performs the necessary parameterization.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The order of parameters is important.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For information about this and more information about parameters, see <bpt id="p1">[</bpt>Recordset: Parameterizing a Recordset (ODBC)<ept id="p1">](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Using m_nFields and m_nParams</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When a wizard writes a constructor for your class, it also initializes the <bpt id="p1">[</bpt>m_nFields<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__m_nfields)</ept> data member, which specifies the number of <bpt id="p2">[</bpt>field data members<ept id="p2">](#_core_field_data_members)</ept> in the class.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>If you add any <bpt id="p1">[</bpt>parameters<ept id="p1">](#_core_parameter_data_members)</ept> to your class, you must also add an initialization for the <bpt id="p2">[</bpt>m_nParams<ept id="p2">](../../mfc/reference/crecordset-class.md#crecordset__m_nparams)</ept> data member, which specifies the number of parameter data members.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The framework uses these values to work with the data members.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>For more information and examples, see <bpt id="p1">[</bpt>Record Field Exchange: Using RFX<ept id="p1">](../../data/odbc/record-field-exchange-using-rfx.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Recordset: Declaring a Class for a Table (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange (RFX)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

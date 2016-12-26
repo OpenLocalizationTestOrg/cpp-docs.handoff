@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e013a5924387de91f6a61c9b5e7fa596ec471cb8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\print-preview-architecture.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bab26ae82cb549a5e909df00be983d7d40588220</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bf50de9346c8f195ffc5469d9a1cb949363929f4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Print Preview Architecture | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Print Preview Architecture</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article explains how the MFC framework implements print preview functionality.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Topics covered include:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Print preview process</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Modifying print preview</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Print preview is somewhat different from screen display and printing because, instead of directly drawing an image on a device, the application must simulate the printer using the screen.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>To accommodate this, the Microsoft Foundation Class Library defines a special (undocumented) class derived from <bpt id="p1">[</bpt>CDC Class<ept id="p1">](../mfc/reference/cdc-class.md)</ept>, called <bpt id="p2">**</bpt>CPreviewDC<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>All <ph id="ph1">`CDC`</ph> objects contain two device contexts, but usually they are identical.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In a <bpt id="p1">**</bpt>CPreviewDC<ept id="p1">**</ept> object, they are different: the first represents the printer being simulated, and the second represents the screen on which output is actually displayed.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The Print Preview Process</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When the user selects the Print Preview command from the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, the framework creates a <bpt id="p2">**</bpt>CPreviewDC<ept id="p2">**</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Whenever your application performs an operation that sets a characteristic of the printer device context, the framework also performs a similar operation on the screen device context.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For example, if your application selects a font for printing, the framework selects a font for screen display that simulates the printer font.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Whenever your application would send output to the printer, the framework instead sends the output to the screen.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Print preview also differs from printing in the order that each draws the pages of a document.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>During printing, the framework continues a print loop until a certain range of pages has been rendered.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>During print preview, one or two pages are displayed at any time, and then the application waits; no further pages are displayed until the user responds.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>During print preview, the application must also respond to <ph id="ph1">`WM_PAINT`</ph> messages, just as it does during ordinary screen display.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>CView::OnPreparePrinting<ept id="p1">](../mfc/reference/cview-class.md#cview__onprepareprinting)</ept> function is called when preview mode is invoked, just as it is at the beginning of a print job.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>CPrintInfo Structure<ept id="p1">](../mfc/reference/cprintinfo-structure.md)</ept> structure passed to the function contains several members whose values you can set to adjust certain characteristics of the print preview operation.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For example, you can set the <bpt id="p1">**</bpt>m_nNumPreviewPages<ept id="p1">**</ept> member to specify whether you want to preview the document in one-page or two-page mode.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Modifying Print Preview</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You can modify the behavior and appearance of print preview in a number of ways rather easily.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For example, you can, among other things:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Cause the print preview window to display a scroll bar for easy access to any page of the document.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Cause print preview to maintain the user's position in the document by beginning its display at the current page.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Cause different initialization to be performed for print preview and printing.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Cause print preview to display page numbers in your own formats.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If you know how long the document is and call <ph id="ph1">`SetMaxPage`</ph> with the appropriate value, the framework can use this information in preview mode as well as during printing.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Once the framework knows the length of the document, it can provide the preview window with a scroll bar, allowing the user to page back and forth through the document in preview mode.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>If you haven't set the length of the document, the framework cannot position the scroll box to indicate the current position, so the framework doesn't add a scroll bar.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In this case, the user must use the Next Page and Previous Page buttons on the preview window's control bar to page through the document.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For print preview, you may find it useful to assign a value to the <ph id="ph1">`m_nCurPage`</ph> member of <ph id="ph2">`CPrintInfo`</ph>, even though you would never do so for ordinary printing.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>During ordinary printing, this member carries information from the framework to your view class.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This is how the framework tells the view which page should be printed.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>By contrast, when print preview mode is started, the <ph id="ph1">`m_nCurPage`</ph> member carries information in the opposite direction: from the view to the framework.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The framework uses the value of this member to determine which page should be previewed first.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The default value of this member is 1, so the first page of the document is displayed initially.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>You can override <ph id="ph1">`OnPreparePrinting`</ph> to set this member to the number of the page being viewed at the time the Print Preview command was invoked.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This way, the application maintains the user's current position when moving from normal display mode to print preview mode.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Sometimes you may want <ph id="ph1">`OnPreparePrinting`</ph> to perform different initialization depending on whether it is called for a print job or for print preview.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>You can determine this by examining the <bpt id="p1">**</bpt>m_bPreview<ept id="p1">**</ept> member variable in the <ph id="ph1">`CPrintInfo`</ph> structure.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This member is set to <bpt id="p1">**</bpt>TRUE<ept id="p1">**</ept> when print preview is invoked.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CPrintInfo`</ph> structure also contains a member named <bpt id="p1">**</bpt>m_strPageDesc<ept id="p1">**</ept>, which is used to format the strings displayed at the bottom of the screen in single-page and multiple-page modes.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>By default these strings are of the form "Page <bpt id="p1">*</bpt>n<ept id="p1">*</ept>" and "Pages <bpt id="p2">*</bpt>n<ept id="p2">*</ept><ph id="ph1"> - </ph><bpt id="p3">*</bpt>m<ept id="p3">*</ept>," but you can modify <bpt id="p4">**</bpt>m_strPageDesc<ept id="p4">**</ept> from within <ph id="ph2">`OnPreparePrinting`</ph> and set the strings to something more elaborate.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>CPrintInfo Structure<ept id="p1">](../mfc/reference/cprintinfo-structure.md)</ept> in the <bpt id="p2">*</bpt>MFC Reference<ept id="p2">*</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Printing and Print Preview</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Printing</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>CView Class</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>CDC Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

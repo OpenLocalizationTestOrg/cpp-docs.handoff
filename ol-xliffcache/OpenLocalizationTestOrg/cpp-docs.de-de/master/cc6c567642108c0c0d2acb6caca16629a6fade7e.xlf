@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cc6c567642108c0c0d2acb6caca16629a6fade7e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\amp\using-accelerator-and-accelerator-view-objects.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">03d42b2ed920e7a3fe43b5867e243125514142b7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e375f3e8b60a197e38bc89fd937032ccba85d85b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using accelerator and accelerator_view Objects | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using accelerator and accelerator_view Objects</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">[</bpt>accelerator<ept id="p1">](../../parallel/amp/reference/accelerator-class.md)</ept> and <bpt id="p2">[</bpt>accelerator_view<ept id="p2">](../../parallel/amp/reference/accelerator-view-class.md)</ept> classes to specify the device or emulator to run your C++ AMP code on.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A system might have several devices or emulators that differ by amount of memory, shared memory support, debugging support, or double-precision support.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>C++ Accelerated Massive Parallelism (C++ AMP) provides APIs that you can use to examine the available accelerators, set one as the default, specify multiple accelerator_views for multiple calls to parallel_for_each, and perform special debugging tasks.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Using the Default Accelerator</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The C++ AMP runtime picks a default accelerator, unless you write code to pick a specific one.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The runtime chooses the default accelerator as follows:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If the app is running in debug mode, an accelerator that supports debugging.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Otherwise, the accelerator that's specified by the CPPAMP_DEFAULT_ACCELERATOR environment variable, if it's set.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Otherwise, a non-emulated device.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Otherwise, the device that has the greatest amount of available memory.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Otherwise, a device that's not attached to the display.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Additionally, the runtime specifies an <ph id="ph1">`access_type`</ph> of <ph id="ph2">`access_type_auto`</ph> for the default accelerator.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This means that the default accelerator uses shared memory if it’s supported and if its performance characteristics (bandwidth and latency) are known to be the same as dedicated (non-shared) memory.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You can determine the properties of the default accelerator by constructing the default accelerator and examining its properties.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The following code example prints the path, amount of accelerator memory, shared memory support, double-precision support, and limited double-precision support of the default accelerator.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>CPPAMP_DEFAULT_ACCELERATOR Environment Variable</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You can set the CPPAMP_DEFAULT_ACCELERATOR environment variable to specify the <ph id="ph1">`accelerator::device_path`</ph> of the default accelerator.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The path is hardware-dependent.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The following code uses the <ph id="ph1">`accelerator::get_all`</ph> function to retrieve a list of the available accelerators and then displays the path and characteristics of each accelerator.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Selecting an Accelerator</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To select an accelerator, use the <ph id="ph1">`accelerator::get_all`</ph> method to retrieve a list of the available accelerators and then select one based on its properties.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This example shows how to pick the accelerator that has the most memory:</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>One of the accelerators that are returned by <ph id="ph1">`accelerator::get_all`</ph> is the CPU accelerator.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You cannot execute code on the CPU accelerator.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To filter out the CPU accelerator, compare the value of the <bpt id="p1">[</bpt>device_path<ept id="p1">](reference/accelerator-class.md#device_path)</ept> property of the accelerator that's returned by <ph id="ph1">`accelerator::get_all`</ph> with the value of the <bpt id="p2">[</bpt>accelerator::cpu_accelerator<ept id="p2">](reference/accelerator-class.md#cpu_accelerator)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For more information, see the "Special Accelerators" section in this article.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Shared Memory</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Shared memory is memory that can be accessed by both the CPU and the accelerator.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The use of shared memory eliminates or significantly reduces the overhead of copying data between the CPU and the accelerator.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Although the memory is shared, it cannot be accessed concurrently by both the CPU and the accelerator, and doing so causes undefined behavior.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The accelerator property <bpt id="p1">[</bpt>supports_cpu_shared_memory<ept id="p1">](reference/accelerator-class.md#supports_cpu_shared_memory)</ept> returns <ph id="ph1">`true`</ph> if the accelerator supports shared memory, and the <bpt id="p2">[</bpt>default_cpu_access_type<ept id="p2">](reference/accelerator-class.md#default_cpu_access_type)</ept> property gets the default <bpt id="p3">[</bpt>access_type<ept id="p3">](reference/concurrency-namespace-enums-amp.md#access_type)</ept> for memory allocated on the <ph id="ph2">`accelerator`</ph>—for example, <ph id="ph3">`array`</ph>s associated with the <ph id="ph4">`accelerator`</ph>, or <ph id="ph5">`array_view`</ph> objects accessed on the <ph id="ph6">`accelerator`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The C++ AMP runtime automatically chooses the best default <ph id="ph1">`access_type`</ph> for each <ph id="ph2">`accelerator`</ph>, but the performance characteristics (bandwidth and latency) of shared memory can be worse than those of dedicated (non-shared) accelerator memory when reading from the CPU, writing from the CPU, or both.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If shared memory performs as well as dedicated memory for reading and writing from the CPU, the runtime defaults to <ph id="ph1">`access_type_read_write`</ph>; otherwise, the runtime chooses a more conservative default <ph id="ph2">`access_type`</ph>, and allows the app to override it if the memory access patterns of its computation kernels benefit from a different <ph id="ph3">`access_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The following code example shows how to determine whether the default accelerator supports shared memory, and then overrides its default access type and creates an <ph id="ph1">`accelerator_view`</ph> from it.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`accelerator_view`</ph> always reflects the <ph id="ph2">`default_cpu_access_type`</ph> of the <ph id="ph3">`accelerator`</ph> it’s associated with, and it provides no interface to override or change its <ph id="ph4">`access_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Changing the Default Accelerator</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>You can change the default accelerator by calling the <ph id="ph1">`accelerator::set_default`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>You can change the default accelerator only once per app execution and you must change it before any code is executed on the GPU.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Any subsequent function calls to change the accelerator return <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If you want to use a different accelerator in a call to <ph id="ph1">`parallel_for_each`</ph>, read the "Using Multiple Accelerators" section in this article.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The following code example sets the default accelerator to one that is not emulated, is not connected to a display, and supports double-precision.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Using Multiple Accelerators</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>There are two ways to use multiple accelerators in your app:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>You can pass <ph id="ph1">`accelerator_view`</ph> objects to the calls to the <bpt id="p1">[</bpt>parallel_for_each<ept id="p1">](reference/concurrency-namespace-functions-amp.md#parallel_for_each)</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>You can construct an <ph id="ph1">`array`</ph> object using a specific <ph id="ph2">`accelerator_view`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The C+AMP runtime will pick up the <ph id="ph1">`accelerator_view`</ph> object from the captured <ph id="ph2">`array`</ph> object in the lambda expression.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Special Accelerators</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The device paths of three special accelerators are available as properties of the <ph id="ph1">`accelerator`</ph> class:</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>accelerator::direct3d_ref Data Member<ept id="p1">](reference/accelerator-class.md#direct3d_ref)</ept>: This single-threaded accelerator uses software on the CPU to emulate a generic graphics card.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>It's used by default for debugging, but it's not useful in production because it's slower than the hardware accelerators.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Additionally, it's available only in the DirectX SDK and the Windows SDK, and it's unlikely to be installed on your customers' computers.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Debugging GPU Code<ept id="p1">](/visualstudio/debugger/debugging-gpu-code)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>accelerator::direct3d_warp Data Member<ept id="p1">](reference/accelerator-class.md#direct3d_warp)</ept>: This accelerator provides a fallback solution for executing C++ AMP code on multi-core CPUs that use Streaming SIMD Extensions (SSE).</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>accelerator::cpu_accelerator Data Member<ept id="p1">](reference/accelerator-class.md#cpu_accelerator)</ept>: You can use this accelerator for setting up staging arrays.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>It cannot execute C++ AMP code.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>For more information, see the <bpt id="p1">[</bpt>Staging Arrays in C++ AMP<ept id="p1">](http://go.microsoft.com/fwlink/p/LinkId=248485)</ept> post on the Parallel Programming in Native Code blog.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Interoperability</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The C++ AMP runtime supports interoperability between the <ph id="ph1">`accelerator_view`</ph> class and the Direct3D <bpt id="p1">[</bpt>ID3D11Device interface<ept id="p1">](http://go.microsoft.com/fwlink/p/LinkId=248488)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>create_accelerator_view<ept id="p1">](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)</ept> method takes an <ph id="ph1">`IUnknown`</ph> interface and returns an <ph id="ph2">`accelerator_view`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>get_device<ept id="p1">](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439)</ept> method takes an <ph id="ph1">`accelerator_view`</ph> object and returns an <ph id="ph2">`IUknown`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>C++ AMP (C++ Accelerated Massive Parallelism)</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Debugging GPU Code</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>accelerator_view Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

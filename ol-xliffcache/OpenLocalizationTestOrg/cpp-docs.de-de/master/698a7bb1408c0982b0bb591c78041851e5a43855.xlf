@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">698a7bb1408c0982b0bb591c78041851e5a43855</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\how-to-use-alloc-and-free-to-improve-memory-performance.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">54ba4c5c6573ca6b298d96c87137dea80c7a149a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0b1eddc3bf989c20f9a5dc3d1cdd4272399d1543</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Use Alloc and Free to Improve Memory Performance | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Use Alloc and Free to Improve Memory Performance</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document shows how to use the <bpt id="p1">[</bpt>concurrency::Alloc<ept id="p1">](reference/concurrency-namespace-functions.md#alloc)</ept> and <bpt id="p2">[</bpt>concurrency::Free<ept id="p2">](reference/concurrency-namespace-functions.md#free)</ept> functions to improve memory performance.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It compares the time that is required to reverse the elements of an array in parallel for three different types that each specify the <ph id="ph1">`new`</ph> and <ph id="ph2">`delete`</ph> operators.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Alloc`</ph> and <ph id="ph2">`Free`</ph> functions are most useful when multiple threads frequently call both <ph id="ph3">`Alloc`</ph> and <ph id="ph4">`Free`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The runtime holds a separate memory cache for each thread; therefore, the runtime manages memory without the use of locks or memory barriers.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The following example shows three types that each specify the <ph id="ph1">`new`</ph> and <ph id="ph2">`delete`</ph> operators.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`new_delete`</ph> class uses the global <ph id="ph2">`new`</ph> and <ph id="ph3">`delete`</ph> operators, the <ph id="ph4">`malloc_free`</ph> class uses the C Runtime <bpt id="p1">[</bpt>malloc<ept id="p1">](../../c-runtime-library/reference/malloc.md)</ept> and <bpt id="p2">[</bpt>free<ept id="p2">](../../c-runtime-library/reference/free.md)</ept> functions, and the <ph id="ph5">`Alloc_Free`</ph> class uses the Concurrency Runtime <ph id="ph6">`Alloc`</ph> and <ph id="ph7">`Free`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>concrt-allocators#1</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The following example shows the <ph id="ph1">`swap`</ph> and <ph id="ph2">`reverse_array`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`swap`</ph> function exchanges the contents of the array at the specified indices.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>It allocates memory from the heap for the temporary variable.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`reverse_array`</ph> function creates a large array and computes the time that is required to reverse that array several times in parallel.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>concrt-allocators#2</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following example shows the <ph id="ph1">`wmain`</ph> function, which computes the time that is required for the <ph id="ph2">`reverse_array`</ph> function to act on the <ph id="ph3">`new_delete`</ph>, <ph id="ph4">`malloc_free`</ph>, and <ph id="ph5">`Alloc_Free`</ph> types, each of which uses a different memory allocation scheme.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>concrt-allocators#3</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The complete example follows.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>concrt-allocators#4</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This example produces the following sample output for a computer that has four processors.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In this example, the type that uses the <ph id="ph1">`Alloc`</ph> and <ph id="ph2">`Free`</ph> functions provides the best memory performance because the <ph id="ph3">`Alloc`</ph> and <ph id="ph4">`Free`</ph> functions are optimized for frequently allocating and freeing blocks of memory from multiple threads.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`allocators.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc allocators.cpp</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Memory Management Functions</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Alloc Function</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Free Function</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

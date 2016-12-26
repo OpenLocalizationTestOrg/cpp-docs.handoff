@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d839036f8ae66988fc4804aa8c89e093ea65deee</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\obtaining-metadata-with-schema-rowsets.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d8e74eb2b8d709de595f8243eb506623c7bbe24d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">735055acb5ea5e0d51077cef1828177bc11ff466</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Obtaining Metadata with Schema Rowsets | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Obtaining Metadata with Schema Rowsets</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Sometimes you need to obtain information about the provider, rowset, table, columns, or other database information without opening the rowset.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Data about the database structure is called metadata and can be retrieved by a number of different methods.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>One method is to use schema rowsets.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>OLE DB Templates provide a set of classes to retrieve schema information; these classes create predefined schema rowsets and are listed in <bpt id="p1">[</bpt>Schema Rowset Classes and Typedef Classes<ept id="p1">](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If you are using OLAP and some of your rowsets are not supported by the schema rowset classes (for example, you have a variable number of columns), you should consider using <ph id="ph1">`CManualAccessor`</ph> or <ph id="ph2">`CDynamicAccessor`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You can scroll through the columns and use case statements to handle the possible data types for each column.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Catalog/Schema Model</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>ANSI SQL defines a catalog/schema model for data stores; OLE DB uses this model.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In this model, catalogs (databases) contain schemas and schemas contain tables.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Catalog<ept id="p1">**</ept> A catalog is another name for a database.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>It is a collection of related schemas.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>To list the catalogs (databases) belonging to a given data source, use <bpt id="p1">[</bpt>CCatalog<ept id="p1">](../../data/oledb/ccatalogs-ccataloginfo.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Because many databases have only one catalog, metadata is sometimes simply called schema information.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Schema<ept id="p1">**</ept> A schema is a collection of database objects that are owned or have been created by a particular user.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To list the schemas owned by a given user, use <bpt id="p1">[</bpt>CSchemata<ept id="p1">](../../data/oledb/cschemata-cschematainfo.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In Microsoft SQL Server and ODBC 2.x terms, a schema is an owner (for example, dbo is a typical schema name).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Also, SQL Server stores metadata in a set of tables: one table contains a list of all the tables and another table contains a list of all the columns.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>There is no equivalent to a schema in a Microsoft Access database.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Table<ept id="p1">**</ept> Tables are collections of columns arranged in specific orders.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To list the tables defined in a given catalog (database) and information about those tables, use <bpt id="p1">[</bpt>CTables<ept id="p1">](../../data/oledb/ctables-ctableinfo.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Restrictions</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When you query for schema information, you can use restrictions to specify the type of information in which you are interested.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can think of restrictions as a filter or qualifier in a query.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For example, in the query:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>is a restriction.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>This is a very simple example with only one restriction; the schema rowset classes support several restrictions.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>schema rowset typedef classes<ept id="p1">](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)</ept> encapsulate all the OLE DB schema rowsets so that you can access a schema rowset just like any other rowset by instantiating and opening it.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, the typedef class <bpt id="p1">[</bpt>CColumns<ept id="p1">](../../data/oledb/ccolumns-ccolumnsinfo.md)</ept> is defined as:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>CRestrictions<ept id="p1">](../../data/oledb/crestrictions-class.md)</ept> class supplies the restriction support.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>After you create an instance of the schema rowset, call <bpt id="p1">[</bpt>CRestrictions::Open<ept id="p1">](../../data/oledb/crestrictions-open.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This method returns a result set based on the restrictions that you specify.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>To specify restrictions, refer to <bpt id="p1">[</bpt>Appendix B: Schema Rowsets<ept id="p1">](http://go.microsoft.com/fwlink/?linkid=64681)</ept> and look up the rowset that you are using.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For example, <bpt id="p1">**</bpt>CColumns<ept id="p1">**</ept> corresponds to the <bpt id="p2">[</bpt>COLUMNS Rowset<ept id="p2">](http://go.microsoft.com/fwlink/?linkid=64682)</ept>; that topic lists the restriction columns in the COLUMNS rowset: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>You must follow that order in specifying your restrictions.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>So, for example, if you want to restrict by table name, note that TABLE_NAME is the third restriction column, and then call <bpt id="p1">**</bpt>Open<ept id="p1">**</ept>, specifying the desired table name as the third restriction parameter, as shown in the following example.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>To use schema rowsets</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>You must include the header file Atldbsch.h (of course, you need Atldbcli.h for consumer support as well).</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Instantiate a schema rowset object in the consumer's or the document's header file.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>If you want table information, declare a <bpt id="p1">**</bpt>CTables<ept id="p1">**</ept> object; if you want column information, declare a <bpt id="p2">**</bpt>CColumns<ept id="p2">**</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This example shows how to retrieve the columns in the authors table:</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>To fetch the information, access the appropriate data member of the schema rowset object, for example, <ph id="ph1">`ColumnSchemaRowset.m_szColumnName`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This corresponds to COLUMN_NAME.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>To see which OLE DB column each data member corresponds to, see <bpt id="p1">[</bpt>CColumns<ept id="p1">](../../data/oledb/ccolumns-ccolumnsinfo.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>For the reference of the schema rowset, typedef classes provided in the OLE DB Templates (see <bpt id="p1">[</bpt>Schema Rowset Classes and Typedef Classes<ept id="p1">](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>For more information about OLE DB schema rowsets, including restriction columns, see <bpt id="p1">[</bpt>Appendix B: Schema Rowsets<ept id="p1">](http://go.microsoft.com/fwlink/?linkid=64681)</ept> in the OLE DB Programmer's Reference.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>For more complex examples of how to use schema rowset classes, see the <bpt id="p1">[</bpt>CatDB<ept id="p1">](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)</ept> and <bpt id="p2">[</bpt>DBViewer<ept id="p2">](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)</ept> samples.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>For information about provider support for schema rowsets, see <bpt id="p1">[</bpt>Supporting Schema Rowsets<ept id="p1">](../../data/oledb/supporting-schema-rowsets.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Using Accessors</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

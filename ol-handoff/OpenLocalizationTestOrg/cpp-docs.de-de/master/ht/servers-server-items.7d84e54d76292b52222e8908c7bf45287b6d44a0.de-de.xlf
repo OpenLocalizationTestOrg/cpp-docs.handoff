@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">59728d77587b3719a0309619ccc35eb7c6266878</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\servers-server-items.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">89fb26f6d2bfd47baa42b4e793ffefd17e05dae1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">12c2e45e5f84feaa4371b1bd18e4f43e656d5a21</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Servers: Server Items | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Servers: Server Items</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When a container launches a server so that a user can edit an embedded or linked OLE item, the server application creates a "server item."</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The server item, which is an object of a class derived from <ph id="ph1">`COleServerItem`</ph>, provides an interface between the server document and the container application.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`COleServerItem`</ph> class defines several overridable member functions that are called by OLE, usually in response to requests from the container.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Server items can represent part of the server document or the entire document.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>When an OLE item is embedded in the container document, the server item represents the entire server document.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>When the OLE item is linked, the server item can represent a part of the server document or the whole document, depending on whether the link is to a part or to the whole.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">[</bpt>HIERSVR<ept id="p1">](../visual-cpp-samples.md)</ept> sample, for example, the server-item class, <bpt id="p2">**</bpt>CServerItem<ept id="p2">**</ept>, has a member that is a pointer to an object of the class <bpt id="p3">**</bpt>CServerNode<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>CServerNode<ept id="p1">**</ept> object is a node in the HIERSVR application's document, which is a tree.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When the <bpt id="p1">**</bpt>CServerNode<ept id="p1">**</ept> object is the root node, the <bpt id="p2">**</bpt>CServerItem<ept id="p2">**</ept> object represents the whole document.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When the <bpt id="p1">**</bpt>CServerNode<ept id="p1">**</ept> object is a child node, the <bpt id="p2">**</bpt>CServerItem<ept id="p2">**</ept> object represents a part of the document.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>See the MFC OLE sample <bpt id="p1">[</bpt>HIERSVR<ept id="p1">](../visual-cpp-samples.md)</ept> for an example of this interaction.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Implementing Server Items</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If you use the application wizard to produce "starter" code for your application, all you have to do to include server items in your starter code is to choose one of the server options from the OLE Options page.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you are adding server items to an existing application, perform the following steps:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To implement a server item</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Derive a class from <ph id="ph1">`COleServerItem`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In your derived class, override the <ph id="ph1">`OnDraw`</ph> member function.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The framework calls <ph id="ph1">`OnDraw`</ph> to render the OLE item into a metafile.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The container application uses this metafile to render the item.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Your application's view class also has an <ph id="ph1">`OnDraw`</ph> member function, which is used to render the item when the server application is active.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Implement an override of <ph id="ph1">`OnGetEmbeddedItem`</ph> for your server-document class.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For further information, see the article <bpt id="p1">[</bpt>Servers: Implementing Server Documents<ept id="p1">](../mfc/servers-implementing-server-documents.md)</ept> and the MFC OLE sample <bpt id="p2">[</bpt>HIERSVR<ept id="p2">](../visual-cpp-samples.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Implement your server-item class's <ph id="ph1">`OnGetExtent`</ph> member function.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The framework calls this function to retrieve the size of the item.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The default implementation does nothing.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>A Tip for Server-Item Architecture</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>As noted in <bpt id="p1">[</bpt>Implementing Server Items<ept id="p1">](#_core_implementing_server_items)</ept>, server applications must be able to render items both in the server's view and in a metafile used by the container application.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In the Microsoft Foundation Class Library's application architecture, the view class's <ph id="ph1">`OnDraw`</ph> member function renders the item when it is being edited (see <bpt id="p1">[</bpt>CView::OnDraw<ept id="p1">](../mfc/reference/cview-class.md#cview__ondraw)</ept> in the <bpt id="p2">*</bpt>Class Library Reference<ept id="p2">*</ept>).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The server item's <ph id="ph1">`OnDraw`</ph> renders the item into a metafile in all other cases (see <bpt id="p1">[</bpt>COleServerItem::OnDraw<ept id="p1">](../mfc/reference/coleserveritem-class.md#coleserveritem__ondraw)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>You can avoid duplication of code by writing helper functions in your server-document class and calling them from the <ph id="ph1">`OnDraw`</ph> functions in your view and server-item classes.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The MFC OLE sample <bpt id="p1">[</bpt>HIERSVR<ept id="p1">](../visual-cpp-samples.md)</ept> uses this strategy: the functions <bpt id="p2">**</bpt>CServerView::OnDraw<ept id="p2">**</ept> and <bpt id="p3">**</bpt>CServerItem::OnDraw<ept id="p3">**</ept> both call <bpt id="p4">**</bpt>CServerDoc::DrawTree<ept id="p4">**</ept> to render the item.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The view and the item both have <ph id="ph1">`OnDraw`</ph> member functions because they draw under different conditions.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The view must take into account such factors as zooming, selection size and extent, clipping, and user-interface elements such as scroll bars.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The server item, on the other hand, always draws the entire OLE object.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>CView::OnDraw<ept id="p1">](../mfc/reference/cview-class.md#cview__ondraw)</ept>, <bpt id="p2">[</bpt>COleServerItem<ept id="p2">](../mfc/reference/coleserveritem-class.md)</ept>, <bpt id="p3">[</bpt>COleServerItem::OnDraw<ept id="p3">](../mfc/reference/coleserveritem-class.md#coleserveritem__ondraw)</ept>, and <bpt id="p4">[</bpt>COleServerDoc::OnGetEmbeddedItem<ept id="p4">](../mfc/reference/coleserverdoc-class.md#coleserverdoc__ongetembeddeditem)</ept> in the <bpt id="p5">*</bpt>Class Library Reference<ept id="p5">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Servers</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

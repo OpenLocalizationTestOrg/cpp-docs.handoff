@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a5e693bbdd5c63536c61c3deebe2ff8c81e924d6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\subtract-with-carry-engine-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">92aca7e1c3ce6dd84c0722f44e3dd194f4f8d242</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">eaf223999a9c19f754b494cb9ef67f4aa10b23fd</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>subtract_with_carry_engine Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>subtract_with_carry_engine Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Generates a random sequence by the subtract-with-carry (lagged Fibonacci) algorithm.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The unsigned integer result type.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For possible types, see <bpt id="p1">[</bpt><ph id="ph1">\&lt;</ph>random&gt;<ept id="p1">](../standard-library/random.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1"> **</bpt>Word size<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Size of each word, in bits, of the state sequence.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Precondition<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1"> **</bpt>Short lag<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Number of integer values.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Precondition<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source><bpt id="p1"> **</bpt>Long lag<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Determines recurrence in the series generated.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Members</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>is a member constant, defined as <ph id="ph1">`19780503u`</ph>, used as the default parameter value for <ph id="ph2">`subtract_with_carry_engine::seed`</ph> and the single value constructor.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For more information about engine members, see <bpt id="p1">[</bpt><ph id="ph1">\&lt;</ph>random&gt;<ept id="p1">](../standard-library/random.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`substract_with_carry_engine`</ph> template class is an improvement over the <bpt id="p1">[</bpt>linear_congruential_engine<ept id="p1">](../standard-library/linear-congruential-engine-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Neither for these engines is as fast or with as high quality results as the <bpt id="p1">[</bpt>mersenne_twister_engine<ept id="p1">](../standard-library/mersenne-twister-engine-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This engine produces values of a user-specified unsigned integral type using the recurrence relation ( <bpt id="p1">*</bpt>period<ept id="p1">*</ept>) <ph id="ph1">`x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`</ph>, where <ph id="ph2">`cy(i)`</ph> has the value <ph id="ph3">`1`</ph> if <ph id="ph4">`x(i - S) - x(i - R) - cy(i - 1) &lt; 0`</ph>, otherwise <ph id="ph5">`0`</ph>, and <ph id="ph6">`M`</ph> has the value <ph id="ph7">`2`&lt;sup&gt;</ph>W<ph id="ph8">&lt;/sup&gt;</ph>. The engine's state is a carry indicator plus <ph id="ph9">`R`</ph> values.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>These values consist of the last <ph id="ph1">`R`</ph> values returned if <ph id="ph2">`operator()`</ph> has been called at least <ph id="ph3">`R`</ph> times, otherwise the <ph id="ph4">`N`</ph> values that have been returned and the last <ph id="ph5">`R - N`</ph> values of the seed.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The template argument <ph id="ph1">`UIntType`</ph> must be large enough to hold values up to <ph id="ph2">`M - 1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Although you can construct a generator from this engine directly, you can also use one of these predefined typedefs:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>: Used as a base for <ph id="ph1">`ranlux24`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>: Used as a base for <ph id="ph1">`ranlux48`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For detailed information about the subract with carry engine algorithm, see the Wikipedia article <bpt id="p1">[</bpt>Lagged Fibonacci generator<ept id="p1">](http://go.microsoft.com/fwlink/LinkId=402445)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> <ph id="ph1">\&lt;</ph>random&gt;</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> std</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>random&gt;</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6c35d0dd94414ad797391ebbcddfa38354112c79</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\signal.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a1843b5fcad93b6f3cc55dfb13719909758c7bb2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f4ce246377951a3c282f7f7e5dad76b8982d1aac</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>signal | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>signal</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Sets interrupt signal handling.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Do not use this method to shut down a <ph id="ph1">[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]</ph> app, except in testing or debugging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Programmatic or UI ways to close a <ph id="ph1">[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]</ph> app are not permitted according to Section 3.6 of the <bpt id="p1">[</bpt>Windows 8 app certification requirements<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=262889)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Application lifecycle (Windows Store apps)<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=262853)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Signal value.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Function to be executed.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The first parameter is a signal value and the second parameter is a sub-code that can be used when the first parameter is SIGFPE.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>returns the previous value of <ph id="ph1">`func`</ph> that's associated with the given signal.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For example, if the previous value of <ph id="ph1">`func`</ph> was <ph id="ph2">`SIG_IGN`</ph>, the return value is also <ph id="ph3">`SIG_IGN`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A return value of <ph id="ph1">`SIG_ERR`</ph> indicates an error; in that case, <ph id="ph2">`errno`</ph> is set to <ph id="ph3">`EINVAL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>errno, _doserrno, _sys_errlist, and _sys_nerr<ept id="p1">](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)</ept> for more information about return codes.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`signal`</ph> function enables a process to choose one of several ways to handle an interrupt signal from the operating system.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`sig`</ph> argument is the interrupt to which <ph id="ph2">`signal`</ph> responds; it must be one of the following manifest constants, which are defined in SIGNAL.H.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>value</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Abnormal termination</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Floating-point error</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Illegal instruction</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>CTRL+C signal</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Illegal storage access</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Termination request</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`sig`</ph> is not one of the above values, the invalid parameter handler is invoked, as defined in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept> .</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, this function sets <ph id="ph1">`errno`</ph> to <ph id="ph2">`EINVAL`</ph> and returns <ph id="ph3">`SIG_ERR`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>By default, <ph id="ph1">`signal`</ph> terminates the calling program with exit code 3, regardless of the value of <ph id="ph2">`sig`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>is not supported for any Win32 application.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>When a CTRL+C interrupt occurs, Win32 operating systems generate a new thread to specifically handle that interrupt.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This can cause a single-thread application, such as one in UNIX, to become multithreaded and cause unexpected behavior.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`func`</ph> argument is an address to a signal handler that you write, or to one of the predefined constants <ph id="ph2">`SIG_DFL`</ph> or <ph id="ph3">`SIG_IGN`</ph>, which are also defined in SIGNAL.H.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`func`</ph> is a function, it is installed as the signal handler for the given signal.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The signal handler's prototype requires one formal argument, <ph id="ph1">`sig`</ph>, of type <ph id="ph2">`int`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The operating system provides the actual argument through <ph id="ph1">`sig`</ph> when an interrupt occurs; the argument is the signal that generated the interrupt.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Therefore, you can use the six manifest constants (listed in the preceding table) in your signal handler to determine which interrupt occurred and take appropriate action.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>For example, you can call <ph id="ph1">`signal`</ph> twice to assign the same handler to two different signals, and then test the <ph id="ph2">`sig`</ph> argument in the handler to take different actions based on the signal received.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If you are testing for floating-point exceptions (<ph id="ph1">`SIGFPE`</ph>), <ph id="ph2">`func`</ph> points to a function that takes an optional second argument that is one of several manifest constants—defined in FLOAT.H—of the form <ph id="ph3">`FPE_xxx`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>When a <ph id="ph1">`SIGFPE`</ph> signal occurs, you can test the value of the second argument to determine the kind of floating-point exception and then take appropriate action.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This argument and its possible values are Microsoft extensions.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For floating-point exceptions, the value of <ph id="ph1">`func`</ph> is not reset when the signal is received.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>To recover from floating-point exceptions, use try/except clauses to surround the floating point operations.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>It's also possible to recover by using <bpt id="p1">[</bpt>setjmp<ept id="p1">](../../c-runtime-library/reference/setjmp.md)</ept> with <bpt id="p2">[</bpt>longjmp<ept id="p2">](../../c-runtime-library/reference/longjmp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In either case, the calling process resumes execution and leaves the floating-point state of the process undefined.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If the signal handler returns, the calling process resumes execution immediately following the point at which it received the interrupt signal.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This is true regardless of the kind of signal or operating mode.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Before the specified function is executed, the value of <ph id="ph1">`func`</ph> is set to <ph id="ph2">`SIG_DFL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The next interrupt signal is treated as described for <ph id="ph1">`SIG_DFL`</ph>, unless an intervening call to <ph id="ph2">`signal`</ph> specifies otherwise.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>You can use this feature to reset signals in the called function.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Because signal-handler routines are usually called asynchronously when an interrupt occurs, your signal-handler function may get control when a run-time operation is incomplete and in an unknown state.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The following list summarizes the restrictions that determine which functions you can use in your signal-handler routine.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Do not issue low-level or STDIO.H I/O routines (for example, <ph id="ph1">`printf`</ph> or <ph id="ph2">`fread`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Do not call heap routines or any routine that uses the heap routines (for example, <ph id="ph1">`malloc`</ph>, <ph id="ph2">`_strdup`</ph>, or <ph id="ph3">`_putenv`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>malloc<ept id="p1">](../../c-runtime-library/reference/malloc.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Do not use any function that generates a system call (for example, <ph id="ph1">`_getcwd`</ph> or <ph id="ph2">`time`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Do not use <ph id="ph1">`longjmp`</ph> unless the interrupt is caused by a floating-point exception (that is, <ph id="ph2">`sig`</ph> is <ph id="ph3">`SIGFPE`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>In this case, first reinitialize the floating-point package by using a call to <ph id="ph1">`_fpreset`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Do not use any overlay routines.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>A program must contain floating-point code if it is to trap the <ph id="ph1">`SIGFPE`</ph> exception by using the function.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>If your program does not have floating-point code and requires the run-time library's signal-handling code, just declare a volatile double and initialize it to zero:</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`SIGILL`</ph> and <ph id="ph2">`SIGTERM`</ph> signals are not generated under Windows.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>They are included for ANSI compatibility.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Therefore, you can set signal handlers for these signals by using <ph id="ph1">`signal`</ph>, and you can also explicitly generate these signals by calling <bpt id="p1">[</bpt>raise<ept id="p1">](../../c-runtime-library/reference/raise.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Signal settings are not preserved in spawned processes that are created by calls to <ph id="ph1">`_exec`</ph> or <ph id="ph2">`_spawn`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The signal settings are reset to the default values in the new process.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>signal.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The following example shows how to use <ph id="ph1">`signal`</ph> to add some custom behavior to the <ph id="ph2">`SIGABRT`</ph> signal.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>For additional information about abort behavior, see <bpt id="p1">[</bpt>_set_abort_behavior<ept id="p1">](../../c-runtime-library/reference/set-abort-behavior.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Process and Environment Control</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>abort</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>_exec, _wexec Functions</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>exit, _Exit, _exit</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>_fpreset</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>_spawn, _wspawn Functions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
