@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">85da2fd239ab40a010cdaf999b7ce27c5aea7e20</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\overview-of-the-concurrency-runtime.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">78ba1152ff276f915508675d6cb7f2ba290497a0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">edd0ec9181edfa39f813b0c3f62dc2f604195332</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Overview of the Concurrency Runtime | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Overview of the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document provides an overview of the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It describes the benefits of the Concurrency Runtime, when to use it, and how its components interact with each other and with the operating system and applications.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In Visual Studio 2015 and later, the Concurrency Runtime Task Scheduler is no longer the scheduler for the task class and related types in ppltasks.h.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Those types now use the Windows ThreadPool for better performance and interoperability with Windows synchronization primitives.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Parallel algorithms such as parallel_for continue to use the Concurrency Runtime Task Scheduler.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Sections</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This document contains the following sections:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Why a Runtime for Concurrency is Important</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Architecture</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>C++ Lambda Expressions</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Why a Runtime for Concurrency is Important</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A runtime for concurrency provides uniformity and predictability to applications and application components that run simultaneously.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Two examples of the benefits of the Concurrency Runtime are <bpt id="p1">*</bpt>cooperative task scheduling<ept id="p1">*</ept> and <bpt id="p2">*</bpt>cooperative blocking<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime uses a cooperative task scheduler that implements a work-stealing algorithm to efficiently distribute work among computing resources.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For example, consider an application that has two threads that are both managed by the same runtime.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If one thread finishes its scheduled task, it can offload work from the other thread.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This mechanism balances the overall workload of the application.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime also provides synchronization primitives that use cooperative blocking to synchronize access to resources.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For example, consider a task that must have exclusive access to a shared resource.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>By blocking cooperatively, the runtime can use the remaining quantum to perform another task as the first task waits for the resource.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This mechanism promotes maximum usage of computing resources.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Architecture</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime is divided into four components: the Parallel Patterns Library (PPL), the Asynchronous Agents Library, the Task Scheduler, and the Resource Manager.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>These components reside between the operating system and applications.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The following illustration shows how the Concurrency Runtime components interact among the operating system and applications:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime Architecture</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime Architecture</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The Task Scheduler and Resource Manager components are not available from a <ph id="ph1">[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]</ph> app or when you use the task class or other types in ppltasks.h.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime is highly <bpt id="p1">*</bpt>composable<ept id="p1">*</ept>, that is, you can combine existing functionality to do more.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime composes many features, such as parallel algorithms, from lower-level components.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime also provides synchronization primitives that use cooperative blocking to synchronize access to resources.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For more information about these synchronization primitives, see <bpt id="p1">[</bpt>Synchronization Data Structures<ept id="p1">](../../parallel/concrt/synchronization-data-structures.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The following sections provide a brief overview of what each component provides and when to use it.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The Parallel Patterns Library (PPL) provides general-purpose containers and algorithms for performing fine-grained parallelism.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The PPL enables <bpt id="p1">*</bpt>imperative data parallelism<ept id="p1">*</ept> by providing parallel algorithms that distribute computations on collections or on sets of data across computing resources.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>It also enables <bpt id="p1">*</bpt>task parallelism<ept id="p1">*</ept> by providing task objects that distribute multiple independent operations across computing resources.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Use the Parallel Patterns Library when you have a local computation that can benefit from parallel execution.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For example, you can use the <bpt id="p1">[</bpt>concurrency::parallel_for<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for)</ept> algorithm to transform an existing <ph id="ph1">`for`</ph> loop to act in parallel.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>For more information about the Parallel Patterns Library, see <bpt id="p1">[</bpt>Parallel Patterns Library (PPL)<ept id="p1">](../../parallel/concrt/parallel-patterns-library-ppl.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents Library</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The Asynchronous Agents Library (or just <bpt id="p1">*</bpt>Agents Library<ept id="p1">*</ept>) provides both an actor-based programming model and message passing interfaces for coarse-grained dataflow and pipelining tasks.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Asynchronous agents enable you to make productive use of latency by performing work as other components wait for data.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Use the Agents Library when you have multiple entities that communicate with each other asynchronously.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>For example, you can create an agent that reads data from a file or network connection and then uses the message passing interfaces to send that data to another agent.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For more information about the Agents Library, see <bpt id="p1">[</bpt>Asynchronous Agents Library<ept id="p1">](../../parallel/concrt/asynchronous-agents-library.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Task Scheduler</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The Task Scheduler schedules and coordinates tasks at run time.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The Task Scheduler is cooperative and uses a work-stealing algorithm to achieve maximum usage of processing resources.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime provides a default scheduler so that you do not have to manage infrastructure details.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>However, to meet the quality needs of your application, you can also provide your own scheduling policy or associate specific schedulers with specific tasks.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For more information about the Task Scheduler, see <bpt id="p1">[</bpt>Task Scheduler<ept id="p1">](../../parallel/concrt/task-scheduler-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Resource Manager</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The role of the Resource Manager is to manage computing resources, such as processors and memory.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The Resource Manager responds to workloads as they change at run time by assigning resources to where they can be most effective.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The Resource Manager serves as an abstraction over computing resources and primarily interacts with the Task Scheduler.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Although you can use the Resource Manager to fine-tune the performance of your libraries and applications, you typically use the functionality that is provided by the Parallel Patterns Library, the Agents Library, and the Task Scheduler.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>These libraries use the Resource Manager to dynamically rebalance resources as workloads change.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>C++ Lambda Expressions</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Many of the types and algorithms that are defined by the Concurrency Runtime are implemented as C++ templates.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Some of these types and algorithms take as a parameter a routine that performs work.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>This parameter can be a lambda function, a function object, or a function pointer.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>These entities are also referred to as <bpt id="p1">*</bpt>work functions<ept id="p1">*</ept> or <bpt id="p2">*</bpt>work routines<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Lambda expressions are an important new Visual C++ language feature because they provide a succinct way to define work functions for parallel processing.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Function objects and function pointers enable you to use the Concurrency Runtime with your existing code.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>However, we recommend that you use lambda expressions when you write new code because of the safety and productivity benefits that they provide.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The following example compares the syntax of lambda functions, function objects, and function pointers in multiple calls to the <bpt id="p1">[</bpt>concurrency::parallel_for_each<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for_each)</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Each call to <ph id="ph1">`parallel_for_each`</ph> uses a different technique to compute the square of each element in a <bpt id="p1">[</bpt>std::array<ept id="p1">](../../standard-library/array-class-stl.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>concrt-comparing-work-functions#1</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Output</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>For more information about lambda functions in C++, see <bpt id="p1">[</bpt>Lambda Expressions<ept id="p1">](../../cpp/lambda-expressions-in-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>The following table shows the header files that are associated with each component of the Concurrency Runtime:</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Component</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Header Files</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library (PPL)</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>ppl.h</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>concurrent_queue.h</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>concurrent_vector.h</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents Library</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>agents.h</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Task Scheduler</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>concrt.h</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Resource Manager</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>concrtrm.h</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime is declared in the <bpt id="p1">[</bpt>Concurrency<ept id="p1">](../../parallel/concrt/reference/concurrency-namespace.md)</ept> namespace.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>(You can also use <bpt id="p1">[</bpt>concurrency<ept id="p1">](../../parallel/concrt/reference/concurrency-namespace.md)</ept>, which is an alias for this namespace.) The <ph id="ph1">`concurrency::details`</ph> namespace supports the Concurrency Runtime framework, and is not intended to be used directly from your code.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime is provided as part of the C Runtime Library (CRT).</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>For more information about how to build an application that uses the CRT, see <bpt id="p1">[</bpt>CRT Library Features<ept id="p1">](../../c-runtime-library/crt-library-features.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

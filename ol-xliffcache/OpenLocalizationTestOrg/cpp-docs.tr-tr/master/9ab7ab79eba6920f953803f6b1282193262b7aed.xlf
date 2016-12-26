@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9ab7ab79eba6920f953803f6b1282193262b7aed</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\a-19-examples-showing-incorrect-nesting-of-work-sharing-directives.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c8dfc9b4264c1d5109b112d2d6090022ba0baf8d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">601e48811339eb12f6d0f5be0ca2be930d3d4b0c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>A.19   Examples Showing Incorrect Nesting of Work-sharing Directives | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>A.19   Examples Showing Incorrect Nesting of Work-sharing Directives</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The examples in this section illustrate the directive nesting rules.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For more information on directive nesting, see <bpt id="p1">[</bpt>Section 2.9<ept id="p1">](../../parallel/openmp/2-9-directive-nesting.md)</ept> on page 33.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The following example is noncompliant because the inner and outer <ph id="ph1">`for`</ph> directives are nested and bind to the same <ph id="ph2">`parallel`</ph> directive:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The following dynamically nested version of the preceding example is also noncompliant:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The following example is noncompliant because the <ph id="ph1">`for`</ph> and <ph id="ph2">`single`</ph> directives are nested, and they bind to the same parallel region:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The following example is noncompliant because a <ph id="ph1">`barrier`</ph> directive inside a <ph id="ph2">`for`</ph> can result in deadlock:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The following example is noncompliant because the <ph id="ph1">`barrier`</ph> results in deadlock due to the fact that only one thread at a time can enter the critical section:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The following example is noncompliant because the <ph id="ph1">`barrier`</ph> results in deadlock due to the fact that only one thread executes the <ph id="ph2">`single`</ph> section:</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

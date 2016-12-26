@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">26ba2650710816855547cd26a4d8a71494710c0f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\ide\troubleshooting-build-customizations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">28e19c19bb0bcae303629ef6b6a2c89b982d353c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">444d9af1dfe39d22a6d96f0b5ad6acf241055dfb</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Troubleshooting Build Customizations | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Troubleshooting Build Customizations</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>If your custom build steps or events are not behaving as you expect, there are several things you can do to try to understand what is going wrong.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Make sure that the files your custom build steps generate match the files you declare as outputs.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If your custom build steps generate any files that are inputs or dependencies of other build steps (custom or otherwise), make sure that those files are added to your project.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>And make sure that the tools that consume those files execute after the custom build step.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To display what your custom build step is actually doing, add <ph id="ph1">`@echo on`</ph> as the first command.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The build events and build steps are put in a temporary .bat file and run when the project is built.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Therefore, you can add error checking to your build event or build step commands.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Examine the build log in the intermediate files directory to see what actually executed.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The path and name of the build log is represented by the <bpt id="p1">**</bpt>MSBuild<ept id="p1">**</ept> macro expression, <bpt id="p2">**</bpt>$(IntDir)<ph id="ph1">\\</ph>$(MSBuildProjectName).log<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Modify your project settings to collect more than the default amount of information in the build log.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Tools<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Options<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Options<ept id="p1">**</ept> dialog box, click the <bpt id="p2">**</bpt>Projects and Solutions<ept id="p2">**</ept> node and then click the <bpt id="p3">**</bpt>Build and Run<ept id="p3">**</ept> node.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Then, in the <bpt id="p1">**</bpt>MSBuild project build log file verbosity<ept id="p1">**</ept> box, click <bpt id="p2">**</bpt>Detailed<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Verify the values of any file name or directory macros you are using.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>You can echo macros individually, or you can add <ph id="ph1">`copy %0 command.bat`</ph> to the start of your custom build step, which will copy your custom build step's commands to command.bat with all macros expanded.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Run custom build steps and build events individually to check their behavior.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Understanding Custom Build Steps and Build Events</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

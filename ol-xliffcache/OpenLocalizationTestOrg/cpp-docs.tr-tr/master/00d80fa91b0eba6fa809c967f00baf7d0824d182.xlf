@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">00d80fa91b0eba6fa809c967f00baf7d0824d182</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\odbc-calling-odbc-api-functions-directly.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fca0e455025853d6035558c8394f5021b319eaa1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6ff924b325854bc649b0c203013212dc9be51a99</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>ODBC: Calling ODBC API Functions Directly | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>ODBC: Calling ODBC API Functions Directly</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The database classes provide a simpler interface to a <bpt id="p1">[</bpt>data source<ept id="p1">](../../data/odbc/data-source-odbc.md)</ept> than does ODBC.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, the classes do not encapsulate all the ODBC API.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For any functionality that falls outside the abilities of the classes, you must call ODBC API functions directly.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For example, you must call the ODBC catalog functions (<bpt id="p1">**</bpt>::SQLColumns<ept id="p1">**</ept>, <bpt id="p2">**</bpt>::SQLProcedures<ept id="p2">**</ept>, <bpt id="p3">**</bpt>::SQLTables<ept id="p3">**</ept>, and others) directly.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>ODBC data sources are accessible through the MFC ODBC classes, as described in this topic, or through the MFC Data Access Object (DAO) classes.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>To call an ODBC API function directly, you must take the same steps you would take if you were making the calls without the framework.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>They steps are:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Allocate storage for any results the call returns.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Pass an ODBC <bpt id="p1">**</bpt>HDBC<ept id="p1">**</ept> or <bpt id="p2">**</bpt>HSTMT<ept id="p2">**</ept> handle, depending on the parameter signature of the function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>AFXGetHENV<ept id="p1">](http://msdn.microsoft.com/library/d8be2a8e-b93a-460f-affb-cf65b2f3dc10)</ept> macro to retrieve the ODBC handle.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Member variables <bpt id="p1">**</bpt>CDatabase::m_hdbc<ept id="p1">**</ept> and <bpt id="p2">**</bpt>CRecordset::m_hstmt<ept id="p2">**</ept> are available so that you do not need to allocate and initialize these yourself.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Perhaps call additional ODBC functions to prepare for or follow up the main call.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Deallocate storage when you finish.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information about these steps, see the <bpt id="p1">[</bpt>Open Database Connectivity (ODBC)<ept id="p1">](https://msdn.microsoft.com/en-us/library/ms710252.aspx)</ept> SDK in the MSDN documentation.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>In addition to these steps, you need to take extra steps to check function return values, ensure that your program is not waiting for an asynchronous call to finish, and so on.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You can simplify these last steps by using the <ph id="ph1">`AFX_SQL_ASYNC`</ph> and <ph id="ph2">`AFX_SQL_SYNC`</ph> macros.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Macros and Globals<ept id="p1">](../../mfc/reference/mfc-macros-and-globals.md)</ept> in the <bpt id="p2">*</bpt>MFC Reference<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>ODBC Basics</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

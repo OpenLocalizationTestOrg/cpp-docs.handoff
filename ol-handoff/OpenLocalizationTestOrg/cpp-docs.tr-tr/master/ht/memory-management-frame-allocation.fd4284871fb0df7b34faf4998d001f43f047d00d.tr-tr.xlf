@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0b862d3a3a71f4f2ab4c3124f7038e039e5d4092</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\memory-management-frame-allocation.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6103416bc95111355cdb632f06133a309973a3b3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3ba1817456f1f282b813142d72d9eea11a5532eb</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Memory Management: Frame Allocation | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Memory Management: Frame Allocation</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Allocation on the frame takes its name from the "stack frame" that is set up whenever a function is called.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The stack frame is an area of memory that temporarily holds the arguments to the function as well as any variables that are defined local to the function.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Frame variables are often called "automatic" variables because the compiler automatically allocates the space for them.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>There are two key characteristics of frame allocations.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>First, when you define a local variable, enough space is allocated on the stack frame to hold the entire variable, even if it is a large array or data structure.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Second, frame variables are automatically deleted when they go out of scope:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_Utilities#10</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For local function variables, this scope transition happens when the function exits, but the scope of a frame variable can be smaller than a function if nested braces are used.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This automatic deletion of frame variables is very important.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In the case of simple primitive types (such as <ph id="ph1">`int`</ph> or <bpt id="p1">**</bpt>byte<ept id="p1">**</ept>), arrays, or data structures, the automatic deletion simply reclaims the memory used by the variable.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Since the variable has gone out of scope, it cannot be accessed anyway.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In the case of C++ objects, however, the process of automatic deletion is a bit more complicated.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>When an object is defined as a frame variable, its constructor is automatically invoked at the point where the definition is encountered.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When the object goes out of scope, its destructor is automatically invoked before the memory for the object is reclaimed.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This automatic construction and destruction can be very handy, but you must be aware of the automatic calls, especially to the destructor.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The key advantage of allocating objects on the frame is that they are automatically deleted.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When you allocate your objects on the frame, you don't have to worry about forgotten objects causing memory leaks.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>(For details on memory leaks, see the article <bpt id="p1">[</bpt>Detecting Memory Leaks in MFC<ept id="p1">](http://msdn.microsoft.com/en-us/29ee8909-96e9-4246-9332-d3a8aa8d4658)</ept>.) A disadvantage of frame allocation is that frame variables cannot be used outside their scope.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Another factor in choosing frame allocation versus heap allocation is that for large structures and objects, it is often better to use the heap instead of the stack for storage since stack space is often limited.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Memory Management</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

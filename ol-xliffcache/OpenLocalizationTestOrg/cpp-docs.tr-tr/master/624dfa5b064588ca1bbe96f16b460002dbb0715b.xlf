@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">624dfa5b064588ca1bbe96f16b460002dbb0715b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\cmyprovidersession-myprovidersess-h.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9f851fe03b4c231277e8cd4b9097a456258feaa8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">00bb3bab86a2897a9de4a0770ffea6c90d4b3cec</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CMyProviderSession (MyProviderSess.H) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CMyProviderSession (MyProviderSess.H)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>MyProviderSess.H contains the declaration and implementation for the OLE DB session object.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The data source object creates the session object and represents a conversation between a consumer and provider.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Several simultaneous sessions can be open for one data source.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The inheritance list for <ph id="ph1">`CMyProviderSession`</ph> follows:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The session object inherits from <bpt id="p1">**</bpt>IGetDataSource<ept id="p1">**</ept>, <ph id="ph1">`IOpenRowset`</ph>, <bpt id="p2">**</bpt>ISessionProperties<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>IDBCreateCommand<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>IGetDataSource<ept id="p1">**</ept> interface allows a session to retrieve the data source that created it.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This is useful if you need to get properties from the data source that you created or other information that the data source can provide.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>ISessionProperties<ept id="p1">**</ept> interface handles all the properties for the session.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IOpenRowset`</ph> and <bpt id="p1">**</bpt>IDBCreateCommand<ept id="p1">**</ept> interfaces are used to do the database work.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If the provider supports commands, it implements the <bpt id="p1">**</bpt>IDBCreateCommand<ept id="p1">**</ept> interface.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>It is used to create the command object that can execute commands.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The provider always implements the <ph id="ph1">`IOpenRowset`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It is used to generate a simple rowset from a provider.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>It is a default rowset (for example, <ph id="ph1">`"select * from mytable"`</ph>) from a provider.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The wizard also generates three session classes: <ph id="ph1">`CMyProviderSessionColSchema`</ph>, <ph id="ph2">`CMyProviderSessionPTSchema`</ph>, and <ph id="ph3">`CMyProviderSessionTRSchema`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>These sessions are used for schema rowsets.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Schema rowsets allow the provider to return metadata to the consumer without the consumer having to execute a query or fetch data.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Fetching metadata can be far quicker than discovering a providers capabilities.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The OLE DB specification requires that providers implementing the <bpt id="p1">**</bpt>IDBSchemaRowset<ept id="p1">**</ept> interface support three schema rowset types: <bpt id="p2">**</bpt>DBSCHEMA_COLUMNS<ept id="p2">**</ept>, <bpt id="p3">**</bpt>DBSCHEMA_PROVIDER_TYPES<ept id="p3">**</ept>, and <ph id="ph1">`DBSCHEMA_TABLES`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The wizard generates implementations for each schema rowset.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Each class generated by the wizard contains an <ph id="ph1">`Execute`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In this <ph id="ph1">`Execute`</ph> method, you can return data to the provider about which tables, columns, and data types you support.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This data is usually known at compile time.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Provider Wizard-Generated Files</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

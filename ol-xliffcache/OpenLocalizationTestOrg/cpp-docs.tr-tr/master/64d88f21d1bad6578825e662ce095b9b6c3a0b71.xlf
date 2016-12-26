@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">64d88f21d1bad6578825e662ce095b9b6c3a0b71</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\exceptions-and-stack-unwinding-in-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">36f3f4489e86d4ddd5eb38a444420098194285cd</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">142a00dd9949a9f280d225d6ded4fa232d065126</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Exceptions and Stack Unwinding in C++ | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Exceptions and Stack Unwinding in C++</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In the C++ exception mechanism, control moves from the throw statement to the first catch statement that can handle the thrown type.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as <bpt id="p1">*</bpt>stack unwinding<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In stack unwinding, execution proceeds as follows:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Control reaches the <ph id="ph1">`try`</ph> statement by normal sequential execution.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The guarded section in the <ph id="ph1">`try`</ph> block is executed.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If no exception is thrown during execution of the guarded section, the <ph id="ph1">`catch`</ph> clauses that follow the <ph id="ph2">`try`</ph> block are not executed.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Execution continues at the statement after the last <ph id="ph1">`catch`</ph> clause that follows the associated <ph id="ph2">`try`</ph> block.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the <ph id="ph1">`throw`</ph> operand.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>(This implies that a copy constructor may be involved.) At this point, the compiler looks for a <ph id="ph1">`catch`</ph> clause in a higher execution context that can handle an exception of the type that is thrown, or for a <ph id="ph2">`catch`</ph> handler that can handle any type of exception.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`catch`</ph> handlers are examined in order of their appearance after the <ph id="ph2">`try`</ph> block.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If no appropriate handler is found, the next dynamically enclosing <ph id="ph1">`try`</ph> block is examined.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This process continues until the outermost enclosing <ph id="ph1">`try`</ph> block is examined.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If a matching handler is still not found, or if an exception occurs during the unwinding process but before the handler gets control, the predefined run-time function <ph id="ph1">`terminate`</ph> is called.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If an exception occurs after the exception is thrown but before the unwind begins, <ph id="ph1">`terminate`</ph> is called.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If a matching <ph id="ph1">`catch`</ph> handler is found, and it catches by value, its formal parameter is initialized by copying the exception object.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If it catches by reference, the parameter is initialized to refer to the exception object.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>After the formal parameter is initialized, the process of unwinding the stack begins.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the <ph id="ph1">`try`</ph> block that is associated with the <ph id="ph2">`catch`</ph> handler and the throw site of the exception.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Destruction occurs in reverse order of construction.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`catch`</ph> handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a <ph id="ph2">`catch`</ph> handler.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Control can only enter a <ph id="ph1">`catch`</ph> handler through a thrown exception, never through a <ph id="ph2">`goto`</ph> statement or a <ph id="ph3">`case`</ph> label in a <ph id="ph4">`switch`</ph>statement.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Stack Unwinding Example</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates how the stack is unwound when an exception is thrown.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Execution on the thread jumps from the throw statement in <ph id="ph1">`C`</ph> to the catch statement in <ph id="ph2">`main`</ph>, and unwinds each function along the way.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Notice the order in which the <ph id="ph1">`Dummy`</ph> objects are created and then destroyed as they go out of scope.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Also notice that no function completes except <ph id="ph1">`main`</ph>, which contains the catch statement.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Function <ph id="ph1">`A`</ph> never returns from its call to <ph id="ph2">`B()`</ph>, and <ph id="ph3">`B`</ph> never returns from its call to <ph id="ph4">`C()`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If you uncomment the definition of the <ph id="ph1">`Dummy`</ph> pointer and the corresponding delete statement, and then run the program, notice that the pointer is never deleted.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This shows what can happen when functions do not provide an exception guarantee.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information, see How to: Design for Exceptions.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>If you comment out the catch statement, you can observe what happens when a program terminates because of an unhandled exception.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
