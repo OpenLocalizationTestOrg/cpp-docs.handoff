@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">82124e63d5c16d9fc5ecbb6613ea09cc144eeecc</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\how-to-migrate-to-clr.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d4eb8b342bfc06f693e99bc7cbf6d68e8184cab8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6b811ff09891b96a94b4d58f66827ae710d87b37</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Migrate to -clr | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Migrate to /clr</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic discusses issues that arise when compiling native code with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> (see <bpt id="p2">[</bpt>/clr (Common Language Runtime Compilation)<ept id="p2">](../build/reference/clr-common-language-runtime-compilation.md)</ept> for more information).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> allows Visual C++ modules to invoke and be invoked from .NET assemblies while retaining compatibility with unmanaged modules.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Mixed (Native and Managed) Assemblies<ept id="p1">](../dotnet/mixed-native-and-managed-assemblies.md)</ept> and <bpt id="p2">[</bpt>Native and .NET Interoperability<ept id="p2">](../dotnet/native-and-dotnet-interoperability.md)</ept> for more information on the advantages of compiling with <bpt id="p3">**</bpt>/clr<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Known Issues Compiling Library Projects with /clr</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Visual Studio contains some known issues when compiling library projects with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Your code may query types at runtime with <bpt id="p1">[</bpt>CRuntimeClass::FromName<ept id="p1">](../mfc/reference/cruntimeclass-structure.md#cruntimeclass__fromname)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>However, if a type is in an MSIL .dll (compiled with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>), the call to <ph id="ph1">`FromName`</ph> may fail if it occurs before the static constructors run in the managed .dll (you will not see this problem if the FromName call happens after code has executed in the managed .dll).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To work around this problem, you can force the construction of the managed static constructor by defining a function in the managed .dll, exporting it, and invoking it from the native MFC application.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Compile with Visual C++</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Before using <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> on any module in your project, first compile and link your native project with Visual Studio 2010.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following steps, followed in order, provide the easiest path to a <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> compilation.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It is important to compile and run your project after each of these steps.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Versions Prior to Visual C++ 2003</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If you are upgrading to Visual Studio 2010 from a version prior to Visual C++ 2003, you may see compiler errors related to the enhanced C++ standard conformance in Visual C++ 2003</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Upgrading from Visual C++ 2003</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Projects previous built with Visual C++ 2003 should also first be compiled without <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> as Visual Studio now has increased ANSI/ISO compliance and some breaking changes.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The change that is likely to require the most attention is <bpt id="p1">[</bpt>Security Features in the CRT<ept id="p1">](../c-runtime-library/security-features-in-the-crt.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Code that uses the CRT is very likely to produce deprecation warnings.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>These warnings can be suppressed, but migrating to the new <bpt id="p1">[</bpt>Security-Enhanced Versions of CRT Functions<ept id="p1">](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)</ept> is preferred, as they provide better security and may reveal security issues in your code.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Upgrading from Managed Extensions for C++</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Projects built with Visual C++ .NET or Visual C++ 2003 that used Managed Extensions for C++ must be rewritten to use the new syntax, as these extensions are no longer supported.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Code written with Managed Extensions for C++ won't compile under <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Convert C Code to C++</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Although Visual Studio will compile C files, it is necessary to convert them to C++ for a <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> compilation.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The actual filename doesn't have to be changed; you can use <bpt id="p1">**</bpt>/Tp<ept id="p1">**</ept> (see <bpt id="p2">[</bpt>/Tc, /Tp, /TC, /TP (Specify Source File Type)<ept id="p2">](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)</ept>.) Note that although C++ source code files are required for <bpt id="p3">**</bpt>/clr<ept id="p3">**</ept>, it is not necessary to re-factor your code to use object-oriented paradigms.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>C code is very likely to require changes when compiled as a C++ file.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The C++ type-safety rules are strict, so type conversions must be made explicit with casts.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For example, malloc returns a void pointer, but can be assigned to a pointer to any type in C with a cast:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Function pointers are also strictly type-safe in C++, so the following C code requires modification.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In C++ it's best to create a <ph id="ph1">`typedef`</ph> that defines the function pointer type, and then use that type to cast function pointers:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>C++ also requires that functions either be prototyped or fully defined before they can be referenced or invoked.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Identifiers used in C code that happen to be keywords in C++ (such as <ph id="ph1">`virtual`</ph>, <ph id="ph2">`new`</ph>, <ph id="ph3">`delete`</ph>, <ph id="ph4">`bool`</ph>, <ph id="ph5">`true`</ph>, <ph id="ph6">`false`</ph>, etc.) must be renamed.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This can generally be done with simple search-and-replace operations.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Finally, whereas C-style COM calls require explicit use of the v-table and <ph id="ph1">`this`</ph> pointer, C++ does not:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Reconfigure Project Settings</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>After your project compiles and runs in Visual Studio 2010 you should create new project configurations for <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> rather than modifying the default configurations.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> is incompatible with some compiler options and creating separate configurations lets you build your project as native or managed.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> is selected in the property pages dialog box, project settings not compatible with <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept> are disabled (and disabled options are not automatically restored if <bpt id="p3">**</bpt>/clr<ept id="p3">**</ept> is subsequently unselected).</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Create New Project Configurations</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>You can use <bpt id="p1">**</bpt>Copy Settings From<ept id="p1">**</ept> option in the <bpt id="p2">[</bpt>New Project Configuration Dialog Box<ept id="p2">](http://msdn.microsoft.com/en-us/cca616dc-05a6-4fe3-bdc1-40c72a66f2be)</ept> to create a project configuration based on your existing project settings.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Do this once for the Debug configuration and once for Release configuration.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Subsequent changes can then be applied to the <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> -specific configurations only, leaving the original project configurations intact.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Projects that use custom build rules may require extra attention.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>This step has different implications for projects that use makefiles.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>In this case a separate build-target can be configured, or version specific to <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> compilation can be created from a copy of the original.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Change Project Settings</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> can be selected in the development environment by following the instructions in <bpt id="p2">[</bpt>/clr (Common Language Runtime Compilation)<ept id="p2">](../build/reference/clr-common-language-runtime-compilation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>As mentioned previously, this step will automatically disable conflicting project settings.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>When upgrading a managed library or web service project from Visual C++ 2003, the <bpt id="p1">**</bpt>/Zl<ept id="p1">**</ept> compiler option will added to the <bpt id="p2">**</bpt>Command Line<ept id="p2">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>This will cause LNK2001.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Remove <bpt id="p1">**</bpt>/Zl<ept id="p1">**</ept> from the <bpt id="p2">**</bpt>Command Line<ept id="p2">**</ept> property page to resolve.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>/Zl (Omit Default Library Name)<ept id="p1">](../build/reference/zl-omit-default-library-name.md)</ept> and <bpt id="p2">[</bpt>Working with Project Properties<ept id="p2">](../ide/working-with-project-properties.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Or, add msvcrt.lib and msvcmrt.lib to the linker's <bpt id="p1">**</bpt>Additional Dependencies<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>For projects built with makefiles, incompatible compiler options must be disabled manually once <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> is added.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>See /<bpt id="p1">[</bpt>/clr Restrictions<ept id="p1">](../build/reference/clr-restrictions.md)</ept> for information on compiler options that are not compatible with <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Precompiled Headers</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Precompiled headers are supported under <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>However, if you only compile some of your CPP files with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> (compiling the rest as native) some changes will be required because precompiled headers generated with <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept> are not compatible with those generated without <bpt id="p3">**</bpt>/clr<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>This incompatibility is due to the fact that <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> generates and requires metadata.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Modules compiled <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> can therefore not use precompiled headers that don't include metadata, and non <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept> modules can't use precompiled header files that do contain meta data.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The easiest way to compile a project where some modules are compiled <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> is to disable precompiled headers entirely.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>(In the project Property Pages dialog, open the C/C++ node, and select Precompiled Headers.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Then change the Create/Use Precompiled Headers property to "Not Using Precompiled Headers".)</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>However, particularly for large projects, precompiled headers provide much better compilation speed, so disabling this feature is not desirable.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>In this case it's best to configure the <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> and non <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept> files to use separate precompiled headers.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>This can be done in one step by multi-selecting the modules to be compiled <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> using the Solution Explorer, right-clicking on the group, and selecting Properties.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Then change both the Create/Use PCH Through File and Precompiled Header File properties to use a different header file name and PCH file respectively.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Fixing Errors</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Compiling with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> may result in compiler, linker or runtime errors.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>This section discusses the most common problems.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Metadata Merge</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Differing versions of data types can cause the linker to fail because the metadata generated for the two types doesn't match.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>(This is usually caused when members of a type are conditionally defined, but the conditions are not the same for all CPP files that use the type.) In this case the linker fails, reporting only the symbol name and the name of the second OBJ file where the type was defined.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>It is often useful to rotate the order that OBJ files are sent to the linker to discover the location of the other version of the data type.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Loader Lock Deadlock</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET and Visual C++ 2003, initialization under <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> was susceptible to non-deterministic deadlock.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>This issue is known as "loader lock deadlock".</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>In Visual Studio 2010, this deadlock is easier to avoid, it is detected and reported at runtime, and is no longer non-deterministic.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Encountering the loader lock problem is still possible, but now it's much easier to avoid and fix.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Initialization of Mixed Assemblies<ept id="p1">](../dotnet/initialization-of-mixed-assemblies.md)</ept> for detailed background, guidance, and solutions.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Data Exports</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Exporting DLL data is error-prone, and not recommended.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>This is because the data section of a DLL is not guaranteed to be initialized until some managed portion of the DLL has been executed.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Reference metadata with <bpt id="p1">[</bpt>#using Directive<ept id="p1">](../preprocessor/hash-using-directive-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Type Visibility</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Native types are now private by default.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET 2002 and Visual C++ 2003, native types were public by default.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>This can result in a native type not being visible outside the DLL.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Resolve this error by adding <ph id="ph1">`public`</ph> to these types.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Floating Point and Alignment Issues</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>is not supported on the common language runtime (see <bpt id="p1">[</bpt>_control87, _controlfp, <ph id="ph1">\_</ph>_control87_2<ept id="p1">](../c-runtime-library/reference/control87-controlfp-control87-2.md)</ept> for more information).</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The CLR will also not respect <bpt id="p1">[</bpt>align<ept id="p1">](../cpp/align-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>COM Initialization</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The Common Language Runtime initializes COM automatically when a module is initialized (when COM is initialized automatically it’s done so as MTA).</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>As a result, explicitly initializing COM yields return codes indicating that COM is already initialized.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Attempting to explicitly initialize COM with one threading model when the CLR has already initialized COM to another threading model can cause your application to fail.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The common language runtime starts COM as MTA by default; use <bpt id="p1">[</bpt>/CLRTHREADATTRIBUTE (Set CLR Thread Attribute)<ept id="p1">](../build/reference/clrthreadattribute-set-clr-thread-attribute.md)</ept> to modify this.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Performance Issues</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>You may see decreased performance when native C++ methods generated to MSIL are called indirectly (virtual function calls or using function pointers).</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>To learn more about this, see <bpt id="p1">[</bpt>Double Thunking<ept id="p1">](../dotnet/double-thunking-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>When moving from native to MSIL, you will notice an increase in the size of your working set.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>This is because the common language runtime provides many features to ensure that programs run correctly.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>If your <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> application is not running correctly, you may want to enable C4793 (off by default), see <bpt id="p2">[</bpt>Compiler Warning (level 1 and 3) C4793<ept id="p2">](../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Program Crashes on Shutdown</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>In some cases, the CLR can shutdown before your managed code is finished running.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Using <ph id="ph1">`std::set_terminate`</ph> and <ph id="ph2">`SIGTERM`</ph> can cause this.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>signal Constants<ept id="p1">](../c-runtime-library/signal-constants.md)</ept> and <bpt id="p2">[</bpt>set_terminate<ept id="p2">](../c-runtime-library/abnormal-termination.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Using New Visual C++ Features</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>After your application compiles, links, and runs, you can begin using .NET features in any module compiled with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Component Extensions for Runtime Platforms<ept id="p1">](../windows/component-extensions-for-runtime-platforms.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>If you used Managed Extensions for C++, you can convert your code to use the new syntax.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>For a summary of syntactical differences, see the <bpt id="p1">[</bpt>(NOTINBUILD)Managed Extensions for C++ Syntax Upgrade Checklist<ept id="p1">](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>For details on converting Managed Extensions for C++, see <bpt id="p1">[</bpt>C++/CLI Migration Primer<ept id="p1">](../dotnet/cpp-cli-migration-primer.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>For information on .NET programming in Visual C++ see:</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>.NET Programming with C++/CLI (Visual C++)</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Native and .NET Interoperability</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Component Extensions for Runtime Platforms</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Mixed (Native and Managed) Assemblies</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

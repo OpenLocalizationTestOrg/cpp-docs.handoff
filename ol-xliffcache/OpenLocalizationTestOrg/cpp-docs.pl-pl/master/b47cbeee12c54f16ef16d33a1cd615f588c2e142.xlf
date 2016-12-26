@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b47cbeee12c54f16ef16d33a1cd615f588c2e142</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\zc-strictstrings-disable-string-literal-type-conversion.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">122f72c65237a508fce73e11ee63e83c669c4814</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a58d5a7801504be0a076979b1a51d32092284761</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-Zc:strictStrings (Disable string literal type conversion) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/Zc:strictStrings (Disable string literal type conversion)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When specified, the compiler requires strict <ph id="ph1">`const`</ph>-qualification conformance for pointers initialized by using string literals.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>/Zc:strictStrings<ept id="p1">**</ept> is specified, the compiler enforces the standard C++ <ph id="ph1">`const`</ph> qualifications for string literals, as type 'array of <ph id="ph2">`const``char`</ph>' or 'array of <ph id="ph3">`const``wchar_t`</ph>', depending on the declaration.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>String literals are immutable, and an attempt to modify the contents of one results in an access violation error at run time.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You must declare a string pointer as <ph id="ph1">`const`</ph> to initialize it by using a string literal, or use an explicit <ph id="ph2">`const_cast`</ph> to initialize a non-<ph id="ph3">`const`</ph> pointer.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>By default, or if <bpt id="p1">**</bpt>/Zc:strictStrings-<ept id="p1">**</ept> is specified, the compiler does not enforce the standard C++ <ph id="ph1">`const`</ph> qualifications for string pointers initialized by using string literals.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>/Zc:strictStrings<ept id="p1">**</ept> option to prevent compilation of incorrect code.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This example shows how a simple declaration error leads to a crash at run time:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/Zc:strictStrings<ept id="p1">**</ept> is enabled, the same code reports an error in the declaration of <ph id="ph1">`str`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If you use <ph id="ph1">`auto`</ph> to declare a string pointer, the compiler creates the correct <ph id="ph2">`const`</ph> pointer type declaration for you.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>An attempt to modify the contents of a <ph id="ph1">`const`</ph> pointer is reported by the compiler as an error.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The Standard C++ Library in <ph id="ph1">[!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)]</ph> does not support the <bpt id="p1">**</bpt>/Zc:strictStrings<ept id="p1">**</ept> compiler option in debug builds.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you see several <bpt id="p1">[</bpt>C2665<ept id="p1">](../../error-messages/compiler-errors-2/compiler-error-c2665.md)</ept> errors in your build output, this may be the cause.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For more information about conformance issues in Visual C++, see <bpt id="p1">[</bpt>Nonstandard Behavior<ept id="p1">](../../cpp/nonstandard-behavior.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To set this compiler option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Working with Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>C/C++<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Command Line<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Modify the <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept> property to include <ph id="ph1">`/Zc:strictStrings`</ph> and then choose <bpt id="p2">**</bpt>OK<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>/Zc (Conformance)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

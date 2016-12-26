@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dea3ce578b1864d26c80e537b1228cc7d429a02e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\appdomain.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">21e419bd9679766bec290331cc6469f330c02a6f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2d5545cf9a8b3b3fd96f25296ea7115f993f3241</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>appdomain | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>appdomain</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Specifies that each application domain of your managed application should have its own copy of a particular global variable or static member variable.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Application Domains and Visual C++<ept id="p1">](../dotnet/application-domains-and-visual-cpp.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Every application domain has its own copy of a per-appdomain variable.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>A constructor of an appdomain variable is executed when an assembly is loaded into an application domain, and the destructor is executed when the application domain is unloaded.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If you want all application domains within a process in the common language runtime to share a global variable, use the <ph id="ph1">`__declspec(process)`</ph> modifier.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>is in effect by default under <bpt id="p1">[</bpt>/clr<ept id="p1">](../build/reference/clr-common-language-runtime-compilation.md)</ept> and <ph id="ph1">`__declspec(appdomain)`</ph> is in effect by default under <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>is enforced under <bpt id="p1">**</bpt>/clr:safe<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>is only valid when one of the <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> compiler options is used.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Only a global variable, static member variable, or a static local variable can be marked with <ph id="ph1">`__declspec(appdomain)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>It is an error to apply <ph id="ph1">`__declspec(appdomain)`</ph> to static members of managed types because they always have this behavior.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Using <ph id="ph1">`__declspec(appdomain)`</ph> is similar to using <bpt id="p1">[</bpt>Thread Local Storage (TLS)<ept id="p1">](../parallel/thread-local-storage-tls.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Threads have their own storage, as do application domains.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Using <ph id="ph1">`__declspec(appdomain)`</ph> ensures the global variable has its own storage in each application domain created for this application.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>There are limitations to mixing the use of per process and per appdomain variables; see <bpt id="p1">[</bpt>process<ept id="p1">](../cpp/process.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For example, at program start up, all per-process variables are initialized, then all per-appdomain variables are initialized.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Therefore when a per-process variable is being initialized, it cannot depend on the value of any per-application domain variable.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>It is bad practice to mix the use (assignment) of per appdomain and per process variables.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For information on how to call a function in a specific application domain, see <bpt id="p1">[</bpt>call_in_appdomain Function<ept id="p1">](../dotnet/call-in-appdomain-function.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>__declspec</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Keywords</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

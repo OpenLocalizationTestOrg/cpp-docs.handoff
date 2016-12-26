@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dd34872349782c2175a9cf5b43c532f67ffa4f09</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\importing-function-calls-using-declspec-dllimport.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8ac9a95cb9c67d6f97d25c217ec61601f7fecf29</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b6680d47e4c1359ae272fa438f6f778221188cc4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Importing Function Calls Using __declspec(dllimport) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Importing Function Calls Using __declspec(dllimport)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following code example shows how to use <bpt id="p1">**</bpt>_declspec(dllimport)<ept id="p1">**</ept> to import function calls from a DLL into an application.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Assume that <ph id="ph1">`func1`</ph> is a function that resides in a DLL separate from the .exe file that contains the <bpt id="p1">**</bpt>main<ept id="p1">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Without <bpt id="p1">**</bpt>__declspec(dllimport)<ept id="p1">**</ept>, given this code:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>the compiler generates code that looks like this:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>and the linker translates the call into something like this:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`func1`</ph> exists in another DLL, the linker cannot resolve this directly because it has no way of knowing what the address of <ph id="ph2">`func1`</ph> is.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In 16-bit environments, the linker adds this code address to a list in the .exe file that the loader would patch at run time with the correct address.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In 32-bit and 64-bit environments, the linker generates a thunk of which it does know the address.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In a 32-bit environment the thunk looks like:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Here <ph id="ph1">`imp_func1`</ph> is the address for the <ph id="ph2">`func1`</ph> slot in the import address table of the .exe file.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>All the addresses are thus known to the linker.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The loader only has to update the .exe file's import address table at load time for everything to work correctly.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Therefore, using <bpt id="p1">**</bpt>__declspec(dllimport)<ept id="p1">**</ept> is better because the linker does not generate a thunk if it is not required.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Thunks make the code larger (on RISC systems, it can be several instructions) and can degrade your cache performance.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If you tell the compiler the function is in a DLL, it can generate an indirect call for you.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>So now this code:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>generates this instruction:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>There is no thunk and no <ph id="ph1">`jmp`</ph> instruction, so the code is smaller and faster.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>On the other hand, for function calls inside a DLL, you do not want to have to use an indirect call.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>You already know a function's address.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Because time and space are required to load and store the address of the function before an indirect call, a direct call is always faster and smaller.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You only want to use <bpt id="p1">**</bpt>__declspec(dllimport)<ept id="p1">**</ept> when calling DLL functions from outside the DLL itself.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Do not use <bpt id="p1">**</bpt>__declspec(dllimport)<ept id="p1">**</ept> on functions inside a DLL when building that DLL.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Importing into an Application</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

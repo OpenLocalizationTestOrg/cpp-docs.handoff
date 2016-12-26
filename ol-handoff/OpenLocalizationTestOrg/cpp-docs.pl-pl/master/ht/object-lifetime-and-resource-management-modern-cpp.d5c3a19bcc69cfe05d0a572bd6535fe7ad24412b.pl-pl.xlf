@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d182dccc5e7dc542078ca73a57fc37af48712539</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\object-lifetime-and-resource-management-modern-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0b775798fb83746f457db766477598eb65144cc8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">49047ec48147b3ee6fd3497585d745450059f8fe</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Object Lifetime And Resource Management (Modern C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Object Lifetime And Resource Management (Modern C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Unlike managed languages, C++ doesn’t have garbage collection (GC), which automatically releases no-longer-used memory resources as a program runs.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In C++, resource management is directly related to object lifetime.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This document describes the factors that affect object lifetime in C++ and how to manage it.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>C++ doesn’t have GC primarily because it doesn't handle non-memory resources.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Only deterministic destructors like those in C++ can handle memory and non-memory resources equally.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>GC also has other problems, like higher overhead in memory and CPU consumption, and locality.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>But universality is a fundamental problem that can't be mitigated through clever optimizations.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Concepts</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>An important thing in object-lifetime management is the encapsulation—whoever's using an object doesn't have to know what resources that object owns, or how to get rid of them, or even whether it owns any resources at all.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>It just has to destroy the object.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The C++ core language is designed to ensure that objects are destroyed at the correct times, that is, as blocks are exited, in reverse order of construction.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When an object is destroyed, its bases and members are destroyed in a particular order.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The language automatically destroys objects, unless you do special things like heap allocation or placement new.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For example, <bpt id="p1">[</bpt>smart pointers<ept id="p1">](../cpp/smart-pointers-modern-cpp.md)</ept> like <ph id="ph1">`unique_ptr`</ph> and <ph id="ph2">`shared_ptr`</ph>, and Standard Template Library (STL) containers like <ph id="ph3">`vector`</ph>, encapsulate <ph id="ph4">`new`/`delete`</ph> and <ph id="ph5">`new[]`/`delete[]`</ph> in objects, which have destructors.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>That's why it's so important to use smart pointers and STL containers.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Another important concept in lifetime management: destructors.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Destructors encapsulate resource release.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>(The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Memory is the most common resource, but there are also files, sockets, textures, and other non-memory resources.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>"Owning" a resource means you can use it when you need it but you also have to release it when you're finished with it.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>When an object is destroyed, its destructor releases the resources that it owned.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The final concept is the DAG (Directed Acyclic Graph).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The structure of ownership in a program forms a DAG.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>No object can own itself—that's not only impossible but also inherently meaningless.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>But two objects can share ownership of a third object.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Several kinds of links are possible in a DAG like this: A is a member of B (B owns A), C stores a <ph id="ph1">`vector&lt;D&gt;`</ph> (C owns each D element), E stores a <ph id="ph2">`shared_ptr&lt;F&gt;`</ph> (E shares ownership of F, possibly with other objects), and so forth.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>As long as there are no cycles and every link in the DAG is represented by an object that has a destructor (instead of a raw pointer, handle, or other mechanism), then resource leaks are impossible because the language prevents them.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Resources are released immediately after they're no longer needed, without a garbage collector running.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The lifetime tracking is overhead-free for stack scope, bases, members, and related cases, and inexpensive for <ph id="ph1">`shared_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Heap-based lifetime</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For heap object lifetime, use <bpt id="p1">[</bpt>smart pointers<ept id="p1">](../cpp/smart-pointers-modern-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`shared_ptr`</ph> and <ph id="ph2">`make_shared`</ph> as the default pointer and allocator.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`weak_ptr`</ph> to break cycles, do caching, and observe objects without affecting or assuming anything about their lifetimes.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`unique_ptr`</ph> for unique ownership, for example, in the <bpt id="p1">*</bpt>pimpl<ept id="p1">*</ept> idiom.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>(See <bpt id="p1">[</bpt>Pimpl For Compile-Time Encapsulation<ept id="p1">](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)</ept>.) Make a <ph id="ph1">`unique_ptr`</ph> the primary target of all explicit <ph id="ph2">`new`</ph> expressions.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You can use raw pointers for non-ownership and observation.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>A non-owning pointer may dangle, but it can’t leak.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>When performance optimization is required, you might have to use <bpt id="p1">*</bpt>well-encapsulated<ept id="p1">*</ept> owning pointers and explicit calls to delete.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>An example is when you implement your own low-level data structure.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Stack-based lifetime</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>In modern C++, <bpt id="p1">*</bpt>stack-based scope<ept id="p1">*</ept> is a powerful way to write robust code because it combines automatic <bpt id="p2">*</bpt>stack lifetime<ept id="p2">*</ept> and <bpt id="p3">*</bpt>data member lifetime<ept id="p3">*</ept> with high efficiency—lifetime tracking is essentially free of overhead.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Heap object lifetime requires diligent manual management and can be the source of resource leaks and inefficiencies, especially when you are working with raw pointers.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Consider this code, which demonstrates stack-based scope:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Use static lifetime sparingly (global static, function local static) because problems can arise.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>What happens when the constructor of a global object throws an exception?</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Typically, the app faults in a way that can be difficult to debug.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Construction order is problematic for static lifetime objects, and is not concurrency-safe.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Not only is object construction a problem, destruction order can be complex, especially where polymorphism is involved.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Even if your object or variable isn’t polymorphic and doesn't have complex construction/destruction ordering, there’s still the issue of thread-safe concurrency.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>A multithreaded app can’t safely modify the data in static objects without having thread-local storage, resource locks, and other special precautions.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Welcome Back to C++</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>C++ Language Reference</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>C++ Standard Library</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

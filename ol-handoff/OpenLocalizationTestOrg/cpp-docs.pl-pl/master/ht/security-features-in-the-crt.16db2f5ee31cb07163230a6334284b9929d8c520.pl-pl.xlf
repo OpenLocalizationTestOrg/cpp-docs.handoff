@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3cf88c481c64d643ecc1adc9eb1a3d3d4d2ac103</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\security-features-in-the-crt.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">104a45b8b45b6ac98002c297cbc7ae42c46f03fe</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">80dfbb2539ec295a2ecb4e1a3dbb15763fde5ea4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Security Features in the CRT | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Security Features in the CRT</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Many old CRT functions have newer, more secure versions.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If a secure function exists, the older, less secure version is marked as deprecated and the new version has the <ph id="ph1">`_s`</ph> ("secure") suffix.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In this context, "deprecated" just means that a function's use is not recommended; it does not indicate that the function is scheduled to be removed from the CRT.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The secure functions do not prevent or correct security errors; rather, they catch errors when they occur.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>They perform additional checks for error conditions, and in the case of an error, they invoke an error handler (see <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../c-runtime-library/parameter-validation.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, the <ph id="ph1">`strcpy`</ph> function has no way of telling if the string that it is copying is too big for its destination buffer.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>However, its secure counterpart, <ph id="ph1">`strcpy_s`</ph>, takes the size of the buffer as a parameter, so it can determine if a buffer overrun will occur.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If you use <ph id="ph1">`strcpy_s`</ph> to copy eleven characters into a ten-character buffer, that is an error on your part; <ph id="ph2">`strcpy_s`</ph> cannot correct your mistake, but it can detect your error and inform you by invoking the invalid parameter handler.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Eliminating deprecation warnings</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>There are several ways to eliminate deprecation warnings for the older, less secure functions.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The simplest is simply to define <ph id="ph1">`_CRT_SECURE_NO_WARNINGS`</ph> or use the <bpt id="p1">[</bpt>warning<ept id="p1">](../preprocessor/warning.md)</ept> pragma.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Either will disable deprecation warnings, but of course the security issues that caused the warnings still exist.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It is far better to leave deprecation warnings enabled and take advantage of the new CRT security features.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In C++, the easiest way to do that is to use <bpt id="p1">[</bpt>Secure Template Overloads<ept id="p1">](../c-runtime-library/secure-template-overloads.md)</ept>, which in many cases will eliminate deprecation warnings by replacing calls to deprecated functions with calls to the new secure versions of those functions.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For example, consider this deprecated call to <ph id="ph1">`strcpy`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Defining <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`</ph> as 1 eliminates the warning by changing the <ph id="ph2">`strcpy`</ph> call to <ph id="ph3">`strcpy_s`</ph>, which prevents buffer overruns.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Secure Template Overloads<ept id="p1">](../c-runtime-library/secure-template-overloads.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For those deprecated functions without secure template overloads, you should definitely consider manually updating your code to use the secure versions.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Another source of deprecation warnings, unrelated to security, is the POSIX functions.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Replace POSIX function names with their standard equivalents (for example, change <bpt id="p1">[</bpt>access<ept id="p1">](../c-runtime-library/reference/access-crt.md)</ept> to <bpt id="p2">[</bpt>_access<ept id="p2">](../c-runtime-library/reference/access-waccess.md)</ept>), or disable POSIX-related deprecation warnings by defining <ph id="ph1">`_CRT_NONSTDC_NO_WARNINGS`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Deprecated CRT Functions<ept id="p1">](http://msdn.microsoft.com/en-us/7e259932-c6c8-4c1a-9637-639e591681a5)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Additional Security Features</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Some of the security features include the following:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Parameters passed to CRT functions are validated, in both secure functions and in many preexisting versions of functions.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>These validations include:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Checking for <ph id="ph1">`NULL`</ph> values passed to the functions.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Checking enumerated values for validity.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Checking that integral values are in valid ranges.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A handler for invalid parameters is also accessible to the developer.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>When an encountering an invalid parameter, instead of asserting and exiting the application, the CRT provides a way to check these problems with the <bpt id="p1">[</bpt>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler<ept id="p1">](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The secure functions require that the buffer size be passed to any function that writes to a buffer.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The secure versions validate that the buffer is large enough before writing to it, helping to avoid dangerous buffer overrun errors that could allow malicious code to execute.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>These functions usually return an <ph id="ph1">`errno`</ph> type of error code and invoke the invalid parameter handler if the size of the buffer is too small.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Functions that read from input buffers, such as <ph id="ph1">`gets`</ph>, have secure versions that require you to specify a maximum size.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Some functions that left potentially non-terminated strings have secure versions which ensure that strings are properly null terminated.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The secure functions return error codes with more error information than was available with the preexisting functions.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The secure functions and many of the preexisting functions now set <ph id="ph1">`errno`</ph> and often return an <ph id="ph2">`errno`</ph> code type as well, to provide better error reporting.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Secure file I/O APIs support secure file access in the default case.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Secure process APIs enforce security policies and allow ACLs to be specified.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Invalid strings are detected, for example, using incorrect type field characters in <ph id="ph1">`printf`</ph> format strings.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Parameter Validation</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Secure Template Overloads</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>CRT Library Features</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

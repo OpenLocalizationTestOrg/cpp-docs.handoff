@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f805acbbd2a4752d9585db2ad0d0be7f0840f03e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\error-messages\compiler-errors-2\compiler-error-c2712.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0f8f162ab81f26f659cc9d9d9bacc4a798d8c260</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3953579ff5b212ad963cecc7a6d60875aa0c76e9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Compiler Error C2712 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Compiler Error C2712</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>cannot use __try in functions that require object unwinding</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Error C2712 can occur if you use <bpt id="p1">[</bpt>/EHsc<ept id="p1">](../../build/reference/eh-exception-handling-model.md)</ept>, and a function with structured exception handling also has objects that require unwinding (destruction).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Possible solutions:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Move code that requires SEH to another function</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Rewrite functions that use SEH to avoid the use of local variables and parameters that have destructors.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Do not use SEH in constructors or destructors</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Compile without /EHsc</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Error C2712 can also occur if you call a method declared by using the <bpt id="p1">[</bpt>__event<ept id="p1">](../../cpp/event.md)</ept> keyword.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Because the event might be used in a multithreaded environment, the compiler generates code that prevents manipulation of the underlying event object, and then encloses the generated code in an SEH <bpt id="p1">[</bpt>try-finally statement<ept id="p1">](../../cpp/try-finally-statement.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Consequently, error C2712 will occur if you call the event method and pass by value an argument whose type has a destructor.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>One solution in this case is to pass the argument as a constant reference.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>C2712 can also occur if you compile with <bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept> and declare a static array of pointers-to-functions in a <ph id="ph1">`__try`</ph> block.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A static member requires the compiler to use dynamic initialization under <bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept>, which implies C++ exception handling.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>However, C++ exception handling is not allowed in a <ph id="ph1">`__try`</ph> block.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following sample generates C2712 and shows how to fix it.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

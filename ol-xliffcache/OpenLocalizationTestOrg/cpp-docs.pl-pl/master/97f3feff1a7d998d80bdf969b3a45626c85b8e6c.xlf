@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">97f3feff1a7d998d80bdf969b3a45626c85b8e6c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\creating-a-ctoolbarctrl-object.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4007a1b4f2bcd2a2403188686085ddbe738c8ab9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">00b91743ac32df678b9a69b941b8c5bf7641b98a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Creating a CToolBarCtrl Object | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Creating a CToolBarCtrl Object</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CToolBarCtrl<ept id="p1">](../mfc/reference/ctoolbarctrl-class.md)</ept> objects contain several internal data structures — a list of button image bitmaps, a list of button label strings, and a list of <ph id="ph1">`TBBUTTON`</ph> structures — that associate an image and/or string with the position, style, state, and command ID of the button.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Each of the elements of these data structures is referred to by a zero-based index.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Before you can use a <ph id="ph1">`CToolBarCtrl`</ph> object, you must set up these data structures.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For a list of the data structures, see <bpt id="p1">[</bpt>Toolbar Controls<ept id="p1">](https://msdn.microsoft.com/library/47xcww9x.aspx)</ept> in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The list of strings can only be used for button labels; you cannot retrieve strings from the toolbar.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>To use a <ph id="ph1">`CToolBarCtrl`</ph> object, you will typically follow these steps:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To use a CToolBarCtrl object</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Construct the <bpt id="p1">[</bpt>CToolBarCtrl<ept id="p1">](../mfc/reference/ctoolbarctrl-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">[</bpt>Create<ept id="p1">](../mfc/reference/ctoolbarctrl-class.md#ctoolbarctrl__create)</ept> to create the Windows toolbar common control and attach it to the <ph id="ph1">`CToolBarCtrl`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If you want bitmap images for buttons, add the button bitmaps to the toolbar by calling <bpt id="p1">[</bpt>AddBitmap<ept id="p1">](../mfc/reference/ctoolbarctrl-class.md#ctoolbarctrl__addbitmap)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If you want string labels for buttons, add the strings to the toolbar by calling <bpt id="p1">[</bpt>AddString<ept id="p1">](../mfc/reference/ctoolbarctrl-class.md#ctoolbarctrl__addstring)</ept> and/or <bpt id="p2">[</bpt>AddStrings<ept id="p2">](../mfc/reference/ctoolbarctrl-class.md#ctoolbarctrl__addstrings)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>After calling <ph id="ph1">`AddString`</ph> and/or <ph id="ph2">`AddStrings`</ph>, you should call <bpt id="p1">[</bpt>AutoSize<ept id="p1">](../mfc/reference/ctoolbarctrl-class.md#ctoolbarctrl__autosize)</ept> in order to get the string or strings to appear.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Add button structures to the toolbar by calling <bpt id="p1">[</bpt>AddButtons<ept id="p1">](../mfc/reference/ctoolbarctrl-class.md#ctoolbarctrl__addbuttons)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you want tool tips, handle <bpt id="p1">**</bpt>TTN_NEEDTEXT<ept id="p1">**</ept> messages in the toolbar's owner window as described in <bpt id="p2">[</bpt>Handling Tool Tip Notifications<ept id="p2">](../mfc/handling-tool-tip-notifications.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If you want your user to be able to customize the toolbar, handle customization notification messages in the owner window as described in <bpt id="p1">[</bpt>Handling Customization Notifications<ept id="p1">](../mfc/handling-customization-notifications.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Using CToolBarCtrl</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

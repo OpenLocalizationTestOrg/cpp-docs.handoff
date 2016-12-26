@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">435f4eb345de3cd918db7e7448fb09aa76bc1719</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\using-common-controls-in-a-dialog-box.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">678099a4b565db7e51f2bb0e79888bf882539b1a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b9d6b2605421839f734997bab2463cf7d4e3f272</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using Common Controls in a Dialog Box | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using Common Controls in a Dialog Box</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The Windows common controls can be used in <bpt id="p1">[</bpt>dialog boxes<ept id="p1">](../mfc/dialog-boxes.md)</ept>, form views, record views, and any other window based on a dialog template.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The following procedure, with minor changes, will work for forms as well.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Procedures</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To use a common control in a dialog box</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Place the control on the dialog template <bpt id="p1">[</bpt>using the dialog editor<ept id="p1">](../mfc/using-the-dialog-editor-to-add-controls.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Add to the dialog class a member variable that represents the control.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Add Member Variable<ept id="p1">**</ept> dialog box, check <bpt id="p2">**</bpt>Control variable<ept id="p2">**</ept> and ensure that <bpt id="p3">**</bpt>Control<ept id="p3">**</ept> is selected for the <bpt id="p4">**</bpt>Category<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If this common control is providing input to the program, declare additional member variable(s) in the dialog class to handle those input values.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You can add these member variables using the context menu in Class View (see <bpt id="p1">[</bpt>Adding a Member Variable<ept id="p1">](../ide/adding-a-member-variable-visual-cpp.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">[</bpt>OnInitDialog<ept id="p1">](../mfc/reference/cdialog-class.md#cdialog__oninitdialog)</ept> for your dialog class, set the initial conditions for the common control.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Using the member variable created in the previous step, use the member functions to set initial value and other settings.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>See the following descriptions of the controls for details on settings.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You can also use <bpt id="p1">[</bpt>dialog data exchange<ept id="p1">](../mfc/dialog-data-exchange-and-validation.md)</ept> (DDX) to initialize controls in a dialog box.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In handlers for controls on the dialog box, use the member variable to manipulate the control.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>See the following descriptions of the controls for details on methods.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The member variable will exist only as long as the dialog box itself exists.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You will not be able to query the control for input values after the dialog box has been closed.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To work with input values from a common control, override <ph id="ph1">`OnOK`</ph> in your dialog class.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>In your override, query the control for input values and store those values in member variables of the dialog class.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>You can also use dialog data exchange to set or retrieve values from the controls in a dialog box.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The addition of some common controls to a dialog box will cause the dialog box to no longer function.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Refer to <bpt id="p1">[</bpt>Adding Controls to a Dialog Causes the Dialog to No Longer Function<ept id="p1">](../mfc/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)</ept> for more information on handling this situation.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>What do you want to do</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Add controls to a dialog box by hand instead of with the dialog editor</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Derive my control from one of the standard Windows common controls</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Use a common control as a child window</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Receive notification messages from a control</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Use dialog data exchange (DDX)</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Making and Using Controls</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">25b0f9c8a21e743091a924094c696a40dbae919f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\using-replaceable-parameters-the-registrar-s-preprocessor.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f34d78741d14e8f93bfc6a4e53194f02f29c8092</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8f656d7227f401528efbb57dc4576de773b728e3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using Replaceable Parameters (The Registrar&amp;#39;s Preprocessor) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using Replaceable Parameters (The Registrar&amp;#39;s Preprocessor)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Replaceable parameters allow a Registrar's client to specify run-time data.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To do this, the Registrar maintains a replacement map into which it enters the values associated with the replaceable parameters in your script.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The Registrar makes these entries at run time.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Using %MODULE%</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>ATL Control Wizard<ept id="p1">](../atl/reference/atl-control-wizard.md)</ept> automatically generates a script that uses <ph id="ph1">`%MODULE%`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>ATL uses this replaceable parameter for the actual location of your server's DLL or EXE.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Concatenating Run-Time Data with Script Data</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Another use of the preprocessor is to concatenate run-time data with script data.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For example, suppose an entry is needed that contains a full path to a module with the string "<ph id="ph1">`, 1`</ph>" appended at the end.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>First, define the following expansion:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Then, before calling one of the script processing methods listed in <bpt id="p1">[</bpt>Invoking Scripts<ept id="p1">](../atl/invoking-scripts.md)</ept>, add a replacement to the map:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Utilities#113</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>During the parsing of the script, the Registrar expands <ph id="ph1">`'%MODULE%, 1'`</ph> to <ph id="ph2">`c:\mycode\mydll.dll, 1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In a Registrar script, 4K is the maximum token size.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>(A token is any recognizable element in the syntax.) This includes tokens that were created or expanded by the preprocessor.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To substitute replacement values at run time, remove the call in the script to the <bpt id="p1">[</bpt>DECLARE_REGISTRY_RESOURCE<ept id="p1">](../atl/reference/registry-macros.md#declare_registry_resource)</ept> or <bpt id="p2">[</bpt>DECLARE_REGISTRY_RESOURCEID<ept id="p2">](../atl/reference/registry-macros.md#declare_registry_resourceid)</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Instead, replace it with your own <ph id="ph1">`UpdateRegistry`</ph> method that calls <bpt id="p1">[</bpt>CAtlModule::UpdateRegistryFromResourceD<ept id="p1">](../atl/reference/catlmodule-class.md#catlmodule__updateregistryfromresourced)</ept> or <bpt id="p2">[</bpt>CAtlModule::UpdateRegistryFromResourceS<ept id="p2">](../atl/reference/catlmodule-class.md#catlmodule__updateregistryfromresources)</ept>, and pass your array of <bpt id="p3">**</bpt>_ATL_REGMAP_ENTRY<ept id="p3">**</ept> structures.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Your array of <bpt id="p1">**</bpt>_ATL_REGMAP_ENTRY<ept id="p1">**</ept> must have at least one entry that is set to {<bpt id="p2">**</bpt>NULL<ept id="p2">**</ept>,<bpt id="p3">**</bpt>NULL<ept id="p3">**</ept>}, and this entry should always be the last entry.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Otherwise, an access violation error will be generated when <bpt id="p1">**</bpt>UpdateRegistryFromResource<ept id="p1">**</ept> is called.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>When building a project that outputs an executable, ATL automatically adds quotation marks around the path name created at run time with the <bpt id="p1">**</bpt>%MODULE%<ept id="p1">**</ept> registrar script parameter.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If you do not want the path name to include the quotation marks, use the new <bpt id="p1">**</bpt>%MODULE_RAW%<ept id="p1">**</ept> parameter instead.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When building a project that outputs a DLL, ATL will not add quotation marks to the path name if <bpt id="p1">**</bpt>%MODULE%<ept id="p1">**</ept> or <bpt id="p2">**</bpt>%MODULE_RAW%<ept id="p2">**</ept> is used.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Creating Registrar Scripts</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

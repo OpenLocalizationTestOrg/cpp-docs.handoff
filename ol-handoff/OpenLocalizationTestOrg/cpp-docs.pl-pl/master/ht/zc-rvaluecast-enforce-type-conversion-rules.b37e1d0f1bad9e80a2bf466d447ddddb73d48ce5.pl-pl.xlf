@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b45b80ec28a9430077ffc96206aefce52d9286c0</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\zc-rvaluecast-enforce-type-conversion-rules.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">762033749f7a4ea22f84ff8dadc7bc217da7c4d0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ce96e17c67fb9f0913882cc8117716aae1ce82ac</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-Zc:rvalueCast (Enforce type conversion rules) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/Zc:rvalueCast (Enforce type conversion rules)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When the <bpt id="p1">**</bpt>/Zc:rvalueCast<ept id="p1">**</ept> option is specified, the compiler correctly identifies an rvalue reference type as the result of a cast operation in accordance with the C++11 standard.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When the option is not specified, the compiler behavior is the same as in Visual Studio 2012.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>By default, <bpt id="p1">**</bpt>/Zc:rvalueCast<ept id="p1">**</ept> is off.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For conformance and to eliminate errors in the use of casts, we recommend that you use <bpt id="p1">**</bpt>/Zc:rvalueCast<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>/Zc:rvalueCast<ept id="p1">**</ept> is specified, the compiler follows section 5.4 of the C++11 standard and treats only cast expressions that result in non-reference types and cast expressions that result in rvalue references to non-function types as rvalue types.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>By default, or if <bpt id="p1">**</bpt>/Zc:rvalueCast-<ept id="p1">**</ept> is specified, the compiler is non-conformant and treats all cast expressions that result in rvalue references as rvalues.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">**</bpt>/Zc:rvalueCast<ept id="p1">**</ept> if you pass a cast expression as an argument to a function that takes an rvalue reference type.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The default behavior causes compiler error <bpt id="p1">[</bpt>C2664<ept id="p1">](../../error-messages/compiler-errors-2/compiler-error-c2664.md)</ept> when the compiler incorrectly determines the type of the cast expression.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This example shows a compiler error in correct code when /Zc:rvalueCast is not specified:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The default compiler behavior may not report error C2102 when appropriate.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>In this example, the compiler does not report an error if the address of an rvalue created by an identity cast is taken when <bpt id="p1">**</bpt>/Zc:rvalueCast<ept id="p1">**</ept> is not specified:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information about conformance issues in Visual C++, see <bpt id="p1">[</bpt>Nonstandard Behavior<ept id="p1">](../../cpp/nonstandard-behavior.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To set this compiler option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Working with Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>C/C++<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Command Line<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Modify the <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept> property to include <bpt id="p2">**</bpt>/Zc:rvalueCast<ept id="p2">**</ept> and then choose <bpt id="p3">**</bpt>OK<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>/Zc (Conformance)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

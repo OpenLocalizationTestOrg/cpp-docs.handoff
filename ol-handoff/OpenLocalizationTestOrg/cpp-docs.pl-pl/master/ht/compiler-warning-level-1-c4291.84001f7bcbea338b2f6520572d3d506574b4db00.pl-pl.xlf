@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1409cbe955719322af4c93dd8d49850cc9cf3b98</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\error-messages\compiler-warnings\compiler-warning-level-1-c4291.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">aaaddee3b177eb6b3d769a361a792b99d5e25d04</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">003bebd337bff7e8c0cef6f98a0fa08df083d1c0</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Compiler Warning (level 1) C4291 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Compiler Warning (level 1) C4291</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>'declaration' : no matching operator delete found; memory will not be freed if initialization throws an exception</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A placement <bpt id="p1">[</bpt>new<ept id="p1">](../../cpp/new-operator-cpp.md)</ept> is used for which there is no placement <bpt id="p2">[</bpt>delete<ept id="p2">](../../cpp/delete-operator-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>When memory is allocated for an object with operator <bpt id="p1">**</bpt>new<ept id="p1">**</ept>, the object's constructor is called.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If the constructor throws an exception, any memory that was allocated for the object should be deallocated.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This cannot take place unless an operator <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> function exists that matches the operator <bpt id="p2">**</bpt>new<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If you use the operator <bpt id="p1">**</bpt>new<ept id="p1">**</ept> without any extra arguments and compile with <bpt id="p2">[</bpt>/GX<ept id="p2">](../../build/reference/gx-enable-exception-handling.md)</ept>, <bpt id="p3">[</bpt>/EHs<ept id="p3">](../../build/reference/eh-exception-handling-model.md)</ept>, or /EHa options to enable exception handling, the compiler will generate code to call operator <bpt id="p4">**</bpt>delete<ept id="p4">**</ept> if the constructor throws an exception.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you use the placement form of the <bpt id="p1">**</bpt>new<ept id="p1">**</ept> operator (the form with arguments in addition to the size of the allocation) and the object's constructor throws an exception, the compiler will still generate code to call operator <bpt id="p2">**</bpt>delete<ept id="p2">**</ept>; but it will only do so if a placement form of operator <bpt id="p3">**</bpt>delete<ept id="p3">**</ept> exists matching the placement form of the operator <bpt id="p4">**</bpt>new<ept id="p4">**</ept> that allocated the memory.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The above example generates warning C4291 because no placement form of operator <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> has been defined that matches the placement form of operator <bpt id="p2">**</bpt>new<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To solve the problem, insert the following code above <bpt id="p1">**</bpt>main<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Notice that all of the overloaded operator <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> function parameters match those of the overloaded operator <bpt id="p2">**</bpt>new<ept id="p2">**</ept>, except for the first parameter.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
