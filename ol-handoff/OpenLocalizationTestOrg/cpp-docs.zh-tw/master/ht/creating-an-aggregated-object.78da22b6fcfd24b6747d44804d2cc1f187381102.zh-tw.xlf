@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5c1396a8ec9c42d2f6feefd31ec316c1bda994e7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\creating-an-aggregated-object.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">560065b8e99a58da5c533230914b28f5ae4239cf</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d6e5e97f99029b66b4fcf0082c9ada1155390778</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Creating an Aggregated Object | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Creating an Aggregated Object</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Aggregation delegates <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> calls, providing a pointer to the outer object's <bpt id="p2">**</bpt>IUnknown<ept id="p2">**</ept> to the inner object.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To create an aggregated object</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Add an <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer to your class object and initialize it to <bpt id="p2">**</bpt>NULL<ept id="p2">**</ept> in the constructor.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Override <bpt id="p1">[</bpt>FinalConstruct<ept id="p1">](../atl/reference/ccomobjectrootex-class.md#ccomobjectrootex__finalconstruct)</ept> to create the aggregate.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> pointer, defined in Step 1, as the second parameter for the <bpt id="p2">[</bpt>COM_INTERFACE_ENTRY_AGGREGATE<ept id="p2">](http://msdn.microsoft.com/library/c671fa40-a57b-4797-ae88-c9762dabd4dc)</ept> macros.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Override <bpt id="p1">[</bpt>FinalRelease<ept id="p1">](../atl/reference/ccomobjectrootex-class.md#ccomobjectrootex__finalrelease)</ept> to release the <bpt id="p2">**</bpt>IUnknown<ept id="p2">**</ept> pointer.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you use and release an interface from the aggregated object during <ph id="ph1">`FinalConstruct`</ph>, you should add the <bpt id="p1">[</bpt>DECLARE_PROTECT_FINAL_CONSTRUCT<ept id="p1">](http://msdn.microsoft.com/library/2d2e5ddc-057a-43ca-87c8-d3477a8193a0)</ept> macro to the definition of your class object.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Fundamentals of ATL COM Objects</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

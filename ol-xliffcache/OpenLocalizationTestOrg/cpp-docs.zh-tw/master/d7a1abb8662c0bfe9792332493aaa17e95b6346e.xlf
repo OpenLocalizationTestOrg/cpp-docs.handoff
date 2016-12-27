@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d7a1abb8662c0bfe9792332493aaa17e95b6346e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\walkthrough-implementing-futures.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0c62eaa422e73adf858472bd1489239bb66777ec</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9745407cdd56ce7ca1d3403d1297690aa491cfec</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Implementing Futures | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Implementing Futures</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic shows how to implement futures in your application.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The topic demonstrates how to combine existing functionality in the Concurrency Runtime into something that does more.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This topic illustrates the concept of futures for demonstration purposes.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>We recommend that you use <bpt id="p1">[</bpt>std::future<ept id="p1">](../../standard-library/future-class.md)</ept> or <bpt id="p2">[</bpt>concurrency::task<ept id="p2">](../../parallel/concrt/reference/task-class.md)</ept> when you require an asynchronous task that computes a value for later use.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>task<ept id="p1">*</ept> is a computation that can be decomposed into additional, more fine-grained, computations.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>future<ept id="p1">*</ept> is an asynchronous task that computes a value for later use.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To implement futures, this topic defines the <ph id="ph1">`async_future`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`async_future`</ph> class uses these components of the Concurrency Runtime: the <bpt id="p1">[</bpt>concurrency::task_group<ept id="p1">](reference/task-group-class.md)</ept> class and the <bpt id="p2">[</bpt>concurrency::single_assignment<ept id="p2">](../../parallel/concrt/reference/single-assignment-class.md)</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`async_future`</ph> class uses the <ph id="ph2">`task_group`</ph> class to compute a value asynchronously and the <ph id="ph3">`single_assignment`</ph> class to store the result of the computation.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The constructor of the <ph id="ph1">`async_future`</ph> class takes a work function that computes the result, and the <ph id="ph2">`get`</ph> method retrieves the result.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To implement the async_future class</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Declare a template class named <ph id="ph1">`async_future`</ph> that is parameterized on the type of the resulting computation.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Add <ph id="ph1">`public`</ph> and <ph id="ph2">`private`</ph> sections to this class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>concrt-futures#2</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`private`</ph> section of the <ph id="ph2">`async_future`</ph> class, declare a <ph id="ph3">`task_group`</ph> and a <ph id="ph4">`single_assignment`</ph> data member.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>concrt-futures#3</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`public`</ph> section of the <ph id="ph2">`async_future`</ph> class, implement the constructor.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The constructor is a template that is parameterized on the work function that computes the result.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The constructor asynchronously executes the work function in the <ph id="ph1">`task_group`</ph> data member and uses the <bpt id="p1">[</bpt>concurrency::send<ept id="p1">](reference/concurrency-namespace-functions.md#send)</ept> function to write the result to the <ph id="ph2">`single_assignment`</ph> data member.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>concrt-futures#4</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`public`</ph> section of the <ph id="ph2">`async_future`</ph> class, implement the destructor.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The destructor waits for the task to finish.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>concrt-futures#5</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`public`</ph> section of the <ph id="ph2">`async_future`</ph> class, implement the <ph id="ph3">`get`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This method uses the <bpt id="p1">[</bpt>concurrency::receive<ept id="p1">](reference/concurrency-namespace-functions.md#receive)</ept> function to retrieve the result of the work function.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>concrt-futures#6</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The following example shows the complete <ph id="ph1">`async_future`</ph> class and an example of its usage.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`wmain`</ph> function creates a std::<bpt id="p1">[</bpt>vector<ept id="p1">](../../standard-library/vector-class.md)</ept> object that contains 10,000 random integer values.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>It then uses <ph id="ph1">`async_future`</ph> objects to find the smallest and largest values that are contained in the <ph id="ph2">`vector`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Code</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>concrt-futures#1</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This example produces the following output:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The example uses the <ph id="ph1">`async_future::get`</ph> method to retrieve the results of the computation.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`async_future::get`</ph> method waits for the computation to finish if the computation is still active.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Robust Programming</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>To extend the <ph id="ph1">`async_future`</ph> class to handle exceptions that are thrown by the work function, modify the <ph id="ph2">`async_future::get`</ph> method to call the <bpt id="p1">[</bpt>concurrency::task_group::wait<ept id="p1">](reference/task-group-class.md#wait)</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`task_group::wait`</ph> method throws any exceptions that were generated by the work function.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The following example shows the modified version of the <ph id="ph1">`async_future`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`wmain`</ph> function uses a <ph id="ph2">`try`-`catch`</ph> block to print the result of the <ph id="ph3">`async_future`</ph> object or to print the value of the exception that is generated by the work function.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>concrt-futures-with-eh#1</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>This example produces the following output:</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>For more information about the exception handling model in the Concurrency Runtime, see <bpt id="p1">[</bpt>Exception Handling<ept id="p1">](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`futures.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc futures.cpp</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime Walkthroughs</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>task_group Class</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>single_assignment Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

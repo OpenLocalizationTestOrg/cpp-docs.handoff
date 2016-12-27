@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ca39e84a43e0bffcd39598e76903a6ca4b2edc41</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\partial-ordering-of-function-templates-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">26556a68aa703f243770251eb202f01bbe295bc7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">348e517fb343fd7a22e0d59a658109e36569e20d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Partial Ordering of Function Templates (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Partial Ordering of Function Templates (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Multiple function templates that match the argument list of a function call can be available.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>C++ defines a partial ordering of function templates to specify which function should be called.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The ordering is partial because there can be some templates that are considered equally specialized.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The compiler chooses the most specialized template function available from the possible matches.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For example, if a function template takes a type <bpt id="p1">**</bpt>T<ept id="p1">**</ept>, and another function template taking <bpt id="p2">**</bpt>T<ph id="ph1">\*</ph><ept id="p2">**</ept> is available, the <bpt id="p3">**</bpt>T<ph id="ph2">\*</ph><ept id="p3">**</ept> version is said to be more specialized and is preferred over the generic <bpt id="p4">**</bpt>T<ept id="p4">**</ept> version whenever the argument is a pointer type, even though both would be allowable matches.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Use the following process to determine if one function template candidate is more specialized:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Consider two function templates, T1 and T2.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Replace the parameters in T1 with a hypothetical unique type X.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>With the parameter list in T1, see if T2 is a valid template for that parameter list.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Ignore any implicit conversions.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Repeat the same process with T1 and T2 reversed.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If one template is a valid template argument list for the other template, but the converse is not true, then that template is considered to be less specialized than the other template.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If both templates using the previous step form valid arguments for each other, then they are considered to be equally specialized, and an ambiguous call will result when attempting to use them.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Using these rules:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A template specialization for a specific type is more specialized than one taking a generic type argument.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>A template taking only <bpt id="p1">**</bpt>T<ph id="ph1">\*</ph><ept id="p1">**</ept> is more specialized than one taking only <bpt id="p2">**</bpt>T<ept id="p2">**</ept>, because a hypothetical type <bpt id="p3">**</bpt>X<ph id="ph2">\*</ph><ept id="p3">**</ept> is a valid argument for a <bpt id="p4">**</bpt>T<ept id="p4">**</ept> template argument, but <bpt id="p5">**</bpt>X<ept id="p5">**</ept> is not a valid argument for a <bpt id="p6">**</bpt>T<ph id="ph3">\*</ph><ept id="p6">**</ept> template argument.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>const T<ept id="p1">**</ept> is more specialized than <bpt id="p2">**</bpt>T<ept id="p2">**</ept>, because <bpt id="p3">**</bpt>const X<ept id="p3">**</ept> is a valid argument for a <bpt id="p4">**</bpt>T<ept id="p4">**</ept> template argument, but <bpt id="p5">**</bpt>X<ept id="p5">**</ept> is not a valid argument for a <bpt id="p6">**</bpt>const T<ept id="p6">**</ept> template argument.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>const T<ph id="ph1">\*</ph><ept id="p1">**</ept> is more specialized than <bpt id="p2">**</bpt>T<ph id="ph2">\*</ph><ept id="p2">**</ept>, because <bpt id="p3">**</bpt>const X<ph id="ph3">\*</ph><ept id="p3">**</ept> is a valid argument for a <bpt id="p4">**</bpt>T<ph id="ph4">\*</ph><ept id="p4">**</ept> template argument, but <bpt id="p5">**</bpt>X<ph id="ph5">\*</ph><ept id="p5">**</ept> is not a valid argument for a <bpt id="p6">**</bpt>const T<ph id="ph6">\*</ph><ept id="p6">**</ept> template argument.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The following sample works in Visual C++ .NET 2003 as specified in the standard:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Output</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Function Templates</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

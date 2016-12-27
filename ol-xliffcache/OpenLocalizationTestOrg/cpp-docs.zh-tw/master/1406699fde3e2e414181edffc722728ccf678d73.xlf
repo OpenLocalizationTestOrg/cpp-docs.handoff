@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1406699fde3e2e414181edffc722728ccf678d73</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\multiple-base-classes.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b4d95708a25616d59dee379e755973071dbac890</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7c43894a1a77deb6c69ffc70a12f6397d2ff57e6</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Multiple Base Classes | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Multiple Base Classes</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>As described in <bpt id="p1">[</bpt>Multiple Inheritance<ept id="p1">](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)</ept>, a class can be derived from more than one base class.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In a multiple-inheritance model (where classes are derived from more than one base class), the base classes are specified using the <bpt id="p1">*</bpt>base-list<ept id="p1">*</ept> grammar element.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, the class declaration for <ph id="ph1">`CollectionOfBook`</ph>, derived from <ph id="ph2">`Collection`</ph> and <ph id="ph3">`Book`</ph>, can be specified:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The order in which base classes are specified is not significant except in certain cases where constructors and destructors are invoked.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In these cases, the order in which base classes are specified affects the following:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The order in which initialization by constructor takes place.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If your code relies on the <ph id="ph1">`Book`</ph> portion of <ph id="ph2">`CollectionOfBook`</ph> to be initialized before the <ph id="ph3">`Collection`</ph> part, the order of specification is significant.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Initialization takes place in the order the classes are specified in the <bpt id="p1">*</bpt>base-list<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The order in which destructors are invoked to clean up.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Again, if a particular "part" of the class must be present when the other part is being destroyed, the order is significant.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Destructors are called in the reverse order of the classes specified in the <bpt id="p1">*</bpt>base-list<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The order of specification of base classes can affect the memory layout of the class.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Do not make any programming decisions based on the order of base members in memory.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When specifying the <bpt id="p1">*</bpt>base-list<ept id="p1">*</ept>, you cannot specify the same class name more than once.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>However, it is possible for a class to be an indirect base to a derived class more than once.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Virtual base classes</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Because a class can be an indirect base class to a derived class more than once, C++ provides a way to optimize the way such base classes work.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Virtual base classes offer a way to save space and avoid ambiguities in class hierarchies that use multiple inheritance.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Each nonvirtual object contains a copy of the data members defined in the base class.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This duplication wastes space and requires you to specify which copy of the base class members you want whenever you access them.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>When a base class is specified as a virtual base, it can act as an indirect base more than once without duplication of its data members.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>A single copy of its data members is shared by all the base classes that use it as a virtual base.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>When declaring a virtual base class, the <bpt id="p1">**</bpt>virtual<ept id="p1">**</ept> keyword appears in the base lists of the derived classes.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Consider the class hierarchy in the following figure, which illustrates a simulated lunch line.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Graph of simulated lunch line</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Simulated Lunch-Line Graph</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In the figure, <ph id="ph1">`Queue`</ph> is the base class for both <ph id="ph2">`CashierQueue`</ph> and <ph id="ph3">`LunchQueue`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>However, when both classes are combined to form <ph id="ph1">`LunchCashierQueue`</ph>, the following problem arises: the new class contains two subobjects of type <ph id="ph2">`Queue`</ph>, one from <ph id="ph3">`CashierQueue`</ph> and the other from <ph id="ph4">`LunchQueue`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The following figure shows the conceptual memory layout (the actual memory layout might be optimized).</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Simulated lunch&amp;#45;line object</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Simulated Lunch-Line Object</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Note that there are two <ph id="ph1">`Queue`</ph> subobjects in the <ph id="ph2">`LunchCashierQueue`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The following code declares <ph id="ph1">`Queue`</ph> to be a virtual base class:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`virtual`</ph> keyword ensures that only one copy of the subobject <ph id="ph2">`Queue`</ph> is included (see the following figure).</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Simulated lunch&amp;#45;line object, virtual base classes</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Simulated Lunch-Line Object with Virtual Base Classes</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>A class can have both a virtual component and a nonvirtual component of a given type.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This happens in the conditions illustrated in the following figure.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Virtual and nonvirtual components of a class</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Virtual and Nonvirtual Components of the Same Class</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>In the figure, <ph id="ph1">`CashierQueue`</ph> and <ph id="ph2">`LunchQueue`</ph> use <ph id="ph3">`Queue`</ph> as a virtual base class.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>However, <ph id="ph1">`TakeoutQueue`</ph> specifies <ph id="ph2">`Queue`</ph> as a base class, not a virtual base class.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Therefore, <ph id="ph1">`LunchTakeoutCashierQueue`</ph> has two subobjects of type <ph id="ph2">`Queue`</ph>: one from the inheritance path that includes <ph id="ph3">`LunchCashierQueue`</ph> and one from the path that includes <ph id="ph4">`TakeoutQueue`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>This is illustrated in the following figure.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Virtual &amp; nonvirtual inheritance in object layout</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Object Layout with Virtual and Nonvirtual Inheritance</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Virtual inheritance provides significant size benefits when compared with nonvirtual inheritance.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>However, it can introduce extra processing overhead.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>If a derived class overrides a virtual function that it inherits from a virtual base class, and if a constructor or a destructor for the derived base class calls that function using a pointer to the virtual base class, the compiler may introduce additional hidden "vtordisp" fields into the classes with virtual bases.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The /vd0 compiler option suppresses the addition of the hidden vtordisp constructor/destructor displacement member.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The /vd1 compiler option, the default, enables them where they are necessary.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Turn off vtordisps only if you are sure that all class constructors and destructors call virtual functions virtually.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The /vd compiler option affects an entire compilation module.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>vtordisp<ept id="p1">**</ept> pragma to suppress and then reenable vtordisp fields on a class-by-class basis:</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Name ambiguities</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Multiple inheritance introduces the possibility for names to be inherited along more than one path.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The class-member names along these paths are not necessarily unique.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>These name conflicts are called "ambiguities."</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Any expression that refers to a class member must make an unambiguous reference.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The following example shows how ambiguities develop:</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Given the preceding class declarations, code such as the following is ambiguous because it is unclear whether <ph id="ph1">`b`</ph> refers to the <ph id="ph2">`b`</ph> in <ph id="ph3">`A`</ph> or in <ph id="ph4">`B`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Consider the preceding example.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Because the name <ph id="ph1">`a`</ph> is a member of both class <ph id="ph2">`A`</ph> and class <ph id="ph3">`B`</ph>, the compiler cannot discern which <ph id="ph4">`a`</ph> designates the function to be called.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Access to a member is ambiguous if it can refer to more than one function, object, type, or enumerator.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The compiler detects ambiguities by performing tests in this order:</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>If access to the name is ambiguous (as just described), an error message is generated.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>If overloaded functions are unambiguous, they are resolved.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>If access to the name violates member-access permission, an error message is generated.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>(For more information, see <bpt id="p1">[</bpt>Member-Access Control<ept id="p1">](../cpp/member-access-control-cpp.md)</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>When an expression produces an ambiguity through inheritance, you can manually resolve it by qualifying the name in question with its class name.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>To make the preceding example compile properly with no ambiguities, use code such as:</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>When <ph id="ph1">`C`</ph> is declared, it has the potential to cause errors when <ph id="ph2">`B`</ph> is referenced in the scope of <ph id="ph3">`C`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>No error is issued, however, until an unqualified reference to <ph id="ph1">`B`</ph> is actually made in <ph id="ph2">`C`</ph>'s scope.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Dominance</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>It is possible for more than one name (function, object, or enumerator) to be reached through an inheritance graph.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Such cases are considered ambiguous with nonvirtual base classes.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>They are also ambiguous with virtual base classes, unless one of the names "dominates" the others.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>A name dominates another name if it is defined in both classes and one class is derived from the other.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The dominant name is the name in the derived class; this name is used when an ambiguity would otherwise have arisen, as shown in the following example:</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Ambiguous conversions</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Explicit and implicit conversions from pointers or references to class types can cause ambiguities.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The next figure, Ambiguous Conversion of Pointers to Base Classes, shows the following:</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The declaration of an object of type <ph id="ph1">`D`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The effect of applying the address-of operator (<bpt id="p1">**</bpt><ph id="ph1">&amp;</ph><ept id="p1">**</ept>) to that object.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Note that the address-of operator always supplies the base address of the object.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The effect of explicitly converting the pointer obtained using the address-of operator to the base-class type <ph id="ph1">`A`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Note that coercing the address of the object to type <ph id="ph1">`A*`</ph> does not always provide the compiler with enough information as to which subobject of type <ph id="ph2">`A`</ph> to select; in this case, two subobjects exist.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Ambiguous conversion of pointers to base classes</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Ambiguous Conversion of Pointers to Base Classes</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The conversion to type <ph id="ph1">`A*`</ph> (pointer to <ph id="ph2">`A`</ph>) is ambiguous because there is no way to discern which subobject of type <ph id="ph3">`A`</ph> is the correct one.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Note that you can avoid the ambiguity by explicitly specifying which subobject you mean to use, as follows:</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Ambiguities and virtual base classes</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>If virtual base classes are used, functions, objects, types, and enumerators can be reached through multiple-inheritance paths.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Because there is only one instance of the base class, there is no ambiguity when accessing these names.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The following figure shows how objects are composed using virtual and nonvirtual inheritance.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Virtual derivation and nonvirtual derivation</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Virtual vs. Nonvirtual Derivation</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>In the figure, accessing any member of class <ph id="ph1">`A`</ph> through nonvirtual base classes causes an ambiguity; the compiler has no information that explains whether to use the subobject associated with <ph id="ph2">`B`</ph> or the subobject associated with <ph id="ph3">`C`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>However, when <ph id="ph1">`A`</ph> is specified as a virtual base class, there is no question which subobject is being accessed.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Inheritance</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

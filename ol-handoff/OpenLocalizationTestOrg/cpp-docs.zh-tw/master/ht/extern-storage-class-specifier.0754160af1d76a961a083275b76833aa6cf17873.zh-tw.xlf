@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">42b6323a9390937d53698d174865e6c58f1dcddb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\extern-storage-class-specifier.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1df4ad07beeea07cac9f9a4245f302d860193dba</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ca67d04952c48a71285c04075f87d6d7e783ad9c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>extern Storage-Class Specifier | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>extern Storage-Class Specifier</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A variable declared with the <ph id="ph1">`extern`</ph> storage-class specifier is a reference to a variable with the same name defined at the external level in any of the source files of the program.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The internal <ph id="ph1">`extern`</ph> declaration is used to make the external-level variable definition visible within the block.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Unless otherwise declared at the external level, a variable declared with the <ph id="ph1">`extern`</ph> keyword is visible only in the block in which it is declared.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This example illustrates internal- and external-level declarations:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In this example, the variable <ph id="ph1">`i`</ph> is defined at the external level with initial value 1.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`extern`</ph> declaration in the <ph id="ph2">`main`</ph> function is used to declare a reference to the external-level <ph id="ph3">`i`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>static<ept id="p1">**</ept> variable <ph id="ph1">`a`</ph> is initialized to 0 by default, since the initializer is omitted.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The call to <ph id="ph1">`printf`</ph> prints the values 1, 0, 0, and 0.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`other`</ph> function, the address of the global variable <ph id="ph2">`i`</ph> is used to initialize the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> pointer variable <ph id="ph3">`external_i`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This works because the global variable has <bpt id="p1">**</bpt>static<ept id="p1">**</ept> lifetime, meaning its address does not change during program execution.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Next, the variable <ph id="ph1">`i`</ph> is redefined as a local variable with initial value 16.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This redefinition does not affect the value of the external-level <ph id="ph1">`i`</ph>, which is hidden by the use of its name for the local variable.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The value of the global <ph id="ph1">`i`</ph> is now accessible only indirectly within this block, through the pointer <ph id="ph2">`external_i`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Attempting to assign the address of the <bpt id="p1">**</bpt>auto<ept id="p1">**</ept> variable <ph id="ph1">`i`</ph> to a pointer does not work, since it may be different each time the block is entered.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The variable <ph id="ph1">`a`</ph> is declared as a <bpt id="p1">**</bpt>static<ept id="p1">**</ept> variable and initialized to 2.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This <ph id="ph1">`a`</ph> does not conflict with the <ph id="ph2">`a`</ph> in <ph id="ph3">`main`</ph>, since <bpt id="p1">**</bpt>static<ept id="p1">**</ept> variables at the internal level are visible only within the block in which they are declared.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The variable <ph id="ph1">`a`</ph> is increased by 2, giving 4 as the result.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`other`</ph> function were called again in the same program, the initial value of <ph id="ph2">`a`</ph> would be 4.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Internal <bpt id="p1">**</bpt>static<ept id="p1">**</ept> variables keep their values when the program exits and then reenters the block in which they are declared.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Storage-Class Specifiers for Internal-Level Declarations</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0e71ca191f9328951165288cd6bfdbb55ad3aebb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\general-rules-and-limitations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c32a972bea6f0cb9a7b2d473b40fba3433339713</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8c89544c0a3aaa446453e90b34948038fca4bebc</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>General Rules and Limitations | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>General Rules and Limitations</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If you declare a function or object without the <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> or <ph id="ph1">`dllexport`</ph> attribute, the function or object is not considered part of the DLL interface.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Therefore, the definition of the function or object must be present in that module or in another module of the same program.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To make the function or object part of the DLL interface, you must declare the definition of the function or object in the other module as <ph id="ph1">`dllexport`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Otherwise, a linker error is generated.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If you declare a function or object with the <ph id="ph1">`dllexport`</ph> attribute, its definition must appear in some module of the same program.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Otherwise, a linker error is generated.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If a single module in your program contains both <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> and <ph id="ph1">`dllexport`</ph> declarations for the same function or object, the <ph id="ph2">`dllexport`</ph> attribute takes precedence over the <bpt id="p2">**</bpt>dllimport<ept id="p2">**</ept> attribute.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>However, a compiler warning is generated.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In C++, you can initialize a globally declared or static local data pointer or with the address of a data object declared with the <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> attribute, which generates an error in C. In addition, you can initialize a static local function pointer with the address of a function declared with the <bpt id="p2">**</bpt>dllimport<ept id="p2">**</ept> attribute.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In C, such an assignment sets the pointer to the address of the DLL import thunk (a code stub that transfers control to the function) rather than the address of the function.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>In C++, it sets the pointer to the address of the function.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>However, because a program that includes the <ph id="ph1">`dllexport`</ph> attribute in the declaration of an object must provide the definition for that object somewhere in the program, you can initialize a global or local static function pointer with the address of a <ph id="ph2">`dllexport`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Similarly, you can initialize a global or local static data pointer with the address of a <ph id="ph1">`dllexport`</ph> data object.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For example, the following code does not generate errors in C or C++:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Because of a change in behavior introduce in Visual C++ .NET to make the application of <ph id="ph1">`dllexport`</ph> more consistent between regular classes and specializations of class templates, if you apply <ph id="ph2">`dllexport`</ph> to a regular class that has a base class that is not marked as <ph id="ph3">`dllexport`</ph>, the compiler will generate C4275.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The compiler generates the same warning if the base class is a specialization of a class template.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To work around this, mark the base-class with <ph id="ph1">`dllexport`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The problem with a specialization of a class template is where to place the <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept>; you are not allowed to mark the class template.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Instead, explicitly instantiate the class template and mark this explicit instantiation with <ph id="ph1">`dllexport`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This workaround fails if the template argument is the deriving class.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Because this is common pattern with templates, the compiler changed the semantics of <ph id="ph1">`dllexport`</ph> when it is applied to a class that has one or more base-classes and when one or more of the base classes is a specialization of a class template.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In this case, the compiler implicitly applies <ph id="ph1">`dllexport`</ph> to the specializations of class templates.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In Visual C++ .NET, a user can do the following and not get a warning:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>dllexport, dllimport</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

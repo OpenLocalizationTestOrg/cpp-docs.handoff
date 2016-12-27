@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0814b2049979ae924f7ffce1772eac3e23827e68</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\guard-enable-guard-checks.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9080eda53719a49a8a87aecb941ef90ee64bbe6c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">953e822ed64924a2b5460c4f0032af647f07ee6a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-GUARD (Enable Guard Checks) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/GUARD (Enable Guard Checks)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Specifies support for Control Flow Guard checks in the executable image.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When /GUARD:CF is specified, the linker modifies the header of a .dll or .exe to indicate support for Control Flow Guard (CFG) runtime checks.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The linker also adds the required control flow target address data to the header.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>By default, /GUARD:CF is disabled.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>It can be explicitly disabled by using /GUARD:NO.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To be effective, /GUARD:CF also requires the <bpt id="p1">[</bpt>/DYNAMICBASE (Use address space layout randomization)<ept id="p1">](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)</ept> linker option, which is on by default.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When source code is compiled by using the <bpt id="p1">[</bpt>/guard:cf<ept id="p1">](../../build/reference/guard-enable-control-flow-guard.md)</ept> option, the compiler analyzes the control flow by examining all indirect calls for possible target addresses.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The compiler inserts code to verify the target address of an indirect call instruction is in the list of known target addresses at runtime.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Operating systems that support CFG stop a program that fails a CFG runtime check.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This makes it more difficult for an attacker to execute malicious code by using data corruption to change a call target.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The /GUARD:CF option must be specified to both the compiler and linker to create CFG-enabled executable images.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Code compiled but not linked by using /GUARD:CF incurs the cost of runtime checks, but does not enable CFG protection.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>When the /GUARD:CF option is specified to the <ph id="ph1">`cl`</ph> command to compile and link in one step, the compiler passes the flag to the linker.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>When the <bpt id="p1">**</bpt>Control Flow Guard<ept id="p1">**</ept> property is set in Visual Studio, the /GUARD:CF option is passed to both the compiler and linker.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When object files or libraries have been compiled separately, the option must be explicitly specified in the <ph id="ph1">`link`</ph> command.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To set this linker option in Visual Studio</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Open the project <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Working with Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Expand <bpt id="p1">**</bpt>Configuration Properties<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Linker<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Command Line<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept>, enter <ph id="ph1">`/GUARD:CF`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>/guard (Enable Control Flow Guard)</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Setting Linker Options</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Linker Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

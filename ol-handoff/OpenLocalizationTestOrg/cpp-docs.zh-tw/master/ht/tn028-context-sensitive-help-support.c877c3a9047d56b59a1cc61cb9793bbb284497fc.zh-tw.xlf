@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">046902cbd7402affb79ee381e5b379c4d9ba980b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn028-context-sensitive-help-support.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6f81d54039546d4ffb6cf2c4855b59d187d20acd</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f41264544ebbd360b65e6410f140a77f4a5058ca</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN028: Context-Sensitive Help Support | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN028: Context-Sensitive Help Support</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This note describes the rules for assigning Help contexts IDs and other help issues in MFC.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Context-sensitive help support requires the help compiler that is available in Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In addition to implementing context-sensitive help using WinHelp, MFC also supports using HTML Help.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For more information on this support and programming with HTML Help, see <bpt id="p1">[</bpt>HTML Help: Context-Sensitive Help for Your Programs<ept id="p1">](../mfc/html-help-context-sensitive-help-for-your-programs.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Types of Help Supported</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>There are two types of context-sensitive help implemented in Windows applications.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The first, referred to as "F1 Help" involves launching WinHelp with the appropriate context based on the currently active object.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The second is "Shift+ F1" mode.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In this mode, the mouse cursor changes to the help cursor, and the user proceeds to click on an object.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>At that point, WinHelp is launched to give help for the object that the user clicked on.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The Microsoft Foundation Classes implement both of these forms of help.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In addition, the framework supports two simple help commands, Help Index and Using Help.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Help Files</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The Microsoft Foundation classes assume a single Help file.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>That Help file must have the same name and path as the application.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For example, if the executable is C:\MyApplication\MyHelp.exe the help file must be C:\MyApplication\MyHelp.hlp.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You set the path through the <ph id="ph1">`m_pszHelpFilePath`</ph> member variable of the <bpt id="p1">[</bpt>CWinApp Class<ept id="p1">](../mfc/reference/cwinapp-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Help Context Ranges</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The default implementation of MFC requires a program to follow some rules about the assignment of Help context IDs.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>These rules are a range of IDs allocated to specific controls.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You can override these rules by providing different implementations of the various Help-related member functions.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Simple "Help" Commands</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>There are two simple Help commands that are implemented by the Microsoft Foundation Classes:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>ID_HELP_INDEX which is implemented by <bpt id="p1">[</bpt>CWinApp::OnHelpIndex<ept id="p1">](../mfc/reference/cwinapp-class.md#cwinapp__onhelpindex)</ept></source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>ID_HELP_USING which is implemented by <bpt id="p1">[</bpt>CWinApp::OnHelpUsing<ept id="p1">](../mfc/reference/cwinapp-class.md#cwinapp__onhelpusing)</ept></source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The first command shows the Help index for the application.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The second shows the user help on using the WinHelp program.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Context-Sensitive Help (F1 Help)</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The F1 key is usually translated to a command with an ID of <ph id="ph1">`ID_HELP`</ph> by an accelerator placed into the main window's accelerator table.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`ID_HELP`</ph> command may also be generated by a button with an ID of <ph id="ph2">`ID_HELP`</ph> on the main window or dialog box.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Regardless of how the <ph id="ph1">`ID_HELP`</ph> command is generated, it is routed as a normal command until it reaches a command handler.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more information about the MFC command-routing architecture, refer to <bpt id="p1">[</bpt>Technical Note 21<ept id="p1">](../mfc/tn021-command-and-message-routing.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If the application has Help enabled, the <ph id="ph1">`ID_HELP`</ph> command will be handled by <bpt id="p1">[</bpt>CWinApp::OnHelp<ept id="p1">](../mfc/reference/cwinapp-class.md#cwinapp__onhelp)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The application object receives the help message and then routes the command appropriately.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This is necessary since the default command routing is not adequate for determining the most specific context.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>attempts to launch WinHelp in the following order:</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Checks for an active <ph id="ph1">`AfxMessageBox`</ph> call with a Help ID.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If a message box is currently active, WinHelp is launched with the context appropriate to that message box.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Sends a WM_COMMANDHELP message to the active window.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If that window does not respond by launching WinHelp, the same message is then sent to the ancestors of that window until the message is processed or the current window is a top-level window.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Sends a ID_DEFAULT_HELP command to the main window.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This invokes the default Help.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This command is generally mapped to <ph id="ph1">`CWinApp::OnHelpIndex`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>To globally override the default ID base values (e.g. 0x10000 for commands and 0x20000 for resources such as dialogs), the application should override <bpt id="p1">[</bpt>CWinApp::WinHelp<ept id="p1">](../mfc/reference/cwinapp-class.md#cwinapp__winhelp)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>To override this functionality and the way that a Help context is determined, you should handle the WM_COMMANDHELP message.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>You may wish to provide more specific Help routing than the framework provides, as it only goes as deep as the current MDI child window.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>You may also want to provide more specific help for a particular window or dialog, perhaps based on the current internal state of that object or the active control within the dialog.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>WM_COMMANDHELP</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>WM_COMMANDHELP is a private Windows MFC message that is received by the active window when Help is requested.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>When the window receives this message, it may call <ph id="ph1">`CWinApp::WinHelp`</ph> with context that matches the window's internal state.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Contains the currently available Help context.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>is zero if no Help context has been determined.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>An implementation of <ph id="ph1">`OnCommandHelp`</ph> can use the context ID in <ph id="ph2">`lParam`</ph> to determine a different context or can just pass it to <ph id="ph3">`CWinApp::WinHelp`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Is not used and will be zero.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`OnCommandHelp`</ph> function calls <ph id="ph2">`CWinApp::WinHelp`</ph>, it should return <ph id="ph3">`TRUE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Returning <ph id="ph1">`TRUE`</ph> stops the routing of this command to other classes and to other windows.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Help Mode (Shift+F1 Help)</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>This is the second form of context-sensitive Help.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Generally, this mode is entered by pressing SHIFT+F1 or via the menu/toolbar.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>It is implemented as a command (<bpt id="p1">**</bpt>ID_CONTEXT_HELP<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The message filter hook is not used to translate this command while a modal dialog box or menu is active, therefore this command is only available to the user when the application is executing the main message pump (<ph id="ph1">`CWinApp::Run`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>After entering this mode, the Help mouse cursor is displayed over all areas of the application, even if the application would normally display its own cursor for that area (such as the sizing border around the window).</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The user is able to use the mouse or keyboard to select a command.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Instead of executing the command, Help on that command is displayed.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Also, the user can click a visible object on the screen, such as a button on the toolbar, and Help will be displayed for that object.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>This mode of Help is provided by <ph id="ph1">`CWinApp::OnContextHelp`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>During the execution of this loop, all keyboard input is inactive, except for keys that access the menu.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Also, command translation is still performed via <ph id="ph1">`PreTranslateMessage`</ph> to allow the user to press an accelerator key and receive help on that command.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>If there are particular translations or actions taking place in the <ph id="ph1">`PreTranslateMessage`</ph> function that shouldn't take place during SHIFT+F1 Help mode, you should check the <ph id="ph2">`m_bHelpMode`</ph> member of <ph id="ph3">`CWinApp`</ph> before performing those operations.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CDialog`</ph> implementation of <ph id="ph2">`PreTranslateMessage`</ph> checks this before calling <ph id="ph3">`IsDialogMessage`</ph>, for example.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>This disables "dialog navigation" keys on modeless dialogs during SHIFT+F1 mode.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>In addition, <ph id="ph1">`CWinApp::OnIdle`</ph> is still called during this loop.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>If the user chooses a command from the menu, it is handled as help on that command (through <bpt id="p1">**</bpt>WM_COMMANDHELP<ept id="p1">**</ept>, see below).</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>If the user clicks a visible area of the applications window, a determination is made as to whether it is a nonclient click or a client click.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>handles mapping of nonclient clicks to client clicks automatically.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>If it is a client click, it then sends a <bpt id="p1">**</bpt>WM_HELPHITTEST<ept id="p1">**</ept> to the window that was clicked.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>If that window returns a nonzero value, that value is used as the context for help.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>If it returns zero, <ph id="ph1">`OnContextHelp`</ph> tries the parent window (and failing that, its parent, and so on).</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>If a Help context cannot be determined, the default is to send a <bpt id="p1">**</bpt>ID_DEFAULT_HELP<ept id="p1">**</ept> command to the main window, which is then (usually) mapped to <ph id="ph1">`CWinApp::OnHelpIndex`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>WM_HELPHITTEST</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>WM_HELPHITTEST<ept id="p1">**</ept> is an MFC private windows message that is received by the active window clicked during SHIFT+F1 Help mode.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>When the Window receives this message, it returns a DWORD Help ID for use by WinHelp.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>LOWORD(lParam)</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>contains the X-axis device coordinate where the mouse was clicked relative to the client area of the window.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>HIWORD(lParam)</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>contains the Y-axis coordinate.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>is not used and will be zero.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>If the return value is nonzero, WinHelp is called with that context.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>If the return value is zero, the parent window is queried for help.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>In many cases, you can leverage hit-testing code you may already have.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>See the implementation of <bpt id="p1">**</bpt>CToolBar::OnHelpHitTest<ept id="p1">**</ept> for an example of handling the <bpt id="p2">**</bpt>WM_HELPHITTEST<ept id="p2">**</ept> message (the code leverages the hit-test code used on buttons and tooltips in <ph id="ph1">`CControlBar`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>MFC Application Wizard Support and MAKEHM</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The MFC Application Wizard creates the necessary files to build a Help file (.cnt and .hpj files).</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>It also includes a number of prebuilt .rtf files that are accepted by the Microsoft Help Compiler.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Many of the topics are complete, but some may need to be modified for your specific application.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Automatic creation of a "help mapping" file is supported by a utility called MAKEHM.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The MAKEHM utility can translate an application's RESOURCE.H file to a Help mapping file.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>will be translated into:</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>This format is compatible with the Help compiler's facility, which maps context IDs (the numbers on the right side) with topic names (the symbols on the left side).</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>The source code for MAKEHM is available in the MFC Programming Utilities sample <bpt id="p1">[</bpt>MAKEHM<ept id="p1">](../visual-cpp-samples.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Adding Help Support After Running the MFC Application Wizard</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The best way to add Help to your application is to check the "Context-sensitive Help" option on the Advanced Features page of the MFC Application Wizard before creating your application.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>That way the MFC Application Wizard automatically adds the necessary message map entries to your <ph id="ph1">`CWinApp`</ph>-derived class to support Help.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Help on Message Boxes</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Help on Message Boxes (sometimes called alerts) is supported through the <ph id="ph1">`AfxMessageBox`</ph> function, a wrapper for the <ph id="ph2">`MessageBox`</ph> Windows API.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>There are two versions of <ph id="ph1">`AfxMessageBox`</ph>, one for use with a string ID and another for use with a pointer to string (<ph id="ph2">`LPCSTR`</ph>):</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>In both cases, there is an optional Help ID.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>In the first case, the default for nIDHelp is 0, which indicates no Help for this message box.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>If the user presses F1 while such as message box is active, the user will not receive Help (even if the application supports Help).</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>If this is not desirable, a Help ID should be provided for nIDHelp.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>In the second case, the default value for nIDHelp is -1, which indicates the Help ID is the same as nIDPrompt.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Help will work only if the application is Help-enabled, of course).</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>You should provide 0 for nIDHelp if you wish that the message box have no help support.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Should you want the message to be Help enabled, but desire a different help ID than nIDPrompt, simply provide a positive value for nIDHelp different from that of nIDPrompt.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
