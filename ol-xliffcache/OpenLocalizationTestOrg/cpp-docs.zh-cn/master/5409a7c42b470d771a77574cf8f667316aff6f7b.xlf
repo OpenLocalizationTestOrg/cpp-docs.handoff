@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5409a7c42b470d771a77574cf8f667316aff6f7b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\secure-template-overloads.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">737e893ff1ed432f0696768f42a029beda3efdd2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f545c5f993013221d00786e1ee24bc97895bef13</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Secure Template Overloads | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Secure Template Overloads</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Many CRT functions have been deprecated in favor of newer, security-enhanced versions (for example, <ph id="ph1">`strcpy_s`</ph> is the more secure replacement for <ph id="ph2">`strcpy`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The CRT provides template overloads to help ease the transition to the more secure variants.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, this code generates a warning because <ph id="ph1">`strcpy`</ph> is deprecated:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You can ignore the warning.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Define the symbol <ph id="ph1">`_CRT_SECURE_NO_WARNINGS`</ph> to suppress the warning, or update the code to use <ph id="ph2">`strcpy_s`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The template overloads provide additional choices.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Defining <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`</ph> to 1 enables template overloads of standard CRT functions that call the more secure variants automatically.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`</ph> is 1, then no changes to the code are necessary.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Behind the scenes, the call to <ph id="ph1">`strcpy`</ph> will be changed to a call to <ph id="ph2">`strcpy_s`</ph> with the size argument supplied automatically.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>does not affect the functions that take a count, such as <ph id="ph1">`strncpy`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To enable template overloads for the count functions, define <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`</ph> to 1.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Before doing so, however, make sure that your code passes the count of characters, not the size of the buffer (a common mistake).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Also, code that explicitly writes a null terminator at the end of the buffer after the function call is unnecessary if the secure variant is called.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you need truncation behavior, see <bpt id="p1">[</bpt>_TRUNCATE<ept id="p1">](../c-runtime-library/truncate.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The macro <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`</ph> requires that <ph id="ph2">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`</ph> is also defined as 1.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`</ph> is defined as 1 and <ph id="ph2">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`</ph> is defined as 0, the application will not perform any template overloads.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Defining <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`</ph> to 1 enables template overloads of the secure variants (names ending in "_s").</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In this case, if <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`</ph> is 1, then one small change must be made to the original code:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Only the name of the function needs to be changed (by adding "_s"); the template overload will take care of providing the size argument.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>By default, <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`</ph> and <ph id="ph2">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`</ph> are defined as 0 (disabled) and <ph id="ph3">`_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`</ph> is defined as 1 (enabled).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Note that these template overloads only work for static arrays.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Dynamically allocated buffers require additional source code changes.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Revisiting the above examples:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>And this:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Security Features in the CRT</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>CRT Library Features</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

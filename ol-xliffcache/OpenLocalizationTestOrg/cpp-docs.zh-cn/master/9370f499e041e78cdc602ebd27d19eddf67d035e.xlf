@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9370f499e041e78cdc602ebd27d19eddf67d035e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\try-except-statement-c.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0e3a0568215d93dc5866780936f63b4884e819bc</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d3fc761b3df199175745b8689c012acd3ef492db</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>try-except Statement (C) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>try-except Statement (C)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>try-except<ept id="p1">**</ept> statement is a Microsoft extension to the C language that enables applications to gain control of a program when events that normally terminate execution occur.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Such events are called exceptions, and the mechanism that deals with exceptions is called structured exception handling.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Exceptions can be either hardware- or software-based.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Even when applications cannot completely recover from hardware or software exceptions, structured exception handling makes it possible to display error information and trap the internal state of the application to help diagnose the problem.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This is especially useful for intermittent problems that cannot be reproduced easily.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>try-except-statement<ept id="p1">*</ept>:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1"> **</bpt>__try<ept id="p1">**</ept>  <bpt id="p2">*</bpt>compound-statement<ept id="p2">*</ept></source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>__except (<ept id="p1">**</ept>  <bpt id="p2">*</bpt>expression<ept id="p2">*</ept>  <bpt id="p3">**</bpt>)<ept id="p3">**</ept>  <bpt id="p4">*</bpt>compound-statement<ept id="p4">*</ept></source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The compound statement after the <ph id="ph1">`__try`</ph> clause is the guarded section.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The compound statement after the <ph id="ph1">`__except`</ph> clause is the exception handler.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The handler specifies a set of actions to be taken if an exception is raised during execution of the guarded section.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Execution proceeds as follows:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The guarded section is executed.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If no exception occurs during execution of the guarded section, execution continues at the statement after the <ph id="ph1">`__except`</ph> clause.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If an exception occurs during execution of the guarded section or in any routine the guarded section calls, the<ph id="ph1">`__except`</ph> expression is evaluated and the value returned determines how the exception is handled.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>There are three values:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Exception is not recognized.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Continue to search up the stack for a handler, first for containing <bpt id="p1">**</bpt>try-except<ept id="p1">**</ept> statements, then for handlers with the next highest precedence.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Exception is recognized but dismissed.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Continue execution at the point where the exception occurred.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Exception is recognized.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Transfer control to the exception handler by executing the <ph id="ph1">`__except`</ph> compound statement, then continue execution at the point the exception occurred.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`__except`</ph> expression is evaluated as a C expression, it is limited to a single value, the conditional-expression operator, or the comma operator.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If more extensive processing is required, the expression can call a routine that returns one of the three values listed above.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Structured exception handling works with C and C++ source files.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>However, it is not specifically designed for C++.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You can ensure that your code is more portable by using C++ exception handling.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Also, the C++ exception handling mechanism is much more flexible, in that it can handle exceptions of any type.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For C++ programs, C++ exception handling should be used instead of structured exception handling.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Exception Handling<ept id="p1">](../cpp/exception-handling-in-visual-cpp.md)</ept> in the <bpt id="p2">*</bpt>C++ Language Reference<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Each routine in an application can have its own exception handler.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__except`</ph> expression executes in the scope of the <ph id="ph2">`__try`</ph> body.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This means it has access to any local variables declared there.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__leave`</ph> keyword is valid within a <bpt id="p1">**</bpt>try-except<ept id="p1">**</ept> statement block.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The effect of <ph id="ph1">`__leave`</ph> is to jump to the end of the <bpt id="p1">**</bpt>try-except<ept id="p1">**</ept> block.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Execution resumes after the end of the exception handler.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Although a <ph id="ph1">`goto`</ph> statement can be used to accomplish the same result, a <ph id="ph2">`goto`</ph> statement causes stack unwinding.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__leave`</ph> statement is more efficient because it does not involve stack unwinding.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Exiting a <bpt id="p1">**</bpt>try-except<ept id="p1">**</ept> statement using the <ph id="ph1">`longjmp`</ph> run-time function is considered abnormal termination.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>It is illegal to jump into a <ph id="ph1">`__try`</ph> statement, but legal to jump out of one.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The exception handler is not called if a process is killed in the middle of executing a <bpt id="p1">**</bpt>try-except<ept id="p1">**</ept> statement.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Following is an example of an exception handler and a termination handler.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>The try-finally Statement<ept id="p1">](../c-language/try-finally-statement-c.md)</ept> for more information about termination handlers.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>This is the output from the example, with commentary added on the right:</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>try-except Statement</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

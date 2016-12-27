@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">084489289ac589554f835d26cc055be33271d892</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\transporting-exceptions-between-threads.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b7f5926d78bf94bd6b69ceba915bb85d771fdfe3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">72cac6762eb7f9c54bebe7ca64328202c0aae280</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Transporting Exceptions Between Threads | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Transporting Exceptions Between Threads</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Visual C++ supports <bpt id="p1">*</bpt>transporting an exception<ept id="p1">*</ept> from one thread to another.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Transporting exceptions enables you to catch an exception in one thread and then make the exception appear to be thrown in a different thread.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, you can use this feature to write a multithreaded application where the primary thread handles all the exceptions thrown by its secondary threads.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Transporting exceptions is useful mostly to developers who create parallel programming libraries or systems.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To implement transporting exceptions, Visual C++ provides the <bpt id="p1">[</bpt>exception_ptr<ept id="p1">](../standard-library/exception-typedefs.md#exception_ptr)</ept> type and the <bpt id="p2">[</bpt>current_exception<ept id="p2">](../standard-library/exception-typedefs.md#current_exception)</ept>, <bpt id="p3">[</bpt>rethrow_exception<ept id="p3">](../standard-library/exception-functions.md#rethrow_exception)</ept>, and <bpt id="p4">[</bpt>make_exception_ptr<ept id="p4">](../standard-library/exception-functions.md#make_exception_ptr)</ept> functions.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Parameter</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>An unspecified internal class that is used to implement the <ph id="ph1">`exception_ptr`</ph> type.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`exception_ptr`</ph> object that references an exception.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A class that represents an exception.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>An instance of the parameter <ph id="ph1">`E`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`current_exception`</ph> function returns an <ph id="ph2">`exception_ptr`</ph> object that references the exception that is currently in progress.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If no exception is in progress, the function returns an <ph id="ph1">`exception_ptr`</ph> object that is not associated with any exception.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`make_exception_ptr`</ph> function returns an <ph id="ph2">`exception_ptr`</ph> object that references the exception specified by the <ph id="ph3">`e`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Scenario</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Imagine that you want to create an application that can scale to handle a variable amount of work.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To achieve this objective, you design a multithreaded application where an initial, primary thread creates as many secondary threads as it needs in order to do the job.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The secondary threads help the primary thread to manage resources, to balance loads, and to improve throughput.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>By distributing the work, the multithreaded application performs better than a single-threaded application.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>However, if a secondary thread throws an exception, you want the primary thread to handle it.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This is because you want your application to handle exceptions in a consistent, unified manner regardless of the number of secondary threads.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Solution</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>To handle the previous scenario, the C++ Standard supports transporting an exception between threads.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If a secondary thread throws an exception, that exception becomes the <bpt id="p1">*</bpt>current exception<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>By analogy to the real world, the current exception is said to be <bpt id="p1">*</bpt>in flight<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The current exception is in flight from the time it is thrown until the exception handler that catches it returns.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The secondary thread can catch the current exception in a <ph id="ph1">`catch`</ph> block, and then call the <ph id="ph2">`current_exception`</ph> function to store the exception in an <ph id="ph3">`exception_ptr`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`exception_ptr`</ph> object must be available to the secondary thread and to the primary thread.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For example, the <ph id="ph1">`exception_ptr`</ph> object can be a global variable whose access is controlled by a mutex.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The term <bpt id="p1">*</bpt>transport an exception<ept id="p1">*</ept> means an exception in one thread can be converted to a form that can be accessed by another thread.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Next, the primary thread calls the <ph id="ph1">`rethrow_exception`</ph> function, which extracts and then throws the exception from the <ph id="ph2">`exception_ptr`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>When the exception is thrown, it becomes the current exception in the primary thread.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>That is, the exception appears to originate in the primary thread.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Finally, the primary thread can catch the current exception in a <ph id="ph1">`catch`</ph> block and then process it or throw it to a higher level exception handler.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Or, the primary thread can ignore the exception and allow the process to end.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Most applications do not have to transport exceptions between threads.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>However, this feature is useful in a parallel computing system because the system can divide work among secondary threads, processors, or cores.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>In a parallel computing environment, a single, dedicated thread can handle all the exceptions from the secondary threads and can present a consistent exception-handling model to any application.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For more information about the C++ Standards committee proposal, search the Internet for document number N2179, titled "Language Support for Transporting Exceptions between Threads".</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Exception-Handling Models and Compiler Options</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Your application's exception-handling model determines whether it can catch and transport an exception.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Visual C++ supports three models that can handle C++ exceptions, structured exception handling (SEH) exceptions, and common language runtime (CLR) exceptions.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>/EH<ept id="p1">](../build/reference/eh-exception-handling-model.md)</ept> and <bpt id="p2">[</bpt>/clr<ept id="p2">](../build/reference/clr-common-language-runtime-compilation.md)</ept> compiler options to specify your application's exception-handling model.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Only the following combination of compiler options and programming statements can transport an exception.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Other combinations either cannot catch exceptions, or can catch but cannot transport exceptions.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>/EHa<ept id="p1">**</ept> compiler option and the <ph id="ph1">`catch`</ph> statement can transport SEH and C++ exceptions.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>/EHa<ept id="p1">**</ept>, <bpt id="p2">**</bpt>/EHs<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>/EHsc<ept id="p3">**</ept> compiler options and the <ph id="ph1">`catch`</ph> statement can transport C++ exceptions.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>/CLR<ept id="p1">**</ept> or <bpt id="p2">**</bpt>/CLR:pure<ept id="p2">**</ept> compiler option and the <ph id="ph1">`catch`</ph> statement can transport C++ exceptions.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>/CLR<ept id="p1">**</ept> compiler options imply specification of the <bpt id="p2">**</bpt>/EHa<ept id="p2">**</ept> option.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Note that the compiler does not support transporting managed exceptions.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>This is because managed exceptions, which are derived from the <bpt id="p1">[</bpt>System.Exception class<ept id="p1">](../standard-library/exception-class.md)</ept>, are already objects that you can move between threads by using the facilities of the common languange runtime.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>We recommend that you specify the <bpt id="p1">**</bpt>/EHsc<ept id="p1">**</ept> compiler option and catch only C++ exceptions.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>You expose yourself to a security threat if you use the <bpt id="p1">**</bpt>/EHa<ept id="p1">**</ept> or <bpt id="p2">**</bpt>/CLR<ept id="p2">**</ept> compiler option and a <bpt id="p3">**</bpt>catch<ept id="p3">**</ept> statement with an ellipsis <bpt id="p4">*</bpt>exception-declaration<ept id="p4">*</ept> (<ph id="ph1">`catch(...)`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>You probably intend to use the <ph id="ph1">`catch`</ph> statement to capture a few specific exceptions.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>However, the <ph id="ph1">`catch(...)`</ph> statement captures all C++ and SEH exceptions, including unexpected ones that should be fatal.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>If you ignore or mishandle an unexpected exception, malicious code can use that opportunity to undermine the security of your program.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The following sections describe how to transport exceptions by using the <ph id="ph1">`exception_ptr`</ph> type, and the <ph id="ph2">`current_exception`</ph>, <ph id="ph3">`rethrow_exception`</ph>, and <ph id="ph4">`make_exception_ptr`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>exception_ptr Type</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Use an <ph id="ph1">`exception_ptr`</ph> object to reference the current exception or an instance of a user-specified exception.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>In the Microsoft implementation, an exception is represented by an <bpt id="p1">[</bpt>EXCEPTION_RECORD<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/aa363082)</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Each <ph id="ph1">`exception_ptr`</ph> object includes an exception reference field that points to a copy of the <ph id="ph2">`EXCEPTION_RECORD`</ph> structure that represents the exception.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>When you declare an <ph id="ph1">`exception_ptr`</ph> variable, the variable is not associated with any exception.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>That is, its exception reference field is NULL.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Such an <ph id="ph1">`exception_ptr`</ph> object is called a <bpt id="p1">*</bpt>null exception_ptr<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`current_exception`</ph> or <ph id="ph2">`make_exception_ptr`</ph> function to assign an exception to an <ph id="ph3">`exception_ptr`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>When you assign an exception to an <ph id="ph1">`exception_ptr`</ph> variable, the variable's exception reference field points to a copy of the exception.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>If there is insufficient memory to copy the exception, the exception reference field points to a copy of a <bpt id="p1">[</bpt>std::bad_alloc<ept id="p1">](../standard-library/bad-alloc-class.md)</ept> exception.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`current_exception`</ph> or <ph id="ph2">`make_exception_ptr`</ph> function cannot copy the exception for any other reason, the function calls the <bpt id="p1">[</bpt>terminate<ept id="p1">](../c-runtime-library/reference/terminate-crt.md)</ept> function to exit the current process.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Despite its name, an <ph id="ph1">`exception_ptr`</ph> object is not itself a pointer.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>It does not obey pointer semantics and cannot be used with the pointer member access (<ph id="ph1">`-&gt;`</ph>) or indirection (*) operators.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`exception_ptr`</ph> object has no public data members or member functions.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Comparisons:</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>You can use the equal (<ph id="ph1">`==`</ph>) and not-equal (<ph id="ph2">`!=`</ph>) operators to compare two <ph id="ph3">`exception_ptr`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The operators do not compare the binary value (bit pattern) of the <ph id="ph1">`EXCEPTION_RECORD`</ph> structures that represent the exceptions.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Instead, the operators compare the addresses in the exception reference field of the <ph id="ph1">`exception_ptr`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Consequently, a null <ph id="ph1">`exception_ptr`</ph> and the NULL value compare as equal.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>current_exception Function</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Call the <ph id="ph1">`current_exception`</ph> function in a <ph id="ph2">`catch`</ph> block.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>If an exception is in flight and the <ph id="ph1">`catch`</ph> block can catch the exception, the <ph id="ph2">`current_exception`</ph> function returns an <ph id="ph3">`exception_ptr`</ph> object that references the exception.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Otherwise, the function returns a null <ph id="ph1">`exception_ptr`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Details:</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`current_exception`</ph> function captures the exception that is in flight regardless of whether the <ph id="ph2">`catch`</ph> statement specifies an <bpt id="p1">[</bpt>exception-declaration<ept id="p1">](../cpp/try-throw-and-catch-statements-cpp.md)</ept> statement.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The destructor for the current exception is called at the end of the <ph id="ph1">`catch`</ph> block if you do not rethrow the exception.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>However, even if you call the <ph id="ph1">`current_exception`</ph> function in the destructor, the function returns an <ph id="ph2">`exception_ptr`</ph> object that references the current exception.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Successive calls to the <ph id="ph1">`current_exception`</ph> function return <ph id="ph2">`exception_ptr`</ph> objects that refer to different copies of the current exception.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Consequently, the objects compare as unequal because they refer to different copies, even though the copies have the same binary value.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>SEH Exceptions:</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>If you use the <bpt id="p1">**</bpt>/EHa<ept id="p1">**</ept> compiler option, you can catch an SEH exception in a C++ <ph id="ph1">`catch`</ph> block.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`current_exception`</ph> function returns an <ph id="ph2">`exception_ptr`</ph> object that references the SEH exception.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>And the <ph id="ph1">`rethrow_exception`</ph> function throws the SEH exception if you call it with thetransported <ph id="ph2">`exception_ptr`</ph> object as its argument.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`current_exception`</ph> function returns a null <ph id="ph2">`exception_ptr`</ph> if you call it in an SEH <ph id="ph3">`__finally`</ph> termination handler, an <ph id="ph4">`__except`</ph> exception handler, or the <ph id="ph5">`__except`</ph> filter expression.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>A transported exception does not support nested exceptions.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>A nested exception occurs if another exception is thrown while an exception is being handled.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>If you catch a nested exception, the <ph id="ph1">`EXCEPTION_RECORD.ExceptionRecord`</ph> data member points to a chain of <ph id="ph2">`EXCEPTION_RECORD`</ph> structures that describe the associated exceptions.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`current_exception`</ph> function does not support nested exceptions because it returns an <ph id="ph2">`exception_ptr`</ph> object whose <ph id="ph3">`ExceptionRecord`</ph> data member is zeroed out.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>If you catch an SEH exception, you must manage the memory referenced by any pointer in the <ph id="ph1">`EXCEPTION_RECORD.ExceptionInformation`</ph> data member array.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>You must guarantee that the memory is valid during the lifetime of the corresponding <ph id="ph1">`exception_ptr`</ph> object, and that the memory is freed when the <ph id="ph2">`exception_ptr`</ph> object is deleted.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>You can use structured exception (SE) translator functions together with the transport exceptions feature.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>If an SEH exception is translated to a C++ exception, the <ph id="ph1">`current_exception`</ph> function returns an <ph id="ph2">`exception_ptr`</ph> that references the translated exception instead of the original SEH exception.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`rethrow_exception`</ph> function subsequently throws the translated exception, not the original exception.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>For more information about SE translator functions, see <bpt id="p1">[</bpt>_set_se_translator<ept id="p1">](../c-runtime-library/reference/set-se-translator.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>rethrow_exception Function</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>After you store a caught exception in an <ph id="ph1">`exception_ptr`</ph> object, the primary thread can process the object.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>In your primary thread, call the <ph id="ph1">`rethrow_exception`</ph> function together with the <ph id="ph2">`exception_ptr`</ph> object as its argument.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`rethrow_exception`</ph> function extracts the exception from the <ph id="ph2">`exception_ptr`</ph> object and then throws the exception in the context of the primary thread.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`p`</ph> parameter of the <ph id="ph2">`rethrow_exception`</ph> function is a null <ph id="ph3">`exception_ptr`</ph>, the function throws <bpt id="p1">[</bpt>std::bad_exception<ept id="p1">](../standard-library/bad-exception-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>The extracted exception is now the current exception in the primary thread, and you can handle it as you would any other exception.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>If you catch the exception, you can handle it immediately or use a <ph id="ph1">`throw`</ph> statement to send it to a higher level exception handler.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Otherwise, do nothing and let the default system exception handler terminate your process.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>make_exception_ptr Function</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`make_exception_ptr`</ph> function takes an instance of a class as its argument and then returns an <ph id="ph2">`exception_ptr`</ph> that references the instance.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Usually, you specify an <bpt id="p1">[</bpt>exception class<ept id="p1">](../standard-library/exception-class.md)</ept> object as the argument to the <ph id="ph1">`make_exception_ptr`</ph> function, although any class object can be the argument.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Calling the <ph id="ph1">`make_exception_ptr`</ph> function is equivalent to throwing a C++ exception, catching it in a <ph id="ph2">`catch`</ph> block, and then calling the <ph id="ph3">`current_exception`</ph> function to return an <ph id="ph4">`exception_ptr`</ph> object that references the exception.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The Microsoft implementation of the <ph id="ph1">`make_exception_ptr`</ph> function is more efficient than throwing and then catching an exception.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>An application typically does not require the <ph id="ph1">`make_exception_ptr`</ph> function, and we discourage its use.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The following example transports a standard C++ exception and a custom C++ exception from one thread to another.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> <ph id="ph1">\&lt;</ph>exception&gt;</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>/EH (Exception Handling Model)</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>/clr (Common Language Runtime Compilation)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

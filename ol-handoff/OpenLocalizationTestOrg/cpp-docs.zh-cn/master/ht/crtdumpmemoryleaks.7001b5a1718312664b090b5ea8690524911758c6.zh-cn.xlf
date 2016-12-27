@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">97710b629c247b115799246dfd1ac4f7bc95cd4a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\crtdumpmemoryleaks.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">429d7040d62de9443b0336fa2d2ad785fbc09bb3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b031bdce7c3af43c2b9f833bad80c476ae9502ef</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_CrtDumpMemoryLeaks | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_CrtDumpMemoryLeaks</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Dumps all the memory blocks in the debug heap when a memory leak has occurred (debug version only).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>returns TRUE if a memory leak is found.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Otherwise, the function returns FALSE.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_CrtDumpMemoryLeaks`</ph> function determines whether a memory leak has occurred since the start of program execution.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>When a leak is found, the debug header information for all the objects in the heap is dumped in a user-readable form.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">[</bpt>_DEBUG<ept id="p1">](../../c-runtime-library/debug.md)</ept> is not defined, calls to <ph id="ph1">`_CrtDumpMemoryLeaks`</ph> are removed during preprocessing.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>is frequently called at the end of program execution to verify that all memory allocated by the application has been freed.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The function can be called automatically at program termination by turning on the <ph id="ph1">`_CRTDBG_LEAK_CHECK_DF`</ph> bit field of the <bpt id="p1">[</bpt>_crtDbgFlag<ept id="p1">](../../c-runtime-library/crtdbgflag.md)</ept> flag using the <bpt id="p2">[</bpt>_CrtSetDbgFlag<ept id="p2">](../../c-runtime-library/reference/crtsetdbgflag.md)</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>calls <bpt id="p1">[</bpt>_CrtMemCheckpoint<ept id="p1">](../../c-runtime-library/reference/crtmemcheckpoint.md)</ept> to obtain the current state of the heap and then scans the state for blocks that have not been freed.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>When an unfreed block is encountered, <ph id="ph1">`_CrtDumpMemoryLeaks`</ph> calls <bpt id="p1">[</bpt>_CrtMemDumpAllObjectsSince<ept id="p1">](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)</ept> to dump information for all the objects allocated in the heap from the start of program execution.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>By default, internal C run-time blocks (<ph id="ph1">`_CRT_BLOCK`</ph>) are not included in memory dump operations.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>_CrtSetDbgFlag<ept id="p1">](../../c-runtime-library/reference/crtsetdbgflag.md)</ept> function can be used to turn on the <ph id="ph1">`_CRTDBG_CHECK_CRT_DF`</ph> bit of <ph id="ph2">`_crtDbgFlag`</ph> to include these blocks in the leak detection process.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For more information about heap state functions and the <ph id="ph1">`_CrtMemState`</ph> structure, see <bpt id="p1">[</bpt>Heap State Reporting Functions<ept id="p1">](/visualstudio/debugger/crt-debug-heap-details)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information about how memory blocks are allocated, initialized, and managed in the debug version of the base heap, see <bpt id="p1">[</bpt>CRT Debug Heap Details<ept id="p1">](/visualstudio/debugger/crt-debug-heap-details)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>crtdbg.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For more compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Libraries</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Debug versions of <bpt id="p1">[</bpt>C run-time libraries<ept id="p1">](../../c-runtime-library/crt-library-features.md)</ept> only.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For a sample of how to use <ph id="ph1">`_CrtDumpMemoryLeaks`</ph>, see <bpt id="p1">[</bpt>crt_dbg1<ept id="p1">](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Debug Routines</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">84474d71cc29221c821f3076b38638b3d08d15f3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\delaysign-partially-sign-an-assembly.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2f7877244c882325f53833b4e0b9db94ae8a2e95</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6374f65aa19347048781e8fd1b1cba678e508921</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-DELAYSIGN (Partially Sign an Assembly) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/DELAYSIGN (Partially Sign an Assembly)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>where,</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>NO</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Specifies that the assembly should not be partially signed.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">**</bpt>/DELAYSIGN<ept id="p1">**</ept> if you only want to place the public key in the assembly.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The default is <bpt id="p1">**</bpt>/DELAYSIGN:NO<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>/DELAYSIGN<ept id="p1">**</ept> option has no effect unless used with <bpt id="p2">[</bpt>/KEYFILE<ept id="p2">](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)</ept> or <bpt id="p3">[</bpt>/KEYCONTAINER<ept id="p3">](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When you request a fully signed assembly, the compiler hashes the file that contains the manifest (assembly metadata) and signs that hash with the private key.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The resulting digital signature is stored in the file that contains the manifest.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When an assembly is delay signed, the linker does not compute and store the signature, but reserves space in the file so the signature can be added later.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For example, using <bpt id="p1">**</bpt>/DELAYSIGN<ept id="p1">**</ept> allows a tester to put the assembly in the global cache.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>After testing, you can fully sign the assembly by placing the private key in the assembly.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Strong Name Assemblies (Assembly Signing) (C++/CLI)<ept id="p1">](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)</ept> and <bpt id="p2">[</bpt>Delay Signing an Assembly<ept id="p2">](http://msdn.microsoft.com/Library/9d300e17-5bf1-4360-97da-2aa55efd9070)</ept> for more information on signing an assembly.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Other linker options that affect assembly generation are:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>/ASSEMBLYDEBUG</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>/ASSEMBLYLINKRESOURCE</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>/ASSEMBLYMODULE</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>/ASSEMBLYRESOURCE</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>/NOASSEMBLY</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To set this linker option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Setting Visual C++ Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Linker<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Command Line<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Type the option into the <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept> box.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>To set this linker option programmatically</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>See &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Setting Linker Options</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Linker Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

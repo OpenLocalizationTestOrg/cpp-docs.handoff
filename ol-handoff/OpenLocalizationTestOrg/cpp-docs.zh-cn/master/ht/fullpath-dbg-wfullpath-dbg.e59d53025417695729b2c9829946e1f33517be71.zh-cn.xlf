@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1ee80f407c720ccab3fc9f9a442c310872062d00</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\fullpath-dbg-wfullpath-dbg.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d220b6a558efce3b47329903792923c9a4779119</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e4f92ff82e2be595fd298f10f92803ee20711e81</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_fullpath_dbg, _wfullpath_dbg | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_fullpath_dbg, _wfullpath_dbg</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Versions of <bpt id="p1">[</bpt>_fullpath, _wfullpath<ept id="p1">](../../c-runtime-library/reference/fullpath-wfullpath.md)</ept> that use the debug version of <ph id="ph1">`malloc`</ph> to allocate memory.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Pointer to a buffer containing the absolute or full path name, or <ph id="ph1">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Relative path name.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Maximum length of the absolute path name buffer (<ph id="ph1">`absPath`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This length is in bytes for <ph id="ph1">`_fullpath`</ph> but in wide characters (<ph id="ph2">`wchar_t`</ph>) for <ph id="ph3">`_wfullpath`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Requested type of memory block: <ph id="ph1">`_CLIENT_BLOCK`</ph> or <ph id="ph2">`_NORMAL_BLOCK`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Pointer to the name of the source file that requested allocation operation or <ph id="ph1">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Line number in the source file where the allocation operation was requested or <ph id="ph1">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Each function returns a pointer to a buffer containing the absolute path name (<ph id="ph1">`absPath`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If there is an error (for example, if the value passed in <ph id="ph1">`relPath`</ph> includes a drive letter that is not valid or cannot be found, or if the length of the created absolute path name (<ph id="ph2">`absPath`</ph>) is greater than <ph id="ph3">`maxLength`</ph>) the function returns <ph id="ph4">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_fullpath_dbg`</ph> and <ph id="ph2">`_wfullpath_dbg`</ph> functions are identical to <ph id="ph3">`_fullpath`</ph> and <ph id="ph4">`_wfullpath`</ph> except that, when <bpt id="p1">**</bpt>_<ept id="p1">**</ept><ph id="ph5">`DEBUG`</ph>is defined, these functions use the debug version of <ph id="ph6">`malloc`</ph>, <ph id="ph7">`_malloc_dbg`</ph>, to allocate memory if NULL is passed as the first parameter.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For information on the debugging features of <ph id="ph1">`_malloc_dbg`</ph>, see <bpt id="p1">[</bpt>_malloc_dbg<ept id="p1">](../../c-runtime-library/reference/malloc-dbg.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You do not need to call these functions explicitly in most cases.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Instead, you can define the <ph id="ph1">`_CRTDBG_MAP_ALLOC`</ph> flag.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When <ph id="ph1">`_CRTDBG_MAP_ALLOC`</ph>is defined, calls to <ph id="ph2">`_fullpath`</ph> and <ph id="ph3">`_wfullpath`</ph>are remapped to <ph id="ph4">`_fullpath_dbg`</ph> and <ph id="ph5">`_wfullpath_dbg`</ph>, respectively, with the <ph id="ph6">`blockType`</ph> set to <ph id="ph7">`_NORMAL_BLOCK`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Thus, you do not need to call these functions explicitly unless you want to mark the heap blocks as <ph id="ph1">`_CLIENT_BLOCK`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Types of blocks on the debug heap<ept id="p1">](/visualstudio/debugger/crt-debug-heap-details)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Generic-Text Routine Mappings</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Tchar.h routine</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>_UNICODE and _MBCS not defined</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>_MBCS defined</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>_UNICODE defined</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>crtdbg.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>crtdbg.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>&lt;xref:System.IO.File.Create%2A&gt;</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>File Handling</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>_fullpath, _wfullpath</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Debug Versions of Heap Allocation Functions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

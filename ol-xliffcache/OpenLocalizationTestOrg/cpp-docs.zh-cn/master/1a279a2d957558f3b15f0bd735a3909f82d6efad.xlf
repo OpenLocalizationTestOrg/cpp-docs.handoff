@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1a279a2d957558f3b15f0bd735a3909f82d6efad</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\copy-constructors-and-copy-assignment-operators-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">aee5aa4c794eca076b8f9e14bc1e96878bab7b30</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">afc341c50b36c9e32dca96d1afbb00cf2873d5d9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Copy Constructors and Copy Assignment Operators (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Copy Constructors and Copy Assignment Operators (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Starting in C++11, two kinds of assignment are supported in the language: <bpt id="p1">*</bpt>copy assignment<ept id="p1">*</ept> and <bpt id="p2">*</bpt>move assignment<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In this article "assignment" means copy assignment unless explicitly stated otherwise.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For information about move assignment, see <bpt id="p1">[</bpt>Move Constructors and Move Assignment Operators (C++)<ept id="p1">](http://msdn.microsoft.com/en-us/1442de5f-37a5-42a1-83a6-ec9cfe0414db)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Both the assignment operation and the initialization operation cause objects to be copied.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Assignment<ept id="p1">**</ept>: When one object's value is assigned to another object, the first object is copied to the second object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Therefore,</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>causes the value of <ph id="ph1">`b`</ph> to be copied to <ph id="ph2">`a`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Initialization<ept id="p1">**</ept>: Initialization occurs when a new object is declared, when arguments are passed to functions by value, or when values are returned from functions by value.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You can define the semantics of "copy" for objects of class type.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For example, consider this code:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The preceding code could mean "copy the contents of FILE1.DAT to FILE2.DAT" or it could mean "ignore FILE2.DAT and make <ph id="ph1">`b`</ph> a second handle to FILE1.DAT."</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You must attach appropriate copying semantics to each class, as follows.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>By using the assignment operator <ph id="ph1">`operator=`</ph> together with a reference to the class type as the return type and the parameter that is passed by <ph id="ph2">`const`</ph> reference—for example <ph id="ph3">`ClassName&amp; operator=(const ClassName&amp; x);`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>By using the copy constructor.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If you do not declare a copy constructor, the compiler generates a member-wise copy constructor for you.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If you do not declare a copy assignment operator, the compiler generates a member-wise copy assignment operator for you.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Declaring a copy constructor does not suppress the compiler-generated copy assignment operator, nor vice versa.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If you implement either one, we recommend that you also implement the other one so that the meaning of the code is clear.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The copy constructor takes an argument of type <bpt id="p1">*</bpt>class-name<ept id="p1">*</ept><bpt id="p2">**</bpt><ph id="ph1">&amp;</ph><ept id="p2">**</ept>, where <bpt id="p3">*</bpt>class-name<ept id="p3">*</ept> is the name of the class for which the constructor is defined.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Make the type of the copy constructor's argument <bpt id="p1">*</bpt>const class-name<ept id="p1">*</ept><bpt id="p2">**</bpt><ph id="ph1">&amp;</ph><ept id="p2">**</ept> whenever possible.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This prevents the copy constructor from accidentally changing the object from which it is copying.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>It also enables copying from <bpt id="p1">**</bpt>const<ept id="p1">**</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Compiler generated copy constructors</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Compiler-generated copy constructors, like user-defined copy constructors, have a single argument of type "reference to <bpt id="p1">*</bpt>class-name<ept id="p1">*</ept>."</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>An exception is when all base classes and member classes have copy constructors declared as taking a single argument of type <bpt id="p1">**</bpt>const<ept id="p1">**</ept> <bpt id="p2">*</bpt>class-name<ept id="p2">*</ept><bpt id="p3">**</bpt><ph id="ph1">&amp;</ph><ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In such a case, the compiler-generated copy constructor's argument is also <bpt id="p1">**</bpt>const<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>When the argument type to the copy constructor is not <bpt id="p1">**</bpt>const<ept id="p1">**</ept>, initialization by copying a <bpt id="p2">**</bpt>const<ept id="p2">**</ept> object generates an error.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The reverse is not true: If the argument is <bpt id="p1">**</bpt>const<ept id="p1">**</ept>, you can initialize by copying an object that is not <bpt id="p2">**</bpt>const<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Compiler-generated assignment operators follow the same pattern with regard to <bpt id="p1">**</bpt>const.<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>They take a single argument of type <bpt id="p1">*</bpt>class-name<ept id="p1">*</ept><bpt id="p2">**</bpt><ph id="ph1">&amp;</ph><ept id="p2">**</ept> unless the assignment operators in all base and member classes take arguments of type <bpt id="p3">**</bpt>const<ept id="p3">**</ept> <bpt id="p4">*</bpt>class-name&amp;.<ept id="p4">*</ept></source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>In this case, the class's generated assignment operator takes a <bpt id="p1">**</bpt>const<ept id="p1">**</ept> argument.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>When virtual base classes are initialized by copy constructors, compiler-generated or user-defined, they are initialized only once: at the point when they are constructed.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The implications are similar to those of the copy constructor.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>When the argument type is not <bpt id="p1">**</bpt>const<ept id="p1">**</ept>, assignment from a <bpt id="p2">**</bpt>const<ept id="p2">**</ept> object generates an error.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The reverse is not true: If a <bpt id="p1">**</bpt>const<ept id="p1">**</ept> value is assigned to a value that is not <bpt id="p2">**</bpt>const<ept id="p2">**</ept>, the assignment succeeds.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>For more information about overloaded assignment operators, see <bpt id="p1">[</bpt>Assignment<ept id="p1">](../cpp/assignment.md)</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

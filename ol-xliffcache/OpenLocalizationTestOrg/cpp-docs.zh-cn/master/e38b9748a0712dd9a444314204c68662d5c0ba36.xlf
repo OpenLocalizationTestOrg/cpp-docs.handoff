@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e38b9748a0712dd9a444314204c68662d5c0ba36</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\set-unexpected-crt.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">88609717ddb4b860e78ad401d60cc86cf17c1cde</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ec94bbdf95eba7bc5913df32d257c03fb2face3e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>set_unexpected (CRT) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>set_unexpected (CRT)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Installs your own termination function to be called by <ph id="ph1">`unexpected`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Pointer to a function that you write to replace the <ph id="ph1">`unexpected`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Returns a pointer to the previous termination function registered by <ph id="ph1">`_set_unexpected`</ph> so that the previous function can be restored later.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If no previous function has been set, the return value may be used to restore the default behavior; this value may be NULL.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`set_unexpected`</ph> function installs <ph id="ph2">`unexpFunction`</ph> as the function called by <ph id="ph3">`unexpected`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>is not used in the current C++ exception-handling implementation.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`unexpected_function`</ph> type is defined in EH.H as a pointer to a user-defined unexpected function, <ph id="ph2">`unexpFunction`</ph> that returns <ph id="ph3">`void`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Your custom <ph id="ph1">`unexpFunction`</ph> function should not return to its caller.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>By default, <ph id="ph1">`unexpected`</ph> calls <ph id="ph2">`terminate`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You can change this default behavior by writing your own termination function and calling <ph id="ph1">`set_unexpected`</ph> with the name of your function as its argument.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>calls the last function given as an argument to <ph id="ph1">`set_unexpected`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Unlike the custom termination function installed by a call to <ph id="ph1">`set_terminate`</ph>, an exception can be thrown from within <ph id="ph2">`unexpFunction`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In a multithreaded environment, unexpected functions are maintained separately for each thread.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Each new thread needs to install its own unexpected function.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Thus, each thread is in charge of its own unexpected handling.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>In the current Microsoft implementation of C++ exception handling, <ph id="ph1">`unexpected`</ph> calls <ph id="ph2">`terminate`</ph> by default and is never called by the exception-handling run-time library.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>There is no particular advantage to calling <ph id="ph1">`unexpected`</ph> rather than <ph id="ph2">`terminate`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>There is a single <ph id="ph1">`set_unexpected`</ph> handler for all dynamically linked DLLs or EXEs; even if you call <ph id="ph2">`set_unexpected`</ph> your handler may be replaced by another or that you are replacing a handler set by another DLL or EXE.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>eh.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Exception Handling Routines</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>abort</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>_get_unexpected</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>set_terminate</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>terminate</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>unexpected</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

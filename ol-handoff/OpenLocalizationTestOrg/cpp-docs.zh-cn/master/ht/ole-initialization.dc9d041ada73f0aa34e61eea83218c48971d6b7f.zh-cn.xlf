@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">05eea15d73b9b914900860221ea8f43e1f20d556</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\reference\ole-initialization.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e59893e6c1b61b5301333560c5ddb426ef7c3e22</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9e9ed459725966bc29868d840bdb6be5bbacae87</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>OLE Initialization | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>OLE Initialization</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Before an application can use OLE system services, it must initialize the OLE system DLLs and verify that the DLLs are the correct version.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>AfxOleInit<ept id="p1">**</ept> function initializes the OLE system DLLs.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>OLE Initialization</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>AfxOleInit</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Initializes the OLE libraries.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>AfxOleInit</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Initializes OLE support for the application.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Nonzero if successful; 0 if initialization fails, possibly because incorrect versions of the OLE system DLLs are installed.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Call this function to initialize the OLE support for an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When this function is called, the following actions occur:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Initializes the COM library on the current apartment of the calling application.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>OleInitialize<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms690134)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Creates a message filter object, implementing the <bpt id="p1">[</bpt>IMessageFilter<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms693740)</ept> interface.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This message filter can be accessed with a call to <bpt id="p1">[</bpt>AfxOleGetMessageFilter<ept id="p1">](http://msdn.microsoft.com/library/36cca011-4775-4086-b471-5557a87b266c)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>AfxOleInit<ept id="p1">**</ept> is called from an MFC DLL, the call will fail.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The failure occurs because the function assumes that, if it is called from a DLL, the OLE system was previously initialized by the calling application.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>MFC applications must be initialized as single threaded apartment (STA).</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If you call <bpt id="p1">[</bpt>CoInitializeEx<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms695279)</ept> in your <ph id="ph1">`InitInstance`</ph> override, specify <ph id="ph2">`COINIT_APARTMENTTHREADED`</ph> (rather than <ph id="ph3">`COINIT_MULTITHREADED`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For more information, see PRB: MFC Application Stops Responding When You Initialize the Application as a Multithreaded Apartment (828643) at <bpt id="p1">[</bpt>http://support.microsoft.com/default.aspxscid=kb;en-us;828643<ept id="p1">](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Macros and Globals</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

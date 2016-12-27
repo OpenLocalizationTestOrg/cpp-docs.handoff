@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">412785826cb58485b6b66b0cae8687fe29bb0c9c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\ide\mfc-program-or-control-source-and-header-files.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">23e4d5cec9057bf2d898c4c8aac1b0a3d6bb4621</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">20cad5e04b1ac74a0fd5cb85e1eb3103b0c900eb</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>MFC Program or Control Source and Header Files | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>MFC Program or Control Source and Header Files</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following files are created when you create an MFC project in Visual Studio, depending on the options you select for the project you create.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For example, your project contains <bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>dlg.cpp and <bpt id="p2">*</bpt>Projname<ept id="p2">*</ept>dlg.h files only if you create a dialog-based project or class.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>All of these files are located in the <bpt id="p1">*</bpt>Projname<ept id="p1">*</ept> directory, and in either the Header Files (.h files) folder or Source Files (.cpp files) folder in Solution Explorer.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>File name</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>.h</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The main include file for the program or DLL.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>It contains all global symbols and <ph id="ph1">`#include`</ph> directives for other header files.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>It derives the <ph id="ph1">`CPrjnameApp`</ph> class from <ph id="ph2">`CWinApp`</ph> and declares an <ph id="ph3">`InitInstance`</ph> member function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For a control, the <ph id="ph1">`CPrjnameApp`</ph> class is derived from <ph id="ph2">`COleControlModule`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>.cpp</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The main program source file.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It creates one object of the class <ph id="ph1">`CPrjnameApp`</ph>, which is derived from <ph id="ph2">`CWinApp`</ph>, and overrides the <ph id="ph3">`InitInstance`</ph> member function.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For executables, <ph id="ph1">`CPrjnameApp::InitInstance`</ph> does several things.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>It registers document templates, which serve as a connection between documents and views; creates a main frame window; and creates an empty document (or opens a document if one is specified as a command-line argument to the application).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For DLLs and ActiveX (formerly OLE) controls, <ph id="ph1">`CProjNameApp::InitInstance`</ph> registers the control's object factory with OLE by calling <ph id="ph2">`COleObjectFactory::RegisterAll`</ph> and makes a call to <ph id="ph3">`AfxOLEInit`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In addition, the member function <ph id="ph1">`CProjNameApp::ExitInstance`</ph> is used to unload the control from memory with a call to <bpt id="p1">**</bpt>AfxOleTerm<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This file also registers and unregisters the control in the Windows registration database by implementing the <ph id="ph1">`DllRegisterServer`</ph> and <ph id="ph2">`DllUnregisterServer`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>ctrl.h, <bpt id="p2">*</bpt>Projname<ept id="p2">*</ept>ctrl.cpp</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Declare and implement the <ph id="ph1">`CProjnameCtrl`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>is derived from <ph id="ph1">`COleControl`</ph>, and skeleton implementations of some member functions are defined that initialize, draw, and serialize (load and save) the control.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Message, event, and dispatch maps are also defined.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>dlg.cpp, <bpt id="p2">*</bpt>Projname<ept id="p2">*</ept>dlg.h</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Created if you choose a dialog-based application.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The files derive and implement the dialog class, named <ph id="ph1">`CProjnameDlg`</ph>, and include skeleton member functions to initialize a dialog and perform dialog data exchange (DDX).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Your About dialog class is also placed in these files instead of in <bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>.cpp.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Dlgproxy.cpp, Dlgproxy.h</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In a dialog-based program, the implementation and header file for the project's Automation proxy class for the main dialog.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This is only used if you have chosen Automation support.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>doc.cpp, <bpt id="p2">*</bpt>Projname<ept id="p2">*</ept>doc.h</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Derive and implement the document class, named <ph id="ph1">`CProjnameDoc`</ph>, and include skeleton member functions to initialize a document, serialize (save and load) a document, and implement debugging diagnostics.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>set.h/.cpp</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Created if you create a program that supports a database and contains the recordset class.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>view.cpp, <bpt id="p2">*</bpt>Projname<ept id="p2">*</ept>view.h</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Derive and implement the view class, named <ph id="ph1">`CProjnameView`</ph>, which is used to display and print the document data.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CProjnameView`</ph> class is derived from one of the following MFC classes:</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>CEditView</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>CFormView</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>CRecordView</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>COleDBRecordView</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>CTreeView</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>CListView</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>CRichEditView</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>CScrollView</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>CView</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>CHTMLView</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>CHTMLEditView</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The project's view class contains skeleton member functions to draw the view and implement debugging diagnostics.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>If you have enabled support for printing, then message-map entries are added for print, print setup, and print preview command messages.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>These entries call the corresponding member functions in the base view class.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Projname<ept id="p1">*</ept>PropPage.h, <bpt id="p2">*</bpt>Projname<ept id="p2">*</ept>PropPage.cpp</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Declare and implement the <ph id="ph1">`CProjnamePropPage`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>is derived from <ph id="ph1">`COlePropertyPage`</ph> and a skeleton member function, <ph id="ph2">`DoDataExchange`</ph>, is provided to implement data exchange and validation.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>IPframe.cpp, IPframe.h</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Created if the Mini-Server or Full-Server option is selected in the application wizard's <bpt id="p1">**</bpt>Automation Options<ept id="p1">**</ept> page (step 3 of 6).</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The files derive and implement the in-place frame window class, named <bpt id="p1">**</bpt>CInPlaceFrame<ept id="p1">**</ept>, used when the server is in place activated by a container program.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Mainfrm.cpp, Mainfrm.h</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Derive the <bpt id="p1">**</bpt>CMainFrame<ept id="p1">**</ept> class from either <bpt id="p2">[</bpt>CFrameWnd<ept id="p2">](../mfc/reference/cframewnd-class.md)</ept> (for SDI applications) or <bpt id="p3">[</bpt>CMDIFrameWnd<ept id="p3">](../mfc/reference/cmdiframewnd-class.md)</ept> (for MDI applications).</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>CMainFrame<ept id="p1">**</ept> class handles the creation of toolbar buttons and the status bar, if the corresponding options are selected in the application wizard's <bpt id="p2">**</bpt>Application Options<ept id="p2">**</ept> page (step 4 of 6).</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>For information on using <bpt id="p1">**</bpt>CMainFrame<ept id="p1">**</ept>, see <bpt id="p2">[</bpt>The Frame-Window Classes Created by the Application Wizard<ept id="p2">](../mfc/frame-window-classes-created-by-the-application-wizard.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Childfrm.cpp, Childfrm.h</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Derive the <bpt id="p1">**</bpt>CChildFrame<ept id="p1">**</ept> class from <bpt id="p2">[</bpt>CMDIChildWnd<ept id="p2">](../mfc/reference/cmdichildwnd-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>CChildFrame<ept id="p1">**</ept> class is used for MDI document frame windows.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>These files are always created if you select the MDI option.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>File Types Created for Visual C++ Projects</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>ATL Program or Control Source and Header Files</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>CLR Projects</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

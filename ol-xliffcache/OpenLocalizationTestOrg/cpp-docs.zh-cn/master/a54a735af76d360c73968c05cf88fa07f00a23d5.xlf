@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a54a735af76d360c73968c05cf88fa07f00a23d5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\recordset-filtering-records-odbc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">eca89d35411ab983354e20e927129308a2a62f50</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fbdea04cf08009f46fd4a4097fea05f289261997</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Recordset: Filtering Records (ODBC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Recordset: Filtering Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic applies to the MFC ODBC classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic explains how to filter a recordset so that it selects only a particular subset of the available records.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, you might want to select only the class sections for a particular course, such as MATH101.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>A filter is a search condition defined by the contents of a SQL <bpt id="p1">**</bpt>WHERE<ept id="p1">**</ept> clause.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>When the framework appends it to the recordset's SQL statement, the <bpt id="p1">**</bpt>WHERE<ept id="p1">**</ept> clause constrains the selection.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You must establish a recordset object's filter after you construct the object but before you call its <bpt id="p1">**</bpt>Open<ept id="p1">**</ept> member function (or before you call the <bpt id="p2">**</bpt>Requery<ept id="p2">**</ept> member function for an existing recordset object whose <bpt id="p3">**</bpt>Open<ept id="p3">**</ept> member function has been called previously).</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To specify a filter for a recordset object</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Construct a new recordset object (or prepare to call <bpt id="p1">**</bpt>Requery<ept id="p1">**</ept> for an existing object).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Set the value of the object's <bpt id="p1">[</bpt>m_strFilter<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__m_strfilter)</ept> data member.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The filter is a null-terminated string that contains the contents of the SQL <bpt id="p1">**</bpt>WHERE<ept id="p1">**</ept> clause but not the keyword <bpt id="p2">**</bpt>WHERE<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For example, use:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>not</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The literal string "MATH101" is shown with single quotation marks above.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In the ODBC SQL specification, single quotes are used to denote a character string literal.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Check your ODBC driver documentation for the quoting requirements of your DBMS in this situation.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This syntax is also discussed further near the end of this topic.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Set any other options you need, such as sort order, locking mode, or parameters.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Specifying a parameter is especially useful.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For information about parameterizing your filter, see <bpt id="p1">[</bpt>Recordset: Parameterizing a Recordset (ODBC)<ept id="p1">](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">**</bpt>Open<ept id="p1">**</ept> for the new object (or <bpt id="p2">**</bpt>Requery<ept id="p2">**</ept> for a previously opened object).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Using parameters in your filter is potentially the most efficient method for retrieving records.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Recordset filters are useful for <bpt id="p1">[</bpt>joining<ept id="p1">](../../data/odbc/recordset-performing-a-join-odbc.md)</ept> tables and for using <bpt id="p2">[</bpt>parameters<ept id="p2">](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)</ept> based on information obtained or calculated at run time.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The recordset selects only those records that meet the search condition you specified.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For example, to specify the course filter described above (assuming a variable <ph id="ph1">`strCourseID`</ph> currently set, for instance, to "MATH101"), do the following:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The recordset contains records for all class sections for MATH101.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Notice how the filter string was set in the example above, using a string variable.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>This is the typical usage.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>But suppose you wanted to specify the literal value 100 for the course ID.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The following code shows how to set the filter string correctly with a literal value:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Note the use of single quote characters; if you set the filter string directly, the filter string is <bpt id="p1">**</bpt>not<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The quoting shown above conforms to the ODBC specification, but some DBMSs might require other quote characters.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>SQL: Customizing Your Recordset's SQL Statement (ODBC)<ept id="p1">](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If you choose to override the recordset's default SQL string by passing your own SQL string to <bpt id="p1">**</bpt>Open<ept id="p1">**</ept>, you should not set a filter if your custom string has a <bpt id="p2">**</bpt>WHERE<ept id="p2">**</ept> clause.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For more information about overriding the default SQL, see <bpt id="p1">[</bpt>SQL: Customizing Your Recordset's SQL Statement (ODBC)<ept id="p1">](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Recordset: Sorting Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Recordset: How Recordsets Select Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Recordset: How Recordsets Update Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Recordset: Locking Records (ODBC)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

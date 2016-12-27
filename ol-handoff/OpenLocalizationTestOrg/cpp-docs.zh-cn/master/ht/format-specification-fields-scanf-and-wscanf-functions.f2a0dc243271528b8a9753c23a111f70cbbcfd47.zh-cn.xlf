@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f5747c564bd6a7e72f22b0e627a311b8f4348735</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\format-specification-fields-scanf-and-wscanf-functions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7b837cd5a6e1f5ce22d49e7e60d09f0e962fbac8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">19acc0ce64fa96a3cb711f5071f7fd8cf52360e5</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Format Specification Fields: scanf and wscanf Functions | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Format Specification Fields: scanf and wscanf Functions</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The information here applies to the entire <ph id="ph1">`scanf`</ph> family of functions, including the secure versions and describes the symbols used to tell the <ph id="ph2">`scanf`</ph> functions how to parse the input stream, such as the input stream <ph id="ph3">`stdin`</ph> for <ph id="ph4">`scanf`</ph>, into values that are inserted into program variables.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A format specification has the following form:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>[<ph id="ph1">`*`</ph>] [<bpt id="p1">[</bpt>width<ept id="p1">](../c-runtime-library/scanf-width-specification.md)</ept>] [{<bpt id="p2">[</bpt>h &amp;#124; l &amp;#124; ll &amp;#124; I64 &amp;#124; L<ept id="p2">](../c-runtime-library/scanf-width-specification.md)</ept>}]<bpt id="p3">[</bpt>type<ept id="p3">](../c-runtime-library/scanf-type-field-characters.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`format`</ph> argument specifies the interpretation of the input and can contain one or more of the following:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>White-space characters: blank (' '); tab ('\t'); or newline ('\n').</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A white-space character causes <ph id="ph1">`scanf`</ph> to read, but not store, all consecutive white-space characters in the input up to the next non–white-space character.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>One white-space character in the format matches any number (including 0) and combination of white-space characters in the input.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Non–white-space characters, except for the percent sign (<ph id="ph1">`%`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A non–white-space character causes <ph id="ph1">`scanf`</ph> to read, but not store, a matching non–white-space character.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If the next character in the input stream does not match, <ph id="ph1">`scanf`</ph> terminates.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Format specifications, introduced by the percent sign (<ph id="ph1">`%`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A format specification causes <ph id="ph1">`scanf`</ph> to read and convert characters in the input into values of a specified type.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The value is assigned to an argument in the argument list.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The format is read from left to right.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Characters outside format specifications are expected to match the sequence of characters in the input stream; the matching characters in the input stream are scanned but not stored.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If a character in the input stream conflicts with the format specification, <ph id="ph1">`scanf`</ph> terminates, and the character is left in the input stream as if it had not been read.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When the first format specification is encountered, the value of the first input field is converted according to this specification and stored in the location that is specified by the first <ph id="ph1">`argument`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The second format specification causes the second input field to be converted and stored in the second <ph id="ph1">`argument`</ph>, and so on through the end of the format string.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>An input field is defined as all characters up to the first white-space character (space, tab, or newline), or up to the first character that cannot be converted according to the format specification, or until the field width (if specified) is reached.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If there are too many arguments for the given specifications, the extra arguments are evaluated but ignored.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The results are unpredictable if there are not enough arguments for the format specification.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Each field of the format specification is a single character or a number signifying a particular format option.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`type`</ph> character, which appears after the last optional format field, determines whether the input field is interpreted as a character, a string, or a number.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The simplest format specification contains only the percent sign and a <ph id="ph1">`type`</ph> character (for example, <ph id="ph2">`%s`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>If a percent sign (<ph id="ph1">`%`</ph>) is followed by a character that has no meaning as a format-control character, that character and the following characters (up to the next percent sign) are treated as an ordinary sequence of characters, that is, a sequence of characters that must match the input.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For example, to specify that a percent-sign character is to be input, use <ph id="ph1">`%%`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>An asterisk (<ph id="ph1">`*`</ph>) following the percent sign suppresses assignment of the next input field, which is interpreted as a field of the specified type.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The field is scanned but not stored.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The secure versions (those with the <ph id="ph1">`_s`</ph> suffix) of the <ph id="ph2">`scanf`</ph> family of functions require that a buffer size parameter be passed immediately following each parameter of type <ph id="ph3">`c`</ph>, <ph id="ph4">`C`</ph>, <ph id="ph5">`s`</ph>, <ph id="ph6">`S`</ph> or <ph id="ph7">`[`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information on the secure versions of the <ph id="ph1">`scanf`</ph> family of functions, see <bpt id="p1">[</bpt>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l<ept id="p1">](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>scanf Width Specification</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>scanf Type Field Characters</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>scanf, _scanf_l, wscanf, _wscanf_l</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

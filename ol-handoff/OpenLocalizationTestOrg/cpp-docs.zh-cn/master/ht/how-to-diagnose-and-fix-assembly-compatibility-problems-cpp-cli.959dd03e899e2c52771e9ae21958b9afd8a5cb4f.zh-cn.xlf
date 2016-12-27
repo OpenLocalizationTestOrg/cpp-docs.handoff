@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5c052451bc265af5dcdfca3e3c62ce5fdb77ef4b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\how-to-diagnose-and-fix-assembly-compatibility-problems-cpp-cli.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">90fdb1ec652f13cd212f493e9734a37163315252</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cd994a4fc369da21df01ae51e0e55720c7ea50f5</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Diagnose and Fix Assembly Compatibility Problems (C++-CLI) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Diagnose and Fix Assembly Compatibility Problems (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic explains what can happen when the version of an assembly referenced at compile time doesn't match the version of the assembly referenced at runtime, and how to avoid the problem.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When an assembly is compiled, other assemblies may be referenced with the <ph id="ph1">`#using`</ph> syntax.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>During the compilation, these assemblies are accessed by the compiler.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Information from these assemblies is used to make optimization decisions.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>However, if the referenced assembly is changed and recompiled, and you do not recompile the referencing assembly that is dependent on it, the assemblies might not still be compatible.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Optimization decisions that were valid at first might not be correct with respect to the new assembly version.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Various runtime errors might occur due to these incompatibilities.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>There is no specific exception that will be produced in such cases.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The way the failure is reported at runtime depends on the nature of the code change that caused the problem.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>These errors should not be a problem in your final production code as long as the entire application is rebuilt for the released version of your product.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Assemblies that are released to the public should be marked with an official version number, which will ensure that these problems are avoided.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Assembly Versioning<ept id="p1">](http://msdn.microsoft.com/Library/775ad4fb-914f-453c-98ef-ce1089b6f903)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Diagnosing and fixing an incompatibility error</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you encounter runtime exceptions or other error conditions that occur in code that references another assembly, and have no other identified cause, you may be dealing with an out of date assembly.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>First, isolate and reproduce the exception or other error condition.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>A problem that occurs due to an outdated exception should be reproducible.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Check the timestamp of any assemblies referenced in your application.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If the timestamps of any referenced assemblies are later than the timestamp of your application's last compilation, then your application is out of date.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If this occurs, recompile your application with the most recent assembly, and make any code changes required.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Rerun the application, perform the steps that reproduce the problem, and verify that the exception does not occur.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The following program illustrates the problem by reducing the accessibility of a method, and trying to access that method in another assembly without recompiling.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Try compiling <ph id="ph1">`changeaccess.cpp`</ph> first.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This is the referenced assembly which will change.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Then compile <ph id="ph1">`referencing.cpp`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The compilation succeeds.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Now, reduce the accessibility of the called method.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Recompile <ph id="ph1">`changeaccess.cpp`</ph> with the flag <ph id="ph2">`/DCHANGE_ACCESS`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This makes the method protected, rather than private, so it can longer be called legally.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Without recompiling <ph id="ph1">`referencing.exe`</ph>, rerun the application.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>An exception &lt;xref:System.MethodAccessException&gt; will result.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>using Directive</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Managed Types (C++/CLI)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

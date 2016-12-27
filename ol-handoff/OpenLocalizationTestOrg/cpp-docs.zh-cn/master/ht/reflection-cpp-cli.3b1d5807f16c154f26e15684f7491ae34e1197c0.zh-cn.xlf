@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">01b739c5b4fb663083226d9eb7e8610483e64e9f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\reflection-cpp-cli.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ac65dc1d2c23d46c105ffd145a94dc9c53ac54d4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bebf071e987350ad9f298bec4e832e642f8949ab</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Reflection (C++-CLI) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Reflection (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Reflection allows known data types to be inspected at runtime.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Reflection allows the enumeration of data types in a given assembly, and the members of a given class or value type can be discovered.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This is true regardless of whether the type was known or referenced at compile time.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This makes reflection a useful feature for development and code management tools.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Note that the assembly name provided is the strong name (see <bpt id="p1">[</bpt>Strong-Named Assemblies<ept id="p1">](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9)</ept>), which includes the assembly version, culture, and signing information.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Note also that the name of the namespace in which the data type is defined can be retrieved, along with the name of the base class.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The most common way to access reflection features is through the &lt;xref:System.Object.GetType%2A&gt; method.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This method is provided by <bpt id="p1">[</bpt>System::Object<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.object.aspx)</ept>, from which all garbage-collected classes derive.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Reflection on an .exe built with the Visual C++ compiler is allowed if the .exe is built with the <bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept> or <bpt id="p2">**</bpt>/clr:safe<ept id="p2">**</ept> compiler options.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>/clr (Common Language Runtime Compilation)<ept id="p1">](../build/reference/clr-common-language-runtime-compilation.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Topics in this section:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>How to: Implement a Plug-In Component Architecture using Reflection (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>How to: Enumerate Data Types in Assemblies using Reflection (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>System.Reflection Namespace<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)</ept></source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`GetType`</ph> method returns a pointer to a &lt;xref:System.Type&gt; class object, which describes the type upon when the object is based.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>(The <bpt id="p1">**</bpt>Type<ept id="p1">**</ept> object does not contain any instance-specific information.) One such item is the full name of the type, which can be displayed as follows:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Note that the type name includes the full scope in which the type is defined, including the namespace, and that it is displayed in .NET syntax, with a dot as the scope resolution operator.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Value types can be used with the <ph id="ph1">`GetType`</ph> function as well, but they must be boxed first.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>As with the <ph id="ph1">`GetType`</ph> method, the <bpt id="p1">[</bpt>typeid<ept id="p1">](../windows/typeid-cpp-component-extensions.md)</ept> operator returns a pointer to a <bpt id="p2">**</bpt>Type<ept id="p2">**</ept> object, so this code indicates the type name <bpt id="p3">**</bpt>System.Int32<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Displaying type names is the most basic feature of reflection, but a potentially more useful technique is to inspect or discover the valid values for enumerated types.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This can be done by using the static <bpt id="p1">**</bpt>Enum::GetNames<ept id="p1">**</ept> function, which returns an array of strings, each containing an enumeration value in text form.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The following sample retrieves an array of strings that describes the value enumeration values for the <bpt id="p1">**</bpt>Options<ept id="p1">**</ept> (CLR) enum and displays them in a loop.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If a fourth option is added to the <bpt id="p1">**</bpt>Options<ept id="p1">**</ept> enumeration, this code will report the new option without recompilation, even if the enumeration is defined in a separate assembly.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`GetType`</ph> object supports a number of members and properties that can be used to examine a type.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This code retrieves and displays some of this information:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Reflection also allows the enumeration of types within an assembly and the members within classes.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>To demonstrate this feature, define a simple class:</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If the code above is compiled into a DLL called vcpp_reflection_6.dll, you can then use reflection to inspect the contents of this assembly.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This involves using the static reflection API function <bpt id="p1">[</bpt>Assembly::Load<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx)</ept> to load the assembly.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This function returns the address of an <bpt id="p1">**</bpt>Assembly<ept id="p1">**</ept> object that can then be queried about the modules and types within.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Once the reflection system successfully loads the assembly, an array of <bpt id="p1">**</bpt>Type<ept id="p1">**</ept> objects is retrieved with the <bpt id="p2">[</bpt>Assembly::GetTypes<ept id="p2">](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx)</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Each array element contains information about a different type, although in this case, only one class is defined.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Using a loop, each <bpt id="p1">**</bpt>Type<ept id="p1">**</ept> in this array is queried about the type members using the <bpt id="p2">**</bpt>Type::GetMembers<ept id="p2">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This function returns an array of <bpt id="p1">**</bpt>MethodInfo<ept id="p1">**</ept> objects, each object containing information about the member function, data member, or property in the type.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Note that the list of methods includes the functions explicitly defined in <bpt id="p1">**</bpt>TestClass<ept id="p1">**</ept> and the functions implicitly inherited from the <bpt id="p2">**</bpt>System::Object<ept id="p2">**</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>As part of being described in .NET rather than in Visual C++ syntax, properties appear as the underlying data member accessed by the get/set functions.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The get/set functions appear in this list as regular methods.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Reflection is supported through the common language runtime, not by the Visual C++ compiler.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Although you used this code to inspect an assembly that you defined, you can also use this code to inspect .NET assemblies.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>For example, if you change TestAssembly to mscorlib, then you will see a listing of every type and method defined in mscorlib.dll.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>.NET Programming with C++/CLI (Visual C++)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

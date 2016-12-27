@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b144ce1468746cd74eba4696f31543af63ba3691</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\walkthrough-updating-the-mfc-scribble-application-part-2.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">062f1b40f6f6fcd01ab58b82baffa7a79c435a06</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">06f8a8693b47761dc1b0f2d03365e6e84d533f45</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Updating the MFC Scribble Application (Part 2) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Updating the MFC Scribble Application (Part 2)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Part 1<ept id="p1">](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)</ept> of this walkthrough showed how to add an Office Fluent Ribbon to the classic Scribble application.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This part shows how to add ribbon panels and controls that users can use instead of menus and commands.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Visual C++ Samples</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Sections</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This part of the walkthrough has the following sections:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Adding New Panels to the Ribbon</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Adding a Help Panel to the Ribbon</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Adding a Pen Panel to the Ribbon</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Adding a Color Button to the Ribbon</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Adding a Color Member to the Document Class</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Initializing Pens and Saving Preferences</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Adding New Panels to the Ribbon</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>These steps show how to add a <bpt id="p1">**</bpt>View<ept id="p1">**</ept> panel that contains two check boxes that control the visibility of the toolbar and the status bar, and also a <bpt id="p2">**</bpt>Window<ept id="p2">**</ept> panel that contains a vertically oriented split button that controls the creation and arrangement of multiple-document interface (MDI) windows.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To add a View panel and Window panel to the ribbon bar</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Create a panel named <ph id="ph1">`View`</ph>, which has two check boxes that toggle the status bar and toolbar.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>From the <bpt id="p1">**</bpt>Toolbox<ept id="p1">**</ept>, drag a <bpt id="p2">**</bpt>Panel<ept id="p2">**</ept> to the <bpt id="p3">**</bpt>Home<ept id="p3">**</ept> category.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Then drag two <bpt id="p1">**</bpt>Check Boxes<ept id="p1">**</ept> to the panel.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Click the panel to modify its properties.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`View`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Click the first check box to modify its properties.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>ID<ept id="p1">**</ept> to <ph id="ph1">`ID_VIEW_TOOLBAR`</ph> and <bpt id="p2">**</bpt>Caption<ept id="p2">**</ept> to <ph id="ph2">`Toolbar`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Click the second check box to modify its properties.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>ID<ept id="p1">**</ept> to <ph id="ph1">`ID_VIEW_STATUS_BAR`</ph> and <bpt id="p2">**</bpt>Caption<ept id="p2">**</ept> to <ph id="ph2">`Status Bar`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Create a panel named <ph id="ph1">`Window`</ph> that has a split button.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>When a user clicks the split button, a shortcut menu displays three commands that are already defined in the Scribble application.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>From the <bpt id="p1">**</bpt>Toolbox<ept id="p1">**</ept>, drag a <bpt id="p2">**</bpt>Panel<ept id="p2">**</ept> to the <bpt id="p3">**</bpt>Home<ept id="p3">**</ept> category.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Then drag a <bpt id="p1">**</bpt>Button<ept id="p1">**</ept> to the panel.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Click the panel to modify its properties.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Window`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Click the button.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Windows`</ph>, <bpt id="p2">**</bpt>Keys<ept id="p2">**</ept> to <ph id="ph2">`w`</ph>, <bpt id="p3">**</bpt>Large Image Index<ept id="p3">**</ept> to <ph id="ph3">`1`</ph>, and <bpt id="p4">**</bpt>Split Mode<ept id="p4">**</ept> to <ph id="ph4">`False`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Then click the ellipsis (<bpt id="p1">**</bpt>...<ept id="p1">**</ept>) next to <bpt id="p2">**</bpt>Menu Items<ept id="p2">**</ept> to open the <bpt id="p3">**</bpt>Items Editor<ept id="p3">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> three times to add three buttons.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Click the first button and then change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`New Window`</ph>, and <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_WINDOW_NEW`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Click the second button and then change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Cascade`</ph>, and <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_WINDOW_CASCADE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Click the third button and then change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Tile`</ph>, and <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_WINDOW_TILE_HORZ`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Save the changes, and then build and run the application.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>View<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Window<ept id="p2">**</ept> panels should be displayed.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Click the buttons to confirm that they function correctly.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Adding a Help Panel to the Ribbon</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Now, you can assign two menu items that are defined in the Scribble application to ribbon buttons that are named <bpt id="p1">**</bpt>Help Topics<ept id="p1">**</ept> and <bpt id="p2">**</bpt>About Scribble<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The buttons are added to a new panel named <bpt id="p1">**</bpt>Help<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>To add a Help panel</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>From the <bpt id="p1">**</bpt>Toolbox<ept id="p1">**</ept>, drag a <bpt id="p2">**</bpt>Panel<ept id="p2">**</ept> to the <bpt id="p3">**</bpt>Home<ept id="p3">**</ept> category.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Then drag two <bpt id="p1">**</bpt>Buttons<ept id="p1">**</ept> to the panel.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Click the panel to modify its properties.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Help`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Click the first button.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Help Topics`</ph>, and <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_HELP_FINDER`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Click the second button.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`About Scribble...`</ph>, and <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_APP_ABOUT`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Save the changes, and then build and run the application.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> panel that contains two ribbon buttons should be displayed.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>When you click the <bpt id="p1">**</bpt>Help Topics<ept id="p1">**</ept> button, the Scribble application opens a compressed HTML (.chm) help file named <bpt id="p2">*</bpt>your_project_name<ept id="p2">*</ept>.chm.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Consequently, if your project is not named Scribble, you must rename the help file to your project name.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Adding a Pen Panel to the Ribbon</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Now, add a panel to display buttons that control the thickness and the color of the pen.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>This panel contains a check box that toggles between thick and thin pens.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Its functionality resembles that of the <bpt id="p1">**</bpt>Thick Line<ept id="p1">**</ept> menu item in the Scribble application.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The original Scribble application lets the user select pen widths from a dialog box that appears when the user clicks <bpt id="p1">**</bpt>Pen Widths<ept id="p1">**</ept> on the menu.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Because the ribbon bar has ample room for new controls, you can replace the dialog box by using two combo boxes on the ribbon.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>One combo box adjusts the width of the thin pen and the other combo box adjusts the width of the thick pen.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>To add a Pen panel and combo boxes to the ribbon</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>From the <bpt id="p1">**</bpt>Toolbox<ept id="p1">**</ept>, drag a <bpt id="p2">**</bpt>Panel<ept id="p2">**</ept> to the <bpt id="p3">**</bpt>Home<ept id="p3">**</ept> category.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Then drag a <bpt id="p1">**</bpt>Check Box<ept id="p1">**</ept> and two <bpt id="p2">**</bpt>Combo Boxes<ept id="p2">**</ept> to the panel.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Click the panel to modify its properties.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Pen`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Click the check box.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Use Thick`</ph>, and <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_PEN_THICK_OR_THIN`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Click the first combo box.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Thin Pen`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_PEN_THIN_WIDTH`</ph>, <bpt id="p3">**</bpt>Text<ept id="p3">**</ept> to <ph id="ph3">`2`</ph>, <bpt id="p4">**</bpt>Type<ept id="p4">**</ept> to <ph id="ph4">`Drop List`</ph>, and <bpt id="p5">**</bpt>Data<ept id="p5">**</ept> to <ph id="ph5">`1;2;3;4;5;6;7;8;9;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Click the second combo box.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Thick Pen`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_PEN_THICK_WIDTH`</ph>, <bpt id="p3">**</bpt>Text<ept id="p3">**</ept> to <ph id="ph3">`5`</ph>, <bpt id="p4">**</bpt>Type<ept id="p4">**</ept> to <ph id="ph4">`Drop List`</ph>, and <bpt id="p5">**</bpt>Data<ept id="p5">**</ept> to <ph id="ph5">`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>The new combo boxes do not correspond to any existing menu items.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Therefore, you must create a menu item for every pen option.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Resource View<ept id="p1">**</ept> window, open the IDR_SCRIBBTYPE menu resource.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Pen<ept id="p1">**</ept> to open the p<bpt id="p2">**</bpt>en<ept id="p2">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Then click <bpt id="p1">**</bpt>Type Here<ept id="p1">**</ept> and type <ph id="ph1">`Thi&amp;n Pen`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Right-click the text that you just typed to open the <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept> window, and then change the ID property to <ph id="ph1">`ID_PEN_THIN_WIDTH`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>You must also create an event handler for every pen menu item.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Right-click the <bpt id="p1">**</bpt>Thi&amp;n Pen<ept id="p1">**</ept> menu item that you just created and then click <bpt id="p2">**</bpt>Add Event Handler<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>Event Handler Wizard<ept id="p1">**</ept> is displayed.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Class list<ept id="p1">**</ept> box in the wizard, select <bpt id="p2">**</bpt>CScribbleDoc<ept id="p2">**</ept> and then click <bpt id="p3">**</bpt>Add and Edit<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>This creates an event handler named <ph id="ph1">`CScribbleDoc::OnPenThinWidth`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Add the following code to <ph id="ph1">`CScribbleDoc::OnPenThinWidth`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>// Get a pointer to the ribbon bar CMFCRibbonBar<ept id="p1">*</ept> pRibbon = ((CMDIFrameWndEx<bpt id="p2">*</bpt>) AfxGetMainWnd())-&gt;GetRibbonBar(); ASSERT_VALID(pRibbon); <ept id="p2">*</ept>// Get a pointer to the Thin Width combo box</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>CMFCRibbonComboBox<bpt id="p1">*</bpt> pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon-&gt;FindByID(ID_PEN_THIN_WIDTH)); <ept id="p1">*</ept>//Get the selected value</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>int nCurSel = pThinComboBox-&gt;GetCurSel(); if (nCurSel&gt;= 0)</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>{</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>m_nThinWidth = atoi(pThinComboBox-&gt;GetItem(nCurSel));</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>} *// Create a new pen using the selected width</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>ReplacePen();</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Save the changes, and then build and run the application.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>New buttons and combo boxes should be displayed.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Try using different pen widths to scribble.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Adding a Color Button to the Pen Panel</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Next, add a <bpt id="p1">[</bpt>CMFCRibbonColorButton<ept id="p1">](../mfc/reference/cmfcribboncolorbutton-class.md)</ept> object that lets the user scribble in color.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>To add a color button to the Pen panel</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Before you add the color button, create a menu item for it.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Resource View<ept id="p1">**</ept> window, open the IDR_SCRIBBTYPE menu resource.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Pen<ept id="p1">**</ept> menu item to open the pen menu.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Then click <bpt id="p1">**</bpt>Type Here<ept id="p1">**</ept> and type <ph id="ph1">`&amp;Color`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Right-click the text that you just typed to display the <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept> window.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Change the ID to <ph id="ph1">`ID_PEN_COLOR`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Now add the color button.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>From the <bpt id="p1">**</bpt>Toolbox<ept id="p1">**</ept>, drag a <bpt id="p2">**</bpt>Color Button<ept id="p2">**</ept> to the <bpt id="p3">**</bpt>Pen<ept id="p3">**</ept> panel.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>Click the color button.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Change <bpt id="p1">**</bpt>Caption<ept id="p1">**</ept> to <ph id="ph1">`Color`</ph>, <bpt id="p2">**</bpt>ID<ept id="p2">**</ept> to <ph id="ph2">`ID_PEN_COLOR`</ph>, <bpt id="p3">**</bpt>SimpleLook<ept id="p3">**</ept> to <ph id="ph3">`True`</ph>, <bpt id="p4">**</bpt>Large Image Index<ept id="p4">**</ept> to <ph id="ph4">`1`</ph>, and <bpt id="p5">**</bpt>Split Mode<ept id="p5">**</ept> to <ph id="ph5">`False`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Save the changes, and then build and run the application.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The new color button should be displayed on the <bpt id="p1">**</bpt>Pen<ept id="p1">**</ept> panel.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>However, it cannot be used because it does not yet have an event handler.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The next steps show how to add an event handler for the color button.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Adding a Color Member to the Document Class</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Because the original Scribble application does not have color pens, you must write an implementation for them.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>To store the pen color of the document, add a new member to the document class,</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>To add a color member to the document class</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>In scribdoc.h, in the <ph id="ph1">`CScribbleDoc`</ph> class, find the <ph id="ph2">`// Attributes`</ph> section.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Add the following lines of code after the definition of the <ph id="ph1">`m_nThickWidth`</ph> data member.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>``` *// Current pen color</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>COLORREF m_penColor;</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>In scribdoc.h, add a new <ph id="ph1">`CStroke`</ph> constructor whose parameters specify a width and color.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Add the following line of code after the <ph id="ph1">`CStroke(UINT nPenWidth);`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>In scribdoc.cpp, add the implementation of the new <ph id="ph1">`CStroke`</ph> constructor.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Add the following code after the implementation of the <ph id="ph1">`CStroke::CStroke(UINT nPenWidth)`</ph> constructor.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>``` *// Constructor that uses the document's current width and color</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>CStroke::CStroke(UINT nPenWidth, COLORREF penColor)</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>{</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>m_nPenWidth = nPenWidth;</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>m_penColor = penColor;</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>m_rectBounding.SetRectEmpty();</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>}</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>In scribdoc.cpp, change the first line of the <ph id="ph1">`CScribbleDoc::NewStroke`</ph> method to the following.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>Change the last line of the <ph id="ph1">`CScribbleDoc::ReplacePen`</ph> method to the following.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>You added the <ph id="ph1">`m_penColor`</ph> member in a previous step.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>Now, create an event handler for the color button that sets the member.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Resource View<ept id="p1">**</ept> window, open the IDR_SCRIBBTYPE menu resource.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>Right-click the <bpt id="p1">**</bpt>Color<ept id="p1">**</ept> menu item and click <bpt id="p2">**</bpt>Add Event Handler…<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>Event Handler Wizard<ept id="p1">**</ept> appears.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Class list<ept id="p1">**</ept> box in the wizard, select <bpt id="p2">**</bpt>CScribbleDoc<ept id="p2">**</ept> and then click the <bpt id="p3">**</bpt>Add and Edit<ept id="p3">**</ept> button.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>This creates the <ph id="ph1">`CScribbleDoc::OnPenColor`</ph> event handler stub.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Replace the stub for the <ph id="ph1">`CScribbleDoc::OnPenColor`</ph> event handler with the following code.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>Save the changes and then build and run the application.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>You should be able to press the color button and change the pen's color.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Sections<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Initializing Pens and Saving Preferences</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Next, initialize the color and width of the pens.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>Finally, save and load a color drawing from a file.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>To initialize controls on the ribbon bar</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Initialize the pens on the ribbon bar.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>Add the following code to scribdoc.cpp, in the <ph id="ph1">`CScribbleDoc::InitDocument`</ph> method, after the <ph id="ph2">`m_sizeDoc = CSize(200,200)`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source><ph id="ph1">``` </ph><bpt id="p1">*</bpt>// Reset the ribbon UI to its initial values CMFCRibbonBar<ept id="p1">*</ept> pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())-&gt;GetRibbonBar(); ASSERT_VALID(pRibbon);</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>CMFCRibbonColorButton<bpt id="p1">*</bpt> pColorBtn = DYNAMIC_DOWNCAST( CMFCRibbonColorButton, pRibbon-&gt;FindByID(ID_PEN_COLOR)); <ept id="p1">*</ept>// Set ColorButton to black</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>pColorBtn-&gt;SetColor(RGB(0, 0, 0));</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>CMFCRibbonComboBox<bpt id="p1">*</bpt> pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon-&gt;FindByID(ID_PEN_THIN_WIDTH)); <ept id="p1">*</ept>// Set Thin pen combobox to 2</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>pThinComboBox-&gt;SelectItem(1);</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>CMFCRibbonComboBox<bpt id="p1">*</bpt> pThickComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon-&gt;FindByID(ID_PEN_THICK_WIDTH)); <ept id="p1">*</ept>// Set Thick pen combobox to 5</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>pThickComboBox-&gt;SelectItem(0);</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>ar &lt;&lt;(COLORREF)m_penColor;</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>ar&gt;&gt; m_penColor;</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

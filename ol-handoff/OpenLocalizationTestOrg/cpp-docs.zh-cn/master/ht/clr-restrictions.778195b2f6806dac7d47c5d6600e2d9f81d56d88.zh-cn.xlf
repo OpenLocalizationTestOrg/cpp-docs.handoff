@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-04506c2" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">16064ef53cbd095e16ed2afe995b04d3d5641baa</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\clr-restrictions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3b85e6f12302af0e87af646a23f568c1bd949c29</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">084fe1b85bb692000273fefbf8e3fe7bc59981f8</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-clr Restrictions | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/clr Restrictions</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Note the following restrictions on the use of <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In a structured exception handler, there are restrictions on using <ph id="ph1">`_alloca`</ph> when compiling with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>_alloca<ept id="p1">](../../c-runtime-library/reference/alloca.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The use of run-time error checks is not valid with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Run-Time Error Checks<ept id="p1">](http://msdn.microsoft.com/Library/dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> is used to compile a program that only uses standard C++ syntax, the following guidelines apply to the use of inline assembly:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Inline assembly code that assumes knowledge of the native stack layout, calling conventions outside of the current function, or other low-level information about the computer may fail if that knowledge is applied to the stack frame for a managed function.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Functions containing inline assembly code are generated as unmanaged functions, as if they were placed in a separate module that was compiled without <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Inline assembly code in functions that pass copy-constructed function parameters is not supported.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>vprintf Functions<ept id="p1">](../../c-runtime-library/vprintf-functions.md)</ept> cannot be called from a program compiled with <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>naked<ept id="p1">](../../cpp/naked-cpp.md)</ept> <bpt id="p2">[</bpt>__declspec<ept id="p2">](../../cpp/declspec.md)</ept> modifier is ignored under /clr.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The translator function set by <bpt id="p1">[</bpt>_set_se_translator<ept id="p1">](../../c-runtime-library/reference/set-se-translator.md)</ept> will affect only catches in unmanaged code.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Exception Handling<ept id="p1">](../../windows/exception-handling-cpp-component-extensions.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The comparison of function pointers is not permitted under <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The use of functions that are not fully prototyped is not permitted under <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following compiler options are not supported with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/EHsc<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/EHs<ept id="p2">**</ept> (<bpt id="p3">**</bpt>/clr<ept id="p3">**</ept> implies <bpt id="p4">**</bpt>/EHa<ept id="p4">**</ept> (see <bpt id="p5">[</bpt>/EH (Exception Handling Model)<ept id="p5">](../../build/reference/eh-exception-handling-model.md)</ept>)</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:strict<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/fp:except<ept id="p2">**</ept> (see <bpt id="p3">[</bpt>/fp (Specify Floating-Point Behavior)<ept id="p3">](../../build/reference/fp-specify-floating-point-behavior.md)</ept>)</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>/Zd</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>/Gm</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>/MT</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>/RTC</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>/ZI</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The combination of the <ph id="ph1">`_STATIC_CPPLIB`</ph> preprocessor definition (<ph id="ph2">`/D_STATIC_CPPLIB`</ph>) and the <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> or <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept> compiler option is not supported.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This is so because the definition would cause your application to link with the static multithreaded Standard C++ Library, which is not supported.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For more information, see the <bpt id="p1">[</bpt>/MD, /MT, /LD (Use Run-Time Library)<ept id="p1">](../../build/reference/md-mt-ld-use-run-time-library.md)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>/J<ept id="p1">](../../build/reference/j-default-char-type-is-unsigned.md)</ept> is not supported with <bpt id="p2">**</bpt>/clr:safe<ept id="p2">**</ept> or <bpt id="p3">**</bpt>/clr:pure<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The ATL and MFC libraries are not supported by pure mode compilation (<bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You can use <bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept> with the Standard C++ Library and the CRT if you also compile with <bpt id="p2">**</bpt>/MD<ept id="p2">**</ept> or <bpt id="p3">**</bpt>/MDd<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>When using <bpt id="p1">**</bpt>/Zi<ept id="p1">**</ept> with <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept>, there are performance implications.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/Zi<ept id="p1">](../../build/reference/z7-zi-zi-debug-information-format.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Passing a wide character to a .NET Framework output routine without also specifying <bpt id="p1">[</bpt>/Zc:wchar_t<ept id="p1">](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)</ept> or without casting the character to <ph id="ph1">`__wchar_t`</ph> will cause the output to appear as an <ph id="ph2">`unsigned short int`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>/GS<ept id="p1">](../../build/reference/gs-buffer-security-check.md)</ept> is ignored when compiling with <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept>, unless a function is under <ph id="ph1">`#pragma`</ph> <bpt id="p3">[</bpt>unmanaged<ept id="p3">](../../preprocessor/managed-unmanaged.md)</ept> or if the function must be compiled to native, in which case the compiler will generate warning C4793, which is off by default.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>/ENTRY<ept id="p1">](../../build/reference/entry-entry-point-symbol.md)</ept> for function signature requirements of a managed application.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Applications compiled with <bpt id="p1">**</bpt>/openmp<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept> can only be run in a single appdomain process.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>/openmp (Enable OpenMP 2.0 Support)<ept id="p1">](../../build/reference/openmp-enable-openmp-2-0-support.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Functions that take a variable number of arguments (varargs) will be generated as native functions.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Any managed data types in the variable argument position will be marshaled to native types.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Note that &lt;xref:System.String?displayProperty=fullName&gt; types are actually wide-character strings, but they are marshaled to single-byte character strings.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>So if a printf specifier is %S (wchar_t*), it will marshal to a %s string instead.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When using the va_arg macro, you may get unexpected results when compiling with <bpt id="p1">**</bpt>/clr:pure<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>va_arg, va_copy, va_end, va_start<ept id="p1">](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If your application passes an argument of type <bpt id="p1">[</bpt>va_list<ept id="p1">](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)</ept> to a function declared to take a variable number of arguments, and your application is compiled with <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept>, the CLR throws &lt;xref:System.NotSupportedException&gt;.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>  is used instead, the affected functions are compiled to native code and execute properly.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>/clr:safe<ept id="p1">**</ept> is used, an error diagnostic is emitted.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>You should not call, from managed code, any functions that walk the stack to get parameter information (function arguments); the P/Invoke layer causes that information to be further down the stack.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For example, do not compile proxy/stub with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Functions will be compiled to managed code whenever possible, but not all C++ constructs can be translated to managed code.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>This determination is made on a function-by-function basis.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>If any part of a function cannot be converted to managed code, the entire function will be converted to native code instead.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The following cases prevent the compiler from generating managed code.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Compiler-generated thunks or helper functions.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Native thunks are generated for any function call through a function pointer, including virtual function calls.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Functions that call <ph id="ph1">`setjmp`</ph> or <ph id="ph2">`longjmp`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Functions that use certain intrinsic routines to directly manipulate machine resources.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>For example, the use of <ph id="ph1">`__enable`</ph> and <ph id="ph2">`__disable`</ph>, <ph id="ph3">`_ReturnAddress`</ph> and <ph id="ph4">`_AddressOfReturnAddress`</ph>, or multimedia intrinsics will all result in native code.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Functions that follow the <ph id="ph1">`#pragma unmanaged`</ph> directive.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>(Note that the inverse, <ph id="ph1">`#pragma managed`</ph>, is also supported.)</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>A function that contains references to aligned types, that is, types declared using <ph id="ph1">`__declspec(align(...))`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>You cannot use the <bpt id="p1">[</bpt>Compiler COM Support<ept id="p1">](../../cpp/compiler-com-support.md)</ept> classes with <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept> or <bpt id="p3">**</bpt>/clr:safe<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>/clr (Common Language Runtime Compilation)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
