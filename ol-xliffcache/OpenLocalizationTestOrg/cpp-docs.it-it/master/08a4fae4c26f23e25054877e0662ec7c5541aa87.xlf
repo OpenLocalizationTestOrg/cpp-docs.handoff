@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">08a4fae4c26f23e25054877e0662ec7c5541aa87</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\declaration-of-a-clr-reference-class-object.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">624b08b42f7a77e684c79ee551096d4f8b3ee137</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a89a44fc83c63df909d6c89dc8bc9107ccc3229d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Declaration of a CLR Reference Class Object | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Declaration of a CLR Reference Class Object</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The syntax to declare and instantiate an object of a reference class type has changed from Managed Extensions for C++ to <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, a reference class type object is declared by using the ISO-C++ pointer syntax, with an optional use of the <ph id="ph1">`__gc`</ph> keyword to the left of the star (<ph id="ph2">`*`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, here are a variety of reference class type object declarations under the Managed Extensions syntax:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Under the new syntax, you declare a reference class type object by using a new declarative token (<ph id="ph1">`^`</ph>) referred to formally as a <bpt id="p1">*</bpt>tracking handle<ept id="p1">*</ept> and more informally as a <bpt id="p2">*</bpt>hat<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>(The tracking adjective means that a reference type sits in the CLR heap, and can therefore transparently move locations during garbage collection heap compaction.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A tracking handle is transparently updated during runtime.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Two similar concepts are the <bpt id="p1">*</bpt>tracking reference<ept id="p1">*</ept> (<ph id="ph1">`%`</ph>), and the <bpt id="p2">*</bpt>interior pointer<ept id="p2">*</ept> (<ph id="ph2">`interior_ptr&lt;&gt;`</ph>), discussed in <bpt id="p3">[</bpt>Value Type Semantics<ept id="p3">](../dotnet/value-type-semantics.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The primary reasons to move the declarative syntax away from a reuse of the ISO-C++ pointer syntax are as follows:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The use of the pointer syntax did not permit overloaded operators to be directly applied to a reference object.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Rather, one had to call the operator by using its internal name, such as <ph id="ph1">`rV1-&gt;op_Addition(rV2)`</ph> instead of  the more intuitive <ph id="ph2">`rV1+rV2`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A number of pointer operations, such as casting and pointer arithmetic, not permitted for objects stored on a garbage collected heap.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The notion of a tracking handle better captures the nature of a CLR reference type.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__gc`</ph> modifier on a tracking handle is unnecessary and is not supported.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The use of the object itself is not changed; it still accesses members through the pointer member selection operator (<ph id="ph1">`-&gt;`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For example, here is the previous Managed Extensions code sample translated into the new syntax:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Dynamic Allocation of an Object on the CLR Heap</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, the existence of two <ph id="ph1">`new`</ph> expressions to allocate between the native and managed heap was largely transparent.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In almost all instances, the compiler is able to use the context to determine whether to allocate memory from the native or managed heap.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For example,</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>When you do not want the contextual heap allocation, you could direct the compiler with either the <ph id="ph1">`__gc`</ph> or <ph id="ph2">`__nogc`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In the new syntax, the separate nature of the two new expressions is made explicit with the introduction of the <ph id="ph1">`gcnew`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For example, the previous three declarations look as follows in the new syntax:</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Here is the Managed Extensions initialization of the <ph id="ph1">`Form1`</ph> members declared in the previous section:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Here is the same initialization recast to the new syntax.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Note that the hat is not required for the reference type when it is the target of a <ph id="ph1">`gcnew`</ph> expression.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>A Tracking Reference to No Object</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In the new syntax, <ph id="ph1">`0`</ph> no longer represents a null address but is treated as an integer, the same as <ph id="ph2">`1`</ph>, <ph id="ph3">`10`</ph>, or <ph id="ph4">`100`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>A new special token represents a null value for a tracking reference.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For example, in Managed Extensions, we initialize a reference type to address no object as follows:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>In the new syntax, any initialization or assignment of a value type to an <ph id="ph1">`Object`</ph> causes an implicit boxing of that value type.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In the new syntax, both <ph id="ph1">`obj`</ph> and <ph id="ph2">`obj2`</ph> are initialized to addressed boxed Int32 objects holding the values 0 and 1, respectively.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Therefore, in order to perform the explicit initialization, assignment, and comparison of a tracking handle to null, use a new keyword, <ph id="ph1">`nullptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The correct revision of the original example looks as follows:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This complicates somewhat the porting of existing code into the new syntax.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For example, consider the following value class declaration:</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Here, both <ph id="ph1">`args`</ph> and <ph id="ph2">`env`</ph> are CLR reference types.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The initialization of these two members to <ph id="ph1">`0`</ph> in the constructor cannot remain unchanged in the transition to the new syntax.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Rather, they must be changed to <ph id="ph1">`nullptr`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Similarly, tests against those members comparing them to <ph id="ph1">`0`</ph> must also be changed to compare the members to <ph id="ph2">`nullptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Here is the Managed Extensions syntax:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Here is the revision, replacing each <ph id="ph1">`0`</ph> instance with a <ph id="ph2">`nullptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The translation tool helps in this transformation by automating many if not all occurrences, including use of the <ph id="ph1">`NULL`</ph> macro.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`nullptr`</ph> is converted into any pointer or tracking handle type but is not promoted to an integral type.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>For example, in the following set of initializations, the <ph id="ph1">`nullptr`</ph> is valid only as an initial value to the first two.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Similarly, given an overloaded set of methods such as the following:</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>An invocation with <ph id="ph1">`nullptr`</ph> literal, such as the following,</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>is ambiguous because the <ph id="ph1">`nullptr`</ph> matches both a tracking handle and a pointer, and there is no preference given to one type over the other.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>(This situation requires an explicit cast in order to disambiguate.)</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>An invocation with <ph id="ph1">`0`</ph> exactly matches instance (3):</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>because <ph id="ph1">`0`</ph> is of type integer.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Were <ph id="ph1">`f(int)`</ph> not present, the call would unambiguously match <ph id="ph2">`f(char*)`</ph> through a standard conversion.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The matching rules give precedence of an exact match over a standard conversion.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>In the absence of an exact match, a standard conversion is given precedence over an implicit boxing of a value type.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>That is why there is no ambiguity.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Managed Types (C++/CL)</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Classes and Structs</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Handle to Object Operator (^)</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>nullptr</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">40968453110c6d642dfae365e11ff484e2e0d94c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\how-to-create-and-use-shared-ptr-instances.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ed57af1d5fa6b8fc4fbb80d88ece0a843595b271</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8079ac4ef1b586144af6f25aa2ca5e07d8575e5a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Create and Use shared_ptr Instances | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Create and Use shared_ptr Instances</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`shared_ptr`</ph> type is a smart pointer in the C++ standard library that is designed for scenarios in which more than one owner might have to manage the lifetime of the object in memory.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>After you initialize a <ph id="ph1">`shared_ptr`</ph> you can copy it, pass it by value in function arguments, and assign it to other <ph id="ph2">`shared_ptr`</ph> instances.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>All the instances point to the same object, and share access to one "control block" that increments and decrements the reference count whenever a new <ph id="ph1">`shared_ptr`</ph> is added, goes out of scope, or is reset.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When the reference count reaches zero, the control block deletes the memory resource and itself.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The following illustration shows several <ph id="ph1">`shared_ptr`</ph> instances that point to one memory location.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>hared pointer]</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Whenever possible, use the <bpt id="p1">[</bpt>make_shared<ept id="p1">](http://msdn.microsoft.com/Library/6d6015b9-ad9a-4c06-93ce-b07cf6193d23)</ept> function to create a <ph id="ph1">`shared_ptr`</ph> when the memory resource is created for the first time.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>is exception-safe.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>It uses the same call to allocate the memory for the control block and the resource, and thereby reduces the construction overhead.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If you do not use <ph id="ph1">`make_shared`</ph>, then you have to use an explicit new expression to create the object before you pass it to the <ph id="ph2">`shared_ptr`</ph> constructor.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following example shows various ways to declare and initialize a <ph id="ph1">`shared_ptr`</ph> together with a new object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>stl_smart_pointers#1</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The following example shows how to declare and initialize <ph id="ph1">`shared_ptr`</ph> instances that take on shared ownership of an object that has already been allocated by another <ph id="ph2">`shared_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Assume that <ph id="ph1">`sp2`</ph> is an initialized <ph id="ph2">`shared_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>stl_smart_pointers#2</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>is also helpful in Standard Template Library (STL) containers when you are using algorithms that copy elements.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>You can wrap elements in a <ph id="ph1">`shared_ptr`</ph>, and then copy it into other containers with the understanding that the underlying memory is valid as long as you need it, and no longer.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The following example shows how to use the <ph id="ph1">`replace_copy_if`</ph> algorithm on <ph id="ph2">`shared_ptr`</ph> instances in a vector.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>stl_smart_pointers#4</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You can use <ph id="ph1">`dynamic_pointer_cast`</ph>, <ph id="ph2">`static_pointer_cast`</ph>, and <ph id="ph3">`const_pointer_cast`</ph> to cast a <ph id="ph4">`shared_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>These functions resemble the <ph id="ph1">`dynamic_cast`</ph>, <ph id="ph2">`static_cast`</ph>, and <ph id="ph3">`const_cast`</ph> operators.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The following example shows how to test the derived type of each element in a vector of <ph id="ph1">`shared_ptr`</ph> of base classes, and then copy the elements and display information about them.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>stl_smart_pointers#5</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You can pass a <ph id="ph1">`shared_ptr`</ph> to another function in the following ways:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Pass the <ph id="ph1">`shared_ptr`</ph> by value.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This invokes the copy constructor, increments the reference count, and makes the callee an owner.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>There is a small amount of overhead in this operation, which may be significant depending on how many <ph id="ph1">`shared_ptr`</ph> objects you are passing.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Use this option when the code contract (implied or explicit) between the caller and callee requires that the callee be an owner.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Pass the <ph id="ph1">`shared_ptr`</ph> by reference or const reference.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>In this case, the reference count is not incremented, and the callee can access the pointer as long as the caller does not go out of scope.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Or, the callee can decide to create a <ph id="ph1">`shared_ptr`</ph> based on the reference, and thereby become a shared owner.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Use this option when the caller has no knowledge of the callee, or when you must pass a <ph id="ph1">`shared_ptr`</ph> and want to avoid the copy operation for performance reasons.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Pass the underlying pointer or a reference to the underlying object.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This enables the callee to use the object, but does not enable it to share ownership or extend the lifetime.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If the callee creates a <ph id="ph1">`shared_ptr`</ph> from the raw pointer, the new <ph id="ph2">`shared_ptr`</ph> is independent from the original, and does not control the underlying resource.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Use this option when the contract between the caller and callee clearly specifies that the caller retains ownership of the <ph id="ph1">`shared_ptr`</ph> lifetime.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When you are deciding how to pass a <ph id="ph1">`shared_ptr`</ph>, determine whether the callee has to share ownership of the underlying resource.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>An "owner" is an object or function that can keep the underlying resource alive for as long as it needs it.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If the caller has to guarantee that the callee can extend the life of the pointer beyond its (the function's) lifetime, use the first option.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If you don't care whether the callee extends the lifetime, then pass by reference and let the callee copy it or not.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>If you have to give a helper function access to the underlying pointer, and you know that the helper function will just use the pointer and return before the calling function returns, then that function does not have to share ownership of the underlying pointer.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>It just has to access the pointer within the lifetime of the caller's <ph id="ph1">`shared_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>In this case, it is safe to pass the <ph id="ph1">`shared_ptr`</ph> by reference, or pass the raw pointer or a reference to the underlying object.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Passing this way provides a small performance benefit, and may also help you express your programming intent.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Sometimes, for example in a <ph id="ph1">`std:vector&lt;shared_ptr&lt;T&gt;&gt;`</ph>, you may have to pass each <ph id="ph2">`shared_ptr`</ph> to a lambda expression body or named function object.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>If the lambda or function is not storing the pointer, then pass the <ph id="ph1">`shared_ptr`</ph> by reference to avoid invoking the copy constructor for each element.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The following example shows how <ph id="ph1">`shared_ptr`</ph> overloads various comparison operators to enable pointer comparisons on the memory that is owned by the <ph id="ph2">`shared_ptr`</ph> instances.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>stl_smart_pointers#3</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Smart Pointers</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

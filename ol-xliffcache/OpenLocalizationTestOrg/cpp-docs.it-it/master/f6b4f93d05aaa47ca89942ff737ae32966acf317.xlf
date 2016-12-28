@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f6b4f93d05aaa47ca89942ff737ae32966acf317</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\creating-document-frame-windows.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ba0aa1839f4012dca72119522687fd5d7102f04d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2eb5124419fea11cbf472750dd9f174915b294c4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Creating Document Frame Windows | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Creating Document Frame Windows</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Document/View Creation<ept id="p1">](../mfc/document-view-creation.md)</ept> shows how the <bpt id="p2">[</bpt>CDocTemplate<ept id="p2">](../mfc/reference/cdoctemplate-class.md)</ept> object orchestrates creating the frame window, document, and view and connecting them all together.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Three <bpt id="p1">[</bpt>CRuntimeClass<ept id="p1">](../mfc/reference/cruntimeclass-structure.md)</ept> arguments to the <ph id="ph1">`CDocTemplate`</ph> constructor specify the frame window, document, and view classes that the document template creates dynamically in response to user commands such as the New command on the File menu or the New Window command on an MDI Window menu.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The document template stores this information for later use when it creates a frame window for a view and document.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For the <bpt id="p1">[</bpt>RUNTIME_CLASS<ept id="p1">](../mfc/reference/run-time-object-model-services.md#runtime_class)</ept> mechanism to work correctly, your derived frame-window classes must be declared with the <bpt id="p2">[</bpt>DECLARE_DYNCREATE<ept id="p2">](../mfc/reference/run-time-object-model-services.md#declare_dyncreate)</ept> macro.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This is because the framework needs to create document frame windows using the dynamic construction mechanism of class <ph id="ph1">`CObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>When the user chooses a command that creates a document, the framework calls upon the document template to create the document object, its view, and the frame window that will display the view.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>When it creates the document frame window, the document template creates an object of the appropriate class — a class derived from <bpt id="p1">[</bpt>CFrameWnd<ept id="p1">](../mfc/reference/cframewnd-class.md)</ept> for an SDI application or from <bpt id="p2">[</bpt>CMDIChildWnd<ept id="p2">](../mfc/reference/cmdichildwnd-class.md)</ept> for an MDI application.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The framework then calls the frame-window object's <bpt id="p1">[</bpt>LoadFrame<ept id="p1">](../mfc/reference/cframewnd-class.md#cframewnd__loadframe)</ept> member function to get creation information from resources and to create the Windows window.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The framework attaches the window handle to the frame-window object.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Then it creates the view as a child window of the document frame window.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Use caution in deciding <bpt id="p1">[</bpt>when to initialize<ept id="p1">](../mfc/when-to-initialize-cwnd-objects.md)</ept> your <ph id="ph1">`CWnd`</ph>-derived object.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Deriving a Class from CObject (its dynamic creation mechanism)</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Document/View Creation (templates and frame window creation)</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Destroying frame windows</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Using Frame Windows</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

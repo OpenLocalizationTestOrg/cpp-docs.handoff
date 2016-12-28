@@ -1,0 +1,948 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">954708f451eb07d41c4d7527f492e3431b1fc24f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\porting\porting-guide-spy-increment.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9eadee7e6aa4ca14138a73f7409200b30b5cc3e4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">644e27c3a0282f0a703d7fd96e91137310d1afc7</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Porting Guide: Spy++ | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Porting Guide: Spy++</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This porting case study is designed to give you an idea of what a typical porting project is like, the types of problems you might encounter, and some general tips and tricks for addressing porting problems.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It's not meant to be a definitive guide to porting, since the experience of porting a project depends very much on the specifics of the code.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Spy++</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Spy++ is a widely used GUI diagnostic tool for the Windows desktop that provides all sorts of information about user interface elements on the Windows desktop.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>It shows the complete hierarchy of windows and provides access to metadata about each window and control.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This useful application has shipped with Visual Studio for many years.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>We found an old version of it that was last compiled in Visual C++ 6.0 and ported it to <ph id="ph1">[!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>We considered this case to be typical for porting Windows desktop applications that use MFC and the Win32 API, especially for old projects that have not been updated with each release of Visual C++ since Visual C++ 6.0.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Step 1.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Converting the project file.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The project file, two old .dsw files from Visual C++ 6.0, converted easily with no issues that require further attention.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>One project is the Spy++ application.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The other is SpyHk, written in C, a supporting DLL.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>More complex projects might not upgrade as easily, as discussed <bpt id="p1">[</bpt>here<ept id="p1">](../porting/visual-cpp-porting-and-upgrading-guide.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>After upgrading the two projects, our solution looked like this:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The Spy&amp;#43;&amp;#43; Solution</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>We have two projects, one with a large number of C++ files, and another a DLL that's written in C.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Step 2.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Header file problems</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Upon building a newly converted project, one of the first things you'll often find is that header files that your project uses are not found.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>One of the files that couldn't be found in Spy++ was verstamp.h.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>From an Internet search, we determined that this came from a DAO SDK, an obsolete data technology.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>We wanted to find out what symbols were being used from that header file, to see if that file was really needed or if those symbols were defined elsewhere, so we commented out the header file declaration and recompiled.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>It turns out there is just one symbol that is needed, VER_FILEFLAGSMASK.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The easiest way to find a symbol in the available include files is to use Find in Files (Ctrl+Shift+F) and specify <bpt id="p1">**</bpt>Visual C++ Include Directories<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>We found it in ntverp.h.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>We replaced the verstamp.h include with ntverp.h and this error disappeared.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Step 3.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Linker OutputFile setting</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Older projects sometimes have files placed in unconventional locations that can cause problems after upgrading.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In this case, we have to add $(SolutionDir) to the Include path in the project properties to ensure that Visual Studio can find some header files that are placed there, rather than in one of the project folders.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>MSBuild complains that the Link.OutputFile property does not match the TargetPath and TargetName values, issuing MSB8012.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Link.OutputFile<ept id="p1">**</ept> is the build output (EXE, DLL, for example), and it is normally constructed from $(TargetDir)$(TargetName)$(TargetExt), giving the path, filename and extension.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This is a common error when migrating projects from the old Visual C++ build tool (vcbuild.exe) to the new build tool (MSBuild.exe).</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Since the build tool change occurred in Visual Studio 2010, you might encounter this issue whenever you migrate a pre-2010 project to a 2010 or later version.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The basic problem is that the project migration wizard doesn’t update the <bpt id="p1">**</bpt>Link.OutputFile<ept id="p1">**</ept> value since it’s not always possible to determine what its value should be based on the other project settings.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Therefore, you usually have to set it manually.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>For more details, see this <bpt id="p1">[</bpt>post<ept id="p1">](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)</ept> on the Visual C++ blog.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>In this case, the <bpt id="p1">**</bpt>Link.OutputFile<ept id="p1">**</ept> property in the converted project was set to .\Debug\Spyxx.exe and .\Release\Spyxx.exe for the Spy++ project, depending on the configuration.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The best bet is to simply replace these hardcoded values with $(TargetDir)$(TargetName)$(TargetExt) for All Configurations.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>If that doesn’t work, you can customize from there, or change the properties in the General section where those values are set (the properties are <bpt id="p1">**</bpt>Output Directory<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Target Name<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>Target Extension<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Remember that if the property you are viewing uses macros, you can choose <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> in the dropdown list to bring up a dialog box that shows the final string with the macro substitutions made.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>You can view all available macros and their current values by choosing the <bpt id="p1">**</bpt>Macros<ept id="p1">**</ept> button.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Step 4.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Updating the Target Windows Version</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The next error indicates that WINVER version is no longer supported in MFC.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>WINVER for Windows XP is 0x0501.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Windows XP is no longer supported by Microsoft, so even though targeting it is allowed in <ph id="ph1">[!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]</ph>, you should be phasing out support for it in your applications, and encouraging your users to adopt new versions of Windows.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>To get rid of the error, define WINVER by updating the <bpt id="p1">**</bpt>Project Properties<ept id="p1">**</ept> setting to the lowest version of Windows you currently want to target.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Find a table of values for various Windows releases <bpt id="p1">[</bpt>here<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The stdafx.h file contained some of these macro definitions.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>WINVER we will set to Windows 7.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>It’s easier to read the code later if you use the macro for Windows 7 (_WIN32_WINNT_WIN7), rather than the value itself (0x0601).</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Step 5.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Linker Errors</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>With these changes, the SpyHk (DLL) project builds but produces a linker error.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The entry point for a DLL should not be exported.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The entry point is only intended to be called by the loader when the DLL is first loaded into memory, so it should not be in the export table, which is for other callers.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>We just need to make sure it does not have the <ph id="ph1">`__declspec(dllexport)`</ph> directive attached to it.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>In spyxxhk.c, we have to remove it from two places, the declaration and definition of DLLEntryPoint.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>It never made sense to use this directive, but previous versions of the linker and compiler did not flag it as problem.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The newer versions of the linker give a warning.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The C DLL project, SpyHK.dll, now builds and links without error.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Step 6.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>More outdated header files</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>At this point we start working on the main executable project, Spyxx.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>A couple of other include files could not be found: ctl3d.h and penwin.h.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>While it might be helpful to search the Internet to try to identify what included the header, sometimes the information isn’t that helpful.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>We found out that ctl3d.h was part of the Exchange Development Kit and provided support for a certain style of controls on Windows 95, and penwin.h relates to Window Pen Computing, an obsolete API.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>In this case, we simply comment out the #include line, and deal with the undefined symbols as we did with verstamp.h.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Everything that relates to 3D Controls or Pen Computing was removed from the project.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Given a project with many compilation errors that you are gradually eliminating, it's not realistic to find all the uses of an outdated API right away when you remove the #include directive.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>We didn't detect it immediately, but rather at some later point came to an error that WM_DLGBORDER was undefined.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>It is actually just one many undefined symbols that come from ctl3d.h.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Once we've determined that it relates to an outdated API, we removed all references in code to it.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Step 7.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Updating old iostreams code</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The next error is common with old C++ code that uses iostreams.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The issue is that the old iostreams library has been removed and replaced.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>We have to replace the old iostreams with the newer standards.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>These are the updated includes:</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>With this change, we have problems with ostrstream, which is no longer used.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The appropriate replacement is ostringstream.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>We try adding a typedef for ostrstream to avoid modifying the code too much, at least as a start.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Currently the project is building using MBCS (Multi-byte Character Set), so char is the appropriate character data type.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>However, to allow an easier update the code to UTF-16 Unicode, we update this to TCHAR, which resolves to char or wchar_t depending on whether the <bpt id="p1">**</bpt>Character Set<ept id="p1">**</ept> property in the project settings is set to MBCS or Unicode.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>A few other pieces of code need to be updated.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>We replaced the base class ios with ios_base, and we replaced ostream is by basic_ostream<ph id="ph1">\&lt;</ph>T&gt;.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>We add two additional typedefs, and this section compiles.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Using these typedefs is just a temporary solution.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>For a more permanent solution, we could update each reference to the renamed or outdated API.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Here’s the next error.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The next issue is that basic_stringbuf doesn’t have a freeze method.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The freeze method is used to prevent a memory leak in the old ostream.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>We don’t need it now that we’re using the new ostringstream.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>We can delete the call to freeze.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The next two errors occurred on adjacent lines.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The first complains about using ends, which is the old iostream library’s IO manipulator that adds a null terminator to a string.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The second of these errors explains that the output of the str method can’t be assigned to a non-const pointer.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Using the new stream library, ends is not needed since the string is always null-terminated, so that line can be removed.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>For the second issue, the problem is that now str() doesn’t return a pointer to the character array for a string; it returns the std::string type.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The solution to the second is to change the type to LPCSTR and use the c_str() method to request the pointer.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>An error that puzzled us for a while occurred on this code.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The macro <ph id="ph1">`MOUT`</ph> resolves to *g_pmout which is an object of type <ph id="ph2">`mstream`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>The mstream class is derived from the standard output string class, <ph id="ph1">`std::basic_ostream&lt;TCHAR&gt;.`</ph> However with _T around the string literal, which we put in in preparation for converting to Unicode, the overload resolution for operator &lt;&lt; fails with the following error message:</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>There are so many operator &lt;&lt; definitions that this kind of error can be intimidating.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>After looking more closely at the available overloads, we can see that most of them are irrelevant, and looking more closely at the <ph id="ph1">`mstream`</ph> class definition, we identified the following function that we think should be called in this case.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The reason it isn't called is because the string literal has the type <ph id="ph1">`const wchar_t[10]`</ph> as you can see from the last line of that long error message, so the conversion to a non-const pointer is not automatic.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>However that operator should not modify the input parameter, so the more appropriate parameter type is LPCTSTR (<ph id="ph1">`const char*`</ph> when compiling as MBCS, and <ph id="ph2">`const wchar_t*`</ph> as Unicode), not LPTSTR (<ph id="ph3">`char*`</ph> when compiling as MBCS, and <ph id="ph4">`wchar_t*`</ph> as Unicode).</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>Making that change fixes this error.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>This type of conversion was allowed under the older, less strict compiler, but more recent conformance changes require more correct code.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Step 8.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The compiler's more strict conversions</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>We also get many errors like the following:</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The error occurs in a message map that is simply a macro:</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Going to the definition of this macro, we see it references the function OnNcHitTest.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The problem has to do with the mismatch in the pointer to member function types.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The problem isn’t the conversion from CHotLinkCtrl as a class type to CWnd as the class type, since that is a valid derived-to-base conversion.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>The problem is the return type: UINT vs. LRESULT.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>LRESULT resolves to LONG_PTR which is a 64-bit pointer or a 32-bit pointer, depending on the target binary type, so UINT does not convert to this type.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>This is not uncommon when upgrading code written before 2005 since the return type of many message map methods changed from UINT to LRESULT in Visual Studio 2005 as part of the 64-bit compatibility changes.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>We change the return type from UINT in the following code to LRESULT:</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>After the change we have the following code:</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Since there are about ten occurrences of this function all in different classes derived from CWnd, it’s helpful to use <bpt id="p1">**</bpt>Go to Definition<ept id="p1">**</ept> (Keyboard: F12) and <bpt id="p2">**</bpt>Go to Declaration<ept id="p2">**</ept> (Keyboard: Ctrl+F12) when the cursor is on the function in the editor to locate these and navigate to them from the <bpt id="p3">**</bpt>Find Symbol<ept id="p3">**</ept> tool window.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Go to Definition<ept id="p1">**</ept> is usually the more useful of the two.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Go to Declaration<ept id="p1">**</ept> will find declarations other than the defining class declaration, such as friend class declarations or forward references.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Step 9.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>MFC Changes</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>The next error also relates to a changed declaration type and also occurs in a macro.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>The issue is that the second parameter of CWnd::OnActivateApp changed from HTASK to DWORD.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>This change occurred in the 2002 release of Visual Studio, Visual Studio .NET.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>We have to update the declarations of OnActivateApp in derived classes accordingly as follows:</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>At this point, we are able to compile the project.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>There are a few warnings to work through, however, and there are optional parts of the upgrade, such as converting from MBCS to Unicode or improving security by using the Secure CRT functions.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Step 10.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Addressing compiler warnings</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>To get a full list of warnings, you should do a <bpt id="p1">**</bpt>Rebuild All<ept id="p1">**</ept> on the solution rather than an ordinary build, just to make sure that everything that previously compiled will be recompiled, since you only get warning reports from the current compilation.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>The other question is whether to accept the current warning level or use a higher warning level.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>When porting a lot of code, especially old code, using a higher warning level might be appropriate.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>You might also want to start with the default warning level and then increase the warning level to get all warnings.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>If you use /Wall, you get some warnings in the system header files, so many people use /W4 to get the most warnings on their code without getting warnings for system headers.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>If you want warnings to show up as errors, add the /WX option.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>These settings are in the C/C++ section of the Project Properties dialog box.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>One of the methods in the CSpyApp class produces a warning about a function that is no longer supported.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>The warning is as follows.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>The message WM_CTLCOLORDLG was already handled in Spy++ code, so the only change required was to delete any references to SetDialogBkColor, which is no longer needed.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>The next warning was straightforward to fix by commenting out the variable name.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>We received the following warning:</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>The code that produces this involves a macro.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Heavy use of macros as in this code tends to make code harder to maintain.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>In this case, the macros include the declarations of the variables.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>The macro PARM is defined as follows:</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>Therefore the lpszBuffer variable gets declared twice in the same function.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>It's not that straightfoward to fix this as it would be if the code were not using macros (simply remove the second type declaration).</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>As it is, we have the unfortunate choice of having to decide whether to rewrite the macro code as ordinary code (a tedious and possibly error-prone task) or disable the warning.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>In this case, we opt to disable the warning.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>We can do that by adding a pragma as follows:</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>When disabling a warning, you might want to restrict the disabling effect to just the code you that produces the warning, to avoid suppressing the warning when it might provide useful information.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>We add code to restore the warning just after the line that produces it, or better yet, since this warning occurs in a macro, use the <ph id="ph1">`__pragma`</ph> keyword, which works in macros (<ph id="ph2">`#pragma`</ph> does not work in macros).</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>The next warning requires some code revisions.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>The Win32 API GetVersion (and GetVersionEx) is deprecated.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>The following code shows how the version is obtained.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>This is followed by a lot of code that examines the dwWindowsVersion value to determine whether we're running on Windows 95, and which version of Windows NT.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Since this is all outdated, we remove the code and deal with any references to those variables.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>The article <bpt id="p1">[</bpt>Operating system version changes in Windows 8.1 and Windows Server 2012 R2<ept id="p1">](https://msdn.microsoft.com/library/windows/desktop/dn302074.aspx)</ept> explains the situation.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>There are methods in the CSpyApp class that query the operating system version: IsWindows9x, IsWindows4x and IsWindows5x.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>A good starting point is to assume that the versions of Windows that we intend to support (Windows 7 and later) are all close to Windows NT 5 as far the technologies used by this older application is concerned.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>The uses of these methods were to deal with limitations of the older operating systems.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>So we changed those methods to return TRUE for IsWindows5x and FALSE for the others.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>That left only a few places where the internal variables were used directly.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>Since we removed those variables, we get a few errors that have to deal with explicitly.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>We could replace this with a method call or simply pass TRUE and remove the old special case for Windows 9x.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>The final warning at the default level (3) has to do with a bitfield.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>The code that triggers this is as follows.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>The declaration of m_bStdMouse indicates that it is a bitfield.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>This code was written before the built-in bool type was supported in Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>In such code, BOOL was a typedef for int.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>The type int is a signed type, and the bit representation of a signed int is to use the first bit as a sign bit, so a bitfield of type int could be interpreted as representing 0 or -1, probably not what was intended.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>You wouldn't know by looking at the code why these are bitfields.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>Was the intent to keep the size of the object small, or is there anywhere where the binary layout of the object is used?</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>We changed these to ordinary BOOL members since we didn't see any reason for the use of a bitfield.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>Using bitfields to keep an object's size small isn't guaranteed to work.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>It depends on how the compiler lays out the type.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>You might wonder if using the standard type bool throughout would be helpful.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>Many of the old code patterns such as the BOOL type were invented to solve problems that were later solved in standard C++, so changing from BOOL to the bool built-in type is just one example of such a change that you consider doing after you get your code initially running in the new version.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>Once we've dealt with all the warnings that appear at the default level (level 3) we changed to level 4 to catch a few additional warnings.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>The first to appear was as follows:</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>The code that produced this warning was as follows.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>This seems harmless enough, but since we wanted a clean compilation with /W4  and /WX set, we simply commented out the variable name, leaving it for the sake of readability.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>Other warnings we received were useful for general code cleanup.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>There are a number of implicit conversions from <ph id="ph1">`int`</ph> or <ph id="ph2">`unsigned int`</ph> to <ph id="ph3">`WORD`</ph> (which is a typedef for <ph id="ph4">`unsigned short`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>These involve a possible loss of data.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>We added a cast to <ph id="ph1">`WORD`</ph> in these cases.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Another level 4 warning we got for this code was:</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>The problem occurs when a variable was first declared <ph id="ph1">`extern`</ph>, then later declared <ph id="ph2">`static`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>The meaning of these two storage class specifiers is mutually exclusive, but this is allowed as a Microsoft extension.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>If you wanted the code to be portable to other compilers, or you wanted to compile it with /Za (ANSI compatibility), you would change the declarations to have matching storage class specifiers.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>Step 11.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>Porting from MBCS to Unicode</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>Note that in the Windows world, when we say Unicode, we usually mean UTF-16.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>Other operating systems such as Linux use UTF-8, but Windows generally does not.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>Before taking the step to actually port MBCS code to UTF-16 Unicode, we might want to temporarily eliminate the warnings that MBCS is deprecated, in order to do other work or postpone the porting until a convenient time.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>The current code uses MBCS and to continue with that we need to download the MBCS version of MFC.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>This rather large library was removed from the default Visual Studio installation, so it must be downloaded separately.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>MFC MBCS DLL Add-on<ept id="p1">](../mfc/mfc-mbcs-dll-add-on.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Once you download this and restart Visual Studio, you can compile and link with the MBCS version of MFC, but to get rid of the warnings about MBCS, you should also add NO_WARN_MBCS_MFC_DEPRECATION to your list of predefined macros in the Preprocessor section of project properties, or at the beginning of your stdafx.h header file or other common header file.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>We now have some linker errors.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>LNK1181 occurs because an outdated static library version of mfc is included on the linker input.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>This isn’t required anymore since we can link MFC dynamically, so we just need to remove all MFC static libraries from the Input property in the Linker section of the project properties.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>This project is also using the /NODEFAULTLIB option, and instead it lists all the library dependencies.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>Now let us actually update the old Multi-byte Character Set (MBCS) code to Unicode.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>Since this is a Windows application, intimately tied to the Windows desktop platform, we will port it to UTF-16 Unicode that Windows uses.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>If you are writing cross-platform code or porting a Windows application to another platform, you might want to consider porting to UTF-8, which is widely used on other operating systems.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>Porting to UTF-16 Unicode, we must decide whether we still want the option to compile to MBCS or not.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>If we want to have the option to support MBCS, we should use the TCHAR macro as the character type, which resolves to either char or wchar_t, depending on whether _MBCS or _UNICODE is defined during compilation.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>Switching to TCHAR and the TCHAR versions of various APIs instead of wchar_t and its associated APIs means that you can get back to an MBCS version of your code simply by defining _MBCS macro instead of _UNICODE.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>In addition to TCHAR, a variety of TCHAR versions of such as widely used typedefs, macros, and functions exists.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>For example, LPCTSTR instead of LPCSTR, and so on.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>In the project properties dialog, under <bpt id="p1">**</bpt>Configuration Properties<ept id="p1">**</ept>, in the <bpt id="p2">**</bpt>General<ept id="p2">**</ept> section, change the <bpt id="p3">**</bpt>Character Set<ept id="p3">**</ept> property from <bpt id="p4">**</bpt>Use MBCS Character Set<ept id="p4">**</ept> to <bpt id="p5">**</bpt>Use Unicode Character Set<ept id="p5">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>This setting affects which macro is predefined during compilation.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>There is both a UNICODE macro and a _UNICODE macro.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>The project property affects both consistently.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>Windows headers use UNICODE where Visual C++ headers such as MFC use _UNICODE, but when one is defined, the other is always defined.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>A good <bpt id="p1">[</bpt>guide<ept id="p1">](http://msdn.microsoft.com/library/cc194801.aspx)</ept> to porting from MBCS to UTF-16 Unicode using TCHAR exists.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>We choose this route.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>First, we change the <bpt id="p1">**</bpt>Character Set<ept id="p1">**</ept> property to <bpt id="p2">**</bpt>Use Unicode Character Set<ept id="p2">**</ept> and rebuild the project.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>Some places in the code were already using <ph id="ph1">`TCHAR`</ph>, apparently in anticipation of eventually supporting Unicode.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>Some were not.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>We searched for instances of <ph id="ph1">`CHAR`</ph>, which is a typedef for char, and replaced most of them with TCHAR.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>Also, we looked for <ph id="ph1">`sizeof (CHAR)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>Whenever we changed from <ph id="ph1">`CHAR`</ph> to <ph id="ph2">`TCHAR`</ph>, we usually had to change to <ph id="ph3">`sizeof(TCHAR)`</ph> since this was often used to determine the number of characters in a string.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>Using the wrong type here does not produce a compiler error, so it's worth paying a bit of attention to this case.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>This type of error is very common just after switching to Unicode.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>Here’s an example of code that produces this:</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source>We put _T around the string literal to remove the error.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>The _T macro has the effect of making a string literal compile as a char string or a wchar_t string, depending on the setting of MBCS or UNICODE.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>To replace all strings with _T in Visual Studio, first open the <bpt id="p1">**</bpt>Quick Replace<ept id="p1">**</ept> (Keyboard: Ctrl+F) box or the <bpt id="p2">**</bpt>Replace In Files<ept id="p2">**</ept> (Keyboard: Ctrl+Shift+H), then choose the <bpt id="p3">**</bpt>Use Regular Expressions<ept id="p3">**</ept> checkbox.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>Enter <ph id="ph1">`((\".*?\")|('.+?'))`</ph> as the search text and <ph id="ph2">`_T($1)`</ph> as the replacement text.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>If you already have the _T macro around some strings, this procedure will add it again, and it might also find cases where you don't want _T, such as when you use <ph id="ph1">`#include`</ph>, so it's best to use <bpt id="p1">**</bpt>Replace Next<ept id="p1">**</ept> rather than <bpt id="p2">**</bpt>Replace All<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>This particular function, <bpt id="p1">[</bpt>wsprintf<ept id="p1">](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx)</ept>, is actually defined in the Windows headers, and the documentation for it recommends that it not be used, due to possible buffer overrun.</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>No size is given for the <ph id="ph1">`szTmp`</ph> buffer, so there is no way for the function to check that the buffer can hold all the data to be written to it.</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>See the next section about porting to the Secure CRT, in which we fix other similar problems.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>We ended up replacing it with <bpt id="p1">[</bpt>_stprintf_s<ept id="p1">](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>Another common error you’ll see in converting to Unicode is this.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve">
+          <source>The code that produces it is as follows:</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source>Even though the _tcscpy function was used, which is the TCHAR strcpy function for copying a string, the buffer that was allocated was a char buffer.</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source>This is easily changed to TCHAR.</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve">
+          <source>Similarly, we changed <ph id="ph1">`LPSTR`</ph> (Long Pointer to STRing) and <ph id="ph2">`LPCSTR`</ph> (Long Pointer to Constant STRing) to <ph id="ph3">`LPTSTR`</ph> (Long Pointer to TCHAR STRing) and <ph id="ph4">`LPCTSTR`</ph> (Long Pointer to Constant TCHAR STRing) respectively, when warranted by a compiler error.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve">
+          <source>We chose not to make such replacements by using global search and replace, because each situation had to be examined individually.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>In some cases, the char version is wanted, such as when processing certain Windows messages which use Windows structures that have the A suffix.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>In the Windows API, the suffix A means ASCII or ANSI (and also applies to MBCS), and the suffix W means wide characters, or UTF-16 Unicode.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>This naming pattern is used in the Windows headers, but we also followed it in the Spy++ code when we had to add a Unicode version of a function that was already defined in only an MBCS version.</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>In some cases we had to replace a type to use a version that resolves correctly (WNDCLASS instead of WNDCLASSA for example).</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>In many cases we had to use the generic version (macro) of a Win32 API like GetClassName (instead of GetClassNameA).</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>In message handler switch statement, some messages are MBCS or Unicode specific, in those cases, we had to change the code to explicitly call the MBCS version, because we replaced the generically named functions with A and W specific functions, and added a macro for the generic name that resolves to the correct A or W name based on whether UNICODE is defined.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve">
+          <source>In many parts of the code, when we switched to define _UNICODE, the W version is now chosen even when the A version is what's wanted.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve">
+          <source>There are a few places where special actions had to be taken.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve">
+          <source>Any use of WideCharToMultiByte or MultiByteToWideChar might require a closer look.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve">
+          <source>Here's one example where WideCharToMultiByte was being used.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>To address this, we had to understand that the reason this was done was to copy a wide character string representing the name of a font into the internal buffer of a CString, strFace.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>This required slightly different code for multibyte CString strings as for wide character CString strings, so we added an #ifdef in this case.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>Of course, instead of wcscpy we really should use wcscpy_s, the more secure version.</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>The next section addresses this.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>As a check on our work, we should reset the Character Set to Use Multibyte Character Set and make sure that the code still compiles using MBCS as well as Unicode.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>Needless to say, a full test pass should be executed on the recompiled app after all these changes.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source>In our work with this Spy++ solution, it took about two working days for an average C++ developer to convert the code to Unicode.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source>That did not include the retesting time.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source>Step 12.</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source>Porting to use the Secure CRT</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>Porting the code to use the secure versions (the versions with the _s suffix) of CRT functions is next.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>In this case, the general strategy is to replace the function with the _s version and then, usually, add the required additional buffer size parameters.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>In many cases this is straightforward since the size is known.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>In other cases, where the size is not immediately available, it’s necessary to add additional parameters to the function that’s using the CRT function, or perhaps examine the usage of the destination buffer and see what the appropriate size limits are.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source>Visual C++ provides a trick to make it easier to get code secure without adding as many size parameters, and that is by using the template overloads.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>Since these overloads are templates, they are only available when compiling as C++, not as C. Spyxxhk is a C project, so the trick won't work for that.</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve">
+          <source>However, Spyxx is not and we can use the trick.</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve">
+          <source>The trick is to add a line like this in a place where it will be compiled in every file of the project, such as in stdafx.h:</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve">
+          <source>When you define that, whenever the buffer is an array, rather than a raw pointer, its size is inferred from the array type and that is used as the size parameter, without you having to supply it.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve">
+          <source>That helps to cut down the complexity of rewriting the code.</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve">
+          <source>You still have to replace the function name with the _s version, but that can often be done by a search and replace operation.</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>The return values of some functions changed.</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>For example, _itoa_s (and _itow_s and the macro _itot_s) returns an error code (errno_t), rather than the string.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>So in those cases, you have to move the call to _itoa_s onto a separate line and replace it with the buffer's identifier.</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve">
+          <source>Some of the common cases: for memcpy, when switching to memcpy_s, we frequently added the size of the structure being copied to.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve">
+          <source>Similarly, for most strings and buffers, the size of the array or buffer is easily determined from the declaration of the buffer or by finding where the buffer was originally allocated.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve">
+          <source>For some situations, you need to determine how big of a buffer is actually available, and if that information is not available in the scope of the function that you’re modifying, it should be added as an additional parameter and the calling code should be modified to provide the information.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve">
+          <source>With these techniques, it took about half a day to convert the code to use the secure CRT functions.</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve">
+          <source>If you choose not to the template overloads and to add the size parameters manually, it would probably take twice or three times more time.</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve">
+          <source>Step 13.</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve">
+          <source>/Zc:forScope- is deprecated</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve">
+          <source>Since Visual C++ 6.0, the compiler conforms to the current standard, which limits the scope of variables declared in a  loop to the scope of the loop.</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve">
+          <source>The compiler option <bpt id="p1">[</bpt>/Zc:forScope<ept id="p1">](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)</ept> (<bpt id="p2">**</bpt>Force Conformance for Loop Scope<ept id="p2">**</ept> in the project properties) controls whether or not this is reported as an error.</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve">
+          <source>We should update our code to be conformant, and add declarations just outside the loop.</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve">
+          <source>To avoid making the code changes, you can change that setting in the Language section of the C++ project properties to <bpt id="p1">**</bpt>No (/Zc:forScope-)<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve">
+          <source>However, keep in mind that <bpt id="p1">**</bpt>/Zc:forScope-<ept id="p1">**</ept> might be removed in a future release of Visual C++, so eventually your code will need to change to conform to the standard.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve">
+          <source>These issues are relatively easy to fix, but depending on your code, it might affect a lot of code.</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve">
+          <source>Here's a typical issue.</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve">
+          <source>The above code produces the error:</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve">
+          <source>This occurs because the compiler has deprecated a compiler option that allowed code that no longer complies with the C++ standard.</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve">
+          <source>In the standard, declaring a variable inside a loop restricts its scope to the loop only, so the common practice of using a loop counter outside of the loop requires that the declaration of the counter also be moved outside the loop, as in the following revised code:</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve">
+          <source>Summary</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve">
+          <source>Porting Spy++ from the original Visual C++ 6.0 code to the latest compiler took about 20 hours of coding time over the course of about a week.</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve">
+          <source>We upgraded directly through eight releases of the product, but for larger projects, you might find it better to upgrade one release at a time.</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve">
+          <source>This might take longer, but at least you will be able to narrow down what version of the tools caused a particular error to occur.</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve">
+          <source>Porting and Upgrading: Examples and Case Studies</source>
+        </trans-unit>
+        <trans-unit id="410" translate="yes" xml:space="preserve">
+          <source>Previous case study: COM Spy</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
