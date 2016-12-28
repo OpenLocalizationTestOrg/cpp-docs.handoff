@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">17ee77bdd18c57d7a5ce23e48b079064db02274c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\record-field-exchange-using-rfx.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6ff6036fa59f8c33d6e698eddf8cd2b239527828</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4194c3f4cb28eb675b68b99f10dccaa03d68c5e2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange: Using RFX | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange: Using RFX</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic explains what you do to use RFX in relation to what the framework does.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic applies to classes derived from <bpt id="p1">[</bpt>CRecordset<ept id="p1">](../../mfc/reference/crecordset-class.md)</ept> in which bulk row fetching has not been implemented.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If you are using bulk row fetching, bulk record field exchange (Bulk RFX) is implemented.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Bulk RFX is similar to RFX.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To understand the differences, see <bpt id="p1">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p1">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The following topics contain related information:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Record Field Exchange: Working with the Wizard Code<ept id="p1">](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)</ept> introduces the main components of RFX and explains the code that the MFC Application Wizard and <bpt id="p2">**</bpt>Add Class<ept id="p2">**</ept> (as described in <bpt id="p3">[</bpt>Adding an MFC ODBC Consumer<ept id="p3">](../../mfc/reference/adding-an-mfc-odbc-consumer.md)</ept>) write to support RFX and how you might want to modify the wizard code.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Record Field Exchange: Using the RFX Functions<ept id="p1">](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)</ept> explains writing calls to the RFX functions in your <ph id="ph1">`DoFieldExchange`</ph> override.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The following table shows your role in relation to what the framework does for you.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Using RFX: You and the Framework</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The framework</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>|Declare your recordset classes with a wizard.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Specify names and data types of field data members.|The wizard derives a <ph id="ph1">`CRecordset`</ph> class and writes a <bpt id="p1">[</bpt>DoFieldExchange<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__dofieldexchange)</ept> override for you, including an RFX function call for each field data member.|</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>|(Optional) Manually add any needed parameter data members to the class.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Manually add an RFX function call to <ph id="ph1">`DoFieldExchange`</ph> for each parameter data member, add a call to <bpt id="p1">[</bpt>CFieldExchange::SetFieldType<ept id="p1">](../../mfc/reference/cfieldexchange-class.md#cfieldexchange__setfieldtype)</ept> for the group of parameters, and specify the total number of parameters in <bpt id="p2">[</bpt>m_nParams<ept id="p2">](../../mfc/reference/crecordset-class.md#crecordset__m_nparams)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Recordset: Parameterizing a Recordset (ODBC)<ept id="p1">](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)</ept>.||</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>|(Optional) Manually bind additional columns to field data members.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Manually increment <bpt id="p1">[</bpt>m_nFields<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__m_nfields)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Recordset: Dynamically Binding Data Columns (ODBC)<ept id="p1">](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)</ept>.||</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>|Construct an object of your recordset class.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Before using the object, set the values of its parameter data members, if any.|For efficiency, the framework prebinds the parameters, using ODBC.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>When you pass parameter values, the framework passes them to the data source.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Only the parameter values are sent for requeries, unless the sort and/or filter strings have changed.|</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>|Open a recordset object using <bpt id="p1">[</bpt>CRecordset::Open<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__open)</ept>.|Executes the recordset's query, binds columns to field data members of the recordset, and calls <ph id="ph1">`DoFieldExchange`</ph> to exchange data between the first selected record and the recordset's field data members.|</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>|Scroll in the recordset using <bpt id="p1">[</bpt>CRecordset::Move<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__move)</ept> or a menu or toolbar command.|Calls <ph id="ph1">`DoFieldExchange`</ph> to transfer data to the field data members from the new current record.|</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>|Add, update, and delete records.|Calls <ph id="ph1">`DoFieldExchange`</ph> to transfer data to the data source.|</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange (RFX)</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange: How RFX Works</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Recordset: Obtaining SUMs and Other Aggregate Results (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>CRecordset Class</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>CFieldExchange Class</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Macros, Global Functions, and Global Variables</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

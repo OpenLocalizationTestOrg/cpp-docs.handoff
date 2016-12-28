@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">49ae87567cd311e271a0ab50d7112a4a8f0c1b4a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\invalid-parameter-functions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7e7275bee3e338b9219763578e465ad79eea5626</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b9a9c7d0f9b41d3a02d0785e4e22e2e13734aff0</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>These functions are used by the C Runtime Library to handle non-valid parameters passed to CRT Library functions.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Your code may also use these functions to support default or customizable handling of non-valid parameters.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>These functions do not return a value.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_invalid_parameter_noinfo_noreturn`</ph> and <ph id="ph2">`_invoke_watson`</ph> functions do not return to the caller, and in some cases, <ph id="ph3">`_invalid_parameter`</ph> and <ph id="ph4">`_invalid_parameter_noinfo`</ph> may not return to the caller.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A string representing the source code parameter expression that is not valid.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The name of the function that called the handler.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The source code file where the handler was called.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The line number in the source code where the handler was called.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Unused.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When C runtime library functions are passed non-valid parameters, the library functions call an <bpt id="p1">*</bpt>invalid parameter handler<ept id="p1">*</ept>, a function that may be specified by the programmer to do any of several things.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For example, it may report the issue to the user, write to a log, break in a debugger, terminate the program, or do nothing at all.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If no function is specified by the programmer, a default handler, <ph id="ph1">`_invoke_watson`</ph>, is called.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>By default, when a non-valid parameter is identified in debug code, CRT library functions call the function <ph id="ph1">`_invalid_parameter`</ph> using verbose parameters.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In non-debug code, the <ph id="ph1">`_invalid_parameter_noinfo`</ph> function is called, which calls the <ph id="ph2">`_invalid_parameter`</ph> function using empty parameters.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If the non-debug CRT library function requires program termination, the <ph id="ph1">`_invalid_parameter_noinfo_noreturn`</ph> function is called, which calls the <ph id="ph2">`_invalid_parameter`</ph> function using empty parameters, followed by a call to the <ph id="ph3">`_invoke_watson`</ph> function to force program termination.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_invalid_parameter`</ph> function checks whether a user-defined invalid parameter handler was set, and if so, calls it.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For example, if a user-defined thread-local handler was set by a call to <bpt id="p1">[</bpt>set_thread_local_invalid_parameter_handler<ept id="p1">](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)</ept> in the current thread, it is called, then the function returns.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Otherwise, if a user-defined global invalid parameter handler was set by a call to <bpt id="p1">[</bpt>set_invalid_parameter_handler<ept id="p1">](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)</ept>, it is called, then the function returns.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Otherwise, the default handler <ph id="ph1">`_invoke_watson`</ph> is called.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The default behavior of <ph id="ph1">`_invoke_watson`</ph> is to terminate the program.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>User-defined handlers may terminate or return.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>We recommend that user-defined handlers terminate the program unless recovery is certain.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>When the default handler <ph id="ph1">`_invoke_watson`</ph> is called, if the processor supports a <bpt id="p1">[</bpt>__fastfail<ept id="p1">](../../intrinsics/fastfail.md)</ept> operation, it is invoked using a parameter of <ph id="ph2">`FAST_FAIL_INVALID_ARG`</ph> and the process terminates.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Otherwise, a fast fail exception is raised, which can be caught by an attached debugger.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If the process is allowed to continue, it is terminated by a call to the Windows <ph id="ph1">`TerminateProcess`</ph> function using an exception code status of <ph id="ph2">`STATUS_INVALID_CRUNTIME_PARAMETER`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`_invalid_parameter_noinfo`</ph>, <ph id="ph2">`_invalid_parameter_noinfo_noreturn`</ph>,</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>corecrt.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Alphabetical Function Reference</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Parameter Validation</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

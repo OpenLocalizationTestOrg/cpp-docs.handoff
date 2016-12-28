@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7720dccd53cfc750abde97e2966c007ad2fe7f9c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7c351bd1bec1a5c8dfd4eb2a30537deec19a4645</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">350c5005f28355167aa585baa3686a89fda01c30</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Compiling a C++-CLI Program on the Command Line | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Compiling a C++/CLI Program on the Command Line</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>You can create Visual C++ programs that target the Common Language Runtime (CLR) and use the .NET Framework, and build them on the command line.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Visual C++ supports the C++/CLI programming language, which has additional types and operators to target the .NET programming model.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For an introduction to the C++/CLI language, see <bpt id="p1">[</bpt>Pure C++: Hello, C++/CLI<ept id="p1">](http://msdn.microsoft.com/magazine/cc163681.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For general information, see <bpt id="p1">[</bpt>.NET Programming with C++/CLI (Visual C++)<ept id="p1">](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In this walkthrough, you use a text editor to create a basic C++/CLI program, and then compile it on the command line.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>(You can use your own C++/CLI program instead of typing the one that's shown, or you can use a C++/CLI code sample from another help article.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This technique is useful for building and testing small modules that contain no UI elements.)</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You can also use the Visual Studio IDE to compile C++/CLI programs.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Walkthrough: Compiling a C++ Program that Targets the CLR in Visual Studio<ept id="p1">](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You must understand the fundamentals of the C++ language.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Compiling a C++/CLI Program</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following steps show how to compile a C++/CLI console application that uses .NET Framework classes.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To enable compilation for C++/CLI, you must use the <bpt id="p1">[</bpt>/clr<ept id="p1">](../build/reference/clr-common-language-runtime-compilation.md)</ept> compiler option.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The Visual C++ compiler generates an .exe file that contains MSIL code—or mixed MSIL and native code—and links to the required .NET Framework libraries.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To compile a C++/CLI application on the command line</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Open a <bpt id="p1">**</bpt>Developer Command Prompt<ept id="p1">**</ept> window.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>(On the <bpt id="p1">**</bpt>Start<ept id="p1">**</ept> window, open <bpt id="p2">**</bpt>Apps<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Open the <bpt id="p1">**</bpt>Visual Studio Tools<ept id="p1">**</ept> folder under your version of <ph id="ph1">[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]</ph>, and then choose the <bpt id="p2">**</bpt>Developer Command Prompt<ept id="p2">**</ept> shortcut.) For more information about how to open a Command Prompt window, see <bpt id="p3">[</bpt>Setting the Path and Environment Variables for Command-Line Builds<ept id="p3">](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Administrator credentials may be required to successfully compile the code, depending on the computer's operating system and configuration.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To run the Command Prompt window as an administrator, open the shortcut menu for <bpt id="p1">**</bpt>Developer Command Prompt<ept id="p1">**</ept> and then choose <bpt id="p2">**</bpt>Run as administrator<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>At the command prompt, enter <bpt id="p1">**</bpt>notepad basicclr.cpp<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Choose <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> when you are prompted to create a file.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In Notepad, enter these lines:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>On the menu bar, choose <bpt id="p1">**</bpt>File<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Save<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>You have created a Visual C++ source file that uses a .NET Framework class (&lt;xref:System.Console&gt;) in the &lt;xref:System&gt; namespace.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>At the command prompt, enter <bpt id="p1">**</bpt>cl /clr basicclr.cpp<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The cl.exe compiler compiles the source code into an .obj file that contains MSIL, and then runs the linker to generate an executable program named basicclr.exe.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>To run the basicclr.exe program, at the command prompt, enter <bpt id="p1">**</bpt>basicclr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The program displays this text and exits:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Visual C++ Guided Tour</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>C++ Language Reference</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Building C/C++ Programs</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Compiler Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

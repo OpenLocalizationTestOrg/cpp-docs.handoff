@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f76d6859d80f9e88eddd2d34a4e744d4b0f139ac</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\lifetime.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">253053fdd50b1f474af69733271a9feae13b2ad4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9a7f0e9eb4d476ae28d95b51222d5ca615f798cd</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Lifetime | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Lifetime</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>"Lifetime" is the period during execution of a program in which a variable or function exists.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The storage duration of the identifier determines its lifetime.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>An identifier declared with the <bpt id="p1">*</bpt>storage-class-specifier<ept id="p1">*</ept> <bpt id="p2">**</bpt>static<ept id="p2">**</ept> has static storage duration.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Identifiers with static storage duration (also called "global") have storage and a defined value for the duration of a program.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Storage is reserved and the identifier's stored value is initialized only once, before program startup.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>An identifier declared with external or internal linkage also has static storage duration (see <bpt id="p1">[</bpt>Linkage<ept id="p1">](../c-language/linkage.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>An identifier declared without the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> storage-class specifier has automatic storage duration if it is declared inside a function.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>An identifier with automatic storage duration (a "local identifier") has storage and a defined value only within the block where the identifier is defined or declared.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>An automatic identifier is allocated new storage each time the program enters that block, and it loses its storage (and its value) when the program exits the block.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Identifiers declared in a function with no linkage also have automatic storage duration.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The following rules specify whether an identifier has global (static) or local (automatic) lifetime:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>All functions have static lifetime.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Therefore they exist at all times during program execution.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Identifiers declared at the external level (that is, outside all blocks in the program at the same level of function definitions) always have global (static) lifetimes.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If a local variable has an initializer, the variable is initialized each time it is created (unless it is declared as <bpt id="p1">**</bpt>static<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Function parameters also have local lifetime.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You can specify global lifetime for an identifier within a block by including the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> storage-class specifier in its declaration.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Once declared <bpt id="p1">**</bpt>static<ept id="p1">**</ept>, the variable retains its value from one entry of the block to the next.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Although an identifier with a global lifetime exists throughout the execution of the source program (for example, an externally declared variable or a local variable declared with the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> keyword), it may not be visible in all parts of the program.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Scope and Visibility<ept id="p1">](../c-language/scope-and-visibility.md)</ept> for information about visibility, and see <bpt id="p2">[</bpt>Storage Classes<ept id="p2">](../c-language/c-storage-classes.md)</ept> for a discussion of the <bpt id="p3">*</bpt>storage-class-specifier<ept id="p3">*</ept> nonterminal.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Memory can be allocated as needed (dynamic) if created through the use of special library routines such as <ph id="ph1">`malloc`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Since dynamic memory allocation uses library routines, it is not considered part of the language.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>See the <bpt id="p1">[</bpt>malloc<ept id="p1">](../c-runtime-library/reference/malloc.md)</ept> function in the <bpt id="p2">*</bpt>Run-Time Library Reference<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Lifetime, Scope, Visibility, and Linkage</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

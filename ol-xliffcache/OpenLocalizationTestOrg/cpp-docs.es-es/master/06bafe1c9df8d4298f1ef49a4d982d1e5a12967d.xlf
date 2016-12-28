@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">06bafe1c9df8d4298f1ef49a4d982d1e5a12967d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\ide\linker-property-pages.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">477a91e326f66589fcd52905f4885e79b3e0f2b9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0e5f9e49fac129df5c67c16ee42e6e0dbfd0d077</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Linker Property Pages | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Linker Property Pages</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic discusses the following properties on the <bpt id="p1">**</bpt>General<ept id="p1">**</ept> linker property page:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Ignore Import Library</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Tells the linker not to try to link any .lib output generated from this build into any dependent project.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This allows the project system to handle .dll files that do not produce a .lib file when built.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If a project depends on another project that produces a DLL, the project system automatically will link the .lib file produced by that child project.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This may not be needed by projects that are producing COM DLLs or resource-only DLLs; these DLLs do not have any meaningful exports.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If a DLL has no exports, the linker will not generate a .lib file.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If no export .lib file is present on the disk, and the project system tells the linker to link with this (missing) DLL, the link will fail.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">**</bpt>Ignore Import Library<ept id="p1">**</ept> to resolve this problem.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When set to <ph id="ph1">`Yes`</ph>, the project system will ignore the presence or absence of that .lib file and cause any project that depends on this project to not link with the nonexistent .lib file.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To programmatically access this property, see &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Register Output</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Run regsvr32.exe /s $(TargetPath), which is valid only on .dll projects.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For .exe projects, this property is ignored.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If you want to register an .exe output, set a postbuild event on the configuration to do the custom registration that is always required for registered .exe files.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To programmatically access this property, see &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Per-user Redirection</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Registration in <ph id="ph1">[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]</ph> has traditionally been done in HKEY_CLASSES_ROOT (HKCR).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>With <ph id="ph1">[!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]</ph>, to access HKCR you must run <ph id="ph2">[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]</ph> in elevated mode.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Developers do not always want to run in elevated mode but still must work with registration.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Per-user redirection allows you to register without having to run in this mode.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Per-user redirection will force any writes to HKCR to be redirected to HKEY_CURRENT_USER (HKCU).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>If per-user redirection is turned off, it can cause <bpt id="p1">[</bpt>Project Build Error PRJ0050<ept id="p1">](../error-messages/tool-errors/project-build-error-prj0050.md)</ept> when the program tries to write to HKCR.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Link Library Dependencies</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Gives you the choice of linking in the .lib files that are produced by dependent projects.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Typically, you will want to link in the .lib file.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>You can also specify a .obj file by providing the file name and relative path, for example <bpt id="p1">**</bpt>..<ph id="ph1">\\</ph>..\MyLibProject\MyObjFile.obj<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If the source code for the .obj file #includes a precompiled header, for example pch.h, then pch.obj file is located in the same folder as <bpt id="p1">**</bpt>MyObjFile.obj<ept id="p1">**</ept> and you must also add <bpt id="p2">**</bpt>pch.obj<ept id="p2">**</ept> as an additional dependency.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Use Library Dependency Inputs</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>In a large project, when a dependent project produces a .lib file, incremental linking is disabled.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>If there are many dependent projects that produce .lib files, building the application can take a long time.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>When this property is set to <ph id="ph1">`Yes`</ph>, the project system links in the .obj files for .libs produced by dependent projects, thus enabling incremental linking.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For information about how to access the <bpt id="p1">**</bpt>General<ept id="p1">**</ept> linker property page, see <bpt id="p2">[</bpt>Working with Project Properties<ept id="p2">](../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>VC++ Directories, Projects and Solutions, Options Dialog Box</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Property Pages</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

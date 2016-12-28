@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4b33f5651e07f47e950e37e98fc112ca5dd5012c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\vectorcall.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">66c10aef678f2f577f73398dec314a204f84b3d0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">93df21aafd2704df5ab4c8b70c90e1ddb9dbe0e2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>__vectorcall | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>__vectorcall</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__vectorcall`</ph> calling convention specifies that arguments to functions are to be passed in registers, when possible.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>uses more registers for arguments than <bpt id="p1">[</bpt>__fastcall<ept id="p1">](../cpp/fastcall.md)</ept> or the default <bpt id="p2">[</bpt>x64 calling convention<ept id="p2">](../build/overview-of-x64-calling-conventions.md)</ept> use.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__vectorcall`</ph> calling convention is only supported in native code on x86 and x64 processors that include Streaming SIMD Extensions 2 (SSE2) and above.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`__vectorcall`</ph> to speed functions that pass several floating-point or SIMD vector arguments and perform operations that take advantage of the arguments loaded in registers.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The following list shows the features that are common to the x86 and x64 implementations of <ph id="ph1">`__vectorcall`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The differences are explained later in this article.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Element</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Implementation</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>C name-decoration convention</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Function names are suffixed with two "at" signs (@@) followed by the number of bytes (in decimal) in the parameter list.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Case-translation convention</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>No case translation is performed.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Using the <bpt id="p1">[</bpt>/Gv<ept id="p1">](../build/reference/gd-gr-gv-gz-calling-convention.md)</ept> compiler option causes each function in the module to compile as <ph id="ph1">`__vectorcall`</ph> unless the function is a member function, is declared with a conflicting calling convention attribute, uses a <ph id="ph2">`vararg`</ph> variable argument list, or has the name <ph id="ph3">`main`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>You can pass three kinds of arguments by register in <ph id="ph1">`__vectorcall`</ph> functions: <bpt id="p1">*</bpt>integer type<ept id="p1">*</ept> values, <bpt id="p2">*</bpt>vector type<ept id="p2">*</ept> values, and <bpt id="p3">*</bpt>homogeneous vector aggregate<ept id="p3">*</ept> (HVA) values.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>An integer type satisfies two requirements: it fits in the native register size of the processor—for example, 4 bytes on an x86 machine or 8 bytes on an x64 machine—and it’s convertible to an integer of register length and back again without changing its bit representation.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For example, any type that can be promoted to <ph id="ph1">`int`</ph> on x86 (<ph id="ph2">`long long`</ph> on x64)—for example, a <ph id="ph3">`char`</ph> or <ph id="ph4">`short`</ph>—or that can be cast to <ph id="ph5">`int`</ph> (<ph id="ph6">`long long`</ph> on x64) and back to its original type without change is an integer type.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Integer types include pointer, reference, and <ph id="ph1">`struct`</ph> or <ph id="ph2">`union`</ph> types of 4 bytes (8 bytes on x64) or less.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>On x64 platforms, larger <ph id="ph1">`struct`</ph> and <ph id="ph2">`union`</ph> types are passed by reference to memory allocated by the caller; on x86 platforms, they are passed by value on the stack.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>A vector type is either a floating-point type—for example, a <ph id="ph1">`float`</ph> or <ph id="ph2">`double`</ph>—or an SIMD vector type—for example, <ph id="ph3">`__m128`</ph> or <ph id="ph4">`__m256`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>An HVA type is a composite type of up to four data members that have identical vector types.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>An HVA type has the same alignment requirement as the vector type of its members.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This is an example of an HVA <ph id="ph1">`struct`</ph> definition that contains three identical vector types and has 32-byte alignment:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Declare your functions explicitly with the <ph id="ph1">`__vectorcall`</ph> keyword in header files to allow separately compiled code to link without errors.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Functions must be prototyped to use <ph id="ph1">`__vectorcall`</ph>, and can’t use a <ph id="ph2">`vararg`</ph> variable length argument list.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>A member function may be declared by using the <ph id="ph1">`__vectorcall`</ph> specifier.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The hidden <ph id="ph1">`this`</ph> pointer is passed by register as the first integer type argument.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>On ARM machines, <ph id="ph1">`__vectorcall`</ph> is accepted and ignored by the compiler.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For non-static class member functions, if the function is defined out-of-line, the calling convention modifier does not have to be specified on the out-of-line definition.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>That is, for class non-static members, the calling convention specified during declaration is assumed at the point of definition.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Given this class definition:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>this:</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>is equivalent to this:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__vectorcall`</ph> calling convention modifier must be specified when a pointer to a <ph id="ph2">`__vectorcall`</ph> function is created.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The next example creates a <ph id="ph1">`typedef`</ph> for a pointer to a <ph id="ph2">`__vectorcall`</ph> function that takes four <ph id="ph3">`double`</ph> arguments and returns an <ph id="ph4">`__m256`</ph> value:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>__vectorcall convention on x64</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__vectorcall`</ph> calling convention on x64 extends the standard x64 calling convention to take advantage of additional registers.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Both integer type arguments and vector type arguments are mapped to registers based on position in the argument list.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>HVA arguments are allocated to unused vector registers.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>When any of the first four arguments in order from left to right are integer type arguments, they are passed in the register that corresponds to that position—RCX, RDX, R8, or R9.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>A hidden <ph id="ph1">`this`</ph> pointer is treated as the first integer type argument.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When an HVA argument in one of the first four arguments can’t be passed in the available registers, a reference to caller-allocated memory is passed in the corresponding integer type register instead.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Integer type arguments after the fourth parameter position are passed on the stack.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>When any of the first six arguments in order from left to right are vector type arguments, they are passed by value in SSE vector registers 0 to 5 according to argument position.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Floating-point and <ph id="ph1">`__m128`</ph> types are passed in XMM registers, and <ph id="ph2">`__m256`</ph> types are passed in YMM registers.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This differs from the standard x64 calling convention, because the vector types are passed by value instead of by reference, and additional registers are used.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The shadow stack space allocated for vector type arguments is fixed at 8 bytes, and the <bpt id="p1">[</bpt>/homeparams<ept id="p1">](../build/reference/homeparams-copy-register-parameters-to-stack.md)</ept> option does not apply.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Vector type arguments in the seventh and later parameter positions are passed on the stack by reference to memory allocated by the caller.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>After registers are allocated for vector arguments, the data members of HVA arguments are allocated, in ascending order, to unused vector registers XMM0 to XMM5 (or YMM0 to YMM5, for <ph id="ph1">`__m256`</ph> types), as long as there are enough registers available for the entire HVA.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>If not enough registers are available, the HVA argument is passed by reference to memory allocated by the caller.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The stack shadow space for an HVA argument is fixed at 8 bytes with undefined content.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>HVA arguments are assigned to registers in order from left to right in the parameter list, and may be in any position.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>HVA arguments in one of the first four argument positions that are not assigned to vector registers are passed by reference in the integer register that corresponds to that position.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>HVA arguments passed by reference after the fourth parameter position are pushed on the stack.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Results of <ph id="ph1">`__vectorcall`</ph> functions are returned by value in registers when possible.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Results of integer type, including structs or unions of 8 bytes or less, are returned by value in RAX.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Vector type results are returned by value in XMM0 or YMM0, depending on size.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>HVA results have each data element returned by value in registers XMM0:XMM3 or YMM0:YMM3, depending on element size.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Result types that don't fit in the corresponding registers are returned by reference to memory allocated by the caller.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The stack is maintained by the caller in the x64 implementation of <ph id="ph1">`__vectorcall`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The caller prolog and epilog code allocates and clears the stack for the called function.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Arguments are pushed on the stack from right to left, and shadow stack space is allocated for arguments passed in registers.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Examples:</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>__vectorcall convention on x86</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__vectorcall`</ph> calling convention follows the <ph id="ph2">`__fastcall`</ph> convention for 32-bit integer type arguments, and takes advantage of the SSE vector registers for vector type and HVA arguments.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The first two integer type arguments found in the parameter list from left to right are placed in ECX and EDX, respectively.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>A hidden <ph id="ph1">`this`</ph> pointer is treated as the first integer type argument, and is passed in ECX.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The first six vector type arguments are passed by value through SSE vector registers 0 to 5, in the XMM or YMM registers, depending on argument size.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The first six vector type arguments in order from left to right are passed by value in SSE vector registers 0 to 5.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Floating-point and <ph id="ph1">`__m128`</ph> types are passed in XMM registers, and <ph id="ph2">`__m256`</ph> types are passed in YMM registers.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>No shadow stack space is allocated for vector type arguments passed by register.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The seventh and subsequent vector type arguments are passed on the stack by reference to memory allocated by the caller.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The limitation of compiler error <bpt id="p1">[</bpt>C2719<ept id="p1">](../error-messages/compiler-errors-2/compiler-error-c2719.md)</ept> does not apply to these arguments.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>After registers are allocated for vector arguments, the data members of HVA arguments are allocated in ascending order to unused vector registers XMM0 to XMM5 (or YMM0 to YMM5, for <ph id="ph1">`__m256`</ph> types), as long as there are enough registers available for the entire HVA.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>If not enough registers are available, the HVA argument is passed on the stack by reference to memory allocated by the caller.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>No stack shadow space for an HVA argument is allocated.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>HVA arguments are assigned to registers in order from left to right in the parameter list, and may be in any position.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Results of <ph id="ph1">`__vectorcall`</ph> functions are returned by value in registers when possible.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Results of integer type, including structs or unions of 4 bytes or less, are returned by value in EAX.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Integer type structs or unions of 8 bytes or less are returned by value in EDX:EAX.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Vector type results are returned by value in XMM0 or YMM0, depending on size.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>HVA results have each data element returned by value in registers XMM0:XMM3 or YMM0:YMM3, depending on element size.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Other result types are returned by reference to memory allocated by the caller.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The x86 implementation of <ph id="ph1">`__vectorcall`</ph> follows the convention of arguments pushed on the stack from right to left by the caller, and the called function clears the stack just before it returns.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Only arguments that are not placed in registers are pushed on the stack.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Examples:</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>End Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Argument Passing and Naming Conventions</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Keywords</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

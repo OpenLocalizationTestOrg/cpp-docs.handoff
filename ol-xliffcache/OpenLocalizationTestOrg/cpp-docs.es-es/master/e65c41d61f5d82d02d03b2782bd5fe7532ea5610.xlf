@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e65c41d61f5d82d02d03b2782bd5fe7532ea5610</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\odbc-driver-requirements-for-dynasets.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">aac5b1124e57c949369aad920e8ce5ca0ea2e636</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3dc5ccb28078dc346338e2772f94a86be4216008</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>ODBC Driver Requirements for Dynasets | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>ODBC Driver Requirements for Dynasets</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In the MFC ODBC database classes, dynasets are recordsets with dynamic properties; they remain synchronized with the data source in certain ways.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>MFC dynasets (but not forward-only recordsets) require an ODBC driver with Level 2 API conformance.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If the driver for your <bpt id="p1">[</bpt>data source<ept id="p1">](../../data/odbc/data-source-odbc.md)</ept> conforms to the Level 1 API set, you can still use both updateable and read-only snapshots and forward-only recordsets, but not dynasets.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>However, a Level 1 driver can support dynasets if it supports extended fetch and keyset-driven cursors.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In ODBC terminology, dynasets and snapshots are referred to as cursors.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A cursor is a mechanism used for keeping track of its position in a recordset.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For more information about driver requirements for dynasets, see <bpt id="p1">[</bpt>Dynaset<ept id="p1">](../../data/odbc/dynaset.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For more information about cursors, see the <bpt id="p1">[</bpt>Open Database Connectivity (ODBC)<ept id="p1">](https://msdn.microsoft.com/en-us/library/ms710252.aspx)</ept> SDK in the MSDN documentation.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For updateable recordsets, your ODBC driver must support either positioned update statements or the <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> ODBC API function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If both are supported, MFC uses <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> for efficiency.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Alternatively, for snapshots, you can use the cursor library, which provides the required support for updateable snapshots (static cursors and positioned update statements).</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>ODBC Basics</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

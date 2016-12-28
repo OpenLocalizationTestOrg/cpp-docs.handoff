@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dd7a5b65c3d774884435ccd236cbacfb595abbfa</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\record-field-exchange-rfx.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">59d45d7badd9ffc4cf2aa7cfb55a07b452f0b377</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">96f4e23b883a76ee7c5853a7bece79697ab39d9a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange (RFX) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange (RFX)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The MFC ODBC database classes automate moving data between the data source and a <bpt id="p1">[</bpt>recordset<ept id="p1">](../../data/odbc/recordset-odbc.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When you derive a class from <bpt id="p1">[</bpt>CRecordset<ept id="p1">](../../mfc/reference/crecordset-class.md)</ept> and do not use bulk row fetching, data is transferred by the record field exchange (RFX) mechanism.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If you have implemented bulk row fetching in a derived <ph id="ph1">`CRecordset`</ph> class, the framework uses the bulk record field exchange (Bulk RFX) mechanism to transfer data.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p1">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>RFX is similar to dialog data exchange (DDX).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Moving data between a data source and the field data members of a recordset requires multiple calls to the recordset's <bpt id="p1">[</bpt>DoFieldExchange<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__dofieldexchange)</ept> function and considerable interaction between the framework and <bpt id="p2">[</bpt>ODBC<ept id="p2">](../../data/odbc/odbc-basics.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The RFX mechanism is type-safe and saves you the work of calling ODBC functions such as <bpt id="p1">**</bpt>::SQLBindCol<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For more information about DDX, see <bpt id="p1">[</bpt>Dialog Data Exchange and Validation<ept id="p1">](../../mfc/dialog-data-exchange-and-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>RFX is mostly transparent to you.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If you declare your recordset classes with the MFC Application Wizard or <bpt id="p1">**</bpt>Add Class<ept id="p1">**</ept> (as described in <bpt id="p2">[</bpt>Adding an MFC ODBC Consumer<ept id="p2">](../../mfc/reference/adding-an-mfc-odbc-consumer.md)</ept>), RFX is built into them automatically.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Your recordset class must be derived from the base class <ph id="ph1">`CRecordset`</ph> supplied by the framework.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The MFC Application Wizard lets you create an initial recordset class.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Add Class<ept id="p1">**</ept> lets you add other recordset classes as you need them.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information and examples, see <bpt id="p1">[</bpt>Adding an MFC ODBC Consumer<ept id="p1">](../../mfc/reference/adding-an-mfc-odbc-consumer.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>You must manually add a small amount of RFX code in three cases, when you want to:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Use parameterized queries.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Recordset: Parameterizing a Recordset (ODBC)<ept id="p1">](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Perform joins (using one recordset for columns from two or more tables).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Recordset: Performing a Join (ODBC)<ept id="p1">](../../data/odbc/recordset-performing-a-join-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Bind data columns dynamically.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This is less common than parameterization.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Recordset: Dynamically Binding Data Columns (ODBC)<ept id="p1">](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>If you need a more advanced understanding of RFX, see <bpt id="p1">[</bpt>Record Field Exchange: How RFX Works<ept id="p1">](../../data/odbc/record-field-exchange-how-rfx-works.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The following topics explain the details of using recordset objects:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange: Using RFX</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange: Using the RFX Functions</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange: How RFX Works</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Open Database Connectivity (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>MFC ODBC Consume</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Database Support, MFC Application Wizard</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>CRecordset Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

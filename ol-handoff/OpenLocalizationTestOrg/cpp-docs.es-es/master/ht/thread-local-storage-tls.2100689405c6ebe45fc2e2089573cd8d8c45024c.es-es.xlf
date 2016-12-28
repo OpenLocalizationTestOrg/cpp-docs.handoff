@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">18707d406f94a7051db4e5a45669d0e1178bf182</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\thread-local-storage-tls.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c968fa9211aa2901eec5f46465c72f1788da0d46</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7c4bfe65c27091d2e6a3d23d79345576439a123f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Thread Local Storage (TLS) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Thread Local Storage (TLS)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Thread Local Storage (TLS) is the method by which each thread in a given multithreaded process can allocate locations in which to store thread-specific data.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Dynamically bound (run-time) thread-specific data is supported by way of the TLS API (<bpt id="p1">[</bpt>TlsAlloc<ept id="p1">](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801)</ept>,  <bpt id="p2">[</bpt>TlsGetValue<ept id="p2">](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812)</ept>,  <bpt id="p3">[</bpt>TlsSetValue<ept id="p3">](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818)</ept>, and <bpt id="p4">[</bpt>TlsFree<ept id="p4">](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For more information about how thread local storage is implemented on Windows, see <bpt id="p1">[</bpt>Thread Local Storage (Windows)<ept id="p1">](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Win32 and the Visual C++ compiler now support statically bound (load-time) per-thread data in addition to the existing API implementation.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Compiler Implementation for TLS</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>C++11:<ept id="p1">**</ept>  The <ph id="ph1">`thread_local`</ph> storage class specifier is the recommended way to specify thread-local storage for objects and class members.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Storage classes (C++)<ept id="p1">](../cpp/storage-classes-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Visual C++ also provides a Microsoft-specific attribute,  <bpt id="p1">[</bpt>thread<ept id="p1">](../cpp/thread.md)</ept>, as extended storage class modifier.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`__declspec`</ph> keyword to declare a <bpt id="p1">**</bpt>thread<ept id="p1">**</ept> variable.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For example, the following code declares an integer thread local variable and initializes it with a value:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Rules and limitations</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following guidelines must be observed when declaring statically bound thread local objects and variables.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>These guidelines apply both to <bpt id="p1">[</bpt>thread<ept id="p1">](../cpp/thread.md)</ept>and for the most part also to <bpt id="p2">[</bpt>thread_local<ept id="p2">](../cpp/storage-classes-cpp.md)</ept>:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`thread`</ph> attribute can be applied only to class and data declarations and definitions.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>It cannot be used on function declarations or definitions.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For example, the following code generates a compiler error:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`thread`</ph> modifier might be specified only on data items with <ph id="ph2">`static`</ph> extent.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This includes global data objects (both <ph id="ph1">`static`</ph> and <ph id="ph2">`extern`</ph>), local static objects, and static data members of C++ classes.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Automatic data objects cannot be declared with the <ph id="ph1">`thread`</ph> attribute.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The following code generates compiler errors:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The declarations and the definition of a thread local object must all specify the <ph id="ph1">`thread`</ph> attribute.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For example, the following code generates an error:</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`thread`</ph> attribute cannot be used as a type modifier.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For example, the following code generates a compiler error:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Because the declaration of C++ objects that use the <ph id="ph1">`thread`</ph> attribute is permitted, the following two examples are semantically equivalent:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The address of a thread local object is not considered constant, and any expression involving such an address is not considered a constant expression.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In standard C, the effect of this is to forbid the use of the address of a thread local variable as an initializer for an object or pointer.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, the following code is flagged as an error by the C compiler:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This restriction does not apply in C++.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Because C++ allows for dynamic initialization of all objects, you can initialize an object by using an expression that uses the address of a thread local variable.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This is accomplished just like the construction of thread local objects.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For example, the code shown earlier does not generate an error when it is compiled as a C++ source file.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Note that the address of a thread local variable is valid only as long as the thread in which the address was taken still exists.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Standard C allows for the initialization of an object or variable with an expression involving a reference to itself, but only for objects of nonstatic extent.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Although C++ generally allows for such dynamic initialization of objects with an expression involving a reference to itself, this kind of initialization is not permitted with thread local objects.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Note that a <ph id="ph1">`sizeof`</ph> expression that includes the object being initialized does not represent a reference to itself and is enabled in both C and C++.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>C++ does not allow such dynamic initialization of thread data because of possible future enhancements to the thread local storage facility.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>On Windows operating systems before <ph id="ph1">[!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]</ph>, <ph id="ph2">`__declspec`</ph>( thread ) has some limitations.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If a DLL declares any data or object as <ph id="ph1">`__declspec`</ph>( thread ), it can cause a protection fault if dynamically loaded.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>After the DLL is loaded with <bpt id="p1">[</bpt>LoadLibrary<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms684175)</ept>, it causes system failure whenever the code references the <ph id="ph1">`__declspec`</ph>( thread ) data.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Because the global variable space for a thread is allocated at run time, the size of this space is based on a calculation of the requirements of the application plus the requirements of all the DLLs that are statically linked.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>When you use <ph id="ph1">`LoadLibrary`</ph>, you cannot extend this space to allow for the thread local variables declared with <ph id="ph2">`__declspec`</ph>( thread ).</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Use the TLS APIs, such as <bpt id="p1">[</bpt>TlsAlloc<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms686801)</ept>, in your DLL to allocate TLS if the DLL might be loaded with <ph id="ph1">`LoadLibrary`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Multithreading with C and Win32</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

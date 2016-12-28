@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4adcbc707be56c56f50822ef29aea22bef44c270</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\help-menu-merging.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d0133a8ab183aa268f8d8f7f70c1f2d2e04305c5</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c788df3d2b72e98de2f4998b8916bd36016dd5f4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Help Menu Merging | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Help Menu Merging</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When an object is active within a container, the menu merging protocol of OLE Documents gives the object complete control of the <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, the container's Help topics are not available unless the user deactivates the object.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The active document containment architecture expands on the rules for in-place menu merging to allow both the container and an active document that is active to share the menu.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The new rules are simply additional conventions about what component owns what part of the menu and how the shared menu is constructed.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The new convention is simple.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In active documents, the <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu has two top-level menu items organized as follows:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For example, when a Word section is active in the Office Binder, then the <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu would appear as follows:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Both menu items are cascading menus under which any additional menu items specific to the container and the object are provided to the user.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>What items appear here will vary with the container and objects involved.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To construct this merged <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu, the active document containment architecture modifies the normal OLE Documents procedure.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>According to OLE Documents, the merged menu bar can have six groups of menus, namely <bpt id="p1">**</bpt>File<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Edit<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Container<ept id="p3">**</ept>, <ph id="ph1">`Object`</ph>, <bpt id="p4">**</bpt>Window<ept id="p4">**</ept>, <bpt id="p5">**</bpt>Help<ept id="p5">**</ept>, in that order.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In each group, there can be zero or more menus.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The groups <bpt id="p1">**</bpt>File<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Container<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>Window<ept id="p3">**</ept> belong to the container and the groups <bpt id="p4">**</bpt>Edit<ept id="p4">**</ept>, <bpt id="p5">**</bpt>Object,<ept id="p5">**</ept> and <bpt id="p6">**</bpt>Help<ept id="p6">**</ept> belong to the object.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When the object wants to do menu merging, it creates a blank menu bar and passes it to the container.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The container then inserts its menus, by calling <bpt id="p1">**</bpt>IOleInPlaceFrame::InsertMenus<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The object also passes a structure that is an array of six LONG values (<bpt id="p1">**</bpt>OLEMENUGROUPWIDTHS<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>After inserting the menus, the container marks how many menus it added in each one of its groups, and then returns.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Then the object inserts its menus, paying attention to the count of menus in each container group.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Finally, the object passes the merged menu bar and the array (which contains the count of menus in each group) to OLE, which returns an opaque "menu descriptor" handle.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Later the object passes that handle and the merged menu bar to the container, via <bpt id="p1">**</bpt>IOleInPlaceFrame::SetMenu<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>At this time, the container displays the merged menu bar and also passes the handle to OLE, so that OLE can do proper dispatching of menu messages.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In the modified active document procedure, the object must first initialize the <bpt id="p1">**</bpt>OLEMENUGROUPWIDTHS<ept id="p1">**</ept> elements to zero before passing it to the container.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Then the container performs a normal menu insertion with one exception: The container inserts a <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu as the last item and stores a value of 1 in the last (sixth) entry of the <bpt id="p2">**</bpt>OLEMENUGROUPWIDTHS<ept id="p2">**</ept> array (that is, width[5], which belongs to the object's Help group).</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu will have only one item which is a submenu, the "<bpt id="p2">**</bpt>Container Help<ept id="p2">**</ept> &gt;" cascade menu as previously described.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The object then executes its normal menu insertion code, except that before inserting its <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu, it checks the sixth entry of the <bpt id="p2">**</bpt>OLEMENUGROUPWIDTHS<ept id="p2">**</ept> array.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If the value is 1 and the name of the last menu is <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> (or the appropriate localized string), then the object inserts its <bpt id="p2">**</bpt>Help<ept id="p2">**</ept> menu as submenu of the container's <bpt id="p3">**</bpt>Help<ept id="p3">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The object then sets the sixth element of <bpt id="p1">**</bpt>OLEMENUGROUPWIDTHS<ept id="p1">**</ept> to zero and increments the fifth element by one.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>This lets OLE know that the <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu belongs to the container and the menu messages corresponding to that menu (and its submenus) should be routed to the container.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>It is then the container's responsibility to forward <ph id="ph1">`WM_INITMENUPOPUP`</ph>, <bpt id="p1">**</bpt>WM_SELECT<ept id="p1">**</ept>, <bpt id="p2">**</bpt>WM_COMMAND<ept id="p2">**</ept>, and other menu-related messages that belong to the object's portion of the <bpt id="p3">**</bpt>Help<ept id="p3">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This is accomplished by using <ph id="ph1">`WM_INITMENU`</ph> to clear a flag that tells the container whether the user has navigated into the object's <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The container then watches <ph id="ph1">`WM_MENUSELECT`</ph> for entry into or exit from any item on the <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu that the container did not add itself.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>On entry, it means the user has navigated into an object menu, so the container sets the "in object Help menu" flag and uses the state of that flag to forward any <ph id="ph1">`WM_MENUSELECT`</ph>, <ph id="ph2">`WM_INITMENUPOPUP`</ph>, and <bpt id="p1">**</bpt>WM_COMMAND<ept id="p1">**</ept> messages, as a minimum, to the object window.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>(On exit, the container clears the flag and then processes these same messages itself.) The container should use the window returned from the object's <bpt id="p1">**</bpt>IOleInPlaceActiveObejct::GetWindow<ept id="p1">**</ept> function as the destination for these messages.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If the object detects a zero in the sixth element of <bpt id="p1">**</bpt>OLEMENUGROUPWIDTHS<ept id="p1">**</ept>, it proceeds according to the normal OLE Documents rules.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This procedure covers containers that do participate in <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu merging as well as those that do not.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>When the object calls <bpt id="p1">**</bpt>IOleInPlaceFrame::SetMenu<ept id="p1">**</ept>, before displaying the merged menu bar, the container checks whether the <bpt id="p2">**</bpt>Help<ept id="p2">**</ept> menu has an additional submenu, in addition to what the container has inserted.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If so, the container leaves its <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu in the merged menu bar.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If the <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu does not have an additional submenu, the container will remove its <bpt id="p2">**</bpt>Help<ept id="p2">**</ept> menu from the merged menu bar.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This procedure covers objects that participate in <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu merging as well as those that do not.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Finally, when it is time to disassemble the menu, the object removes the inserted <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu in addition to removing the other inserted menus.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>When the container removes its menus, it will remove its <bpt id="p1">**</bpt>Help<ept id="p1">**</ept> menu in addition to the other menus that it has inserted.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Active Document Containers</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
