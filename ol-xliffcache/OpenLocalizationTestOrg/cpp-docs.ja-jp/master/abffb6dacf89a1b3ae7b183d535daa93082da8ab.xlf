@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">abffb6dacf89a1b3ae7b183d535daa93082da8ab</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\ide\deployment-in-visual-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e093b53e3beaf1132d5e5865ab0b52b5976a1138</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f80efa800ff616eddafde990035a755cea0777a0</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Deployment in Visual C++ | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Deployment in Visual C++</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When you deploy a <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> application to another computer, you must install both the application and any library files it depends on.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If a library is updated—for example, when a security vulnerability is corrected—you'll probably want to apply the update wherever your application is deployed.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Visual Studio enables three ways to deploy the <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> libraries together with your application: central deployment, local deployment, and static linking.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Microsoft automatically updates its libraries that are centrally deployed.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> libraries that are locally deployed or statically linked, the application writer must provide the updates.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Central Deployment</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In central deployment, <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> library files are installed in the %windir%\system32\ directory.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To centrally deploy <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> libraries, you can use one of these:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Redistributable package files<ept id="p1">*</ept>, which are stand-alone command-line executables that you can use to install the <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> redistributable libraries.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Redistributable merge modules (.msm files)<ept id="p1">*</ept>, which you can use to deploy specific libraries and which you include in your application’s Windows Installer (.msi) file.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A redistributable package file installs the <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> libraries for a particular system architecture.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You can program your application setup to run it as a prerequisite before you install your application.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A merge module enables the inclusion of setup logic for a specific <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> library in a Windows Installer application setup file.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You can include as many merge modules as the application requires.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Because central deployment of <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> libraries by using a redistributable package enables automatic updating by Microsoft, we recommend that you use dynamic linking and redistributable packages for your application.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Local Deployment</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In local deployment, library files are installed in the application folder together with the executable file.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Different versions of libraries can be installed in the same folder because the file name of each version is made unique by the inclusion of its version number.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For example, version 12 of the C runtime is msvcr120.dll.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Because Microsoft cannot automatically update locally deployed <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> libraries, we caution against local deployment of these libraries.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If you decide to use local deployment of redistributable libraries, we recommend that you implement your own method of automatically updating the locally deployed libraries.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Static Linking</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can statically link a <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> library to an application—that is, compile it into the application—so that you don't have to deploy the <ph id="ph2">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> library files separately.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>However, we caution against this approach because statically linked libraries cannot be updated in place.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>If you use static linking and you want to update a linked library, you have to recompile and redeploy your application.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Troubleshooting</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The loading order of <ph id="ph1">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> libraries is system-dependent.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>To diagnose loader issues, use depends.exe or where.exe.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Dynamic-Link Library Search Order (Windows)<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Deploying Desktop Applications</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

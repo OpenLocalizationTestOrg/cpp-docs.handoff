@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">23a58c19aafb35967b2a5c332b6f02c33f386e99</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\iterators.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">026af672985cde1bbce90781e5a5dbb530b05ca4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3235d92cc31b8affb31707bec6afd9656b6466b3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Iterators | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Iterators</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>An iterator is an object that can iterate over elements in an STL container and provide access to individual elements.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The STL containers all provide iterators so that algorithms can access their elements in a standard way without having to be concerned with the type of container the elements are stored in.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You can use iterators explicitly using member and global functions such as begin() and end() and operators such as ++ and -- to move forward or backward.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You can also use iterators implicitly with a range-for loop or (for some iterator types) the subscript operator [].</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In the STL, the beginning of a sequence or range is the first element.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The end of a sequence or range is always defined as one past the last element.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The global functions begin and end return iterators to a specified container.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The typical explicit iterator loop over all elements in a container looks like this:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The same thing can be accomplished more simply with a range-for loop:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>There are five categories of iterators.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In order of increasing power, the categories are:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Output<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>An output iterator <ph id="ph1">`X`</ph> can iterate forward over a sequence by using the ++ operator, and can write an element only once, by using the * operator.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Input<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>An input iterator <ph id="ph1">`X`</ph> can iterate forward over a sequence by using the ++ operator, and can read an element any number of times by using the * operator.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You can compare input iterators by using the ++ and != operators.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>After you increment any copy of an input iterator, none of the other copies can safely be compared, dereferenced, or incremented thereafter.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Forward<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A forward iterator <ph id="ph1">`X`</ph> can iterate forward over a sequence using the ++ operator and can read any element or write non-const elements any number of times by using the * operator.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>You can access element members by using the -&gt; operator and compare forward iterators by using the == and != operators.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You can make multiple copies of a forward iterator, each of which can be dereferenced and incremented independently.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>A forward iterator that is initialized without reference to any container is called a null forward iterator.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Null forward iterators always compare equal.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Bidirectional.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>A bidirectional iterator <ph id="ph1">`X`</ph> can take the place of a forward iterator.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>You can, however, also decrement a bidirectional iterator, as in --<ph id="ph1">`X`</ph>, <ph id="ph2">`X`</ph>--, or (<ph id="ph3">`V`</ph> = *<ph id="ph4">`X`</ph>--).</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>You can access element members and compare bidirectional iterators in the same way as forward iterators.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Random access<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>A random-access iterator <ph id="ph1">`X`</ph> can take the place of a bidirectional iterator.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>With a random access iterator you can use the subscript operator [] to access elements.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>You can use the +, -, += and -= operators to move forward or backward a specified number of elements and to calculate the distance between iterators.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>You can compare bidirectional iterators by using ==, !=, <ph id="ph1">\&lt;</ph>, &gt;, <ph id="ph2">\&lt;</ph>=, and &gt;=.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>All iterators can be assigned or copied.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>They are assumed to be lightweight objects and are often passed and returned by value, not by reference.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Note also that none of the operations previously described can throw an exception when performed on a valid iterator.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The hierarchy of iterator categories can be summarized by showing three sequences.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>For write-only access to a sequence, you can use any of:</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The right arrow means "can be replaced by."</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Any algorithm that calls for an output iterator should work nicely with a forward iterator, for example, but <bpt id="p1">*</bpt>not<ept id="p1">*</ept> the other way around.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For read-only access to a sequence, you can use any of:</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>An input iterator is the weakest of all categories, in this case.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Finally, for read/write access to a sequence, you can use any of:</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>An object pointer can always serve as a random-access iterator, so it can serve as any category of iterator if it supports the proper read/write access to the sequence it designates.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>An iterator <ph id="ph1">`Iterator`</ph> other than an object pointer must also define the member types required by the specialization <ph id="ph2">`iterator_traits&lt;Iterator&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Note that these requirements can be met by deriving <ph id="ph1">`Iterator`</ph> from the public base class <bpt id="p1">[</bpt>iterator<ept id="p1">](../standard-library/iterator-struct.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>It is important to understand the promises and limitations of each iterator category to see how iterators are used by containers and algorithms in the STL.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>You can avoid using iterators explicitly by using range-for loops.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Loops (Modern C++)<ept id="p1">](http://msdn.microsoft.com/en-us/b1b2779c-750e-4576-a514-a84178eae9da)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>now offers checked iterators and debug iterators to ensure that you do not overwrite the bounds of your container.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Checked Iterators<ept id="p1">](../standard-library/checked-iterators.md)</ept> and <bpt id="p2">[</bpt>Debug Iterator Support<ept id="p2">](../standard-library/debug-iterator-support.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>C++ Standard Library Reference</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Thread Safety in the C++ Standard Library</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3469d1fe17b921479f99bbaeee89f93386109567</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\reference\run-time-object-model-services.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1fe24d1518a85bce7750c5f806301db95e41a4b8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">eed6ce3927d4fdfc6454a4d500a85fd931291987</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Run-Time Object Model Services | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Run-Time Object Model Services</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The classes <bpt id="p1">[</bpt>CObject<ept id="p1">](../../mfc/reference/cobject-class.md)</ept> and <bpt id="p2">[</bpt>CRuntimeClass<ept id="p2">](../../mfc/reference/cruntimeclass-structure.md)</ept> encapsulate several object services, including access to run-time class information, serialization, and dynamic object creation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>All classes derived from <ph id="ph1">`CObject`</ph> inherit this functionality.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Access to run-time class information enables you to determine information about an object's class at run time.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The ability to determine the class of an object at run time is useful when you need extra type-checking of function arguments and when you must write special-purpose code based on the class of an object.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Run-time class information is not supported directly by the C++ language.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Serialization is the process of writing or reading an object's contents to or from a file.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You can use serialization to store an object's contents even after the application exits.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The object can then be read from the file when the application is restarted.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Such data objects are said to be "persistent."</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Dynamic object creation enables you to create an object of a specified class at run time.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For example, document, view, and frame objects must support dynamic creation because the framework needs to create them dynamically.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following table lists the MFC macros that support run-time class information, serialization, and dynamic creation.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For more information on these run-time object services and serialization, see the article <bpt id="p1">[</bpt>CObject Class: Accessing Run-Time Class Information<ept id="p1">](../../mfc/accessing-run-time-class-information.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Run-Time Object Model Services Macros</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>DECLARE_DYNAMIC</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Enables access to run-time class information (must be used in the class declaration).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>DECLARE_DYNCREATE</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Enables dynamic creation and access to run-time class information (must be used in the class declaration).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>DECLARE_SERIAL</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Enables serialization and access to run-time class information (must be used in the class declaration).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>IMPLEMENT_DYNAMIC</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Enables access to run-time class information (must be used in the class implementation).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>IMPLEMENT_DYNCREATE</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Enables dynamic creation and access to run-time information (must be used in the class implementation).</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>IMPLEMENT_SERIAL</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Permits serialization and access to run-time class information (must be used in the class implementation).</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>RUNTIME_CLASS</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Returns the <ph id="ph1">`CRuntimeClass`</ph> structure that corresponds to the named class.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>OLE frequently requires the dynamic creation of objects at run time.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For example, an OLE server application must be able to create OLE items dynamically in response to a request from a client.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Similarly, an automation server must be able to create items in response to requests from automation clients.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The Microsoft Foundation Class Library provides two macros specific to OLE.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Dynamic Creation of OLE Objects</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>DECLARE_OLECREATE</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Enables objects to be created through OLE automation.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>IMPLEMENT_OLECREATE</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Enables objects to be created by the OLE system.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>DECLARE_DYNAMIC</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Adds the ability to access run-time information about an object's class when deriving a class from <ph id="ph1">`CObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The actual name of the class.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Add the <ph id="ph1">`DECLARE_DYNAMIC`</ph> macro to the header (.h) module for the class, then include that module in all .cpp modules that need access to objects of this class.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If you use the <bpt id="p1">**</bpt>DECLARE<ept id="p1">**</ept>_ <bpt id="p2">**</bpt>DYNAMIC<ept id="p2">**</ept> and <ph id="ph1">`IMPLEMENT_DYNAMIC`</ph> macros as described, you can then use the <ph id="ph2">`RUNTIME_CLASS`</ph> macro and the <ph id="ph3">`CObject::IsKindOf`</ph> function to determine the class of your objects at run time.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`DECLARE_DYNAMIC`</ph> is included in the class declaration, then <ph id="ph2">`IMPLEMENT_DYNAMIC`</ph> must be included in the class implementation.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>For more information on the <ph id="ph1">`DECLARE_DYNAMIC`</ph> macro, see <bpt id="p1">[</bpt>CObject Class Topics<ept id="p1">](../../mfc/using-cobject.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>IMPLEMENT_DYNAMIC<ept id="p1">](#implement_dynamic)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>DECLARE_DYNCREATE</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Enables objects of <ph id="ph1">`CObject`</ph>-derived classes to be created dynamically at run time.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The actual name of the class.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The framework uses this ability to create new objects dynamically.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>For example, the new view created when you open a new document.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Document, view, and frame classes should support dynamic creation because the framework needs to create them dynamically.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Add the <ph id="ph1">`DECLARE_DYNCREATE`</ph> macro in the .h module for the class, then include that module in all .cpp modules that need access to objects of this class.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`DECLARE_DYNCREATE`</ph> is included in the class declaration, then <ph id="ph2">`IMPLEMENT_DYNCREATE`</ph> must be included in the class implementation.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>For more information on the <ph id="ph1">`DECLARE_DYNCREATE`</ph> macro, see <bpt id="p1">[</bpt>CObject Class Topics<ept id="p1">](../../mfc/using-cobject.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`DECLARE_DYNCREATE`</ph> macro includes all the functionality of <ph id="ph2">`DECLARE_DYNAMIC`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>IMPLEMENT_DYNCREATE<ept id="p1">](#implement_dyncreate)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>DECLARE_SERIAL</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Generates the C++ header code necessary for a <ph id="ph1">`CObject`</ph>-derived class that can be serialized.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The actual name of the class.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Serialization is the process of writing or reading the contents of an object to and from a file.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`DECLARE_SERIAL`</ph> macro in an .h module, and then include that module in all .cpp modules that need access to objects of this class.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`DECLARE_SERIAL`</ph> is included in the class declaration, then <ph id="ph2">`IMPLEMENT_SERIAL`</ph> must be included in the class implementation.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`DECLARE_SERIAL`</ph> macro includes all the functionality of <ph id="ph2">`DECLARE_DYNAMIC`</ph> and <ph id="ph3">`DECLARE_DYNCREATE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">**</bpt>AFX_API<ept id="p1">**</ept> macro to automatically export the <ph id="ph1">`CArchive`</ph> extraction operator for classes that use the <ph id="ph2">`DECLARE_SERIAL`</ph> and <ph id="ph3">`IMPLEMENT_SERIAL`</ph> macros.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Bracket the class declarations (located in the .h file) with the following code:</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#20</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>For more information on the <ph id="ph1">`DECLARE_SERIAL`</ph> macro, see <bpt id="p1">[</bpt>CObject Class Topics<ept id="p1">](../../mfc/using-cobject.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#21</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>IMPLEMENT_DYNAMIC</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Generates the C++ code necessary for a dynamic <ph id="ph1">`CObject`</ph>-derived class with run-time access to the class name and position within the hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The actual name of the class.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The name of the base class.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`IMPLEMENT_DYNAMIC`</ph> macro in a .cpp module, and then link the resulting object code only once.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>CObject Class Topics<ept id="p1">](../../mfc/using-cobject.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#2</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#3</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>IMPLEMENT_DYNCREATE</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Enables objects of <ph id="ph1">`CObject`</ph>-derived classes to be created dynamically at run time when used with the <ph id="ph2">`DECLARE_DYNCREATE`</ph> macro.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The actual name of the class.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The actual name of the base class.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The framework uses this ability to create new objects dynamically, for example, when it reads an object from disk during serialization.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Add the <ph id="ph1">`IMPLEMENT_DYNCREATE`</ph> macro in the class implementation file.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>CObject Class Topics<ept id="p1">](../../mfc/using-cobject.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>If you use the <ph id="ph1">`DECLARE_DYNCREATE`</ph> and <ph id="ph2">`IMPLEMENT_DYNCREATE`</ph> macros, you can then use the <ph id="ph3">`RUNTIME_CLASS`</ph> macro and the <ph id="ph4">`CObject::IsKindOf`</ph> member function to determine the class of your objects at run time.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`DECLARE_DYNCREATE`</ph> is included in the class declaration, then <ph id="ph2">`IMPLEMENT_DYNCREATE`</ph> must be included in the class implementation.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Note that this macro definition will invoke the default constructor for your class.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>If a non-trivial constructor is explicitly implemented by the class, it must also explicitly implement the default constructor as well.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>The default constructor can be added to the class's <bpt id="p1">**</bpt>private<ept id="p1">**</ept> or <bpt id="p2">**</bpt>protected<ept id="p2">**</ept> member sections to prevent it from being called from outside the class implementation.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#22</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#23</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>IMPLEMENT_SERIAL</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Generates the C++ code necessary for a dynamic <ph id="ph1">`CObject`</ph>-derived class with run-time access to the class name and position within the hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>The actual name of the class.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The name of the base class.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>wSchema</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>UINT<ept id="p1">**</ept> "version number" that will be encoded in the archive to enable a deserializing program to identify and handle data created by earlier program versions.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The class schema number must not be â€“1.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`IMPLEMENT_SERIAL`</ph> macro in a .cpp module; then link the resulting object code only once.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">**</bpt>AFX_API<ept id="p1">**</ept> macro to automatically export the <ph id="ph1">`CArchive`</ph> extraction operator for classes that use the <ph id="ph2">`DECLARE_SERIAL`</ph> and <ph id="ph3">`IMPLEMENT_SERIAL`</ph> macros.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Bracket the class declarations (located in the .h file) with the following code:</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#20</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>For more information, see the <bpt id="p1">[</bpt>CObject Class Topics<ept id="p1">](../../mfc/using-cobject.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#24</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>RUNTIME_CLASS</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Gets the run-time class structure from the name of a C++ class.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>The actual name of the class (not enclosed in quotation marks).</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>returns a pointer to a <bpt id="p1">[</bpt>CRuntimeClass<ept id="p1">](../../mfc/reference/cruntimeclass-structure.md)</ept> structure for the class specified by <bpt id="p2">*</bpt>class_name<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Only <ph id="ph1">`CObject`</ph>-derived classes declared with <ph id="ph2">`DECLARE_DYNAMIC`</ph>, <ph id="ph3">`DECLARE_DYNCREATE`</ph>, or <ph id="ph4">`DECLARE_SERIAL`</ph> will return pointers to a <ph id="ph5">`CRuntimeClass`</ph> structure.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>CObject Class Topics<ept id="p1">](../../mfc/using-cobject.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCObjectSample#25</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>DECLARE_OLECREATE</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Enables objects of <ph id="ph1">`CCmdTarget`</ph>-derived classes to be created through OLE automation.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>The actual name of the class.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>This macro enables other OLE-enabled applications to create objects of this type.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>Add the <ph id="ph1">`DECLARE_OLECREATE`</ph> macro in the .h module for the class, and then include that module in all .cpp modules that need access to objects of this class.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`DECLARE_OLECREATE`</ph> is included in the class declaration, then <ph id="ph2">`IMPLEMENT_OLECREATE`</ph> must be included in the class implementation.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>A class declaration using <ph id="ph1">`DECLARE_OLECREATE`</ph> must also use <ph id="ph2">`DECLARE_DYNCREATE`</ph> or <ph id="ph3">`DECLARE_SERIAL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>IMPLEMENT_OLECREATE</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Either this macro or <bpt id="p1">[</bpt>IMPLEMENT_OLECREATE_FLAGS<ept id="p1">](http://msdn.microsoft.com/library/d1589f6a-5a69-4742-b07c-4c621cfd040d)</ept> must appear in the implementation file for any class that uses <ph id="ph1">`DECLARE_OLECREATE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>class_name</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>The actual name of the class.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>external_name</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>The object name exposed to other applications (enclosed in quotation marks).</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>l<ept id="p1">*</ept>, <bpt id="p2">*</bpt>w1<ept id="p2">*</ept>, <bpt id="p3">*</bpt>w2<ept id="p3">*</ept>, <bpt id="p4">*</bpt>b1<ept id="p4">*</ept>, <bpt id="p5">*</bpt>b2<ept id="p5">*</ept>, <bpt id="p6">*</bpt>b3<ept id="p6">*</ept>, <bpt id="p7">*</bpt>b4<ept id="p7">*</ept>, <bpt id="p8">*</bpt>b5<ept id="p8">*</ept>, <bpt id="p9">*</bpt>b6<ept id="p9">*</ept>, <bpt id="p10">*</bpt>b7<ept id="p10">*</ept>, <bpt id="p11">*</bpt>b8<ept id="p11">*</ept></source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Components of the class's <bpt id="p1">**</bpt>CLSID<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>If you use <ph id="ph1">`IMPLEMENT_OLECREATE`</ph>, by default, you support only the single threading model.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>If you use <ph id="ph1">`IMPLEMENT_OLECREATE_FLAGS`</ph>, you can specify which threading model your object supports by using the <ph id="ph2">`nFlags`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>The external name is the identifier exposed to other applications.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Client applications use the external name to request an object of this class from an automation server.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>The OLE class ID is a unique 128-bit identifier for the object.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>It consists of one <bpt id="p1">**</bpt>long<ept id="p1">**</ept>, two <bpt id="p2">**</bpt>WORD<ept id="p2">**</ept>s, and eight <bpt id="p3">**</bpt>BYTE<ept id="p3">**</ept>s, as represented by <bpt id="p4">*</bpt>l<ept id="p4">*</ept>, <bpt id="p5">*</bpt>w1<ept id="p5">*</ept>, <bpt id="p6">*</bpt>w2<ept id="p6">*</ept>, and <bpt id="p7">*</bpt>b1<ept id="p7">*</ept> through <bpt id="p8">*</bpt>b8<ept id="p8">*</ept> in the syntax description.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>The Application Wizard and code wizards create unique OLE class IDs for you as required.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>Macros and Globals</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

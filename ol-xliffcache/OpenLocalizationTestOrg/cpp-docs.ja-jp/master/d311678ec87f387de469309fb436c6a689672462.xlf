@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d311678ec87f387de469309fb436c6a689672462</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\calling-cpp-code-from-dhtml.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4e016dc5064a3e79bb41323f3b50bb1e9142e6e8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7d9e5caac7ac275a4ab6b07f3d6ab3c9a1d99b9c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Calling C++ Code from DHTML | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Calling C++ Code from DHTML</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A DHTML control can be hosted in a container, such as Test Container or Internet Explorer.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Testing Properties and Events with Test Container<ept id="p1">](../mfc/testing-properties-and-events-with-test-container.md)</ept> for information on how to access Test Container.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The container hosting the control communicates with the control using the normal control interfaces.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>DHTML uses the dispatch interface that ends with "UI" to communicate with your C++ code and your HTML resource.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">[</bpt>Modifying the ATL DHTML Control<ept id="p1">](../atl/modifying-the-atl-dhtml-control.md)</ept>, you can practice adding the methods to be called by these different interfaces.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>To see an example of calling C++ code from DHTML, <bpt id="p1">[</bpt>create a DHTML control<ept id="p1">](../atl/creating-an-atl-dhtml-control.md)</ept> using the ATL Control Wizard and examine the code in the header file and in the HTML file.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Declaring WebBrowser Methods in the Header File</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To invoke C++ methods from the DHTML UI, you must add methods to your control's UI interface.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For example, the header file created by the ATL Control Wizard contains the C++ method <ph id="ph1">`OnClick`</ph>, which is a member of the UI interface of the wizard-generated control.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Examine <ph id="ph1">`OnClick`</ph> in the control's .h file:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#4</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The first parameter, <ph id="ph1">`pdispBody`</ph>, is a pointer to the body object's dispatch interface.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The second parameter, <ph id="ph1">`varColor`</ph>, identifies the color to apply to the control.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Calling C++ Code in the HTML File</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Once you have declared the WebBrowser methods in the header file, you can invoke the methods from the HTML file.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Notice in the HTML file that the ATL Control Wizard inserts three Windows dispatch methods: three <ph id="ph1">`OnClick`</ph> methods that dispatch messages to change the background color of the control.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Examine one of the methods in the HTML file:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In the HTML code above, the window external method, <ph id="ph1">`OnClick`</ph>, is called as part of the button tag.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The method has two parameters: <ph id="ph1">`theBody`</ph>, which references the body of the HTML document, and <ph id="ph2">`"red"`</ph>, which indicates that the control's background color will be changed to red when the button is clicked.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Red`</ph> following the tag is the button's label.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Modifying the ATL DHTML Control<ept id="p1">](../atl/modifying-the-atl-dhtml-control.md)</ept> for more information about providing your own methods.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Identifying the Elements of the DHTML Control Project<ept id="p1">](../atl/identifying-the-elements-of-the-dhtml-control-project.md)</ept> for more information about the HTML file.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Support for DHTML Control</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

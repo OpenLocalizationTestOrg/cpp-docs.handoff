@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4e7b12fb586daa69c630bce01d087a644588a6ab</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\initializing-and-cleaning-up-documents-and-views.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1aa2734b8bf4c4aaf2b55403d4ff8876827b9238</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4d3844cc34c834dba3045f4055c39af0b55e4e80</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Initializing and Cleaning Up Documents and Views | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Initializing and Cleaning Up Documents and Views</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Use the following guidelines for initializing and cleaning up after your documents and views:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The MFC framework initializes documents and views; you initialize any data you add to them.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The framework cleans up as documents and views close; you must deallocate any memory that you allocated on the heap from within the member functions of those documents and views.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Recall that initialization for the whole application is best done in your override of the <bpt id="p1">[</bpt>InitInstance<ept id="p1">](../mfc/reference/cwinapp-class.md#cwinapp__initinstance)</ept> member function of class <ph id="ph1">`CWinApp`</ph>, and cleanup for the whole application is best done in your override of the <ph id="ph2">`CWinApp`</ph> member function <bpt id="p2">[</bpt>ExitInstance<ept id="p2">](../mfc/reference/cwinapp-class.md#cwinapp__exitinstance)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The life cycle of a document (and its frame window and view or views) in an MDI application is as follows:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>During dynamic creation, the document constructor is called.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For each new document, the document's <bpt id="p1">[</bpt>OnNewDocument<ept id="p1">](../mfc/reference/cdocument-class.md#cdocument__onnewdocument)</ept> or <bpt id="p2">[</bpt>OnOpenDocument<ept id="p2">](../mfc/reference/cdocument-class.md#cdocument__onopendocument)</ept> is called.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The user interacts with the document throughout its lifetime.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Typically this happens as the user works on document data through the view, selecting and editing the data.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The view passes changes on to the document for storage and updating other views.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>During this time both the document and the view might handle commands.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The framework calls <bpt id="p1">[</bpt>DeleteContents<ept id="p1">](../mfc/reference/cdocument-class.md#cdocument__deletecontents)</ept> to delete data specific to a document.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The document's destructor is called.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In an SDI application, step 1 is performed once, when the document is first created.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Then steps 2 through 4 are performed repeatedly each time a new document is opened.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The new document reuses the existing document object.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Finally, step 5 is performed when the application ends.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Initializing Documents and Views</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Cleaning Up Documents and Views</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Document/View Architecture</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
