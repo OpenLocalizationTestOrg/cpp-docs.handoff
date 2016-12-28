@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">22acba47d5d61848347e2e9388e767ecab33c415</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\fseek-fseeki64.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ac191deec69ea019374510a2dfa52eaff5aeda21</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">493589e5e06122ceecb1d7278f032b44a1583ca9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>fseek, _fseeki64 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>fseek, _fseeki64</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Moves the file pointer to a specified location.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Pointer to <ph id="ph1">`FILE`</ph> structure.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Number of bytes from <ph id="ph1">`origin`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Initial position.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If successful, <ph id="ph1">`fseek`</ph> and <ph id="ph2">`_fseeki64`</ph> returns 0.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns a nonzero value.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>On devices incapable of seeking, the return value is undefined.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`stream`</ph> is a null pointer, or if <ph id="ph2">`origin`</ph> is not one of allowed values described below, <ph id="ph3">`fseek`</ph> and <ph id="ph4">`_fseeki64`</ph> invoke the invalid parameter handler, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, these functions set <ph id="ph1">`errno`</ph> to <ph id="ph2">`EINVAL`</ph> and return -1.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`fseek`</ph> and <ph id="ph2">`_fseeki64`</ph> functions moves the file pointer (if any) associated with <ph id="ph3">`stream`</ph> to a new location that is <ph id="ph4">`offset`</ph> bytes from <ph id="ph5">`origin`</ph><bpt id="p1">*</bpt>.<ept id="p1">*</ept></source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The next operation on the stream takes place at the new location.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>On a stream open for update, the next operation can be either a read or a write.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The argument origin must be one of the following constants, defined in STDIO.H:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Current position of file pointer.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>End of file.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Beginning of file.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You can use <ph id="ph1">`fseek`</ph> and <ph id="ph2">`_fseeki64`</ph> to reposition the pointer anywhere in a file.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The pointer can also be positioned beyond the end of the file.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>and <ph id="ph1">`_fseeki64`</ph>clears the end-of-file indicator and negates the effect of any prior <ph id="ph2">`ungetc`</ph> calls against <ph id="ph3">`stream`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>When a file is opened for appending data, the current file position is determined by the last I/O operation, not by where the next write would occur.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>If no I/O operation has yet occurred on a file opened for appending, the file position is the start of the file.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For streams opened in text mode, <ph id="ph1">`fseek`</ph> and <ph id="ph2">`_fseeki64`</ph>have limited use, because carriage return–linefeed translations can cause <ph id="ph3">`fseek`</ph> and <ph id="ph4">`_fseeki64`</ph>to produce unexpected results.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The only <ph id="ph1">`fseek`</ph> and <ph id="ph2">`_fseeki64`</ph>operations guaranteed to work on streams opened in text mode are:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Seeking with an offset of 0 relative to any of the origin values.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Seeking from the beginning of the file with an offset value returned from a call to <ph id="ph1">`ftell`</ph> when using <ph id="ph2">`fseek`</ph>or <ph id="ph3">`_ftelli64`</ph>when using<ph id="ph4">`_fseeki64`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Also in text mode, CTRL+Z is interpreted as an end-of-file character on input.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In files opened for reading/writing, <ph id="ph1">`fopen`</ph> and all related routines check for a CTRL+Z at the end of the file and remove it if possible.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>This is done because using the combination of <ph id="ph1">`fseek`</ph> and <ph id="ph2">`ftell`</ph>or<ph id="ph3">`_fseeki64`</ph> and <ph id="ph4">`_ftelli64`</ph>, to move within a file that ends with a CTRL+Z may cause <ph id="ph5">`fseek`</ph> or <ph id="ph6">`_fseeki64`</ph> to behave improperly near the end of the file.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>When the CRT opens a file that begins with a Byte Order Mark (BOM), the file pointer is positioned after the BOM (that is, at the start of the file's actual content).</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If you have to <ph id="ph1">`fseek`</ph> to the beginning of the file, use <ph id="ph2">`ftell`</ph> to get the initial position and <ph id="ph3">`fseek`</ph> to it rather than to position 0.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This function locks out other threads during execution and is therefore thread-safe.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For a non-locking version, see <bpt id="p1">[</bpt>_fseek_nolock, _fseeki64_nolock<ept id="p1">](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>stdio.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>stdio.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>System::IO::FileStream::Position</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>System::IO::FileStream::Seek</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Stream I/O</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>fopen, _wfopen</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>ftell, _ftelli64</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>_lseek, _lseeki64</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>rewind</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

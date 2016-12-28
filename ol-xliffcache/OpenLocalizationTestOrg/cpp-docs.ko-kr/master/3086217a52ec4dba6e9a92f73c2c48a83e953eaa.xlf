@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3086217a52ec4dba6e9a92f73c2c48a83e953eaa</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\windows\walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4b8d449492fd7ca5a0244a667f581558e0d12a3c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ab00781d6ac14179bb650a5fb6d66501a9b33aee</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Creating a Windows Store app using WRL and Media Foundation | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Creating a Windows Store app using WRL and Media Foundation</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Learn how to use the <ph id="ph1">[!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)]</ph> (<ph id="ph2">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph>) to create a <ph id="ph3">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app that uses <bpt id="p1">[</bpt>Microsoft Media Foundation<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/ms694197)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This example creates a custom Media Foundation transform that applies a grayscale effect to images that are captured from a webcam.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The app uses C++ to define the custom transform and C# to use the component to transform the captured images.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Instead of C#, you can also use JavaScript, Visual Basic, or C++ to consume the custom transform component.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In most cases, you can use <ph id="ph1">[!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]</ph> (<ph id="ph2">[!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)]</ph>) to create <ph id="ph3">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> components.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>(For more information, see <bpt id="p1">[</bpt>Visual C++ Language Reference<ept id="p1">](http://msdn.microsoft.com/Library/3f6abf92-4e5e-4ed8-8e11-f9252380d30a)</ept>.) However, sometimes you have to use the <ph id="ph1">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For example, when you create a media extension for Microsoft Media Foundation, you must create a component that implements both COM and <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> interfaces.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Because <ph id="ph1">[!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)]</ph> can only create <ph id="ph2">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> objects, to create a media extension you must use the <ph id="ph3">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph> because it enables the implementation of both COM and <ph id="ph4">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> interfaces.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Although this code example is long, it demonstrates the minimum that's required to create a useful Media Foundation transform.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>You can use it as a starting point for your own custom transform.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This example is adapted from the <bpt id="p1">[</bpt>Media extensions sample<ept id="p1">](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)</ept>, which uses media extensions to apply effects to video, decode video, and create scheme handlers that produce media streams.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Experience with the <bpt id="p1">[</bpt>Windows Runtime<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/br211377.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Experience with COM.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A webcam.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Key points</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>To create a custom Media Foundation component, use a Microsoft Interface Definition Language (MIDL) definition file to define an interface, implement that interface, and then make it activatable from other components.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`namespace`</ph> and <ph id="ph2">`runtimeclass`</ph> attributes, and the <ph id="ph3">`NTDDI_WIN8`</ph><bpt id="p1">[</bpt>version<ept id="p1">](http://msdn.microsoft.com/en-us/66ac5cf3-2230-44fd-aaf6-8013e4a4ae81)</ept> attribute value are important parts of the MIDL definition for a Media Foundation component that uses <ph id="ph4">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Microsoft::WRL::RuntimeClass<ept id="p1">](../windows/runtimeclass-class.md)</ept> is the base class for the custom Media Foundation component.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>Microsoft::WRL::RuntimeClassType::WinRtClassicComMix<ept id="p1">](../windows/runtimeclasstype-enumeration.md)</ept> enum value, which is provided as a template argument, marks the class for use both as a <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> class and as a classic COM runtime class.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>InspectableClass<ept id="p1">](../windows/inspectableclass-macro.md)</ept> macro implements basic COM functionality such as reference counting and the <ph id="ph1">`QueryInterface`</ph> method, and sets the runtime class name and trust level.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Use the Microsoft::WRL::<bpt id="p1">[</bpt>Module class<ept id="p1">](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US)</ept> to implement DLL entry-point functions such as <bpt id="p2">[</bpt>DllGetActivationFactory<ept id="p2">](http://msdn.microsoft.com/library/br205771.aspx)</ept>, <bpt id="p3">[</bpt>DllCanUnloadNow<ept id="p3">](http://msdn.microsoft.com/library/windows/desktop/ms690368\(v=vs.85\).aspx)</ept>, and <bpt id="p4">[</bpt>DllGetClassObject<ept id="p4">](http://msdn.microsoft.com/library/windows/desktop/ms680760\(v=vs.85\).aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Link your component DLL to runtimeobject.lib.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Also specify <bpt id="p1">[</bpt>/WINMD<ept id="p1">](http://msdn.microsoft.com/Library/ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb)</ept> on the linker line to generate Windows metadata.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Use project references to make <ph id="ph1">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph> components accessible to <ph id="ph2">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> apps.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To use the <ph id="ph1">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph> to create the Media Foundation grayscale transform component</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In Visual Studio, create a <bpt id="p1">**</bpt>Blank Solution<ept id="p1">**</ept> project.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Name the project, for example, <ph id="ph1">`MediaCapture`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Add a <bpt id="p1">**</bpt>DLL (Windows Store apps)<ept id="p1">**</ept> project to the solution.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Name the project, for example, <ph id="ph1">`GrayscaleTransform`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Add a <bpt id="p1">**</bpt>Midl File (.idl)<ept id="p1">**</ept> file to the project.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Name the file, for example, <ph id="ph1">`GrayscaleTransform.idl`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Add this code to GrayscaleTransform.idl.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>wrl-media-capture#1</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Use the following code to replace the contents of pch.h.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>wrl-media-capture#2</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Add a new header file to the project, name it <ph id="ph1">`BufferLock.h`</ph>, and then add this code:</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>wrl-media-capture#3</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>GrayscaleTransform.h is not used in this example.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>You can remove it from the project if you want to.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Use the following code to replace the contents of GrayscaleTransform.cpp.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>wrl-media-capture#4</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Add a new module-definition file to the project, name it <ph id="ph1">`GrayscaleTransform.def`</ph>, and then add this code:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Use the following code to replace the contents of dllmain.cpp.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>wrl-media-capture#6</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>In the project’s <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box, set the following <bpt id="p2">**</bpt>Linker<ept id="p2">**</ept> properties.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Under <bpt id="p1">**</bpt>Input<ept id="p1">**</ept>, for the <bpt id="p2">**</bpt>Module Definition File<ept id="p2">**</ept>, specify <ph id="ph1">`GrayScaleTransform.def`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Also under <bpt id="p1">**</bpt>Input<ept id="p1">**</ept>, add <ph id="ph1">`runtimeobject.lib`</ph>, <ph id="ph2">`mfuuid.lib`</ph>, and <ph id="ph3">`mfplatf.lib`</ph> to the <bpt id="p2">**</bpt>Additional Dependencies<ept id="p2">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Under <bpt id="p1">**</bpt>Windows Metadata<ept id="p1">**</ept>, set <bpt id="p2">**</bpt>Generate Windows Metadata<ept id="p2">**</ept> to <bpt id="p3">**</bpt>Yes (/WINMD)<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>To use the <ph id="ph1">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph> the custom Media Foundation component from a C# app</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Add a new <bpt id="p1">**</bpt>C# Blank App (XAML)<ept id="p1">**</ept> project to the <ph id="ph1">`MediaCapture`</ph> solution.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Name the project, for example, <ph id="ph1">`MediaCapture`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>MediaCapture<ept id="p1">**</ept> project, add a reference to the <ph id="ph1">`GrayscaleTransform`</ph> project.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>To learn how, see <bpt id="p1">[</bpt>How to: Add or Remove References By Using the Reference Manager<ept id="p1">](http://msdn.microsoft.com/Library/1aabb520-99b0-46c6-9368-21b4d84793eb)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>In Package.appxmanifest, on the <bpt id="p1">**</bpt>Capabilities<ept id="p1">**</ept> tab, select <bpt id="p2">**</bpt>Microphone<ept id="p2">**</ept> and <bpt id="p3">**</bpt>Webcam<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Both capabilities are required to capture photos from the webcam.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>In MainPage.xaml, add this code to the root <bpt id="p1">[</bpt>Grid<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)</ept> element:</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>wrl-media-capture#7</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Use the following code to replace the contents of MainPage.xaml.cs.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>wrl-media-capture#8</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the MediaCapture app.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>MediaCapture app capturing a photo</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Next Steps</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The example shows how to capture photos from the default webcam one at a time.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>Media extensions sample<ept id="p1">](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)</ept> does more.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>It demonstrates how to enumerate webcam devices and work with local scheme handlers, and demonstrates additional media effects that work on both individual photos and streams of video.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Windows Runtime C++ Template Library (WRL)</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Microsoft Media Foundation</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Media extensions sample</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0a488ec618b6e7fea37e5b20e69920e06c391a34</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e68056b78e8802e3b3a4c219902888acdb488ae7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">138c0d29ea8b357ec5a1e12426921279f3e5f18c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Marshal Callbacks and Delegates By Using C++ Interop | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Marshal Callbacks and Delegates By Using C++ Interop</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic demonstrates the marshalling of callbacks and delegates (the managed version of a callback) between managed and unmanaged code using Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The following code examples use the <bpt id="p1">[</bpt>managed, unmanaged<ept id="p1">](../preprocessor/managed-unmanaged.md)</ept> #pragma directives to implement managed and unmanaged functions in the same file, but the functions could also be defined in separate files.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Files containing only unmanaged functions do not need to be compiled with the <bpt id="p1">[</bpt>/clr (Common Language Runtime Compilation)<ept id="p1">](../build/reference/clr-common-language-runtime-compilation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates how to configure an unmanaged API to trigger a managed delegate.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A managed delegate is created and one of the interop methods, &lt;xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A&gt;, is used to retrieve the underlying entry point for the delegate.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This address is then passed to the unmanaged function, which calls it with no knowledge of the fact that it is implemented as a managed function.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Notice that is it possible, but not necessary, to pin the delegate using <bpt id="p1">[</bpt>pin_ptr (C++/CLI)<ept id="p1">](../windows/pin-ptr-cpp-cli.md)</ept> to prevent it from being re-located or disposed of by the garbage collector.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Protection from premature garbage collection is needed, but pinning provides more protection than is necessary, as it prevents collection but also prevents relocation.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If a delegate is re-located by a garbage collection, it will not affect the underlaying managed callback, so &lt;xref:System.Runtime.InteropServices.GCHandle.Alloc%2A&gt; is used to add a reference to the delegate, allowing relocation of the delegate, but preventing disposal.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Using GCHandle instead of pin_ptr reduces fragmentation potential of the managed heap.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following example is similar to the previous example, but in this case the provided function pointer is stored by the unmanaged API, so it can be invoked at any time, requiring that garbage collection be suppressed for an arbitrary length of time.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>As a result, the following example uses a global instance of &lt;xref:System.Runtime.InteropServices.GCHandle&gt; to prevent the delegate from being relocated, independent of function scope.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>As discussed in the first example, using pin_ptr is unnecessary for these examples, but in this case wouldn't work anyway, as the scope of a pin_ptr is limited to a single function.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Using C++ Interop (Implicit PInvoke)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

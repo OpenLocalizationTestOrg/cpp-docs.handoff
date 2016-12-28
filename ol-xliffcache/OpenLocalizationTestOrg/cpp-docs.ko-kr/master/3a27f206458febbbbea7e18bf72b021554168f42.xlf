@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3a27f206458febbbbea7e18bf72b021554168f42</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\exceptions-catching-and-deleting-exceptions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3f282a5ebb6b3dc912e8d5df1d45f6c26a4739c1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0ef8af5f734b53c77f15e729f78ceb300fc44718</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Exceptions: Catching and Deleting Exceptions | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Exceptions: Catching and Deleting Exceptions</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following instructions and examples show you how to catch and delete exceptions.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For more information on the <bpt id="p1">**</bpt>try<ept id="p1">**</ept>, <bpt id="p2">**</bpt>catch<ept id="p2">**</ept>, and <ph id="ph1">`throw`</ph> keywords, see <bpt id="p3">[</bpt>C++ Exception Handling<ept id="p3">](../cpp/cpp-exception-handling.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Your <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> block must delete an exception when:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> block throws a new exception.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Of course, you must not delete the exception if you throw the same exception again:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>NVC_MFCExceptions#3</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Execution returns from within the <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> block.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When deleting a <ph id="ph1">`CException`</ph>, use the <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> member function to delete the exception.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Do not use the <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> keyword, because it can fail if the exception is not on the heap.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To catch and delete exceptions</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>try<ept id="p1">**</ept> keyword to set up a <bpt id="p2">**</bpt>try<ept id="p2">**</ept> block.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Execute any program statements that might throw an exception within a <bpt id="p1">**</bpt>try<ept id="p1">**</ept> block.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> keyword to set up a <bpt id="p2">**</bpt>catch<ept id="p2">**</ept> block.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Place exception-handling code in a <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> block.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The code in the <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> block is executed only if the code within the <bpt id="p2">**</bpt>try<ept id="p2">**</ept> block throws an exception of the type specified in the <bpt id="p3">**</bpt>catch<ept id="p3">**</ept> statement.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The following skeleton shows how <bpt id="p1">**</bpt>try<ept id="p1">**</ept> and <bpt id="p2">**</bpt>catch<ept id="p2">**</ept> blocks are normally arranged:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>NVC_MFCExceptions#4</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When an exception is thrown, control passes to the first <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> block whose exception-declaration matches the type of the exception.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>You can selectively handle different types of exceptions with sequential <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> blocks as listed below:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>NVC_MFCExceptions#5</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Exceptions: Converting from MFC Exception Macros<ept id="p1">](../mfc/exceptions-converting-from-mfc-exception-macros.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
