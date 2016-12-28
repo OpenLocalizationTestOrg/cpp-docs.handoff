@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b71e4c8aff47b10517b3fc2aa45d7b3c3df7dd16</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\allocators.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">74728df5865f59484c73129de92bc089f79b3595</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8dbbfbbb0a68a1f5dd5ff3f049c70d3d3aa42d26</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Allocators | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Allocators</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Allocators are used by the Standard Template Library to handle the allocation and deallocation of elements stored in containers.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>All STL containers except std::array have a template parameter of type <ph id="ph1">`allocator&lt;Type&gt;`</ph>, where <ph id="ph2">`Type`</ph> represents the type of the container element.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example, the vector class is declared as follows:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The Standard Template Library provides a default implementation for an allocator.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In C++11 and later, the default allocator is updated to expose a smaller interface; the new allocator is called a <bpt id="p1">*</bpt>minimal allocator<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In particular, the minimal allocator's <ph id="ph1">`construct()`</ph> member supports move semantics, which can greatly improve performance.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In most cases, this default allocator should be sufficient.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In C++11 all the Standard Library types and functions that take an allocator type parameter support the minimal allocator interface, including <ph id="ph1">`std::function`</ph>, <ph id="ph2">`shared_ptr, allocate_shared()`</ph>, and <ph id="ph3">`basic_string`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information on the default allocator, see <bpt id="p1">[</bpt>allocator Class<ept id="p1">](../standard-library/allocator-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Writing Your Own Allocator (C++11)</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The default allocator uses <ph id="ph1">`new`</ph> and <ph id="ph2">`delete`</ph> to allocate and deallocate memory.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If you want to use a different method of memory allocation, such as using shared memory, then you must create your own allocator.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If you are targeting C++11 and you need to write a new custom allocator, make it a minimal allocator if possible.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Even if you have already implemented an old-style allocator, consider modifying it to be a <bpt id="p1">*</bpt>minimal allocator<ept id="p1">*</ept> in order to take advantage of the more efficient <ph id="ph1">`construct()`</ph> method that will be provided for you automatically.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A minimal allocator requires much less boilerplate and enable you to focus on the <ph id="ph1">`allocate`</ph> and <ph id="ph2">`deallocate`</ph> member functions which do all of the work.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>When creating a minimal allocator, do not implement any members except the ones shown in the example below:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>a converting copy constructor (see example)</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>operator==</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>operator!=</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>allocate</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>deallocate</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The C++11 default <ph id="ph1">`construct()`</ph> member that will be provided for you does perfect forwarding and enables move semantics; it is much more efficient in many cases than the older version.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>At compile time, the STL uses the allocator_traits class to detect which members you have explicitly provided and provides a default implementation for any members that are not present.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Do not interfere with this mechanism by providing a specialization of allocator_traits for your allocator!</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The following example shows a minimal implementation of an allocator that uses <ph id="ph1">`malloc`</ph> and <ph id="ph2">`free`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Note the use of the new exception type <ph id="ph1">`std::bad_array_new_length`</ph> which is thrown if the array size is less than zero or greater than the maximum allowed size.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Writing Your Own Allocator (C++03)</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In C++03, any allocator used with STL containers must implement the following type definitions:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In addition, any allocator used with STL containers must implement the following methods:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Constructor</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Copy constructor</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Destructor</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For more information on these type definitions and methods, see <bpt id="p1">[</bpt>allocator Class<ept id="p1">](../standard-library/allocator-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>C++ Standard Library Reference</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

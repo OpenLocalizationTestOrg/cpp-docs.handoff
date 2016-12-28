@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8c83b6c7abc829d7740614611faec630442a07b9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\filename-search-functions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f6736b5facdabdb1a88e11bd18dd1af04ed1c860</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">654a7e880d72d627eb39f84da058ab8fdc38b555</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Filename Search Functions | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Filename Search Functions</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>These functions search for and close searches for specified file names:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>_findnext, _wfindnext</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>_findfirst, _wfindfirst</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>_findclose</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_findfirst`</ph> function provides information about the first instance of a file name that matches the file specified in the <ph id="ph2">`filespec`</ph> argument.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You can use in <ph id="ph1">`filespec`</ph> any combination of wildcard characters that is supported by the host operating system.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The functions return file information in a _<ph id="ph1">`finddata_t`</ph> structure, which is defined in IO.h.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Various functions in the family use many variations on the <ph id="ph1">`_finddata_t`</ph> structure.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The basic <ph id="ph1">`_finddata_t`</ph> structure includes the following elements:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>File attribute.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Time of file creation (–1L for FAT file systems).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This time is stored in UTC format.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To convert to the local time, use <bpt id="p1">[</bpt>localtime_s<ept id="p1">](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Time of the last file access (–1L for FAT file systems).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This time is stored in UTC format.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>To convert to the local time, use <ph id="ph1">`localtime_s`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Time of the last write to file.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>This time is stored in UTC format.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To convert to the local time, use <ph id="ph1">`localtime_s`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Length of the file in bytes.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>[ <ph id="ph1">`_MAX_PATH`</ph>]</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Null-terminated name of matched file or directory, without the path.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In file systems that do not support the creation and last access times of a file, such as the FAT system, the <ph id="ph1">`time_create`</ph> and <ph id="ph2">`time_access`</ph> fields are always –1L.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>is defined in Stdlib.h as 260 bytes.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>You cannot specify target attributes (such as <ph id="ph1">`_A_RDONLY`</ph>) to limit the find operation.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>These attributes are returned in the <ph id="ph1">`attrib`</ph> field of the <ph id="ph2">`_finddata_t`</ph> structure and can have the following values (defined in IO.h).</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Users should not rely on these being the only values possible for the <ph id="ph1">`attrib`</ph> field.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Archive.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Set whenever the file is changed and cleared by the <bpt id="p1">**</bpt>BACKUP<ept id="p1">**</ept> command.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Value: 0x20.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Hidden file.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Not generally seen with the DIR command, unless you use the <bpt id="p1">**</bpt>/AH<ept id="p1">**</ept> option.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Returns information about normal files and files that have this attribute.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Value: 0x02.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Normal.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>File has no other attributes set and can be read or written to without restriction.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Value: 0x00.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Read-only.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>File cannot be opened for writing and a file that has the same name cannot be created.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Value: 0x01.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Subdirectory.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Value: 0x10.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>System file.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Not ordinarily seen with the <bpt id="p1">**</bpt>DIR<ept id="p1">**</ept> command, unless the <bpt id="p2">**</bpt>/A<ept id="p2">**</ept> or <bpt id="p3">**</bpt>/A:S<ept id="p3">**</ept> option is used.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Value: 0x04.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>finds the next name, if any, that matches the <ph id="ph1">`filespec`</ph> argument specified in an earlier call to <ph id="ph2">`_findfirst`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`fileinfo`</ph> argument should point to a structure initialized by the previous call to <ph id="ph2">`_findfirst`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>If a match is found, the <ph id="ph1">`fileinfo`</ph> structure contents are changed as described earlier.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Otherwise, it is left unchanged.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>closes the specified search handle and releases all associated resources for both <ph id="ph1">`_findfirst`</ph> and <ph id="ph2">`_findnext`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The handle returned by either <ph id="ph1">`_findfirst`</ph> or <ph id="ph2">`_findnext`</ph> must first be passed to <ph id="ph3">`_findclose`</ph>, before modification operations, such as deleting, can be performed on the directories that form the paths passed to them.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>You can nest the <ph id="ph1">`_find`</ph> functions.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For example, if a call to <ph id="ph1">`_findfirst`</ph> or <ph id="ph2">`_findnext`</ph> finds the file that is a subdirectory, a new search can be initiated with another call to <ph id="ph3">`_findfirst`</ph> or <ph id="ph4">`_findnext`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>and <ph id="ph1">`_wfindnext`</ph> are wide-character versions of <ph id="ph2">`_findfirst`</ph> and <ph id="ph3">`_findnext`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The structure argument of the wide-character versions has the <ph id="ph1">`_wfinddata_t`</ph> data type, which is defined in IO.h and in Wchar.h.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The fields of this data type are the same as those of the <ph id="ph1">`_finddata_t`</ph> data type, except that in <ph id="ph2">`_wfinddata_t`</ph> the name field is of type <ph id="ph3">`wchar_t`</ph> instead of type <ph id="ph4">`char`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Otherwise <ph id="ph1">`_wfindfirst`</ph> and <ph id="ph2">`_wfindnext`</ph> behave identically to <ph id="ph3">`_findfirst`</ph> and <ph id="ph4">`_findnext`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>and <ph id="ph1">`_findnext`</ph> use the 64-bit time type.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>If you must use the old 32-bit time type, you can define <ph id="ph1">`_USE_32BIT_TIME_T`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The versions of these functions that have the <ph id="ph1">`32`</ph> suffix in their names use the 32-bit time type, and those with the <ph id="ph2">`64`</ph> suffix use the 64-bit time type.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Functions <ph id="ph1">`_findfirst32i64`</ph>, <ph id="ph2">`_findnext32i64`</ph>, <ph id="ph3">`_wfindfirst32i64`</ph>, and <ph id="ph4">`_wfindnext32i64`</ph> also behave identically to the 32-bit time type versions of these functions except they use and return 64-bit file lengths.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Functions <ph id="ph1">`_findfirst64i32`</ph>, <ph id="ph2">`_findnext64i32`</ph>, <ph id="ph3">`_wfindfirst64i32`</ph>, and <ph id="ph4">`_wfindnext64i32`</ph>use the 64-bit time type but use 32-bit file lengths.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>These functions use appropriate variations of the <ph id="ph1">`_finddata_t`</ph> type in which the fields have different types for the time and the file size.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>is actually a macro that evaluates to <ph id="ph1">`_finddata64i32_t`</ph> (or <ph id="ph2">`_finddata32_t`</ph> if <ph id="ph3">`_USE_32BIT_TIME_T`</ph> is defined).</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The following table summarizes the variations on <ph id="ph1">`_finddata_t`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Structure</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Time type</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>File size type</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>,</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>is a <ph id="ph1">`typedef`</ph> for <ph id="ph2">`unsigned long`</ph> (32 bits).</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>System Calls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

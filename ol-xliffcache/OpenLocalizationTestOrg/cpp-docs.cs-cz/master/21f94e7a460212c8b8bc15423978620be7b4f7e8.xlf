@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">21f94e7a460212c8b8bc15423978620be7b4f7e8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\try-finally-statement.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">254440411640aeacc332fa80b5d9cbf8e72116c2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">647433fcbbd965dab5891855d35e81002798bc39</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>try-finally Statement | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>try-finally Statement</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The following syntax describes the <ph id="ph1">`try-finally`</ph> statement:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Grammar</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>try-finally-statement<ept id="p1">*</ept>:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>compound-statement</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>compound-statement</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`try-finally`</ph> statement is a Microsoft extension to the C and C++ languages that enables target applications to guarantee execution of cleanup code when execution of a block of code is interrupted.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Cleanup consists of such tasks as deallocating memory, closing files, and releasing file handles.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`try-finally`</ph> statement is especially useful for routines that have several places where a check is made for an error that could cause premature return from the routine.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For related information and a code sample, see <bpt id="p1">[</bpt>try-except Statement<ept id="p1">](../cpp/try-except-statement.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For more information on structured exception handling in general, see <bpt id="p1">[</bpt>Structured Exception Handling<ept id="p1">](../cpp/structured-exception-handling-c-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For more information on handling exceptions in managed applications, see <bpt id="p1">[</bpt>Exception Handling under /clr<ept id="p1">](../windows/exception-handling-cpp-component-extensions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Structured exception handling works with Win32 for both C and C++ source files.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>However, it is not specifically designed for C++.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>You can ensure that your code is more portable by using C++ exception handling.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Also, C++ exception handling is more flexible, in that it can handle exceptions of any type.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For C++ programs, it is recommended that you use the C++ exception-handling mechanism (<bpt id="p1">[</bpt>try, catch, and throw<ept id="p1">](../cpp/try-throw-and-catch-statements-cpp.md)</ept> statements).</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The compound statement after the <ph id="ph1">`__try`</ph> clause is the guarded section.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The compound statement after the <ph id="ph1">`__finally`</ph> clause is the termination handler.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The handler specifies a set of actions that execute when the guarded section is exited, regardless of whether the guarded section is exited by an exception (abnormal termination), or by standard fall through (normal termination).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Control reaches a <ph id="ph1">`__try`</ph> statement by simple sequential execution (fall through).</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When control enters the <ph id="ph1">`__try`</ph>, its associated handler becomes active.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>If the flow of control reaches the end of the try block, execution proceeds as follows:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The termination handler is invoked.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>When the termination handler completes, execution continues after the <ph id="ph1">`__finally`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Regardless of how the guarded section ends (for example, via a <ph id="ph1">`goto`</ph> out of the guarded body or a <ph id="ph2">`return`</ph> statement), the termination handler is executed <ph id="ph3">`before`</ph> the flow of control moves out of the guarded section.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>__finally<ept id="p1">**</ept> statement does not block searching for an appropriate exception handler.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If an exception occurs in the <ph id="ph1">`__try`</ph> block, the operating system must find a handler for the exception or the program will fail.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If a handler is found, any and all <ph id="ph1">`__finally`</ph> blocks are executed and execution resumes in the handler.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For example, suppose a series of function calls links function A to function D, as shown in the following figure.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Each function has one termination handler.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>If an exception is raised in function D and handled in A, the termination handlers are called in this order as the system unwinds the stack: D, C, B.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Order of termination&amp;#45;handler execution</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Order of Termination-Handler Execution</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The behavior of try-finally is different from some other languages that support the use of <bpt id="p1">**</bpt>finally<ept id="p1">**</ept>, such as C#.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>A single <ph id="ph1">`__try`</ph> may have either, but not both, of <ph id="ph2">`__finally`</ph> and <ph id="ph3">`__except`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If both are to be used together, an outer try-except statement must enclose the inner try-finally statement.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The rules specifying when each block executes are also different.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The __leave Keyword</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__leave`</ph> keyword is valid only within the guarded section of a <ph id="ph2">`try-finally`</ph> statement, and its effect is to jump to the end of the guarded section.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Execution continues at the first statement in the termination handler.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`goto`</ph> statement can also jump out of the guarded section, but it degrades performance because it invokes stack unwinding.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__leave`</ph> statement is more efficient because it does not cause stack unwinding.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Abnormal Termination</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Exiting a <ph id="ph1">`try-finally`</ph> statement using the <bpt id="p1">[</bpt>longjmp<ept id="p1">](../c-runtime-library/reference/longjmp.md)</ept> run-time function is considered abnormal termination.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>It is illegal to jump into a <ph id="ph1">`__try`</ph> statement, but legal to jump out of one.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>All <ph id="ph1">`__finally`</ph> statements that are active between the point of departure (normal termination of the <ph id="ph2">`__try`</ph> block) and the destination (the <ph id="ph3">`__except`</ph> block that handles the exception) must be run.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This is called a local unwind.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>If a <bpt id="p1">**</bpt>try<ept id="p1">**</ept> block is prematurely terminated for any reason, including a jump out of the block, the system executes the associated <bpt id="p2">**</bpt>finally<ept id="p2">**</ept> block as a part of the process of unwinding the stack.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>In such cases, the <bpt id="p1">[</bpt>AbnormalTermination<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms679265)</ept> function returns TRUE if called from within the <bpt id="p2">**</bpt>finally<ept id="p2">**</ept> block; otherwise, it returns FALSE.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The termination handler is not called if a process is killed in the middle of executing a <ph id="ph1">`try-finally`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Writing a Termination Handler</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Structured Exception Handling (C/C++)</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Keywords</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Termination-Handler Syntax</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">28f4f1f1ecc7e7b4e8992a6b8cbf110dab2ad88f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\serializing-data-to-and-from-files.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">831d59a73debbb2abf33db874e81eb18f4c9b29a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e3dae34da3b3daca48757016fb13e82b26d1070b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Serializing Data to and from Files | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Serializing Data to and from Files</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The basic idea of persistence is that an object should be able to write its current state, indicated by the values of its member variables, to persistent storage.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Later, the object can be re-created by reading, or "deserializing," the object's state from persistent storage.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>A key point here is that the object itself is responsible for reading and writing its own state.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Thus, for a class to be persistent, it must implement the basic serialization operations.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The framework provides a default implementation for saving documents to disk files in response to the Save and Save As commands on the File menu and for loading documents from disk files in response to the Open command.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>With very little work, you can implement a document's ability to write and read its data to and from a file.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The main thing you must do is override the <bpt id="p1">[</bpt>Serialize<ept id="p1">](../mfc/reference/cobject-class.md#cobject__serialize)</ept> member function in your document class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The MFC Application Wizard places a skeletal override of the <bpt id="p1">**</bpt>CDocument<ept id="p1">**</ept> member function <ph id="ph1">`Serialize`</ph> in the document class it creates for you.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>After you have implemented your application's member variables, you can fill in your <ph id="ph1">`Serialize`</ph> override with code that sends the data to an "archive object" connected to a file.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">[</bpt>CArchive<ept id="p1">](../mfc/reference/carchive-class.md)</ept> object is similar to the <ph id="ph1">`cin`</ph> and <ph id="ph2">`cout`</ph> input/output objects from the C++ iostream library.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>However, <ph id="ph1">`CArchive`</ph> writes and reads binary format, not formatted text.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Serialization</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The document's role in serialization</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The data's role in serialization</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Bypassing the serialization mechanism</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The Document's Role in Serialization</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The framework responds automatically to the File menu's Open, Save, and Save As commands by calling the document's <ph id="ph1">`Serialize`</ph> member function if it is implemented.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`ID_FILE_OPEN`</ph> command, for example, calls a handler function in the application object.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>During this process, the user sees and responds to the File Open dialog box and the framework obtains the filename the user chooses.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The framework creates a <ph id="ph1">`CArchive`</ph> object set up for loading data into the document and passes the archive to <ph id="ph2">`Serialize`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The framework has already opened the file.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The code in your document's <ph id="ph1">`Serialize`</ph> member function reads the data in through the archive, reconstructing data objects as needed.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For more information about serialization, see the article <bpt id="p1">[</bpt>Serialization<ept id="p1">](../mfc/serialization-in-mfc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The Data's Role in Serialization</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>In general, class-type data should be able to serialize itself.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>That is, when you pass an object to an archive, the object should know how to write itself to the archive and how to read itself from the archive.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>MFC provides support for making classes serializable in this way.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If you design a class to define a data type and you intend to serialize data of that type, design for serialization.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Using Documents</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

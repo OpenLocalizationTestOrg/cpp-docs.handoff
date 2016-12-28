@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">14e913e8434373d120d0d3599d687f12e97d28be</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\initializing-documents-and-views.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7ceb263598b89275a959adde4f45435a9ec8f37e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c5a3f99c642c1bb8b51dafeba904e5fdb5222d6b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Initializing Documents and Views | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Initializing Documents and Views</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Documents are created in two different ways, so your document class must support both ways.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>First, the user can create a new, empty document with the File New command.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In that case, initialize the document in your override of the <bpt id="p1">[</bpt>OnNewDocument<ept id="p1">](../mfc/reference/cdocument-class.md#cdocument__onnewdocument)</ept> member function of class <bpt id="p2">[</bpt>CDocument<ept id="p2">](../mfc/reference/cdocument-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Second, the user can use the Open command on the File menu to create a new document whose contents are read from a file.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In that case, initialize the document in your override of the <bpt id="p1">[</bpt>OnOpenDocument<ept id="p1">](../mfc/reference/cdocument-class.md#cdocument__onopendocument)</ept> member function of class <bpt id="p2">**</bpt>CDocument<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If both initializations are the same, you can call a common member function from both overrides, or <ph id="ph1">`OnOpenDocument`</ph> can call <ph id="ph2">`OnNewDocument`</ph> to initialize a clean document and then finish the open operation.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Views are created after their documents are created.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The best time to initialize a view is after the framework has finished creating the document, frame window, and view.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You can initialize your view by overriding the <bpt id="p1">[</bpt>OnInitialUpdate<ept id="p1">](../mfc/reference/cview-class.md#cview__oninitialupdate)</ept> member function of <bpt id="p2">[</bpt>CView<ept id="p2">](../mfc/reference/cview-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If you need to reinitialize or adjust anything each time the document changes, you can override <bpt id="p1">[</bpt>OnUpdate<ept id="p1">](../mfc/reference/cview-class.md#cview__onupdate)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Initializing and Cleaning Up Documents and Views</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

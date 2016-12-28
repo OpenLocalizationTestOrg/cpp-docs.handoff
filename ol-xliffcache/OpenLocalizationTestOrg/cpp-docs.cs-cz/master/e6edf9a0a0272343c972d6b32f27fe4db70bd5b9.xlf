@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e6edf9a0a0272343c972d6b32f27fe4db70bd5b9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn014-custom-controls.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">63f845beb6c7d680e08daece8760dbf269395a6f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">47cef989e2e1e9249721f0e6cbd5e154c9a06adb</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN014: Custom Controls | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN014: Custom Controls</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This note describes the MFC Support for custom and self-drawing controls.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It also describes dynamic subclassing, and describes the relationship between <bpt id="p1">[</bpt>CWnd<ept id="p1">](../mfc/reference/cwnd-class.md)</ept> objects and <ph id="ph1">`HWND`</ph>s.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The MFC sample application CTRLTEST illustrates how to use many custom controls.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>See the source code for the MFC General sample <bpt id="p1">[</bpt>CTRLTEST<ept id="p1">](../visual-cpp-samples.md)</ept> and online help.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Owner-Draw Controls/Menus</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Windows provides support for owner-draw controls and menus by using Windows messages.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The parent window of any control or menu receives these messages and calls functions in response.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You can override these functions to customize the visual appearance and behavior of your owner-draw control or menu.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>MFC directly supports owner-draw with the following functions:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>CWnd::OnDrawItem</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>CWnd::OnMeasureItem</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>CWnd::OnCompareItem</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>CWnd::OnDeleteItem</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You can override these functions in your <ph id="ph1">`CWnd`</ph> derived class to implement custom draw behavior.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This approach does not lead to reusable code.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If you have two similar controls in two different <ph id="ph1">`CWnd`</ph> classes, you must implement the custom control behavior in two locations.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The MFC-supported self-drawing control architecture solves this problem.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Self-Draw Controls and Menus</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>MFC provides a default implementation (in the <ph id="ph1">`CWnd`</ph> and <bpt id="p1">[</bpt>CMenu<ept id="p1">](../mfc/reference/cmenu-class.md)</ept> classes) for the standard owner-draw messages.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This default implementation will decode the owner-draw parameters and delegate the owner-draw messages to the controls or menu.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This is called self-draw because the drawing code is in the class of the control or menu, not in the owner window.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>By using self-draw controls you can build reusable control classes that use owner-draw semantics to display the control.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The code for drawing the control is in the control class, not its parent.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This is an object-oriented approach to custom control programming.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Add the following list of functions to your self-draw classes:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For self-draw buttons:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For self-draw menus:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For self-draw list boxes:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For self-draw combo boxes:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For details on the owner-draw structures (<bpt id="p1">[</bpt>DRAWITEMSTRUCT<ept id="p1">](../mfc/reference/drawitemstruct-structure.md)</ept>, <bpt id="p2">[</bpt>MEASUREITEMSTRUCT<ept id="p2">](../mfc/reference/measureitemstruct-structure.md)</ept>, <bpt id="p3">[</bpt>COMPAREITEMSTRUCT<ept id="p3">](../mfc/reference/compareitemstruct-structure.md)</ept>, and <bpt id="p4">[</bpt>DELETEITEMSTRUCT<ept id="p4">](../mfc/reference/deleteitemstruct-structure.md)</ept>) see the MFC documentation for <ph id="ph1">`CWnd::OnDrawItem`</ph>, <ph id="ph2">`CWnd::OnMeasureItem`</ph>, <ph id="ph3">`CWnd::OnCompareItem`</ph>, and <ph id="ph4">`CWnd::OnDeleteItem`</ph> respectively.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Using self-draw controls and menus</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For self-draw menus, you must override both the <ph id="ph1">`OnMeasureItem`</ph> and <ph id="ph2">`OnDrawItem`</ph> methods.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For self-draw list boxes and combo boxes, you must override <ph id="ph1">`OnMeasureItem`</ph> and <ph id="ph2">`OnDrawItem`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>You must specify the <ph id="ph1">`LBS_OWNERDRAWVARIABLE`</ph> style for list boxes or <ph id="ph2">`CBS_OWNERDRAWVARIABLE`</ph> style for combo boxes in the dialog template.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`OWNERDRAWFIXED`</ph> style will not work with self-draw items because the fixed item height is determined before self-draw controls are attached to the list box.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>(You can use the methods <bpt id="p1">[</bpt>CListBox::SetItemHeight<ept id="p1">](../mfc/reference/clistbox-class.md#clistbox__setitemheight)</ept> and <bpt id="p2">[</bpt>CComboBox::SetItemHeight<ept id="p2">](../mfc/reference/ccombobox-class.md#ccombobox__setitemheight)</ept> to overcome this limitation.)</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Switching to an <ph id="ph1">`OWNERDRAWVARIABLE`</ph> style will force the system to apply the <ph id="ph2">`NOINTEGRALHEIGHT`</ph> style to the control.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Because the control cannot calculate an integral height with variable sized items, the default style of <ph id="ph1">`INTEGRALHEIGHT`</ph> is ignored and the control is always <ph id="ph2">`NOINTEGRALHEIGHT`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>If your items are fixed height, you can prevent partial items from being drawn by specifying the control size to be an integer multiplier of the item size.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For self-drawing list boxes and combo boxes with the <ph id="ph1">`LBS_SORT`</ph> or <ph id="ph2">`CBS_SORT`</ph> style, you must override the <ph id="ph3">`OnCompareItem`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For self-drawing list boxes and combo boxes, <ph id="ph1">`OnDeleteItem`</ph> is not usually overridden.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>You can override <ph id="ph1">`OnDeleteItem`</ph> if you want to perform any special processing.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>One case where this would be applicable is when additional memory or other resources are stored with each list box or combo box item.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Examples of Self-Drawing Controls and Menus</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The MFC General sample <bpt id="p1">[</bpt>CTRLTEST<ept id="p1">](../visual-cpp-samples.md)</ept> provides samples of a self-draw menu and a self-draw list box.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The most typical example of a self-drawing button is a bitmap button.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>A bitmap button is a button that shows one, two, or three bitmap images for the different states.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>An example of this is provided in the MFC class <bpt id="p1">[</bpt>CBitmapButton<ept id="p1">](../mfc/reference/cbitmapbutton-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Dynamic Subclassing</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Occasionally you will want to change the functionality of an object that already exists.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The previous examples required you to customize the controls before they were created.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Dynamic subclassing enables you to customize a control that has already been created.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Subclassing is the Windows term for replacing the <bpt id="p1">[</bpt>WndProc<ept id="p1">](http://msdn.microsoft.com/en-us/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26)</ept> of a window with a customized <ph id="ph1">`WndProc`</ph> and calling the old <ph id="ph2">`WndProc`</ph> for default functionality.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>This should not be confused with C++ class derivation.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>For clarification, the C++ terms <bpt id="p1">*</bpt>base class<ept id="p1">*</ept> and <bpt id="p2">*</bpt>derived class<ept id="p2">*</ept> are analogous to <bpt id="p3">*</bpt>superclass<ept id="p3">*</ept> and <bpt id="p4">*</bpt>subclass<ept id="p4">*</ept> in the Windows object model.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>C++ derivation with MFC and Windows subclassing are functionally similar, except C++ does not support dynamic subclassing.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CWnd`</ph> class provides the connection between a C++ object (derived from <ph id="ph2">`CWnd`</ph>) and a Windows window object (known as an <ph id="ph3">`HWND`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>There are three common ways these are related:</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>creates the <ph id="ph1">`HWND`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>You can modify the behavior in a derived class by creating a class derived from <ph id="ph1">`CWnd`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`HWND`</ph> is created when your application calls <bpt id="p1">[</bpt>CWnd::Create<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__create)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The application attaches a <ph id="ph1">`CWnd`</ph> to an existing <ph id="ph2">`HWND`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The behavior of the existing window is not modified.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>This is a case of delegation and is made possible by calling <bpt id="p1">[</bpt>CWnd::Attach<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__attach)</ept> to alias an existing <ph id="ph1">`HWND`</ph> to a <ph id="ph2">`CWnd`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>is attached to an existing <ph id="ph1">`HWND`</ph> and you can modify the behavior in a derived class.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>This is called dynamic subclassing because we are changing the behavior, and therefore the class, of a Windows object at run time.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>You can achieve dynamic subclassing by using the methods <bpt id="p1">[</bpt>CWnd::SubclassWindow<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__subclasswindow)</ept> and<bpt id="p2">[</bpt>CWnd::SubclassDlgItem<ept id="p2">](../mfc/reference/cwnd-class.md#cwnd__subclassdlgitem)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Both routines attach a <ph id="ph1">`CWnd`</ph> object to an existing <ph id="ph2">`HWND`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>takes the <ph id="ph1">`HWND`</ph> directly.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>is a helper function that takes a control ID and the parent window.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>is designed for attaching C++ objects to dialog controls created from a dialog template.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>See the <bpt id="p1">[</bpt>CTRLTEST<ept id="p1">](../visual-cpp-samples.md)</ept> example for several examples of when to use <ph id="ph1">`SubclassWindow`</ph> and <ph id="ph2">`SubclassDlgItem`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
