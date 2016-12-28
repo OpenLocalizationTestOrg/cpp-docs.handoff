@@ -1,0 +1,511 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2ea129ac94cb1ddc7486ba69280dc0390896e088</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\how-to-report-a-problem-with-the-visual-cpp-toolset.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">
+      </xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">65e457828d8f415e1c2c6de33a46ac9134c6430a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">12cb8e68c79192d401210913d515bcc79059b063</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to Report a Problem with the Visual C++ Toolset | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to Report a Problem with the Visual C++ Toolset</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>If you encounter problems with the Visual C++ compiler, linker, or other tools, we want to know about them.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The best way to let us know about a problem is to send us a report that includes a description of the problem you've encountered, details about how you're building your program, and some code we can use to reproduce the problem on our own machines.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This information lets us quickly verify that the problem exists and is not local to your environment, determine whether it affects other versions of the compiler, and to diagnose its cause.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In this document, you'll read about</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>How to prepare your report<ept id="p1">](#prepare)</ept>, and what makes a good report.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Ways to send your report<ept id="p1">](#send)</ept>, and what makes them different.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>How to generate a repro<ept id="p1">](#generate)</ept>, and different kinds of repros.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Your reports are important to us and to other developers like you.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Thank you for helping us improve Visual C++!</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>How to prepare your report</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Creating a high-quality report is important because its very difficult to reproduce the problem you encountered on our own machines without complete information.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The better your report is, the more effectively we are able recreate and diagnose the problem.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>At a minimum, your report should contain</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The full version information of the toolset you're using.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The full cl.exe command line used to build your code.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>A detailed description of the problem you encountered.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A 'repro'—source code that demonstrates the problem.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Read on to learn more about the specific information we need and where you can find it.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The toolset version</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>We need the full version information of the toolset you're using so that we can test your repro against the same toolset on our machines.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If we can reproduce the problem, this information also gives us a starting point to investigate which other versions of the toolset exhibit the same problem.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>To report the full version of the compiler you're using</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Press the Windows key on your keyboard and begin typing <ph id="ph1">`Developer Command Prompt`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Choose the <bpt id="p1">**</bpt>Developer Command Prompt<ept id="p1">**</ept> version that matches the version of Visual Studio you're using when it appears in the list of matches.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Developer Command Prompt<ept id="p1">**</ept> console, enter the command <ph id="ph1">`cl /Bv /CLR`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The output should look similar to this:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Copy and paste the entire output into your report.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The command line</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>We need the full command line (cl.exe and its arguments) used to build your code so that we can build it in exactly the same way on our machines.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This is important because the problem you've encountered might only exist when building with a certain argument or combination of arguments.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The best place to find this information is in the build log immediately after experiencing the problem.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>This ensures that the command line contains exactly the same arguments that might be contributing to the problem.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>To report the contents of the command line</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Locate the <bpt id="p1">**</bpt>CL.command.1.tlog<ept id="p1">**</ept> file and open it.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>By default, this file is located at <ph id="ph1">\\</ph>...\Visual Studio Version\Projects\SolutionName\ProjectName\Config\ProjectName.tlog\CL.command.1.tlog.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Inside this file, you'll find the names of source code files followed by the command line arguments used to compile them, each on separate lines.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Locate the line that contains the name of the source code file where the problem occurs; the line below it contains the corresponding cl.exe command and its arguments.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Copy and paste the entire command line into your report.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>A description of the problem</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>We need a detailed description of the problem you've encountered so that we can verify that we see the same effect on our machines; its also sometimes useful for us to know what you were trying to accomplish, and what you expected to happen.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Please provide the precise error messages given by the toolset, a brief description of what you were trying to accomplish to help us understand your repro code, and any other details that might help us diagnose the problem you experienced, such as any work-arounds you might have found.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Avoid repeating information found elsewhere in your report.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The repro</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>We need a repro—a self-contained source code example that demonstrates the problem you've encountered—so that we can reproduce the error on our machines.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The kind of problem you encounter will determine what kind of repro you should include in your report.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Without an appropriate repro, we have nothing to investigate.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Short, self-contained repros can be directly included in your report text, but larger source code repros should be attached to the report.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Repros that can't be reduced to a single source code file should be packaged by compressing a directory containing all the files into a .zip file or similar and attached to the report.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Any additional scenario-specific details should always be included in the report text, never in source code.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The best kind of repro you can provide us is a <bpt id="p1">*</bpt>minimal repro<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>This is a single, self-contained source code file (without references to user headers) that contains just enough code to demonstrate the problem.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>If you can provide a repro in this form, just attach the source code file to your report; its all we need.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>If you can't condense the problem to a minimal repro without dependencies, refer to the following sections to determine the kind of repro you should include in your report.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Frontend (parser) crash</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Frontend crashes occur during the parsing phase of the compiler.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Typically, the compiler will emit <bpt id="p1">[</bpt>Fatal Error C1001<ept id="p1">](error-messages/compiler-errors-1/fatal-error-c1001.md)</ept> and reference the source code file and line number on which the error occurred; it will often mention a file msc1.cpp, but you can ignore this detail.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>For this kind of crash, please provide a <bpt id="p1">[</bpt>Preprocessed Repro<ept id="p1">](#preprocessed_repro)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Here's example compiler output for this kind of crash:</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Backend (code generation) crash</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Backend crashes occur during the code generation phase of the compiler.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Typically, the compiler will emit <bpt id="p1">[</bpt>Fatal Error C1001<ept id="p1">](error-messages/compiler-errors-1/fatal-error-c1001.md)</ept>, and might not reference the source code file and line number associated with the problem; it will often mention a file compiler\utc\src\p2\main.c, but you can ignore this detail.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>For this kind of crash please provide a <bpt id="p1">[</bpt>Link Repro<ept id="p1">](#link_repro)</ept> if you are using Link-Time Code Generation (LTCG) or a <bpt id="p2">[</bpt>Preprocessed Repro<ept id="p2">](#preprocessed_repro)</ept> if not.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>LTGC is enabled by the <ph id="ph1">`/GL`</ph> command-line argument to cl.exe.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Here's example compiler output for this kind of crash in which LTCG is <bpt id="p1">**</bpt>not<ept id="p1">**</ept> used.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>If your compiler output looks like this you should provide a <bpt id="p1">[</bpt>Preprocessed Repro<ept id="p1">](#preprocessed_repro)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>If the line that begins with <bpt id="p1">**</bpt>INTERNAL COMPILER ERROR<ept id="p1">**</ept> mentions link.exe, rather than cl.exe, LTCG was enabled and you should provide a <bpt id="p2">[</bpt>Link Repro<ept id="p2">](#link_repro)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>If its not clear whether LTCG was enabled from the compiler error message, you may need to examine the command line arguments that you copied from your build log in a previous step for the <ph id="ph1">`/GL`</ph> command-line argument.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Linker crash</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Linker crashes occur during the linking phase, after the compiler has run.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Typically, the linker will emit <bpt id="p1">[</bpt>Linker Tools Error LNK1000<ept id="p1">](error-messages/tool-errors/linker-tools-error-lnk1000.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>If the output mentions C1001 or involves Link-Time Code Generation, refer to <bpt id="p1">[</bpt>Backend (code generation) crash<ept id="p1">](#backend_crash)</ept> instead for more information.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>For this kind of crash, please provide a <bpt id="p1">[</bpt>Link Repro<ept id="p1">](#link_repro)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Here's example compiler output for this kind of crash.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>If incremental linking is enabled and the crash occurred only after initial linking—that is, only after the first full linking on which subsequent incremental linking is based—please also provide a copy of the object (.obj) and library (.lib) files that correspond to source files that were modified after the initial linking was completed.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Bad code generation</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Bad code generation is rare, but occurs when the compiler mistakenly generates incorrect code that will cause your application to crash at runtime rather than detecting this problem at compile-time.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>If you believe the problem you are experiencing results in bad code generation, treat your report the same as a <bpt id="p1">[</bpt>Backend (code generation) crash<ept id="p1">](#backend_crash)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>For this kind of crash please provide a <bpt id="p1">[</bpt>Link Repro<ept id="p1">](#link_repro)</ept> if you are using Link-Time Code Generation (LTCG) or a <bpt id="p2">[</bpt>Preprocessed Repro<ept id="p2">](#preprocessed_repro)</ept> if not.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>LTGC is enabled by the <ph id="ph1">`/GL`</ph> command-line argument to cl.exe.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Ways to send your report</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>There are several ways to get your report to us.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>You can file a bug on Microsoft Connect, email us, or use Visual Studio's built-in Report a Problem Tool.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The best choice for your report depends on the kind of problem you've encountered, how you want to interact with the engineers who will investigate your report, and whether you'd like to track its progress or share your report with the community.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Regardless of how you submit your report, Microsoft respects your privacy.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>For information about how we treat the data that you send us, see the <bpt id="p1">[</bpt>Microsoft Visual Studio Product Family Privacy Statement<ept id="p1">](https://www.visualstudio.com/dn948229)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>File a bug on Microsoft Connect</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Microsoft Connect (<bpt id="p1">[</bpt>connect.microsoft.com<ept id="p1">](http://connect.microsoft.com)</ept>) is a way for our user community to connect directly to the teams that build Microsoft products.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>On Connect you can file new bugs and make feature requests, view other bugs and requests made by the community, and voice which ones are most important to you.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Reporting your problem through Connect is best when you want share your report with the Visual Studio community and track its progress publicly; by sharing your report, others can sometimes provide work-arounds or additional information that can help us diagnose the problem.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>You can still use Connect if you want to keep your report private (such as when you can't share the code in your report), just make sure to set the visibility of your report to Private before you submit the form.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Microsoft Connect: Report a problem with Visual Studio 2015 Update 3</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Microsoft Connect: Report a problem with Visual Studio 2015 Update 2</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Microsoft Connect: Report a problem with Visual Studio 2015 Update 1</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Microsoft Connect: Report a problem with Visual Studio 2015</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>You can report a problem with other Visual Studio and .Net Framework products by locating the product in the drop-down on the <bpt id="p1">[</bpt>Visual Studio and .NET Framework feedback<ept id="p1">](https://connect.microsoft.com/VisualStudio/feedback/LoadSubmitFeedbackForm)</ept> Connect page.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Send an Email</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Email is another way to send your report directly to the Visual C++ team; you can reach us at <bpt id="p1">[</bpt>compilercrash@microsoft.com<ept id="p1">](mailto:compilercrash@microsoft.com)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Reporting your problem through email lacks the rich community of Microsoft Connect, but can sometimes be better for large repros.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>It can also be the best or only option if your work environment is not connected to the internet or you are otherwise prevented from using Microsoft Connect.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>If you choose to send your report by email, you can use the following template as the body of your email message.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Don't forget to attach source code or other files if you aren't including that information in the email body.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Use the Report a Problem tool</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The Report a Problem tool in Visual Studio is a way for Visual Studio users to report a variety of problems with just a few clicks.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>It provides a simple form that you can use to specify detailed information about the problem you've encountered and then submit your report without ever leaving the IDE.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Reporting your problem through the Report a Problem tool is unusual for the kinds of toolset problems discussed in this document; nevertheless, its an option you can choose if it suites your preferences.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>For other kinds of problems you might encounter in Visual Studio that are not related to the toolset (For example, UI issues, broken IDE functionality, or general crashes), the Report a Problem tool can be an especially good choice due to its screenshot capabilities and its ability to record UI actions that lead to the problem you've encountered.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Microsoft connect can also be a good choice for reporting these other kinds of errors, but lacks the additional capabilities of the Report a Problem tool.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>You should never report these other kinds of errors by sending email to compilercrash@microsoft.com.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Generating Repros</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>A repro is a complete, self-contained code example, that demonstrates the problem you're reporting.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>A repro is <bpt id="p1">**</bpt>not<ept id="p1">**</ept> a code snippet—it must be a complete example that builds and runs (or would, except for the errors produced by the problem you're reporting).</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>It should contain all the necessary #include directives, even for the standard headers.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Furthermore, a good repro is</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Minimal.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Repros should be as small as possible while still demonstrating exactly the problem you encountered.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Repros do not need to be complex or realistic—simple, to-the-point repros are better.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>They do not need to include counter-examples of code that works, but may if it is illustrative; only example code that causes the issue is necessary.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Self-Contained.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Repros should avoid unnecessary dependencies.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>If you can reproduce the problem without third-party libraries, please do so.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>If you can reproduce the problem without any library code (<ph id="ph1">`std::out`</ph>, <ph id="ph2">`printf()`</ph> are ok), please do so.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Reducing the amount of code we have to consider as a possible contributor to the problem is enormously helpful to us.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Against the latest compiler version.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Repros should use the latest version of the toolset whenever possible.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Problems you might still encounter in older versions of the toolset have very often been fixed in newer versions.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Checked against other compilers<ept id="p1">**</ept>, if relevant.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Repros that involve portable C++ code should verify behavior against other compilers if possible.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>This step helps to determine whether your code is correct, as when MSVC disagrees with Clang and GCC, or incorrect, as when MSVC, Clang, and GCC agree that your code produces the error.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Below are instructions for generating the various kinds of repros you'll use to report different kinds of problems.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Preprocessed repos</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>A preprocessed repro is a single source file that demonstrates a problem and has been generated from the output of the C preprocessor by processing the original source file.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>This process inlines included headers to remove dependencies on additional source and header files, and also resolves macros, #ifdefs, and other preprocessor commands that could depend your local environment.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>Note that preprocessed repros are least convenient for problems that might be the result of bugs in our standard library implementation because we will often want to substitute our latest, in-progress implementation to see whether we've already fixed the problem.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>In this case, don't preprocess the repro, and if you can't reduce the problem to a single source file, package your code into a .zip file or similar, or consider using an IDE project repro (see <bpt id="p1">[</bpt>Other Repros<ept id="p1">](#other_repros)</ept> below).</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>To preprocess a source code file</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Press the Windows key on your keyboard and begin typing <ph id="ph1">`Developer Command Prompt`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Choose the <bpt id="p1">**</bpt>Developer Command Prompt<ept id="p1">**</ept> version that matches the version of Visual Studio you're using when it appears in the list of matches.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Developer Command Prompt<ept id="p1">**</ept> console window, enter the command <ph id="ph1">`cl /P argumentsfilename.cpp`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>After you have the preprocessed file (now filename.i), its a good idea to make sure that the problem still repros using the preprocessed file.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>You can use the <ph id="ph1">`/TP`</ph> command line argument to tell cl.exe to skip the preprocessor step and attempt to compile as usual.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>To confirm that the error still repros with the preprocessed file</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Press the Windows key on your keyboard and begin typing <ph id="ph1">`Developer Command Prompt`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>Choose the <bpt id="p1">**</bpt>Developer Command Prompt<ept id="p1">**</ept> version that matches the version of Visual Studio you're using when it appears in the list of matches.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Developer Command Prompt<ept id="p1">**</ept> console window, enter the command <ph id="ph1">`cl arguments /TP filename.i`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>Confirm that the problem is reproduced.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>Finally, attach this repro to your report.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Link repros</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>A link repro is a single directory containing build artifacts that collectively demonstrate a problem that occurs at link time, such as a backend crash involving Link-Time Code Generation (LTCG), or a linker crash; the included build artifacts are those needed as linker input so that the problem can be reproduced.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Link repros can be created easily by using facilities provided by the linker.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>To generate a link repro:</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Open a command prompt and enter the command <ph id="ph1">`mkdir directory`</ph> to create a directory for the link repro.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Set the link_repro environment variable to the directory you just created; enter the command <ph id="ph1">`set link_repro=directory`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>If you want to perform the build from inside Visual Studio, launch it from the command prompt by entering the command <ph id="ph1">`devenv`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>This ensures that the value of the link_repro environment variable is visible to Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Build your application, and confirm that the expected problem has occurred.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>Close Visual Studio now if you launched it in step 3.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Clear the link_repro environment variable; enter the command</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>Finally, package the repro by compressing the entire directory into a .zip file or similar and attach it to your report.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Other repros</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>If you can't reduce the problem to a single source file or preprocessed repro, and the problem does not require a link repro, we can investigate and IDE project.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Code inside the project should still be minimal, and all the guidance from this document still applies.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Create your repro as a minimal IDE project, then package it by compressing the entire directory structure into a .zip file or similar and attach it to your report.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

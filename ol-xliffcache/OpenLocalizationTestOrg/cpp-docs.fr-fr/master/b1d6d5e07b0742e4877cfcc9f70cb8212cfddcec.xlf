@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b1d6d5e07b0742e4877cfcc9f70cb8212cfddcec</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\using-dllimport-and-dllexport-in-cpp-classes.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">764c8ffa298269a1285c4ae288dfdd07cc87afb5</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bcb700cae4a7f0fb93aba3365e69ce40f6d4db45</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using dllimport and dllexport in C++ Classes | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using dllimport and dllexport in C++ Classes</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>You can declare C++ classes with the <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> or <ph id="ph1">`dllexport`</ph> attribute.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>These forms imply that the entire class is imported or exported.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Classes exported this way are called exportable classes.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The following example defines an exportable class.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>All its member functions and static data are exported:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Note that explicit use of the <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> and <ph id="ph1">`dllexport`</ph> attributes on members of an exportable class is prohibited.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>dllexport Classes</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When you declare a class <ph id="ph1">`dllexport`</ph>, all its member functions and static data members are exported.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>You must provide the definitions of all such members in the same program.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Otherwise, a linker error is generated.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The one exception to this rule applies to pure virtual functions, for which you need not provide explicit definitions.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>However, because a destructor for an abstract class is always called by the destructor for the base class, pure virtual destructors must always provide a definition.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Note that these rules are the same for nonexportable classes.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If you export data of class type or functions that return classes, be sure to export the class.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>dllimport Classes</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When you declare a class <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept>, all its member functions and static data members are imported.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Unlike the behavior of <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> and <ph id="ph1">`dllexport`</ph> on nonclass types, static data members cannot specify a definition in the same program in which a <bpt id="p2">**</bpt>dllimport<ept id="p2">**</ept> class is defined.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Inheritance and Exportable Classes</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>All base classes of an exportable class must be exportable.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If not, a compiler warning is generated.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Moreover, all accessible members that are also classes must be exportable.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This rule permits a <ph id="ph1">`dllexport`</ph> class to inherit from a <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> class, and a <bpt id="p2">**</bpt>dllimport<ept id="p2">**</ept> class to inherit from a <ph id="ph2">`dllexport`</ph> class (though the latter is not recommended).</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>As a rule, everything that is accessible to the DLL's client (according to C++ access rules) should be part of the exportable interface.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This includes private data members referenced in inline functions.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Selective Member Import/Export</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Because member functions and static data within a class implicitly have external linkage, you can declare them with the <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> or <ph id="ph1">`dllexport`</ph> attribute, unless the entire class is exported.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If the entire class is imported or exported, the explicit declaration of member functions and data as <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> or <ph id="ph1">`dllexport`</ph> is prohibited.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If you declare a static data member within a class definition as <ph id="ph1">`dllexport`</ph>, a definition must occur somewhere within the same program (as with nonclass external linkage).</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Similarly, you can declare member functions with the <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> or <ph id="ph1">`dllexport`</ph> attributes.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In this case, you must provide a <ph id="ph1">`dllexport`</ph> definition somewhere within the same program.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>It is worthwhile to note several important points regarding selective member import and export:</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Selective member import/export is best used for providing a version of the exported class interface that is more restrictive; that is, one for which you can design a DLL that exposes fewer public and private features than the language would otherwise allow.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>It is also useful for fine-tuning the exportable interface: when you know that the client, by definition, is unable to access some private data, you need not export the entire class.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If you export one virtual function in a class, you must export all of them, or at least provide versions that the client can use directly.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If you have a class in which you are using selective member import/export with virtual functions, the functions must be in the exportable interface or defined inline (visible to the client).</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If you define a member as <ph id="ph1">`dllexport`</ph> but do not include it in the class definition, a compiler error is generated.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>You must define the member in the class header.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Although the definition of class members as <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> or <ph id="ph1">`dllexport`</ph> is permitted, you cannot override the interface specified in the class definition.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If you define a member function in a place other than the body of the class definition in which you declared it, a warning is generated if the function is defined as <ph id="ph1">`dllexport`</ph> or <bpt id="p1">**</bpt>dllimport<ept id="p1">**</ept> (if this definition differs from that specified in the class declaration).</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>dllexport, dllimport</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

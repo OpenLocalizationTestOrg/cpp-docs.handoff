@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bc2ef42b8185f197e866425d56177bc8011822c6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\updating-the-text-of-a-status-bar-pane.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">81ff0730564203f8f940fe745cef72417e864fc4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2cf60fc4e19a15198fc569a56e5bc1c3479f539d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Updating the Text of a Status-Bar Pane | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Updating the Text of a Status-Bar Pane</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article explains how to change the text that appears in an MFC status bar pane.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A status bar — a window object of class <bpt id="p1">[</bpt>CStatusBar<ept id="p1">](../mfc/reference/cstatusbar-class.md)</ept> — contains several "panes."</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Each pane is a rectangular area of the status bar that you can use to display information.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For example, many applications display the status of the CAPS LOCK, NUM LOCK, and other keys in the rightmost panes.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Applications also often display informative text in the leftmost pane (pane 0), sometimes called the "message pane."</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, the default MFC status bar uses the message pane to display a string explaining the currently selected menu item or toolbar button.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The figure in <bpt id="p1">[</bpt>Status Bars<ept id="p1">](../mfc/status-bar-implementation-in-mfc.md)</ept> shows a status bar from an Application Wizard-created MFC application.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>By default, MFC does not enable a <ph id="ph1">`CStatusBar`</ph> pane when it creates the pane.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>To activate a pane, you must use the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> macro for each pane on the status bar and update the panes.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Because panes do not send <bpt id="p1">**</bpt>WM_COMMAND<ept id="p1">**</ept> messages (they aren't like toolbar buttons), you must type the code manually.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For example, suppose one pane has <ph id="ph1">`ID_INDICATOR_PAGE`</ph> as its command identifier and that it contains the current page number in a document.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following procedure describes how to create a new pane in the status bar.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To make a new pane</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Define the pane's command ID.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>View<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Resource View<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Right-click the project resource and click <bpt id="p1">**</bpt>Resource Symbols<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In the Resource Symbols dialog box, click <ph id="ph1">`New`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Type a command ID name: for example, <ph id="ph1">`ID_INDICATOR_PAGE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Specify a value for the ID, or accept the value suggested by the Resource Symbols dialog box.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For example, for <ph id="ph1">`ID_INDICATOR_PAGE`</ph>, accept the default value.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Close the Resource Symbols dialog box.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Define a default string to display in the pane.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>With Resource View open, double-click <bpt id="p1">**</bpt>String Table<ept id="p1">**</ept> in the window that lists resource types for your application.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>With the <bpt id="p1">**</bpt>String Table<ept id="p1">**</ept> editor open, choose <bpt id="p2">**</bpt>New String<ept id="p2">**</ept> from the <bpt id="p3">**</bpt>Insert<ept id="p3">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In the String Properties window, select your pane's command ID (for example, <ph id="ph1">`ID_INDICATOR_PAGE`</ph>) and type a default string value, such as "Page   ".</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Close the string editor.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>(You need a default string to avoid a compiler error.)</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Add the pane to the <bpt id="p1">**</bpt>indicators<ept id="p1">**</ept> array.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In file MAINFRM.CPP, locate the <bpt id="p1">**</bpt>indicators<ept id="p1">**</ept> array.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This array lists command IDs for all of the status bar's indicators, in order from left to right.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>At the appropriate point in the array, enter your pane's command ID, as shown here for <ph id="ph1">`ID_INDICATOR_PAGE`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>NVC_MFCDocView#10</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The recommended way to display text in a pane is to call the <bpt id="p1">**</bpt>SetText<ept id="p1">**</ept> member function of class <ph id="ph1">`CCmdUI`</ph> in an update handler function for the pane.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For example, you might want to set up an integer variable <ph id="ph1">`m_nPage`</ph> that contains the current page number and use <bpt id="p1">**</bpt>SetText<ept id="p1">**</ept> to set the pane's text to a string version of that number.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>SetText<ept id="p1">**</ept> approach is recommended.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>It is possible to perform this task at a slightly lower level by calling the <ph id="ph1">`CStatusBar`</ph> member function <ph id="ph2">`SetPaneText`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Even so, you still need an update handler.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Without such a handler for the pane, MFC automatically disables the pane, erasing its content.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The following procedure shows how to use an update handler function to display text in a pane.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>To make a pane display text</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Add a command update handler for the command.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Manually add a prototype for the handler, as shown here for <ph id="ph1">`ID_INDICATOR_PAGE`</ph> (in MAINFRM.H):</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>NVC_MFCDocView#11</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In the appropriate .CPP file, add the handler's definition, as shown here for <ph id="ph1">`ID_INDICATOR_PAGE`</ph> (in MAINFRM.CPP):</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>NVC_MFCDocView#12</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The last three lines of this handler are the code that displays your text.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>In the appropriate message map, add the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> macro, as shown here for <ph id="ph2">`ID_INDICATOR_PAGE`</ph> (in MAINFRM.CPP):</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>NVC_MFCDocView#13</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Once you define the value of the <ph id="ph1">`m_nPage`</ph> member variable (of class <ph id="ph2">`CMainFrame`</ph>), this technique causes the page number to appear in the pane during idle processing in the same manner that the application updates other indicators.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`m_nPage`</ph> changes, the display changes during the next idle loop.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Updating user-interface objects (how to update toolbar buttons and menu items as program conditions change)</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Status Bar Implementation in MFC</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>CStatusBar Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

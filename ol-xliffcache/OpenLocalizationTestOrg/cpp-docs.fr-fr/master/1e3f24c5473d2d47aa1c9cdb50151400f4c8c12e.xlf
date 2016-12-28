@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1e3f24c5473d2d47aa1c9cdb50151400f4c8c12e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\status87-statusfp-statusfp2.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b568404a7d5e0d192cab503bbcda7f4e33c09da9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bbc5d3b7d344ff2ae434627473e856540b6b6322</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_status87, _statusfp, _statusfp2 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_status87, _statusfp, _statusfp2</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Gets the floating-point status word.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This address is filled with the status word for the x87 floating-point unit.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This address is filled with the status word for the SSE2 floating-point unit.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For <ph id="ph1">`_status87`</ph> and <ph id="ph2">`_statusfp`</ph>, the bits in the value that's returned indicate the floating-point status.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>See the FLOAT.H include file for a definition of the bits that are returned by <ph id="ph1">`_statusfp`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Many math library functions modify the floating-point status word, with unpredictable results.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Optimization can reorder, combine, and eliminate floating-point operations around calls to <ph id="ph1">`_status87`</ph>, <ph id="ph2">`_statusfp`</ph>, and related functions.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>/Od (Disable (Debug))<ept id="p1">](../../build/reference/od-disable-debug.md)</ept> compiler option or the <bpt id="p2">[</bpt>fenv_access<ept id="p2">](../../preprocessor/fenv-access.md)</ept> pragma directive to prevent optimizations that reorder floating-point operations.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Return values from <ph id="ph1">`_clearfp`</ph> and <ph id="ph2">`_statusfp`</ph>, and also the return parameters of <ph id="ph3">`_statusfp2`</ph>, are more reliable if fewer floating-point operations are performed between known states of the floating-point status word.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_statusfp`</ph> function gets the floating-point status word.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The status word is a combination of the floating-point processor status and other conditions detected by the floating-point exception handler—for example, floating-point stack overflow and underflow.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Unmasked exceptions are checked for before the contents of the status word are returned.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This means that the caller is informed of pending exceptions.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>On x86 platforms, <ph id="ph1">`_statusfp`</ph> returns a combination of the x87 and SSE2 floating-point status.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>On x64 platforms, the status that's returned is based on the SSE’s MXCSR status.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>On ARM platforms, <ph id="ph1">`_statusfp`</ph> returns status from the FPSCR register.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>is a platform-independent, portable version of <ph id="ph1">`_status87`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>It is identical to <ph id="ph1">`_status87`</ph> on Intel (x86) platforms and is also supported by the x64 and ARM platforms.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>To ensure that your floating-point code is portable to all architectures, use <ph id="ph1">`_statusfp`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If you are only targeting x86 platforms, you can use either <ph id="ph1">`_status87`</ph> or <ph id="ph2">`_statusfp`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>We recommend <ph id="ph1">`_statusfp2`</ph> for chips (such as the Pentium IV) that have both an x87 and an SSE2 floating-point processor.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For <ph id="ph1">`_statusfp2`</ph>, the addresses are filled by using the floating-point status word for both the x87 or the SSE2 floating-point processor.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For a chip that supports x87 and SSE2 floating-point processors, EM_AMBIGUOUS is set to 1 if <ph id="ph1">`_statusfp`</ph> or <ph id="ph2">`_controlfp`</ph> is used and the action was ambiguous because it could refer to the x87 or the SSE2 floating-point status word.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_statusfp2`</ph> function is only supported on x86 platforms.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>These functions are not useful for <bpt id="p1">[</bpt>/clr (Common Language Runtime Compilation)<ept id="p1">](../../build/reference/clr-common-language-runtime-compilation.md)</ept> or <ph id="ph1">`/clr:pure`</ph> compilation because the common language runtime (CLR) only supports the default floating-point precision.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`_statusfp`</ph>,</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>float.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Floating-Point Support</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>_clear87, _clearfp</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>_control87, _controlfp, <ph id="ph1">\_</ph>_control87_2</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

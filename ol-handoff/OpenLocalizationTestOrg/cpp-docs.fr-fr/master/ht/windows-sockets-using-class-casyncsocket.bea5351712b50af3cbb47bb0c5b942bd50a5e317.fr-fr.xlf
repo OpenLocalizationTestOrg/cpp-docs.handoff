@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">229b518d55db9fb07d5486bd33c81b181cd1edf3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\windows-sockets-using-class-casyncsocket.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7763d18a5f66a4a0d0815f1ce4873626b3c48d53</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5f7449023435a9c67b91d7a66cc627e97cd7a3b2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Using Class CAsyncSocket | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Using Class CAsyncSocket</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article explains how to use class <bpt id="p1">[</bpt>CAsyncSocket<ept id="p1">](../mfc/reference/casyncsocket-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Be aware that this class encapsulates the Windows Sockets API at a very low level.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>is for use by programmers who know network communications in detail but want the convenience of callbacks for notification of network events.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Based on this assumption, this article provides only basic instruction.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You should probably consider using <ph id="ph1">`CAsyncSocket`</ph> if you want Windows Sockets' ease of dealing with multiple network protocols in an MFC application but do not want to sacrifice flexibility.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You might also feel that you can get better efficiency by programming the communications more directly yourself than you could using the more general alternative model of class <ph id="ph1">`CSocket`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>is documented in the <bpt id="p1">*</bpt>MFC Reference<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Visual C++ also supplies the Windows Sockets specification, located in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The details are left to you.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Visual C++ does not supply a sample application for <ph id="ph1">`CAsyncSocket`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If you are not highly knowledgeable about network communications and want a simple solution, use class <bpt id="p1">[</bpt>CSocket<ept id="p1">](../mfc/reference/csocket-class.md)</ept> with a <ph id="ph1">`CArchive`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Windows Sockets: Using Sockets with Archives<ept id="p1">](../mfc/windows-sockets-using-sockets-with-archives.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This article covers:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Creating and using a <ph id="ph1">`CAsyncSocket`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Your responsibilities with CAsyncSocket<ept id="p1">](#_core_your_responsibilities_with_casyncsocket)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Creating and Using a CAsyncSocket Object</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>To use CAsyncSocket</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Construct a <bpt id="p1">[</bpt>CAsyncSocket<ept id="p1">](../mfc/reference/casyncsocket-class.md)</ept> object and use the object to create the underlying <bpt id="p2">**</bpt>SOCKET<ept id="p2">**</ept> handle.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Creation of a socket follows the MFC pattern of two-stage construction.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSimpleSocket#3</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSimpleSocket#4</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The first constructor above creates a <ph id="ph1">`CAsyncSocket`</ph> object on the stack.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The second constructor creates a <ph id="ph1">`CAsyncSocket`</ph> on the heap.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The first <bpt id="p1">[</bpt>Create<ept id="p1">](../mfc/reference/casyncsocket-class.md#casyncsocket__create)</ept> call above uses the default parameters to create a stream socket.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The second <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> call creates a datagram socket with a specified port and address.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>(You can use either <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> version with either construction method.)</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The parameters to <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> are:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A "port": a short integer.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For a server socket, you must specify a port.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For a client socket, you typically accept the default value for this parameter, which lets Windows Sockets select a port.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>A socket type: <bpt id="p1">**</bpt>SOCK_STREAM<ept id="p1">**</ept> (the default) or <bpt id="p2">**</bpt>SOCK_DGRAM<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>A socket "address," such as "ftp.microsoft.com" or "128.56.22.8".</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This is your Internet Protocol (IP) address on the network.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You will probably always rely on the default value for this parameter.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The terms "port" and "socket address" are explained in <bpt id="p1">[</bpt>Windows Sockets: Ports and Socket Addresses<ept id="p1">](../mfc/windows-sockets-ports-and-socket-addresses.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If the socket is a client, connect the socket object to a server socket, using <bpt id="p1">[</bpt>CAsyncSocket::Connect<ept id="p1">](../mfc/reference/casyncsocket-class.md#casyncsocket__connect)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If the socket is a server, set the socket to begin listening (with <bpt id="p1">[</bpt>CAsyncSocket::Listen<ept id="p1">](../mfc/reference/casyncsocket-class.md#casyncsocket__listen)</ept>) for connect attempts from a client.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Upon receiving a connection request, accept it with <bpt id="p1">[</bpt>CAsyncSocket::Accept<ept id="p1">](../mfc/reference/casyncsocket-class.md#casyncsocket__accept)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>After accepting a connection, you can perform such tasks as validating passwords.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>Accept<ept id="p1">**</ept> member function takes a reference to a new, empty <ph id="ph1">`CSocket`</ph> object as its parameter.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>You must construct this object before you call <bpt id="p1">**</bpt>Accept<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If this socket object goes out of scope, the connection closes.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Do not call <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> for this new socket object.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>For an example, see the article <bpt id="p1">[</bpt>Windows Sockets: Sequence of Operations<ept id="p1">](../mfc/windows-sockets-sequence-of-operations.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Carry out communications with other sockets by calling the <ph id="ph1">`CAsyncSocket`</ph> object's member functions that encapsulate the Windows Sockets API functions.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See the Windows Sockets specification and class <bpt id="p1">[</bpt>CAsyncSocket<ept id="p1">](../mfc/reference/casyncsocket-class.md)</ept> in the <bpt id="p2">*</bpt>MFC Reference<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Destroy the <ph id="ph1">`CAsyncSocket`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>If you created the socket object on the stack, its destructor is called when the containing function goes out of scope.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>If you created the socket object on the heap, using the <bpt id="p1">**</bpt>new<ept id="p1">**</ept> operator, you are responsible for using the <bpt id="p2">**</bpt>delete<ept id="p2">**</ept> operator to destroy the object.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The destructor calls the object's <bpt id="p1">[</bpt>Close<ept id="p1">](../mfc/reference/casyncsocket-class.md#casyncsocket__close)</ept> member function before destroying the object.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For an example of this sequence in code (actually for a <ph id="ph1">`CSocket`</ph> object), see <bpt id="p1">[</bpt>Windows Sockets: Sequence of Operations<ept id="p1">](../mfc/windows-sockets-sequence-of-operations.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Your Responsibilities with CAsyncSocket</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>When you create an object of class <bpt id="p1">[</bpt>CAsyncSocket<ept id="p1">](../mfc/reference/casyncsocket-class.md)</ept>, the object encapsulates a Windows <bpt id="p2">**</bpt>SOCKET<ept id="p2">**</ept> handle and supplies operations on that handle.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>When you use <ph id="ph1">`CAsyncSocket`</ph>, you must deal with all the issues you might face if using the API directly.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>"Blocking" scenarios.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Byte order differences between the sending and receiving machines.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Converting between Unicode and multibyte character set (MBCS) strings.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>For definitions of these terms and additional information, see <bpt id="p1">[</bpt>Windows Sockets: Blocking<ept id="p1">](../mfc/windows-sockets-blocking.md)</ept>, <bpt id="p2">[</bpt>Windows Sockets: Byte Ordering<ept id="p2">](../mfc/windows-sockets-byte-ordering.md)</ept>, <bpt id="p3">[</bpt>Windows Sockets: Converting Strings<ept id="p3">](../mfc/windows-sockets-converting-strings.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Despite these issues, class <bpt id="p1">**</bpt>CAsycnSocket<ept id="p1">**</ept> may be the right choice for you if your application requires all the flexibility and control you can get.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>If not, you should consider using class <ph id="ph1">`CSocket`</ph> instead.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>hides a lot of detail from you: it pumps Windows messages during blocking calls and gives you access to <ph id="ph1">`CArchive`</ph>, which manages byte order differences and string conversion for you.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>For more information, see:</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Background</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Stream Sockets</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Datagram Sockets</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Windows Sockets in MFC</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

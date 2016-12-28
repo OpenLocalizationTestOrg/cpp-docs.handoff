@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">67581c3d2d5910a9a4dc4c98810f9e2d4f1e4443</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\how-to-migrate-to-clr-safe-cpp-cli.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bef2430954a1780810dbadca1e97e926aa11cdce</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">92d9cd848bf8684dbc81e09a7033ab395ed27a0d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Migrate to -clr:safe (C++-CLI) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Migrate to /clr:safe (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Visual C++ can generate verifiable components by using <bpt id="p1">**</bpt>/clr:safe<ept id="p1">**</ept>, which causes the compiler to generate errors for each non-verifiable code construct.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The following issues generate verifiability errors:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Native types.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Even if it isn't used, the declaration of native classes, structures, pointers, or arrays will prevent compilation.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Global variables</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Function calls into any unmanaged library, including common language runtime function calls</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A verifiable function cannot contain a <bpt id="p1">[</bpt>static_cast Operator<ept id="p1">](../cpp/static-cast-operator.md)</ept> for down-casting.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>static_cast Operator<ept id="p1">](../cpp/static-cast-operator.md)</ept> can be used for casting between primitive types, but for down-casting, <bpt id="p2">[</bpt>safe_cast<ept id="p2">](../windows/safe-cast-cpp-component-extensions.md)</ept> or a C-Style cast (which is implemented as a <bpt id="p3">[</bpt>safe_cast<ept id="p3">](../windows/safe-cast-cpp-component-extensions.md)</ept>) must be used.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A verifiable function cannot contain a <bpt id="p1">[</bpt>reinterpret_cast Operator<ept id="p1">](../cpp/reinterpret-cast-operator.md)</ept> (or any C-style cast equivalent).</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A verifiable function cannot perform arithmetic on an <bpt id="p1">[</bpt>interior_ptr (C++/CLI)<ept id="p1">](../windows/interior-ptr-cpp-cli.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>It may only assign to it and dereference it.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A verifiable function can only throw or catch pointers to reference types, so value types must be boxed before throwing.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A verifiable function can only call verifiable functions (such that calls to the common language runtime are not allowed, include <ph id="ph1">`AtEntry`/`AtExit`</ph>, and so global constructors are disallowed).</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A verifiable class cannot use &lt;xref:System.Runtime.InteropServices.LayoutKind&gt;.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If building an EXE, a main function cannot declare any parameters, so &lt;xref:System.Environment.GetCommandLineArgs%2A&gt; must be used to retrieve command-line arguments.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Making a non-virtual call to a virtual function.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Also, the following keywords cannot be used in verifiable code:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>unmanaged<ept id="p1">](../preprocessor/managed-unmanaged.md)</ept> and <bpt id="p2">[</bpt>pack<ept id="p2">](../preprocessor/pack.md)</ept> pragmas</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>naked<ept id="p1">](../cpp/naked-cpp.md)</ept> and <bpt id="p2">[</bpt>align<ept id="p2">](../cpp/align-cpp.md)</ept> <bpt id="p3">[</bpt>__declspec<ept id="p3">](../cpp/declspec.md)</ept> modifiers</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>__asm</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>__based</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>__try<ept id="p1">](../cpp/try-except-statement.md)</ept> and</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Pure and Verifiable Code (C++/CLI)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

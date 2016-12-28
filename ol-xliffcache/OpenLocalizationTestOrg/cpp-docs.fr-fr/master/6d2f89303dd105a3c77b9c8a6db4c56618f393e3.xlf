@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6d2f89303dd105a3c77b9c8a6db4c56618f393e3</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\reference\currentscheduler-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8fe97ddc13e72effeaa25e1b9092ba83b56d4f03</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ce4800f1194efc3a7c0efc15de5e77728c1eb4e5</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Represents an abstraction for the current scheduler associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Members</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Public Methods</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::Create Method</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Creates a new scheduler whose behavior is described by the <ph id="ph1">`_Policy`</ph> parameter and attaches it to the calling context.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The newly created scheduler will become the current scheduler for the calling context.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::CreateScheduleGroup Method</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Overloaded.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Creates a new schedule group within the scheduler associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The version that takes the parameter <ph id="ph1">`_Placement`</ph> causes tasks within the newly created schedule group to be biased towards executing at the location specified by that parameter.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::Detach Method</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Detaches the current scheduler from the calling context and restores the previously attached scheduler as the current scheduler, if one exists.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>After this method returns, the calling context is then managed by the scheduler that was previously attached to the context using either the <ph id="ph1">`CurrentScheduler::Create`</ph> or <ph id="ph2">`Scheduler::Attach`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::Get Method</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Returns a pointer to the scheduler associated with the calling context, also referred to as the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::GetNumberOfVirtualProcessors Method</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Returns the current number of virtual processors for the scheduler associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::GetPolicy Method</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Returns a copy of the policy that the current scheduler was created with.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::Id Method</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Returns a unique identifier for the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::IsAvailableLocation Method</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Determines whether a given location is available on the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::RegisterShutdownEvent Method</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Causes the Windows event handle passed in the <ph id="ph1">`_ShutdownEvent`</ph> parameter to be signaled when the scheduler associated with the current context shuts down and destroys itself.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>At the time the event is signaled, all work that had been scheduled to the scheduler is complete.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Multiple shutdown events can be registered through this method.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::ScheduleTask Method</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Overloaded.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Schedules a light-weight task within the scheduler associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The light-weight task will be placed in a schedule group determined by the runtime.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The version that takes the parameter <ph id="ph1">`_Placement`</ph> causes the task to be biased towards executing at the specified location.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If there is no scheduler (see <bpt id="p1">[</bpt>Scheduler<ept id="p1">](scheduler-class.md)</ept>) associated with the calling context, many methods within the <ph id="ph1">`CurrentScheduler`</ph> class will result in attachment of the process' default scheduler.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This may also imply that the process' default scheduler is created during such a call.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Inheritance Hierarchy</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> concrt.h</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> concurrency</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::Create Method</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Creates a new scheduler whose behavior is described by the <ph id="ph1">`_Policy`</ph> parameter and attaches it to the calling context.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The newly created scheduler will become the current scheduler for the calling context.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The scheduler policy that describes the behavior of the newly created scheduler.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The attachment of the scheduler to the calling context implicitly places a reference count on the scheduler.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>After a scheduler is created with the <ph id="ph1">`Create`</ph> method, you must call the <bpt id="p1">[</bpt>CurrentScheduler::Detach<ept id="p1">](#detach)</ept> method at some point in the future in order to allow the scheduler to shut down.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>If this method is called from a context that is already attached to a different scheduler, the existing scheduler is remembered as the previous scheduler, and the newly created scheduler becomes the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>When you call the <ph id="ph1">`CurrentScheduler::Detach`</ph> method at a later point, the previous scheduler is restored as the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>This method can throw a variety of exceptions, including <bpt id="p1">[</bpt>scheduler_resource_allocation_error<ept id="p1">](scheduler-resource-allocation-error-class.md)</ept> and <bpt id="p2">[</bpt>invalid_scheduler_policy_value<ept id="p2">](invalid-scheduler-policy-value-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::CreateScheduleGroup Method</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Creates a new schedule group within the scheduler associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>The version that takes the parameter <ph id="ph1">`_Placement`</ph> causes tasks within the newly created schedule group to be biased towards executing at the location specified by that parameter.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>A reference to a location where the tasks within the schedule group will be biased towards executing at.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>A pointer to the newly created schedule group.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>This <ph id="ph1">`ScheduleGroup`</ph> object has an initial reference count placed on it.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>This method will result in the process' default scheduler being created and/or attached to the calling context if there is no scheduler currently associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>You must invoke the <bpt id="p1">[</bpt>Release<ept id="p1">](schedulegroup-class.md#release)</ept> method on a schedule group when you are done scheduling work to it.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The scheduler will destroy the schedule group when all work queued to it has completed.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Note that if you explicitly created this scheduler, you must release all references to schedule groups within it, before you release your reference on the scheduler, by detaching the current context from it.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::Detach Method</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Detaches the current scheduler from the calling context and restores the previously attached scheduler as the current scheduler, if one exists.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>After this method returns, the calling context is then managed by the scheduler that was previously attached to the context using either the <ph id="ph1">`CurrentScheduler::Create`</ph> or <ph id="ph2">`Scheduler::Attach`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Detach`</ph> method implicitly removes a reference count from the scheduler.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>If there is no scheduler attached to the calling context, calling this method will result in a <bpt id="p1">[</bpt>scheduler_not_attached<ept id="p1">](scheduler-not-attached-class.md)</ept> exception being thrown.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Calling this method from a context that is internal to and managed by a scheduler, or a context that was attached using a method other than the <bpt id="p1">[</bpt>Scheduler::Attach<ept id="p1">](scheduler-class.md#attach)</ept> or <bpt id="p2">[</bpt>CurrentScheduler::Create<ept id="p2">](#create)</ept> methods, will result in an <bpt id="p3">[</bpt>improper_scheduler_detach<ept id="p3">](improper-scheduler-detach-class.md)</ept> exception being thrown.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::Get Method</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Returns a pointer to the scheduler associated with the calling context, also referred to as the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>A pointer to the scheduler associated with the calling context (the current scheduler).</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>This method will result in the process' default scheduler being created and/or attached to the calling context if there is no scheduler currently associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>No additional reference is placed on the <ph id="ph1">`Scheduler`</ph> object returned by this method.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::GetNumberOfVirtualProcessors Method</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Returns the current number of virtual processors for the scheduler associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>If a scheduler is associated with the calling context, the current number of virtual processors for that scheduler; otherwise, the value <ph id="ph1">`-1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>This method will not result in scheduler attachment if the calling context is not already associated with a scheduler.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The return value from this method is an instantaneous sampling of the number of virtual processors for the scheduler associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>This value can be stale the moment it is returned.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::GetPolicy Method</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Returns a copy of the policy that the current scheduler was created with.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>A copy of the policy that that the current scheduler was created with.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>This method will result in the process' default scheduler being created and/or attached to the calling context if there is no scheduler currently associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::Id Method</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Returns a unique identifier for the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>If a scheduler is associated with the calling context, a unique identifier for that scheduler; otherwise, the value <ph id="ph1">`-1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>This method will not result in scheduler attachment if the calling context is not already associated with a scheduler.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::IsAvailableLocation Method</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Determines whether a given location is available on the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>A reference to the location to query the current scheduler about.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>An indication of whether or not the location specified by the <ph id="ph1">`_Placement`</ph> argument is available on the current scheduler.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>This method will not result in scheduler attachment if the calling context is not already associated with a scheduler.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Note that the return value is an instantaneous sampling of whether the given location is available.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>In the presence of multiple schedulers, dynamic resource management can add or take away resources from schedulers at any point.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>Should this happen, the given location can change availability.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::RegisterShutdownEvent Method</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Causes the Windows event handle passed in the <ph id="ph1">`_ShutdownEvent`</ph> parameter to be signaled when the scheduler associated with the current context shuts down and destroys itself.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>At the time the event is signaled, all work that had been scheduled to the scheduler is complete.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Multiple shutdown events can be registered through this method.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>A handle to a Windows event object which will be signaled by the runtime when the scheduler associated with the current context shuts down and destroys itself.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>If there is no scheduler attached to the calling context, calling this method will result in a <bpt id="p1">[</bpt>scheduler_not_attached<ept id="p1">](scheduler-not-attached-class.md)</ept> exception being thrown.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>CurrentScheduler::ScheduleTask Method</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Schedules a light-weight task within the scheduler associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The light-weight task will be placed in a schedule group determined by the runtime.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>The version that takes the parameter <ph id="ph1">`_Placement`</ph> causes the task to be biased towards executing at the specified location.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>A pointer to the function to execute to perform the body of the light-weight task.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>A void pointer to the data that will be passed as a parameter to the body of the task.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>A reference to a location where the light-weight task will be biased towards executing at.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>This method will result in the process' default scheduler being created and/or attached to the calling context if there is no scheduler currently associated with the calling context.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>concurrency Namespace</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Scheduler Class</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>PolicyElementKey Enumeration</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Task Scheduler</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
