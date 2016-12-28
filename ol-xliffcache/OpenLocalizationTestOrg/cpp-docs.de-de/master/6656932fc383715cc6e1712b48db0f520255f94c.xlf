@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6656932fc383715cc6e1712b48db0f520255f94c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\using-multiple-accessors-on-a-rowset.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">48ce085eeab616aef63f1615d8767546362a4f21</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e9462d452c1b29bd3fef3d427ac34d0fe5dce8f9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using Multiple Accessors on a Rowset | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using Multiple Accessors on a Rowset</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>There are three basic scenarios in which you need to use multiple accessors:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Multiple read/write rowsets.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In this scenario, you have a table with a primary key.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You want to be able to read all the columns in the row, including the primary key.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You also want to be able to write data to all the columns except the primary key (because you cannot write to the primary key column).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In this case, you set up two accessors:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Accessor 0 contains all columns.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Accessor 1 contains all columns except the primary key.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Performance.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In this scenario, one or more columns contain a large amount of data, for example, graphics, sound, or video files.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Every time you move to a row, you probably do not want to retrieve the column with the large data file, because doing so would slow down your application's performance.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You can set up separate accessors in which the first accessor contains all columns except the one with large data, and it retrieves data from these columns automatically; this is the auto accessor.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The second accessor retrieves only the column containing large data, but it does not retrieve data from this column automatically.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You can have other methods update or fetch the large data on demand.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Accessor 0 is an automatic accessor; it retrieves all the columns except the one with large data.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Accessor 1 is not an automatic accessor; it retrieves the column with large data.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Use the auto argument to specify whether the accessor is an auto accessor.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Multiple ISequentialStream columns.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>In this scenario, you have more than one column containing <ph id="ph1">`ISequentialStream`</ph> data.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>However, each accessor is limited to one <ph id="ph1">`ISequentialStream`</ph> data stream.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To solve this problem, set up several accessors, each containing one <ph id="ph1">`ISequentialStream`</ph> pointer.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You normally create accessors using the <bpt id="p1">[</bpt>BEGIN_ACCESSOR<ept id="p1">](../../data/oledb/begin-accessor.md)</ept> and <bpt id="p2">[</bpt>END_ACCESSOR<ept id="p2">](../../data/oledb/end-accessor.md)</ept> macros.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can also use the <bpt id="p1">[</bpt>db_accessor<ept id="p1">](../../windows/db-accessor.md)</ept> attribute.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>(Accessors are described further in <bpt id="p1">[</bpt>User Records<ept id="p1">](../../data/oledb/user-records.md)</ept>.) The macros or the attribute specify whether an accessor is an automatic or a non-automatic accessor:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In an automatic accessor, move methods such as <bpt id="p1">**</bpt>MoveFirst<ept id="p1">**</ept>, <ph id="ph1">`MoveLast`</ph>, <ph id="ph2">`MoveNext`</ph>, and <ph id="ph3">`MovePrev`</ph> retrieve data for all specified columns automatically.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Accessor 0 should be the automatic accessor.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In a non-automatic accessor, the retrieval does not occur until you explicitly call a method such as <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Insert<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Fetch<ept id="p3">**</ept>, or <bpt id="p4">**</bpt>Delete<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In the scenarios described above, you might not want to retrieve all the columns on every move.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You can place one or more columns in a separate accessor and make that a non-automatic accessor, as shown below.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The following example uses multiple accessors to read and write to the jobs table of the SQL Server pubs database using multiple accessors.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This is the most common use of multiple accessors; see the "multiple read/write rowsets" scenario above.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The user record class is as follows.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>It sets up two accessors: accessor 0 contains only the primary key column (ID) and accessor 1 contains other columns.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The main code is as follows.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Calling <ph id="ph1">`MoveNext`</ph> automatically retrieves data from the primary key column ID using accessor 0.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Note how the <bpt id="p1">**</bpt>Insert<ept id="p1">**</ept> method near the end uses accessor 1 to avoid writing to the primary key column.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Using Accessors</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>User Records</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

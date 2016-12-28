@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">21b8bf7f2838c0c81cf9f5a6adc201da315b033b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\windows\how-to-handle-events-using-wrl.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">09edea1ff89113bed9d2b8ecc3b78e2dffac037e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">64e705eb379483675534878d49647b1a4d19130c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Handle Events Using WRL | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Handle Events Using WRL</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document shows how to use the <ph id="ph1">[!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)]</ph> (<ph id="ph2">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph>) to subscribe to and handle the events of a <ph id="ph3">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For a more basic example that creates an instance of that component and retrieves a property value, see <bpt id="p1">[</bpt>How to: Activate and Use a Windows Runtime Component<ept id="p1">](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Subscribing to and Handling Events</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The following steps start an <ph id="ph1">`ABI::Windows::System::Threading::IDeviceWatcher`</ph> object and use event handlers to monitor progress.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IDeviceWatcher`</ph> interface enables you to enumerate devices asynchronously, or in the background, and receive notification when devices are added, removed, or changed.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>Callback<ept id="p1">](../windows/callback-function-windows-runtime-cpp-template-library.md)</ept> function is an important part of this example because it enables it to specify event handlers that process the results of the background operation.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The complete example follows.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Although you typically use the <ph id="ph1">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph> in a <ph id="ph2">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app, this example uses a console app for illustration.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Functions such as <ph id="ph1">`wprintf_s`</ph> are not available from a <ph id="ph2">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For more information about the types and functions that you can use in a <ph id="ph1">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app, see <bpt id="p1">[</bpt>CRT functions not supported with /ZW<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)</ept> and <bpt id="p2">[</bpt>Win32 and COM for Windows Store apps<ept id="p2">](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Include (<ph id="ph1">`#include`</ph>) any required <ph id="ph2">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph>, <ph id="ph3">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph>, or standard C++ library headers.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#2</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Windows.Devices.Enumeration.h declares the types that are required to enumerate devices.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>We recommend that you utilize the <ph id="ph1">`using namespace`</ph> directive in your .cpp file to make the code more readable.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Declare the local variables for the app.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This example holds count of the number of enumerated devices and registration tokens that enable it to later unsubscribe from events.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#7</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Initialize the <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#3</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Create an <bpt id="p1">[</bpt>Event<ept id="p1">](../windows/event-class-windows-runtime-cpp-template-library.md)</ept> object that synchronizes the completion of the enumeration process to the main app.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#4</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This event is for demonstration only as part of a console app.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This example uses the event to ensure that an async operation completes before the app exits.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In most apps, you typically don’t wait for async operations to complete.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Create an activation factory for the <ph id="ph1">`IDeviceWatcher`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#5</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> uses fully-qualified names to identify types.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`RuntimeClass_Windows_Devices_Enumeration_DeviceInformation`</ph> parameter is a string that's provided by the <ph id="ph2">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> and contains the required runtime class name.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Create the <ph id="ph1">`IDeviceWatcher`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#6</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`Callback`</ph> function to subscribe to the <ph id="ph2">`Added`</ph>, <ph id="ph3">`EnumerationCompleted`</ph>, and <ph id="ph4">`Stopped`</ph> events.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#8</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Added`</ph> event handler increments the count of enumerated devices.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>It stops the enumeration process after ten devices are found.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Stopped`</ph> event handler removes the event handlers and sets the completion event.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`EnumerationCompleted`</ph> event handler stops the enumeration process.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>We handle this event in case there are fewer than ten devices.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This example uses a lambda expression to define the callbacks.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>You can also use function objects (functors), function pointers, or <bpt id="p1">[</bpt>std::function<ept id="p1">](../standard-library/function-class.md)</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For more information about lambda expressions, see <bpt id="p1">[</bpt>Lambda Expressions<ept id="p1">](../cpp/lambda-expressions-in-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Start the enumeration process.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#9</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Wait for the enumeration process to complete and then print a message.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>All <ph id="ph1">`ComPtr`</ph> and RAII objects leave scope and are released automatically.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#10</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Here is the complete example:</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>wrl-consume-event#1</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>To compile the code, copy it and then paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`wrl-consume-events.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>cl.exe wrl-consume-events.cpp runtimeobject.lib</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Windows Runtime C++ Template Library (WRL)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

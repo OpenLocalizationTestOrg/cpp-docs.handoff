@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c91612b04b89a9309107993d7a5a336d6adef3ef</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\serialization-making-a-serializable-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ad684fe27176d6a9d16428e0c0d263f821d6f4e4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">affdc135594ae9f403b639976fd78c3ed5175462</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Serialization: Making a Serializable Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Serialization: Making a Serializable Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Five main steps are required to make a class serializable.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>They are listed below and explained in the following sections:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Deriving your class from CObject<ept id="p1">](#_core_deriving_your_class_from_cobject)</ept> (or from some class derived from <ph id="ph1">`CObject`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Overriding the Serialize member function<ept id="p1">](#_core_overriding_the_serialize_member_function)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Using the DECLARE_SERIAL macro<ept id="p1">](#_core_using_the_declare_serial_macro)</ept> in the class declaration.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Defining a constructor that takes no arguments<ept id="p1">](#_core_defining_a_constructor_with_no_arguments)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Using the IMPLEMENT_SERIAL macro in the implementation file<ept id="p1">](#_core_using_the_implement_serial_macro_in_the_implementation_file)</ept> for your class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If you call <ph id="ph1">`Serialize`</ph> directly rather than through the &gt;&gt; and &lt;&lt; operators of <bpt id="p1">[</bpt>CArchive<ept id="p1">](../mfc/reference/carchive-class.md)</ept>, the last three steps are not required for serialization.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Deriving Your Class from CObject</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The basic serialization protocol and functionality are defined in the <ph id="ph1">`CObject`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>By deriving your class from <ph id="ph1">`CObject`</ph> (or from a class derived from <ph id="ph2">`CObject`</ph>), as shown in the following declaration of class <ph id="ph3">`CPerson`</ph>, you gain access to the serialization protocol and functionality of <ph id="ph4">`CObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Overriding the Serialize Member Function</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Serialize`</ph> member function, which is defined in the <ph id="ph2">`CObject`</ph> class, is responsible for actually serializing the data necessary to capture an object's current state.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Serialize`</ph> function has a <ph id="ph2">`CArchive`</ph> argument that it uses to read and write the object data.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>CArchive<ept id="p1">](../mfc/reference/carchive-class.md)</ept> object has a member function, <ph id="ph1">`IsStoring`</ph>, which indicates whether <ph id="ph2">`Serialize`</ph> is storing (writing data) or loading (reading data).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Using the results of <ph id="ph1">`IsStoring`</ph> as a guide, you either insert your object's data in the <ph id="ph2">`CArchive`</ph> object with the insertion operator (<bpt id="p1">**</bpt><ph id="ph3">&lt;\&lt;</ph><ept id="p1">**</ept>) or extract data with the extraction operator (<bpt id="p2">**</bpt><ph id="ph4">&gt;&gt;</ph><ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Consider a class that is derived from <ph id="ph1">`CObject`</ph> and has two new member variables, of types <ph id="ph2">`CString`</ph> and <bpt id="p1">**</bpt>WORD<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The following class declaration fragment shows the new member variables and the declaration for the overridden <ph id="ph1">`Serialize`</ph> member function:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSerialization#1</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To override the Serialize member function</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Call your base class version of <ph id="ph1">`Serialize`</ph> to make sure that the inherited portion of the object is serialized.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Insert or extract the member variables specific to your class.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The insertion and extraction operators interact with the archive class to read and write the data.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The following example shows how to implement <ph id="ph1">`Serialize`</ph> for the <ph id="ph2">`CPerson`</ph> class declared above:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSerialization#2</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>You can also use the <bpt id="p1">[</bpt>CArchive::Read<ept id="p1">](../mfc/reference/carchive-class.md#carchive__read)</ept> and <bpt id="p2">[</bpt>CArchive::Write<ept id="p2">](../mfc/reference/carchive-class.md#carchive__write)</ept> member functions to read and write large amounts of untyped data.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Using the DECLARE_SERIAL Macro</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`DECLARE_SERIAL`</ph> macro is required in the declaration of classes that will support serialization, as shown here:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSerialization#3</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Defining a Constructor with No Arguments</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>MFC requires a default constructor when it re-creates your objects as they are deserialized (loaded from disk).</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The deserialization process will fill in all member variables with the values required to re-create the object.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>This constructor can be declared public, protected, or private.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If you make it protected or private, you help make sure that it will only be used by the serialization functions.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The constructor must put the object in a state that allows it to be deleted if necessary.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If you forget to define a constructor with no arguments in a class that uses the <ph id="ph1">`DECLARE_SERIAL`</ph> and <ph id="ph2">`IMPLEMENT_SERIAL`</ph> macros, you will get a "no default constructor available" compiler warning on the line where the <ph id="ph3">`IMPLEMENT_SERIAL`</ph> macro is used.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Using the IMPLEMENT_SERIAL Macro in the Implementation File</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IMPLEMENT_SERIAL`</ph> macro is used to define the various functions needed when you derive a serializable class from <ph id="ph2">`CObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>You use this macro in the implementation file (.CPP) for your class.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The first two arguments to the macro are the name of the class and the name of its immediate base class.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The third argument to this macro is a schema number.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The schema number is essentially a version number for objects of the class.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Use an integer greater than or equal to 0 for the schema number.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>(Don't confuse this schema number with database terminology.)</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The MFC serialization code checks the schema number when reading objects into memory.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>If the schema number of the object on disk does not match the schema number of the class in memory, the library will throw a <ph id="ph1">`CArchiveException`</ph>, preventing your program from reading an incorrect version of the object.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>If you want your <ph id="ph1">`Serialize`</ph> member function to be able to read multiple versions — that is, files written with different versions of the application — you can use the value <bpt id="p1">**</bpt>VERSIONABLE_SCHEMA<ept id="p1">**</ept> as an argument to the <ph id="ph2">`IMPLEMENT_SERIAL`</ph> macro.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For usage information and an example, see the <ph id="ph1">`GetObjectSchema`</ph> member function of class <ph id="ph2">`CArchive`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The following example shows how to use <ph id="ph1">`IMPLEMENT_SERIAL`</ph> for a class, <ph id="ph2">`CPerson`</ph>, that is derived from <ph id="ph3">`CObject`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSerialization#4</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Once you have a serializable class, you can serialize objects of the class, as discussed in the article <bpt id="p1">[</bpt>Serialization: Serializing an Object<ept id="p1">](../mfc/serialization-serializing-an-object.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Serialization</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

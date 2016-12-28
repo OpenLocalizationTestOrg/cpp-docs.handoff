@@ -1,0 +1,978 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8e77af3297071be15d4ba422667c0d77b8e7c8f9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn033-dll-version-of-mfc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4d13cae23d7fb826bf4a2730e539ca42befef1fc</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">709465f027beb50ee16dad368c1dea2815039883</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN033: DLL Version of MFC | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN033: DLL Version of MFC</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This note describes how you can use the MFCxx.DLL and MFCxxD.DLL (where x is the MFC version number) shared dynamic link libraries with MFC applications and extension DLLs.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For more information about regular DLLs, see <bpt id="p1">[</bpt>Using MFC as Part of a DLL<ept id="p1">](../mfc/tn011-using-mfc-as-part-of-a-dll.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This technical note covers three aspects of DLLs.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The last two are for the more advanced users:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>How you build an MFC Extension DLL</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>How you build an MFC application that uses the DLL version of MFC</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>How the MFC shared dynamic-link libraries are implemented</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If you are interested in building a DLL using MFC that can be used with non-MFC applications (this is called a regular DLL), refer to <bpt id="p1">[</bpt>Technical Note 11<ept id="p1">](../mfc/tn011-using-mfc-as-part-of-a-dll.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Overview of MFCxx.DLL Support: Terminology and Files</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Regular DLL<ept id="p1">**</ept>: You use a regular DLL to build a stand-alone DLL using some of the MFC classes.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Interfaces across the App/DLL boundary are "C" interfaces, and the client application does not have to be an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This is the version of DLL support supported in MFC 1.0.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It is described in <bpt id="p1">[</bpt>Technical Note 11<ept id="p1">](../mfc/tn011-using-mfc-as-part-of-a-dll.md)</ept> and the MFC Advanced Concepts sample <bpt id="p2">[</bpt>DLLScreenCap<ept id="p2">](../visual-cpp-samples.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>As of Visual C++ version 4.0, the term <bpt id="p1">**</bpt>USRDLL<ept id="p1">**</ept> is obsolete and has been replaced by a regular DLL that statically links to MFC.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>You may also build a regular DLL that dynamically links to MFC.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>MFC 3.0 (and above) supports regular DLLs with all the new functionality including the OLE and Database classes.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>AFXDLL<ept id="p1">**</ept>: This is also referred to as the shared version of the MFC libraries.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This is the new DLL support added in MFC 2.0.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The MFC library itself is in a number of DLLs (described below) and a client application or DLL dynamically links the DLLs that it requires.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Interfaces across the application/DLL boundary are C++/MFC class interfaces.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The client application MUST be an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This supports all MFC 3.0 functionality (exception: UNICODE is not supported for the database classes).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>As of Visual C++ version 4.0, this type of DLL is referred to as an "Extension DLL."</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This note will use MFCxx.DLL to refer to the entire MFC DLL set, which includes:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Debug: MFCxxD.DLL (combined) and MFCSxxD.LIB (static).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Release: MFCxx.DLL (combined) and MFCSxx.LIB (static).</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Unicode Debug: MFCxxUD.DLL (combined) and MFCSxxD.LIB (static).</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Unicode Release: MFCxxU.DLL (combined) and MFCSxxU.LIB (static).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The MFCSxx[U][D].LIB libraries are used in conjunction with the MFC shared DLLs.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>These libraries contain code that must be statically linked to the application or DLL.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>An application links to the corresponding import libraries:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Debug: MFCxxD.LIB</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Release: MFCxx.LIB</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Unicode Debug: MFCxxUD.LIB</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Unicode Release: MFCxxU.LIB</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>An "MFC Extension DLL" is a DLL built upon MFCxx.DLL (and/or the other MFC shared DLLs).</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Here the MFC component architecture kicks in.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If you derive a useful class from an MFC class, or build another MFC-like toolkit, you can place it in a DLL.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>That DLL uses MFCxx.DLL, as does the ultimate client application.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This permits reusable leaf classes, reusable base classes, and reusable view/document classes.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Pros and Cons</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Why should you use the shared version of MFC</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Using the shared library can result in smaller applications (a minimal application that uses most of the MFC library is less than 10K).</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The shared version of MFC supports MFC Extension DLLs and regular DLLs.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Building an application that uses the shared MFC libraries is faster than building a statically linked MFC application because it is not necessary to link MFC itself.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This is especially true in <bpt id="p1">**</bpt>DEBUG<ept id="p1">**</ept> builds where the linker must compact the debug information — by linking with a DLL that already contains the debug information, there is less debug information to compact within your application.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Why should you not use the shared version of MFC:</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Shipping an application that uses the shared library requires that you ship the MFCxx.DLL (and others) library with your program.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>MFCxx.DLL is freely redistributable like many DLLs, but you still must install the DLL in your SETUP program.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>In addition, you must ship the MSVCRTxx.DLL, which contains the C-runtime library which is used both by your program and the MFC DLLs themselves.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>How to Write an MFC Extension DLL</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>An MFC Extension DLL is a DLL containing classes and functions written to embellish the functionality of the MFC classes.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>An MFC Extension DLL uses the shared MFC DLLs in the same way an application uses it, with a few additional considerations:</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The build process is similar to building an application that uses the shared MFC libraries with a few additional compiler and linker options.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>An MFC Extension DLL does not have a <ph id="ph1">`CWinApp`</ph>-derived class.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>An MFC Extension DLL must provide a special <ph id="ph1">`DllMain`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>AppWizard supplies a <ph id="ph1">`DllMain`</ph> function that you can modify.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>An MFC Extension DLL will usually provide an initialization routine to create a <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> if the extension DLL wishes to export <ph id="ph1">`CRuntimeClass`</ph>es or resources to the application.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>A derived class of <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> may be used if per-application data must be maintained by the extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>These considerations are described in more detail below.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>You should also refer to the MFC Advanced Concepts sample <bpt id="p1">[</bpt>DLLHUSK<ept id="p1">](../visual-cpp-samples.md)</ept> since it illustrates:</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Building an application using the shared libraries.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>(DLLHUSK.EXE is an MFC application that dynamically links to the MFC libraries as well as other DLLs.)</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Building an MFC Extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>(Note the special flags such as <ph id="ph1">`_AFXEXT`</ph> that are used in building an extension DLL)</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Two examples of MFC Extension DLLs.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>One shows the basic structure of an MFC Extension DLL with limited exports (TESTDLL1) and the other shows exporting an entire class interface (TESTDLL2).</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Both the client application and any extension DLLs must use the same version of MFCxx.DLL.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>You should follow the convention of MFC DLL and provide both a debug and retail (/release) version of your extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>This permits client programs to build both debug and retail versions of their applications and link them with the appropriate debug or retail version of all DLLs.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Because C++ name mangling and export issues, the export list from an extension DLL may be different between the debug and retail versions of the same DLL and DLLs for different platforms.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The retail MFCxx.DLL has about 2000 exported entry points; the debug MFCxxD.DLL has about 3000 exported entry points.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Quick Note on Memory Management</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The section titled "Memory Management," near the end of this technical note, describes the implementation of the MFCxx.DLL with the shared version of MFC.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The information you need to know to implement just an extension DLL is described here.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>MFCxx.DLL and all extension DLLs loaded into a client application's address space will use the same memory allocator, resource loading and other MFC "global" states as if they were in the same application.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>This is significant because the non-MFC DLL libraries and regular DLLs that statically link to MFC do the exact opposite and have each DLL allocating out of its own memory pool.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>If an extension DLL allocates memory, then that memory can freely intermix with any other application-allocated object.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Also, if an application that uses the shared MFC libraries crashes, the protection of the operating system will maintain the integrity of any other MFC application sharing the DLL.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Similarly other "global" MFC states, like the current executable file to load resources from, are also shared between the client application and all MFC extension DLLs as well as MFCxx.DLL itself.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Building an Extension DLL</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>You can use AppWizard to create an MFC extension DLL project, and it will automatically generate the appropriate compiler and linker settings.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>It was also generate a <ph id="ph1">`DllMain`</ph> function that you can modify.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>If you are converting an existing project to an MFC extension DLL, start with the standard rules for building an application using the shared version of MFC, then do the following:</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Add <bpt id="p1">**</bpt>/D_AFXEXT<ept id="p1">**</ept> to the compiler flags.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>On the Project Properties dialog, select the C/C++ node.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Then select the Preprocessor category.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Add <ph id="ph1">`_AFXEXT`</ph> to the Define Macros field, separating each of the items with semicolons.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Remove the <bpt id="p1">**</bpt>/Gy<ept id="p1">**</ept> compiler switch.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>On the Project Properties dialog, select the C/C++ node.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Then select the Code Generation category.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Ensure that the "Enable Function-Level Linking" option is not enabled.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>This will make it easier to export classes because the linker will not remove unreferenced functions.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>If the original project is used to build a Regular DLL statically linked to MFC, change the <bpt id="p1">**</bpt>/MT[d]<ept id="p1">**</ept> compiler option to <bpt id="p2">**</bpt>/MD[d]<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Build an export library with the <bpt id="p1">**</bpt>/DLL<ept id="p1">**</ept> option to LINK.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>This will be set when you create a new target, specifying Win32 Dynamic-Link Library as the target type.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Changing your Header Files</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The goal of an extension DLL is usually to export some common functionality to one or more applications that can use that functionality.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>This boils down to exporting classes and global functions that are available for your client applications.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>In order to do this you must insure that each of the member functions is marked as import or export as appropriate.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>This requires special declarations: <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept> and <bpt id="p2">**</bpt>__declspec(dllimport)<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>When your classes are used by the client applications, you want them to be declared as <bpt id="p1">**</bpt>__declspec(dllimport)<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>When the extension DLL itself is being built, they should be declared as <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>In addition, the functions must be actually exported, so that the client programs bind to them at load time.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>To export your entire class, use <bpt id="p1">**</bpt>AFX_EXT_CLASS<ept id="p1">**</ept> in the class definition.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>This macro is defined by the framework as <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept> when <bpt id="p2">**</bpt>_AFXDLL<ept id="p2">**</ept> and <ph id="ph1">`_AFXEXT`</ph> is defined, but defined as <bpt id="p3">**</bpt>__declspec(dllimport)<ept id="p3">**</ept> when <ph id="ph2">`_AFXEXT`</ph> is not defined.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>as described above, is only defined when building your extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Not Exporting the Entire Class</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Sometimes you may want to export just the individual necessary members of your class.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>For example, if you are exporting a <ph id="ph1">`CDialog`</ph>-derived class, you might only need to export the constructor and the <ph id="ph2">`DoModal`</ph> call.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>You can export these members using the DLL's .DEF file, but you can also use <bpt id="p1">**</bpt>AFX_EXT_CLASS<ept id="p1">**</ept> in much the same way on the individual members you need to export.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>When you do this, you may run into an additional problem because you are no longer exporting all members of the class.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>The problem is in the way that MFC macros work.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Several of MFC's helper macros actually declare or define data members.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Therefore, these data members will also need to be exported from your DLL.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>For example, the <ph id="ph1">`DECLARE_DYNAMIC`</ph> macro is defined as follows when building an extension DLL:</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The line that begins "static <ph id="ph1">`AFX_DATA`</ph>" is declaring a static object inside of your class.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>To export this class correctly and access the runtime information from a client .EXE, you need to export this static object.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Because the static object is declared with the modifier <ph id="ph1">`AFX_DATA`</ph>, you only need to define <ph id="ph2">`AFX_DATA`</ph> to be <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept> when building your DLL and define it as <bpt id="p2">**</bpt>__declspec(dllimport)<ept id="p2">**</ept> when building your client executable.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>As discussed above, <bpt id="p1">**</bpt>AFX_EXT_CLASS<ept id="p1">**</ept> is already defined in this way.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>You just need to re-define <ph id="ph1">`AFX_DATA`</ph> to be the same as <bpt id="p1">**</bpt>AFX_EXT_CLASS<ept id="p1">**</ept> around your class definition.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>MFC always uses the <ph id="ph1">`AFX_DATA`</ph> symbol on data items it defines within its macros, so this technique will work for all such scenarios.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>For example, it will work for <ph id="ph1">`DECLARE_MESSAGE_MAP`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>If you are exporting the entire class rather than selected members of the class, static data members are automatically exported.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>You can use the same technique to automatically export the <ph id="ph1">`CArchive`</ph> extraction operator for classes that use the <ph id="ph2">`DECLARE_SERIAL`</ph> and <ph id="ph3">`IMPLEMENT_SERIAL`</ph> macros.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Export the archive operator by bracketing the class declarations (located in the .H file) with the following code:</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Limitations of _AFXEXT</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>You can use the _<bpt id="p1">**</bpt>AFXEXT<ept id="p1">**</ept> pre-processor symbol for your extension DLLs as long as you do not have multiple layers of extension DLLs.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>If you have extension DLLs that call or derive from classes in your own extension DLLs, which then derive from the MFC classes, you must use your own preprocessor symbol to avoid ambiguity.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>The problem is that in Win32, you must explicitly declare any data as <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept> if it is to be exported from a DLL, and <bpt id="p2">**</bpt>__declspec(dllimport)<ept id="p2">**</ept> if it is to be imported from a DLL.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>When you define <ph id="ph1">`_AFXEXT`</ph>, the MFC headers make sure that <bpt id="p1">**</bpt>AFX_EXT_CLASS<ept id="p1">**</ept> is defined correctly.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>When you have multiple layers, one symbol such as <bpt id="p1">**</bpt>AFX_EXT_CLASS<ept id="p1">**</ept> is not sufficient, since an extension DLL may be exporting new classes as well as importing other classes from another extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>In order to deal with this problem, use a special preprocessor symbol that indicates that you are building the DLL itself versus using the DLL.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>For example, imagine two extension DLLs, A.DLL, and B.DLL.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>They each export some classes in A.H and B.H, respectively.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>B.DLL uses the classes from A.DLL.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>The header files would look something like this:</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>When A.DLL is built, it is built with <bpt id="p1">**</bpt>/D A_IMPL<ept id="p1">**</ept> and when B.DLL is built, it is built with <bpt id="p2">**</bpt>/D B_IMPL<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>By using separate symbols for each DLL, CExampleB is exported and CExampleA is imported when building B.DLL.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>CExampleA is exported when building A.DLL and imported when used by B.DLL (or some other client).</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>This type of layering cannot be done when using the built-in <bpt id="p1">**</bpt>AFX_EXT_CLASS<ept id="p1">**</ept> and <ph id="ph1">`_AFXEXT`</ph> preprocessor symbols.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>The technique described above solves this problem in a manner not unlike the mechanism MFC itself uses when building its OLE, Database, and Network extension DLLs.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>Not Exporting the Entire Class</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Again, you will have to take special care when you are not exporting an entire class.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>You have to ensure that the necessary data items created by the MFC macros are exported correctly.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>This can be done by re-defining <bpt id="p1">**</bpt>AFX_DATA<ept id="p1">**</ept> to your specific class' macro.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>This should be done any time you are not exporting the entire class.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>DllMain</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>The following is the exact code you should place in your main source file for your extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>It should come after the standard includes.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Note that when you use AppWizard to create starter files for an extension DLL, it supplies a <ph id="ph1">`DllMain`</ph> for you.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>The call to <ph id="ph1">`AfxInitExtensionModule`</ph> captures the modules runtime-classes (<ph id="ph2">`CRuntimeClass`</ph> structures) as well as its object factories (<ph id="ph3">`COleObjectFactory`</ph> objects) for use later when the <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object is created.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>The (optional) call to <ph id="ph1">`AfxTermExtensionModule`</ph> allows MFC to cleanup the extension DLL when each process detaches (which happens when the process exits, or when the DLL is unloaded as a result of a <bpt id="p1">**</bpt>FreeLibrary<ept id="p1">**</ept> call) from the extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>Since most extension DLLs are not dynamically loaded (usually, they are linked via their import libraries), the call to <ph id="ph1">`AfxTermExtensionModule`</ph> is usually not necessary.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>If your application loads and frees extension DLLs dynamically, be sure to call <ph id="ph1">`AfxTermExtensionModule`</ph> as shown above.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Also be sure to use <ph id="ph1">`AfxLoadLibrary`</ph> and <ph id="ph2">`AfxFreeLibrary`</ph> (instead of Win32 functions <bpt id="p1">**</bpt>LoadLibrary<ept id="p1">**</ept> and <bpt id="p2">**</bpt>FreeLibrary<ept id="p2">**</ept>) if your application uses multiple threads or if it dynamically loads an extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Using <ph id="ph1">`AfxLoadLibrary`</ph> and <ph id="ph2">`AfxFreeLibrary`</ph> insures that the startup and shutdown code that executes when the extension DLL is loaded and unloaded does not corrupt the global MFC state.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>The header file AFXDLLX.H contains special definitions for structures used in extension DLLs, such as the definition for <ph id="ph1">`AFX_EXTENSION_MODULE`</ph> and <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>The global <bpt id="p1">*</bpt>extensionDLL<ept id="p1">*</ept> must be declared as shown.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>Unlike the 16-bit version of MFC, you can allocate memory and call MFC functions during this time, since the MFCxx.DLL is fully initialized by the time your <ph id="ph1">`DllMain`</ph> is called.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Sharing Resources and Classes</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>Simple MFC extension DLLs need only export a few low-bandwidth functions to the client application and nothing more.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>More user-interface intensive DLLs may want to export resources and C++ classes to the client application.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>Exporting resources is done through a resource list.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>In each application is a singly linked list of <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>When looking for a resource, most of the standard MFC implementations that load resources look first at the current resource module (<ph id="ph1">`AfxGetResourceHandle`</ph>) and if not found walk the list of <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> objects attempting to load the requested resource.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>Dynamic creation of C++ objects given a C++ class name is similar.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>The MFC object deserialization mechanism needs to have all of the <ph id="ph1">`CRuntimeClass`</ph> objects registered so that it can reconstruct by dynamically creating C++ object of the required type based on what was stored earlier.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>If you want the client application to use classes in your extension DLL that are <ph id="ph1">`DECLARE_SERIAL`</ph>, then you will need to export your classes to be visible to the client application.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>This is also done by walking the <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> list.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>In the case of the MFC Advanced Concepts sample <bpt id="p1">[</bpt>DLLHUSK<ept id="p1">](../visual-cpp-samples.md)</ept>, the list looks something like:</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>The MFCxx.DLL is usually last on the resource and class list.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>MFCxx.DLL includes all of the standard MFC resources, including prompt strings for all the standard command IDs.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>Placing it at the tail of the list allows DLLs and the client application itself to not have a their own copy of the standard MFC resources, but to rely on the shared resources in the MFCxx.DLL instead.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>Merging the resources and class names of all DLLs into the client application's name space has the disadvantage that you have to be careful what IDs or names you pick.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>You can of course disable this feature by not exporting either your resources or a <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object to the client application.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>DLLHUSK<ept id="p1">](../visual-cpp-samples.md)</ept> sample manages the shared resource name space by using multiple header files.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Technical Note 35<ept id="p1">](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)</ept> for more tips on using shared resource files.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>Initializing the DLL</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>As mentioned above, you will usually want to create a <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object in order to export your resources and classes to the client application.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>You will need to provide an exported entry point to initialize the DLL.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>Minimally, this is a void routine that takes no arguments and returns nothing, but it can be anything you like.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>Each client application that wants to use your DLL must call this initialization routine, if you use this approach.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>You may also allocate this <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object in your <ph id="ph1">`DllMain`</ph> just after calling <ph id="ph2">`AfxInitExtensionModule`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>The initialization routine must create a <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> object in the current application's heap, wired up to your extension DLL information.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>This can be done with the following:</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>The routine name, <bpt id="p1">*</bpt>InitXxxDLL<ept id="p1">*</ept> in this example, can be anything you want.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>It does not need to be <ph id="ph1">`extern "C"`</ph>, but doing so makes the export list easier to maintain.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>If you use your extension DLL from a regular DLL, you must export this initialization function.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>This function must be called from the regular DLL before using any extension DLL classes or resources.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Exporting Entries</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>The simple way to export your classes is to use <bpt id="p1">**</bpt>__declspec(dllimport)<ept id="p1">**</ept> and <bpt id="p2">**</bpt>__declspec(dllexport)<ept id="p2">**</ept> on each class and global function you wish to export.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>This makes it a lot easier, but is less efficient than naming each entry point (described below) since you have less control over what functions are exported and you cannot export the functions by ordinal.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>TESTDLL1 and TESTDLL2 use this method to export their entries.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>A more efficient method (and the method used by MFCxx.DLL) is to export each entry by hand by naming each entry in the .DEF file.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>Since we are exporting selective exports from our DLL (that is, not everything), we must decide which particular interfaces we wish to export.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>This is difficult since you must specify the mangled names to the linker in the form of entries in the .DEF file.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>Don't export any C++ classes unless you really need to have a symbolic link for it.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>If you have tried exporting C++ classes with a .DEF file before, you may want to develop a tool to generate this list automatically.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>This can be done using a two-stage link process.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>Link your DLL once with no exports, and allow the linker to generate a .MAP file.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>The .MAP file can be used to generate a list of functions that should be exported, so with some rearranging, it can be used to generate your EXPORT entries for your .DEF file.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>The export list for MFCxx.DLL and the OLE and Database extension DLLs, several thousand in number, was generated with such a process (although it is not completely automatic and requires some hand tuning every once in a while).</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>CWinApp vs. CDynLinkLibrary</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>An MFC Extension DLL does not have a <ph id="ph1">`CWinApp`</ph>-derived object of its own; instead it must work with the <ph id="ph2">`CWinApp`</ph>-derived object of the client application.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>This means that the client application owns the main message pump, the idle loop and so on.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>If your MFC Extension DLL needs to maintain extra data for each application, you can derive a new class from <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> and create it in the InitXxxDLL routine describe above.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>When running, the DLL can check the current application's list of <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> objects to find the one for that particular extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>Using Resources in Your DLL Implementation</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>As mentioned above, the default resource load will walk the list of <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> objects looking for the first EXE or DLL that has the requested resource.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>All MFC APIs as well as all the internal code uses <ph id="ph1">`AfxFindResourceHandle`</ph> to walk the resource list to find any resource, no matter where it may reside.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>If you wish to only load resources from a specific place, use the APIs <ph id="ph1">`AfxGetResourceHandle`</ph> and <ph id="ph2">`AfxSetResourceHandle`</ph> to save the old handle and set the new handle.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>Be sure to restore the old resource handle before you return to the client application.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>The sample TESTDLL2 uses this approach for explicitly loading a menu.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>Walking the list has the disadvantages that it is slightly slower and requires managing resource ID ranges.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>It has the advantage that a client application that links to several extension DLLs can use any DLL-provided resource without having to specify the DLL instance handle.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>is an API used for walking the resource list to look for a given match.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>It takes the name and type of a resource and returns the resource handle where it was first found (or NULL).</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Writing an Application That Uses the DLL Version</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>Application Requirements</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>An application that uses the shared version of MFC must follow a few simple rules:</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>It must have a <ph id="ph1">`CWinApp`</ph> object and follow the standard rules for a message pump.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>It must be compiled with a set of required compiler flags (see below).</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>It must link with the MFCxx import libraries.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>By setting the required compiler flags, the MFC headers determine at link time which library the application should link with.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>To run the executable, MFCxx.DLL must be on the path or in the Windows system directory.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>Building with the Development Environment</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>If you are using the internal makefile with most of the standard defaults, you can easily change the project to build the DLL version.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>The following step assumes you have a correctly functioning MFC application linked with NAFXCWD.LIB (for debug) and NAFXCW.LIB (for retail) and you want to convert it to use the shared version of the MFC library.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>You are running the Visual C++ environment and have an internal project file.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Projects<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Properties<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>General<ept id="p1">**</ept> page under <bpt id="p2">**</bpt>Project Defaults<ept id="p2">**</ept>, set Microsoft Foundation Classes to <bpt id="p3">**</bpt>Use MFC in a Shared DLL<ept id="p3">**</ept> (MFCxx(d).dll).</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>Building with NMAKE</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>If you are using the external makefile feature of the Visual C++, or are using NMAKE directly, you will have to edit your makefile to support compiler and linker options</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>Required compiler flags:</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>/D_AFXDLL /MD</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>/D_AFXDLL</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>The standard MFC headers need this symbol to be defined:</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>/MD</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>The application must use the DLL version of the C run-time library</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>All other compiler flags follow the MFC defaults (for example, _DEBUG for debug).</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve">
+          <source>Edit the linker list of libraries.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source>Change NAFXCWD.LIB to MFCxxD.LIB and change NAFXCW.LIB to MFCxx.LIB.</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source>Replace LIBC.LIB with MSVCRT.LIB.</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve">
+          <source>As with any other MFC library it is important that MFCxxD.LIB is placed <bpt id="p1">**</bpt>before<ept id="p1">**</ept> any C-runtime libraries.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve">
+          <source>Optionally add <bpt id="p1">**</bpt>/D_AFXDLL<ept id="p1">**</ept> to both your retail and debug resource compiler options (the one that actually compiles the resources with <bpt id="p2">**</bpt>/R<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>This makes your final executable smaller by sharing the resources that are present in the MFC DLLs.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>A full rebuild is required after these changes are made.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>Building the Samples</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>Most of the MFC sample programs can be built from Visual C++ or from a shared NMAKE-compatible MAKEFILE from the command line.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>To convert any of these samples to use MFCxx.DLL, you can load the .MAK file into the Visual C++ and set the Project options as described above.</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>If you are using the NMAKE build, you can specify "AFXDLL=1" on the NMAKE command line and that will build the sample using the shared MFC libraries.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve">
+          <source>The MFC Advanced Concepts sample <bpt id="p1">[</bpt>DLLHUSK<ept id="p1">](../visual-cpp-samples.md)</ept> is built with the DLL version of MFC.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve">
+          <source>This sample not only illustrates how to build an application linked with MFCxx.DLL, but it also illustrates other features of the MFC DLL packaging option such as MFC Extension DLLs described later in this technical note.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve">
+          <source>Packaging Notes</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve">
+          <source>The retail version of the DLLs (MFCxx[U].DLL) are freely redistributable.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>The debug version of the DLLs are not freely redistributable and should be used only during the development of your application.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>The debug DLLs are provided with debugging information.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>By using the Visual C++ debugger, you can trace execution of your application as well as the DLL.</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>The Release DLLs (MFCxx[U].DLL) do not contain debugging information.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>If you customize or rebuild the DLLs, then you should call them something other than "MFCxx" The MFC SRC file MFCDLL.MAK describes build options and contains the logic for renaming the DLL.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>Renaming the files is necessary, since these DLLs are potentially shared by many MFC applications.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source>Having your custom version of the MFC DLLs replace those installed on the system may break another MFC application using the shared MFC DLLs.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source>Rebuilding the MFC DLLs is not recommended.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source>How the MFCxx.DLL Is Implemented</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source>The following section describes how the MFC DLL (MFCxx.DLL and MFCxxD.DLL) is implemented.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>Understanding the details here are also not important if all you want to do is use the MFC DLL with your application.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>The details here are not essential for understanding how to write an MFC extension DLL, but understanding this implementation may help you write your own DLL.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>Implementation Overview</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>The MFC DLL is really a special case of an MFC Extension DLL as described above.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source>It has a very large number of exports for a large number of classes.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>There are a few additional things we do in the MFC DLL that make it even more special than a regular Extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve">
+          <source>Win32 Does Most of the Work</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve">
+          <source>The 16-bit version of MFC needed a number of special techniques including per-app data on the stack segment, special segments created by some 80x86 assembly code, per-process exception contexts, and other techniques.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve">
+          <source>Win32 directly supports per-process data in a DLL, which is what you want most of the time.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve">
+          <source>For the most part MFCxx.DLL is just NAFXCW.LIB packaged in a DLL.</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve">
+          <source>If you look at the MFC source code, you'll find very few #ifdef _AFXDLL, since there are very few special cases that need to be made.</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>The special cases that are there are specifically to deal with Win32 on Windows 3.1 (otherwise known as Win32s).</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>Win32s does not support per-process DLL data directly so the MFC DLL must use the thread-local storage (TLS) Win32 APIs to obtain process local data.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>Impact on Library Sources, Additional Files</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve">
+          <source>The impact of the <bpt id="p1">**</bpt>_AFXDLL<ept id="p1">**</ept> version on the normal MFC class library sources and headers is relatively minor.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve">
+          <source>There is a special version file (AFXV_DLL.H) as well as an additional header file (AFXDLL_.H) included by the main AFXWIN.H header.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve">
+          <source>The AFXDLL_.H header includes the <bpt id="p1">**</bpt>CDynLinkLibrary<ept id="p1">**</ept> class and other implementation details of both <bpt id="p2">**</bpt>_AFXDLL<ept id="p2">**</ept> applications and MFC Extension DLLs.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve">
+          <source>The AFXDLLX.H header is provided for building MFC Extension DLLs (see above for details).</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve">
+          <source>The regular sources to the MFC library in MFC SRC have some additional conditional code under the <bpt id="p1">**</bpt>_AFXDLL<ept id="p1">**</ept> #ifdef.</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve">
+          <source>An additional source file (DLLINIT.CPP) contains the extra DLL initialization code and other glue for the shared version of MFC.</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve">
+          <source>In order to build the shared version of MFC, additional files are provided.</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve">
+          <source>(See below for details on how to build the DLL.)</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve">
+          <source>Two .DEF files are used for exporting the MFC DLL entry points for debug (MFCxxD.DEF) and release (MFCxx.DEF) versions of the DLL.</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve">
+          <source>An .RC file (MFCDLL.RC) contains all the standard MFC resources and a VERSIONINFO resource for the DLL.</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve">
+          <source>A .CLW file (MFCDLL.CLW) is provided to allow browsing the MFC classes using ClassWizard.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve">
+          <source>Note: this feature is not particular to the DLL version of MFC.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve">
+          <source>Memory Management</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve">
+          <source>An application using MFCxx.DLL uses a common memory allocator provided by MSVCRTxx.DLL, the shared C-runtime DLL.</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve">
+          <source>The application, any extension DLLs, and well as the MFC DLLs themselves use this shared memory allocator.</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve">
+          <source>By using a shared DLL for memory allocation, the MFC DLLs can allocate memory that is later freed by the application or vice versa.</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve">
+          <source>Because both the application and the DLL must use the same allocator, you should not override the C++ global <ph id="ph1">`operator new`</ph> or <ph id="ph2">`operator delete`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve">
+          <source>The same rules apply to the rest of the C run-time memory allocation routines (such as <ph id="ph1">`malloc`</ph>, <ph id="ph2">`realloc`</ph>, <bpt id="p1">**</bpt>free<ept id="p1">**</ept>, and others).</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve">
+          <source>Ordinals and class __declspec(dllexport) and DLL naming</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve">
+          <source>We do not use the <ph id="ph1">`class`</ph> <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept> functionality of the C++ compiler.</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve">
+          <source>Instead, a list of exports is included with the class library sources (MFCxx.DEF and MFCxxD.DEF).</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve">
+          <source>Only these select set of entry points (functions and data) are exported.</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve">
+          <source>Other symbols, such as MFC private implementation functions or classes, are not exported All exports are done by ordinal without a string name in the resident or non-resident name table.</source>
+        </trans-unit>
+        <trans-unit id="410" translate="yes" xml:space="preserve">
+          <source>Using <ph id="ph1">`class`</ph> <bpt id="p1">**</bpt>__declspec(dllexport)<ept id="p1">**</ept> may be a viable alternative for building smaller DLLs, but in the case of a large DLL like MFC, the default exporting mechanism has efficiency and capacity limits.</source>
+        </trans-unit>
+        <trans-unit id="411" translate="yes" xml:space="preserve">
+          <source>What this all means is that we can package a large amount of functionality in the release MFCxx.DLL that is only around 800 KB without compromising much execution or loading speed.</source>
+        </trans-unit>
+        <trans-unit id="412" translate="yes" xml:space="preserve">
+          <source>MFCxx.DLL would have been 100K larger had this technique not been used.</source>
+        </trans-unit>
+        <trans-unit id="413" translate="yes" xml:space="preserve">
+          <source>This also makes it possible to add additional entry points at the end of the .DEF file to allow simple versioning without compromising the speed and size efficiency of exporting by ordinal.</source>
+        </trans-unit>
+        <trans-unit id="414" translate="yes" xml:space="preserve">
+          <source>Major version revisions in the MFC class library will change the library name.</source>
+        </trans-unit>
+        <trans-unit id="415" translate="yes" xml:space="preserve">
+          <source>That is, MFC30.DLL is the redistributable DLL containing version 3.0 of the MFC class library.</source>
+        </trans-unit>
+        <trans-unit id="416" translate="yes" xml:space="preserve">
+          <source>An upgrade of this DLL, say, in a hypothetical MFC 3.1, the DLL would be named MFC31.DLL instead.</source>
+        </trans-unit>
+        <trans-unit id="417" translate="yes" xml:space="preserve">
+          <source>Again, if you modify the MFC source code to produce a custom version of the MFC DLL, use a different name (and preferably one without "MFC" in the name).</source>
+        </trans-unit>
+        <trans-unit id="418" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="419" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="420" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

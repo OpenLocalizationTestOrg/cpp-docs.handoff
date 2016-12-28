@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0329851a1457315af51a12fbf088d3c00f937bce</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\tuple-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">596627ae50f062e4ed62b9ecc792b578e19b4099</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d82c86adf08c17aeb21cbefc05c115a9cce6e867</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>tuple Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>tuple Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Wraps a fixed-length sequence of elements.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>class tuple {</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>public:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>tuple(); explicit tuple(P1, P2, ..., PN); // 0 &lt;N</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>tuple(const tuple&amp;); template <ph id="ph1">\&lt;</ph>class U1, class U2, ..., class UN&gt;</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>tuple(const tuple<ph id="ph1">\&lt;</ph>U1, U2, ..., UN&gt;&amp;); template <ph id="ph2">\&lt;</ph>class U1, class U2&gt;</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>tuple(const pair<ph id="ph1">\&lt;</ph>U1, U2&gt;&amp;); // N == 2</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>void swap(tuple&amp; right); tuple&amp; operator=(const tuple&amp;); template <ph id="ph1">\&lt;</ph>class U1, class U2, ..., class UN&gt;</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>tuple&amp; operator=(const tuple<ph id="ph1">\&lt;</ph>U1, U2, ..., UN&gt;&amp;); template <ph id="ph2">\&lt;</ph>class U1, class U2&gt;</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>tuple&amp; operator=(const pair<ph id="ph1">\&lt;</ph>U1, U2&gt;&amp;); // N == 2</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>};</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The type of the Nth tuple element.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The template class describes an object that stores N objects of types <ph id="ph1">`T1`</ph>, <ph id="ph2">`T2`</ph>, ..., <ph id="ph3">`TN`</ph>, respectively, where where <ph id="ph4">`0 &lt;= N &lt;= Nmax`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The extent of a tuple instance <ph id="ph1">`tuple&lt;T1, T2, ..., TN&gt;`</ph> is the number <ph id="ph2">`N`</ph> of its template arguments.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The index of the template argument <ph id="ph1">`Ti`</ph> and of the corresponding stored value of that type is <ph id="ph2">`i - 1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> <ph id="ph1">\&lt;</ph>tuple&gt;</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> std</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>tuple::operator=</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Assigns a <ph id="ph1">`tuple`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The type of the Nth copied tuple element.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The tuple to copy from.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The first two member operators assign the elements of <ph id="ph1">`right`</ph> to the corresponding elements of <ph id="ph2">`*this`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The third member operator assigns <ph id="ph1">`right.first`</ph> to the element at index 0 of <ph id="ph2">`*this`</ph> and <ph id="ph3">`right.second`</ph> to the element at index 1.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>All three member operators return <ph id="ph1">`*this`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The remaining member operators are analogs to earlier ones, but with <bpt id="p1">[</bpt>Rvalue Reference Declarator: &amp;&amp;<ept id="p1">](../cpp/rvalue-reference-declarator-amp-amp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>tuple:swap</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Exchanges the elements of two tuples.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Parameter</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>A tuple whose elements are to be exchanged with those of the tuple <ph id="ph1">`right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>A tuple whose elements are to be exchanged with those of the tuple <ph id="ph1">`left`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The function executes <ph id="ph1">`left.swap(right)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>tuple::tuple</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Constructs a <ph id="ph1">`tuple`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The type of the Nth copied tuple element.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The tuple to copy from.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The first constructor constructs an object whose elements are default constructed.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The second constructor constructs an object whose elements are copy constructed from the arguments <ph id="ph1">`P1`</ph>, <ph id="ph2">`P2`</ph>, ..., <ph id="ph3">`PN`</ph> with each <ph id="ph4">`Pi`</ph> initializing the element at index <ph id="ph5">`i - 1`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The third and fourth constructors construct an object whose elements are copy constructed from the corresponding element of <ph id="ph1">`right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The fifth constructor constructs an object whose element at index 0 is copy constructed from <ph id="ph1">`right.first`</ph> and whose element at index 1 is copy constructed from <ph id="ph2">`right.second`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The remaining constructors are analogs to earlier ones, but with <bpt id="p1">[</bpt>Rvalue Reference Declarator: &amp;&amp;<ept id="p1">](../cpp/rvalue-reference-declarator-amp-amp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>tuple&gt;</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>make_tuple Function</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

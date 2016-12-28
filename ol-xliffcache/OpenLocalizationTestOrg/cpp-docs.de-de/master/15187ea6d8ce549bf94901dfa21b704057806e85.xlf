@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">15187ea6d8ce549bf94901dfa21b704057806e85</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\condition-variable.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bbfc7ea85767405ea486d247223e0285a87b2aec</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2a2d6b5998bdab8cf9e6aedc4199a2c8dee32f54</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>condition_variable<ph id="ph1">&amp;gt;</ph> | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>condition_variable</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Defines the classes <bpt id="p1">[</bpt>condition_variable<ept id="p1">](../standard-library/condition-variable-class.md)</ept> and <bpt id="p2">[</bpt>condition_variable_any<ept id="p2">](../standard-library/condition-variable-any-class.md)</ept> that are used to create objects that wait for a condition to become true.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This header uses Concurrency Runtime (ConcRT) so that you can use it together with other ConcRT mechanisms.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For more information about ConcRT, see <bpt id="p1">[</bpt>Concurrency Runtime<ept id="p1">](../parallel/concrt/concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In code that is compiled by using <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> or <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept>, this header is blocked.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Code that waits for a condition variable must also use a <ph id="ph1">`mutex`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A calling thread must lock the <ph id="ph1">`mutex`</ph> before it calls the functions that wait for the condition variable.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`mutex`</ph> is then locked when the called function returns.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`mutex`</ph> is not locked while the thread waits for the condition to become true.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>So that there are no unpredictable results, each thread that waits for a condition variable must use the same <ph id="ph1">`mutex`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Objects of type <ph id="ph1">`condition_variable_any`</ph> can be used with a mutex of any type.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The type of the mutex that is used does not have to provide the <ph id="ph1">`try_lock`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Objects of type <ph id="ph1">`condition_variable`</ph> can only be used with a mutex of type <ph id="ph2">`unique_lock&lt;mutex&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Objects of this type may be faster than objects of type <ph id="ph1">`condition_variable_any&lt;unique_lock&lt;mutex&gt;&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To wait for an event, first lock the mutex, and then call one of the <ph id="ph1">`wait`</ph> methods on the condition variable.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`wait`</ph> call blocks until another thread signals the condition variable.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Spurious wakeups<ept id="p1">*</ept> occur when threads that are waiting for condition variables become unblocked without appropriate notifications.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To recognize such spurious wakeups, code that waits for a condition to become true should explicitly check that condition when the code returns from a wait function.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This is usually done by using a loop; you can use <ph id="ph1">`wait(unique_lock&lt;mutex&gt;&amp; lock, Predicate pred)`</ph> to perform this loop for you.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`condition_variable_any`</ph> and <ph id="ph2">`condition_variable`</ph> classes each have three methods that wait for a condition.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>waits for an unbounded time period.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>waits until a specified <ph id="ph1">`time`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>waits for a specified <ph id="ph1">`time interval`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Each of these methods has two overloaded versions.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>One just waits and can wake up spuriously.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The other takes an additional template argument that defines a predicate.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The method does not return until the predicate is <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Each class also has two methods that are used to notify a condition variable that its condition is <ph id="ph1">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>wakes up one of the threads that is waiting for the condition variable.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>wakes up all of the threads that are waiting for the condition variable.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Header Files Reference</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>condition_variable Class</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>condition_variable_any Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

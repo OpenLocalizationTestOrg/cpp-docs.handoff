@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1b5442a59d0555a11a609571531e964d4f1d226c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\convert-an-openmp-loop-that-uses-cancellation.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1ffc81211983a228901f448a0e673bb6af60de25</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f31b5d37599835222edab73f7361efb060b61077</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Convert an OpenMP Loop that Uses Cancellation to Use the Concurrency Runtime | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Convert an OpenMP Loop that Uses Cancellation to Use the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Some parallel loops do not require that all iterations be executed.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>For example, an algorithm that searches for a value can terminate after the value is found.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>OpenMP does not provide a mechanism to break out of a parallel loop.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>However, you can use a Boolean value, or flag, to enable an iteration of the loop to indicate that the solution has been found.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime provides functionality that enables one task to cancel other tasks that have not yet started.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This example demonstrates how to convert an OpenMP <bpt id="p1">[</bpt>parallel<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)</ept><bpt id="p2">[</bpt>for<ept id="p2">](../../parallel/openmp/reference/for-openmp.md)</ept> loop that does not require for all iterations to run to use the Concurrency Runtime cancellation mechanism.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This example uses both OpenMP and the Concurrency Runtime to implement a parallel version of the <bpt id="p1">[</bpt>std::any_of<ept id="p1">](http://msdn.microsoft.com/library/c0a685f6-8242-42c6-b1bc-3956d25ae535)</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The OpenMP version of this example uses a flag to coordinate among all parallel loop iterations that the condition has been met.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The version that uses the Concurrency Runtime uses the <bpt id="p1">[</bpt>concurrency::structured_task_group::cancel<ept id="p1">](reference/structured-task-group-class.md#cancel)</ept> method to stop the overall operation when the condition is met.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>concrt-openmp#2</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This example produces the following output.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>In the version of that uses OpenMP, all iterations of the loop execute, even when the flag is set.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Furthermore, if a task were to have any child tasks, the flag would also have to be available to those child tasks to communicate cancellation.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>In the Concurrency Runtime, when a task group is cancelled, the runtime cancels the entire tree of work, including child tasks.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::parallel_for_each<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for_each)</ept> algorithm uses tasks to perform work.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Therefore, when one iteration of the loop cancels the root task, the entire tree of computation is also cancelled.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>When a tree of work is cancelled, the runtime does not start new tasks.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>However, the runtime allows tasks that have already started to finish.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Therefore, in the case of the <ph id="ph1">`parallel_for_each`</ph> algorithm, active loop iterations can clean up their resources.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In both versions of this example, if the array contains more than one copy of the value to search for, multiple loop iterations can each simultaneously set the result and cancel the overall operation.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You can use a synchronization primitive, such as a critical section, if your problem requires that only one task performs work when a condition is met.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can also use exception handling to cancel tasks that use the PPL.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For more information about cancellation, see <bpt id="p1">[</bpt>Cancellation in the PPL<ept id="p1">](cancellation-in-the-ppl.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For more information about <ph id="ph1">`parallel_for_each`</ph> and other parallel algorithms, see <bpt id="p1">[</bpt>Parallel Algorithms<ept id="p1">](../../parallel/concrt/parallel-algorithms.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`concrt-omp-parallel-any-of.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc /openmp concrt-omp-parallel-any-of.cpp</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Migrating from OpenMP to the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

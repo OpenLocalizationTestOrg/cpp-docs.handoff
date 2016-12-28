@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ab13813f10bb9a387b953a4b1486262687e4cd19</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\file-handling.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">168c72a08d6c06c817f53b7d6292d75eae2ebd90</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ff58460cede7260bbc5cd0bfb87041d5baade5d3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>File Handling | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>File Handling</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Use these routines to create, delete, and manipulate files and to set and check file-access permissions.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The C run-time libraries have a 512 limit for the number of files that can be open at any one time.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Attempting to open more than the maximum number of file descriptors or file streams causes program failure.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">[</bpt>_setmaxstdio<ept id="p1">](../c-runtime-library/reference/setmaxstdio.md)</ept> to change this number.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The following routines operate on files designated by a file descriptor.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>File-Handling Routines (File Descriptor)</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Use</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>.NET Framework equivalent</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>_chsize<ept id="p1">](../c-runtime-library/reference/chsize.md)</ept>,<bpt id="p2">[</bpt>_chsize_s<ept id="p2">](../c-runtime-library/reference/chsize-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Change file size</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::Stream::SetLength<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)</ept>, <bpt id="p2">[</bpt>System::IO::FileStream::SetLength<ept id="p2">](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)</ept></source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>_filelength, _filelengthi64</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Get file length</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::Stream::Length<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.stream.length.aspx)</ept>, <bpt id="p2">[</bpt>System::IO::FileStream::Length<ept id="p2">](https://msdn.microsoft.com/en-us/library/system.io.filestream.length.aspx)</ept></source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Get file-status information on descriptor</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>_get_osfhandle</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Return operating-system file handle associated with existing C run-time file descriptor</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>_isatty</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Check for character device</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::Stream::CanWrite<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.filestream.canwrite.aspx)</ept>, <bpt id="p2">[</bpt>System::IO::FileStream::CanWrite<ept id="p2">](https://msdn.microsoft.com/en-us/library/system.io.stream.canwrite.aspx)</ept></source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>_locking</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Lock areas of file</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>System::IO::FileStream::Lock</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>_open_osfhandle</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Associate C run-time file descriptor with existing operating-system file handle</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>System::IO::FileStream::Handle</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>_setmode</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Set file-translation mode</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::BinaryReader Class<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.binaryreader.aspx)</ept>, <bpt id="p2">[</bpt>System::IO::TextReader Class<ept id="p2">](https://msdn.microsoft.com/en-us/library/system.io.textreader.aspx)</ept></source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The following routines operate on files specified by a path or filename.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>File-Handling Routines (Path or Filename)</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Use</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>.NET Framework equivalent</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>_access, _waccess<ept id="p1">](../c-runtime-library/reference/access-waccess.md)</ept>, <bpt id="p2">[</bpt>_access_s, _waccess_s<ept id="p2">](../c-runtime-library/reference/access-s-waccess-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Check file-permission setting</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>System::IO::FileAccess Enumeration</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>_chmod, _wchmod</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Change file-permission setting</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::File::SetAttributes<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)</ept>, <bpt id="p2">[</bpt>System::Security::Permissions::FileIOPermission<ept id="p2">](https://msdn.microsoft.com/en-us/library/system.security.permissions.fileiopermission.aspx)</ept></source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>_fullpath, _wfullpath</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Expand a relative path to its absolute path name</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>System::IO::File::Create</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>_makepath, _wmakepath<ept id="p1">](../c-runtime-library/reference/makepath-wmakepath.md)</ept>, <bpt id="p2">[</bpt>_makepath_s, _wmakepath_s<ept id="p2">](../c-runtime-library/reference/makepath-s-wmakepath-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Merge path components into single, full path</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>System::IO::File::Create</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>_mktemp, _wmktemp<ept id="p1">](../c-runtime-library/reference/mktemp-wmktemp.md)</ept>, <bpt id="p2">[</bpt>_mktemp_s, _wmktemp_s<ept id="p2">](../c-runtime-library/reference/mktemp-s-wmktemp-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Create unique filename</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>remove, _wremove</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Delete file</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>System::IO::File::Delete</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>rename, _wrename</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Rename file</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>System::IO::File::Move</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>_splitpath, _wsplitpath<ept id="p1">](../c-runtime-library/reference/splitpath-wsplitpath.md)</ept>, <bpt id="p2">[</bpt>_splitpath_s, _wsplitpath_s<ept id="p2">](../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Parse path into components</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>_stat, _stat64, _stati64, _wstat, _wstat64, _wstati64</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Get file-status information on named file</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::File::GetAttributes<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.file.getattributes.aspx)</ept>, <bpt id="p2">[</bpt>System::IO::File::GetCreationTime<ept id="p2">](https://msdn.microsoft.com/en-us/library/system.io.file.getcreationtime.aspx)</ept>, <bpt id="p3">[</bpt>System::IO::File::GetLastAccessTime<ept id="p3">](https://msdn.microsoft.com/en-us/library/system.io.file.getlastaccesstime.aspx)</ept>, <bpt id="p4">[</bpt>System::IO::File::GetLastWriteTime<ept id="p4">](https://msdn.microsoft.com/en-us/library/system.io.file.getlastwritetime.aspx)</ept></source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>_umask<ept id="p1">](../c-runtime-library/reference/umask.md)</ept>, <bpt id="p2">[</bpt>_umask_s<ept id="p2">](../c-runtime-library/reference/umask-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Set default permission mask for new files created by program</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>System::IO::File::SetAttributes</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>_unlink, _wunlink</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Delete file</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>System::IO::File::Delete</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The following routines open files.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>File-Handling Routines (Open File)</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Use</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>.NET Framework equivalent</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>fopen, _wfopen<ept id="p1">](../c-runtime-library/reference/fopen-wfopen.md)</ept>, <bpt id="p2">[</bpt>fopen_s, _wfopen_s<ept id="p2">](../c-runtime-library/reference/fopen-s-wfopen-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Opens a file and returns a pointer to the open file.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::File::Open<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)</ept>, &lt;xref:System.IO.FileStream.%23ctor%2A&gt;</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>_fsopen, _wfsopen</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Open a stream with file sharing and returns a pointer to the open file.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::File::Open<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)</ept>, &lt;xref:System.IO.FileStream.%23ctor%2A&gt;</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>_open, _wopen</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Opens a file and returns a file descriptor to the opened file.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::File::Open<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)</ept>, &lt;xref:System.IO.FileStream.%23ctor%2A&gt;</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>_sopen, _wsopen<ept id="p1">](../c-runtime-library/reference/sopen-wsopen.md)</ept>, <bpt id="p2">[</bpt>_sopen_s, _wsopen_s<ept id="p2">](../c-runtime-library/reference/sopen-s-wsopen-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Open a file with file sharing and returns a file descriptor to the open file.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>_pipe</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Creates a pipe for reading and writing.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>freopen, _wfreopen<ept id="p1">](../c-runtime-library/reference/freopen-wfreopen.md)</ept>, <bpt id="p2">[</bpt>freopen_s, _wfreopen_s<ept id="p2">](../c-runtime-library/reference/freopen-s-wfreopen-s.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Reassign a file pointer.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>System::IO::File::Open<ept id="p1">](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)</ept>, &lt;xref:System.IO.FileStream.%23ctor%2A&gt;</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The following functions provide a way to change the representation of the file between a <ph id="ph1">`FILE`</ph> structure, a file descriptor, and a Win32 file handle.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>_fdopen, _wfdopen</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Associates a stream with a file that was previously opened for low-level I/O and returns a pointer to the open stream.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>System::IO::File::Open</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>_fileno</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Gets the file descriptor associated with a stream.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>System::IO::FileStream::Handle</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>_get_osfhandle</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Return operating-system file handle associated with existing C run-time file descriptor</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>_open_osfhandle</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Associates C run-time file descriptor with an existing operating-system file handle.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>System::IO::FileStream::Handle</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The following Win32 functions also open files and pipes:</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>CreateFile</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>CreatePipe</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>CreateNamedPipe</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Run-Time Routines by Category</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Directory Control</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>System Calls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

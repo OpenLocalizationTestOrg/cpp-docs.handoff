@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1b3fbd736cb45dc3756b685ecc8f351b595758af</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\multithreading-creating-user-interface-threads.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">27df3c729337f982df214adc10c707f4a845f84e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">393ef4389527cb2ef1d3f87d298b0f0fb9ac49df</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Multithreading: Creating User-Interface Threads | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Multithreading: Creating User-Interface Threads</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A user-interface thread is commonly used to handle user input and respond to user events independently of threads executing other portions of the application.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The main application thread (provided in your <ph id="ph1">`CWinApp`</ph>-derived class) is already created and started for you.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This topic describes the steps necessary to create additional user-interface threads.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The first thing you must do when creating a user-interface thread is derive a class from <bpt id="p1">[</bpt>CWinThread<ept id="p1">](../mfc/reference/cwinthread-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You must declare and implement this class, using the <bpt id="p1">[</bpt>DECLARE_DYNCREATE<ept id="p1">](http://msdn.microsoft.com/library/f550e757-9dec-4875-b13f-841a982f5314)</ept> and <bpt id="p2">[</bpt>IMPLEMENT_DYNCREATE<ept id="p2">](http://msdn.microsoft.com/library/89ebcfa1-cc4d-49eb-a09b-8618f44f5e98)</ept> macros.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This class must override some functions and can override others.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>These functions and what they should do are presented in the following table.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Functions to Override When Creating a User-Interface Thread</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Purpose</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>ExitInstance<ept id="p1">](../mfc/reference/cwinthread-class.md#cwinthread__exitinstance)</ept>|Perform cleanup when thread terminates.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Usually overridden.|</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>InitInstance<ept id="p1">](../mfc/reference/cwinthread-class.md#cwinthread__initinstance)</ept>|Perform thread instance initialization.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Must be overridden.|</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>OnIdle<ept id="p1">](../mfc/reference/cwinthread-class.md#cwinthread__onidle)</ept>|Perform thread-specific idle-time processing.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Not usually overridden.|</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>PreTranslateMessage<ept id="p1">](../mfc/reference/cwinthread-class.md#cwinthread__pretranslatemessage)</ept>|Filter messages before they are dispatched to <bpt id="p2">**</bpt>TranslateMessage<ept id="p2">**</ept> and <bpt id="p3">**</bpt>DispatchMessage<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Not usually overridden.|</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>ProcessWndProcException<ept id="p1">](../mfc/reference/cwinthread-class.md#cwinthread__processwndprocexception)</ept>|Intercept unhandled exceptions thrown by the thread's message and command handlers.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Not usually overridden.|</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Run<ept id="p1">](../mfc/reference/cwinthread-class.md#cwinthread__run)</ept>|Controlling function for the thread.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Contains the message pump.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Rarely overridden.|</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>MFC provides two versions of <ph id="ph1">`AfxBeginThread`</ph> through parameter overloading: one that can only create worker threads and one that can create user-interface threads or worker threads.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To start your user-interface thread, call the second overload of <bpt id="p1">[</bpt>AfxBeginThread<ept id="p1">](http://msdn.microsoft.com/library/e9e8684d-24f7-4599-8fdf-1f4f560a753b)</ept>, providing the following information:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>RUNTIME_CLASS<ept id="p1">](http://msdn.microsoft.com/library/98cbea2a-a210-44f3-8bc0-0bed990d7014)</ept> of the class you derived from <ph id="ph1">`CWinThread`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>(Optional) The desired priority level.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The default is normal priority.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For more information about the available priority levels, see <bpt id="p1">[</bpt>SetThreadPriority<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms686277)</ept> in the <ph id="ph1">[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>(Optional) The desired stack size for the thread.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The default is the same size stack as the creating thread.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>(Optional) <bpt id="p1">**</bpt>CREATE_SUSPENDED<ept id="p1">**</ept> if you want the thread to be created in a suspended state.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The default is 0, or start the thread normally.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>(Optional) The desired security attributes.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The default is the same access as the parent thread.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For more information about the format of this security information, see <bpt id="p1">[</bpt>SECURITY_ATTRIBUTES<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/aa379560)</ept> in the <ph id="ph1">[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>does most of the work for you.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>It creates a new object of your class, initializes it with the information you supply, and calls <bpt id="p1">[</bpt>CWinThread::CreateThread<ept id="p1">](../mfc/reference/cwinthread-class.md#cwinthread__createthread)</ept> to start executing the thread.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Checks are made throughout the procedure to make sure all objects are deallocated properly should any part of the creation fail.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about?</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Multithreading: Terminating Threads</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Multithreading: Creating Worker Threads</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Processes and Threads</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Multithreading with C++ and MFC</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

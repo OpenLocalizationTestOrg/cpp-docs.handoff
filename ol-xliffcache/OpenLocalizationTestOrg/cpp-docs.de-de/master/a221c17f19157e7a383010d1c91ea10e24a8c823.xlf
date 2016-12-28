@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a221c17f19157e7a383010d1c91ea10e24a8c823</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\inline-functions-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">748b93a0143885dbdc03c24f1f9a5bba7151c352</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">820b4012aeb45b64f6880ac400ed2b62c4ed8ee9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Inline Functions (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Inline Functions (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A function defined in the body of a class declaration is an inline function.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In the following class declaration, the <ph id="ph1">`Account`</ph> constructor is an inline function.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The member functions <ph id="ph1">`GetBalance`</ph>, <ph id="ph2">`Deposit`</ph>, and <ph id="ph3">`Withdraw`</ph> are not specified as <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> but can be implemented as inline functions.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In the class declaration, the functions were declared without the <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> keyword.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> keyword can be specified in the class declaration; the result is the same.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>A given inline member function must be declared the same way in every compilation unit.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This constraint causes inline functions to behave as if they were instantiated functions.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Additionally, there must be exactly one definition of an inline function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A class member function defaults to external linkage unless a definition for that function contains the <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> specifier.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The preceding example shows that these functions need not be explicitly declared with the <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> specifier; using <bpt id="p2">**</bpt>inline<ept id="p2">**</ept> in the function definition causes it to be an inline function.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>However, it is illegal to redeclare a function as <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> after a call to that function.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Inline, __inline, and <ph id="ph1">\_</ph>_forceinline</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`inline`</ph> and <ph id="ph2">`__inline`</ph> specifiers instruct the compiler to insert a copy of the function body into each place the function is called.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The insertion (called inline expansion or inlining) occurs only if the compiler's cost/benefit analysis show it to be profitable.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Inline expansion alleviates the function-call overhead at the potential cost of larger code size.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__forceinline`</ph> keyword overrides the cost/benefit analysis and relies on the judgment of the programmer instead.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Exercise caution when using <ph id="ph1">`__forceinline`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Indiscriminate use of <ph id="ph1">`__forceinline`</ph> can result in larger code with only marginal performance gains or, in some cases, even performance losses (due to increased paging of a larger executable, for example).</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Using inline functions can make your program faster because they eliminate the overhead associated with function calls.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Functions expanded inline are subject to code optimizations not available to normal functions.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The compiler treats the inline expansion options and keywords as suggestions.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>There is no guarantee that functions will be inlined.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You cannot force the compiler to inline a particular function, even with the <ph id="ph1">`__forceinline`</ph> keyword.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>When compiling with <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept>, the compiler will not inline a function if there are security attributes applied to the function.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> keyword is available only in C++.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__inline`</ph> and <ph id="ph2">`__forceinline`</ph> keywords are available in both C and C++.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For compatibility with previous versions, <bpt id="p1">**</bpt>_inline<ept id="p1">**</ept> is a synonym for <ph id="ph1">`__inline`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> keyword tells the compiler that inline expansion is preferred.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>However, the compiler can create a separate instance of the function (instantiate) and create standard calling linkages instead of inserting the code inline.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Two cases where this can happen are:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Recursive functions.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Functions that are referred to through a pointer elsewhere in the translation unit.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>These reasons may interfere with inlining, <bpt id="p1">*</bpt>as may others<ept id="p1">*</ept>, at the discretion of the compiler; you should not depend on the <bpt id="p2">**</bpt>inline<ept id="p2">**</ept> specifier to cause a function to be inlined.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>As with normal functions, there is no defined order of evaluation of the arguments to an inline function.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>In fact, it could be different from the order in which the arguments are evaluated when passed using normal function call protocol.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>/Ob<ept id="p1">](../build/reference/ob-inline-function-expansion.md)</ept> compiler optimization option helps to determine whether inline function expansion actually occurs.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>/LTCG<ept id="p1">](../build/reference/ltcg-link-time-code-generation.md)</ept> performs cross-module inlining regardless of whether it was requested in source code.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Example 1</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>A class's member functions can be declared inline either by using the <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> keyword or by placing the function definition within the class definition.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Example 2</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__inline`</ph> keyword is equivalent to <bpt id="p1">**</bpt>inline<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Even with <ph id="ph1">`__forceinline`</ph>, the compiler cannot inline code in all circumstances.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The compiler cannot inline a function if:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The function or its caller is compiled with /Ob0 (the default option for debug builds).</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The function and the caller use different types of exception handling (C++ exception handling in one, structured exception handling in the other).</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The function has a variable argument list.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The function uses inline assembly, unless compiled with /Og, /Ox, /O1, or /O2.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The function is recursive and not accompanied by <bpt id="p1">**</bpt>#pragma inline_recursion(on)<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>With the pragma, recursive functions are inlined to a default depth of 16 calls.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>To reduce the inlining depth, use <bpt id="p1">[</bpt>inline_depth<ept id="p1">](../preprocessor/inline-depth.md)</ept> pragma.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The function is virtual and is called virtually.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Direct calls to virtual functions can be inlined.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The program takes the address of the function and the call is made via the pointer to the function.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Direct calls to functions that have had their address taken can be inlined.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The function is also marked with the <bpt id="p1">[</bpt>naked<ept id="p1">](../cpp/naked-cpp.md)</ept> <bpt id="p2">[</bpt>__declspec<ept id="p2">](../cpp/declspec.md)</ept> modifier.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>If the compiler cannot inline a function declared with <ph id="ph1">`__forceinline`</ph>, it generates a level 1 warning.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Recursive functions can be substituted inline to a depth specified by the <bpt id="p1">[</bpt>inline_depth<ept id="p1">](../preprocessor/inline-depth.md)</ept> pragma, up to a maximum of 16 calls.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>After that depth, recursive function calls are treated as calls to an instance of the function.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The depth to which recursive functions are examined by the inline heuristic cannot exceed 16.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>inline_recursion<ept id="p1">](../preprocessor/inline-recursion.md)</ept> pragma controls the inline expansion of a function currently under expansion.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>See the <bpt id="p1">[</bpt>Inline-Function Expansion<ept id="p1">](../build/reference/ob-inline-function-expansion.md)</ept> (/Ob) compiler option for related information.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>For more information on using the <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> specifier, see:</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Inline Class Member Functions</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Defining Inline C++ Functions with dllexport and dllimport</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>When to use inline functions</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Inline functions are best used for small functions such as accessing private data members.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The main purpose of these one- or two-line "accessor" functions is to return state information about objects; short functions are sensitive to the overhead of function calls.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Longer functions spend proportionately less time in the calling/returning sequence and benefit less from inlining.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`Point`</ph> class can be defined as follows:</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Assuming coordinate manipulation is a relatively common operation in a client of such a class, specifying the two accessor functions (<ph id="ph1">`x`</ph> and <ph id="ph2">`y`</ph> in the preceding example) as <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> typically saves the overhead on:</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Function calls (including parameter passing and placing the object's address on the stack)</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Preservation of caller's stack frame</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>New stack-frame setup</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Return-value communication</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Old stack-frame restore</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Return</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Inline functions vs. macros</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Although inline functions are similar to macros (because the function code is expanded at the point of the call at compile time), inline functions are parsed by the compiler, whereas macros are expanded by the preprocessor.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>As a result, there are several important differences:</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Inline functions follow all the protocols of type safety enforced on normal functions.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Inline functions are specified using the same syntax as any other function except that they include the <bpt id="p1">**</bpt>inline<ept id="p1">**</ept> keyword in the function declaration.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Expressions passed as arguments to inline functions are evaluated once.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>In some cases, expressions passed as arguments to macros can be evaluated more than once.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The following example shows a macro that converts lowercase letters to uppercase:</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The intent of the expression <ph id="ph1">`toupper(getc(stdin))`</ph> is that a character should be read from the console device (<ph id="ph2">`stdin`</ph>) and, if necessary, converted to uppercase.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Because of the implementation of the macro, <ph id="ph1">`getc`</ph> is executed once to determine whether the character is greater than or equal to "a," and once to determine whether it is less than or equal to "z."</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>If it is in that range, <ph id="ph1">`getc`</ph> is executed again to convert the character to uppercase.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>This means the program waits for two or three characters when, ideally, it should wait for only one.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Inline functions remedy the problem previously described:</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>noinline</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>auto_inline</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

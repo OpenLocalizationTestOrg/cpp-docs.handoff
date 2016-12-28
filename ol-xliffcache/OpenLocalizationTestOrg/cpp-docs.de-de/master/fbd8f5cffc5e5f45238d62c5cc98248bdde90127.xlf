@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fbd8f5cffc5e5f45238d62c5cc98248bdde90127</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\volatile-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ddb57ea29929d80a2410c1e701eac429f9fc621f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d6d9a0b091cec3844b63a93c21ec79b2527e3dbf</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>volatile (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>volatile (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A type qualifier that you can use to declare that an object can be modified in the program by the hardware.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">[</bpt>/volatile<ept id="p1">](../build/reference/volatile-volatile-keyword-interpretation.md)</ept> compiler switch to modify how the compiler interprets this keyword.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Visual Studio interprets the <ph id="ph1">`volatile`</ph> keyword differently depending on the target architecture.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For ARM, if no <bpt id="p1">**</bpt>/volatile<ept id="p1">**</ept> compiler option is specified, the compiler performs as if <bpt id="p2">**</bpt>/volatile:iso<ept id="p2">**</ept> were specified.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For architectures other than ARM, if no <bpt id="p1">**</bpt>/volatile<ept id="p1">**</ept> compiler option is specified, the compiler performs as if <bpt id="p2">**</bpt>/volatile:ms<ept id="p2">**</ept> were specified; therefore, for architectures other than ARM we strongly recommend that you specify <bpt id="p3">**</bpt>/volatile:iso<ept id="p3">**</ept>, and use explicit synchronization primitives and compiler intrinsics when you are dealing with memory that is shared across threads.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You can use the <ph id="ph1">`volatile`</ph> qualifier to provide access to memory locations that are used by asynchronous processes such as interrupt handlers.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When <ph id="ph1">`volatile`</ph> is used on a variable that also has the <bpt id="p1">[</bpt>__restrict<ept id="p1">](../cpp/extension-restrict.md)</ept> keyword, <ph id="ph2">`volatile`</ph> takes precedence.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If a <ph id="ph1">`struct`</ph> member is marked as <ph id="ph2">`volatile`</ph>, then <ph id="ph3">`volatile`</ph> is propagated to the whole structure.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If a structure does not have a length that can be copied on the current architecture by using one instruction, <ph id="ph1">`volatile`</ph> may be completely lost on that structure.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`volatile`</ph> keyword may have no effect on a field if one of the following conditions is true:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The length of the volatile field exceeds the maximum size that can be copied on the current architecture by using one instruction.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The length of the outermost containing <ph id="ph1">`struct`</ph>—or if it's a member of a possibly nested <ph id="ph2">`struct`</ph>—exceeds the maximum size that can be copied on the current architecture by using one instruction.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Although the processor does not reorder un-cacheable memory accesses, un-cacheable variables must be marked as <ph id="ph1">`volatile`</ph> to guarantee that the compiler does not reorder the memory accesses.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Objects that are declared as <ph id="ph1">`volatile`</ph> are not used in certain optimizations because their values can change at any time.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The system always reads the current value of a volatile object when it is requested, even if a previous instruction asked for a value from the same object.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Also, the value of the object is written immediately on assignment.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>ISO Compliant</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If you are familiar with the C# volatile keyword, or familiar with the behavior of <ph id="ph1">`volatile`</ph> in earlier versions of Visual C++, be aware that the C++11 ISO Standard <ph id="ph2">`volatile`</ph> keyword is different and is supported in Visual Studio when the <bpt id="p1">[</bpt>/volatile:iso<ept id="p1">](../build/reference/volatile-volatile-keyword-interpretation.md)</ept> compiler option is specified.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>(For ARM, it's specified by default).</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`volatile`</ph> keyword in C++11 ISO Standard code is to be used only for hardware access; do not use it for inter-thread communication.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For inter-thread communication, use mechanisms such as <bpt id="p1">[</bpt>std::atomic<ph id="ph1">\&lt;</ph>T&gt;<ept id="p1">](../standard-library/atomic.md)</ept> from the <bpt id="p2">[</bpt>C++ Standard Template Library<ept id="p2">](../standard-library/cpp-standard-library-reference.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>End of ISO Compliant</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>When the <bpt id="p1">**</bpt>/volatile:ms<ept id="p1">**</ept> compiler option is used—by default when architectures other than ARM are targeted—the compiler generates extra code to maintain ordering among references to volatile objects in addition to maintaining ordering to references to other global objects.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In particular:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>A write to a volatile object (also known as volatile write) has Release semantics; that is, a reference to a global or static object that occurs before a write to a volatile object in the instruction sequence will occur before that volatile write in the compiled binary.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>A read of a volatile object (also known as volatile read) has Acquire semantics; that is, a reference to a global or static object that occurs after a read of volatile memory in the instruction sequence will occur after that volatile read in the compiled binary.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This enables volatile objects to be used for memory locks and releases in multithreaded applications.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>When it relies on the enhanced guarantee that's provided when the <bpt id="p1">**</bpt>/volatile:ms<ept id="p1">**</ept> compiler option is used, the code is non-portable.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>End Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Keywords</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>const</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>const and volatile Pointers</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
