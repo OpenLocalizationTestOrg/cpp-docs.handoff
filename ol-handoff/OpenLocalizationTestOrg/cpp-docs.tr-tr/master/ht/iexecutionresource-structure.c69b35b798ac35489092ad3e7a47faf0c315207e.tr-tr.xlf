@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">530fd40409a08be6ae13ad604deb5b85989b2964</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\reference\iexecutionresource-structure.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9a0e3e9328f2d3061875da7a452e83db8f745ff1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bd0ab9c15eaf191c287833e53bd07b064da7592f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>IExecutionResource Structure | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>IExecutionResource Structure</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>An abstraction for a hardware thread.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Members</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Public Methods</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>IExecutionResource::CurrentSubscriptionLevel Method</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Returns the number of activated virtual processor roots and subscribed external threads currently associated with the underlying hardware thread this execution resource represents.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>IExecutionResource::GetExecutionResourceId Method</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Returns a unique identifier for the hardware thread that this execution resource represents.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>IExecutionResource::GetNodeId Method</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Returns a unique identifier for the processor node that this execution resource belongs to.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>IExecutionResource::Remove Method</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Returns this execution resource to the Resource Manager.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Execution resources can be standalone or associated with virtual processor roots.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A standalone execution resource is created when a thread in your application creates a thread subscription.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The methods <bpt id="p1">[</bpt>ISchedulerProxy::SubscribeThread<ept id="p1">](ischedulerproxy-structure.md#subscribecurrentthread)</ept> and <bpt id="p2">[</bpt>ISchedulerProxy::RequestInitialVirtualProcessors<ept id="p2">](ischedulerproxy-structure.md#requestinitialvirtualprocessors)</ept> create thread subscriptions, and return an <ph id="ph1">`IExecutionResource`</ph> interface representing the subscription.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Creating a thread subscription is a way to inform the Resource Manager that a given thread will participate in the work queued to a scheduler, along with the virtual processor roots Resource Manager assigns to the scheduler.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The Resource Manager uses the information to avoid oversubscribing hardware threads where it can.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Inheritance Hierarchy</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> concrtrm.h</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> concurrency</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>IExecutionResource::CurrentSubscriptionLevel Method</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Returns the number of activated virtual processor roots and subscribed external threads currently associated with the underlying hardware thread this execution resource represents.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The current subscription level.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The subscription level tells you how many running threads are associated with the hardware thread.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This only includes threads the Resource Manager is aware of in the form of subscribed threads, and virtual processor roots that are actively executing thread proxies.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Calling the method <bpt id="p1">[</bpt>ISchedulerProxy::SubscribeCurrentThread<ept id="p1">](ischedulerproxy-structure.md#subscribecurrentthread)</ept>, or the method <bpt id="p2">[</bpt>ISchedulerProxy::RequestInitialVirtualProcessors<ept id="p2">](ischedulerproxy-structure.md#requestinitialvirtualprocessors)</ept> with the parameter <ph id="ph1">`doSubscribeCurrentThread`</ph> set to the value <ph id="ph2">`true`</ph> increments the subscription level of a hardware thread by one.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>They also return an <ph id="ph1">`IExecutionResource`</ph> interface representing the subscription.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>A corresponding call to the <bpt id="p1">[</bpt>IExecutionResource::Remove<ept id="p1">](#remove)</ept> decrements the hardware thread's subscription level by one.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The act of activating a virtual processor root using the method <bpt id="p1">[</bpt>IVirtualProcessorRoot::Activate<ept id="p1">](ivirtualprocessorroot-structure.md#activate)</ept> increments the subscription level of a hardware thread by one.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The methods <bpt id="p1">[</bpt>IVirtualProcessorRoot::Deactivate<ept id="p1">](ivirtualprocessorroot-structure.md#deactivate)</ept>, or <bpt id="p2">[</bpt>IExecutionResource::Remove<ept id="p2">](#remove)</ept> decrement the subscription level by one when invoked on an activated virtual processor root.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The Resource Manager uses subscription level information as one of the ways in which to determine when to move resources between schedulers.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>IExecutionResource::GetExecutionResourceId Method</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Returns a unique identifier for the hardware thread that this execution resource represents.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>A unique identifier for the hardware thread underlying this execution resource.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Each hardware thread is assigned a unique identifier by the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If multiple execution resources are associated hardware thread, they will all have the same execution resource identifier.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>IExecutionResource::GetNodeId Method</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Returns a unique identifier for the processor node that this execution resource belongs to.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>A unique identifier for a processor node.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime represents hardware threads on the system in groups of processor nodes.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Nodes are usually derived from the hardware topology of the system.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>For example, all processors on a specific socket or a specific NUMA node may belong to the same processor node.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The Resource Manager assigns unique identifiers to these nodes starting with <ph id="ph1">`0`</ph> up to and including <ph id="ph2">`nodeCount - 1`</ph>, where <ph id="ph3">`nodeCount`</ph> represents the total number of processor nodes on the system.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The count of nodes can be obtained from the function <bpt id="p1">[</bpt>GetProcessorNodeCount<ept id="p1">](concurrency-namespace-functions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>IExecutionResource::Remove Method</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Returns this execution resource to the Resource Manager.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>An interface to the scheduler making the request to remove this execution resource.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Use this method to return standalone execution resources as well as execution resources associated with virtual processor roots to the Resource Manager.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>If this is a standalone execution resource you received from either of the methods <bpt id="p1">[</bpt>ISchedulerProxy::SubscribeCurrentThread<ept id="p1">](ischedulerproxy-structure.md#subscribecurrentthread)</ept> or <bpt id="p2">[</bpt>ISchedulerProxy::RequestInitialVirtualProcessors<ept id="p2">](ischedulerproxy-structure.md#requestinitialvirtualprocessors)</ept>, calling the method <ph id="ph1">`Remove`</ph> will end the thread subscription that the resource was created to represent.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>You are required to end all thread subscriptions before shutting down a scheduler proxy, and must call <ph id="ph1">`Remove`</ph> from the thread that created the subscription.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Virtual processor roots, too, can be returned to the Resource Manager by invoking the <ph id="ph1">`Remove`</ph> method, because the interface <ph id="ph2">`IVirtualProcessorRoot`</ph> inherits from the <ph id="ph3">`IExecutionResource`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>You may need to return a virtual processor root either in response to a call to the <bpt id="p1">[</bpt>IScheduler::RemoveVirtualProcessors<ept id="p1">](ischeduler-structure.md#removevirtualprocessors)</ept> method, or when you are done with an oversubscribed virtual processor root you obtained from the <bpt id="p2">[</bpt>ISchedulerProxy::CreateOversubscriber<ept id="p2">](ischedulerproxy-structure.md#createoversubscriber)</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>For virtual processor roots, there are no restrictions on which thread can invoke the <ph id="ph1">`Remove`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>is thrown if the parameter <ph id="ph1">`pScheduler`</ph> is set to <ph id="ph2">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>is thrown if the parameter <ph id="ph1">`pScheduler`</ph> is different from the scheduler that this execution resource was created for, or, with a standalone execution resource, if the current thread is different from the thread that created the thread subscription.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>concurrency Namespace</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>IVirtualProcessorRoot Structure</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3c699d7dabdfd9aaccbdfd53cdf40b1e352d5eb1</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\data-source-programmatically-configuring-an-odbc-data-source.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">abe3b61558664028f1759c4a46dc43c302251026</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5723b0f2799e8be5b9b775e59154bf8c99a8049b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Data Source: Programmatically Configuring an ODBC Data Source | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Data Source: Programmatically Configuring an ODBC Data Source</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic explains how you can configure Open Database Connectivity (ODBC) data source names programmatically.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This gives you flexibility to access data without forcing the user to explicitly use the ODBC Administrator or other programs to specify the names of data sources.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Typically, a user runs ODBC Administrator to create a data source if the associated database management system (DBMS) supports this operation.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When creating a Microsoft Access ODBC data source through ODBC Administrator, you are given two choices: you can select an existing .mdb file or you can create a new .mdb file.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>There is no programmatic way of creating the .mdb file from your MFC ODBC application.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Therefore, if your application requires that you place data into a Microsoft Access data source (.mdb file), you most likely want to have an empty .mdb file that you can use or copy whenever you need it.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>However, many DBMSs allow programmatic data source creation.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Some data sources maintain a directory specification for databases.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>That is, a directory is the data source and each table within the data source is stored in a separate file (in the case of dBASE, each table is a .dbf file).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Drivers for other ODBC databases, such as Microsoft Access and SQL Server, require that some specific criteria be satisfied before a data source can be established.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For example, when using the SQL Server ODBC driver, you need to have established a SQL Server computer.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>SQLConfigDataSource Example</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following example uses the <bpt id="p1">**</bpt>::SQLConfigDataSource<ept id="p1">**</ept> ODBC API function to create a new Excel data source called New Excel Data Source:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Note that the data source is actually a directory (C:\EXCELDIR); this directory must exist.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The Excel driver uses directories as its data sources and files as the individual tables (one table per .xls file).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For more information about creating tables, see <bpt id="p1">[</bpt>Data Source: Programmatically Creating a Table in an ODBC Data Source<ept id="p1">](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The following information discusses the parameters that need to be passed to the <bpt id="p1">**</bpt>::SQLConfigDataSource<ept id="p1">**</ept> ODBC API function.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To use <bpt id="p1">**</bpt>::SQLConfigDataSource<ept id="p1">**</ept>, you must include the Odbcinst.h header file and use the Odbcinst.lib import library.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Also, Odbccp32.dll must be in the path at run time (or Odbcinst.dll for 16 bit).</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>You can create an ODBC data source name using ODBC Administrator or a similar utility.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>However, sometimes it is desirable to create a data source name directly from your application to obtain access without requiring the user to run a separate utility.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>ODBC Administrator (typically installed in Control Panel) creates a new data source by putting entries in the Windows registry (or, for 16 bit, in the Odbc.ini file).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The ODBC Driver Manager queries this file to obtain the required information about the data source.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>It is important to know what information needs to be placed in the registry because you need to supply it with the call to <bpt id="p1">**</bpt>::SQLConfigDataSource<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Although this information could be written directly to the registry without using <bpt id="p1">**</bpt>::SQLConfigDataSource<ept id="p1">**</ept>, any application that does so is relying on the current technique that the Driver Manager uses to maintain its data.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If a later revision to the ODBC Driver Manager implements record keeping about data sources in a different way, any application that uses this technique is broken.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>It is generally advisable to use an API function when one is provided.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, your code is portable from 16 bit to 32 bit if you use the <bpt id="p1">**</bpt>::SQLConfigDataSource<ept id="p1">**</ept> function, because the function correctly writes to the Odbc.ini file or to the registry.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>SQLConfigDataSource Parameters</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The following explains the parameters of the <bpt id="p1">**</bpt>::SQLConfigDataSource<ept id="p1">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Much of the information is taken from the ODBC API <bpt id="p1">*</bpt>Programmer's Reference<ept id="p1">*</ept> supplied with Visual C++ version 1.5 and later.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Function Prototype</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Parameters and Usage</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>hwndParent</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The window specified as the owner of any dialog boxes that either the ODBC Driver Manager or the specific ODBC driver creates to obtain additional information from the user about the new data source.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`lpszAttributes`</ph> parameter does not supply enough information, a dialog box appears.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>hwndParent<ept id="p1">*</ept> parameter might be <bpt id="p2">**</bpt>NULL<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The driver description.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This is the name presented to users rather than the physical driver name (the DLL).</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>List of attributes in the form "keyname=value".</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>These strings are separated by null terminators with two consecutive null terminators at the end of the list.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>These attributes are primarily default driver-specific entries, which go into the registry for the new data source.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>One important key that is not mentioned in the ODBC API reference for this function is "DSN" ("data source name"), which specifies the name of the new data source.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The rest of the entries are specific to the driver for the new data source.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Often it is not necessary to supply all of the entries because the driver can prompt the user with dialog boxes for the new values.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>(Set <bpt id="p1">*</bpt>hwndParent<ept id="p1">*</ept> to <bpt id="p2">**</bpt>NULL<ept id="p2">**</ept> to cause this.) You might want to explicitly supply default values so that the user is not prompted.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>To determine the description of a driver for the lpszDriver parameter using ODBC Administrator</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Run ODBC Administrator.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>This gives you a list of installed drivers and their descriptions.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Use this description as the <ph id="ph1">`lpszDriver`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Note that you use the entire description, such as "Excel Files (*.xls)", including the file name extension and parentheses if they exist in the description.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>As an alternative, you can examine the registry (or, for 16 bit, the file Odbcinst.ini), which contains a list of all driver entries and descriptions under the registry key "ODBC Drivers" (or the section [ODBC Drivers] in Odbcinst.ini).</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>One way to find the keynames and values for the <ph id="ph1">`lpszAttributes`</ph> parameter is to examine the Odbc.ini file for an already configured data source (perhaps one that has been configured by ODBC Administrator).</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>To find keynames and values for the lpszAttributes parameter</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Run the Windows registry editor (or, for 16 bit, open the Odbc.ini file).</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Find the ODBC data sources information using one of the following:</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>For 32 bit, find the key <bpt id="p1">**</bpt>HKEY_CURRENT_USER\Software\ODBC\ODBC.INI\ODBC Data Sources<ept id="p1">**</ept> in the left pane.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The right pane lists entries of the form: "pub: REG_SZ:<bpt id="p1">*</bpt><ph id="ph1">&lt;data source name&gt;</ph><ept id="p1">*</ept>", where <bpt id="p2">*</bpt><ph id="ph2">&lt;data source name&gt;</ph><ept id="p2">*</ept> is a data source that has already been configured with the desired settings for the driver you intend to use.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Select the data source you want, for example, SQL Server.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The items following the string "pub:" are, in order, the keyname and value to use in your <ph id="ph1">`lpszAttributes`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>For 16 bit, find the section in the Odbc.ini file marked by [<bpt id="p1">*</bpt><ph id="ph1">\&lt;</ph>data source name&gt;<ept id="p1">*</ept>].</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The lines following this line are of the form "keyname=value".</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>These are exactly the entries to use in your <ph id="ph1">`lpszAttributes`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>You might also want to examine the documentation for the specific driver you are going to use.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>You can find useful information in the online Help for the driver, which you can access by running ODBC Administrator.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>These Help files are usually placed in the WINDOWS\SYSTEM directory for Windows NT, Windows 3.1, or Windows 95.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>To obtain online Help for your ODBC driver</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Run ODBC Administrator.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Select the driver name.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>When ODBC Administrator displays the information for creating a new data source for that particular driver, click <bpt id="p1">**</bpt>Help<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>This opens the Help file for that particular driver, which generally contains important information concerning the use of the driver.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Data Source (ODBC)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

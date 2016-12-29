@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3008c83f7e486be7753d8c5fe5c975e1b4b01fd6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\2-7-1-threadprivate-directive.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9335437b35316f2b6d313050800d72e7d0a7577b</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3b36b65692f9c53ea8c07b2541cd05206fa24f10</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>2.7.1 threadprivate Directive | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>2.7.1 threadprivate Directive</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`threadprivate`</ph> directive makes the named file-scope, namespace-scope, or static block-scope variables specified in the <bpt id="p1">*</bpt>variable-list<ept id="p1">*</ept> private to a thread.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>variable-list<ept id="p1">*</ept> is a comma-separated list of variables that do not have an incomplete type.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The syntax of the <ph id="ph1">`threadprivate`</ph> directive is as follows:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Each copy of a <ph id="ph1">`threadprivate`</ph> variable is initialized once, at an unspecified point in the program prior to the first reference to that copy, and in the usual manner (i.e., as the master copy would be initialized in a serial execution of the program).</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Note that if an object is referenced in an explicit initializer of a <ph id="ph1">`threadprivate`</ph> variable, and the value of the object is modified prior to the first reference to a copy of the variable, then the behavior is unspecified.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>As with any private variable, a thread must not reference another thread's copy of a <ph id="ph1">`threadprivate`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>During serial regions and master regions of the program, references will be to the master thread's copy of the object.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>After the first parallel region executes, the data in the <ph id="ph1">`threadprivate`</ph> objects is  guaranteed to persist only if the dynamic threads mechanism has been disabled and if the number of threads remains unchanged for all parallel regions.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The restrictions to the <ph id="ph1">`threadprivate`</ph> directive are as follows:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`threadprivate`</ph> directive for file-scope or namespace-scope variables must appear outside any definition or declaration, and must lexically precede all references to any of the variables in its list.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Each variable in the <bpt id="p1">*</bpt>variable-list<ept id="p1">*</ept> of a <ph id="ph1">`threadprivate`</ph> directive at file or namespace scope must refer to a variable declaration at file or namespace scope that lexically precedes the directive.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`threadprivate`</ph> directive for static block-scope variables must appear in the scope of the variable and not in a nested scope.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The directive must lexically precede all references to any of the variables in its list.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Each variable in the <bpt id="p1">*</bpt>variable-list<ept id="p1">*</ept> of a <ph id="ph1">`threadprivate`</ph> directive in block scope must refer to a variable declaration in the same scope that lexically precedes the directive.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The variable declaration must use the static storage-class specifier.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If a variable is specified in a <ph id="ph1">`threadprivate`</ph> directive in one translation unit, it must be specified in a <ph id="ph2">`threadprivate`</ph> directive in every translation unit in which it is declared.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`threadprivate`</ph> variable must not appear in any clause except the <ph id="ph2">`copyin`</ph>, <ph id="ph3">`copyprivate`</ph>, <ph id="ph4">`schedule`</ph>, <ph id="ph5">`num_threads`</ph>, or the <bpt id="p1">**</bpt>if<ept id="p1">**</ept> clause.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The address of a <ph id="ph1">`threadprivate`</ph> variable is not an address constant.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`threadprivate`</ph> variable must not have an incomplete type or a reference type.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`threadprivate`</ph> variable with non-POD class type must have an accessible, unambiguous copy constructor if it is declared with an explicit initializer.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The following example illustrates how modifying a variable that appears in an initializer can cause unspecified behavior, and also how to avoid this problem by using an auxiliary object and a copy-constructor.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Cross References:</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Dynamic threads, see <bpt id="p1">[</bpt>Section 3.1.7<ept id="p1">](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)</ept> on page 39.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>environment variable, see <bpt id="p1">[</bpt>Section 4.3<ept id="p1">](../../parallel/openmp/4-3-omp-dynamic.md)</ept> on page 49.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

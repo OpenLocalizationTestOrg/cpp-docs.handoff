@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0eed4e91ddbfe08e048eb406d1a7b5934503c7c8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\crtsetdumpclient.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c8674f250c195d898c92984ac386a9bca5755b12</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9eb7171ec6a8e388e27220c27d0ccbb4b3082953</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_CrtSetDumpClient | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_CrtSetDumpClient</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Installs an application-defined function to dump <ph id="ph1">`_CLIENT_BLOCK`</ph> type memory blocks (debug version only).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>New client-defined memory dump function to hook into the C run-time debug memory dump process.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Returns the previously defined client block dump function.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_CrtSetDumpClient`</ph> function allows the application to hook its own function to dump objects stored in <ph id="ph2">`_CLIENT_BLOCK`</ph> memory blocks into the C run-time debug memory dump process.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>As a result, every time a debug dump function such as <bpt id="p1">[</bpt>_CrtMemDumpAllObjectsSince<ept id="p1">](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)</ept> or <bpt id="p2">[</bpt>_CrtDumpMemoryLeaks<ept id="p2">](../../c-runtime-library/reference/crtdumpmemoryleaks.md)</ept> dumps a <ph id="ph1">`_CLIENT_BLOCK`</ph> memory block, the application's dump function is called as well.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>provides an application with an easy method for detecting memory leaks and validating or reporting the contents of data stored in <ph id="ph1">`_CLIENT_BLOCK`</ph> blocks.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">[</bpt>_DEBUG<ept id="p1">](../../c-runtime-library/debug.md)</ept> is not defined, calls to <ph id="ph1">`_CrtSetDumpClient`</ph> are removed during preprocessing.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_CrtSetDumpClient`</ph> function installs the new application-defined dump function specified in <ph id="ph2">`dumpClient`</ph> and returns the previously defined dump function.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>An example of a client block dump function is as follows:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`userPortion`</ph> argument is a pointer to the beginning of the user data portion of the memory block and <ph id="ph2">`blockSize`</ph> specifies the size of the allocated memory block in bytes.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The client block dump function must return <ph id="ph1">`void`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The pointer to the client dump function that is passed to <ph id="ph1">`_CrtSetDumpClient`</ph> is of type <ph id="ph2">`_CRT_DUMP_CLIENT`</ph>, as defined in Crtdbg.h:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information about functions that operate on <ph id="ph1">`_CLIENT_BLOCK`</ph> type memory blocks, see <bpt id="p1">[</bpt>Client Block Hook Functions<ept id="p1">](/visualstudio/debugger/client-block-hook-functions)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>_CrtReportBlockType<ept id="p1">](../../c-runtime-library/reference/crtreportblocktype.md)</ept> function can be used to return information about block types and subtypes.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>crtdbg.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For more compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Libraries</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Debug versions of <bpt id="p1">[</bpt>C run-time libraries<ept id="p1">](../../c-runtime-library/crt-library-features.md)</ept> only.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Debug Routines</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>_CrtReportBlockType</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>_CrtGetDumpClient</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4b2463ea1bf469d90d16b2f18cbcf9c18e1e8b52</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\assembler\inline\using-and-preserving-registers-in-inline-assembly.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c18403a01f7054def9d6d2436cdbf66d8a99d7cb</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3660f853e618cb3688a23ea08bd5fb474415adec</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using and Preserving Registers in Inline Assembly | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using and Preserving Registers in Inline Assembly</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In general, you should not assume that a register will have a given value when an <ph id="ph1">`__asm`</ph> block begins.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Register values are not guaranteed to be preserved across separate <ph id="ph1">`__asm`</ph> blocks.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If you end a block of inline code and begin another, you cannot rely on the registers in the second block to retain their values from the first block.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`__asm`</ph> block inherits whatever register values result from the normal flow of control.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If you use the <ph id="ph1">`__fastcall`</ph> calling convention, the compiler passes function arguments in registers instead of on the stack.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This can create problems in functions with <ph id="ph1">`__asm`</ph> blocks because a function has no way to tell which parameter is in which register.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If the function happens to receive a parameter in EAX and immediately stores something else in EAX, the original parameter is lost.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In addition, you must preserve the ECX register in any function declared with <ph id="ph1">`__fastcall`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To avoid such register conflicts, don't use the <ph id="ph1">`__fastcall`</ph> convention for functions that contain an <ph id="ph2">`__asm`</ph> block.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If you specify the <ph id="ph1">`__fastcall`</ph> convention globally with the /Gr compiler option, declare every function containing an <ph id="ph2">`__asm`</ph> block with <ph id="ph3">`__cdecl`</ph> or <ph id="ph4">`__stdcall`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>(The <ph id="ph1">`__cdecl`</ph> attribute tells the compiler to use the C calling convention for that function.) If you are not compiling with /Gr, avoid declaring the function with the <ph id="ph2">`__fastcall`</ph> attribute.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>When using <ph id="ph1">`__asm`</ph> to write assembly language in C/C++ functions, you don't need to preserve the EAX, EBX, ECX, EDX, ESI, or EDI registers.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For example, in the POWER2.C example in <bpt id="p1">[</bpt>Writing Functions with Inline Assembly<ept id="p1">](../../assembler/inline/writing-functions-with-inline-assembly.md)</ept>, the <ph id="ph1">`power2`</ph> function doesn't preserve the value in the EAX register.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>However, using these registers will affect code quality because the register allocator cannot use them to store values across <ph id="ph1">`__asm`</ph> blocks.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In addition, by using EBX, ESI or EDI in inline assembly code, you force the compiler to save and restore those registers in the function prologue and epilogue.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You should preserve other registers you use (such as DS, SS, SP, BP, and flags registers) for the scope of the <ph id="ph1">`__asm`</ph> block.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>You should preserve the ESP and EBP registers unless you have some reason to change them (to switch stacks, for example).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Also see <bpt id="p1">[</bpt>Optimizing Inline Assembly<ept id="p1">](../../assembler/inline/optimizing-inline-assembly.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Some SSE types require eight-byte stack alignment, forcing the compiler to emit dynamic stack-alignment code.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To be able to access both the local variables and the function parameters after the alignment, the compiler maintains two frame pointers.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If the compiler performs frame pointer omission (FPO), it will use EBP and ESP.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>If the compiler does not perform FPO, it will use EBX and EBP.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To ensure code runs correctly, do not modify EBX in asm code if the function requires dynamic stack alignment as it could modify the frame pointer.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Either move the eight-byte aligned types out of the function, or avoid using EBX.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If your inline assembly code changes the direction flag using the STD or CLD instructions, you must restore the flag to its original value.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Inline Assembler</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

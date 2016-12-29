@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">17b76d04147a5e99527af485e5fa6c6354587f85</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\auto-ptr-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">483602cede9409fdf8415461f619d97ac942216d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cea46a936048c8ce8b3507eed6107158ca339a01</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>auto_ptr Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>auto_ptr Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Wraps a smart pointer around a resource that ensures the resource is destroyed automatically when control leaves a block.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The more capable <ph id="ph1">`unique_ptr`</ph> class supersedes <ph id="ph2">`auto_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>unique_ptr Class<ept id="p1">](../standard-library/unique-ptr-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For more information about <ph id="ph1">`throw()`</ph> and exception handling, see <bpt id="p1">[</bpt>Exception Specifications (throw)<ept id="p1">](../cpp/exception-specifications-throw-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`auto_ptr`</ph> from which to get an existing resource.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The pointer specified to replace the stored pointer.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The template class describes a smart pointer, called an <ph id="ph1">`auto_ptr,`</ph> to an allocated object.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The pointer must be either null or designate an object allocated by <ph id="ph1">`new`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`auto_ptr`</ph> transfers ownership if its stored value is assigned to another object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>(It replaces the stored value after a transfer with a null pointer.) The destructor for <ph id="ph1">`auto_ptr&lt;Type&gt;`</ph> deletes the allocated object.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`auto_ptr&lt;Type&gt;`</ph> ensures that an allocated object is automatically deleted when control leaves a block, even through a thrown exception.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>You should not construct two <ph id="ph1">`auto_ptr&lt;Type&gt;`</ph> objects that own the same object.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You can pass an <ph id="ph1">`auto_ptr&lt;Type&gt;`</ph> object by value as an argument to a function call.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`auto_ptr`</ph> cannot be an element of any Standard Library container.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>You cannot reliably manage a sequence of <ph id="ph1">`auto_ptr&lt;Type&gt;`</ph> objects with a Standard Template Library container.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Members</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Constructors</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>auto_ptr</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The constructor for objects of type <ph id="ph1">`auto_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Typedefs</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>element_type</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The type is a synonym for the template parameter <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Member Functions</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>get</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The member function returns the stored pointer <ph id="ph1">`myptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>release</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The member replaces the stored pointer <ph id="ph1">`myptr`</ph> with a null pointer and returns the previously stored pointer.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>reset</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The member function evaluates the expression <ph id="ph1">`deleteÂ myptr`</ph>, but only if the stored pointer value <ph id="ph2">`myptr`</ph> changes as a result of function call.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>It then replaces the stored pointer with <ph id="ph1">`ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Operators</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>operator=</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>An assignment operator that transfers ownership from one <ph id="ph1">`auto_ptr`</ph> object to another.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>operator*</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The dereferencing operator for objects of type <ph id="ph1">`auto_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>operator-&gt;</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The operator for allowing member access.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>operator auto_ptr<ph id="ph1">\&lt;</ph>Other&gt;</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Casts from one kind of <ph id="ph1">`auto_ptr`</ph> to another kind of <ph id="ph2">`auto_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>operator auto_ptr_ref<ph id="ph1">\&lt;</ph>Other&gt;</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Casts from an <ph id="ph1">`auto_ptr`</ph> to an <ph id="ph2">`auto_ptr_ref`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> <ph id="ph1">\&lt;</ph>memory&gt;</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> std</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>auto_ptr::auto_ptr</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The constructor for objects of type <ph id="ph1">`auto_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The pointer to the object that <ph id="ph1">`auto_ptr`</ph> encapsulates.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`auto_ptr`</ph> object to be copied by the constructor.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The first constructor stores <ph id="ph1">` ptr`</ph> in <bpt id="p1">**</bpt>myptr<ept id="p1">**</ept>, the stored pointer to the allocated object.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The second constructor transfers ownership of the pointer stored in <ph id="ph1">` right`</ph>, by storing <ph id="ph2">` right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>release<ept id="p1">](#auto_ptr__release)</ept> in <bpt id="p2">**</bpt>myptr<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The third constructor behaves the same as the second, except that it stores <bpt id="p1">**</bpt>right<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>release<ept id="p1">**</ept> in <bpt id="p2">**</bpt>myptr<ept id="p2">**</ept>, where <ph id="ph1">`ref`</ph> is the reference stored in <ph id="ph2">` right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The template constructor behaves the same as the second constructor, provided that a pointer to <bpt id="p1">**</bpt>Other<ept id="p1">**</ept> can be implicitly converted to a pointer to <bpt id="p2">**</bpt>Type<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>auto_ptr::element_type</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The type is a synonym for the template parameter <bpt id="p1">**</bpt>Type<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>auto_ptr::get</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The member function returns the stored pointer <bpt id="p1">**</bpt>myptr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The stored pointer <bpt id="p1">**</bpt>myptr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>auto_ptr::operator=</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>An assignment operator that transfers ownership from one <ph id="ph1">`auto_ptr`</ph> object to another.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>An object of type <ph id="ph1">`auto_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>A reference to an object of type <ph id="ph1">`auto_ptr`\&lt;</ph> <bpt id="p1">**</bpt>Type<ept id="p1">**</ept>&gt;.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The assignment evaluates the expression <bpt id="p1">**</bpt>delete myptr<ept id="p1">**</ept>, but only if the stored pointer <bpt id="p2">**</bpt>myptr<ept id="p2">**</ept> changes as a result of the assignment.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>It then transfers ownership of the pointer stored in _ <bpt id="p1">*</bpt>Right<ept id="p1">*</ept>, by storing <ph id="ph1">\_</ph> <bpt id="p2">*</bpt>Right<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>release<ept id="p1">](#auto_ptr__release)</ept> in <bpt id="p2">**</bpt>myptr<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The function returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>For an example of the use of the member operator, see <bpt id="p1">[</bpt>auto_ptr::auto_ptr<ept id="p1">](#auto_ptr__auto_ptr)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>auto_ptr::operator*</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The dereferencing operator for objects of type <ph id="ph1">`auto_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>A reference to an object of type <bpt id="p1">**</bpt>Type<ept id="p1">**</ept> that the pointer owns.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The indirection operator returns <ph id="ph1">`*`</ph><bpt id="p1">[</bpt>get<ept id="p1">](#auto_ptr__get)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Hence, the stored pointer must not be null.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>For an example of how to use the member function, see <bpt id="p1">[</bpt>auto_ptr::auto_ptr<ept id="p1">](#auto_ptr__auto_ptr)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>auto_ptr::operator-</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The operator for allowing member access.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>A member of the object that <bpt id="p1">**</bpt>auto_ptr<ept id="p1">**</ept> owns.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The selection operator returns <bpt id="p1">[</bpt>get<ept id="p1">](#auto_ptr__get)</ept><ph id="ph1">`( )`</ph>, so that the expression <bpt id="p2">*</bpt>ap<ept id="p2">*</ept><ph id="ph2">-&gt; </ph><bpt id="p3">**</bpt>member<ept id="p3">**</ept> behaves the same as ( <bpt id="p4">*</bpt>ap<ept id="p4">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>get<ept id="p1">**</ept>( ) )-&gt; <bpt id="p2">**</bpt>member<ept id="p2">**</ept>, where <bpt id="p3">*</bpt>ap<ept id="p3">*</ept> is an object of class <ph id="ph1">`auto_ptr`\&lt;</ph> <bpt id="p4">**</bpt>Type<ept id="p4">**</ept>&gt;.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Hence, the stored pointer must not be null, and <bpt id="p1">**</bpt>Type<ept id="p1">**</ept> must be a class, struct, or union type with a <bpt id="p2">**</bpt>member<ept id="p2">**</ept> member.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>For an example of how to use the member function, see <bpt id="p1">[</bpt>auto_ptr::auto_ptr<ept id="p1">](#auto_ptr__auto_ptr)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>auto_ptr::operator auto_ptr<ph id="ph1">&amp;lt;</ph>Other</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Casts from one kind of <ph id="ph1">`auto_ptr`</ph> to another kind of <ph id="ph2">`auto_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The type cast operator returns <ph id="ph1">`auto_ptr`</ph> <ph id="ph2">\&lt;</ph> <bpt id="p1">**</bpt>Other<ept id="p1">**</ept>&gt;( <bpt id="p2">**</bpt><ph id="ph3">\*</ph>this<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>auto_ptr::operator auto_ptr_ref<ph id="ph1">&amp;lt;</ph>Other</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Casts from an <ph id="ph1">`auto_ptr`</ph> to an <bpt id="p1">**</bpt>auto_ptr_ref<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The type cast operator returns <bpt id="p1">**</bpt>auto_ptr_ref<ept id="p1">**</ept><ph id="ph1">\&lt;</ph> <bpt id="p2">**</bpt>Other<ept id="p2">**</ept>&gt;( <bpt id="p3">**</bpt><ph id="ph2">\*</ph>this<ept id="p3">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>auto_ptr::release</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>The member replaces the stored pointer <bpt id="p1">**</bpt>myptr<ept id="p1">**</ept> with a null pointer and returns the previously stored pointer.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The previously stored pointer.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The member replaces the stored pointer <bpt id="p1">**</bpt>myptr<ept id="p1">**</ept> with a null pointer and returns the previously stored pointer.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>auto_ptr::reset</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The member function evaluates the expression <bpt id="p1">**</bpt>delete<ept id="p1">**</ept>Â <bpt id="p2">**</bpt>myptr<ept id="p2">**</ept>, but only if the stored pointer value <bpt id="p3">**</bpt>myptr<ept id="p3">**</ept> changes as a result of a function call.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>It then replaces the stored pointer with <bpt id="p1">**</bpt>ptr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The pointer specified to replace the stored pointer <bpt id="p1">**</bpt>myptr<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Thread Safety in the C++ Standard Library</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>unique_ptr Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

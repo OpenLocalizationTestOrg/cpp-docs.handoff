@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fae8fa660764042da15031e7aaf811a4fdaead5d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\using-wmain-instead-of-main.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bbabb5f36d0a620ffb8c60fba31bf3501982776e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">82df17a11a578469f072a2e00d8dc11d025e7e09</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using wmain Instead of main | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using wmain Instead of main</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In the Unicode programming model, you can define a wide-character version of the <bpt id="p1">**</bpt>main<ept id="p1">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">**</bpt>wmain<ept id="p1">**</ept> instead of <bpt id="p2">**</bpt>main<ept id="p2">**</ept> if you want to write portable code that adheres to the Unicode specification.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You declare formal parameters to <bpt id="p1">**</bpt>wmain<ept id="p1">**</ept> using a similar format to <bpt id="p2">**</bpt>main<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You can then pass wide-character arguments and, optionally, a wide-character environment pointer to the program.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`argv`</ph> and <ph id="ph2">`envp`</ph> parameters to <bpt id="p1">**</bpt>wmain<ept id="p1">**</ept> are of type <ph id="ph3">`wchar_t*`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If your program uses a <bpt id="p1">**</bpt>main<ept id="p1">**</ept> function, the multibyte-character environment is created by the operating system at program startup.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A wide-character copy of the environment is created only when needed (for example, by a call to the <bpt id="p1">[</bpt>_wgetenv<ept id="p1">](../c-runtime-library/reference/getenv-wgetenv.md)</ept> or <bpt id="p2">[</bpt>_wputenv<ept id="p2">](../c-runtime-library/reference/putenv-wputenv.md)</ept> functions).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>On the first call to <ph id="ph1">`_wputenv`</ph>, or on the first call to <ph id="ph2">`_wgetenv`</ph> if an MBCS environment already exists, a corresponding wide-character string environment is created and is then pointed to by the <ph id="ph3">`_wenviron`</ph> global variable, which is a wide-character version of the <ph id="ph4">`_environ`</ph> global variable.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>At this point, two copies of the environment (MBCS and Unicode) exist simultaneously and are maintained by the operating system throughout the life of the program.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Similarly, if your program uses a <bpt id="p1">**</bpt>wmain<ept id="p1">**</ept> function, an MBCS (ASCII) environment is created on the first call to <ph id="ph1">`_putenv`</ph> or <ph id="ph2">`getenv`</ph>, and is pointed to by the <ph id="ph3">`_environ`</ph> global variable.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For more information on the MBCS environment, see <bpt id="p1">[</bpt>Single-byte and Multibyte Character Sets<ept id="p1">](../c-runtime-library/single-byte-and-multibyte-character-sets.md)</ept> in the <bpt id="p2">*</bpt>Run-Time Library Reference.<ept id="p2">*</ept></source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>main: Program Startup</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

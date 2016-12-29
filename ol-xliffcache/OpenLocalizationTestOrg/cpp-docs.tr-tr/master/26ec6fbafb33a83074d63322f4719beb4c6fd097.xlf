@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">26ec6fbafb33a83074d63322f4719beb4c6fd097</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\user-record.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bfcdf654310d9bac8f0c3c8191048ced0452e550</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ddd49cb6f2b0555c5c744744beba8d84ac070b70</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>User Record | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>User Record</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The user record provides the code and data structure that represents the column data for a rowset.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A user record can be created at compile time or at run time.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>When you create a provider using the ATL OLE DB Provider Wizard, the wizard creates a default user record that looks like this (assuming you specified a provider name [short name] of "MyProvider"):</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The OLE DB provider templates handle all OLE DB specifics regarding interactions with the client.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To acquire the column data needed for a response, the provider calls the <ph id="ph1">`GetColumnInfo`</ph> function, which you must place in the user record.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You can explicitly override <ph id="ph1">`GetColumnInfo`</ph> in the user record, for example, by declaring it in the .h file as shown here:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This is equivalent to:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You must also implement <ph id="ph1">`GetColumnInfo`</ph> in the user record's .cpp file.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The PROVIDER_COLUMN_MAP macros aid in creating a <ph id="ph1">`GetColumnInfo`</ph> function:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>BEGIN_PROVIDER_COLUMN_MAP defines the function prototype and a static array of <bpt id="p1">**</bpt>ATLCOLUMNINFO<ept id="p1">**</ept> structures.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>PROVIDER_COLUMN_ENTRY defines and initializes a single <bpt id="p1">**</bpt>ATLCOLUMNINFO<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>END_PROVIDER_COLUMN_MAP closes the array and the function.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It also places the array element count into the <ph id="ph1">`pcCols`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When a user record is created at run time, <bpt id="p1">**</bpt>GetColumnInfo<ept id="p1">**</ept> uses the <ph id="ph1">`pThis`</ph> parameter to receive a pointer to a rowset or command instance.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Commands and rowsets must support the <ph id="ph1">`IColumnsInfo`</ph> interface, so column information can be obtained from this pointer.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>CommandClass<ept id="p1">**</ept> and <bpt id="p2">**</bpt>RowsetClass<ept id="p2">**</ept> are the command and rowset that use the user record.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For a more detailed example of how to override <ph id="ph1">`GetColumnInfo`</ph> in a user record, see <bpt id="p1">[</bpt>Dynamically Determining Columns Returned to the Consumer<ept id="p1">](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>OLE DB Provider Template Architecture</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c5805b15d13b7f23e4faf94a3787a3f0b33991e9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn047-relaxing-database-transaction-requirements.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">df33839ca4246fd4a6e55cdedfb6a35a03e08581</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">72344d9ebba41e9da7e884cfdbeaece873efaa96</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN047: Relaxing Database Transaction Requirements | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN047: Relaxing Database Transaction Requirements</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This tech note, which discussed the transaction requirements of the MFC ODBC database classes, is now obsolete.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Before MFC 4.2, the database classes required that cursors be preserved on recordsets after a <bpt id="p1">**</bpt>CommitTrans<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Rollback<ept id="p2">**</ept> operation.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If the ODBC driver and DBMS did not support this level of cursor preservation, then the database classes did not enable transactions.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Beginning with MFC 4.2, the database classes have relaxed the restriction of requiring cursor preservation.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Transactions will be enabled if the driver supports them.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>However, you must now check the effect of a <bpt id="p1">**</bpt>CommitTrans<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Rollback<ept id="p2">**</ept> operation on open recordsets.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>See the member functions <bpt id="p1">[</bpt>CDatabase::GetCursorCommitBehavior<ept id="p1">](../mfc/reference/cdatabase-class.md#cdatabase__getcursorcommitbehavior)</ept> and <bpt id="p2">[</bpt>CDatabase::GetCursorRollbackBehavior<ept id="p2">](../mfc/reference/cdatabase-class.md#cdatabase__getcursorrollbackbehavior)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

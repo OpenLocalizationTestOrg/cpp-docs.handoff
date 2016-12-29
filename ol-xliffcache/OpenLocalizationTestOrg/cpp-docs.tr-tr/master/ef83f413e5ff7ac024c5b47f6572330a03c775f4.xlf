@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ef83f413e5ff7ac024c5b47f6572330a03c775f4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\slider-notification-messages.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">86f4df9d5f1bf5f0d3141454b23418d64ea2044e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0966c7e59c95ce4c7ba13d4665cc10d93dea8e15</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Slider Notification Messages | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Slider Notification Messages</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A slider control notifies its parent window of user actions by sending the parent <ph id="ph1">`WM_HSCROLL`</ph> or <ph id="ph2">`WM_VSCROLL`</ph> messages, depending on the orientation of the slider control.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To handle these messages, add handlers for the <ph id="ph1">`WM_HSCROLL`</ph> and <ph id="ph2">`WM_VSCROLL`</ph> messages to the parent window.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>OnHScroll<ept id="p1">](../mfc/reference/cwnd-class.md#cwnd__onhscroll)</ept> and <bpt id="p2">[</bpt>OnVScroll<ept id="p2">](../mfc/reference/cwnd-class.md#cwnd__onvscroll)</ept> member functions will be passed a notification code, the position of the slider, and a pointer to the <bpt id="p3">[</bpt>CSliderCtrl<ept id="p3">](../mfc/reference/csliderctrl-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Note that the pointer is of type <bpt id="p1">**</bpt>CScrollBar <ph id="ph1">\*</ph><ept id="p1">**</ept> even though it points to a <ph id="ph2">`CSliderCtrl`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You may need to typecast this pointer if you need to manipulate the slider control.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Rather than using the scroll bar notification codes, slider controls send a different set of notification codes.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>A slider control sends the <bpt id="p1">**</bpt>TB_BOTTOM<ept id="p1">**</ept>, <bpt id="p2">**</bpt>TB_LINEDOWN<ept id="p2">**</ept>, <bpt id="p3">**</bpt>TB_LINEUP<ept id="p3">**</ept>, and <bpt id="p4">**</bpt>TB_TOP<ept id="p4">**</ept> notification codes only when the user interacts with a slider control by using the keyboard.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>TB_THUMBPOSITION<ept id="p1">**</ept> and <bpt id="p2">**</bpt>TB_THUMBTRACK<ept id="p2">**</ept> notification messages are only sent when the user is using the mouse.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>TB_ENDTRACK<ept id="p1">**</ept>, <bpt id="p2">**</bpt>TB_PAGEDOWN<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>TB_PAGEUP<ept id="p3">**</ept> notification codes are sent in both cases.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The following table lists the slider control notification messages and the events (virtual key codes or mouse events) that cause the notifications to be sent.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>(For a list of standard virtual key codes, see Winuser.h.)</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Notification message</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Event causing notification to be sent</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>TB_BOTTOM</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>VK_END</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>TB_ENDTRACK</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>(the user released a key that sent a relevant virtual key code)</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>TB_LINEDOWN</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>VK_RIGHT<ept id="p1">**</ept> or <bpt id="p2">**</bpt>VK_DOWN<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>TB_LINEUP</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>VK_LEFT<ept id="p1">**</ept> or <bpt id="p2">**</bpt>VK_UP<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>TB_PAGEDOWN</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>VK_NEXT<ept id="p1">**</ept> (the user clicked the channel below or to the right of the slider)</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>TB_PAGEUP</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>VK_PRIOR<ept id="p1">**</ept> (the user clicked the channel above or to the left of the slider)</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>TB_THUMBPOSITION</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>following a <bpt id="p1">**</bpt>TB_THUMBTRACK<ept id="p1">**</ept> notification message</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>TB_THUMBTRACK</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Slider movement (the user dragged the slider)</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>TB_TOP</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>VK_HOME</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Using CSliderCtrl</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

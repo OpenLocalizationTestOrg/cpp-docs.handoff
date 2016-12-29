@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">58ccd1348b119d420a8ffa1fcf0053884dfa5785</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\mfc-using-database-classes-with-documents-and-views.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c9b32270bfb9fac3080e712d94fc090646e38514</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">36431d71d7c165392a6f8fdf8b8d73ca1918395e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>MFC: Using Database Classes with Documents and Views | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>MFC: Using Database Classes with Documents and Views</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>You can use the MFC database classes — DAO or ODBC — with or without the document/view architecture.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic emphasizes working with documents and views.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>It explains:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>How to write a form-based application<ept id="p1">](#_core_writing_a_form.2d.based_application)</ept> using a <ph id="ph1">`CRecordView`</ph> or <ph id="ph2">`CDaoRecordView`</ph> object as the main view on your document.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>How to use recordset objects in your documents and views<ept id="p1">](#_core_using_recordsets_in_documents_and_views)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Other considerations<ept id="p1">](#_core_other_factors)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For alternatives, see <bpt id="p1">[</bpt>MFC: Using Database Classes Without Documents and Views<ept id="p1">](../data/mfc-using-database-classes-without-documents-and-views.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Writing a Form-Based Application</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Many data-access applications are based on forms.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The user interface is a form containing controls in which the user examines, enters, or edits data.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To make your application form based, use class <ph id="ph1">`CRecordView`</ph> or <ph id="ph2">`CDaoRecordView`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>When you run the MFC Application Wizard and select <bpt id="p1">**</bpt>ODBC<ept id="p1">**</ept> client type on the <bpt id="p2">**</bpt>Database Support<ept id="p2">**</ept> page, the project uses <ph id="ph1">`CRecordView`</ph> for the view class.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The wizards no longer support DAO, so if you want to use <ph id="ph1">`CDaoRecordView`</ph>, you have to code it manually.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In a form-based application, each record view object stores a pointer to a <ph id="ph1">`CRecordset`</ph> or <ph id="ph2">`CDaoRecordset`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The framework's record field exchange (RFX) mechanism exchanges data between the recordset and the data source.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The dialog data exchange (DDX) mechanism exchanges data between the field data members of the recordset object and the controls on the form.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>or <ph id="ph1">`CDaoRecordView`</ph> also provides default command handler functions for navigating from record to record on the form.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To create a form-based application with the application wizard, see <bpt id="p1">[</bpt>Creating a Forms-Based MFC Application<ept id="p1">](../mfc/reference/creating-a-forms-based-mfc-application.md)</ept> and <bpt id="p2">[</bpt>Database Support, MFC Application Wizard<ept id="p2">](../mfc/reference/database-support-mfc-application-wizard.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For a full discussion of forms, see <bpt id="p1">[</bpt>Record Views<ept id="p1">](../data/record-views-mfc-data-access.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Using Recordsets in Documents and Views</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Many simple form-based applications do not need documents.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If your application is more complex, you probably want to use a document as a proxy for the database, storing a <ph id="ph1">`CDatabase`</ph> or <ph id="ph2">`CDaoDatabase`</ph> object that connects to the data source.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Form-based applications usually store a pointer to a recordset object in the view.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Other kinds of database applications store recordsets and <ph id="ph1">`CDatabase`</ph> or <ph id="ph2">`CDaoDatabase`</ph> object in the document.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Here are some possibilities for using documents in database applications:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If you are accessing a recordset in a local context, create a <ph id="ph1">`CRecordset`</ph> or <ph id="ph2">`CDaoRecordset`</ph> object locally in member functions of the document or the view, as needed.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Declare a recordset object as a local variable in a function.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Pass <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> to the constructor, which causes the framework to create and open a temporary <ph id="ph1">`CDatabase`</ph> or <ph id="ph2">`CDaoDatabase`</ph> object for you.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>As an alternative, pass a pointer to a <ph id="ph1">`CDatabase`</ph> or <ph id="ph2">`CDaoDatabase`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Use the recordset within the function and let it be destroyed automatically when the function exits.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>When you pass <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept> to a recordset constructor, the framework uses information returned by the recordset's <ph id="ph1">`GetDefaultConnect`</ph> member function to create a <ph id="ph2">`CDatabase`</ph> or <ph id="ph3">`CDaoDatabase`</ph> object and open it.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The wizards implement <ph id="ph1">`GetDefaultConnect`</ph> for you.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If you are accessing a recordset during the lifetime of your document, embed one or more <ph id="ph1">`CRecordset`</ph> or <ph id="ph2">`CDaoRecordset`</ph> objects in your document.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Construct the recordset objects either when you initialize the document or as needed.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>You might write a function that returns a pointer to the recordset if it already exists or constructs and opens the recordset if it does not exist yet.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Close, delete, and recreate the recordset as needed, or call its <bpt id="p1">**</bpt>Requery<ept id="p1">**</ept> member function to refresh the records.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If you are accessing a data source during the lifetime of your document, embed a <ph id="ph1">`CDatabase`</ph> or <ph id="ph2">`CDaoDatabase`</ph> object or store a pointer to a <ph id="ph3">`CDatabase`</ph> or <ph id="ph4">`CDaoDatabase`</ph> object in it.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CDatabase`</ph> or <ph id="ph2">`CDaoDatabase`</ph> object manages a connection to your data source.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The object is constructed automatically during document construction, and you call its <bpt id="p1">**</bpt>Open<ept id="p1">**</ept> member function when you initialize the document.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>When you construct recordset objects in document member functions, you pass a pointer to the document's <ph id="ph1">`CDatabase`</ph> or <ph id="ph2">`CDaoDatabase`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>This associates each recordset with its data source.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The database object is usually destroyed when the document closes.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The recordset objects are typically destroyed when they exit the scope of a function.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Other Factors</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Form-based applications often do not have any use for the framework's document serialization mechanism, so you might want to remove, disable, or replace the <ph id="ph1">`New`</ph> and <bpt id="p1">**</bpt>Open<ept id="p1">**</ept> commands on the <bpt id="p2">**</bpt>File<ept id="p2">**</ept> menu.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>See the article <bpt id="p1">[</bpt>Serialization: Serialization vs. Database Input/Output<ept id="p1">](../mfc/serialization-serialization-vs-database-input-output.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>You might also want to make use of the many user-interface possibilities that the framework can support.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For example, you could use multiple <ph id="ph1">`CRecordView`</ph> or <ph id="ph2">`CDaoRecordView`</ph> objects in a splitter window, open multiple recordsets in different multiple document interface (MDI) child windows, and so on.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>You might want to implement printing of whatever is in your view, whether it is a form implemented with <ph id="ph1">`CRecordView`</ph> or <ph id="ph2">`CDaoRecordView`</ph> or something else.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>As classes derived from <ph id="ph1">`CFormView`</ph>, <ph id="ph2">`CRecordView`</ph> and <ph id="ph3">`CDaoRecordView`</ph> do not support printing, but you can override the <ph id="ph4">`OnPrint`</ph> member function to allow printing.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>For more information, see class <bpt id="p1">[</bpt>CFormView<ept id="p1">](../mfc/reference/cformview-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>You might not want to use documents and views at all.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>In that case, see <bpt id="p1">[</bpt>MFC: Using Database Classes Without Documents and Views<ept id="p1">](../data/mfc-using-database-classes-without-documents-and-views.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>MFC Database Classes (ODBC and DAO)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

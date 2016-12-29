@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">12e7edee6a18608acef9d566c2d4b1a071e81ca6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\keyfile-specify-key-or-key-pair-to-sign-an-assembly.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b3bdaee5b7673abf2eba043e9ec958def3f5aaa3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">102d1ba687b3beaa48603cd4a789584b0747d6e2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-KEYFILE (Specify Key or Key Pair to Sign an Assembly) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/KEYFILE (Specify Key or Key Pair to Sign an Assembly)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>where:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>filename</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>File that contains the key.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Place the string in double quotation marks (" ") if it contains a space.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The linker inserts the public key into the assembly manifest and then signs the final assembly with the private key.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To generate a key file, type <bpt id="p1">[</bpt>sn -k<ept id="p1">](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)</ept> <ph id="ph1">`file`</ph> at the command line.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A signed assembly is said to have a strong name.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If you compile with <bpt id="p1">[</bpt>/LN<ept id="p1">](../../build/reference/ln-create-msil-module.md)</ept>, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly that includes an explicit reference to the module, via <bpt id="p2">[</bpt>#using<ept id="p2">](../../preprocessor/hash-using-directive-cpp.md)</ept>, or when linking with <bpt id="p3">[</bpt>/ASSEMBLYMODULE<ept id="p3">](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You can also pass your encryption information to the linker with <bpt id="p1">[</bpt>/KEYCONTAINER<ept id="p1">](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">[</bpt>/DELAYSIGN<ept id="p1">](../../build/reference/delaysign-partially-sign-an-assembly.md)</ept> if you want a partially signed assembly.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Strong Name Assemblies (Assembly Signing) (C++/CLI)<ept id="p1">](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)</ept> for more information on signing an assembly.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In case both <bpt id="p1">**</bpt>/KEYFILE<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/KEYCONTAINER<ept id="p2">**</ept> are specified (either by command line option or by custom attribute), the linker will first try the key container.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If that succeeds, then the assembly is signed with the information in the key container.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If the linker does not find the key container, it will try the file specified with /KEYFILE.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If that succeeds, the assembly is signed with the information in the key file and the key information will be installed in the key container (similar to sn -i) so that on the next compilation, the key container will be valid.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Note that a key file might contain only the public key.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Creating and Using Strong-Named Assemblies<ept id="p1">](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9)</ept> for more information on signing an assembly.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Other linker options that affect assembly generation are:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>/ASSEMBLYDEBUG</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>/ASSEMBLYLINKRESOURCE</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>/ASSEMBLYMODULE</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>/ASSEMBLYRESOURCE</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>/NOASSEMBLY</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To set this linker option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Setting Visual C++ Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Linker<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Command Line<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Type the option into the <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept> box.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>To set this linker option programmatically</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>See &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Setting Linker Options</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Linker Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

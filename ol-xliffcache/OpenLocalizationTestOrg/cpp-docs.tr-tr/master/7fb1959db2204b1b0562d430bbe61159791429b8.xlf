@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7fb1959db2204b1b0562d430bbe61159791429b8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\convert-an-openmp-loop-that uses-exception-handling.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b95c120fa8e8d398387265a771747ee6591142a3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b84220f429f405f1cec327a2caeada7c08af5d0f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Convert an OpenMP Loop that Uses Exception Handling to Use the Concurrency Runtime | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Convert an OpenMP Loop that Uses Exception Handling to Use the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This example demonstrates how to convert an OpenMP <bpt id="p1">[</bpt>parallel<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)</ept><bpt id="p2">[</bpt>for<ept id="p2">](../../parallel/openmp/reference/for-openmp.md)</ept> loop that performs exception handling to use the Concurrency Runtime exception handling mechanism.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In OpenMP, an exception that is thrown in a parallel region must be caught and handled in the same region by the same thread.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>An exception that escapes the parallel region is caught by the unhandled exception handler, which terminates the process by default.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In the Concurrency Runtime, when you throw an exception in the body of a work function that you pass to a task group such as a <bpt id="p1">[</bpt>concurrency::task_group<ept id="p1">](reference/task-group-class.md)</ept> or <bpt id="p2">[</bpt>concurrency::structured_task_group<ept id="p2">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> object, or to a parallel algorithm such as <bpt id="p3">[</bpt>concurrency::parallel_for<ept id="p3">](reference/concurrency-namespace-functions.md#parallel_for)</ept>, the runtime stores that exception and marshals it to the context that waits for the task group or algorithm to finish.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For task groups, the waiting context is the context that calls <bpt id="p1">[</bpt>concurrency::task_group::wait<ept id="p1">](reference/task-group-class.md#wait)</ept>, <bpt id="p2">[</bpt>concurrency::structured_task_group::wait<ept id="p2">](reference/structured-task-group-class.md#wait)</ept>, <bpt id="p3">[</bpt>concurrency::task_group::run_and_wait<ept id="p3">](reference/task-group-class.md#run_and_wait)</ept>, or <bpt id="p4">[</bpt>concurrency::structured_task_group::run_and_wait<ept id="p4">](reference/structured-task-group-class.md#run_and_wait)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For a parallel algorithm, the waiting context is the context that called that algorithm.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The runtime also stops all active tasks that are in the task group, including those in child task groups, and discards any tasks that have not yet started.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This example demonstrates how to handle exceptions in an OpenMP <ph id="ph1">`parallel`</ph> region and in a call to <ph id="ph2">`parallel_for`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`do_work`</ph> function performs a memory allocation request that does not succeed and therefore throws an exception of type <bpt id="p1">[</bpt>std::bad_alloc<ept id="p1">](../../standard-library/bad-alloc-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In the version that uses OpenMP, the thread that throws the exception must also catch it.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In other words, each iteration of an OpenMP parallel loop must handle the exception.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>In the version that uses the Concurrency Runtime, the main thread catches an exception that is thrown by another thread.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>concrt-openmp#3</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This example produces the following output.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In the version of this example that uses OpenMP, the exception occurs in and is handled by each loop iteration.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In the version that uses the Concurrency Runtime, the runtime stores the exception, stops all active tasks, discards any tasks that have not yet started, and marshals the exception to the context that calls <ph id="ph1">`parallel_for`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If you require that the version that uses OpenMP terminates after the exception occurs, you could use a Boolean flag to signal to other loop iterations that the error occurred.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>As in the example in the topic <bpt id="p1">[</bpt>How to: Convert an OpenMP Loop that Uses Cancellation to Use the Concurrency Runtime<ept id="p1">](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)</ept>, subsequent loop iterations would do nothing if the flag is set.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Conversely, if you require that the loop that uses the Concurrency Runtime continues after the exception occurs, handle the exception in the parallel loop body itself.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Other components of the Concurrency Runtime, such as asynchronous agents and lightweight tasks, do not transport exceptions.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Instead, unhandled exceptions are caught by the unhandled exception handler, which terminates the process by default.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For more information about exception handling, see <bpt id="p1">[</bpt>Exception Handling<ept id="p1">](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For more information about <ph id="ph1">`parallel_for`</ph> and other parallel algorithms, see <bpt id="p1">[</bpt>Parallel Algorithms<ept id="p1">](../../parallel/concrt/parallel-algorithms.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`concrt-omp-exceptions.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc /openmp concrt-omp-exceptions.cpp</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Migrating from OpenMP to the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
