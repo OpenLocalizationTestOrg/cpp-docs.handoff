@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4ccc2019ea11912c9f8b7ea8485abc6a17d2e62f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn054-calling-dao-directly-while-using-mfc-dao-classes.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cb5d5c023576e030f853f73fe03de6f382968cb4</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ea5615d37dd56677caabbee643b641ba1abe6f32</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN054: Calling DAO Directly While Using MFC DAO Classes | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN054: Calling DAO Directly While Using MFC DAO Classes</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Microsoft recommends that you use <bpt id="p1">[</bpt>OLE DB Templates<ept id="p1">](../data/oledb/ole-db-templates.md)</ept> or <bpt id="p2">[</bpt>ODBC and MFC<ept id="p2">](../data/odbc/odbc-and-mfc.md)</ept> for new projects.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You should only use DAO in maintaining existing applications.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When using the MFC DAO database classes, there may be situations where it is necessary to use DAO directly.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Usually, this will not be the case, but MFC has provided some helper mechanisms to facilitate making direct DAO calls simple when combining the use of the MFC classes with direct DAO calls.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Making direct DAO calls to the methods of an MFC-managed DAO object should require only a few lines of code.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you need to create and use DAO objects that are <bpt id="p1">*</bpt>not<ept id="p1">*</ept> managed by MFC, you will have to do a little more work by actually calling <bpt id="p2">**</bpt>Release<ept id="p2">**</ept> on the object.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This technical note explains when you might want to call DAO directly, what the MFC helpers can do to help you, and how to use the DAO OLE interfaces.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Finally, this note provides some sample functions showing how to call DAO directly for DAO security features.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When to Make Direct DAO Calls</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The most common situations for making direct DAO calls occur when collections need to be refreshed or when you are implementing features not wrapped by MFC.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The most significant feature not exposed by MFC is security.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If you want to implement security features, you will need to use the DAO User(s) and Group(s) objects directly.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Besides security, there are only a few other DAO features not supported by MFC.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>These include recordset cloning and database replication features as well as a few late additions to DAO.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>A Brief Overview of DAO and MFC's Implementation</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>MFC's wrapping of DAO makes using DAO easier by handling many of the details so you do not have to worry about the little things.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This includes the initialization of OLE, the creation and management of the DAO objects (especially the collection objects), error checking, and providing a strongly typed, simpler interface (no <bpt id="p1">**</bpt>VARIANT<ept id="p1">**</ept> or <ph id="ph1">`BSTR`</ph> arguments).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>You can make direct DAO calls and still take advantage of these features.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>All your code must do is call <bpt id="p1">**</bpt>Release<ept id="p1">**</ept> for any objects created by direct DAO calls and <bpt id="p2">*</bpt>not<ept id="p2">*</ept> modify any of the interface pointers that MFC may rely on internally.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For example, do not modify the <bpt id="p1">**</bpt>m_pDAORecordset<ept id="p1">**</ept> member of an open <ph id="ph1">`CDaoRecordset`</ph> object unless you understand <bpt id="p2">*</bpt>all<ept id="p2">*</ept> the internal ramifications.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You could, however, use the <bpt id="p1">**</bpt>m_pDAORecordset<ept id="p1">**</ept> interface to call DAO directly to get the Fields collection.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In this case the <bpt id="p1">**</bpt>m_pDAORecordset<ept id="p1">**</ept> member would not be modified.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You simply have to call <bpt id="p1">**</bpt>Release<ept id="p1">**</ept> on the Fields collection object when you are finished with the object.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Description of Helpers to Make DAO Calls Easier</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The helpers provided to make calling DAO easier are the same helpers that are used internally in the MFC DAO Database classes.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>These helpers are used to check the return codes when making a direct DAO call, logging debug output, checking for expected errors, and throwing appropriate exceptions if necessary.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>There are two underlying helper functions and four macros that map to one of these two helpers.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The best explanation would be to simply read the code.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">**</bpt>DAO_CHECK<ept id="p1">**</ept>, <bpt id="p2">**</bpt>DAO_CHECK_ERROR<ept id="p2">**</ept>, <bpt id="p3">**</bpt>DAO_CHECK_MEM<ept id="p3">**</ept>, and <bpt id="p4">**</bpt>DAO_TRACE<ept id="p4">**</ept> in AFXDAO.H to see the macros, and see <bpt id="p5">**</bpt>AfxDaoCheck<ept id="p5">**</ept> and <bpt id="p6">**</bpt>AfxDaoTrace<ept id="p6">**</ept> in DAOCORE.CPP.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Using the DAO OLE Interfaces</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The OLE interfaces for each object in the DAO object hierarchy are defined in the header file DBDAOINT.H, which is found in the \Program Files\Microsoft Visual Studio .NET 2003\VC7\include directory.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>These interfaces provide methods that allow you to manipulate the entire DAO hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For many of the methods in the DAO interfaces, you will need to manipulate a <ph id="ph1">`BSTR`</ph> object (a length-prefixed string used in OLE automation).</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`BSTR`</ph> object typically is encapsulated within the <bpt id="p1">**</bpt>VARIANT<ept id="p1">**</ept> data type.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The MFC class <ph id="ph1">`COleVariant`</ph> itself inherits from the <bpt id="p1">**</bpt>VARIANT<ept id="p1">**</ept> data type.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Depending on whether you build your project for ANSI or Unicode, the DAO interfaces will return ANSI or Unicode <ph id="ph1">`BSTR`</ph>s.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Two macros, <bpt id="p1">**</bpt>V_BSTR<ept id="p1">**</ept> and <bpt id="p2">**</bpt>V_BSTRT<ept id="p2">**</ept>, are useful for assuring that the DAO interface gets the <ph id="ph1">`BSTR`</ph> of the expected type.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>V_BSTR<ept id="p1">**</ept> will extract the <bpt id="p2">**</bpt>bstrVal<ept id="p2">**</ept> member of a <ph id="ph1">`COleVariant`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This macro is typically used when you need to pass the contents of a <ph id="ph1">`COleVariant`</ph> to a method of a DAO interface.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The following code fragment shows both the declarations and actual use for two methods of the DAO DAOUser interface that take advantage of the <bpt id="p1">**</bpt>V_BSTR<ept id="p1">**</ept> macro:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Note that the <ph id="ph1">`VT_BSTRT`</ph> argument specified in the <ph id="ph2">`COleVariant`</ph> constructor above ensures that there will be an ANSI <ph id="ph3">`BSTR`</ph> in the <ph id="ph4">`COleVariant`</ph> if you build an ANSI version of your application and a Unicode <ph id="ph5">`BSTR`</ph> for a Unicode version of your application.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This is what DAO expects.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The other macro, <bpt id="p1">**</bpt>V_BSTRT<ept id="p1">**</ept>, will extract either an ANSI or Unicode <bpt id="p2">**</bpt>bstrVal<ept id="p2">**</ept> member of <ph id="ph1">`COleVariant`</ph> depending on the type of build (ANSI or Unicode).</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The following code demonstrates how to extract the <ph id="ph1">`BSTR`</ph> value from a <ph id="ph2">`COleVariant`</ph> into a <ph id="ph3">`CString`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>V_BSTRT<ept id="p1">**</ept> macro, along with other techniques to open other types that are stored in <ph id="ph1">`COleVariant`</ph>, is demonstrated in the DAOVIEW sample.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Specifically, this translation is performed in the <bpt id="p1">**</bpt>CCrack::strVARIANT<ept id="p1">**</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This method, where possible, translates the value of a <ph id="ph1">`COleVariant`</ph> into an instance of <ph id="ph2">`CString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Simple Example of a Direct Call to DAO</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Situations may arise when it is necessary to refresh the underlying DAO collection objects.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Normally, this should not be necessary, but it is a simple procedure if it is necessary.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>An example of when a collection might need to be refreshed is when operating in a multiuser environment with multiple users creating new tabledefs.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>In this case your tabledefs collection might become stale.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>To refresh the collection, you simply need to call the <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> method of the particular collection object and check for errors:</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Note that currently all DAO collection object interfaces are undocumented implementation details of the MFC DAO database classes.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Using DAO Directly for DAO Security Features</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The MFC DAO database classes do not wrap DAO security features.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>You must call methods of DAO interfaces to use some DAO security features.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The following function sets the system database and then changes the user's password.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>This function calls three other functions, which are subsequently defined.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The next four examples demonstrate how to:</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Set the system DAO database (.MDW file).</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Set the default user and password.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Change the password of a user.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Change the password of an .MDB file.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Setting the System Database</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Below is a sample function to set the system database that will be used by an application.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>This function must be called before any other DAO calls are made.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Setting the Default User and Password</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>To set the default user and password for a system database, use the following function:</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Changing a User's Password</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>To change a user's password, use the following function:</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Changing the Password of an .MDB File</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>To change the password of an .MDB file, use the following function:</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

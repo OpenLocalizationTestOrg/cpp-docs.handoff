@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1945c51a017e71b55da8cd914de2e08f53d17076</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl-mfc-shared\exporting-string-classes-using-cstringt.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4ab1b2bfe7de986c5d177fd2a8b1f2a8de1fdc64</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bd70b6324cbc42657e14545671ad632ff7f66d8d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Exporting String Classes Using CStringT | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Exporting String Classes Using CStringT</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In the past, MFC developers have derived from <ph id="ph1">`CString`</ph> to specialize their own string classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In Microsoft Visual C++.NET (MFC 8.0), the <bpt id="p1">[</bpt>CString<ept id="p1">](../atl-mfc-shared/using-cstring.md)</ept> class was superseded by a template class called <bpt id="p2">[</bpt>CStringT<ept id="p2">](../atl-mfc-shared/reference/cstringt-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This provided several benefits:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>It allowed the MFC <ph id="ph1">`CString`</ph> class to be used in ATL projects without linking in the larger MFC static library or DLL.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>With the new <ph id="ph1">`CStringT`</ph> template class, you can customize <ph id="ph2">`CString`</ph> behavior using template parameters that specify character traits, similar to the templates in the Standard Template Library (STL).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>When you export your own string class from a DLL using <ph id="ph1">`CStringT`</ph>, the compiler also automatically exports the <ph id="ph2">`CString`</ph> base class.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Since <ph id="ph1">`CString`</ph> is itself a template class, it may be instantiated by the compiler when used, unless the compiler is aware that <ph id="ph2">`CString`</ph> is imported from a DLL.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If you have migrated projects from Visual C++ 6.0 to Visual C++.NET, you might have seen linker symbol errors for a multiply-defined <ph id="ph1">`CString`</ph> because of the collision of the <ph id="ph2">`CString`</ph> imported from a DLL and the locally instantiated version.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The proper way to do this is described below.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For more information on this issue, see the Knowledge Base article, "Linking Errors When you Import CString-derived Classes" (Q309801) on the MSDN Library CD-ROM or at <bpt id="p1">[</bpt>http://support.microsoft.com/default.aspx<ept id="p1">](http://support.microsoft.com/default.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The following scenario will cause the linker to produce symbol errors for multiply defined classes.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Assume that you are exporting a <ph id="ph1">`CString`</ph>-derived class (<ph id="ph2">`CMyString`</ph>) from an MFC extension DLL:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_DLL#6</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The consumer code uses a mixture of <ph id="ph1">`CString`</ph> and <ph id="ph2">`CMyString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>"MyString.h" is not included in the precompiled header, and some usage of <ph id="ph1">`CString`</ph> does not have <ph id="ph2">`CMyString`</ph> visible.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Assume that you use the <ph id="ph1">`CString`</ph> and <ph id="ph2">`CMyString`</ph> classes in separate source files, Source1.cpp and Source2.cpp.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In Source1.cpp, you use <ph id="ph1">`CMyString`</ph> and #include MyString.h.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In Source2.cpp, you use <ph id="ph1">`CString`</ph>, but do not #include MyString.h.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>In this case, the linker will complain about <ph id="ph1">`CStringT`</ph> being multiply defined.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This is caused by <ph id="ph1">`CString`</ph> being both imported from the DLL that exports <ph id="ph2">`CMyString`</ph>, and instantiated locally by the compiler through the <ph id="ph3">`CStringT`</ph> template.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To resolve this problem, do the following:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Export <ph id="ph1">`CStringA`</ph> and <ph id="ph2">`CStringW`</ph> (and the necessary base classes) from MFC90.DLL.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Projects that include MFC will always use the MFC DLL exported <ph id="ph1">`CStringA`</ph> and <ph id="ph2">`CStringW`</ph>, as in previous MFC implementations.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Then create a exportable derived class using the <ph id="ph1">`CStringT`</ph> template, as <ph id="ph2">`CStringT_Exported`</ph> is below, for example:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_DLL#7</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>In AfxStr.h, replace the previous <ph id="ph1">`CString`</ph>, <ph id="ph2">`CStringA`</ph>, and <ph id="ph3">`CStringW`</ph> typedefs as follows:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_DLL#8</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>There are several caveats:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You should not export <ph id="ph1">`CStringT`</ph> itself because this will cause ATL-only projects to export a specialized <ph id="ph2">`CStringT`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Using an exportable derived class from <ph id="ph1">`CStringT`</ph> minimizes having to re-implement <ph id="ph2">`CStringT`</ph> functionality.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Additional code is limited to forwarding constructors to the <ph id="ph1">`CStringT`</ph> base class.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`CStringA`</ph>, and <ph id="ph2">`CStringW`</ph> should only be marked <ph id="ph3">`__declspec(dllexport/dllimport)`</ph> when you are building with an MFC shared DLL.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If linking with an MFC static library, you should not mark these classes as exported; otherwise, internal use of <ph id="ph1">`CString`</ph>, <ph id="ph2">`CStringA`</ph>, and <ph id="ph3">`CStringW`</ph> inside user DLLs will mark <ph id="ph4">`CString`</ph> as exported as well.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Related Topics</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>CStringT Class</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Using CStringT</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Using CString</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

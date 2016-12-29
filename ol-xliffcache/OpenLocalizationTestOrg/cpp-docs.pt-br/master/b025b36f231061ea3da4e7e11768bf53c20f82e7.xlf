@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b025b36f231061ea3da4e7e11768bf53c20f82e7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn016-using-cpp-multiple-inheritance-with-mfc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a9c7072e4f091b389f009b0989edb3fca5fad3ab</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">04fb0d4da515ee5cba1d4fd96506de37788a23f1</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN016: Using C++ Multiple Inheritance with MFC | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN016: Using C++ Multiple Inheritance with MFC</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This note describes how to use multiple inheritance (MI) with the Microsoft Foundation Classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The use of MI is not required with MFC.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>MI is not used in any MFC classes and is not required to write a class library.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The following subtopics describe how MI affects the use of common MFC idioms as well as covering some of the restrictions of MI.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Some of these restrictions are general C++ restrictions.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Others are imposed by the MFC architecture.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>At the end of this technical note you will find a complete MFC application that uses MI.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>CRuntimeClass</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The persistence and dynamic object creation mechanisms of MFC use the <bpt id="p1">[</bpt>CRuntimeClass<ept id="p1">](../mfc/reference/cruntimeclass-structure.md)</ept> data structure to uniquely identify classes.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>MFC associates one of these structures with each dynamic and/or serializable class in your application.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>These structures are initialized when the application starts by using a special static object of type <ph id="ph1">`AFX_CLASSINIT`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The current implementation of <ph id="ph1">`CRuntimeClass`</ph> does not support MI runtime type information.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This does not mean you cannot use MI in your MFC application.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>However, you will have certain responsibilities when you work with objects that have more than one base class.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>CObject::IsKindOf<ept id="p1">](../mfc/reference/cobject-class.md#cobject__iskindof)</ept> method will not correctly determine the type of an object if it has multiple base classes.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Therefore, you cannot use <bpt id="p1">[</bpt>CObject<ept id="p1">](../mfc/reference/cobject-class.md)</ept> as a virtual base class, and all calls to <ph id="ph1">`CObject`</ph> member functions such as <bpt id="p2">[</bpt>CObject::Serialize<ept id="p2">](../mfc/reference/cobject-class.md#cobject__serialize)</ept> and <bpt id="p3">[</bpt>CObject::operator new<ept id="p3">](../mfc/reference/cobject-class.md#cobject__operator_new)</ept> must have scope qualifiers so that C++ can disambiguate the appropriate function call.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When a program uses MI within MFC, the class that contains the <ph id="ph1">`CObject`</ph> base class needs to be the left-most class in the list of base classes.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>An alternative is to use the <ph id="ph1">`dynamic_cast`</ph> operator.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Casting an object with MI to one of its base classes will force the compiler to use the functions in the supplied base class.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>dynamic_cast Operator<ept id="p1">](../cpp/dynamic-cast-operator.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>CObject - The Root of all Classes</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>All significant classes derive directly or indirectly from class <ph id="ph1">`CObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>does not have any member data, but it does have some default functionality.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>When you use MI, you will typically inherit from two or more <ph id="ph1">`CObject`</ph>-derived classes.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The following example illustrates how a class can inherit from a <bpt id="p1">[</bpt>CFrameWnd<ept id="p1">](../mfc/reference/cframewnd-class.md)</ept> and a <bpt id="p2">[</bpt>CObList<ept id="p2">](../mfc/reference/coblist-class.md)</ept>:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>In this case <ph id="ph1">`CObject`</ph> is included two times.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>This means that you need a way to disambiguate any reference to <ph id="ph1">`CObject`</ph> methods or operators.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`operator new`</ph> and <bpt id="p1">[</bpt>operator delete<ept id="p1">](../mfc/reference/cobject-class.md#cobject__operator_delete)</ept> are two operators that must be disambiguated.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>As another example, the following code causes an error at compile time:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Reimplementing CObject Methods</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>When you create a new class that has two or more <ph id="ph1">`CObject`</ph> derived base classes, you should reimplement the <ph id="ph2">`CObject`</ph> methods that you want other people to use.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Operators <ph id="ph1">`new`</ph> and <ph id="ph2">`delete`</ph> are mandatory and <bpt id="p1">[</bpt>Dump<ept id="p1">](../mfc/reference/cobject-class.md#cobject__dump)</ept> is recommended.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The following example reimplements the <ph id="ph1">`new`</ph> and <ph id="ph2">`delete`</ph> operators and the <ph id="ph3">`Dump`</ph> method:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Virtual Inheritance of CObject</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>It might seem that virtually inheriting <ph id="ph1">`CObject`</ph> would solve the problem of function ambiguity, but that is not the case.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Because there is no member data in <ph id="ph1">`CObject`</ph>, you do not need virtual inheritance to prevent multiple copies of a base class member data.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>In the first example that was shown earlier, the <ph id="ph1">`Dump`</ph> virtual method is still ambiguous because it is implemented differently in <ph id="ph2">`CFrameWnd`</ph> and <ph id="ph3">`CObList`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The best way to remove ambiguity is to follow the recommendations presented in the previous section.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>CObject::IsKindOf and Run-Time Typing</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The run-time typing mechanism supported by MFC in <ph id="ph1">`CObject`</ph> uses the macros <ph id="ph2">`DECLARE_DYNAMIC`</ph>, <ph id="ph3">`IMPLEMENT_DYNAMIC`</ph>, <ph id="ph4">`DECLARE_DYNCREATE`</ph>, <ph id="ph5">`IMPLEMENT_DYNCREATE`</ph>, <ph id="ph6">`DECLARE_SERIAL`</ph> and <ph id="ph7">`IMPLEMENT_SERIAL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>These macros can perform a run-time type check to guarantee safe downcasts.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>These macros support only a single base class and will work in a limited way for multiply inherited classes.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The base class you specify in <ph id="ph1">`IMPLEMENT_DYNAMIC`</ph> or <ph id="ph2">`IMPLEMENT_SERIAL`</ph> should be the first (or left-most) base class.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>This placement will enable you to do type checking for the left-most base class only.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The run-time type system will know nothing about additional base classes.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>In the following example, the run-time systems will do type checking against <ph id="ph1">`CFrameWnd`</ph>, but will know nothing about <ph id="ph2">`CObList`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>CWnd and Message Maps</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For the MFC message map system to work correctly, there are two additional requirements:</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>There must be only one <ph id="ph1">`CWnd`</ph>-derived base class.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CWnd`</ph>-derived base class must be the first (or left-most) base class.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Here are some examples that will not work:</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>A Sample Program using MI</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The following sample is a stand-alone application that consists of one class derived from <ph id="ph1">`CFrameWnd`</ph> and <bpt id="p1">[</bpt>CWinApp<ept id="p1">](../mfc/reference/cwinapp-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>We do not recommend that you structure an application in this manner, but this is an example of the smallest MFC application that has one class.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

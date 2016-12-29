@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4cfec1e9bddbf34b11b94b538bb67bdeac7f8287</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\implementing-an-stl-based-collection.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ee1b4275674bc0cd24831272654f91eea4ad3230</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">62b3979c2e7c6db788583a77a109e1430d4cbb22</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Implementing an STL-Based Collection | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Implementing an STL-Based Collection</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>ATL provides the <ph id="ph1">`ICollectionOnSTLImpl`</ph> interface to enable you to quickly implement Standard Template Library (STL)-based collection interfaces on your objects.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To understand how this class works, you will work through a simple example (below) that uses this class to implement a read-only collection aimed at Automation clients.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The sample code is from the <bpt id="p1">[</bpt>ATLCollections sample<ept id="p1">](../visual-cpp-samples.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To complete this procedure, you will:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Generate a new Simple Object<ept id="p1">](#vccongenerating_an_object)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Edit the IDL file<ept id="p1">](#vcconedit_the_idl)</ept> for the generated interface.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Create five typedefs<ept id="p1">](#vcconstorage_and_exposure_typedefs)</ept> describing how the collection items are stored and how they will be exposed to clients via COM interfaces.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Create two typedefs for copy policy classes<ept id="p1">](#vcconcopy_classes)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Create typedefs for the enumerator and collection implementations<ept id="p1">](#vcconenumeration_and_collection)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Edit the wizard-generated C++ code to use the collection typedef<ept id="p1">](#vcconedit_the_generated_code)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Add code to populate the collection<ept id="p1">](#vcconpopulate_the_collection)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Generating a New Simple Object</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Create a new project, ensuring that the Attributes box under Application Settings is cleared.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Use the ATL Add Class dialog box and Add Simple Object Wizard to generate a Simple Object called <ph id="ph1">`Words`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Make sure that a dual interface called <ph id="ph1">`IWords`</ph> is generated.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Objects of the generated class will be used to represent a collection of words (that is, strings).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Editing the IDL File</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Now, open the IDL file and add the three properties necessary to turn <ph id="ph1">`IWords`</ph> into a read-only collection interface, as shown below:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#24</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This is the standard form for a read-only collection interface designed with Automation clients in mind.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The numbered comments in this interface definition correspond to the comments below:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Collection interfaces are usually dual because Automation clients accesses the <ph id="ph1">`_NewEnum`</ph> property via <bpt id="p1">**</bpt>IDispatch::Invoke<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>However, Automation clients can access the remaining methods via the vtable, so dual interfaces are preferable to dispinterfaces.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If a dual interface or dispinterface will not be extended at run time (that is, you won't provide extra methods or properties via <bpt id="p1">**</bpt>IDispatch::Invoke<ept id="p1">**</ept>), you should apply the <bpt id="p2">**</bpt>nonextensible<ept id="p2">**</ept> attribute to your definition.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This attribute enables Automation clients to perform full code verification at compile time.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>In this case, the interface should not be extended.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The correct DISPID is important if you want Automation clients to be able to use this property.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>(Note that there is only one underscore in <bpt id="p1">**</bpt>DISPID_NEWENUM<ept id="p1">**</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You can supply any value as the DISPID of the <bpt id="p1">**</bpt>Item<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>However, <bpt id="p1">**</bpt>Item<ept id="p1">**</ept> typically uses <bpt id="p2">**</bpt>DISPID_VALUE<ept id="p2">**</ept> to make it the default property of the collection.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This allows Automation clients to refer to the property without naming it explicitly.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The data type used for the return value of the <bpt id="p1">**</bpt>Item<ept id="p1">**</ept> property is the type of the item stored in the collection as far as COM clients are concerned.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The interface returns strings, so you should use the standard COM string type, <ph id="ph1">`BSTR`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>You can store the data in a different format internally as you'll see shortly.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The value used for the DISPID of the <bpt id="p1">**</bpt>Count<ept id="p1">**</ept> property is completely arbitrary.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>There's no standard DISPID for this property.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Creating Typedefs for Storage and Exposure</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Once the collection interface is defined, you need to decide how the data will be stored, and how the data will be exposed via the enumerator.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The answers to these questions can be provided in the form of a number of typedefs, which you can add near the top of the header file for your newly created class:</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#25</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>In this case, you will store the data as a <bpt id="p1">**</bpt>std::vector<ept id="p1">**</ept> of <bpt id="p2">**</bpt>std::string<ept id="p2">**</ept>s.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>std::vector<ept id="p1">**</ept> is an STL container class that behaves like a managed array.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>std::string<ept id="p1">**</ept> is the Standard C++ Library's string class.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>These classes make it easy to work with a collection of strings.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Since Visual Basic support is vital to the success of this interface, the enumerator returned by the <ph id="ph1">`_NewEnum`</ph> property must support the <bpt id="p1">**</bpt>IEnumVARIANT<ept id="p1">**</ept> interface.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This is the only enumerator interface understood by Visual Basic.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Creating Typedefs for Copy Policy Classes</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The typedefs you have created so far provide all the information you need to create further typedefs for the copy classes that will be used by the enumerator and collection:</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#26</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>In this example, you can use the custom <ph id="ph1">`GenericCopy`</ph> class defined in VCUE_Copy.h and VCUE_CopyString.h from the <bpt id="p1">[</bpt>ATLCollections<ept id="p1">](../visual-cpp-samples.md)</ept> sample.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>You can use this class in other code, but you may need to define further specializations of <ph id="ph1">`GenericCopy`</ph> to support data types used in your own collections.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>ATL Copy Policy Classes<ept id="p1">](../atl/atl-copy-policy-classes.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Creating Typedefs for Enumeration and Collection</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Now all the template parameters necessary to specialize the <ph id="ph1">`CComEnumOnSTL`</ph> and <ph id="ph2">`ICollectionOnSTLImpl`</ph> classes for this situation have been provided in the form of typedefs.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>To simplify the use of the specializations, create two more typedefs as shown below:</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#27</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Now <ph id="ph1">`CollectionType`</ph> is a synonym for a specialization of <ph id="ph2">`ICollectionOnSTLImpl`</ph> that implements the <ph id="ph3">`IWords`</ph> interface defined earlier and provides an enumerator that supports <bpt id="p1">**</bpt>IEnumVARIANT<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Editing the Wizard-Generated Code</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Now you must derive <ph id="ph1">`CWords`</ph> from the interface implementation represented by the <ph id="ph2">`CollectionType`</ph> typedef rather than <ph id="ph3">`IWords`</ph>, as shown below:</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#28</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Adding Code to Populate the Collection</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The only thing that remains is to populate the vector with data.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>In this simple example, you can add a few words to the collection in the constructor for the class:</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#29</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Now, you can test the code with the client of your choice.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Collections and Enumerators</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>ATLCollections Sample</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>ATL Copy Policy Classes</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

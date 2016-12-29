@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">411a906674bc4eb75db9d15828bcb87ef491822b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\isolation-of-the-mfc-common-controls-library.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e4b6d5fcd457e5a9d53ddc46814c0a400f85df19</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">db095d62d17ea55dddeba9c4006518c8b91e1a02</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Isolation of the MFC Common Controls Library | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Isolation of the MFC Common Controls Library</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The Common Controls library is now isolated within MFC, allowing different modules (such as user DLLs) to use different versions of the Common Controls library by specifying the version in their manifests.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>An MFC application (or user code called by MFC) makes calls to Common Controls library APIs through wrapper functions named <ph id="ph1">`Afx`</ph><bpt id="p1">*</bpt>FunctionName<ept id="p1">*</ept>, where <bpt id="p2">*</bpt>FunctionName<ept id="p2">*</ept> is the name of a Common Controls API.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Those wrapper functions are defined in afxcomctl32.h and afxcomctl32.inl.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">[</bpt>AFX_COMCTL32_IF_EXISTS<ept id="p1">](http://msdn.microsoft.com/library/60b3af72-7113-43d7-9db5-012f40971d0d)</ept> and <bpt id="p2">[</bpt>AFX_COMCTL32_IF_EXISTS2<ept id="p2">](http://msdn.microsoft.com/library/ed7dab14-fcce-4ca6-983d-196062104c60)</ept> macros (defined in afxcomctl32.h) to determine whether the Common Controls library implements a certain API instead of calling <bpt id="p3">[</bpt>GetProcAddress<ept id="p3">](../build/getprocaddress.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Technically, you make calls to Common Controls Library APIs through a wrapper class, <ph id="ph1">`CComCtlWrapper`</ph> (defined in afxcomctl32.h).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>is also responsible for the loading and unloading of comctl32.dll.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The MFC Module State contains a pointer to an instance of <ph id="ph1">`CComCtlWrapper`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You can access the wrapper class using the <ph id="ph1">`afxComCtlWrapper`</ph> macro.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Note that calling Common Controls API directly (not using the MFC wrapper functions) from an MFC application or user DLL will work in most cases, because the MFC application or user DLL is bound to the Common Controls library it requested in its manifest).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>However, the MFC code itself has to use the wrappers, because MFC code might be called from user DLLs with different Common Controls library versions.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

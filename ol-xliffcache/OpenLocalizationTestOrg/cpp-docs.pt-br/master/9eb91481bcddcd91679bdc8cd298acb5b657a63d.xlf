@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9eb91481bcddcd91679bdc8cd298acb5b657a63d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\event-handling-in-com.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">13d51ba4bec17e738d121af4bbe72c8d09911598</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">15da4fc4bd380f25c065a3ae5791f52c988fcd8d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Event Handling in COM | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Event Handling in COM</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In COM event handling, you set up an event source and event receiver using the <bpt id="p1">[</bpt>event_source<ept id="p1">](../windows/event-source.md)</ept> and <bpt id="p2">[</bpt>event_receiver<ept id="p2">](../windows/event-receiver.md)</ept> attributes, respectively, specifying <ph id="ph1">`type`=</ph><bpt id="p3">**</bpt>com<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>These attributes inject the appropriate code for custom, dispatch, and dual interfaces to allow the classes to which they are applied to fire events and handle events through COM connection points.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Declaring Events</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In an event source class, use the <bpt id="p1">[</bpt>__event<ept id="p1">](../cpp/event.md)</ept> keyword on an interface declaration to declare that interface's methods as events.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The events of that interface are fired when you call them as interface methods.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Methods on event interfaces can have zero or more parameters (which should all be <bpt id="p1">**</bpt>in<ept id="p1">**</ept> parameters).</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The return type can be void or any integral type.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Defining Event Handlers</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In an event receiver class, you define event handlers, which are methods with signatures (return types, calling conventions, and arguments) that match the event that they will handle.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For COM events, calling conventions do not have to match; see <bpt id="p1">[</bpt>Layout Dependent COM Events<ept id="p1">](#vcconeventhandlingincomanchorlayoutdependentcomevents)</ept> below for details.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Hooking Event Handlers to Events</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Also in an event receiver class, you use the intrinsic function <bpt id="p1">[</bpt>__hook<ept id="p1">](../cpp/hook.md)</ept> to associate events with event handlers and <bpt id="p2">[</bpt>__unhook<ept id="p2">](../cpp/unhook.md)</ept> to dissociate events from event handlers.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You can hook several events to an event handler, or several event handlers to an event.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Typically, there are two techniques to allow a COM event receiver to access event source interface definitions.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The first, as shown below, is to share a common header file.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The second is to use <bpt id="p1">[</bpt>#import<ept id="p1">](../preprocessor/hash-import-directive-cpp.md)</ept> with the <ph id="ph1">`embedded_idl`</ph> import qualifier, so that the event source type library is written to the .tlh file with the attribute-generated code preserved.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Firing Events</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To fire an event, simply call a method in the interface declared with the <ph id="ph1">`__event`</ph> keyword in the event source class.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If handlers have been hooked to the event, the handlers will be called.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>COM Event Code</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The following example shows how to fire an event in a COM class.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>To compile and run the example, refer to the comments in the code.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>And then the server:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>And then the client:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Output</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Layout Dependent COM Events</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Layout dependency is only an issue for COM programming.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In native and managed event handling, the signatures (return type, calling convention, and arguments) of the handlers must match their events, but the handler names do not have to match their events.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>However, in COM event handling, when you set the <bpt id="p1">*</bpt>layout_dependent<ept id="p1">*</ept> parameter of <bpt id="p2">**</bpt>event_receiver<ept id="p2">**</ept> to <bpt id="p3">**</bpt>true<ept id="p3">**</ept>, the name and signature matching is enforced.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This means that the names and signatures of the handlers in the event receiver must exactly match the names and signatures of the events to which they are hooked.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">*</bpt>layout_dependent<ept id="p1">*</ept> is set to <bpt id="p2">**</bpt>false<ept id="p2">**</ept>, the calling convention and storage class (virtual, static, and so on) can be mixed and matched between the firing event method and the hooking methods (its delegates).</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>It is slightly more efficient to have <bpt id="p1">*</bpt>layout_dependent<ept id="p1">*</ept><ph id="ph1">=</ph><bpt id="p2">**</bpt>true<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For example, suppose <ph id="ph1">`IEventSource`</ph> is defined to have the following methods:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Assume the event source has the following form:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Then, in the event receiver, any handler hooked to a method in <ph id="ph1">`IEventSource`</ph> must match its name and signature, as follows:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Event Handling</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
