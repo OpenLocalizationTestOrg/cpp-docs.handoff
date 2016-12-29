@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8635cd6df05f3d9bdac1b20d8d0e8886340aee30</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\example-implementing-a-property-page.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7a19d75c50b799b2de6ac0270d2500a87dbb2039</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">51e8eb32180f8a8f1a243fe36fdabf6ae06aae97</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Example: Implementing a Property Page | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Example: Implementing a Property Page</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This example shows how to build a property page that displays (and allows you to change) properties of the <bpt id="p1">[</bpt>Document Classes<ept id="p1">](../mfc/document-classes.md)</ept> interface.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This interface is exposed by documents in Visual Studio's <bpt id="p1">[</bpt>Common Environment Object Model Examples<ept id="p1">](http://msdn.microsoft.com/library/919cdb58-9f6d-45e6-a0f1-9ca8f6e7051f)</ept> (although the property page that you'll create won't care where the objects it manipulates come from as long as they support the correct interface).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The example is based on the <bpt id="p1">[</bpt>ATLPages sample<ept id="p1">](../visual-cpp-samples.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To complete this example, you will:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Add the ATL property page class<ept id="p1">](#vcconusing_the_atl_object_wizard)</ept> using the Add Class dialog box and the ATL Property Page Wizard.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Edit the dialog resource<ept id="p1">](#vcconediting_the_dialog_resource)</ept> by adding new controls for the interesting properties of the <bpt id="p2">**</bpt>Document<ept id="p2">**</ept> interface.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Add message handlers<ept id="p1">](#vcconadding_message_handlers)</ept> to keep the property page site informed of changes made by the user.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Add some <ph id="ph1">`#import`</ph> statements and a typedef in the <bpt id="p1">[</bpt>Housekeeping<ept id="p1">](#vcconhousekeeping)</ept> section.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Override IPropertyPageImpl::SetObjects<ept id="p1">](#vcconoverriding_ipropertypageimpl_setobjects)</ept> to validate the objects being passed to the property page.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Override IPropertyPageImpl::Activate<ept id="p1">](#vcconoverriding_ipropertypageimpl_activate)</ept> to initialize the property page's interface.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Override IPropertyPageImpl::Apply<ept id="p1">](#vcconoverride_ipropertypageimpl_apply)</ept> to update the object with the latest property values.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Display the property page<ept id="p1">](#vccontesting_the_property_page)</ept> by creating a simple helper object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Create a macro<ept id="p1">](#vcconcreating_a_macro)</ept> that will test the property page.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Adding the ATL Property Page Class</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>First, create a new ATL project for a DLL server called <ph id="ph1">`ATLPages7`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Now use the <bpt id="p1">[</bpt>ATL Property Page Wizard<ept id="p1">](../atl/reference/atl-property-page-wizard.md)</ept> to generate a property page.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Give the property page a <bpt id="p1">**</bpt>Short Name<ept id="p1">**</ept> of <bpt id="p2">**</bpt>DocProperties<ept id="p2">**</ept> then switch to the <bpt id="p3">**</bpt>Strings<ept id="p3">**</ept> page to set property-page-specific items as shown in the table below.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Item</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Value</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Title</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>TextDocument</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Doc String</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>VCUE TextDocument Properties</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Helpfile</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>blank&gt;</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The values that you set on this page of the wizard will be returned to the property page container when it calls <bpt id="p1">**</bpt>IPropertyPage::GetPageInfo<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>What happens to the strings after that is dependent on the container, but typically they will be used to identify your page to the user.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The Title will usually appear in a tab above your page and the Doc String may be displayed in a status bar or ToolTip (although the standard property frame doesn't use this string at all).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The strings that you set here are stored as string resources in your project by the wizard.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>You can easily edit these strings using the resource editor if you need to change this information after the code for your page has been generated.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept> to have the wizard generate your property page.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Editing the Dialog Resource</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Now that your property page has been generated, you'll need to add a few controls to the dialog resource representing your page.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Add an edit box, a static text control, and a check box and set their IDs as shown below:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Editing a dialog resource</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>These controls will be used to display the file name of the document and its read-only status.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The dialog resource does not include a frame or command buttons, nor does it have the tabbed look that you might have expected.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>These features are provided by a property page frame such as the one created by calling <bpt id="p1">[</bpt>OleCreatePropertyFrame<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms678437)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Adding Message Handlers</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>With the controls in place, you can add message handlers to update the dirty status of the page when the value of either of the controls changes:</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#73</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This code responds to changes made to the edit control or check box by calling <bpt id="p1">[</bpt>IPropertyPageImpl::SetDirty<ept id="p1">](../atl/reference/ipropertypageimpl-class.md#ipropertypageimpl__setdirty)</ept>, which informs the page site that the page has changed.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Typically the page site will respond by enabling or disabling an <bpt id="p1">**</bpt>Apply<ept id="p1">**</ept> button on the property page frame.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In your own property pages, you might need to keep track of precisely which properties have been altered by the user so that you can avoid updating properties that haven't been changed.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>This example implements that code by keeping track of the original property values and comparing them with the current values from the UI when it's time to apply the changes.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Housekeeping</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Now add a couple of <ph id="ph1">`#import`</ph> statements to DocProperties.h so that the compiler knows about the <bpt id="p1">**</bpt>Document<ept id="p1">**</ept> interface:</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#74</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>You'll also need to refer to the <ph id="ph1">`IPropertyPageImpl`</ph> base class; add the following <ph id="ph2">`typedef`</ph> to the <bpt id="p1">**</bpt>CDocProperties<ept id="p1">**</ept> class:</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#75</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Overriding IPropertyPageImpl::SetObjects</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The first <ph id="ph1">`IPropertyPageImpl`</ph> method that you need to override is <bpt id="p1">[</bpt>SetObjects<ept id="p1">](../atl/reference/ipropertypageimpl-class.md#ipropertypageimpl__setobjects)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Here you'll add code to check that only a single object has been passed and that it supports the <bpt id="p1">**</bpt>Document<ept id="p1">**</ept> interface that you're expecting:</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#76</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>It makes sense to support only a single object for this page because you will allow the user to set the file name of the object — only one file can exist at any one location.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Overriding IPropertyPageImpl::Activate</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The next step is to initialize the property page with the property values of the underlying object when the page is first created.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>In this case you should add the following members to the class since you'll also use the initial property values for comparison when users of the page apply their changes:</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#77</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The base class implementation of the <bpt id="p1">[</bpt>Activate<ept id="p1">](../atl/reference/ipropertypageimpl-class.md#ipropertypageimpl__activate)</ept> method is responsible for creating the dialog box and its controls, so you can override this method and add your own initialization after calling the base class:</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#78</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>This code uses the COM methods of the <bpt id="p1">**</bpt>Document<ept id="p1">**</ept> interface to get the properties that you're interested in.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>It then uses the Win32 API wrappers provided by <bpt id="p1">[</bpt>CDialogImpl<ept id="p1">](../atl/reference/cdialogimpl-class.md)</ept> and its base classes to display the property values to the user.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Overriding IPropertyPageImpl::Apply</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>When users want to apply their changes to the objects, the property page site will call the <bpt id="p1">[</bpt>Apply<ept id="p1">](../atl/reference/ipropertypageimpl-class.md#ipropertypageimpl__apply)</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>This is the place to do the reverse of the code in <bpt id="p1">**</bpt>Activate<ept id="p1">**</ept> — whereas <bpt id="p2">**</bpt>Activate<ept id="p2">**</ept> took values from the object and pushed them into the controls on the property page, <bpt id="p3">**</bpt>Apply<ept id="p3">**</ept> takes values from the controls on the property page and pushes them into the object.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#79</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>The check against <bpt id="p1">[</bpt>m_bDirty<ept id="p1">](../atl/reference/ipropertypageimpl-class.md#ipropertypageimpl__m_bdirty)</ept> at the beginning of this implementation is an initial check to avoid unnecessary updates of the objects if <bpt id="p2">**</bpt>Apply<ept id="p2">**</ept> is called more than once.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>There are also checks against each of the property values to ensure that only changes result in a method call to the <bpt id="p1">**</bpt>Document<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Document<ept id="p1">**</ept> exposes <bpt id="p2">**</bpt>FullName<ept id="p2">**</ept> as a read-only property.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>To update the file name of the document based on changes made to the property page, you have to use the <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> method to save the file with a different name.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Thus, the code in a property page doesn't have to limit itself to getting or setting properties.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Displaying the Property Page</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>To display this page, you need to create a simple helper object.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The helper object will provide a method that simplifies the <bpt id="p1">**</bpt>OleCreatePropertyFrame<ept id="p1">**</ept> API for displaying a single page connected to a single object.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>This helper will be designed so that it can be used from Visual Basic.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">[</bpt>Add Class dialog box<ept id="p1">](../ide/add-class-dialog-box.md)</ept> and the <bpt id="p2">[</bpt>ATL Simple Object Wizard<ept id="p2">](../atl/reference/atl-simple-object-wizard.md)</ept> to generate a new class and use <ph id="ph1">`Helper`</ph> as its short name.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Once created, add a method as shown in the table below.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Item</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Value</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Method Name</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`bstrCaption`</ph> parameter is the caption to be displayed as the title of the dialog box.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`bstrID`</ph> parameter is a string representing either a CLSID or a ProgID of the property page to display.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pUnk`</ph> parameter will be the <ph id="ph2">`IUnknown`</ph> pointer of the object whose properties will be configured by the property page.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Implement the method as shown below:</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#80</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Creating a Macro</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Once you've built the project, you can test the property page and the helper object using a simple macro that you can create and run in the Visual Studio development environment.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>This macro will create a helper object, then call its <bpt id="p1">**</bpt>ShowPage<ept id="p1">**</ept> method using the ProgID of the <bpt id="p2">**</bpt>DocProperties<ept id="p2">**</ept> property page and the <bpt id="p3">**</bpt>IUnknown<ept id="p3">**</ept> pointer of the document currently active in the Visual Studio editor.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The code you need for this macro is shown below:</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>When you run this macro, the property page will be displayed showing the file name and read-only status of the currently active text document.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The read-only state of the document only reflects the ability to write to the document in the development environment; it doesn't affect the read-only attribute of the file on disk.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Property Pages</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>ATLPages Sample</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

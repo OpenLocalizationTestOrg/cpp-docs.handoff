@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">accecf4477deb327d6b566b74ae99094eaa32689</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tree-control-image-lists.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">63924cb403ec4ecfe66a60c74c10bd760ec19662</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e6688ea57874d0be9a7745d818986ab1fa2c9751</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Tree Control Image Lists | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Tree Control Image Lists</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Each item in a tree control (<bpt id="p1">[</bpt>CTreeCtrl<ept id="p1">](../mfc/reference/ctreectrl-class.md)</ept>) can have a pair of bitmapped images associated with it.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The images appear on the left side of an item's label.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>One image is displayed when the item is selected, and the other is displayed when the item is not selected.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For example, an item might display an open folder when it is selected and a closed folder when it is not selected.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To use item images, you must create an image list by constructing a <bpt id="p1">[</bpt>CImageList<ept id="p1">](../mfc/reference/cimagelist-class.md)</ept> object and using the <bpt id="p2">[</bpt>CImageList::Create<ept id="p2">](../mfc/reference/cimagelist-class.md#cimagelist__create)</ept> function to create the associated image list.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Then add the desired bitmaps to the list, and associate the list with the tree control by using the <bpt id="p1">[</bpt>SetImageList<ept id="p1">](../mfc/reference/ctreectrl-class.md#ctreectrl__setimagelist)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>By default, all items display the first image in the image list for both the selected and nonselected states.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>You can change the default behavior for a particular item by specifying the indexes of the selected and nonselected images when adding the item to the tree control using the <bpt id="p1">[</bpt>InsertItem<ept id="p1">](../mfc/reference/ctreectrl-class.md#ctreectrl__insertitem)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You can change the indexes after adding an item by using the <bpt id="p1">[</bpt>SetItemImage<ept id="p1">](../mfc/reference/ctreectrl-class.md#ctreectrl__setitemimage)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A tree control's image lists can also contain overlay images, which are designed to be superimposed on item images.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A nonzero value in bits 8 through 11 of a tree control item's state specifies the one-based index of an overlay image (0 indicates no overlay image).</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Because a 4-bit, one-based index is used, overlay images must be among the first 15 images in the image lists.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For more information about tree control item states, see <bpt id="p1">[</bpt>Tree Control Item States Overview<ept id="p1">](../mfc/tree-control-item-states-overview.md)</ept> earlier in this topic.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If a state image list is specified, a tree control reserves space to the left of each item's icon for a state image.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>An application can use state images, such as checked and cleared check boxes, to indicate application-defined item states.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>A nonzero value in bits 12 through 15 specifies the one-based index of a state image (0 indicates no state image).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>By specifying the <bpt id="p1">**</bpt>I_IMAGECALLBACK<ept id="p1">**</ept> value instead of the index of an image, you can delay specifying the selected or nonselected image until the item is about to be redrawn.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>I_IMAGECALLBACK<ept id="p1">**</ept> directs the tree control to query the application for the index by sending the <bpt id="p2">[</bpt>TVN_GETDISPINFO<ept id="p2">](http://msdn.microsoft.com/library/windows/desktop/bb773518)</ept> notification message.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>GetImageList<ept id="p1">](../mfc/reference/ctreectrl-class.md#ctreectrl__getimagelist)</ept> member function retrieves the handle of a tree control's image list.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This function is useful if you need to add more images to the list.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For more information about image lists, see <bpt id="p1">[</bpt>Using CImageList<ept id="p1">](../mfc/using-cimagelist.md)</ept>, <bpt id="p2">[</bpt>CImageList<ept id="p2">](../mfc/reference/cimagelist-class.md)</ept> in the <bpt id="p3">*</bpt>MFC Reference<ept id="p3">*</ept>, and <bpt id="p4">[</bpt>Image Lists<ept id="p4">](http://msdn.microsoft.com/library/windows/desktop/bb761389)</ept> in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Using CTreeCtrl</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

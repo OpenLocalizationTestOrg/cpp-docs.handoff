@@ -1,0 +1,753 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6ec4307baf66092af93491c4fadcb0d928162393</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\basic-filebuf-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0aa32dc17ee9efa824732cb665ac6de30f86918d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">99ce68f29c2f24c0313c96fdd3d2707d3c9ee05b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>basic_filebuf Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>basic_filebuf Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Describes a stream buffer that controls the transmission of elements of type <ph id="ph1">`Elem`</ph>, whose character traits are determined by the class <ph id="ph2">`Tr`</ph>, to and from a sequence of elements stored in an external file.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The basic element of the file buffer.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The traits of the basic element of the file buffer (usually <ph id="ph1">`char_traits`&lt; `Elem`</ph>&gt;).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The template class describes a stream buffer that controls the transmission of elements of type <ph id="ph1">`Elem`</ph>, whose character traits are determined by the class <ph id="ph2">`Tr`</ph>, to and from a sequence of elements stored in an external file.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Objects of type <ph id="ph1">`basic_filebuf`</ph> are created with an internal buffer of type <ph id="ph2">`char *`</ph> regardless of the <ph id="ph3">`char_type`</ph> specified by the type parameter <ph id="ph4">`Elem`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This means that a Unicode string (containing <ph id="ph1">`wchar_t`</ph> characters) will be converted to an ANSI string (containing <ph id="ph2">`char`</ph> characters) before it is written to the internal buffer.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To store Unicode strings in the buffer, create a new buffer of type <ph id="ph1">`wchar_t`</ph> and set it using the <bpt id="p1">[</bpt>basic_streambuf::pubsetbuf<ept id="p1">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubsetbuf)</ept><ph id="ph2">`()`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To see an example that demonstrates this behavior, see below.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>An object of class <ph id="ph1">`basic_filebuf`&lt; `Elem`</ph>, <ph id="ph2">`Tr`</ph>&gt; stores a file pointer, which designates the <ph id="ph3">`FILE`</ph> object that controls the stream associated with an open file.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It also stores pointers to two file conversion facets for use by the protected member functions <bpt id="p1">[</bpt>overflow<ept id="p1">](#basic_filebuf__overflow)</ept> and <bpt id="p2">[</bpt>underflow<ept id="p2">](#basic_filebuf__underflow)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>basic_filebuf::open<ept id="p1">](#basic_filebuf__open)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates how to force an object of type <ph id="ph1">`basic_filebuf&lt;wchar_t&gt;`</ph> to store Unicode characters in its internal buffer by calling the <ph id="ph2">`pubsetbuf()`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Constructors</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>basic_filebuf</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Constructs an object of type <ph id="ph1">`basic_filebuf`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Typedefs</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>char_type</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Associates a type name with the <ph id="ph1">`Elem`</ph> template parameter.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>int_type</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Makes this type within <ph id="ph1">`basic_filebuf`</ph>'s scope equivalent to the type of the same name in the <ph id="ph2">`Tr`</ph> scope.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>off_type</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Makes this type within <ph id="ph1">`basic_filebuf`</ph>'s scope equivalent to the type of the same name in the <ph id="ph2">`Tr`</ph> scope.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>pos_type</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Makes this type within <ph id="ph1">`basic_filebuf`</ph>'s scope equivalent to the type of the same name in the <ph id="ph2">`Tr`</ph> scope.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>traits_type</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Associates a type name with the <ph id="ph1">`Tr`</ph> template parameter.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Member Functions</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>close</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Closes a file.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>is_open</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Indicates whether a file is open.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>open</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Opens a file.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>overflow</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>A protected virtual function that can be called when a new character is inserted into a full buffer.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>pbackfail</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The protected virtual member function tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>seekoff</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The protected virtual member function tries to alter the current positions for the controlled streams.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>seekpos</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The protected virtual member function tries to alter the current positions for the controlled streams.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>setbuf</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The protected virtual member function performs an operation particular to each derived stream buffer.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Swap</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Exchanges the content of this <ph id="ph1">`basic_filebuf`</ph> for the content of the provided <ph id="ph2">`basic_filebuf`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>sync</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Protected, virtual function tries to synchronize the controlled streams with any associated external streams.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>uflow</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Protected, virtual function to extract the current element from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>underflow</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Protected, virtual function to extract the current element from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> <ph id="ph1">\&lt;</ph>fstream&gt;</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> std</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::basic_filebuf</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Constructs an object of type <ph id="ph1">`basic_filebuf`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The first constructor stores a null pointer in all the pointers controlling the input buffer and the output buffer.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>It also stores a null pointer in the file pointer.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The second constructor initializes the object with the contents of <ph id="ph1">`right`</ph>, treated as an rvalue reference.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::char_type</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Associates a type name with the <bpt id="p1">**</bpt>Elem<ept id="p1">**</ept> template parameter.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::close</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Closes a file.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The member function returns a null pointer if the file pointer is a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>close<ept id="p1">**</ept> calls <ph id="ph1">`fclose`</ph>( <bpt id="p2">**</bpt>fp<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>If that function returns a nonzero value, the function returns a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>this<ept id="p1">**</ept> to indicate that the file was successfully closed.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to <ph id="ph1">`streampos`</ph>, the function calls <bpt id="p1">[</bpt>overflow<ept id="p1">](#basic_filebuf__overflow)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet <bpt id="p1">**</bpt>fac<ept id="p1">**</ept> to call <bpt id="p2">**</bpt>fac.unshift<ept id="p2">**</ept> as needed.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Each element <bpt id="p1">**</bpt>byte<ept id="p1">**</ept> of type <ph id="ph1">`char`</ph> thus produced is written to the associated stream designated by the file pointer <bpt id="p2">**</bpt>fp<ept id="p2">**</ept> as if by successive calls of the form <ph id="ph2">`fputc`</ph>( <bpt id="p3">**</bpt>byte<ept id="p3">**</ept>, <bpt id="p4">**</bpt>fp<ept id="p4">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>If the call to <bpt id="p1">**</bpt>fac.unshift<ept id="p1">**</ept> or any write fails, the function does not succeed.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The following sample assumes two files in the current directory: basic_filebuf_close.txt (contents is "testing") and iotest.txt (contents is "ssss").</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::int_type</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Makes this type within basic_filebuf's scope equivalent to the type of the same name in the <bpt id="p1">**</bpt>Tr<ept id="p1">**</ept> scope.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::is_open</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Indicates whether a file is open.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>true<ept id="p1">**</ept> if the file pointer is not a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::off_type</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Makes this type within basic_filebuf's scope equivalent to the type of the same name in the <bpt id="p1">**</bpt>Tr<ept id="p1">**</ept> scope.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::open</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Opens a file.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The name of the file to open.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>One of the enumerations in <bpt id="p1">[</bpt>ios_base::openmode<ept id="p1">](../standard-library/ios-base-class.md#ios_base__openmode)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The default file opening protection, equivalent to the <ph id="ph1">`shflag`</ph> parameter in <bpt id="p1">[</bpt>_fsopen, _wfsopen<ept id="p1">](../c-runtime-library/reference/fsopen-wfsopen.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>If the file pointer is a null pointer, the function returns a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The member function opens the file with filename <bpt id="p1">*</bpt>filename<ept id="p1">*</ept>, by calling <bpt id="p2">[</bpt>fopen<ept id="p2">](../c-runtime-library/reference/fopen-wfopen.md)</ept>( <bpt id="p3">*</bpt>filename<ept id="p3">*</ept>, <bpt id="p4">**</bpt>strmode<ept id="p4">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>strmode<ept id="p1">**</ept> is determined from <bpt id="p2">**</bpt>mode &amp;<ept id="p2">**</ept>~( <bpt id="p3">[</bpt>ate<ept id="p3">](../standard-library/ios-base-class.md#ios_base__openmode)</ept> &amp; &amp;#124; <bpt id="p4">[</bpt>binary<ept id="p4">](../standard-library/ios-base-class.md#ios_base__openmode)</ept>):</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>ios_base::in<ept id="p1">**</ept> becomes <bpt id="p2">**</bpt>"r"<ept id="p2">**</ept> (open existing file for reading).</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>ios_base::out<ept id="p1">](../standard-library/ios-base-class.md#ios_base__fmtflags)</ept> or <bpt id="p2">**</bpt>ios_base::out &amp;#124; ios_base::trunc<ept id="p2">**</ept> becomes <bpt id="p3">**</bpt>"w"<ept id="p3">**</ept> (truncate existing file or create for writing).</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>ios_base::out &amp;#124; app<ept id="p1">**</ept> becomes <bpt id="p2">**</bpt>"a"<ept id="p2">**</ept> (open existing file for appending all writes).</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>ios_base::in &amp;#124; ios_base::out<ept id="p1">**</ept> becomes <bpt id="p2">**</bpt>"r+"<ept id="p2">**</ept> (open existing file for reading and writing).</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>ios_base::in &amp;#124; ios_base::out &amp;#124; ios_base::trunc<ept id="p1">**</ept> becomes <bpt id="p2">**</bpt>"w+"<ept id="p2">**</ept> (truncate existing file or create for reading and writing).</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>ios_base::in &amp;#124; ios_base::out &amp;#124; ios_base::app<ept id="p1">**</ept> becomes <bpt id="p2">**</bpt>"a+"<ept id="p2">**</ept> (open existing file for reading and for appending all writes).</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>mode &amp; ios_base::binary<ept id="p1">**</ept> is nonzero, the function appends <bpt id="p2">**</bpt>b<ept id="p2">**</ept> to <bpt id="p3">**</bpt>strmode<ept id="p3">**</ept> to open a binary stream instead of a text stream.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>It then stores the value returned by <ph id="ph1">`fopen`</ph> in the file pointer <bpt id="p1">**</bpt>fp<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>mode &amp; ios_base::ate<ept id="p1">**</ept> is nonzero and the file pointer is not a null pointer, the function calls <ph id="ph1">`fseek`</ph>( <bpt id="p2">**</bpt>fp<ept id="p2">**</ept>, 0, <ph id="ph2">`SEEK_END`</ph>) to position the stream at end of file.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>If that positioning operation fails, the function calls <bpt id="p1">[</bpt>close<ept id="p1">](#basic_filebuf__close)</ept>( <bpt id="p2">**</bpt>fp<ept id="p2">**</ept>) and stores a null pointer in the file pointer.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>If the file pointer is not a null pointer, the function determines the file conversion facet: <ph id="ph1">`use_facet`&lt; `codecvt`&lt; </ph><bpt id="p1">**</bpt>Elem<ept id="p1">**</ept>, <ph id="ph2">`char`</ph>, <bpt id="p2">**</bpt>traits_type::<ept id="p2">**</ept><bpt id="p3">[</bpt>state_type<ept id="p3">](../standard-library/char-traits-struct.md#char_traits__state_type)</ept>&gt; &gt;( <bpt id="p4">[</bpt>getloc<ept id="p4">](../standard-library/basic-streambuf-class.md#basic_streambuf__getloc)</ept>), for use by <bpt id="p5">[</bpt>underflow<ept id="p5">](#basic_filebuf__underflow)</ept> and <bpt id="p6">[</bpt>overflow<ept id="p6">](#basic_filebuf__overflow)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>If the file pointer is a null pointer, the function returns a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>basic_filebuf::close<ept id="p1">](#basic_filebuf__close)</ept> for an example that uses <bpt id="p2">**</bpt>open<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::operator=</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Assign the content of this stream buffer object.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>This is a move assignment involving an rvalue that does not leave a copy behind.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>An rvalue reference to a <bpt id="p1">[</bpt>basic_filebuf<ept id="p1">](../standard-library/basic-filebuf-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Returns *this.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>The member operator replaces the contents of the object by using the contents of <ph id="ph1">` right`</ph>, treated as an rvalue reference.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Rvalue Reference Declarator: &amp;&amp;<ept id="p1">](../cpp/rvalue-reference-declarator-amp-amp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::overflow</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Called when a new character is inserted into a full buffer.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>The character to insert into the buffer or <bpt id="p1">**</bpt>traits_type::eof<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>If the function cannot succeed, it returns <bpt id="p1">**</bpt>traits_type::eof<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>not_eof<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__not_eof)</ept>(_ <bpt id="p3">*</bpt>Meta<ept id="p3">*</ept>).</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>If _ <bpt id="p1">*</bpt>Meta<ept id="p1">*</ept><bpt id="p2">**</bpt>!= traits_type::<ept id="p2">**</ept><bpt id="p3">[</bpt>eof<ept id="p3">](../standard-library/char-traits-struct.md#char_traits__eof)</ept>, the protected virtual member function endeavors to insert the element <bpt id="p4">**</bpt>ch = traits_type::<ept id="p4">**</ept><bpt id="p5">[</bpt>to_char_type<ept id="p5">](../standard-library/char-traits-struct.md#char_traits__to_char_type)</ept>(<ph id="ph1">\_</ph> <bpt id="p6">*</bpt>Meta<ept id="p6">*</ept>) into the output buffer.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>It can do so in various ways:</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>If a write position is available, it can store the element into the write position and increment the next pointer for the output buffer.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>It can make a write position available by allocating new or additional storage for the output buffer.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>It can convert any pending output in the output buffer, followed by <bpt id="p1">**</bpt>ch<ept id="p1">**</ept>, by using the file conversion facet <bpt id="p2">**</bpt>fac<ept id="p2">**</ept> to call <bpt id="p3">**</bpt>fac.out<ept id="p3">**</ept> as needed.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Each element <ph id="ph1">`ch`</ph> of type <bpt id="p1">*</bpt>char<ept id="p1">*</ept> thus produced is written to the associated stream designated by the file pointer <bpt id="p2">**</bpt>fp<ept id="p2">**</ept> as if by successive calls of the form <ph id="ph2">`fputc`</ph>( <bpt id="p3">**</bpt>ch<ept id="p3">**</ept>, <bpt id="p4">**</bpt>fp<ept id="p4">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>If any conversion or write fails, the function does not succeed.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::pbackfail</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>Tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>The character to insert into the buffer, or <bpt id="p1">**</bpt>traits_type::eof<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>If the function cannot succeed, it returns <bpt id="p1">**</bpt>traits_type::eof<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>not_eof<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__not_eof)</ept>(_ <bpt id="p3">*</bpt>Meta<ept id="p3">*</ept>).</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>The protected virtual member function puts back an element into the input buffer and then makes it the current element (pointed to by the next pointer).</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>If _ <bpt id="p1">*</bpt>Meta<ept id="p1">*</ept> <bpt id="p2">**</bpt>== traits_type::<ept id="p2">**</ept><bpt id="p3">[</bpt>eof<ept id="p3">](../standard-library/char-traits-struct.md#char_traits__eof)</ept>, the element to push back is effectively the one already in the stream before the current element.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Otherwise, that element is replaced by <bpt id="p1">**</bpt>ch = traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>to_char_type<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__to_char_type)</ept>(<ph id="ph1">\_</ph> <bpt id="p3">*</bpt>Meta<ept id="p3">*</ept>).</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>The function can put back an element in various ways:</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>If a putback position is available, and the element stored there compares equal to <bpt id="p1">**</bpt>ch<ept id="p1">**</ept>, it can decrement the next pointer for the input buffer.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>If the function can make a <ph id="ph1">`putback`</ph> position available, it can do so, set the next pointer to point at that position, and store <bpt id="p1">**</bpt>ch<ept id="p1">**</ept> in that position.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>If the function can push back an element onto the input stream, it can do so, such as by calling <ph id="ph1">`ungetc`</ph> for an element of type <ph id="ph2">`char`</ph><bpt id="p1">*</bpt>.<ept id="p1">*</ept></source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::pos_type</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>Makes this type within basic_filebuf's scope equivalent to the type of the same name in the <bpt id="p1">**</bpt>Tr<ept id="p1">**</ept> scope.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::seekoff</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Tries to alter the current positions for the controlled streams.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>The position to seek for relative to <ph id="ph1">`_Way`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>The starting point for offset operations.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>seekdir<ept id="p1">](../standard-library/ios-base-class.md#ios_base__seekdir)</ept> for possible values.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Specifies the mode for the pointer position.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>The default is to allow you to modify the read and write positions.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>Returns the new position or an invalid stream position.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>The protected virtual member function endeavors to alter the current positions for the controlled streams.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>For an object of class <bpt id="p1">[</bpt>basic_filebuf<ept id="p1">](../standard-library/basic-filebuf-class.md)</ept><ph id="ph1">&lt; `Elem`</ph>, <ph id="ph2">`Tr`</ph>&gt;, a stream position can be represented by an object of type <ph id="ph3">`fpos_t`</ph>, which stores an offset and any state information needed to parse a wide stream.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>Offset zero designates the first element of the stream.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>(An object of type <bpt id="p1">[</bpt>pos_type<ept id="p1">](../standard-library/basic-streambuf-class.md#basic_streambuf__pos_type)</ept> stores at least an <ph id="ph1">`fpos_t`</ph> object.)</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>For a file opened for both reading and writing, both the input and output streams are positioned in tandem.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>To switch between inserting and extracting, you must call either <bpt id="p1">[</bpt>pubseekoff<ept id="p1">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekoff)</ept> or <bpt id="p2">[</bpt>pubseekpos<ept id="p2">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekpos)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>Calls to <ph id="ph1">`pubseekoff`</ph> (and hence to <ph id="ph2">`seekoff`</ph>) have various limitations for <bpt id="p1">[</bpt>text streams<ept id="p1">](../c-runtime-library/text-and-binary-streams.md)</ept>, <bpt id="p2">[</bpt>binary streams<ept id="p2">](../c-runtime-library/text-and-binary-streams.md)</ept>, and <bpt id="p3">[</bpt>wide streams<ept id="p3">](../c-runtime-library/byte-and-wide-streams.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>If the file pointer <bpt id="p1">**</bpt>fp<ept id="p1">**</ept> is a null pointer, the function fails.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>Otherwise, it endeavors to alter the stream position by calling <ph id="ph1">`fseek`</ph>( <bpt id="p1">**</bpt>fp<ept id="p1">**</ept>, <ph id="ph2">`_Off`</ph>, <ph id="ph3">`_Way`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>If that function succeeds and the resulting position <bpt id="p1">**</bpt>fposn<ept id="p1">**</ept> can be determined by calling <ph id="ph1">`fgetpos`</ph>( <bpt id="p2">**</bpt>fp<ept id="p2">**</ept>, <bpt id="p3">**</bpt>&amp;fposn<ept id="p3">**</ept>), the function succeeds.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>If the function succeeds, it returns a value of type <bpt id="p1">**</bpt>pos_type<ept id="p1">**</ept> containing <bpt id="p2">**</bpt>fposn<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns an invalid stream position.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::seekpos</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>Tries to alter the current positions for the controlled streams.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>The position to seek for.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>Specifies the mode for the pointer position.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>The default is to allow you to modify the read and write positions.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>If the file pointer <bpt id="p1">**</bpt>fp<ept id="p1">**</ept> is a null pointer, the function fails.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>Otherwise, it endeavors to alter the stream position by calling <ph id="ph1">`fsetpos`</ph>( <bpt id="p1">**</bpt>fp<ept id="p1">**</ept>, <bpt id="p2">**</bpt>&amp;fposn<ept id="p2">**</ept>), where <bpt id="p3">**</bpt>fposn<ept id="p3">**</ept> is the <ph id="ph2">`fpos_t`</ph> object stored in <ph id="ph3">`pos`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>If that function succeeds, the function returns <ph id="ph1">`pos`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns an invalid stream position.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>To determine if the stream position is invalid, compare the return value with <ph id="ph1">`pos_type(off_type(-1))`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>The protected virtual member function endeavors to alter the current positions for the controlled streams.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>For an object of class <bpt id="p1">[</bpt>basic_filebuf<ept id="p1">](../standard-library/basic-filebuf-class.md)</ept><ph id="ph1">\&lt;</ph> <bpt id="p2">**</bpt>Elem<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Tr<ept id="p3">**</ept>&gt;, a stream position can be represented by an object of type <ph id="ph2">`fpos_t`</ph>, which stores an offset and any state information needed to parse a wide stream.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>Offset zero designates the first element of the stream.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>(An object of type <ph id="ph1">`pos_type`</ph> stores at least an <ph id="ph2">`fpos_t`</ph> object.)</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>For a file opened for both reading and writing, both the input and output streams are positioned in tandem.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>To switch between inserting and extracting, you must call either <bpt id="p1">[</bpt>pubseekoff<ept id="p1">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekoff)</ept> or <bpt id="p2">[</bpt>pubseekpos<ept id="p2">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekpos)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>Calls to <ph id="ph1">`pubseekoff`</ph> (and hence to <ph id="ph2">`seekoff`</ph>) have various limitations for text streams, binary streams, and wide streams.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to <ph id="ph1">`streampos`</ph>, the function calls <bpt id="p1">[</bpt>overflow<ept id="p1">](#basic_filebuf__overflow)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet <bpt id="p1">**</bpt>fac<ept id="p1">**</ept> to call <bpt id="p2">**</bpt>fac<ept id="p2">**</ept><ph id="ph1">`.``unshift`</ph> as needed.</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>Each element <bpt id="p1">**</bpt>byte<ept id="p1">**</ept> of type <ph id="ph1">`char`</ph> thus produced is written to the associated stream designated by the file pointer <bpt id="p2">**</bpt>fp<ept id="p2">**</ept> as if by successive calls of the form <ph id="ph2">`fputc`</ph>( <bpt id="p3">**</bpt>byte<ept id="p3">**</ept>, <bpt id="p4">**</bpt>fp<ept id="p4">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>If the call to <bpt id="p1">**</bpt>fac.unshift<ept id="p1">**</ept> or any write fails, the function does not succeed.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::setbuf</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Performs an operation particular to each derived stream buffer.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>Pointer to a buffer.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>Size of the buffer.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>The protected member function returns zero if the file pointer <ph id="ph1">`fp`</ph> is a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>calls <ph id="ph1">`setvbuf`</ph>( <bpt id="p1">**</bpt>fp<ept id="p1">**</ept>, ( <ph id="ph2">`char`</ph> <ph id="ph3">\*</ph>) <ph id="ph4">`_Buffer`</ph>, <ph id="ph5">`_IOFBF`</ph>, <ph id="ph6">` count`</ph> <ph id="ph7">\*</ph> <ph id="ph8">`sizeof`</ph> ( <bpt id="p2">**</bpt>Elem<ept id="p2">**</ept>) ) to offer the array of <ph id="ph9">` count`</ph> elements beginning at _ <bpt id="p3">*</bpt>Buffer<ept id="p3">*</ept> as a buffer for the stream.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>If that function returns a nonzero value, the function returns a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>this<ept id="p1">**</ept> to signal success.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::swap</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>Exchanges the contents of this <ph id="ph1">`basic_filebuf`</ph> for the contents of the provided <ph id="ph2">`basic_filebuf`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`lvalue`</ph> reference to another <ph id="ph2">`basic_filebuf`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::sync</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>Tries to synchronize the controlled streams with any associated external streams.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>Returns zero if the file pointer <bpt id="p1">**</bpt>fp<ept id="p1">**</ept> is a null pointer.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns zero only if calls to both <bpt id="p1">[</bpt>overflow<ept id="p1">](#basic_filebuf__overflow)</ept> and <ph id="ph1">`fflush`</ph>( <bpt id="p2">**</bpt>fp<ept id="p2">**</ept>) succeed in flushing any pending output to the stream.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::traits_type</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>Associates a type name with the <bpt id="p1">**</bpt>Tr<ept id="p1">**</ept> template parameter.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>basic_filebuf::underflow</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>Extracts the current element from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>If the function cannot succeed, it returns <bpt id="p1">**</bpt>traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>eof<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__eof)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>ch<ept id="p1">**</ept>, converted as described in the Remarks section.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>The protected virtual member function endeavors to extract the current element <bpt id="p1">**</bpt>ch<ept id="p1">**</ept> from the input stream, and return the element as <bpt id="p2">**</bpt>traits_type::<ept id="p2">**</ept><bpt id="p3">[</bpt>to_int_type<ept id="p3">](../standard-library/char-traits-struct.md#char_traits__to_int_type)</ept>( <bpt id="p4">**</bpt>ch<ept id="p4">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>It can do so in various ways:</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source>If a read position is available, it takes <bpt id="p1">**</bpt>ch<ept id="p1">**</ept> as the element stored in the read position and advances the next pointer for the input buffer.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>It can read one or more elements of type <ph id="ph1">`char`</ph><bpt id="p1">*</bpt>,<ept id="p1">*</ept> as if by successive calls of the form <ph id="ph2">`fgetc`</ph>( <bpt id="p2">**</bpt>fp<ept id="p2">**</ept>), and convert them to an element <bpt id="p3">**</bpt>ch<ept id="p3">**</ept> of type <bpt id="p4">**</bpt>Elem<ept id="p4">**</ept> by using the file conversion facet fac to call <bpt id="p5">**</bpt>fac.in<ept id="p5">**</ept> as needed.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>If any read or conversion fails, the function does not succeed.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>fstream&gt;</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>Thread Safety in the C++ Standard Library</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>iostream Programming</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>iostreams Conventions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

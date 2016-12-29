@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7670d057bb20f21794fb0c687670aabdd5a4faaa</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\param-array-and-ellipsis.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9595c9dc6a2f434eaef877a648af92235379b29e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f0838dc750a2d7d547bb8078ed35fad7be277798</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Param Array and Ellipsis | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Param Array and Ellipsis</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Precedence of the param array for resolving overloaded function calls has changed from Managed Extensions for C++ to <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In both Managed Extensions and the new syntax, there is no explicit support for the param array that C# and <ph id="ph1">[!INCLUDE[vbprvb](../dotnet/includes/vbprvb_md.md)]</ph> support.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Instead, one flags an ordinary array with an attribute, as follows:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>While these both look the same, the <ph id="ph1">`ParamArray`</ph> attribute tags this for C# or other CLR languages as an array taking a variable number of elements with each invocation.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The change in behavior in programs between Managed Extensions and the new syntax is in the resolution of an overloaded function set in which one instance declares an ellipsis and a second declares a <ph id="ph1">`ParamArray`</ph> attribute, as in the following example provided by Artur Laksberg.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, the ellipsis was given precedence over the attribute which is reasonable since the attribute is not a formal aspect of the language.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>However, in the new syntax, the param array is now supported directly within the language, and it is given precedence over the ellipsis because it is more strongly typed.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Thus, in Managed Extensions, the call</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>resolves to <ph id="ph1">`fx(…)`</ph> while in the new syntax, it resolves to the <ph id="ph2">`ParamArray`</ph> instance.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>On the off chance that your program behavior depends on the invocation of the ellipsis instance over that of the <ph id="ph1">`ParamArray`</ph>, you will need to modify either the signature or the call.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>General Language Changes (C++/CLI)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

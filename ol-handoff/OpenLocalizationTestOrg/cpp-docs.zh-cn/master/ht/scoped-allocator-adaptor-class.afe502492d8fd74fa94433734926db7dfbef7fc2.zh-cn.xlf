@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">427ef1a27b0b67c1e4b19a5cd74fc0cf518e67f0</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\scoped-allocator-adaptor-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8d2c5fda216b85243e973a65ebd299e7f8691412</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">21ae9056ad044b18223d83c91e7163109e684d0c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Represents a nest of allocators.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The template class encapsulates a nest of one or more allocators.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Each such class has an outermost allocator of type <ph id="ph1">`outer_allocator_type`</ph>, a synonym for <ph id="ph2">`Outer`</ph>, which is a public base of the <ph id="ph3">`scoped_allocator_adaptor`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>is used to allocate memory to be used by a container.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>You can obtain a reference to this allocator base object by calling <ph id="ph1">`outer_allocator`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The remainder of the nest has type <ph id="ph1">`inner_allocator_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>An inner allocator is used to allocate memory for elements within a container.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>You can obtain a reference to the stored object of this type by calling <ph id="ph1">`inner_allocator`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`Inner...`</ph> is not empty, <ph id="ph2">`inner_allocator_type`</ph> has type <ph id="ph3">`scoped_allocator_adaptor&lt;Inner...&gt;`</ph>, and <ph id="ph4">`inner_allocator`</ph> designates a member object.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Otherwise, <ph id="ph1">`inner_allocator_type`</ph> has type <ph id="ph2">`scoped_allocator_adaptor&lt;Outer&gt;`</ph>, and <ph id="ph3">`inner_allocator`</ph> designates the entire object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The nest behaves as if it has arbitrary depth, replicating its innermost encapsulated allocator as needed.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Several concepts that are not a part of the visible interface aid in describing the behavior of this template class.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">*</bpt>outermost allocator<ept id="p1">*</ept> mediates all calls to the construct and destroy methods.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>It is effectively defined by the recursive function <ph id="ph1">`OUTERMOST(X)`</ph>, where <ph id="ph2">`OUTERMOST(X)`</ph> is one of the following.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`X.outer_allocator()`</ph> is well formed, then <ph id="ph2">`OUTERMOST(X)`</ph> is <ph id="ph3">`OUTERMOST(X.outer_allocator())`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Otherwise, <ph id="ph1">`OUTERMOST(X)`</ph> is <ph id="ph2">`X`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Three types are defined for the sake of exposition:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Type</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The type of <ph id="ph1">`OUTERMOST(*this)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Constructors</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::scoped_allocator_adaptor Constructor</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Constructs a <ph id="ph1">`scoped_allocator_adaptor`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Typedefs</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the <ph id="ph1">`const_pointer`</ph> that is associated with the allocator <ph id="ph2">`Outer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the <ph id="ph1">`const_void_pointer`</ph> that is associated with the allocator <ph id="ph2">`Outer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the <ph id="ph1">`difference_type`</ph> that is associated with the allocator <ph id="ph2">`Outer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the type of the nested adaptor <ph id="ph1">`scoped_allocator_adaptor&lt;Inner...&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the type of the base allocator <ph id="ph1">`Outer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the <ph id="ph1">`pointer`</ph> associated with the allocator <ph id="ph2">`Outer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The type holds true only if <ph id="ph1">`Outer_traits::propagate_on_container_copy_assignment`</ph> holds true or <ph id="ph2">`inner_allocator_type::propagate_on_container_copy_assignment`</ph> holds true.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The type holds true only if <ph id="ph1">`Outer_traits::propagate_on_container_move_assignment`</ph> holds true or <ph id="ph2">`inner_allocator_type::propagate_on_container_move_assignment`</ph> holds true.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The type holds true only if <ph id="ph1">`Outer_traits::propagate_on_container_swap`</ph> holds true or <ph id="ph2">`inner_allocator_type::propagate_on_container_swap`</ph> holds true.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the <ph id="ph1">`size_type`</ph> associated with the allocator <ph id="ph2">`Outer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the <ph id="ph1">`value_type`</ph> associated with the allocator <ph id="ph2">`Outer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This type is a synonym for the <ph id="ph1">`void_pointer`</ph> associated with the allocator <ph id="ph2">`Outer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Structs</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::rebind Struct</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Defines the type <ph id="ph1">`Outer::rebind\&lt;Other&gt;::other`</ph> as a synonym for <ph id="ph2">`scoped_allocator_adaptor\&lt;Other, Inner...&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Methods</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::allocate Method</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Allocates memory by using the <ph id="ph1">`Outer`</ph> allocator.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::construct Method</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Constructs an object.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::deallocate Method</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Deallocates objects by using the outer allocator.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::destroy Method</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Destroys a specified object.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::inner_allocator Method</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Retrieves a reference to the stored object of type <ph id="ph1">`inner_allocator_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::max_size Method</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Determines the maximum number of objects that can be allocated by the outer allocator.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::outer_allocator Method</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Retrieves a reference to the stored object of type <ph id="ph1">`outer_allocator_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::select_on_container_copy_construction Method</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Creates a new <ph id="ph1">`scoped_allocator_adaptor`</ph> object with each stored allocator object initialized by calling <ph id="ph2">`select_on_container_copy_construction`</ph> for each corresponding allocator.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> &lt;scoped_allocator&gt;</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> std</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::allocate Method</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Allocates memory by using the <ph id="ph1">`Outer`</ph> allocator.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The number of elements for which sufficient storage is to be allocated.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>A pointer that might assist the allocator object by locating the address of an object allocated prior to the request.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The first member function returns <ph id="ph1">`Outer_traits::allocate(outer_allocator(), count)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>The second member function returns <ph id="ph1">`Outer_traits::allocate(outer_allocator(), count, hint)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::construct Method</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Constructs an object.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>A pointer to the memory location where the object is to be constructed.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>A list of arguments.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>An object of the first type in a pair.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>An object of the second type in a pair.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>An existing object to be moved or copied.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The first method constructs the object at <ph id="ph1">`ptr`</ph> by calling <ph id="ph2">`Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`</ph>, where <ph id="ph3">`xargs...`</ph> is one of the following.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`uses_allocator&lt;Ty, inner_allocator_type&gt;`</ph> holds false, then <ph id="ph2">`xargs...`</ph> is <ph id="ph3">`args...`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`uses_allocator&lt;Ty, inner_allocator_type&gt;`</ph> holds true, and <ph id="ph2">`is_constructible&lt;Ty, allocator_arg_t, inner_allocator_type, args...&gt;`</ph> holds true, then <ph id="ph3">`xargs...`</ph> is <ph id="ph4">`allocator_arg, inner_allocator(), args...`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`uses_allocator&lt;Ty, inner_allocator_type&gt;`</ph> holds true, and <ph id="ph2">`is_constructible&lt;Ty, args..., inner_allocator()&gt;`</ph> holds true, then <ph id="ph3">`xargs...`</ph> is <ph id="ph4">`args..., inner_allocator()`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The second method constructs the pair object at <ph id="ph1">`ptr`</ph> by calling <ph id="ph2">`Outermost_traits::construct(OUTERMOST(*this), &amp;ptr-&gt;first, xargs...)`</ph>, where <ph id="ph3">`xargs...`</ph> is <ph id="ph4">`first...`</ph> modified as in the above list, and <ph id="ph5">`Outermost_traits::construct(OUTERMOST(*this), &amp;ptr-&gt;second, xargs...)`</ph>, where <ph id="ph6">`xargs...`</ph> is <ph id="ph7">`second...`</ph> modified as in the above list.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The third method behaves the same as <ph id="ph1">`this-&gt;construct(ptr, piecewise_construct, tuple&lt;&gt;, tuple&lt;&gt;)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The fourth method behaves the same as <ph id="ph1">`this-&gt;construct(ptr, piecewise_construct, forward_as_tuple(std::forward&lt;Uy1&gt;(first), forward_as_tuple(std::forward&lt;Uy2&gt;(second))`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The fifth method behaves the same as <ph id="ph1">`this-&gt;construct(ptr, piecewise_construct, forward_as_tuple(right.first), forward_as_tuple(right.second))`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The sixth method behaves the same as <ph id="ph1">`this-&gt;construct(ptr, piecewise_construct, forward_as_tuple(std::forward&lt;Uy1&gt;(right.first), forward_as_tuple(std::forward&lt;Uy2&gt;(right.second))`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::deallocate Method</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Deallocates objects by using the outer allocator.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>A pointer to the starting location of the objects to be deallocated.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The number of objects to deallocate.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::destroy Method</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Destroys a specified object.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>A pointer to the object to be destroyed.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::inner_allocator Method</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Retrieves a reference to the stored object of type <ph id="ph1">`inner_allocator_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>A reference to the stored object of type <ph id="ph1">`inner_allocator_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::max_size Method</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>Determines the maximum number of objects that can be allocated by the outer allocator.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::outer_allocator Method</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Retrieves a reference to the stored object of type <ph id="ph1">`outer_allocator_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>A reference to the stored object of type <ph id="ph1">`outer_allocator_type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::rebind Struct</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Defines the type <ph id="ph1">`Outer::rebind\&lt;Other&gt;::other`</ph> as a synonym for <ph id="ph2">`scoped_allocator_adaptor\&lt;Other, Inner...&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>struct rebind{</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>typedef Other_traits::rebind<ph id="ph1">\&lt;</ph>Other&gt;</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Other_alloc;</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>typedef scoped_allocator_adaptor<ph id="ph1">\&lt;</ph>Other_alloc, Inner...&gt; other;</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>};</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::scoped_allocator_adaptor Constructor</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Constructs a <ph id="ph1">`scoped_allocator_adaptor`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>An existing <ph id="ph1">`scoped_allocator_adaptor`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>An existing allocator to be used as the outer allocator.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>A list of allocators to be used as the inner allocators.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>The first constructor default constructs its stored allocator objects.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Each of the next three constructors constructs its stored allocator objects from the corresponding objects in <ph id="ph1">`right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>The last constructor constructs its stored allocator objects from the corresponding arguments in the argument list.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_adaptor::select_on_container_copy_construction Method</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Creates a new <ph id="ph1">`scoped_allocator_adaptor`</ph> object with each stored allocator object initialized by calling <ph id="ph2">`select_on_container_copy_construction`</ph> for each corresponding allocator.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>This method effectively returns <ph id="ph1">`scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>The result is a new <ph id="ph1">`scoped_allocator_adaptor`</ph> object with each stored allocator object initialized by calling <ph id="ph2">`al.select_on_container_copy_construction()`</ph> for the corresponding allocator <ph id="ph3">`al`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Header Files Reference</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

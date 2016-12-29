@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e7b70ca7170beb276086afcbe3fbd15d6d04e5c8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\supporting-transactions-in-ole-db.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b5ed4f9a9253a32fa0b16cf6f7052720d0274ea7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8e637bd4ce883eb2a1ff75593ae7eb0521256871</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Supporting Transactions in OLE DB | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Supporting Transactions in OLE DB</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">[</bpt>transaction<ept id="p1">](../../data/transactions-mfc-data-access.md)</ept> is a way to group, or batch, a series of updates to a data source so that either all succeed and are committed at once or (if any one of them fails) none are committed and the entire transaction is rolled back.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This process ensures the integrity of the result on the data source.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>OLE DB supports transactions with the following three methods:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>ITransactionLocal::StartTransaction</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>ITransaction::Commit</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>ITransaction::Abort</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Relationship of Sessions and Transactions</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>A single data source object can create one or more session objects, each of which can be inside or outside the scope of a transaction at a given time.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When a session does not enter a transaction, all work done within that session on the data store is immediately committed on each method call.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>(This is sometimes referred to as autocommit mode or implicit mode.)</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When a session enters a transaction, all work done within that session on the data store is part of that transaction and is committed or aborted as a single unit.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>(This is sometimes referred to as manual-commit mode.)</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Transaction support is provider-specific.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If the provider you are using supports transactions, a session object that supports <bpt id="p1">**</bpt>ITransaction<ept id="p1">**</ept> and <bpt id="p2">**</bpt>ITransactionLocal<ept id="p2">**</ept> can enter a simple (that is, non-nested) transaction.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The OLE DB Templates class <bpt id="p1">[</bpt>CSession<ept id="p1">](../../data/oledb/csession-class.md)</ept> supports these interfaces and is the recommended way to implement transaction support in Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Starting and Ending the Transaction</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You call the <ph id="ph1">`StartTransaction`</ph>, <bpt id="p1">**</bpt>Commit<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>Abort<ept id="p2">**</ept> methods in the rowset object in the consumer.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Calling <bpt id="p1">**</bpt>ITransactionLocal::StartTransaction<ept id="p1">**</ept> starts a new local transaction.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When you start the transaction, any changes mandated by subsequent operations are not actually applied to the data store until you commit the transaction.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Calling <bpt id="p1">**</bpt>ITransaction::Commit<ept id="p1">**</ept> or <bpt id="p2">**</bpt>ITransaction::Abort<ept id="p2">**</ept> ends the transaction.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Commit<ept id="p1">**</ept> causes all changes within the scope of the transaction to be applied to the data store.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Abort<ept id="p1">**</ept> causes all changes within the scope of the transaction to be canceled and the data store is left in the state it had before the transaction started.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Nested Transactions</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">[</bpt>nested transaction<ept id="p1">](https://msdn.microsoft.com/en-us/library/ms716985.aspx)</ept> occurs when you start a new local transaction when an active transaction already exists on the session.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The new transaction is started as a nested transaction below the current transaction.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If the provider does not support nested transactions, calling <ph id="ph1">`StartTransaction`</ph> when there is already an active transaction on the session returns <bpt id="p1">**</bpt>XACT_E_XTIONEXISTS<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Distributed Transactions</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>A distributed transaction is a transaction that updates distributed data; that is, data on more than one networked computer system.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If you want to support transactions over a distributed system, you should use the .NET Framework rather than the OLE DB transaction support.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Using Accessors</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

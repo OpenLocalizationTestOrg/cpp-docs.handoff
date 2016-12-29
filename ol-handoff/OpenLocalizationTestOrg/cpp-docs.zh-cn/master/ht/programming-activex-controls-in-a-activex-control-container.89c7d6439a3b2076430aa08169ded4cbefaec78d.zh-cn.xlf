@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">77d46b8e1fdace31b11746ecda29bd97e6bce7bc</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\programming-activex-controls-in-a-activex-control-container.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6146ec3aeaae003d16e313af967d75c3369642b2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">799e0ea4570948a75559be0bcd1d28b3c08c7d2c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article describes the process for accessing the exposed <bpt id="p1">[</bpt>methods<ept id="p1">](../mfc/mfc-activex-controls-methods.md)</ept> and <bpt id="p2">[</bpt>properties<ept id="p2">](../mfc/mfc-activex-controls-properties.md)</ept> of embedded ActiveX controls.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Basically, you will follow these steps:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Insert an ActiveX control into the ActiveX container project<ept id="p1">](../mfc/inserting-a-control-into-a-control-container-application.md)</ept> using Gallery.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Define a member variable<ept id="p1">](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)</ept> (or other form of access) of the same type as the ActiveX control wrapper class.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Program the ActiveX control<ept id="p1">](#_core_programming_the_activex_control)</ept> using predefined member functions of the wrapper class.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For this discussion, assume you've created a dialog-based project (named Container) with ActiveX control support.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The Circ sample control, Circ, will be added to the resulting project.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Once the Circ control is inserted into the project (step 1), insert an instance of the Circ control into the application's main dialog box.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Procedures</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To add the Circ control to the dialog template</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Load the ActiveX control container project.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For this example, use the <ph id="ph1">`Container`</ph> project.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Click the Resource View tab.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Open the <bpt id="p1">**</bpt>Dialog<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Double-click the main dialog box template.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For this example, use <bpt id="p1">**</bpt>IDD_CONTAINER_DIALOG<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Click the Circ control icon on the Toolbox.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Click a spot within the dialog box to insert the Circ control.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>From the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, choose <bpt id="p2">**</bpt>Save All<ept id="p2">**</ept> to save all modifications to the dialog box template.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Modifications to the Project</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To enable the Container application to access the Circ control, Visual C++ automatically adds the wrapper class (<ph id="ph1">`CCirc`</ph>) implementation file (.CPP) to the Container project and the wrapper class header (.H) file to the dialog box header file:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxCont#1</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The Wrapper Class Header (.H) File</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To get and set properties (and invoke methods) for the Circ control, the <ph id="ph1">`CCirc`</ph> wrapper class provides a declaration of all exposed methods and properties.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In the example, these declarations are found in CIRC.H.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The following sample is the portion of class <ph id="ph1">`CCirc`</ph> that defines the exposed interfaces of the ActiveX control:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxCont#2</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxCont#3</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>These functions can then be called from other of the application's procedures using normal C++ syntax.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information on using this member function set to access the control's methods and properties, see the section <bpt id="p1">[</bpt>Programming the ActiveX control<ept id="p1">](#_core_programming_the_activex_control)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Member Variable Modifications to the Project</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Once the ActiveX control has been added to the project and embedded in a dialog box container, it can be accessed by other parts of the project.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The easiest way to access the control is to <bpt id="p1">[</bpt>create a member variable<ept id="p1">](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)</ept> of the dialog class, <ph id="ph1">`CContainerDlg`</ph> (step 2), that is of the same type as the wrapper class added to the project by Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>You can then use the member variable to access the embedded control at any time.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>When the <bpt id="p1">**</bpt>Add Member Variable<ept id="p1">**</ept> dialog box adds the <ph id="ph1">`m_circctl`</ph> member variable to the project, it also adds the following lines to the header file (.H) of the <ph id="ph2">`CContainerDlg`</ph> class:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxCont#4</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxCont#5</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In addition, a call to <bpt id="p1">**</bpt>DDX_Control<ept id="p1">**</ept> is automatically added to the <ph id="ph1">`CContainerDlg`</ph>'s implementation of <ph id="ph2">`DoDataExchange`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxCont#6</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Programming the ActiveX Control</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>At this point, you have inserted the ActiveX control into your dialog template and created a member variable for it.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>You can now use common C++ syntax to access the properties and methods of the embedded control.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>As noted (in <bpt id="p1">[</bpt>The Wrapper Class Header (.H) File<ept id="p1">](#_core_the_wrapper_class_header_28h29_file)</ept>), the header file (.H) for the <ph id="ph1">`CCirc`</ph> wrapper class, in this case CIRC.H, contains a list of member functions that you can use to get and set any exposed property value.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Member functions for exposed methods are also available.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>A common place to modify the control's properties is in the <ph id="ph1">`OnInitDialog`</ph> member function of the main dialog class.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This function is called just before the dialog box appears and is used to initialize its contents, including any of its controls.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The following code example uses the <ph id="ph1">`m_circctl`</ph> member variable to modify the Caption and CircleShape properties of the embedded Circ control:</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxCont#7</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>ActiveX Control Containers</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

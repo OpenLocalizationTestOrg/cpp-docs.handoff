@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">962b35f6fa24d27520076d0f0b5387ba441627bb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\sizeof-operator-c.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fefdab409a59f1e90f41998e241fbfe6569598f0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d205219b64ba0b3a8750060a1c97a386d9f768e3</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>sizeof Operator (C) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>sizeof Operator (C)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`sizeof`</ph> operator gives the amount of storage, in bytes, required to store an object of the type of the operand.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This operator allows you to avoid specifying machine-dependent data sizes in your programs.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The operand is either an identifier that is a <bpt id="p1">*</bpt>unary-expression<ept id="p1">*</ept>, or a type-cast expression (that is, a type specifier enclosed in parentheses).</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>unary-expression<ept id="p1">*</ept> cannot represent a bit-field object, an incomplete type, or a function designator.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The result is an unsigned integral constant.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The standard header STDDEF.H defines this type as <bpt id="p1">**</bpt>size_t<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When you apply the <ph id="ph1">`sizeof`</ph> operator to an array identifier, the result is the size of the entire array rather than the size of the pointer represented by the array identifier.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When you apply the <ph id="ph1">`sizeof`</ph> operator to a structure or union type name, or to an identifier of structure or union type, the result is the number of bytes in the structure or union, including internal and trailing padding.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This size may include internal and trailing padding used to align the members of the structure or union on memory boundaries.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Thus, the result may not correspond to the size calculated by adding up the storage requirements of the individual members.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If an unsized array is the last element of a structure, the <ph id="ph1">`sizeof`</ph> operator returns the size of the structure without the array.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>This example uses the <ph id="ph1">`sizeof`</ph> operator to pass the size of an <ph id="ph2">`int`</ph>, which varies among machines, as an argument to a run-time function named <ph id="ph3">`calloc`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The value returned by the function is stored in <ph id="ph1">`buffer`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In this example, <ph id="ph1">`strings`</ph> is an array of pointers to <ph id="ph2">`char`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The number of pointers is the number of elements in the array, but is not specified.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>It is easy to determine the number of pointers by using the <ph id="ph1">`sizeof`</ph> operator to calculate the number of elements in the array.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>const<ept id="p1">**</ept> integer value <ph id="ph1">`string_no`</ph> is initialized to this number.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Because it is a <bpt id="p1">**</bpt>const<ept id="p1">**</ept> value, <ph id="ph1">`string_no`</ph> cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>C++ Built-in Operators, Precedence and Associativity</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
