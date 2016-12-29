@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">24cc1ca8aee82bf992be76f75dbf80b0f2ca631c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\catlservicemodulet-servicemain-function.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">06e53239509b62213fa3a80ed4308d2b0458be1e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">07f994575122740b7f9ebe8dbe7c12e7ed362684</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CAtlServiceModuleT::ServiceMain Function | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CAtlServiceModuleT::ServiceMain Function</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The service control manager (SCM) calls <ph id="ph1">`ServiceMain`</ph> when you open the Services Control Panel application, select the service, and click <bpt id="p1">**</bpt>Start<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>After the SCM calls <ph id="ph1">`ServiceMain`</ph>, a service must give the SCM a handler function.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This function lets the SCM obtain the service's status and pass specific instructions (such as pausing or stopping).</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The SCM gets this function when the service passes <bpt id="p1">**</bpt>_Handler<ept id="p1">**</ept> to the Win32 API function, <bpt id="p2">[</bpt>RegisterServiceCtrlHandler<ept id="p2">](http://msdn.microsoft.com/library/windows/desktop/ms685054)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>(<bpt id="p1">**</bpt>_Handler<ept id="p1">**</ept> is a static member function that calls the non-static member function <bpt id="p2">[</bpt>Handler<ept id="p2">](../atl/reference/catlservicemodulet-class.md#catlservicemodulet__handler)</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>At startup, a service should also inform the SCM of its current status.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>It does this by passing <bpt id="p1">**</bpt>SERVICE_START_PENDING<ept id="p1">**</ept> to the Win32 API function, <bpt id="p2">[</bpt>SetServiceStatus<ept id="p2">](http://msdn.microsoft.com/library/windows/desktop/ms686241)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>then calls <ph id="ph1">`CAtlExeModuleT::InitializeCom`</ph>, which calls the Win32 API function <bpt id="p1">[</bpt>CoInitializeEx<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms695279)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>By default, <ph id="ph1">`InitializeCom`</ph> passes the <bpt id="p1">**</bpt>COINIT_MULTITHREADED<ept id="p1">**</ept> flag to the function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>This flag indicates that the program is to be a free-threaded server.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Now, <ph id="ph1">`CAtlServiceModuleT::Run`</ph> is called to perform the main work of the service.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Run<ept id="p1">**</ept> continues to execute until the service is stopped.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Services</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>CAtlServiceModuleT::ServiceMain</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

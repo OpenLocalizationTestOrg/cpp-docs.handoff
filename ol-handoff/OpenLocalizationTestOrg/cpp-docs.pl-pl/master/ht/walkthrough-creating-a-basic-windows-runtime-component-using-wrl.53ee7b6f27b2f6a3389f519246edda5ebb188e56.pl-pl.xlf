@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2589a5ea25b182b0763cce614332ded9edf57869</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\windows\walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cab7f26db4727cc9b25a76d309a663266096ab69</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c735e09db494be1bd988e5a0c1bcd98a10f27065</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Creating a Basic Windows Runtime Component Using WRL | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Creating a Basic Windows Runtime Component Using WRL</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document shows how to use the <ph id="ph1">[!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)]</ph> (<ph id="ph2">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph>) to create a basic <ph id="ph3">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> component.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The component adds two numbers and raises an event when the result is prime.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This document also demonstrates how to use the component from a <ph id="ph1">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app that uses JavaScript.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Experience with the <bpt id="p1">[</bpt>Windows Runtime<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/br211377.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Experience with COM.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To create a basic <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> component that adds two numbers</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In Visual Studio, create a Visual C++ <ph id="ph1">`WRLClassLibrary`</ph> project.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The document <bpt id="p1">[</bpt>Class Library Project Template<ept id="p1">](../windows/wrl-class-library-project-template.md)</ept> describes how to download this template.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Name the project <ph id="ph1">`Contoso`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In Contoso.cpp and Contoso.idl, replace all instances of "WinRTClass" with "Calculator".</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In Contoso.idl, add the <ph id="ph1">`Add`</ph> method to the <ph id="ph2">`ICalculator`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#1</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In Contoso.cpp, add the <ph id="ph1">`Add`</ph> method to the <ph id="ph2">`public`</ph> section of the <ph id="ph3">`Calculator`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#2</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Because you’re creating a COM component, remember to use the <ph id="ph1">`__stdcall`</ph> calling convention.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>We recommend that you use <ph id="ph1">`_Out_`</ph> and other source annotation language (SAL) annotations to describe how a function uses its parameters.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>SAL annotations also describe return values.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>SAL annotations work with the <bpt id="p1">[</bpt>C/C++ Code Analysis tool<ept id="p1">](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)</ept> to discover possible defects in C and C++ source code.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Common coding errors that are reported by the tool include buffer overruns, uninitialized memory, null pointer dereferences, and memory and resource leaks.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To use the component from a <ph id="ph1">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app that uses JavaScript</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In Visual Studio, add a new JavaScript <ph id="ph1">`Blank App`</ph> project to the <ph id="ph2">`Contoso`</ph> solution.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Name the project <ph id="ph1">`CalculatorJS`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`CalculatorJS`</ph> project, add a reference to the <ph id="ph2">`Contoso`</ph> project.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In default.html, replace the <ph id="ph1">`body`</ph> section with these UI elements:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#3</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In default.js, implement the <ph id="ph1">`OnClick`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#4</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In JavaScript, the first letter of a method name is changed to lowercase to match the standard naming conventions.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>To add an event that fires when a prime number is calculated</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In Contoso.idl, before the declaration of <ph id="ph1">`ICalculator`</ph>, define the delegate type, <ph id="ph2">`PrimeNumberEvent`</ph>, which provides an <ph id="ph3">`int`</ph> argument.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#5</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>When you use the <ph id="ph1">`delegate`</ph> keyword, the MIDL compiler creates an interface that contains an <ph id="ph2">`Invoke`</ph> method that matches that delegate's signature.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In this example, the generated file Contoso_h.h defines the <ph id="ph1">`IPrimeNumberEvent`</ph> interface, which is used later in this procedure.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#13</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`ICalculator`</ph> interface, define the <ph id="ph2">`PrimeNumberFound`</ph> event.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`eventadd`</ph> and <ph id="ph2">`eventremove`</ph> attributes specify that the consumer of the <ph id="ph3">`ICalculator`</ph> interface can both subscribe to and unsubscribe from this event.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#6</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>In Contoso.cpp, add a <ph id="ph1">`private`</ph> <bpt id="p1">[</bpt>Microsoft::WRL::EventSource<ept id="p1">](../windows/eventsource-class.md)</ept> member variable to manage the event subscribers and invoke the event handler.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#7</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>In Contoso.cpp, implement the <ph id="ph1">`add_PrimeNumberFound`</ph> and <ph id="ph2">`remove_PrimeNumberFound`</ph> methods.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#8</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>To raise the event when a prime number is calculated</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In Contoso.cpp, add the <ph id="ph1">`IsPrime`</ph> method to the <ph id="ph2">`private`</ph> section of the <ph id="ph3">`Calculator`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#12</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Modify the <ph id="ph1">`Calculator`</ph>’s <ph id="ph2">`Add`</ph> method to call the <bpt id="p1">[</bpt>Microsoft::WRL::EventSource::InvokeAll<ept id="p1">](../windows/eventsource-invokeall-method.md)</ept> method when a prime number is calculated.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#11</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>To handle the event from JavaScript</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>In default.html, modify the <ph id="ph1">`body`</ph> section to include a text area that contains prime numbers.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#9</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>In default.js, modify the <ph id="ph1">`Add`</ph> function to handle the <ph id="ph2">`PrimeNumberFound`</ph> event.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The event handler appends the prime number to the text area that was defined by the previous step.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>wrl-basic-component#10</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>In JavaScript, the event names are changed to lower-case and are prepended with "on" to match the standard naming conventions.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the basic Calculator app.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Basic calculator app using JavaScript</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Next Steps</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Windows Runtime C++ Template Library (WRL)</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Class Library Project Template</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>C/C++ Code Analysis tool</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

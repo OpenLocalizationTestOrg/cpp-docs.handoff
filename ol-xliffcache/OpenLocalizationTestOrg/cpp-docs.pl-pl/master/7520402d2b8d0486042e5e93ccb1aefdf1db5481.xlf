@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7520402d2b8d0486042e5e93ccb1aefdf1db5481</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\windows\overview-of-generics-in-visual-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b28dab8fad94287fb340f8b47ddefc8caf62c477</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6e37d401d18db4e084eba9968d117548e159cbe2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Overview of Generics in Visual C++ | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Overview of Generics in Visual C++</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Generics are parameterized types supported by the common language runtime.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A parameterized type is a type that is defined with an unknown type parameter that is specified when the generic is used.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Why Generics?</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>C++ supports templates and both templates and generics support parameterized types to create typed collection classes.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>However, templates provide compile-time parameterization.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You cannot reference an assembly containing a template definition and create new specializations of the template.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Once compiled, a specialized template looks like any other class or method.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In contrast, generics are emitted in MSIL as a parameterized type known by the runtime to be a parameterized type; source code that references an assembly containing a generic type can create specializations of the generic type.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information on the comparison of Visual C++ templates and generics, see <bpt id="p1">[</bpt>Generics and Templates (Visual C++)<ept id="p1">](../windows/generics-and-templates-visual-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Generic Functions and Types</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Class types, as long as they are managed types, may be generic.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>An example of this might be a <ph id="ph1">`List`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The type of an object in the list would be the type parameter.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you needed a <ph id="ph1">`List`</ph> class for many different types of objects, before generics you might have used a <ph id="ph2">`List`</ph> that takes <bpt id="p1">**</bpt>System::Object<ept id="p1">**</ept> as the item type.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>But that would allow any object (including objects of the wrong type) to be used in the list.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Such a list would be called an untyped collection class.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>At best, you could check the type at runtime and throw an exception.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Or, you might have used a template, which would lose its generic quality once compiled into an assembly.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Consumers of your assembly could not create their own specializations of the template.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Generics allow you to create typed collection classes, say <ph id="ph1">`List&lt;int&gt;`</ph> (read as "List of int") and <ph id="ph2">`List&lt;double&gt;`</ph> ("List of double") which would generate a compile-time error if you tried to put a type that the collection was not designed to accept into the typed collection.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In addition, these types remain generic after they are compiled.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>A description of the syntax of generic classes may be found in <bpt id="p1">[</bpt>Generic Classes (C++/CLI)<ept id="p1">](../windows/generic-classes-cpp-cli.md)</ept><ph id="ph1">`.`</ph> A new namespace, &lt;xref:System.Collections.Generic&gt;, introduces a set of parameterized collection types including &lt;xref:System.Collections.Generic.Dictionary%602&gt;, &lt;xref:System.Collections.Generic.List%601&gt; and &lt;xref:System.Collections.Generic.LinkedList%601&gt;.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Both instance and static class member functions, delegates, and global functions may also be generic.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Generic functions may be necessary if the function's parameters are of an unknown type, or if the function itself must work with generic types.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In many cases where <bpt id="p1">**</bpt>System::Object<ept id="p1">**</ept> may have been used in the past as a parameter for an unknown object type, a generic type parameter may be used instead, allowing for more type-safe code.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Any attempt to pass in a type that the function was not designed for would be flagged as an error at compile time.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Using <bpt id="p1">**</bpt>System::Object<ept id="p1">**</ept> as a function parameter, the inadvertent passing of an object that the function wasn't intended to deal with would not be detected, and you would have to cast the unknown object type to a specific type in the function body, and account for the possibility of an InvalidCastException.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>With a generic, code attempting to pass an object to the function would cause a type conflict so the function body is guaranteed to have the correct type.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The same benefits apply to collection classes built on generics.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Collection classes in the past would use <bpt id="p1">**</bpt>System::Object<ept id="p1">**</ept> to store elements in a collection.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Insertion of objects of a type that the collection was not designed for was not flagged at compile time, and often not even when the objects were inserted.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Usually, an object would be cast to some other type when it was accessed in the collection.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Only when the cast failed would the unexpected type be detected.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Generics solves this problem at compile time by detecting any code that inserts a type that doesn't match (or implicitly convert to) the type parameter of the generic collection.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>For a description of the syntax, see <bpt id="p1">[</bpt>Generic Functions (C++/CLI)<ept id="p1">](../windows/generic-functions-cpp-cli.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Terminology Used With Generics</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Type Parameters</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>A generic declaration contains one or more unknown types known as <bpt id="p1">*</bpt>type parameters<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Type parameters are given a name which stands for the type within the body of the generic declaration.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The type parameter is used as a type within the body of the generic declaration.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The generic declaration for List&lt;T<ph id="ph1">\&gt;</ph> contains the type parameter T.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Type Arguments</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>type argument<ept id="p1">*</ept> is the actual type used in place of the type parameter when the generic is specialized for a specific type or types.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>For example, <ph id="ph1">`int`</ph> is the type argument in <ph id="ph2">`List&lt;int&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Value types and handle types are the only types allowed in as a generic type argument.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Constructed Type</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>A type constructed from a generic type is referred to as a <bpt id="p1">*</bpt>constructed type<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>A type not fully specified, such as <ph id="ph1">`List&lt;T&gt;`</ph> is an <bpt id="p1">*</bpt>open constructed type<ept id="p1">*</ept>; a type fully specified, such as <ph id="ph2">`List&lt;double&gt;,`</ph> is a <bpt id="p2">*</bpt>closed constructed type<ept id="p2">*</ept> or <bpt id="p3">*</bpt>specialized type<ept id="p3">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Open constructed types may be used in the definition of other generic types or methods and may not be fully specified until the enclosing generic is itself specified.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>For example, the following is a use of an open constructed type as a base class for a generic:</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Constraint</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>A constraint is a restriction on the types that may be used as a type parameter.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>For example, a given generic class could accept only classes that inherit from a specified class, or implement a specified interface.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Constraints on Generic Type Parameters (C++/CLI)<ept id="p1">](../windows/constraints-on-generic-type-parameters-cpp-cli.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Reference Types and Value Types</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Handles types and value types may be used as type arguments.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>In the generic definition, in which either type may be used, the syntax is that of reference types.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>For example, the <bpt id="p1">**</bpt><ph id="ph1">-&gt;</ph><ept id="p1">**</ept> operator is used to access members of the type of the type parameter whether or not the type eventually used is a reference type or a value type.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>When a value type is used as the type argument, the runtime generates code that uses the value types directly without boxing the value types.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>When using a reference type as a generic type argument, use the handle syntax.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>When using a value type as a generic type argument, use the name of the type directly.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Type Parameters</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Type parameters in a generic class are treated like other identifiers.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>However, because the type is not known, there are restrictions on their use.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>For example, you cannot use members and methods of the type parameter class unless the type parameter is known to support these members.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>That is, to access a member through the type parameter, you must add the type that contains the member to the type parameter's constraint list.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>These restrictions apply to operators as well.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>An unconstrained generic type parameter may not use the <ph id="ph1">`==`</ph> and <ph id="ph2">`!=`</ph> operators to compare two instances of the type parameter, in case the type does not support these operators.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>These checks are necessary for generics, but not for templates, because generics may be specialized at runtime with any class that satisfies the constraints, when it is too late to check for the use of invalid members.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>A default instance of the type parameter may be created by using the <ph id="ph1">`()`</ph> operator.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>where <ph id="ph1">`T`</ph> is a type parameter in a generic class or method definition, initializes the variable to its default value.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`T`</ph> is a ref class it will be a null pointer; if <ph id="ph2">`T`</ph> is a value class, the object is initialized to zero.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>This is called a <bpt id="p1">*</bpt>default initializer<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Generics</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dfd9102dfce7dd0ea3961d42220466cf01f2d5c5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\rtc-run-time-error-checks.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6491af8cc386494aefc83a83babbc28723fd8216</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6dee9d4d833359225855c3dd2de6af2f046e4874</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-RTC (Run-Time Error Checks) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/RTC (Run-Time Error Checks)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Used to enable and disable the run-time error checks feature, in conjunction with the <bpt id="p1">[</bpt>runtime_checks<ept id="p1">](../../preprocessor/runtime-checks.md)</ept> pragma.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Arguments</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Equivalent of <bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept><ph id="ph1">`su`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Reports when a value is assigned to a smaller data type and results in a data loss.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, if a value of type <ph id="ph1">`short 0x101`</ph> is assigned to a variable of type <ph id="ph2">`char`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This option reports situations in which you intend to truncate, for example, if you want the first eight bits of an <ph id="ph1">`int`</ph> returned as a <ph id="ph2">`char`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Because <bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept><ph id="ph1">`c`</ph> causes a run-time error if any information is lost as a result of the assignment, you can mask off the information you need to avoid a run-time error as a result of <bpt id="p2">**</bpt>/RTC<ept id="p2">**</ept><ph id="ph2">`c`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Enables stack frame run-time error checking, as follows:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Initialization of local variables to a nonzero value.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This helps identify bugs that do not appear when running in debug mode.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>There is a greater chance that stack variables will still be zero in a debug build compared to a release build because of compiler optimizations of stack variables in a release build.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Once a program has used an area of its stack, it is never reset to 0 by the compiler.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Therefore, subsequent, uninitialized stack variables that happen to use the same stack area can return values left over from the prior use of this stack memory.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Detection of overruns and underruns of local variables such as arrays.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept><ph id="ph1">`s`</ph> will not detect overruns when accessing memory that results from compiler padding within a structure.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Padding could occur by using <bpt id="p1">[</bpt>align<ept id="p1">](../../cpp/align-cpp.md)</ept>, <bpt id="p2">[</bpt>/Zp (Struct Member Alignment)<ept id="p2">](../../build/reference/zp-struct-member-alignment.md)</ept>, or <bpt id="p3">[</bpt>pack<ept id="p3">](../../preprocessor/pack.md)</ept>, or if you order structure elements in such a way as to require the compiler to add padding.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Stack pointer verification, which detects stack pointer corruption.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Stack pointer corruption can be caused by a calling convention mismatch.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For example, using a function pointer, you call a function in a DLL that is exported as <bpt id="p1">[</bpt>__stdcall<ept id="p1">](../../cpp/stdcall.md)</ept> but you declare the pointer to the function as <bpt id="p2">[</bpt>__cdecl<ept id="p2">](../../cpp/cdecl.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Reports when a variable is used without having been initialized.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For example, an instruction that generates <ph id="ph1">`C4701`</ph> may also generate a run-time error under <bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept><ph id="ph2">`u`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Any instruction that generates <bpt id="p1">[</bpt>Compiler Warning (level 1 and level 4) C4700<ept id="p1">](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)</ept> will generate a run-time error under <bpt id="p2">**</bpt>/RTC<ept id="p2">**</ept><ph id="ph1">`u`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>However, consider the following code fragment:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If a variable could have been initialized, it will not be reported at run time by <bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept><ph id="ph1">`u`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For example, after a variable is aliased through a pointer, the compiler will not track the variable and report uninitialized uses.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In effect, you can initialize a variable by taking its address.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The &amp; operator works like an assignment operator in this situation.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Run-time error checks are a way for you to find problems in your running code; for more information, see <bpt id="p1">[</bpt>How to: Use Native Run-Time Checks<ept id="p1">](http://msdn.microsoft.com/Library/dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>If you compile your program at the command line using any of the <bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept> compiler options, any pragma <bpt id="p2">[</bpt>optimize<ept id="p2">](../../preprocessor/optimize.md)</ept> instructions in your code will silently fail.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>This is because run-time error checks are not valid in a release (optimized) build.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>You should use <bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept> for development builds; <bpt id="p2">**</bpt>/RTC<ept id="p2">**</ept> should not be used for a retail build.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept> cannot be used with compiler optimizations (<bpt id="p2">[</bpt>/O Options (Optimize Code)<ept id="p2">](../../build/reference/o-options-optimize-code.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>A program image built with <bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept> will be slightly larger and slightly slower than an image built with <bpt id="p2">**</bpt>/Od<ept id="p2">**</ept> (up to 5 percent slower than an <bpt id="p3">**</bpt>/Od<ept id="p3">**</ept> build).</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The __MSVC_RUNTIME_CHECKS preprocessor directive will be defined when you use any <bpt id="p1">**</bpt>/RTC<ept id="p1">**</ept> option or <bpt id="p2">[</bpt>/GZ<ept id="p2">](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To set this compiler option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Working with Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>C/C++<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Code Generation<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Modify one or both of the following properties: <bpt id="p1">**</bpt>Basic Runtime Checks<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Smaller Type Check<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>To set this compiler option programmatically</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>See &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A&gt; and &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A&gt; properties.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Compiler Options</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Setting Compiler Options</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>How to: Use Native Run-Time Checks</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

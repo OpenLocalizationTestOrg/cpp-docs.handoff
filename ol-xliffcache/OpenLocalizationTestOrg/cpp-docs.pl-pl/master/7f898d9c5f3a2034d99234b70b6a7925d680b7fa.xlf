@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7f898d9c5f3a2034d99234b70b6a7925d680b7fa</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\error-messages\tool-errors\linker-tools-error-lnk1211.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">be808268fca259f6d12b674608123a6b033bdbf7</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d63c14026b48d1ed006bbbca2c1eaa6b2f52233d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Linker Tools Error LNK1211 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Linker Tools Error LNK1211</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>precompiled type information not found; 'filename' not linked or overwritten</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The given object file, compiled with <bpt id="p1">[</bpt>/Yc<ept id="p1">](../../build/reference/yc-create-precompiled-header-file.md)</ept>, was not specified in the LINK command or was overwritten.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>If you are creating a debug library that uses precompiled headers and if you specify /Yc and <bpt id="p1">[</bpt>/Z7<ept id="p1">](../../build/reference/z7-zi-zi-debug-information-format.md)</ept>, Visual C++ generates a precompiled object file that contains CodeView debugging information.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The error occurs only when you store the precompiled object file in a library, use the library to build an executable image, and the object files that are referenced have no transitive references to any of the functions the precompiled object file defines.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>There are two methods to work around this situation:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Specify the <bpt id="p1">[</bpt>/Yd<ept id="p1">](../../build/reference/yd-place-debug-information-in-object-file.md)</ept> compiler option to add the CodeView information from the precompiled header to each object module.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This method is less desirable because it generally produces large object modules that can increase the time required to link the application.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Specify <bpt id="p1">[</bpt>/Yl<ept id="p1">](../../build/reference/yl-inject-pch-reference-for-debug-library.md)</ept> and pass the name of any arbitrary string, when you create a precompiled header file that does not contain any function definitions.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This directs the compiler to create a symbol in the precompiled object file and to emit a reference to that symbol in each object file that used the precompiled header file that is associated with the precompiled object file.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When you compile a module with <bpt id="p1">**</bpt>/Yc<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/Yl<ept id="p2">**</ept>, the compiler creates a symbol similar to <ph id="ph1">`__@@_PchSym_@00@...@symbol_name`</ph>, where the ellipsis (...) represents a compiler-generated character string, and stores it in the object module.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Any source file that you compile with this precompiled header refers to the specified symbol, which causes the linker to include the object module and its debugging information from the library.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For more information on this error, see Knowledge Base article Q102697 PRB: Build Errors Using Precompiled Header in Debugging Lib.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d20822dfb2cb72d016bc9a4cfe2a49beda81969c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\crtsetallochook.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">eed25bf9c7812c9f6f0ccd2fbfa1401c0260856d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d3337d0542692cdd65b9180ddd61bb40eab5d1ca</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_CrtSetAllocHook | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_CrtSetAllocHook</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Installs a client-defined allocation function by hooking it into the C run-time debug memory allocation process (debug version only).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>New client-defined allocation function to hook into the C run-time debug memory allocation process.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Returns the previously defined allocation hook function, or <ph id="ph1">`NULL`</ph> if <ph id="ph2">`allocHook`</ph> is <ph id="ph3">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>allows an application to hook its own allocation function into the C run-time debug library memory allocation process.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>As a result, every call to a debug allocation function to allocate, reallocate, or free a memory block triggers a call to the application's hook function.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>provides an application with an easy method for testing how the application handles insufficient memory situations, the ability to examine allocation patterns, and the opportunity to log allocation information for later analysis.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">[</bpt>_DEBUG<ept id="p1">](../../c-runtime-library/debug.md)</ept> is not defined, calls to <ph id="ph1">`_CrtSetAllocHook`</ph> are removed during preprocessing.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_CrtSetAllocHook`</ph> function installs the new client-defined allocation function specified in <ph id="ph2">`allocHook`</ph> and returns the previously defined hook function.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates how a client-defined allocation hook should be prototyped:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`allocType`</ph> argument specifies the type of allocation operation <ph id="ph2">`(_HOOK_ALLOC`</ph>, <ph id="ph3">`_HOOK_REALLOC`</ph>, and <ph id="ph4">`_HOOK_FREE`</ph>) that triggered the call to the allocation's hook function.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>When the triggering allocation type is <ph id="ph1">`_HOOK_FREE`</ph>, <ph id="ph2">`userData`</ph> is a pointer to the user data section of the memory block about to be freed.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>However, when the triggering allocation type is <ph id="ph1">`_HOOK_ALLOC`</ph> or <ph id="ph2">`_HOOK_REALLOC`</ph>, <ph id="ph3">`userData`</ph> is <ph id="ph4">`NULL`</ph> because the memory block has not been allocated yet.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>specifies the size of the memory block in bytes, <ph id="ph1">`blockType`</ph> indicates the type of the memory block, <ph id="ph2">`requestNumber`</ph> is the object allocation order number of the memory block, and, if available, <ph id="ph3">`filename`</ph> and <ph id="ph4">`lineNumber`</ph> specify the source file name and line number where the triggering allocation operation was initiated.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>After the hook function has finished processing, it must return a Boolean value, which tells the main C run-time allocation process how to continue.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When the hook function wants the main allocation process to continue as if the hook function had never been called, then the hook function should return <ph id="ph1">`TRUE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This causes the original triggering allocation operation to be executed.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Using this implementation, the hook function can gather and save allocation information for later analysis, without interfering with the current allocation operation or state of the debug heap.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When the hook function wants the main allocation process to continue as if the triggering allocation operation was called and it failed, then the hook function should return <ph id="ph1">`FALSE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Using this implementation, the hook function can simulate a wide range of memory conditions and debug heap states to test how the application handles each situation.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To clear the hook function, pass <ph id="ph1">`NULL`</ph> to <ph id="ph2">`_CrtSetAllocHook`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For more information about how <ph id="ph1">`_CrtSetAllocHook`</ph> can be used with other memory management functions or how to write your own client-defined hook functions, see <bpt id="p1">[</bpt>Debug Hook Function Writing<ept id="p1">](/visualstudio/debugger/debug-hook-function-writing)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>is not supported under <ph id="ph1">`/clr:pure`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>crtdbg.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For more compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Libraries</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Debug versions of <bpt id="p1">[</bpt>C run-time libraries<ept id="p1">](../../c-runtime-library/crt-library-features.md)</ept> only.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>For a sample of how to use <ph id="ph1">`_CrtSetAllocHook`</ph>, see <bpt id="p1">[</bpt>crt_dbg2<ept id="p1">](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Debug Routines</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>_CrtGetAllocHook</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

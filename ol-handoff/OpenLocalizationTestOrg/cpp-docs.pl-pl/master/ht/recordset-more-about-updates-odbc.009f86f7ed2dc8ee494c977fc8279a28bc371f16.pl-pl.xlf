@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2a60991e3d41b038729dfeca03c6c582ea30b55d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\recordset-more-about-updates-odbc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3f5f1a50b9636a79c3a2d295224c50b0d447d46a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ec65c5c9c6ef50d30e396d6974aa083eb364fb1c</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Recordset: More About Updates (ODBC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Recordset: More About Updates (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic applies to the MFC ODBC classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic explains:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>How other operations, such as transactions, affect updates<ept id="p1">](#_core_how_transactions_affect_updates)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Your updates and those of other users<ept id="p1">](#_core_your_updates_and_the_updates_of_other_users)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>More about the Update and Delete member functions<ept id="p1">](#_core_more_about_update_and_delete)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This topic applies to objects derived from <ph id="ph1">`CRecordset`</ph> in which bulk row fetching has not been implemented.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you have implemented bulk row fetching, some of the information does not apply.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For example, you cannot call the <ph id="ph1">`AddNew`</ph>, <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>Update<ept id="p3">**</ept> member functions; however, you can perform transactions.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For more information about bulk row fetching, see <bpt id="p1">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p1">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>How Other Operations Affect Updates</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Your updates are affected by transactions in effect at the time of the update, by closing the recordset before completing a transaction, and by scrolling before completing a transaction.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>How Transactions Affect Updates</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Beyond understanding how <ph id="ph1">`AddNew`</ph>, <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> work, it is important to understand how the <bpt id="p3">**</bpt>BeginTrans<ept id="p3">**</ept>, <bpt id="p4">**</bpt>CommitTrans<ept id="p4">**</ept>, and <bpt id="p5">**</bpt>Rollback<ept id="p5">**</ept> member functions of <bpt id="p6">[</bpt>CDatabase<ept id="p6">](../../mfc/reference/cdatabase-class.md)</ept> work with the update functions of <bpt id="p7">[</bpt>CRecordset<ept id="p7">](../../mfc/reference/crecordset-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>By default, calls to <ph id="ph1">`AddNew`</ph> and <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> affect the data source immediately when you call <bpt id="p2">**</bpt>Update<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> calls take effect immediately.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>But you can establish a transaction and execute a batch of such calls.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The updates are not permanent until you commit them.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If you change your mind, you can roll back the transaction instead of committing it.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For more information about transactions, see <bpt id="p1">[</bpt>Transaction (ODBC)<ept id="p1">](../../data/odbc/transaction-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>How Closing the Recordset Affects Updates</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If you close a recordset, or its associated <ph id="ph1">`CDatabase`</ph> object, with a transaction in progress (you have not called <bpt id="p1">[</bpt>CDatabase::CommitTrans<ept id="p1">](../../mfc/reference/cdatabase-class.md#cdatabase__committrans)</ept> or <bpt id="p2">[</bpt>CDatabase::Rollback<ept id="p2">](../../mfc/reference/cdatabase-class.md#cdatabase__rollback)</ept>), the transaction is rolled back automatically (unless your database backend is the Microsoft Jet database engine).</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If you are using the Microsoft Jet database engine, closing a recordset inside an explicit transaction does not result in releasing any of the rows that were modified or locks that were placed until the explicit transaction is committed or rolled back.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>It is recommended that you always both open and close recordsets inside or outside of an explicit Jet transaction.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>How Scrolling Affects Updates</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>When you <bpt id="p1">[</bpt>Recordset: Scrolling (ODBC)<ept id="p1">](../../data/odbc/recordset-scrolling-odbc.md)</ept> in a recordset, the edit buffer is filled with each new current record (the previous record is not stored first).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Scrolling skips over records previously deleted.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>If you scroll after an <ph id="ph1">`AddNew`</ph> or <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> call without calling <bpt id="p2">**</bpt>Update<ept id="p2">**</ept>, <bpt id="p3">**</bpt>CommitTrans<ept id="p3">**</ept>, or <bpt id="p4">**</bpt>Rollback<ept id="p4">**</ept> first, any changes are lost (with no warning to you) as a new record is brought into the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The edit buffer is filled with the record scrolled to, the stored record is freed, and no change occurs on the data source.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This applies to both <ph id="ph1">`AddNew`</ph> and <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Your Updates and the Updates of Other Users</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>When you use a recordset to update data, your updates affect other users.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Similarly, the updates of other users during the lifetime of your recordset affect you.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>In a multiuser environment, other users can open recordsets that contain some of the same records you have selected in your recordset.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Changes to a record before you retrieve it are reflected in your recordset.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Because dynasets retrieve a record each time you scroll to it, dynasets reflect changes each time you scroll to a record.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Snapshots retrieve a record the first time you scroll to it, so snapshots reflect only those changes that occur before you scroll to the record initially.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Records added by other users after you open the recordset do not show up in your recordset unless you requery.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If your recordset is a dynaset, edits to existing records by other users do show up in your dynaset when you scroll to the affected record.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>If your recordset is a snapshot, edits do not show up until you requery the snapshot.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>If you want to see records added or deleted by other users in your snapshot, or records added by other users in your dynaset, call <bpt id="p1">[</bpt>CRecordset::Requery<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__requery)</ept> to rebuild the recordset.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>(Note that the deletions of other users show up in your dynaset.) You might also call <bpt id="p1">**</bpt>Requery<ept id="p1">**</ept> to see records you add, but not to see your deletions.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>To force caching of an entire snapshot at once, call <ph id="ph1">`MoveLast`</ph> immediately after you open the snapshot.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Then call <bpt id="p1">**</bpt>MoveFirst<ept id="p1">**</ept> to begin working with the records.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>is equivalent to scrolling over all the records, but it retrieves them all at once.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Note, however, that this can lower performance and might not be required for some drivers.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The effects of your updates on other users are similar to their effects on you.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>More About Update and Delete</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This section provides additional information to help you work with <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Update Success and Failure</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> succeeds, the <ph id="ph1">`AddNew`</ph> or <bpt id="p2">**</bpt>Edit<ept id="p2">**</ept> mode ends.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>To begin an <ph id="ph1">`AddNew`</ph> or <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> mode again, call <ph id="ph2">`AddNew`</ph> or <bpt id="p2">**</bpt>Edit<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> fails (returns <bpt id="p2">**</bpt>FALSE<ept id="p2">**</ept> or throws an exception), you remain in <ph id="ph1">`AddNew`</ph> or <bpt id="p3">**</bpt>Edit<ept id="p3">**</ept> mode, depending on which function you called last.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>You can then do one of the following:</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Modify a field data member and try the <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> again.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`AddNew`</ph> to reset the field data members to Null, set the values of the field data members, and then call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> again.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> to reload the values that were in the recordset before the first call to <ph id="ph1">`AddNew`</ph> or <bpt id="p2">**</bpt>Edit<ept id="p2">**</ept>, set the values of the field data members, and then call <bpt id="p3">**</bpt>Update<ept id="p3">**</ept> again.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>After a successful <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> call (except after an <ph id="ph1">`AddNew`</ph> call), the field data members retain their new values.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">**</bpt>Move<ept id="p1">**</ept> (including <bpt id="p2">**</bpt>Move<ept id="p2">**</ept> with a parameter of <bpt id="p3">**</bpt>AFX_MOVE_REFRESH<ept id="p3">**</ept>, or 0), which flushes any changes and ends any <ph id="ph1">`AddNew`</ph> or <bpt id="p4">**</bpt>Edit<ept id="p4">**</ept> mode in effect.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Update and Delete</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>This section applies to both <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>On an <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> operation, one and only one record should be updated.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>That record is the current record, which corresponds to the data values in the fields of the recordset.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>If for some reason no records are affected or more than one record is affected, an exception is thrown containing one of the following <bpt id="p1">**</bpt>RETCODE<ept id="p1">**</ept> values:</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>AFX_SQL_ERROR_NO_ROWS_AFFECTED</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>When these exceptions are thrown, you remain in the <ph id="ph1">`AddNew`</ph> or <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> state you were in when you called <bpt id="p2">**</bpt>Update<ept id="p2">**</ept> or <bpt id="p3">**</bpt>Delete<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Here are the most common scenarios in which you would see these exceptions.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>You're most likely to see:</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>AFX_SQL_ERROR_NO_ROWS_AFFECTED<ept id="p1">**</ept> when you are using optimistic locking mode and another user has modified the record in a way that prevents the framework from identifying the correct record to update or delete.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED<ept id="p1">**</ept> when the table you are updating has no primary key or unique index and you do not have enough columns in the recordset to uniquely identify a table row.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Recordset: How Recordsets Select Records (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange (RFX)</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>SQL</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Exceptions: Database Exceptions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

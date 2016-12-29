@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0ea809674c901f50a2920a475d82b3d1920a77b6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\preprocessor\hash-include-directive-c-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bbf9f06c3fcf7ecd7c2e91b4c67ec0f37cc379e1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">989f00c67a670707e0ab68f520bdcd8903565c2e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>include Directive (C-C++) | Microsoft Doc</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>include Directive (C/C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You can organize constant and macro definitions into include files and then use <ph id="ph1">`#include`</ph> directives to add them to any source file.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Include files are also useful for incorporating declarations of external variables and complex data types.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The types may be defined and named only once in an include file created for that purpose.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`path-spec`</ph> is a file name that may optionally be preceded by a directory specification.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The file name must name an existing file.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The syntax of the <ph id="ph1">`path-spec`</ph> depends on the operating system on which the program is compiled.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For information about how to reference assemblies in a C++ application that's compiled by using <bpt id="p1">[</bpt>/clr<ept id="p1">](../build/reference/clr-common-language-runtime-compilation.md)</ept>, see <bpt id="p2">[</bpt>#using<ept id="p2">](../preprocessor/hash-using-directive-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Both syntax forms cause that directive to be replaced by the entire contents of the specified include file.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The difference between the two forms is the order in which the preprocessor searches for header files when the path is incompletely specified.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The following table shows the difference between the two syntax forms.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Syntax Form</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Action</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Quoted form</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The preprocessor searches for include files in this order:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>1) In the same directory as the file that contains the <ph id="ph1">`#include`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>2) In the directories of the currently opened include files, in the reverse order in which they were opened.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The search begins in the directory of the parent include file and continues upward through the directories of any grandparent include files.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>3) Along the path that's specified by each /I compiler option.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>4)</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Along the paths that are specified by the INCLUDE environment variable.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Angle-bracket form</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The preprocessor searches for include files in this order:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>1) Along the path that's specified by each /I compiler option.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>2) When compiling occurs on the command line, along the paths that are specified by the INCLUDE environment variable.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The preprocessor stops searching as soon as it finds a file that has the given name.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If you enclose a complete, unambiguous path specification for the include file between double quotation marks (" "), the preprocessor searches only that path specification and ignores the standard directories.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>If the file name that's enclosed in double quotation marks is an incomplete path specification, the preprocessor first searches the "parent" file's directory.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A parent file is the file that contains the <ph id="ph1">`#include`</ph> directive.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For example, if you include a file named <ph id="ph1">`file2`</ph> in a file named <ph id="ph2">`file1`</ph>, <ph id="ph3">`file1`</ph> is the parent file.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Include files can be "nested"; that is, an <ph id="ph1">`#include`</ph> directive can appear in a file that's named by another <ph id="ph2">`#include`</ph> directive.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For example, <ph id="ph1">`file2`</ph> could include <ph id="ph2">`file3`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>In this case, <ph id="ph1">`file1`</ph> would still be the parent of <ph id="ph2">`file2`</ph>, but it would be the "grandparent" of <ph id="ph3">`file3`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>When include files are nested and when compiling occurs on the command line, directory searching begins with the directories of the parent file and then proceeds through the directories of any grandparent files.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>That is, searching begins relative to the directory that contains the source that's currently being processed.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If the file is not found, the search moves to directories that are specified by the /I compiler option.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Finally, the directories that are specified by the INCLUDE environment variable are searched.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>From the development environment, the INCLUDE environment variable is ignored.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For information about how to set the directories that are searched for include files—this also applies to the LIB environment variable—see <bpt id="p1">[</bpt>VC++ Directories Property Page<ept id="p1">](../ide/vcpp-directories-property-page.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This example shows file inclusion by using angle brackets:</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This example adds the contents of the file named STDIO.H to the source program.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The angle brackets cause the preprocessor to search the directories that are specified by the INCLUDE environment variable for STDIO.H, after it searches directories that are specified by the /I compiler option.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The next example shows file inclusion by using the quoted form:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>This example adds the contents of the file that's specified by DEFS.H to the source program.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The quotation marks mean that the preprocessor first searches the directory that contains the parent source file.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Nesting of include files can continue up to 10 levels.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>When the nested <ph id="ph1">`#include`</ph> is processed, the preprocessor continues to insert the enclosing include file into the original source file.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>To locate includable source files, the preprocessor first searches the directories that are specified by the /I compiler option.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>If the /I option is not present or fails, the preprocessor uses the INCLUDE environment variable to find any include files within angle brackets.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The INCLUDE environment variable and /I compiler option can contain multiple paths, separated by semicolons (;).</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>If more than one directory appears as part of the /I option or within the INCLUDE environment variable, the preprocessor searches them in the order in which they appear.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>For example, the command</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>causes the preprocessor to search the directory D:\MSVC\INCLUDE\ for include files such as STDIO.H.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The commands</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>have the same effect.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>If both sets of searches fail, a fatal compiler error is generated.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>If the file name is fully specified for an include file that has a path that includes a colon (for example, F:\MSVC\SPECIAL\INCL\TEST.H), the preprocessor follows the path.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>For include files that are specified as <ph id="ph1">`#include`</ph> "<ph id="ph2">`path-spec`</ph>", directory searching begins with the directory of the parent file and then proceeds through the directories of any grandparent files.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>That is, searching begins relative to the directory that contains the source file that contains the <ph id="ph1">`#include`</ph> directive that's being processed.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>If there is no grandparent file and the file has not been found, the search continues as if the file name were enclosed in angle brackets.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Preprocessor Directives</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

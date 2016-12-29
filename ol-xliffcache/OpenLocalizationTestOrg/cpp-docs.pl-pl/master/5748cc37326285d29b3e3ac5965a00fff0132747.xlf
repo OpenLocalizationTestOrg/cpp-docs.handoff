@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5748cc37326285d29b3e3ac5965a00fff0132747</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\general-rules-for-operator-overloading.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">97e836bd54c09ede7dafe1002ce660a5c718331e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">af90aa31687d43a497c29d57d1ff915cbe9c4148</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>General Rules for Operator Overloading | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>General Rules for Operator Overloading</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following rules constrain how overloaded operators are implemented.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>However, they do not apply to the <bpt id="p1">[</bpt>new<ept id="p1">](../cpp/new-operator-cpp.md)</ept> and <bpt id="p2">[</bpt>delete<ept id="p2">](../cpp/delete-operator-cpp.md)</ept> operators, which are covered separately.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You cannot define new operators, such as **.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You cannot redefine the meaning of operators when applied to built-in data types.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Overloaded operators must either be a nonstatic class member function or a global function.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A global function that needs access to private or protected class members must be declared as a friend of that class.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>A global function must take at least one argument that is of class or enumerated type or that is a reference to a class or enumerated type.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The preceding code sample declares the less-than operator as a member function; however, the addition operators are declared as global functions that have friend access.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Note that more than one implementation can be provided for a given operator.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In the case of the preceding addition operator, the two implementations are provided to facilitate commutativity.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>It is just as likely that operators that add a <ph id="ph1">`Point`</ph> to a <ph id="ph2">`Point`</ph>, <ph id="ph3">`int`</ph> to a <ph id="ph4">`Point`</ph>, and so on, might be implemented.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Operators obey the precedence, grouping, and number of operands dictated by their typical use with built-in types.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Therefore, there is no way to express the concept "add 2 and 3 to an object of type <ph id="ph1">`Point`</ph>," expecting 2 to be added to the <bpt id="p1">*</bpt>x<ept id="p1">*</ept> coordinate and 3 to be added to the <bpt id="p2">*</bpt>y<ept id="p2">*</ept> coordinate.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Unary operators declared as member functions take no arguments; if declared as global functions, they take one argument.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Binary operators declared as member functions take one argument; if declared as global functions, they take two arguments.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If an operator can be used as either a unary or a binary operator (<bpt id="p1">**</bpt><ph id="ph1">&amp;</ph><ept id="p1">**</ept>, <bpt id="p2">**</bpt><ph id="ph2">\*</ph><ept id="p2">**</ept>, <bpt id="p3">**</bpt><ph id="ph3">+</ph><ept id="p3">**</ept>, and <bpt id="p4">**</bpt><ph id="ph4">-</ph><ept id="p4">**</ept>), you can overload each use separately.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Overloaded operators cannot have default arguments.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>All overloaded operators except assignment (<ph id="ph1">`operator=`</ph>) are inherited by derived classes.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The first argument for member-function overloaded operators is always of the class type of the object for which the operator is invoked (the class in which the operator is declared, or a class derived from that class).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>No conversions are supplied for the first argument.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Note that the meaning of any of the operators can be changed completely.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>That includes the meaning of the address-of (<bpt id="p1">**</bpt><ph id="ph1">&amp;</ph><ept id="p1">**</ept>), assignment (<bpt id="p2">**</bpt><ph id="ph2">=</ph><ept id="p2">**</ept>), and function-call operators.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Also, identities that can be relied upon for built-in types can be changed using operator overloading.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For example, the following four statements are usually equivalent when completely evaluated:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>This identity cannot be relied upon for class types that overload operators.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Moreover, some of the requirements implicit in the use of these operators for basic types are relaxed for overloaded operators.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For example, the addition/assignment operator, <ph id="ph1">`+=`</ph>, requires the left operand to be an l-value when applied to basic types; there is no such requirement when the operator is overloaded.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For consistency, it is often best to follow the model of the built-in types when defining overloaded operators.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>If the semantics of an overloaded operator differ significantly from its meaning in other contexts, it can be more confusing than useful.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Operator Overloading</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

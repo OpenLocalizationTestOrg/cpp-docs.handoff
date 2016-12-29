@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bd8dbbac4691bfcd69bf908881bb2d19e40c46bf</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0db52c2b37d7b98fd374533f9b7607d5c85eedf0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8d6c23a308984c7160c0cf5e83ffa8dfe6d38a1f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Use the Context Class to Implement a Cooperative Semaphore | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Use the Context Class to Implement a Cooperative Semaphore</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic shows how to use the concurrency::Context class to implement a cooperative semaphore class.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Context`</ph> class lets you block or yield the current execution context.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Blocking or yielding the current context is useful when the current context cannot proceed because a resource is not available.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>semaphore<ept id="p1">*</ept> is an example of one situation where the current execution context must wait for a resource to become available.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A semaphore, like a critical section object, is a synchronization object that enables code in one context to have exclusive access to a resource.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>However, unlike a critical section object, a semaphore enables more than one context to access the resource concurrently.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If the maximum number of contexts holds a semaphore lock, each additional context must wait for another context to release the lock.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To implement the semaphore class</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Declare a class that is named <ph id="ph1">`semaphore`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Add <ph id="ph1">`public`</ph> and <ph id="ph2">`private`</ph> sections to this class.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-semaphore#1</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`private`</ph> section of the <ph id="ph2">`semaphore`</ph> class, declare a <bpt id="p1">[</bpt>std::atomic<ept id="p1">](../../standard-library/atomic-structure.md)</ept> variable that holds the semaphore count and a <bpt id="p2">[</bpt>concurrency::concurrent_queue<ept id="p2">](../../parallel/concrt/reference/concurrent-queue-class.md)</ept> object that holds the contexts that must wait to acquire the semaphore.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-semaphore#2</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`public`</ph> section of the <ph id="ph2">`semaphore`</ph> class, implement the constructor.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The constructor takes a <ph id="ph1">`long long`</ph> value that specifies the maximum number of contexts that can concurrently hold the lock.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-semaphore#3</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`public`</ph> section of the <ph id="ph2">`semaphore`</ph> class, implement the <ph id="ph3">`acquire`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This method decrements the semaphore count as an atomic operation.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If the semaphore count becomes negative, add the current context to the end of the wait queue and call the <bpt id="p1">[</bpt>concurrency::Context::Block<ept id="p1">](reference/context-class.md#block)</ept> method to block the current context.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-semaphore#4</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`public`</ph> section of the <ph id="ph2">`semaphore`</ph> class, implement the <ph id="ph3">`release`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This method increments the semaphore count as an atomic operation.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>If the semaphore count is negative before the increment operation, there is at least one context that is waiting for the lock.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In this case, unblock the context that is at the front of the wait queue.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-semaphore#5</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`semaphore`</ph> class in this example behaves cooperatively because the <ph id="ph2">`Context::Block`</ph> and <ph id="ph3">`Context::Yield`</ph> methods yield execution so that the runtime can perform other tasks.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`acquire`</ph> method decrements the counter, but it might not finish adding the context to the wait queue before another context calls the <ph id="ph2">`release`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>To account for this, the <ph id="ph1">`release`</ph> method uses a spin loop that calls the <bpt id="p1">[</bpt>concurrency::Context::Yield<ept id="p1">](reference/context-class.md#yield)</ept> method to wait for the <ph id="ph2">`acquire`</ph> method to finish adding the context.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`release`</ph> method can call the <ph id="ph2">`Context::Unblock`</ph> method before the <ph id="ph3">`acquire`</ph> method calls the <ph id="ph4">`Context::Block`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>You do not have to protect against this race condition because the runtime allows for these methods to be called in any order.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`release`</ph> method calls <ph id="ph2">`Context::Unblock`</ph> before the <ph id="ph3">`acquire`</ph> method calls <ph id="ph4">`Context::Block`</ph> for the same context, that context remains unblocked.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The runtime only requires that each call to <ph id="ph1">`Context::Block`</ph> is matched with a corresponding call to <ph id="ph2">`Context::Unblock`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The following example shows the complete <ph id="ph1">`semaphore`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`wmain`</ph> function shows basic usage of this class.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`wmain`</ph> function uses the <bpt id="p1">[</bpt>concurrency::parallel_for<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for)</ept> algorithm to create several tasks that require access to the semaphore.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Because three threads can hold the lock at any time, some tasks must wait for another task to finish and release the lock.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-semaphore#6</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This example produces the following sample output.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For more information about the <ph id="ph1">`concurrent_queue`</ph> class, see <bpt id="p1">[</bpt>Parallel Containers and Objects<ept id="p1">](../../parallel/concrt/parallel-containers-and-objects.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For more information about the <ph id="ph1">`parallel_for`</ph> algorithm, see <bpt id="p1">[</bpt>Parallel Algorithms<ept id="p1">](../../parallel/concrt/parallel-algorithms.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`cooperative-semaphore.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc cooperative-semaphore.cpp</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Robust Programming</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>You can use the <bpt id="p1">*</bpt>Resource Acquisition Is Initialization<ept id="p1">*</ept> (RAII) pattern to limit access to a <ph id="ph1">`semaphore`</ph> object to a given scope.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Under the RAII pattern, a data structure is allocated on the stack.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>That data structure initializes or acquires a resource when it is created and destroys or releases that resource when the data structure is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The RAII pattern guarantees that the destructor is called before the enclosing scope exits.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Therefore, the resource is correctly managed when an exception is thrown or when a function contains multiple <ph id="ph1">`return`</ph> statements.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The following example defines a class that is named <ph id="ph1">`scoped_lock`</ph>, which is defined in the <ph id="ph2">`public`</ph> section of the <ph id="ph3">`semaphore`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`scoped_lock`</ph> class resembles the <bpt id="p1">[</bpt>concurrency::critical_section::scoped_lock<ept id="p1">](reference/critical-section-class.md#critical_section__scoped_lock_class)</ept> and <bpt id="p2">[</bpt>concurrency::reader_writer_lock::scoped_lock<ept id="p2">](reference/reader-writer-lock-class.md#scoped_lock_class)</ept> classes.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The constructor of the <ph id="ph1">`semaphore::scoped_lock`</ph> class acquires access to the given <ph id="ph2">`semaphore`</ph> object and the destructor releases access to that object.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-semaphore#7</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The following example modifies the body of the work function that is passed to the <ph id="ph1">`parallel_for`</ph> algorithm so that it uses RAII to ensure that the semaphore is released before the function returns.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>This technique ensures that the work function is exception-safe.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-semaphore#8</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Contexts</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Parallel Containers and Objects</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

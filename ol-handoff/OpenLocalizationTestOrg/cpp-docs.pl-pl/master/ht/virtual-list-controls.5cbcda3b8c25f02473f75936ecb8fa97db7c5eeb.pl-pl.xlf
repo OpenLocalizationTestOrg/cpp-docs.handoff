@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">113c9bc5e2aaa9e73c9c8c5b8e6305e478295709</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\virtual-list-controls.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">982c5b46f85849f47e13cf5b42435ff98175eef1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ad1987bb96192a0755b6f20bf23007c9513a1372</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Virtual List Controls | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Virtual List Controls</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A virtual list control is a list view control that has the <bpt id="p1">**</bpt>LVS_OWNERDATA<ept id="p1">**</ept> style.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This style enables the control to support an item count up to a <ph id="ph1">`DWORD`</ph> (the default item count only extends to an <ph id="ph2">`int`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>However, the biggest advantage provided by this style is the ability to only have a subset of data items in memory at any one time.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This allows the virtual list view control to lend itself for use with large databases of information, where specific methods of accessing data are already in place.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In addition to providing virtual list functionality in <ph id="ph1">`CListCtrl`</ph>, MFC also provides the same functionality in the <bpt id="p1">[</bpt>CListView<ept id="p1">](../mfc/reference/clistview-class.md)</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>There are some compatibility issues you should be aware of when developing virtual list controls.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For more information, see the Compatibility Issues section of the List-View Controls topic in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Handling the LVN_GETDISPINFO Notification</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Virtual list controls maintain very little item information.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Except for the item selection and focus information, all item information is managed by the owner of the control.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Information is requested by the framework via a <bpt id="p1">**</bpt>LVN_GETDISPINFO<ept id="p1">**</ept> notification message.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>To provide the requested information, the owner of the virtual list control (or the control itself) must handle this notification.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This can easily be done using the Properties window (see <bpt id="p1">[</bpt>Mapping Messages to Functions<ept id="p1">](../mfc/reference/mapping-messages-to-functions.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The resultant code should look something like the following example (where <ph id="ph1">`CMyDialog`</ph> owns the virtual list control object and the dialog is handling the notification):</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#23</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In the handler for the <bpt id="p1">**</bpt>LVN_GETDISPINFO<ept id="p1">**</ept> notification message, you must check to see what type of information is being requested.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The possible values are:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`pszText`</ph> member must be filled in.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`iImage`</ph> member must be filled in.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>LVIF_INDENT<ept id="p1">**</ept> The <bpt id="p2">*</bpt>iIndent<ept id="p2">*</ept> member must be filled in.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>lParam<ept id="p1">*</ept> member must be filled in.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>(Not present for sub-items.)</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>state<ept id="p1">*</ept> member must be filled in.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You should then supply whatever information is requested back to the framework.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The following example (taken from the body of the notification handler for the list control object) demonstrates one possible method by supplying information for the text buffers and image of an item:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#24</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Caching and Virtual List Controls</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Because this type of list control is intended for large data sets, it is recommended that you cache requested item data to improve retrieval performance.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The framework provides a cache-hinting mechanism to assist in optimizing the cache by sending an <bpt id="p1">**</bpt>LVN_ODCACHEHINT<ept id="p1">**</ept> notification message.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The following example updates the cache with the range passed to the handler function.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#25</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more information on preparing and maintaining a cache, see the Cache Management section of the List-View Controls topic in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Finding Specific Items</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>LVN_ODFINDITEM<ept id="p1">**</ept> notification message is sent by the virtual list control when a particular list control item needs to be found.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The notification message is sent when the list view control receives quick key access or when it receives an <bpt id="p1">**</bpt>LVM_FINDITEM<ept id="p1">**</ept> message.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Search information is sent in the form of an <bpt id="p1">**</bpt>LVFINDINFO<ept id="p1">**</ept> structure, which is a member of the <bpt id="p2">**</bpt>NMLVFINDITEM<ept id="p2">**</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Handle this message by overriding the <ph id="ph1">`OnChildNotify`</ph> function of your list control object and inside the body of the handler, check for the <bpt id="p1">**</bpt>LVN_ODFINDITEM<ept id="p1">**</ept> message.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If found, perform the appropriate action.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>You should be prepared to search for an item that matches the information given by the list view control.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>You should return the index of the item if successful, or -1 if no matching item is found.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Using CListCtrl</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
