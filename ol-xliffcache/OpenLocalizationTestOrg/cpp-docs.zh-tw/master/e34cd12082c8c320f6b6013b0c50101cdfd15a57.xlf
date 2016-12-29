@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e34cd12082c8c320f6b6013b0c50101cdfd15a57</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\determining-which-linking-method-to-use.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e418dd8fb8ac6f5f425d5b5b19886f4916e505be</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a15093d6d60c0c22033edff149a69a49793293a0</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Determining Which Linking Method to Use | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Determining Which Linking Method to Use</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>There are two types of linking: implicit linking and explicit linking.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Implicit Linking</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>Implicit linking<ept id="p1">](../build/linking-implicitly.md)</ept> occurs when an application's code calls an exported DLL function.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When the source code for the calling executable is compiled or assembled, the DLL function call generates an external function reference in the object code.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To resolve this external reference, the application must link with the import library (.lib file) provided by the maker of the DLL.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The import library only contains code to load the DLL and to implement calls to functions in the DLL.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Finding an external function in an import library informs the linker that the code for that function is in a DLL.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>To resolve external references to DLLs, the linker simply adds information to the executable file that tells the system where to find the DLL code when the process starts up.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>When the system starts a program that contains dynamically linked references, it uses the information in the program's executable file to locate the required DLLs.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If it cannot locate the DLL, the system terminates the process and displays a dialog box that reports the error.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Otherwise, the system maps the DLL modules into the process's address space.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If any of the DLLs has an entry-point function (for initialization and termination code), the operating system calls the function.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>One of the parameters passed to the entry-point function specifies a code that indicates the DLL is attaching to the process.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If the entry-point function does not return TRUE, the system terminates the process and reports the error.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Finally, the system modifies the executable code of the process to provide starting addresses for the DLL functions.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Like the rest of a program's code, DLL code is mapped into the address space of the process when the process starts up and it is loaded into memory only when needed.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>As a result, the <bpt id="p1">**</bpt>PRELOAD<ept id="p1">**</ept> and <bpt id="p2">**</bpt>LOADONCALL<ept id="p2">**</ept> code attributes used by .def files to control loading in previous versions of Windows no longer have meaning.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Explicit Linking</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Most applications use implicit linking because it is the easiest linking method to use.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>However, there are times when <bpt id="p1">[</bpt>explicit linking<ept id="p1">](../build/linking-explicitly.md)</ept> is necessary.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Here are some common reasons to use explicit linking:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The application does not know the name of a DLL that it will have to load until run time.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For example, the application might need to obtain the name of the DLL and the exported functions from a configuration file.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>A process using implicit linking is terminated by the operating system if the DLL is not found at process startup.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>A process using explicit linking is not terminated in this situation and can attempt to recover from the error.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For example, the process could notify the user of the error and have the user specify another path to the DLL.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A process using implicit linking is also terminated if any of the DLLs it is linked to have a <ph id="ph1">`DllMain`</ph> function that fails.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>A process using explicit linking is not terminated in this situation.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>An application that implicitly links to many DLLs can be slow to start because Windows loads all the DLLs when the application loads.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>To improve startup performance, an application can implicitly link to those DLLs needed immediately after loading and wait to explicitly link to the other DLLs when they are needed.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Explicit linking eliminates the need to link the application with an import library.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>If changes in the DLL cause the export ordinals to change, applications using explicit linking do not have to relink (assuming they are calling <bpt id="p1">**</bpt>GetProcAddress<ept id="p1">**</ept> with a name of a function and not with an ordinal value), whereas applications using implicit linking must relink to the new import library.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Here are two hazards of explicit linking to be aware of:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If the DLL has a <ph id="ph1">`DllMain`</ph> entry point function, the operating system calls the function in the context of the thread that called <bpt id="p1">**</bpt>LoadLibrary<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The entry-point function is not called if the DLL is already attached to the process because of a previous call to <bpt id="p1">**</bpt>LoadLibrary<ept id="p1">**</ept> with no corresponding call to the <bpt id="p2">**</bpt>FreeLibrary<ept id="p2">**</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Explicit linking can cause problems if the DLL is using a <ph id="ph1">`DllMain`</ph> function to perform initialization for each thread of a process because threads existing when <bpt id="p1">**</bpt>LoadLibrary<ept id="p1">**</ept> (or <ph id="ph2">`AfxLoadLibrary`</ph>) is called will not be initialized.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If a DLL declares static-extent data as <bpt id="p1">**</bpt>__declspec(thread)<ept id="p1">**</ept>, it can cause a protection fault if explicitly linked.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>After the DLL is loaded with <bpt id="p1">**</bpt>LoadLibrary<ept id="p1">**</ept>, it causes a protection fault whenever the code references this data.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>(Static-extent data includes both global and local static items.) Therefore, when you create a DLL, you should either avoid using thread-local storage or inform DLL users about potential pitfalls (in case they attempt dynamic loading).</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>What do you want to do?</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Link implicitly</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Link explicitly</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about?</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The search path used by Windows to locate a DLL</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>LoadLibrary and AfxLoadLibrary</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>GetProcAddress</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>FreeLibrary and AfxFreeLibrary</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Using thread local storage in a dynamic-link library (Windows SDK)</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Linking an Executable to a DLL</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

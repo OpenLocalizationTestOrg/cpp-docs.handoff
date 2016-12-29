@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">691bf9cb19a11d7ba5f499851061c68b7f3e226e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\static-members-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5ae14de9c39f3601af5dc9cd0a4fca2819dfd432</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">68db08b259898ec5e57b0b7b51fb74f7d17d89fa</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Static Members (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Static Members (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Classes can contain static member data and member functions.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When a data member is declared as <bpt id="p1">**</bpt>static<ept id="p1">**</ept>, only one copy of the data is maintained for all objects of the class.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Static data members are not part of objects of a given class type.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>As a result, the declaration of a static data member is not considered a definition.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The data member is declared in class scope, but definition is performed at file scope.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>These static members have external linkage.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The following example illustrates this:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In the preceding code, the member <ph id="ph1">`bytecount`</ph> is declared in class <ph id="ph2">`BufferedOutput`</ph>, but it must be defined outside the class declaration.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Static data members can be referred to without referring to an object of class type.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The number of bytes written using <ph id="ph1">`BufferedOutput`</ph> objects can be obtained as follows:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For the static member to exist, it is not necessary that any objects of the class type exist.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Static members can also be accessed using the member-selection (<bpt id="p1">**</bpt>.<ept id="p1">**</ept></source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>and <bpt id="p1">**</bpt>–&gt;<ept id="p1">**</ept>) operators.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>In the preceding case, the reference to the object (<ph id="ph1">`Console`</ph>) is not evaluated; the value returned is that of the static object <ph id="ph2">`bytecount`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Static data members are subject to class-member access rules, so private access to static data members is allowed only for class-member functions and friends.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>These rules are described in <bpt id="p1">[</bpt>Member-Access Control<ept id="p1">](../cpp/member-access-control-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The exception is that static data members must be defined in file scope regardless of their access restrictions.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If the data member is to be explicitly initialized, an initializer must be provided with the definition.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The type of a static member is not qualified by its class name.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Therefore, the type of <ph id="ph1">`BufferedOutput::bytecount`</ph> is <ph id="ph2">`long`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Classes and Structs</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

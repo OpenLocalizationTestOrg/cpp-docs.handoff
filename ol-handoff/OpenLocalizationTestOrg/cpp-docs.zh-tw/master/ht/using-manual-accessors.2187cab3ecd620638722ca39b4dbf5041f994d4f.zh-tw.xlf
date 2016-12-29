@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">669d6568733c278d193fa4a06ffaa31ac2db4229</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\using-manual-accessors.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f1f0aaf09fd5e629f870e8d4bd7d31e4f4754cfe</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7d591341db45d4d0be3f42ac19727509970ee457</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Using Manual Accessors | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Using Manual Accessors</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>There are four things to do when handling an unknown command:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Determine the parameters</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Execute the command</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Determine the output columns</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>See if there are multiple return rowsets</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>To do this with the OLE DB Consumer Templates, use the <ph id="ph1">`CManualAccessor`</ph> class and follow these steps:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Open a <ph id="ph1">`CCommand`</ph> object with <ph id="ph2">`CManualAccessor`</ph> as a template parameter.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Query the session for the <bpt id="p1">**</bpt>IDBSchemaRowset<ept id="p1">**</ept> interface and use the procedure parameters rowset.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If the <bpt id="p1">**</bpt>IDBSchemaRowset<ept id="p1">**</ept> interface is not available, query for the <ph id="ph1">`ICommandWithParameters`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`GetParameterInfo`</ph> for information.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If neither interface is available, you can assume there are no parameters.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For each parameter, call <ph id="ph1">`AddParameterEntry`</ph> to add the parameters and set them.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Open the rowset but set the bind parameter to <bpt id="p1">**</bpt>false<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`GetColumnInfo`</ph> to retrieve the output columns.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`AddBindEntry`</ph> to add the output column to the binding.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`GetNextResult`</ph> to determine if more rowsets are available.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Repeat steps 2 through 5.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For an example of a manual accessor, see <bpt id="p1">**</bpt>CDBListView::CallProcedure<ept id="p1">**</ept> in the <bpt id="p2">[</bpt>DBVIEWER<ept id="p2">](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)</ept> sample.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Using Accessors</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7408b0bf0fe478a1929419ba5a9520d89aadf873</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\overview-of-x64-calling-conventions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dc2bc2eae99ff0a036061db112141191647ed180</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">734dfdc80fcf254f606a7e522977736ebc6ab101</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Overview of x64 Calling Conventions | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Overview of x64 Calling Conventions</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Two important differences between x86 and <ph id="ph1">[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]</ph> are the 64-bit addressing capability and a flat set of 16 64-bit registers for general use.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Given the expanded register set, <ph id="ph1">[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]</ph> uses the <bpt id="p1">[</bpt>__fastcall<ept id="p1">](../cpp/fastcall.md)</ept> calling convention and a RISC-based exception-handling model.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`__fastcall`</ph> convention uses registers for the first four arguments and the stack frame to pass additional arguments.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The following compiler option helps you optimize your application for <ph id="ph1">[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]</ph>:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>/favor (Optimize for Architecture Specifics)</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Calling convention</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]</ph> Application Binary Interface (ABI) uses a four register fast-call calling convention by default.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Space is allocated on the call stack as a shadow store for callees to save those registers.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>There is a strict one-to-one correspondence between the arguments to a function call and the registers used for those arguments.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Any argument that doesn’t fit in 8 bytes, or is not 1, 2, 4, or 8 bytes, must be passed by reference.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>There is no attempt to spread a single argument across multiple registers.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The x87 register stack is unused.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>It may be used by the callee, but must be considered volatile across function calls.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>All floating point operations are done using the 16 XMM registers.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Integer arguments are passed in registers RCX, RDX, R8, and R9.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Floating point arguments are passed in XMM0L, XMM1L, XMM2L, and XMM3L.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>16-byte arguments are passed by reference.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Parameter passing is described in detail in <bpt id="p1">[</bpt>Parameter Passing<ept id="p1">](../build/parameter-passing.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>In addition to these registers, RAX, R10, R11, XMM4, and XMM5 are considered volatile.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>All other registers are non-volatile.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Register usage is documented in detail in <bpt id="p1">[</bpt>Register Usage<ept id="p1">](../build/register-usage.md)</ept> and <bpt id="p2">[</bpt>Caller/Callee Saved Registers<ept id="p2">](../build/caller-callee-saved-registers.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The caller is responsible for allocating space for parameters to the callee, and must always allocate sufficient space to store four register parameters, even if the callee doesn’t take that many parameters.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This simplifies support for unprototyped C-language functions, and vararg C/C++ functions.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For vararg or unprototyped functions, any floating point values must be duplicated in the corresponding general-purpose register.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Any parameters beyond the first four must be stored on the stack, above the shadow store for the first four, prior to the call.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Vararg function details can be found in <bpt id="p1">[</bpt>Varargs<ept id="p1">](../build/varargs.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Unprototyped function information is detailed in <bpt id="p1">[</bpt>Unprototyped Functions<ept id="p1">](../build/unprototyped-functions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Alignment</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Most structures are aligned to their natural alignment.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The primary exceptions are the stack pointer and <ph id="ph1">`malloc`</ph> or <ph id="ph2">`alloca`</ph> memory, which are aligned to 16 bytes in order to aid performance.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Alignment above 16 bytes must be done manually, but since 16 bytes is a common alignment size for XMM operations, this should work for most code.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more information about structure layout and alignment see <bpt id="p1">[</bpt>Types and Storage<ept id="p1">](../build/types-and-storage.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For information about the stack layout, see <bpt id="p1">[</bpt>Stack Usage<ept id="p1">](../build/stack-usage.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Unwindability</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Leaf functions are functions that do not change any non-volatile registers.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>A non-leaf function may change non-volatile RSP, for example, by calling a function or allocating additional stack space for local variables.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>In order to recover non-volatile registers when an exception is handled, non-leaf functions must be annotated with static data that describes how to properly unwind the function at an arbitrary instruction.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This data is stored as <bpt id="p1">*</bpt>pdata<ept id="p1">*</ept>, or procedure data, which in turn refers to <bpt id="p2">*</bpt>xdata<ept id="p2">*</ept>, the exception handling data.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The xdata contains the unwinding information, and can point to additional pdata or an exception handler function.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Prologs and epilogs are highly restricted so that they can be properly described in xdata.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The stack pointer must be aligned to 16 bytes in any region of code that isn’t part of an epilog or prolog, except within leaf functions.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Leaf functions can be unwound simply by simulating a return, so pdata and xdata are not required.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For details about the proper structure of function prologs and epilogs, see <bpt id="p1">[</bpt>Prolog and Epilog<ept id="p1">](../build/prolog-and-epilog.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>For more information about exception handling, and the exception handling and unwinding of pdata and xdata, see <bpt id="p1">[</bpt>Exception Handling (x64)<ept id="p1">](../build/exception-handling-x64.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>x64 Software Conventions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

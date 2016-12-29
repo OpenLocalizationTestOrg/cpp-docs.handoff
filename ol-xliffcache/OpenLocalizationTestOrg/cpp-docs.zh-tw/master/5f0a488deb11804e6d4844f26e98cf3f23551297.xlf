@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5f0a488deb11804e6d4844f26e98cf3f23551297</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\reference\cmutex-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f00e842c1177ae2abbe8a36220126cac61390e2b</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">793009b32767007d0d1ff98ed4dda8d484eba09a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CMutex Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CMutex Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Represents a "mutex" — a synchronization object that allows one thread mutually exclusive access to a resource.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Members</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Public Constructors</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>CMutex::CMutex</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Constructs a <ph id="ph1">`CMutex`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Mutexes are useful when only one thread at a time can be allowed to modify data or some other controlled resource.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For example, adding nodes to a linked list is a process that should only be allowed by one thread at a time.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>By using a <ph id="ph1">`CMutex`</ph> object to control the linked list, only one thread at a time can gain access to the list.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To use a <ph id="ph1">`CMutex`</ph> object, construct the <ph id="ph2">`CMutex`</ph> object when it is needed.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Specify the name of the mutex you wish to wait on, and that your application should initially own it.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>You can then access the mutex when the constructor returns.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">[</bpt>CSyncObject::Unlock<ept id="p1">](../../mfc/reference/csyncobject-class.md#csyncobject__unlock)</ept> when you are done accessing the controlled resource.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>An alternative method for using <ph id="ph1">`CMutex`</ph> objects is to add a variable of type <ph id="ph2">`CMutex`</ph> as a data member to the class you wish to control.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>During construction of the controlled object, call the constructor of the <ph id="ph1">`CMutex`</ph> data member specifying if the mutex is initially owned, the name of the mutex (if it will be used across process boundaries), and desired security attributes.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To access resources controlled by <ph id="ph1">`CMutex`</ph> objects in this manner, first create a variable of either type <bpt id="p1">[</bpt>CSingleLock<ept id="p1">](../../mfc/reference/csinglelock-class.md)</ept> or type <bpt id="p2">[</bpt>CMultiLock<ept id="p2">](../../mfc/reference/cmultilock-class.md)</ept> in your resource's access member function.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Then call the lock object's <ph id="ph1">`Lock`</ph> member function (for example, <bpt id="p1">[</bpt>CSingleLock::Lock<ept id="p1">](../../mfc/reference/csinglelock-class.md#csinglelock__lock)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>At this point, your thread will either gain access to the resource, wait for the resource to be released and gain access, or wait for the resource to be released and time out, failing to gain access to the resource.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In any case, your resource has been accessed in a thread-safe manner.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>To release the resource, use the lock object's <ph id="ph1">`Unlock`</ph> member function (for example, <bpt id="p1">[</bpt>CSingleLock::Unlock<ept id="p1">](../../mfc/reference/csinglelock-class.md#csinglelock__unlock)</ept>), or allow the lock object to fall out of scope.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For more information on using <ph id="ph1">`CMutex`</ph> objects, see the article <bpt id="p1">[</bpt>Multithreading: How to Use the Synchronization Classes<ept id="p1">](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Inheritance Hierarchy</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>CObject</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>CSyncObject</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> afxmt.h</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>CMutex::CMutex</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Constructs a named or unnamed <ph id="ph1">`CMutex`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Specifies if the thread creating the <ph id="ph1">`CMutex`</ph> object initially has access to the resource controlled by the mutex.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Name of the <ph id="ph1">`CMutex`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If another mutex with the same name exists, <ph id="ph1">`lpszName`</ph> must be supplied if the object will be used across process boundaries.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>NULL<ept id="p1">**</ept>, the mutex will be unnamed.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If the name matches an existing mutex, the constructor builds a new <ph id="ph1">`CMutex`</ph> object which references the mutex of that name.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If the name matches an existing synchronization object that is not a mutex, the construction will fail.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Security attributes for the mutex object.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For a full description of this structure, see <bpt id="p1">[</bpt>SECURITY_ATTRIBUTES<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/aa379560)</ept> in the <ph id="ph1">[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>To access or release a <ph id="ph1">`CMutex`</ph> object, create a <bpt id="p1">[</bpt>CMultiLock<ept id="p1">](../../mfc/reference/cmultilock-class.md)</ept> or <bpt id="p2">[</bpt>CSingleLock<ept id="p2">](../../mfc/reference/csinglelock-class.md)</ept> object and call its <bpt id="p3">[</bpt>Lock<ept id="p3">](../../mfc/reference/csinglelock-class.md#csinglelock__lock)</ept> and <bpt id="p4">[</bpt>Unlock<ept id="p4">](../../mfc/reference/csinglelock-class.md#csinglelock__unlock)</ept> member functions.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`CMutex`</ph> object is being used stand-alone, call its <ph id="ph2">`Unlock`</ph> member function to release it.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>After creating the <ph id="ph1">`CMutex`</ph> object, use <bpt id="p1">[</bpt>GetLastError<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms679360)</ept> to ensure that the mutex did not already exist.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If the mutex did exist unexpectedly, it may indicate a rogue process is squatting and may be intending to use the mutex maliciously.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>In this case, the recommended security-conscious procedure is to close the handle and continue as if there was a failure in creating the object.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>CSyncObject Class</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Hierarchy Chart</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

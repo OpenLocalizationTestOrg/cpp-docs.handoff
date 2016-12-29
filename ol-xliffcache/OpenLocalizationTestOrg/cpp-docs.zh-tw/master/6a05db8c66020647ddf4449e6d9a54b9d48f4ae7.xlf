@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6a05db8c66020647ddf4449e6d9a54b9d48f4ae7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\errors-and-exception-handling-modern-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b78ce4836cbb79676da7b7ddc897693ab195392a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">750501a20cabce074bad8cadf0fcd6057fe673f0</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Errors and Exception Handling (Modern C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Errors and Exception Handling (Modern C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In modern C++, in most scenarios, the preferred way to report and handle both logic errors and runtime errors is to use exceptions.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This is especially true when the stack might contain several function calls between the function that detects the error and the function that has the context to know how to handle it.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Exceptions provide a formal, well-defined way for code that detects errors to pass the information up the call stack.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Program errors are generally divided into two categories: logic errors that are caused by programming mistakes, for example, an "index out of range" error, and runtime errors that are beyond the control of programmer, for example, a "network service unavailable" error.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In C-style programming and in COM, error reporting is managed either by returning a value that represents an error code or a status code for a particular function, or by setting a global variable that the caller may optionally retrieve after every function call to see whether errors were reported.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, COM programming uses the HRESULT return value to communicate errors to the caller, and the Win32 API has the GetLastError function to retrieve the last error that was reported by the call stack.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In both of these cases, it's up to the caller to recognize the code and respond to it appropriately.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If the caller doesn't explicitly handle the error code, the program might crash without warning, or continue to execute with bad data and produce incorrect results.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Exceptions are preferred in modern C++ for the following reasons:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>An exception forces calling code to recognize an error condition and handle it.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Unhandled exceptions stop program execution.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>An exception jumps to the point in the call stack that can handle the error.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Intermediate functions can let the exception propagate.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>They do not have to coordinate with other layers.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The exception stack-unwinding mechanism destroys all objects in scope according to well-defined rules after an exception is thrown.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>An exception enables a clean separation between the code that detects the error and the code that handles the error.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The following simplified example shows the necessary syntax for throwing and catching exceptions in C++.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Exceptions in C++ resemble those in languages such as C# and Java.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`try`</ph> block, if an exception is <bpt id="p1">*</bpt>thrown<ept id="p1">*</ept> it will be <bpt id="p2">*</bpt>caught<ept id="p2">*</ept> by the first associated <ph id="ph2">`catch`</ph> block whose type matches that of the exception.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>In other words, execution jumps from the <ph id="ph1">`throw`</ph> statement to the <ph id="ph2">`catch`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If no usable catch block is found, <ph id="ph1">`std::terminate`</ph> is invoked and the program exits.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In C++, any type may be thrown; however, we recommend that you throw a type that derives directly or indirectly from <ph id="ph1">`std::exception`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In the previous example, the exception type, <bpt id="p1">[</bpt>invalid_argument<ept id="p1">](../standard-library/invalid-argument-class.md)</ept>, is defined in the standard library in the <bpt id="p2">[</bpt><ph id="ph1">\&lt;</ph>stdexcept&gt;<ept id="p2">](../standard-library/stdexcept.md)</ept> header file.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>C++ does not provide, and does not require, a <ph id="ph1">`finally`</ph> block to make sure that all resources are released if an exception is thrown.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The resource acquisition is initialization (RAII) idiom, which uses smart pointers, provides the required functionality for resource cleanup.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>How to: Design for Exception Safety<ept id="p1">](../cpp/how-to-design-for-exception-safety.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For information about the C++ stack-unwinding mechanism, see <bpt id="p1">[</bpt>Exceptions and Stack Unwinding<ept id="p1">](../cpp/exceptions-and-stack-unwinding-in-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Basic guidelines</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Robust error handling is challenging in any programming language.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Although exceptions provide several features that support good error handling, they can't do all the work for you.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>To realize the benefits of the exception mechanism, keep exceptions in mind as you design your code.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Use asserts to check for errors that should never occur.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Use exceptions to check for errors that might occur, for example, errors in input validation on parameters of public functions.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For more information, see the section titled <bpt id="p1">**</bpt>Exceptions vs. Assertions<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Use exceptions when the code that handles the error might be separated from the code that detects the error by one or more intervening function calls.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Consider whether to use error codes instead in performance-critical loops when code that handles the error is tightly-coupled to the code that detects it.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>For every function that might throw or propagate an exception, provide one of the three exception guarantees: the strong guarantee, the basic guarantee, or the nothrow (noexcept) guarantee.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>How to: Design for Exception Safety<ept id="p1">](../cpp/how-to-design-for-exception-safety.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Throw exceptions by value, catch them by reference.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Don’t catch what you can't handle.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Don't use exception specifications, which are deprecated in C++11.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>For more information, see the section titled <bpt id="p1">**</bpt>Exception specifications and noexcept<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Use standard library exception types when they apply.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Derive custom exception types from the <bpt id="p1">[</bpt>exception Class<ept id="p1">](../standard-library/exception-class.md)</ept> hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Don't allow exceptions to escape from destructors or memory-deallocation functions.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Exceptions and performance</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The exception mechanism has a very minimal performance cost if no exception is thrown.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>If an exception is thrown, the cost of the stack traversal and unwinding is roughly comparable to the cost of a function call.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Additional data structures are required to track the call stack after a <ph id="ph1">`try`</ph> block is entered, and additional instructions are required to unwind the stack if an exception is thrown.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>However, in most scenarios, the cost in performance and memory footprint is not significant.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The adverse effect of exceptions on performance is likely to be significant only on very memory-constrained systems, or in performance-critical loops where an error is likely to occur regularly and the code to handle it is tightly coupled to the code that reports it.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>In any case, it's impossible to know the actual cost of exceptions without profiling and measuring.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Even in those rare cases when the cost is significant, you can weigh it against the increased correctness, easier maintainability, and other advantages that are provided by a well-designed exception policy.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Exceptions vs. assertions</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Exceptions and asserts are two distinct mechanisms for detecting run-time errors in a program.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Use asserts to test for conditions during development that should never be true if all your code is correct.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>There is no point in handling such an error by using an exception because the error indicates that something in the code has to be fixed, and doesn't represent a condition that the program has to recover from at run time.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>An assert stops execution at the statement so that you can inspect the program state in the debugger; an exception continues execution from the first appropriate catch handler.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Use exceptions to check error conditions that might occur at run time even if your code is correct, for example, "file not found" or "out of memory."</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>You might want to recover from these conditions, even if the recovery just outputs a message to a log and ends the program.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Always check arguments to public functions by using exceptions.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Even if your function is error-free, you might not have complete control over arguments that a user might pass to it.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>C++ exceptions versus Windows SEH exceptions</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Both C and C++ programs can use the structured exception handling (SEH) mechanism in the Windows operating system.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The concepts in SEH resemble those in C++ exceptions, except that SEH uses the <ph id="ph1">`__try`</ph>, <ph id="ph2">`__except`</ph>, and <ph id="ph3">`__finally`</ph> constructs instead of <ph id="ph4">`try`</ph> and <ph id="ph5">`catch`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>In Visual C++, C++ exceptions are implemented for SEH.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>However, when you write C++ code, use the C++ exception syntax.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>For more information about SEH, see <bpt id="p1">[</bpt>Structured Exception Handling (C/C++)<ept id="p1">](../cpp/structured-exception-handling-c-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Exception specifications and noexcept</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Exception specifications were introduced in C++ as a way to specify the exceptions that a function might throw.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>However, exception specifications proved problematic in practice, and are deprecated in the C++11 draft standard.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>We recommend that you do not use exception specifications except for <ph id="ph1">`throw()`</ph>, which indicates that the exception allows no exceptions to escape.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>If you must use exception specifications of the type <ph id="ph1">`throw(`</ph><bpt id="p1">*</bpt>type<ept id="p1">*</ept><ph id="ph2">`)`</ph>, be aware that <ph id="ph3">[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]</ph> departs from the standard in certain ways.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Exception Specifications (throw)<ept id="p1">](../cpp/exception-specifications-throw-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`noexcept`</ph> specifier is introduced in C++11 as the preferred alternative to <ph id="ph2">`throw()`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>How to: Interface Between Exceptional and Non-Exceptional Code</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Welcome Back to C++</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>C++ Language Reference</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>C++ Standard Library</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

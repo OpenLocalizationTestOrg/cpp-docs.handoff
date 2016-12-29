@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0b4ad09f60e5facf2c5ada462b20f422b482bf44</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\ribbon-designer-mfc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">326f3e2fbb9bcc83ded403c413a098ba45ebc6ae</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b21f2f91694f96733f00c9cd7e66c0a7dd18f98e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Ribbon Designer (MFC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Ribbon Designer (MFC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The Ribbon Designer lets you create and customize ribbons in MFC applications.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A ribbon is a user interface (UI) element that organizes commands into logical groups.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>These groups appear on separate tabs in a strip across the top of the window.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The ribbon replaces the menu bar and toolbars.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A ribbon can significantly improve application usability.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Ribbons<ept id="p1">](http://go.microsoft.com/fwlink/linkid=129233)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The following illustration shows a ribbon.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>MFC Ribbon Resource Control</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In earlier versions of Visual Studio, ribbons had to be created by writing code that uses the MFC ribbon classes such as <bpt id="p1">[</bpt>CMFCRibbonBar Class<ept id="p1">](../mfc/reference/cmfcribbonbar-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">[!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]</ph>, the ribbon designer provides an alternative method for building ribbons.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>First, create and customize a ribbon as a resource.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Then load the ribbon resource from code in the MFC application.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You can even use ribbon resources and MFC ribbon classes together.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For example, you can create a ribbon resource, and then programmatically add more elements to it at runtime by using code.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Understanding the Ribbon Designer</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The ribbon designer creates and stores the ribbon as a resource.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When you create a ribbon resource, the ribbon designer does these three things:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Adds an entry in the project resource definition script (*.rc).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>In the following example, <ph id="ph1">`IDR_RIBBON`</ph> is the unique name that identifies the ribbon resource, <ph id="ph2">`RT_RIBBON_XML`</ph> is the resource type, and <ph id="ph3">`ribbon.mfcribbon-ms`</ph> is the name of the resource file.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Adds the definitions of Command IDs to resource.h.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Creates a ribbon resource file (*.mfcribbon-ms) that contains the XML code that defines the ribbon's buttons, controls, and attributes.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Changes to the ribbon in the ribbon designer are stored in the resource file as XML.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The following code example shows part of the contents of a <ph id="ph1">\*</ph>.mfcribbon-ms file:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To use the ribbon resource in your MFC application, load the resource by calling <bpt id="p1">[</bpt>CMFCRibbonBar::LoadFromResource<ept id="p1">](../mfc/reference/cmfcribbonbar-class.md#cmfcribbonbar__loadfromresource)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Creating a Ribbon By Using the Ribbon Designer</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>These are the two ways to add a ribbon resource to your MFC project:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Create an MFC application and configure the MFC Project Wizard to create the ribbon.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Walkthrough: Creating a Ribbon Application By Using MFC<ept id="p1">](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In an existing MFC project, create a ribbon resource and load it.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Walkthrough: Updating the MFC Scribble Application (Part 1)<ept id="p1">](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>If your project already has a manually coded ribbon, MFC has functions that you can use to convert the existing ribbon to a ribbon resource.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>How to: Convert an Existing MFC Ribbon to a Ribbon Resource<ept id="p1">](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Ribbons cannot be created in dialog-based applications.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Application Type, MFC Application Wizard<ept id="p1">](../mfc/reference/application-type-mfc-application-wizard.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Customizing Ribbons</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>To open a ribbon in the ribbon designer, double-click the ribbon resource in Resource View.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>In the designer, you can add, remove, and customize elements on the ribbon, the Application button, or the quick access toolbar.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>You can also link events, for example, button-click events and menu events, to a method in your application.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the various components in the ribbon designer.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>MFC Ribbon Designer</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Toolbox:<ept id="p1">**</ept> Contains controls that can be dragged to the designer surface.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Designer Surface:<ept id="p1">**</ept> Contains the visual representation of the ribbon resource.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Properties window:<ept id="p1">**</ept> Lists the attributes of the item that is selected on the designer surface.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Resource View window:<ept id="p1">**</ept> Displays the resources that include ribbon resources, in your project.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Ribbon Editor Toolbar:<ept id="p1">**</ept> Contains commands that let you preview the ribbon and change its visual theme.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The following topics describe how to use the features in the ribbon designer:</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>How to: Customize the Application Button</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>How to: Customize the Quick Access Toolbar</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>How to: Add Ribbon Controls and Event Handlers</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>How to: Load a Ribbon Resource from an MFC Application</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Definitions of Ribbon Elements</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>MFC Ribbon</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Application button:<ept id="p1">**</ept> The button that appears on the upper-left corner of a ribbon.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The Application button replaces the File menu and is visible even when the ribbon is minimized.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>When the button is clicked, a menu that has a list of commands is displayed.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Quick Access toolbar:<ept id="p1">**</ept> A small, customizable toolbar that displays frequently used commands.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Category<ept id="p1">**</ept>: The logical grouping that represents the contents of a ribbon tab.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Category Default button:<ept id="p1">**</ept> The button that appears on the ribbon when the ribbon is minimized.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>When the button is clicked, the category reappears as a menu.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Panel:<ept id="p1">**</ept> An area of the ribbon bar that displays a group of related controls.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Every ribbon category contains one or more ribbon panels.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Ribbon elements:<ept id="p1">**</ept> Controls in the panels, for example, buttons and combo boxes.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>To see the various controls that can be hosted on a ribbon, see <bpt id="p1">[</bpt>RibbonGadgets Sample: Ribbon Gadgets Application<ept id="p1">](../visual-cpp-samples.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>User Interface Elements</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Working with Resource Files</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

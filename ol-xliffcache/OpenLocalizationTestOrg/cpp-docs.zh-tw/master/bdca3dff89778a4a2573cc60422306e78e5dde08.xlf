@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">bdca3dff89778a4a2573cc60422306e78e5dde08</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\active-document-containers.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c2cb8b22b12135d438a13a7dd5bfba599c4b584f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dba6ba8426879c0e0d701a5aa1388c1248fc67d9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Active Document Containers | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Active Document Containers</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>An active document container, such as Microsoft Office Binder or Internet Explorer, allows you to work with several documents of different application types within a single frame (instead of forcing you to create and use multiple application frames for each document type).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>MFC provides full support for active document containers in the <ph id="ph1">`COleDocObjectItem`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You can use the MFC Application Wizard to create an active document container by selecting the <bpt id="p1">**</bpt>Active document container<ept id="p1">**</ept> check box on the <bpt id="p2">**</bpt>Compound Document Support<ept id="p2">**</ept> page of the MFC Application Wizard.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Creating an Active Document Container Application<ept id="p1">](../mfc/creating-an-active-document-container-application.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For more information about active document containers, see:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Container Requirements</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Document Site Objects</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>View Site Objects</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Frame Object</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Help Menu Merging</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Programmatic Printing</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Command Targets</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Container Requirements</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Active document support in an active document container implies more than just interface implementations: it also requires knowledge of using the interfaces of a contained object.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The same applies to active document extensions, where the container must also know how to use those extension interfaces on the active documents themselves.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>An active document container that integrates active documents must:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Be capable of handling object storage through the <bpt id="p1">**</bpt>IPersistStorage<ept id="p1">**</ept> interface, that is, it must provide an <ph id="ph1">`IStorage`</ph> instance to each active document.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Support the basic embedding features of OLE documents, necessitating "site" objects (one per document or embedding) that implement <bpt id="p1">**</bpt>IOleClientSite<ept id="p1">**</ept> and <bpt id="p2">**</bpt>IAdviseSink<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Support in-place activation of embedded objects or active documents.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The container's site objects must implement <ph id="ph1">`IOleInPlaceSite`</ph> and the container's frame object must provide <bpt id="p1">**</bpt>IOleInPlaceFrame<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Support the active documents' extensions by implementing <ph id="ph1">`IOleDocumentSite`</ph> to provide the mechanism for the container to talk to the document.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Optionally, the container can implement the active document interfaces <ph id="ph1">`IOleCommandTarget`</ph> and <ph id="ph2">`IContinueCallback`</ph> to pick up simple commands such as printing or saving.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The frame object, the view objects, and the container object can optionally implement <bpt id="p1">**</bpt>IOleCommandTarget<ept id="p1">**</ept> to support the dispatch of certain commands, as discussed in <bpt id="p2">[</bpt>Command Targets<ept id="p2">](../mfc/message-handling-and-command-targets.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>View and container objects can also optionally implement <ph id="ph1">`IPrint`</ph> and <ph id="ph2">`IContinueCallback`</ph>, to support programmatic printing, as discussed in <bpt id="p1">[</bpt>Programmatic Printing<ept id="p1">](../mfc/programmatic-printing.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The following figure shows the conceptual relationships between a container and its components (at left), and the active document and its views (at right).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The active document manages storage and data, and the view displays or optionally prints that data.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Interfaces in bold are those required for active document participation; those bold and italic are optional.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>All other interfaces are required.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Active document container interfaces</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A document that supports only a single view can implement both the view and document components (that is, their corresponding interfaces) on a single concrete class.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In addition, a container site that only supports one view at a time can combine the document site and the view site into a single concrete site class.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The container's frame object, however, must remain distinct, and the container's document component is merely included here to give a complete picture of the architecture; it is not affected by the active document containment architecture.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Document Site Objects</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In the active document containment architecture, a document site is the same as a client site object in OLE Documents with the addition of the <ph id="ph1">`IOleDocument`</ph> interface:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The document site is conceptually the container for one or more "view site" objects.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Each view site object is associated with individual view objects of the document managed by the document site.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If the container only supports a single view per document site, then it can implement the document site and the view site with a single concrete class.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>View Site Objects</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>A container's view site object manages the display space for a particular view of a document.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>In addition to supporting the standard <ph id="ph1">`IOleInPlaceSite`</ph> interface, a view site also generally implements <ph id="ph2">`IContinueCallback`</ph> for programmatic printing control.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>(Note that the view object never queries for <ph id="ph1">`IContinueCallback`</ph> so it can actually be implemented on any object the container desires.)</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>A container that supports multiple views must be able to create multiple view site objects within the document site.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This provides each view with separate activation and deactivation services as provided through <ph id="ph1">`IOleInPlaceSite`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Frame Object</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The container's frame object is, for the most part, the same frame that is used for in-place activation in OLE Documents, that is, the one that handles menu and toolbar negotiation.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>A view object has access to this frame object through <bpt id="p1">**</bpt>IOleInPlaceSite::GetWindowContext<ept id="p1">**</ept>, which also provides access to the container object representing the container document (which can handle pane-level toolbar negotiation and contained object enumeration).</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>An active document container can augment the frame by adding <ph id="ph1">`IOleCommandTarget`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>This allows it to receive commands that originate in the active document's user interface in the same way that this interface can allow a container to send the same commands (such as <bpt id="p1">**</bpt>File New<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Open<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Save As<ept id="p3">**</ept>, <bpt id="p4">**</bpt>Print<ept id="p4">**</ept>; <bpt id="p5">**</bpt>Edit Copy<ept id="p5">**</ept>, <bpt id="p6">**</bpt>Paste<ept id="p6">**</ept>, <bpt id="p7">**</bpt>Undo<ept id="p7">**</ept>, and others) to an active document.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Command Targets<ept id="p1">](../mfc/message-handling-and-command-targets.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Active Document Containment</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

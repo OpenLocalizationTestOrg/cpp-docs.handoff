@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a8e7bd5d4bdc63a387064d75d713bf897ab92710</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\writing-an-exception-filter.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">83bca883d06a4d77607a444e87de83cbb93ddd3c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">399f0d18d6496d1cacc909c6e198c40bdf5df82f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Writing an Exception Filter | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Writing an Exception Filter</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>You can handle an exception either by jumping to the level of the exception handler or by continuing execution.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Instead of using the exception handler code to handle the exception and falling through, you can use <bpt id="p1">*</bpt>filter<ept id="p1">*</ept> to clean up the problem and then, by returning –1, resume normal flow without clearing the stack.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Some exceptions cannot be continued.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">*</bpt>filter<ept id="p1">*</ept> evaluates to –1 for such an exception, the system raises a new exception.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>When you call <bpt id="p1">[</bpt>RaiseException<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms680552)</ept>, you determine whether the exception will continue.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, the following code uses a function call in the <bpt id="p1">*</bpt>filter<ept id="p1">*</ept> expression: this function handles the problem and then returns –1 to resume normal flow of control:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>It is a good idea to use a function call in the <bpt id="p1">*</bpt>filter<ept id="p1">*</ept> expression whenever <bpt id="p2">*</bpt>filter<ept id="p2">*</ept> needs to do anything complex.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Evaluating the expression causes execution of the function, in this case, <ph id="ph1">`Eval_Exception`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Note the use of <bpt id="p1">[</bpt>GetExceptionCode<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms679356)</ept> to determine the exception.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>You must call this function inside the filter itself.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>cannot call <bpt id="p1">**</bpt>GetExceptionCode<ept id="p1">**</ept>, but it must have the exception code passed to it.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This handler passes control to another handler unless the exception is an integer or floating-point overflow.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If it is, the handler calls a function (<ph id="ph1">`ResetVars`</ph> is only an example, not an API function) to reset some global variables.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Statement-block-2<ept id="p1">*</ept>, which in this example is empty, can never be executed because <ph id="ph1">`Eval_Exception`</ph> never returns EXCEPTION_EXECUTE_HANDLER (1).</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Using a function call is a good general-purpose technique for dealing with complex filter expressions.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Two other C language features that are useful are:</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The conditional operator</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The comma operator</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The conditional operator is frequently useful, because it can be used to check for a specific return code and then return one of two different values.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For example, the filter in the following code recognizes the exception only if the exception is <ph id="ph1">`STATUS_INTEGER_OVERFLOW`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The purpose of the conditional operator in this case is mainly to provide clarity, because the following code produces the same results:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The conditional operator is more useful in situations where you might want the filter to evaluate to –1, EXCEPTION_CONTINUE_EXECUTION.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The comma operator enables you to perform multiple, independent operations inside a single expression.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The effect is roughly that of executing multiple statements and then returning the value of the last expression.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For example, the following code stores the exception code in a variable and then tests it:</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Writing an Exception Handler</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Structured Exception Handling (C/C++)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

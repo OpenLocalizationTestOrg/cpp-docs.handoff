@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7b11ac48197b0b5aa377dab0554d79db4119799c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\writing-an-internet-client-application-using-mfc-wininet-classes.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cc50522cf7442007ffd5829c7e3fb132f8354d2f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d822eca26cbb6a5b89c7dcfd920beb3da0e3723e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Writing an Internet Client Application Using MFC WinInet Classes | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Writing an Internet Client Application Using MFC WinInet Classes</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The basis of every Internet client application is the Internet session.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>MFC implements Internet sessions as objects of class <bpt id="p1">[</bpt>CInternetSession<ept id="p1">](../mfc/reference/cinternetsession-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Using this class, you can create one Internet session or several simultaneous sessions.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To communicate with a server, you need a <bpt id="p1">[</bpt>CInternetConnection<ept id="p1">](../mfc/reference/cinternetconnection-class.md)</ept> object as well as a <ph id="ph1">`CInternetSession`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You can create a <ph id="ph1">`CInternetConnection`</ph> by using <bpt id="p1">[</bpt>CInternetSession::GetFtpConnection<ept id="p1">](../mfc/reference/cinternetsession-class.md#cinternetsession__getftpconnection)</ept>, <bpt id="p2">[</bpt>CInternetSession::GetHttpConnection<ept id="p2">](../mfc/reference/cinternetsession-class.md#cinternetsession__gethttpconnection)</ept>, or <bpt id="p3">[</bpt>CInternetSession::GetGopherConnection<ept id="p3">](../mfc/reference/cinternetsession-class.md#cinternetsession__getgopherconnection)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Each of these calls is specific to the protocol type.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>These calls do not open a file on the server for reading or writing.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If you intend to read or write data, you must open the file as a separate step.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For most Internet sessions, the <ph id="ph1">`CInternetSession`</ph> object works hand-in-hand with a <bpt id="p1">[</bpt>CInternetFile<ept id="p1">](../mfc/reference/cinternetfile-class.md)</ept> object:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For an Internet session, you must create an instance of <bpt id="p1">[</bpt>CInternetSession<ept id="p1">](../mfc/reference/cinternetsession-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If your Internet session reads or writes data, you must create an instance of <ph id="ph1">`CInternetFile`</ph> (or its subclasses, <bpt id="p1">[</bpt>CHttpFile<ept id="p1">](../mfc/reference/chttpfile-class.md)</ept> or <bpt id="p2">[</bpt>CGopherFile<ept id="p2">](../mfc/reference/cgopherfile-class.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The easiest way to read data is to call <bpt id="p1">[</bpt>CInternetSession::OpenURL<ept id="p1">](../mfc/reference/cinternetsession-class.md#cinternetsession__openurl)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This function parses a Universal Resource Locator (URL) supplied by you, opens a connection to the server specified by the URL, and returns a read-only <ph id="ph1">`CInternetFile`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>is not specific to one protocol type — the same call works for any FTP, HTTP, or gopher URL.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>even works with local files (returning a <ph id="ph1">`CStdioFile`</ph> instead of a <ph id="ph2">`CInternetFile`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If your Internet session does not read or write data, but performs other tasks, such as deleting a file in an FTP directory, you may not need to create an instance of <ph id="ph1">`CInternetFile`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>There are two ways to create a <ph id="ph1">`CInternetFile`</ph> object:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If you use <ph id="ph1">`CInternetSession::OpenURL`</ph> to establish your server connection, the call to <ph id="ph2">`OpenURL`</ph> returns a <ph id="ph3">`CStdioFile`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If use <bpt id="p1">**</bpt>CInternetSession::GetFtpConnection<ept id="p1">**</ept>, <ph id="ph1">`GetGopherConnection`</ph>, or <ph id="ph2">`GetHttpConnection`</ph> to establish your server connection, you must call <ph id="ph3">`CFtpConnection::OpenFile`</ph>, <ph id="ph4">`CGopherConnection::OpenFile`</ph>, or <bpt id="p2">**</bpt>CHttpConnection::OpenRequest,<ept id="p2">**</ept> respectively, to return a <ph id="ph5">`CInternetFile`</ph>, <ph id="ph6">`CGopherFile`</ph>, or <ph id="ph7">`CHttpFile`</ph>, respectively.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The steps in implementing an Internet client application vary depending on whether you create a generic Internet client based on <bpt id="p1">**</bpt>OpenURL<ept id="p1">**</ept> or a protocol-specific client using one of the <bpt id="p2">**</bpt>GetConnection<ept id="p2">**</ept> functions.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>How do I write an Internet client application that works generically with FTP, HTTP, and gopher</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>How do I write an FTP client application that opens a file</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>How do I write an FTP client application that does not open a file but performs a directory operation, such as deleting a file</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>How do I write a gopher client application</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>How do I write an HTTP client application</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Win32 Internet Extensions (WinInet)</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>MFC Classes for Creating Internet Client Applications</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Prerequisites for Internet Client Classes</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
