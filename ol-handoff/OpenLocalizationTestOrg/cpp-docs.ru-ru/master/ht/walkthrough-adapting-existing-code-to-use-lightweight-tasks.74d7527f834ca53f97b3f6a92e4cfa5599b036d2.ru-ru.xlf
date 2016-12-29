@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">29fb245d6b76ca44bc3e0aaa27a73af57c58cf6d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\walkthrough-adapting-existing-code-to-use-lightweight-tasks.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">033c0eae92ddaff3e9a89adf00324d20beb30e90</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ce42c88f3050b79e1b4ea112a16c6ac1c4d387ad</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Adapting Existing Code to Use Lightweight Tasks | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Adapting Existing Code to Use Lightweight Tasks</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic shows how to adapt existing code that uses the Windows API to create and execute a thread to use a lightweight task.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>lightweight task<ept id="p1">*</ept> is a task that you schedule directly from a <bpt id="p2">[</bpt>concurrency::Scheduler<ept id="p2">](../../parallel/concrt/reference/scheduler-class.md)</ept> or <bpt id="p3">[</bpt>concurrency::ScheduleGroup<ept id="p3">](../../parallel/concrt/reference/schedulegroup-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Lightweight tasks are useful when you adapt existing code to use the scheduling functionality of the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Before you start this walkthrough, read the topic <bpt id="p1">[</bpt>Task Scheduler<ept id="p1">](../../parallel/concrt/task-scheduler-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The following example illustrates typical usage of the Windows API to create and execute a thread.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">[</bpt>CreateThread<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms682453)</ept> function to call the <ph id="ph1">`MyThreadFunction`</ph> on a separate thread.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Code</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>concrt-windows-threads#1</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This example produces the following output.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The following steps show how to adapt the code example to use the Concurrency Runtime to perform the same task.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>To adapt the example to use a lightweight task</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Add a <ph id="ph1">`#include`</ph> directive for the header file concrt.h.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#2</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Add a <ph id="ph1">`using`</ph> directive for the <ph id="ph2">`concurrency`</ph> namespace.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#3</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Change the declaration of <ph id="ph1">`MyThreadFunction`</ph> to use the <ph id="ph2">`__cdecl`</ph> calling convention and to return <ph id="ph3">`void`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#4</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Modify the <ph id="ph1">`MyData`</ph> structure to include a <bpt id="p1">[</bpt>concurrency::event<ept id="p1">](../../parallel/concrt/reference/event-class.md)</ept> object that signals to the main application that the task has finished.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#5</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Replace the call to <ph id="ph1">`CreateThread`</ph> with a call to the <bpt id="p1">[</bpt>concurrency::CurrentScheduler::ScheduleTask<ept id="p1">](reference/currentscheduler-class.md#scheduletask)</ept> method.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#6</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Replace the call to <ph id="ph1">`WaitForSingleObject`</ph> with a call to the <bpt id="p1">[</bpt>concurrency::event::wait<ept id="p1">](reference/event-class.md#wait)</ept> method to wait for the task to finish.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#7</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Remove the call to <ph id="ph1">`CloseHandle`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Change the signature of the definition of <ph id="ph1">`MyThreadFunction`</ph> to match step 3.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#8</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>At the end of the <ph id="ph1">`MyThreadFunction`</ph> function, call the <bpt id="p1">[</bpt>concurrency::event::set<ept id="p1">](reference/event-class.md#set)</ept> method to signal to the main application that the task has finished.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#9</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Remove the <ph id="ph1">`return`</ph> statement from <ph id="ph2">`MyThreadFunction`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The following completed example shows code that uses a lightweight task to call the <ph id="ph1">`MyThreadFunction`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Code</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>concrt-migration-lwt#1</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Task Scheduler</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Scheduler Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

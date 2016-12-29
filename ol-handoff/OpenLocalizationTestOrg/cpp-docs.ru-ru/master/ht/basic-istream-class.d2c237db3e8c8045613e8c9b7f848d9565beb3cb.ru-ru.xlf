@@ -1,0 +1,945 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">32308d4cd6a3cc1409f04958dde8dad9204718bc</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\basic-istream-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3e3ddc97b784351eeec6a99344f3b9fefb21d986</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c6edd936b82b92eddd48d85066da00a4ec21b907</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>basic_istream Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>basic_istream Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Describes an object that controls extraction of elements and encoded objects from a stream buffer with elements of type <ph id="ph1">`Elem`</ph>, also known as <bpt id="p1">[</bpt>char_type<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__char_type)</ept>, whose character traits are determined by the class <bpt id="p2">*</bpt>Tr<ept id="p2">*</ept>, also known as <bpt id="p3">[</bpt>traits_type<ept id="p3">](../standard-library/basic-ios-class.md#basic_ios__traits_type)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Most of the member functions that overload <bpt id="p1">[</bpt>operator&gt;&gt;<ept id="p1">](#basic_istream__operator_gt__gt_)</ept> are formatted input functions.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>They follow the pattern:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Many other member functions are unformatted input functions.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>They follow the pattern:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Both groups of functions call <bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p2">**</bpt>eofbit<ept id="p2">**</ept>) if they encounter end of file while extracting elements.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>An object of class <ph id="ph1">`basic_istream`&lt; `Elem`</ph>, <bpt id="p1">*</bpt>Tr<ept id="p1">*</ept>&gt; stores:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A virtual public base object of class <bpt id="p1">[</bpt>basic_ios<ept id="p1">](../standard-library/basic-ios-class.md)</ept><ph id="ph1">&lt; `Elem`</ph>, <bpt id="p2">*</bpt>Tr<ept id="p2">*</ept></source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>An extraction count for the last unformatted input operation (called <bpt id="p1">**</bpt>count<ept id="p1">**</ept> in the previous code).</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>basic_ifstream Class<ept id="p1">](../standard-library/basic-ifstream-class.md)</ept> to learn more about input streams.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Constructors</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>basic_istream</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Constructs an object of type <ph id="ph1">`basic_istream`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Member Functions</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>gcount</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Returns the number of characters read during the last unformatted input.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>get</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Reads one or more characters from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>getline</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Reads a line from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>ignore</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Causes a number of elements to be skipped from the current read position.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>peek</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Returns the next character to be read.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>putback</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Puts a specified character into the stream.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>read</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Reads a specified number of characters from the stream and stores them in an array.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>readsome</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Read from buffer only.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>seekg</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Moves the read position in a stream.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>sentry</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The nested class describes an object whose declaration structures the formatted input functions and the unformatted input functions.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>swap</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Exchanges this <ph id="ph1">`basic_istream`</ph> object for the provided <ph id="ph2">`basic_istream`</ph> object parameter.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>sync</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Synchronizes the input device associated with the stream with the stream's buffer.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>tellg</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Reports the current read position in the stream.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>unget</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Puts the most recently read character back into the stream.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Operators</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>operator&gt;&gt;</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Calls a function on the input stream or reads formatted data from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>operator=</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Assigns the <ph id="ph1">`basic_istream`</ph> on the right side of the operator to this object.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>This is a move assignment involving an <ph id="ph1">`rvalue`</ph> reference that does not leave a copy behind.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> <ph id="ph1">\&lt;</ph>istream&gt;</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> std</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>basic_istream::basic_istream</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Constructs an object of type <ph id="ph1">`basic_istream`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>An object of type <bpt id="p1">[</bpt>basic_streambuf<ept id="p1">](../standard-library/basic-streambuf-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>if this is a standard stream; otherwise, <ph id="ph1">`false`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`basic_istream`</ph> object to copy.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The first constructor initializes the base class by calling <bpt id="p1">[</bpt>init<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__init)</ept>(_S <ph id="ph1">`trbuf`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>It also stores zero in the extraction count.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>For more information about this extraction count, see the Remarks section of the <bpt id="p1">[</bpt>basic_istream Class<ept id="p1">](../standard-library/basic-istream-class.md)</ept> overview topic.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The second constructor initializes the base class by calling <ph id="ph1">`move``( right)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>It also stores _R <ph id="ph1">`ight.gcount()`</ph> in the extraction count and stores zero in the extraction count for _R <ph id="ph2">`ight`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>See the example for <bpt id="p1">[</bpt>basic_ifstream::basic_ifstream<ept id="p1">](../standard-library/basic-ifstream-class.md#basic_ifstream__basic_ifstream)</ept> to learn more about input streams.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>basic_istream::gcount</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Returns the number of characters read during the last unformatted input.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The extraction count.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Use <bpt id="p1">[</bpt>basic_istream::get<ept id="p1">](#basic_istream__get)</ept> to read unformatted characters.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>basic_istream::get</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Reads one or more characters from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The number of characters to read from <ph id="ph1">`strbuf`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The character that should terminate the read if it is encountered before <ph id="ph1">` count`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>A string in which to write.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>A character to get.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>A buffer in which to write.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The parameterless form of get returns the element read as an integer or end of file.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The remaining forms return the stream (* <ph id="ph1">`this`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The first of these unformatted input functions extracts an element, if possible, as if by returning <ph id="ph1">`rdbuf`-&gt; `sbumpc`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>eof<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__eof)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>If the function extracts no element, it calls <bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p2">**</bpt>failbit<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The second function extracts the <bpt id="p1">[</bpt>int_type<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__int_type)</ept> element <ph id="ph1">`meta`</ph> the same way.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`meta`</ph> compares equal to <bpt id="p1">**</bpt>traits_type::eof<ept id="p1">**</ept>, the function calls <ph id="ph2">`setstate`</ph>( <bpt id="p2">**</bpt>failbit<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Otherwise, it stores <bpt id="p1">**</bpt>traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>to_char_type<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__to_char_type)</ept>( <ph id="ph1">`meta`</ph>) in <ph id="ph2">`Ch`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The function returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The third function returns <bpt id="p1">**</bpt>get<ept id="p1">**</ept>(_ <bpt id="p2">*</bpt>Str<ept id="p2">*</ept>, <ph id="ph1">` count`</ph>, <ph id="ph2">`widen`</ph>('\ <bpt id="p3">**</bpt>n<ept id="p3">**</ept>')).</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The fourth function extracts up to <ph id="ph1">` count`</ph> - 1 elements and stores them in the array beginning at _ <bpt id="p1">*</bpt>Str<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>It always stores <ph id="ph1">`char_type`</ph> after any extracted elements it stores.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>In order of testing, extraction stops:</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>At end of file.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>After the function extracts an element that compares equal to <ph id="ph1">`Delim`</ph>, in which case the element is put back to the controlled sequence.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>After the function extracts <ph id="ph1">` count`</ph> - 1 elements.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>If the function extracts no elements, it calls <ph id="ph1">`setstate`</ph>( <bpt id="p1">**</bpt>failbit<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>In any case, it returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The fifth function returns <bpt id="p1">**</bpt>get<ept id="p1">**</ept>( <bpt id="p2">**</bpt>strbuf<ept id="p2">**</ept>, <ph id="ph1">`widen`</ph>('\ <bpt id="p3">**</bpt>n<ept id="p3">**</ept>')).</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The sixth function extracts elements and inserts them in <bpt id="p1">**</bpt>strbuf<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Extraction stops on end-of-file or on an element that compares equal to _ <bpt id="p1">*</bpt>Delim,<ept id="p1">*</ept> which is not extracted.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>It also stops, without extracting the element in question, if an insertion fails or throws an exception (which is caught but not rethrown).</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>If the function extracts no elements, it calls <ph id="ph1">`setstate`</ph>( <bpt id="p1">**</bpt>failbit<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>In any case, the function returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>basic_istream::getline</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Gets a line from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The number of characters to read from <bpt id="p1">**</bpt>strbuf<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>The character that should terminate the read if it is encountered before <ph id="ph1">` count`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>A string in which to write.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The stream ( <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>The first of these unformatted input functions returns <bpt id="p1">**</bpt>getline<ept id="p1">**</ept>(_ <bpt id="p2">*</bpt>Str<ept id="p2">*</ept>, <ph id="ph1">` count`</ph>, <ph id="ph2">`widen`</ph>(' <ph id="ph3">`\`</ph><bpt id="p3">**</bpt>n<ept id="p3">**</ept>')).</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>The second function extracts up to <ph id="ph1">` count`</ph> - 1 elements and stores them in the array beginning at _ <bpt id="p1">*</bpt>Str<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>It always stores the string termination character after any extracted elements it stores.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>In order of testing, extraction stops:</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>At end of file.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>After the function extracts an element that compares equal to <ph id="ph1">`Delim`</ph>, in which case the element is neither put back nor appended to the controlled sequence.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>After the function extracts <ph id="ph1">` count`</ph> - 1 elements.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>If the function extracts no elements or <ph id="ph1">` count`</ph> - 1 elements, it calls <bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p2">**</bpt>failbit<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>In any case, it returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>basic_istream::ignore</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>Causes a number of elements to be skipped from the current read position.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>The number of elements to skip from the current read position.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>The element that, if encountered before count, causes <bpt id="p1">**</bpt>ignore<ept id="p1">**</ept> to return and allowing all elements after <ph id="ph1">`Delim`</ph> to be read.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>The stream ( <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>The unformatted input function extracts up to <ph id="ph1">` count`</ph> elements and discards them.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">` count`</ph> equals <bpt id="p1">**</bpt>numeric_limits<ph id="ph2">\&lt;</ph>int&gt;::max<ept id="p1">**</ept>, however, it is taken as arbitrarily large.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Extraction stops early on end of file or on an element <ph id="ph1">`Ch`</ph> such that <bpt id="p1">**</bpt>traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>to_int_type<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__to_int_type)</ept>( <ph id="ph2">`Ch`</ph>) compares equal to _ <bpt id="p3">*</bpt>Delim<ept id="p3">*</ept> (which is also extracted).</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>The function returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>basic_istream::operator</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>Calls a function on the input stream or reads formatted data from the input stream.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>A function pointer.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>An object of type <bpt id="p1">**</bpt>stream_buf<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>The value to read from the stream.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>The stream ( <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`&lt;istream&gt;`</ph> header also defines several global extraction operators.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>operator&gt;&gt; (<ph id="ph1">\&lt;</ph>istream&gt;)<ept id="p1">](../standard-library/istream-operators.md#operator_gt__gt_)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>The first member function ensures that an expression of the form <bpt id="p1">**</bpt>istr<ept id="p1">**</ept><ph id="ph1"> &gt;&gt; `ws`</ph> calls <bpt id="p2">[</bpt>ws<ept id="p2">](../standard-library/istream-functions.md#ws)</ept>( <bpt id="p3">**</bpt>istr<ept id="p3">**</ept>), and then returns <bpt id="p4">**</bpt><ph id="ph2">\*</ph>this<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>The second and third functions ensure that other manipulators, such as <bpt id="p1">[</bpt>hex<ept id="p1">](../standard-library/ios-functions.md#hex)</ept>, behave similarly.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>The remaining functions constitute the formatted input functions.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>The function:</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>extracts elements, if _ <bpt id="p1">*</bpt>Strbuf<ept id="p1">*</ept> is not a null pointer, and inserts them in <ph id="ph1">` strbuf`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Extraction stops on end of file.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>It also stops without extracting the element in question, if an insertion fails or throws an exception (which is caught but not rethrown).</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>If the function extracts no elements, it calls <bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p2">**</bpt>failbit<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>In any case, the function returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>The function:</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>extracts a field and converts it to a Boolean value by calling <bpt id="p1">[</bpt>use_facet<ept id="p1">](../standard-library/basic-filebuf-class.md#basic_filebuf__open)</ept><ph id="ph1"> &lt; `num_get`\&lt;</ph> <bpt id="p2">**</bpt>Elem<ept id="p2">**</ept>, <bpt id="p3">**</bpt>InIt<ept id="p3">**</ept>&gt;( <bpt id="p4">[</bpt>getloc<ept id="p4">](../standard-library/ios-base-class.md#ios_base__getloc)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>get<ept id="p1">](../standard-library/ios-base-class.md#ios_base__getloc)</ept>( <bpt id="p2">**</bpt>InIt<ept id="p2">**</ept>( <bpt id="p3">[</bpt>rdbuf<ept id="p3">](../standard-library/basic-ios-class.md#basic_ios__rdbuf)</ept>), <ph id="ph1">`Init`</ph>(0), <bpt id="p4">**</bpt><ph id="ph2">\*</ph>this<ept id="p4">**</ept>, <ph id="ph3">`getloc`</ph>, <ph id="ph4">` val`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>Here, <bpt id="p1">**</bpt>InIt<ept id="p1">**</ept> is defined as <bpt id="p2">[</bpt>istreambuf_iterator<ept id="p2">](../standard-library/istreambuf-iterator-class.md)</ept><ph id="ph1">\&lt;</ph> <bpt id="p3">**</bpt>Elem<ept id="p3">**</ept>, <bpt id="p4">**</bpt>Tr<ept id="p4">**</ept>&gt;.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>The function returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>The functions:</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>each extract a field and convert it to a numeric value by calling <ph id="ph1">`use_facet`&lt; `num_get`\&lt;</ph> <bpt id="p1">**</bpt>Elem<ept id="p1">**</ept>, <bpt id="p2">**</bpt>InIt<ept id="p2">**</ept>&gt;( <ph id="ph2">`getloc`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>get<ept id="p1">](#basic_istream__get)</ept>( <bpt id="p2">**</bpt>InIt<ept id="p2">**</ept>( <ph id="ph1">`rdbuf`</ph>), <ph id="ph2">`Init`</ph>(0), <bpt id="p3">**</bpt><ph id="ph3">\*</ph>this<ept id="p3">**</ept>, <ph id="ph4">`getloc`</ph>, <ph id="ph5">` val`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>Here, <bpt id="p1">**</bpt>InIt<ept id="p1">**</ept> is defined as <ph id="ph1">`istreambuf_iterator`\&lt;</ph> <bpt id="p2">**</bpt>Elem<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Tr<ept id="p3">**</ept>&gt;, and <ph id="ph2">` val`</ph> has type <bpt id="p4">**</bpt>long<ept id="p4">**</ept><bpt id="p5">*</bpt>,<ept id="p5">*</ept><ph id="ph3">`unsigned long`</ph><bpt id="p6">*</bpt>,<ept id="p6">*</ept> or <bpt id="p7">**</bpt>void <ph id="ph4">\*</ph><ept id="p7">**</ept> as needed.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>If the converted value cannot be represented as the type of <ph id="ph1">` val`</ph>, the function calls <bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p2">**</bpt>failbit<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>In any case, the function returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>The functions:</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>each extract a field and convert it to a numeric value by calling <ph id="ph1">`use_facet`&lt; `num_get`\&lt;</ph> <bpt id="p1">**</bpt>Elem<ept id="p1">**</ept>, <bpt id="p2">**</bpt>InIt<ept id="p2">**</ept>&gt;( <ph id="ph2">`getloc`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>get<ept id="p1">**</ept>( <bpt id="p2">**</bpt>InIt<ept id="p2">**</ept>( <ph id="ph1">`rdbuf`</ph>), <ph id="ph2">`Init`</ph>(0), <bpt id="p3">**</bpt><ph id="ph3">\*</ph>this<ept id="p3">**</ept>, <ph id="ph4">`getloc`</ph>, <ph id="ph5">` val`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>Here, <bpt id="p1">**</bpt>InIt<ept id="p1">**</ept> is defined as <ph id="ph1">`istreambuf_iterator`\&lt;</ph> <bpt id="p2">**</bpt>Elem<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Tr<ept id="p3">**</ept>&gt;, and <ph id="ph2">` val`</ph> has type <bpt id="p4">**</bpt>double<ept id="p4">**</ept> or <ph id="ph3">`long double`</ph> as needed.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>If the converted value cannot be represented as the type of <ph id="ph1">` val`</ph>, the function calls <ph id="ph2">`setstate`</ph>( <bpt id="p1">**</bpt>failbit<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>In any case, it returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>basic_istream::operator=</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>Assigns the <ph id="ph1">`basic_istream`</ph> on the right side of the operator to this object.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>This is a move assignment involving an <ph id="ph1">`rvalue`</ph> reference that does not leave a copy behind.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`rvalue`</ph> reference to a <ph id="ph2">`basic_ifstream`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>Returns *this.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>The member operator calls swap <ph id="ph1">`( right)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>basic_istream::peek</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>Returns the next character to be read.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>The next character that will be read.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>The unformatted input function extracts an element, if possible, as if by returning <ph id="ph1">`rdbuf` -&gt; </ph><bpt id="p1">[</bpt>sgetc<ept id="p1">](../standard-library/basic-streambuf-class.md#basic_streambuf__sgetc)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <bpt id="p1">**</bpt>traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>eof<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__eof)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>basic_istream::putback</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>Puts a specified character into the stream.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>A character to put back into the stream.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>The stream ( <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>unformatted input function<ept id="p1">](../standard-library/basic-istream-class.md)</ept> puts back <ph id="ph1">`Ch`</ph>, if possible, as if by calling <bpt id="p2">[</bpt>rdbuf<ept id="p2">](../standard-library/basic-ios-class.md#basic_ios__rdbuf)</ept><ph id="ph2">`-&gt;`</ph><bpt id="p3">[</bpt>sputbackc<ept id="p3">](../standard-library/basic-streambuf-class.md#basic_streambuf__sputbackc)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>If rdbuf is a null pointer, or if the call to <ph id="ph1">`sputbackc`</ph> returns <bpt id="p1">**</bpt>traits_type::<ept id="p1">**</ept><bpt id="p2">[</bpt>eof<ept id="p2">](../standard-library/char-traits-struct.md#char_traits__eof)</ept>, the function calls <bpt id="p3">[</bpt>setstate<ept id="p3">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p4">**</bpt>badbit<ept id="p4">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>In any case, it returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>basic_istream::read</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>Reads a specified number of characters from the stream and stores them in an array.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>The array in which to read the characters.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>The number of characters to read.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>The stream ( <ph id="ph1">`*this`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>The unformatted input function extracts up to <ph id="ph1">`count`</ph> elements and stores them in the array beginning at _ <ph id="ph2">`Str`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>Extraction stops early on end of file, in which case the function calls <bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <ph id="ph1">`failbit`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>In any case, it returns <ph id="ph1">`*this`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>basic_istream::readsome</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Reads the specified number of character values.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>The array in which <ph id="ph1">`readsome`</ph> stores the characters it reads.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>The number of characters to read.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>The number of characters actually read, <bpt id="p1">[</bpt>gcount<ept id="p1">](#basic_istream__gcount)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>This unformatted input function extracts up to <ph id="ph1">`count`</ph> elements from the input stream and stores them in the array <ph id="ph2">`str`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>This function does not wait for input.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>It reads whatever data is available.</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>basic_istream::seekg</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source>Moves the read position in a stream.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>The absolute position in which to move the read pointer.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>An offset to move the read pointer relative to <ph id="ph1">`way`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>One of the <bpt id="p1">[</bpt>ios_base::seekdir<ept id="p1">](../standard-library/ios-base-class.md#ios_base__seekdir)</ept> enumerations.</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>The stream ( <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>The first member function performs an absolute seek, the second member function performs a relative seek.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>Do not use the second member function with text files, because Standard C++ does not support relative seeks in text files.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">[</bpt>fail<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__fail)</ept> is false, the first member function calls <bpt id="p2">**</bpt>newpos<ept id="p2">**</ept><ph id="ph1"> = </ph><bpt id="p3">[</bpt>rdbuf<ept id="p3">](../standard-library/basic-ios-class.md#basic_ios__rdbuf)</ept><ph id="ph2"> -&gt; </ph><bpt id="p4">[</bpt>pubseekpos<ept id="p4">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekpos)</ept>( <ph id="ph3">`pos`</ph>), for some <bpt id="p5">**</bpt>pos_type<ept id="p5">**</ept> temporary object <bpt id="p6">**</bpt>newpos<ept id="p6">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>fail<ept id="p1">**</ept> is false, the second function calls <bpt id="p2">**</bpt>newpos<ept id="p2">**</ept><ph id="ph1"> = </ph><bpt id="p3">**</bpt>rdbuf<ept id="p3">**</ept><ph id="ph2"> -&gt; </ph><bpt id="p4">[</bpt>pubseekoff<ept id="p4">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekoff)</ept>( <ph id="ph3">`off`</ph>, <ph id="ph4">`way`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source>In either case, if ( <ph id="ph1">`off_type`</ph>) <bpt id="p1">**</bpt>newpos<ept id="p1">**</ept> == ( <ph id="ph2">`off_type`</ph>)(-1) (the positioning operation fails), the function calls <bpt id="p2">**</bpt>istr<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p2">**</bpt>failbit<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve">
+          <source>Both functions return <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">[</bpt>fail<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__fail)</ept> is true, the member functions do nothing.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>basic_istream::sentry</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>The nested class describes an object whose declaration structures the formatted and unformatted input functions.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>class sentry {</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>public:</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve">
+          <source>explicit sentry( basic_istream<ph id="ph1">\&lt;</ph>Elem, Tr&gt;&amp; _Istr,</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve">
+          <source>bool _Noskip = false); operator bool() const; };</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`_Istr``.`</ph><bpt id="p1">[</bpt>good<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__good)</ept> is true, the constructor:</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>Calls <ph id="ph1">`_Istr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>tie<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__tie)</ept><ph id="ph1"> -&gt; </ph><bpt id="p2">[</bpt>flush<ept id="p2">](../standard-library/basic-ostream-class.md#basic_ostream__flush)</ept> if <ph id="ph2">`_Istr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>is not a null pointer</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>Effectively calls <bpt id="p1">[</bpt>ws<ept id="p1">](../standard-library/istream-functions.md#ws)</ept>( <ph id="ph1">`_Istr`</ph>) if <ph id="ph2">`_Istr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>flags<ept id="p1">](../standard-library/ios-base-class.md#ios_base__flags)</ept><bpt id="p2">**</bpt><ph id="ph1">&amp;</ph><ept id="p2">**</ept><bpt id="p3">[</bpt>skipws<ept id="p3">](../standard-library/ios-functions.md#skipws)</ept> is nonzero</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>If, after any such preparation, <ph id="ph1">`_Istr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>good<ept id="p1">**</ept> is false, the constructor calls <ph id="ph1">`_Istr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p2">**</bpt>failbit<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source>In any case, the constructor stores the value returned by <ph id="ph1">`_Istr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>good<ept id="p1">**</ept> in <bpt id="p2">**</bpt>status<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>A later call to <bpt id="p1">**</bpt>operator bool<ept id="p1">**</ept> delivers this stored value.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>basic_istream::swap</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>Exchanges the contents of two <ph id="ph1">`basic_istream`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source>An lvalue reference to a <ph id="ph1">`basic_istream`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve">
+          <source>The member function calls <bpt id="p1">[</bpt>basic_ios::swap<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__swap)</ept><ph id="ph1">`(`` right``)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve">
+          <source>It also exchanges the extraction count with the extraction count for <ph id="ph1">` right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve">
+          <source>basic_istream::sync</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve">
+          <source>Synchronizes the input device associated with the stream with the stream's buffer.</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">[</bpt>rdbuf<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__rdbuf)</ept> is a null pointer, the function returns -1.</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>Otherwise, it calls <ph id="ph1">`rdbuf` -&gt; </ph><bpt id="p1">[</bpt>pubsync<ept id="p1">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubsync)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>If that returns -1, the function calls <bpt id="p1">[</bpt>setstate<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p2">**</bpt>badbit<ept id="p2">**</ept>) and returns -1.</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve">
+          <source>Otherwise, the function returns zero.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve">
+          <source>basic_istream::tellg</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve">
+          <source>Reports the current read position in the stream.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve">
+          <source>The current position in the stream.</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">[</bpt>fail<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__fail)</ept> is false, the member function returns <bpt id="p2">[</bpt>rdbuf<ept id="p2">](../standard-library/basic-ios-class.md#basic_ios__rdbuf)</ept><ph id="ph1"> -&gt; </ph><bpt id="p3">[</bpt>pubseekoff<ept id="p3">](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekoff)</ept>(0, <ph id="ph2">`cur`</ph>, <bpt id="p4">**</bpt>in<ept id="p4">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve">
+          <source>Otherwise, it returns <ph id="ph1">`pos_type`</ph>(-1).</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve">
+          <source>basic_istream::unget</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve">
+          <source>Puts the most recently read character back into the stream.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve">
+          <source>The stream ( <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>unformatted input function<ept id="p1">](../standard-library/basic-istream-class.md)</ept> puts back the previous element in the stream, if possible, as if by calling <ph id="ph1">`rdbuf` -&gt; </ph><bpt id="p2">[</bpt>sungetc<ept id="p2">](../standard-library/basic-streambuf-class.md#basic_streambuf__sungetc)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">[</bpt>rdbuf<ept id="p1">](../standard-library/basic-ios-class.md#basic_ios__rdbuf)</ept> is a null pointer, or if the call to <ph id="ph1">`sungetc`</ph> returns <bpt id="p2">**</bpt>traits_type::<ept id="p2">**</ept><bpt id="p3">[</bpt>eof<ept id="p3">](../standard-library/basic-ios-class.md#basic_ios__eof)</ept>, the function calls <bpt id="p4">[</bpt>setstate<ept id="p4">](../standard-library/basic-ios-class.md#basic_ios__setstate)</ept>( <bpt id="p5">**</bpt>badbit<ept id="p5">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve">
+          <source>In any case, it returns <bpt id="p1">**</bpt><ph id="ph1">\*</ph>this<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve">
+          <source>For information on how <ph id="ph1">`unget`</ph> might fail, see <bpt id="p1">[</bpt>basic_streambuf::sungetc<ept id="p1">](../standard-library/basic-streambuf-class.md#basic_streambuf__sungetc)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve">
+          <source>Thread Safety in the C++ Standard Library</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve">
+          <source>iostream Programming</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve">
+          <source>iostreams Conventions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

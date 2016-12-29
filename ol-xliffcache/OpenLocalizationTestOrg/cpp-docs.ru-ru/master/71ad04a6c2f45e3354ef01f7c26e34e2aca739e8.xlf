@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">71ad04a6c2f45e3354ef01f7c26e34e2aca739e8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\changes-in-destructor-semantics.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">13a479949918be8712adf61ce2f491eb70d103d9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dd5e3d1486b2058207246a94cf50de6ab55c0e20</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Changes in Destructor Semantics | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Changes in Destructor Semantics</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Semantics for class destructors have changed significantly from Managed Extensions for C++ to <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, a class destructor was permitted within a reference class but not within a value class.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This has not changed in the new syntax.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>However, the semantics of the class destructor have changed.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This topic focuses on the reasons of that change and discusses how it affects the translation of existing CLR code.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>It is probably the most important programmer-level change between the two versions of the language.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Non-deterministic Finalization</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Before the memory associated with an object is reclaimed by the garbage collector, an associated <ph id="ph1">`Finalize`</ph> method, if present, is invoked.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You can think of this method as a kind of super-destructor because it is not tied to the program lifetime of the object.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>We refer to this as finalization.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The timing of just when or even whether a <ph id="ph1">`Finalize`</ph> method is invoked is undefined.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This is what we mean when we say that garbage collection exhibits non-deterministic finalization.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Non-deterministic finalization works well with dynamic memory management.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When available memory becomes scarce, the garbage collector kicks in.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Under a garbage collected environment, destructors to free memory are unnecessary.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Non-deterministic finalization does not work well, however, when an object maintains a critical resource such as a database connection or a lock of some sort.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In this case, we should release that resource as soon as possible.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In the native world, that is achieved by using a constructor/destructor pair.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>As soon as the lifetime of the object ends, either when the local block within which it is declared ends, or when the stack unravels because of a thrown exception, the destructor executes and the resource is automatically released.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This approach works very well, and its absence under Managed Extensions was sorely missed.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The solution provided by the CLR is for a class to implement the <ph id="ph1">`Dispose`</ph> method of the <ph id="ph2">`IDisposable`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The problem here is that <ph id="ph1">`Dispose`</ph> requires an explicit invocation by the user.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>This is error-prone.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The C# language provides a modest form of automation in the form of a special <ph id="ph1">`using`</ph> statement.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The Managed Extensions design provided no special support.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Destructors in Managed Extensions for C++</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, the destructor of a reference class is implemented by using the following two steps:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The user-supplied destructor is renamed internally to <ph id="ph1">`Finalize`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If the class has a base class (remember, under the CLR Object Model, only single inheritance is supported), the compiler injects a call to its finalizer following execution of the user-supplied code.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For example, consider the following simple hierarchy taken from the Managed Extensions language specification:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In this example, both destructors are renamed <ph id="ph1">`Finalize`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>'s <ph id="ph1">`Finalize`</ph> has an invocation of <ph id="ph2">`A`</ph>'s <ph id="ph3">`Finalize`</ph> method added following the invocation of <ph id="ph4">`WriteLine`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>This is what the garbage collector will by default invoke during finalization.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Here is what this internal transformation might look like:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>In the second step, the compiler synthesizes a virtual destructor.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This destructor is what our Managed Extensions user programs invoke either directly or through an application of the delete expression.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>It is never invoked by the garbage collector.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Two statements are placed within this synthesized destructor.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>One is a call to <ph id="ph1">`GC::SuppressFinalize`</ph> to make sure that there are no more invocations of <ph id="ph2">`Finalize`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The second is the actual invocation of <ph id="ph1">`Finalize`</ph>, which represents the user-supplied destructor for that class.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Here is what this might look like:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>While this implementation allows the user to explicitly invoke the class <ph id="ph1">`Finalize`</ph> method now rather than at a time you have no control over, it does not really tie in with the <ph id="ph2">`Dispose`</ph> method solution.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This is changed in <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Destructors in New Syntax</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>In the new syntax, the destructor is renamed internally to the <ph id="ph1">`Dispose`</ph> method and the reference class is automatically extended to implement the <ph id="ph2">`IDispose`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>That is, under <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>, our pair of classes is transformed as follows:</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>When either a destructor is invoked explicitly under the new syntax, or when <ph id="ph1">`delete`</ph> is applied to a tracking handle, the underlying <ph id="ph2">`Dispose`</ph> method is invoked automatically.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>If it is a derived class, a call of the <ph id="ph1">`Dispose`</ph> method of the base class is inserted at the close of the synthesized method.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>But this does not get us all the way to deterministic finalization.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>In order to reach that, we need the additional support of local reference objects.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>(This has no analogous support within Managed Extensions, and so it is not a translation issue.)</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Declaring a Reference Object</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>supports the declaration of an object of a reference class on the local stack or as a member of a class as if it were directly accessible.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>When combined with the association of the destructor with the <ph id="ph1">`Dispose`</ph> method, the result is the automated invocation of finalization semantics on reference types.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>First, we define our reference class such that object creation functions as the acquisition of a resource through its class constructor.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Secondly, within the class destructor, we release the resource acquired when the object was created.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The object is declared locally by using the type name but without the accompanying hat.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>All uses of the object, such as invoking a method, are done through the member selection dot (<ph id="ph1">`.`</ph>) instead of arrow (<ph id="ph2">`-&gt;`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>At the end of the block, the associated destructor, transformed into <ph id="ph1">`Dispose`</ph>, is invoked automatically, as shown here:</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>As with the <ph id="ph1">`using`</ph> statement within C#, this does not defy the underlying CLR constraint that all reference types must be allocated on the CLR heap.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The underlying semantics remain unchanged.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The user could equivalently have written the following (and this is likely the internal transformation performed by the compiler):</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>In effect, under the new syntax, destructors are again paired with constructors as an automated acquisition/release mechanism tied to a local object's lifetime.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Declaring an Explicit Finalize</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>In the new syntax, as we've seen, the destructor is synthesized into the <ph id="ph1">`Dispose`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>This means that when the destructor is not explicitly invoked, the garbage collector, during finalization, will not as before find an associated <ph id="ph1">`Finalize`</ph> method for the object.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>To support both destruction and finalization, we have introduced a special syntax for providing a finalizer.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`!`</ph> prefix is analogous to tilde (<ph id="ph2">`~`</ph>) that introduces a class destructor – that is, both post-lifetime methods have a token prefixing the name of the class.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>If the synthesized <ph id="ph1">`Finalize`</ph> method occurs within a derived class, an invocation of the base class <ph id="ph2">`Finalize`</ph> method is inserted at its end.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>If the destructor is explicitly invoked, the finalizer is suppressed.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Here is what the transformation might look like:</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Moving from Managed Extensions for C++ to Visual C++ 2010</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The runtime behavior of a Managed Extensions for C++ program is  changed when it is compiled under <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph> whenever a reference class contains a non-trivial destructor.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The required translation algorithm is similar to the following:</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>If a destructor is present, rewrite that to be the class finalizer.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>If a <ph id="ph1">`Dispose`</ph> method is present, rewrite that into the class destructor.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>If a destructor is present but there is no <ph id="ph1">`Dispose`</ph> method, retain the destructor while performing the first item.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>In moving your code from Managed Extensions to the new syntax, you might miss performing this transformation.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>If the application depended in some way on the execution of associated finalization methods, the behavior of the application will silently differ from the one you intended.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Managed Types (C++/CL)</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Destructors and finalizers in How to: Define and consume classes and structs (C++/CLI)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

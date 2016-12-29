@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7387b021151fcfc4b22111324fd7cf69d1e2cb88</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\compatibility.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f1ed33b0255701d45d206077cef3d2c5e512c510</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">be686ad270ec189b26e19b688ba0e0070b4bbdc2</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Compatibility | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Compatibility</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The Universal C Run-Time Library (UCRT) supports most of the C standard library required for  C++ conformance.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It implements the C99 (ISO/IEC 9899:1999)  library, with the exceptions of the type-generic macros defined in <ph id="ph1">\&lt;</ph>tgmath.h&gt;, and strict type compatibility in <ph id="ph2">\&lt;</ph>complex.h&gt;.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The UCRT also implements a large subset of the POSIX.1 (ISO/IEC 9945-1:1996, the POSIX System Application Program Interface) C library, but is not fully conformant to any specific POSIX standard.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In addition, the UCRT implements several Microsoft-specific functions and macros that are not part of a standard.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Functions specific to the Microsoft implementation of Visual C++ are found in the vcruntime library.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Many of these functions are for internal use and cannot be called by user code.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Some are documented for use in debugging and implementation compatibility.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The C++ standard reserves names that begin with an underscore in the global namespace to the implementation.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Because the POSIX functions are in the global namespace, but are not part of the standard C runtime library, the Microsoft-specific implementations of these functions have a leading underscore.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For portability, the UCRT also supports the default names, but the Visual C++ compiler issues a deprecation warning when code that uses them is compiled.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Only the default POSIX names are deprecated, not the functions.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>To suppress the warning, define <ph id="ph1">`_CRT_NONSTDC_NO_WARNINGS`</ph> before including any headers in code that uses the original POSIX names.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Certain functions in the standard C library have a history of unsafe usage, because of misused parameters and unchecked buffers.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>These functions are often the source of security issues in code.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Microsoft created a set of safer versions of these functions that verify parameter usage and invoke the invalid parameter handler when an issue is detected at runtime.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>By default, the Visual C++ compiler issues a deprecation warning when a function is used that has a safer variant available.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When you compile your code as C++ , you can define <ph id="ph1">`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`</ph> as 1 to eliminate most warnings.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This uses template overloads to call the safer variants while maintaining portable source code.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To suppress the warning, define <ph id="ph1">`_CRT_SECURE_NO_WARNINGS`</ph> before including any headers in code that uses these functions.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Security Features in the CRT<ept id="p1">](../c-runtime-library/security-features-in-the-crt.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Except as noted within the documentation for specific functions, the UCRT is compatible with the Windows API.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Certain functions are not supported in Windows 8 Store apps or in Universal Windows apps on Windows 10.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>These functions are listed in <bpt id="p1">[</bpt>CRT functions not supported with /ZW<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)</ept>, which enumerates the functions not supported by the <bpt id="p2">[</bpt>Windows Runtime<ept id="p2">](http://msdn.microsoft.com/en-us/9a1a18b8-9802-4ec5-b9de-0d2dfdf414e9)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Related Articles</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Title</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Windows Store Apps, the Windows Runtime, and the C Run-Time</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Describes when UCRT routines are not compatible with Universal Windows apps or Windows Store apps.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>ANSI C Compliance</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Describes standard-compliant naming in the UCRT.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>UNIX</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Provides guidelines for porting programs to UNIX.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Windows Platforms (CRT)</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Lists the operating systems that are the CRT supports.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Backward Compatibility</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Describes how to map old CRT names to the new ones.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>CRT Library Features</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Provides an overview of the CRT library (.lib) files and the associated compiler options.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

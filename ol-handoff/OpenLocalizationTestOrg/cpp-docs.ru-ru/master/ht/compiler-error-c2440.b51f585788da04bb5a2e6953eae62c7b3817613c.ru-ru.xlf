@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cb2390be70e6598752a9d4fbcfbca0d9f2a5304a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\error-messages\compiler-errors-1\compiler-error-c2440.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">99cb10df4b067aa48349b8fa78475d08edbf10cc</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6b46c484bf6f0e281ec12b87d39a7220373ce130</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Compiler Error C2440 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Compiler Error C2440</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>'conversion' : cannot convert from 'type1' to 'type2'</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The compiler cannot cast from <ph id="ph1">`type1`</ph> to <ph id="ph2">`type2`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>C2440 can be caused if you attempt to initialize a non-const <ph id="ph1">`char*`</ph> (or <ph id="ph2">`wchar_t*`</ph>) by using a string literal in C++ code, when the compiler conformance option <bpt id="p1">[</bpt>/Zc:strictStrings<ept id="p1">](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)</ept> is set.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In C, the type of a string literal is array of <ph id="ph1">`char`</ph>, but in C++, it is array of <ph id="ph2">`const char`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This sample generates C2440:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>C2440 can also be caused if you attempt to convert a pointer to member to void*.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The next sample generates C2440:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>C2440 can also be caused if you attempt to cast from a type that is only forward declared but not defined.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This sample generates C2440:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The C2440 errors on lines 15 and 16 of the next sample are qualified with the <ph id="ph1">`Incompatible calling conventions for UDT return value`</ph> message.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>UDT<ept id="p1">*</ept> is a user-defined type, such as a class, struct, or union.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>These kinds of incompatibility errors are caused when the calling convention of a UDT specified in the return type of a forward declaration conflicts with the actual calling convention of the UDT and when a function pointer is involved.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In the example, first there are forward declarations for a struct and for a function that returns the struct; the compiler assumes that the struct uses the C++ calling convention.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Next is the struct definition, which, by default, uses the C calling convention.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Because the compiler does not know the calling convention of the struct until it finishes reading the entire struct, the calling convention for the struct in the return type of <ph id="ph1">`get_c2`</ph> is also assumed to be C++.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The struct is followed by another function declaration that returns the struct, but at this point, the compiler knows that the struct's calling convention is C++.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Similarly, the function pointer, which returns the struct, is defined after the struct definition so that the compiler knows that the struct uses the C++ calling convention.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>To resolve C2440 that occurs because of incompatible calling conventions, declare functions that return a UDT after the UDT definition.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>C2440 can also occur if you assign zero to an interior pointer:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>C2440 can also occur for an incorrect use of a user-defined conversion.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For example, when a conversion operator has been defined as <ph id="ph1">`explicit`</ph>, the compiler can't use it in an implicit conversion.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For more information about user-defined conversions, see <bpt id="p1">[</bpt>User-Defined Conversions (C++/CLI)<ept id="p1">](../../dotnet/user-defined-conversions-cpp-cli.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This sample generates C2440:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>C2440 can also occur if you try to create an instance of a Visual C++ array whose type is a &lt;xref:System.Array&gt;.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Arrays<ept id="p1">](../../windows/arrays-cpp-component-extensions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The next sample generates C2440:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>C2440 can also occur because of changes in the attributes feature.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The following sample generates C2440.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The Visual C++ compiler no longer allows the <bpt id="p1">[</bpt>const_cast Operator<ept id="p1">](../../cpp/const-cast-operator.md)</ept> to down cast when source code that uses <bpt id="p2">**</bpt>/clr<ept id="p2">**</ept> programming is compiled.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>To resolve this C2440, use the correct cast operator.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Casting Operators<ept id="p1">](../../cpp/casting-operators.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>This sample generates C2440:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>C2440 can occur because of conformance changes to the compiler in Visual Studio 2015 Update 3.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Previously, the compiler incorrectly treated certain distinct expressions as the same type when identifying a template match for a <ph id="ph1">`static_cast`</ph> operation.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Now the compiler distinguishes the types correctly, and code that relied on the previous <ph id="ph1">`static_cast`</ph> behavior is broken.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>To fix this issue, change the template argument to match the template parameter type, or use a <ph id="ph1">`reinterpret_cast`</ph> or C-style cast.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>This sample generates C2440:</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

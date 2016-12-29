@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e1da0c7ecd6665d61bff79d57686912905aa5044</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\2-7-2-5-default.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ca70f241c3ca2a40ce387d8be215a46e93b098a6</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">22e9e0fb98db70d1b176eb8b7dd186b0278067af</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>2.7.2.5 default | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>2.7.2.5 default</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>default<ept id="p1">**</ept> clause allows the user to affect the data-sharing attributes of variables.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The syntax of the <bpt id="p1">**</bpt>default<ept id="p1">**</ept> clause is as follows:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Specifying <bpt id="p1">**</bpt>default(shared)<ept id="p1">**</ept> is equivalent to explicitly listing each currently visible variable in a <bpt id="p2">**</bpt>shared<ept id="p2">**</ept> clause, unless it is <bpt id="p3">**</bpt>threadprivate<ept id="p3">**</ept> or <bpt id="p4">**</bpt>cons<ept id="p4">**</ept><ph id="ph1">`t`</ph>-qualified.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In the absence of an explicit <bpt id="p1">**</bpt>default<ept id="p1">**</ept> clause, the default behavior is the same as if <bpt id="p2">**</bpt>default(shared)<ept id="p2">**</ept> were specified.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Specifying <bpt id="p1">**</bpt>default(none)<ept id="p1">**</ept> requires that at least one of the following must be true for every reference to a variable in the lexical extent of the parallel construct:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The variable is explicitly listed in a data-sharing attribute clause of a construct that contains the reference.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The variable is declared within the parallel construct.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The variable is <bpt id="p1">**</bpt>threadprivate<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The variable has a <bpt id="p1">**</bpt>const<ept id="p1">**</ept>-qualified type.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The variable is the loop control variable for a <bpt id="p1">**</bpt>for<ept id="p1">**</ept> loop that immediately follows a <bpt id="p2">**</bpt>for<ept id="p2">**</ept> or <bpt id="p3">**</bpt>parallel for<ept id="p3">**</ept> directive, and the variable reference appears inside the loop.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Specifying a variable on a <bpt id="p1">**</bpt>firstprivate<ept id="p1">**</ept>, <bpt id="p2">**</bpt>lastprivate<ept id="p2">**</ept>, or <bpt id="p3">**</bpt>reduction<ept id="p3">**</ept> clause of an enclosed directive causes an implicit reference to the variable in the enclosing context.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Such implicit references are also subject to the requirements listed above.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Only a single <bpt id="p1">**</bpt>default<ept id="p1">**</ept> clause may be specified on a <bpt id="p2">**</bpt>parallel<ept id="p2">**</ept> directive.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A variable's default data-sharing attribute can be overridden by using the <bpt id="p1">**</bpt>private<ept id="p1">**</ept>, <bpt id="p2">**</bpt>firstprivate<ept id="p2">**</ept>, <bpt id="p3">**</bpt>lastprivate<ept id="p3">**</ept>, <bpt id="p4">**</bpt>reduction<ept id="p4">**</ept>, and <bpt id="p5">**</bpt>shared<ept id="p5">**</ept> clauses, as demonstrated by the following example:</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

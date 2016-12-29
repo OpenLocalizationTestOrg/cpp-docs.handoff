@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">eae6414db199208b28814b33aa65a6df4204aad4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\dotnet\string-literal.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3e25b66af7b06042c456cba4467420be18854d78</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">07f49d9c934fbcb9bbc72b6b8c2aeb63e76d15e6</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>String Literal | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>String Literal</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The handling of string literals has changed from Managed Extensions for C++ to <ph id="ph1">[!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>In the Managed Extensions for C++ language design, a managed string literal was indicated by prefacing the string literal with an <ph id="ph1">`S`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The performance overhead between the two initializations turns out to be non-trivial, as the following CIL representation demonstrates as seen through <bpt id="p1">**</bpt>ildasm<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>That’s a remarkable savings for just remembering (or learning) to prefix a literal string with an <ph id="ph1">`S`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In the new syntax, the handling of string literals is made transparent, determined by the context of use.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`S`</ph> no longer needs to be specified.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>What about cases in which we need to explicitly direct the compiler to one interpretation or another?</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In these cases, we apply an explicit cast.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Moreover, the string literal now matches a <ph id="ph1">`String`</ph> with a simple conversion rather than a standard conversion.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>While this may not sound like much it changes the resolution of overloaded function sets which include a <ph id="ph1">`String`</ph> and a <ph id="ph2">`const char*`</ph> as competing formal parameters.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The resolution that once resolved to a <ph id="ph1">`const char*`</ph> instance is now flagged as ambiguous.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Why is there a difference?</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Since more than one instance named <ph id="ph1">`f`</ph> exists within the program, this requires the function overload resolution algorithm to be applied to the call.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The formal resolution of an overload function involves three steps.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The collection of the candidate functions.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The candidate functions are those methods within the scope that lexically match the name of the function being invoked.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For example, since <ph id="ph1">`f()`</ph> is invoked through an instance of <ph id="ph2">`R`</ph>, all named functions <ph id="ph3">`f`</ph> that are not a member of <ph id="ph4">`R`</ph> (or of its base class hierarchy) are not candidate functions.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In our example, there are two candidate functions.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>These are the two member functions of <ph id="ph1">`R`</ph> named <ph id="ph2">`f`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>A call fails during this phase if the candidate function set is empty.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The set of viable functions from among the candidate functions.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>A viable function is one that can be invoked with the arguments specified in the call, given the number of arguments and their types.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>In our example, both candidate functions are also viable functions.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>A call fails during this phase if the viable function set is empty.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Select the function that represents the best match of the call.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>This is done by ranking the conversions applied to transform the arguments to the type of the viable function parameters.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>This is relatively straight-forward with a single parameter function; it becomes somewhat more complex when there are multiple parameters.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A call fails during this phase if there is no best match.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>That is, if the conversions necessary to transform the type of the actual argument to the type of the formal parameter are equally good.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The call is flagged as ambiguous.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In Managed Extensions, the resolution of this call invoked the <ph id="ph1">`const char*`</ph> instance as the best match.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>In the new syntax, the conversion necessary to match <ph id="ph1">`"abc"`</ph> to <ph id="ph2">`const char*`</ph> and <ph id="ph3">`String^`</ph> are now equivalent – that is, equally good – and so the call is flagged as bad – that is, as ambiguous.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This leads us to two questions:</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>What is the type of the actual argument, <ph id="ph1">`"abc"`</ph>?</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>What is the algorithm for determining when one type conversion is better than another?</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The type of the string literal <ph id="ph1">`"abc"`</ph> is <ph id="ph2">`const char[4]`</ph> – remember, there is an implicit null terminating character at the end of every string literal.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The algorithm for determining when one type conversion is better than another involves placing the possible type conversions in a hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Here is my understanding of that hierarchy – all these conversions, of course, are implicit.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Using an explicit cast notation overrides the hierarchy similar to the way parentheses overrides the usual operator precedence of an expression.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>An exact match is best.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Surprisingly, for an argument to be an exact match, it does not need to exactly match the parameter type; it just needs to be close enough.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>This is the key to understanding what is going on in this example, and how the language has changed.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>A promotion is better than a standard conversion.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>For example, promoting a <ph id="ph1">`short int`</ph> to an <ph id="ph2">`int`</ph> is better than converting an <ph id="ph3">`int`</ph> into a <ph id="ph4">`double`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>A standard conversion is better than a boxing conversion.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>For example, converting an <ph id="ph1">`int`</ph> into a <ph id="ph2">`double`</ph> is better that boxing an <ph id="ph3">`int`</ph> into an <ph id="ph4">`Object`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>A boxing conversion is better than an implicit user-defined conversion.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>For example, boxing an <ph id="ph1">`int`</ph> into an <ph id="ph2">`Object`</ph> is better than applying a conversion operator of a <ph id="ph3">`SmallInt`</ph> value class.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>An implicit user-defined conversion is better than no conversion at all.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>An implicit user-defined conversion is the last exit before Error (with the caveat that the formal signature might contain a param array or ellipsis at that position).</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>So, what does it mean to say that an exact match isn't necessarily exactly a match?</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>For example, <ph id="ph1">`const char[4]`</ph> does not exactly match either <ph id="ph2">`const char*`</ph> or <ph id="ph3">`String^`</ph>, and yet the ambiguity of our example is between two conflicting exact matches!</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>An exact match, as it happens, includes a number of trivial conversions.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>There are four trivial conversions under ISO-C++ that can be applied and still qualify as an exact match.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Three are referred to as lvalue transformations.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>A fourth type is called a qualification conversion.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The three lvalue transformations are treated as a better exact match than one requiring a qualification conversion.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>One form of the lvalue transformation is the native-array-to-pointer conversion.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>This is what is involved in matching a <ph id="ph1">`const char[4]`</ph> to <ph id="ph2">`const char*`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Therefore, the match of <ph id="ph1">`f("abc")`</ph> to <ph id="ph2">`f(const char*)`</ph> is an exact match.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>In the earlier incarnations of our language, this was the best match, in fact.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>For the compiler to flag the call as ambiguous, therefore, requires that the conversion of a <ph id="ph1">`const char[4]`</ph> to a <ph id="ph2">`String^`</ph> also be an exact match through a trivial conversion.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>This is the change that has been introduced in the new language version.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>And this is why the call is now flagged as ambiguous.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>General Language Changes (C++/CLI)</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>String</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

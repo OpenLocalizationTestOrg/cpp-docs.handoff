@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6a1bb573e8e80c8200f0c5d88caf27be3302bfb4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\crtismemoryblock.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">225ad96f334c20641201b9f0c984f057bf01b0c0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">359d8976851eec552ac9e68c079af3652142aa77</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_CrtIsMemoryBlock | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_CrtIsMemoryBlock</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Verifies that a specified memory block is in the local heap and that it has a valid debug heap block type identifier (debug version only).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>[in]</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Pointer to the beginning of the memory block to verify.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>[in]</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Size of the specified block (in bytes).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>[out]</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Pointer to the allocation number of the block or <ph id="ph1">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>[out]</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Pointer to the name of the source file that requested the block or <ph id="ph1">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>[out]</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Pointer to the line number in the source file or <ph id="ph1">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>returns <ph id="ph1">`TRUE`</ph> if the specified memory block is located within the local heap and has a valid debug heap block type identifier; otherwise, the function returns <ph id="ph2">`FALSE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_CrtIsMemoryBlock`</ph> function verifies that a specified memory block is located within the application's local heap and that it has a valid block type identifier.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This function can also be used to obtain the object allocation order number and the source file name/line number where the memory block allocation was originally requested.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Passing non-NULL values for the <ph id="ph1">`requestNumber`</ph>, <ph id="ph2">`filename`</ph>, or <ph id="ph3">`linenumber`</ph> parameters causes <ph id="ph4">`_CrtIsMemoryBlock`</ph> to set these parameters to the values in the memory block's debug header, if it finds the block in the local heap.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">[</bpt>_DEBUG<ept id="p1">](../../c-runtime-library/debug.md)</ept> is not defined, calls to <ph id="ph1">`_CrtIsMemoryBlock`</ph> are removed during preprocessing.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`_CrtIsMemoryBlock`</ph> fails, it returns <ph id="ph2">`FALSE`</ph> and the output parameters are initialized to default values: <ph id="ph3">`requestNumber`</ph> and <ph id="ph4">`lineNumber`</ph> are set to 0 and <ph id="ph5">`filename`</ph> is set to <ph id="ph6">`NULL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Because this function returns <ph id="ph1">`TRUE`</ph> or <ph id="ph2">`FALSE`</ph>, it can be passed to one of the <bpt id="p1">[</bpt>_ASSERT<ept id="p1">](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)</ept> macros to create a simple debugging error handling mechanism.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The following example causes an assertion failure if the specified address is not located within the local heap:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For more information about how <ph id="ph1">`_CrtIsMemoryBlock`</ph> can be used with other debug functions and macros, see <bpt id="p1">[</bpt>Macros for Reporting<ept id="p1">](/visualstudio/debugger/macros-for-reporting)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For information about how memory blocks are allocated, initialized, and managed in the debug version of the base heap, see <bpt id="p1">[</bpt>CRT Debug Heap Details<ept id="p1">](/visualstudio/debugger/crt-debug-heap-details)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>crtdbg.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For more compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Libraries</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Debug versions of <bpt id="p1">[</bpt>C run-time libraries<ept id="p1">](../../c-runtime-library/crt-library-features.md)</ept> only.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>See the example for the <bpt id="p1">[</bpt>_CrtIsValidHeapPointer<ept id="p1">](../../c-runtime-library/reference/crtisvalidheappointer.md)</ept> topic.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Debug Routines</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

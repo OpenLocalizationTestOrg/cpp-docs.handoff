@@ -1,0 +1,951 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">04f95af6994ddd84fd5136913d33afce094065c6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\parallel-algorithms.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">89fe0f04d4f19dbdd2d7bb2f6f1cb9aa99ec6cbe</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1d8e5fdf3c0fad2b398983625127954030b1e593</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The Parallel Patterns Library (PPL) provides algorithms that concurrently perform work on collections of data.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>These algorithms resemble those provided by the Standard Template Library (STL).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The parallel algorithms are composed from existing functionality in the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For example, the <bpt id="p1">[</bpt>concurrency::parallel_for<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for)</ept> algorithm uses a <bpt id="p2">[</bpt>concurrency::structured_task_group<ept id="p2">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> object to perform the parallel loop iterations.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph> algorithm partitions work in an optimal way given the available number of computing resources.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Sections</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The parallel_for Algorithm</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The parallel_for_each Algorithm</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The parallel_invoke Algorithm</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The parallel_transform and parallel_reduce Algorithms</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The parallel_transform Algorithm</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The parallel_reduce Algorithm</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Example: Performing Map and Reduce in Parallel</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Partitioning Work</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Parallel Sorting</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Choosing a Sorting Algorithm</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The parallel_for Algorithm</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::parallel_for<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for)</ept> algorithm repeatedly performs the same task in parallel.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Each of these tasks is parameterized by an iteration value.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This algorithm is useful when you have a loop body that does not share resources among iterations of that loop.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph> algorithm partitions tasks in an optimum way for parallel execution.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>It uses a work-stealing algorithm and range stealing to balance these partitions when workloads are unbalanced.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>When one loop iteration blocks cooperatively, the runtime redistributes the range of iterations that is assigned to the current thread to other threads or processors.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Similarly, when a thread completes a range of iterations, the runtime redistributes work from other threads to that thread.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph> algorithm also supports <bpt id="p1">*</bpt>nested parallelism<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>When one parallel loop contains another parallel loop, the runtime coordinates processing resources between the loop bodies in an efficient way for parallel execution.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph> algorithm has several overloaded versions.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The first version takes a start value, an end value, and a work function (a lambda expression, function object, or function pointer).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The second version takes a start value, an end value, a value by which to step, and a work function.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The first version of this function uses 1 as the step value.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The remaining versions take partitioner objects, which enable you to specify how <ph id="ph1">`parallel_for`</ph> should partition ranges among threads.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Partitioners are explained in greater detail in the section <bpt id="p1">[</bpt>Partitioning Work<ept id="p1">](#partitions)</ept> in this document.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>You can convert many <ph id="ph1">`for`</ph> loops to use <ph id="ph2">`parallel_for`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>However, the <ph id="ph1">`parallel_for`</ph> algorithm differs from the <ph id="ph2">`for`</ph> statement in the following ways:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph> algorithm <ph id="ph2">`parallel_for`</ph> does not execute the tasks in a pre-determined order.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph> algorithm does not support arbitrary termination conditions.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph> algorithm stops when the current value of the iteration variable is one less than <ph id="ph2">`last`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_Index_type`</ph> type parameter must be an integral type.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This integral type can be signed or unsigned.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The loop iteration must be forward.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph> algorithm throws an exception of type <bpt id="p1">[</bpt>std::invalid_argument<ept id="p1">](../../standard-library/invalid-argument-class.md)</ept> if the <ph id="ph2">`_Step`</ph> parameter is less than 1.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The exception-handling mechanism for the <ph id="ph1">`parallel_for`</ph> algorithm differs from that of a <ph id="ph2">`for`</ph> loop.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>If multiple exceptions occur simultaneously in a parallel loop body, the runtime propagates only one of the exceptions to the thread that called <ph id="ph1">`parallel_for`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In addition, when one loop iteration throws an exception, the runtime does not immediately stop the overall loop.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Instead, the loop is placed in the cancelled state and the runtime discards any tasks that have not yet started.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>For more information about exception-handling and parallel algorithms, see <bpt id="p1">[</bpt>Exception Handling<ept id="p1">](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Although the <ph id="ph1">`parallel_for`</ph> algorithm does not support arbitrary termination conditions, you can use cancellation to stop all tasks.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>For more information about cancellation, see <bpt id="p1">[</bpt>Cancellation in the PPL<ept id="p1">](cancellation-in-the-ppl.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The scheduling cost that results from load balancing and support for features such as cancellation might not overcome the benefits of executing the loop body in parallel, especially when the loop body is relatively small.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>You can minimize this overhead by using a partitioner in your parallel loop.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Partitioning Work<ept id="p1">](#partitions)</ept> later in this document.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The following example shows the basic structure of the <ph id="ph1">`parallel_for`</ph> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>This example prints to the console each value in the range [1, 5] in parallel.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-for-structure#1</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>This example produces the following sample output:</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`parallel_for`</ph> algorithm acts on each item in parallel, the order in which the values are printed to the console will vary.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>For a complete example that uses the <ph id="ph1">`parallel_for`</ph> algorithm, see <bpt id="p1">[</bpt>How to: Write a parallel_for Loop<ept id="p1">](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The parallel_for_each Algorithm</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::parallel_for_each<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for_each)</ept> algorithm performs tasks on an iterative container, such as those provided by the STL, in parallel.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>It uses the same partitioning logic that the <ph id="ph1">`parallel_for`</ph> algorithm uses.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for_each`</ph> algorithm resembles the STL <bpt id="p1">[</bpt>std::for_each<ept id="p1">](http://msdn.microsoft.com/library/8cb2ae72-bef6-488b-b011-0475c0787e33)</ept> algorithm, except that the <ph id="ph2">`parallel_for_each`</ph> algorithm executes the tasks concurrently.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Like other parallel algorithms, <ph id="ph1">`parallel_for_each`</ph> does not execute the tasks in a specific order.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Although the <ph id="ph1">`parallel_for_each`</ph> algorithm works on both forward iterators and random access iterators, it performs better with random access iterators.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The following example shows the basic structure of the <ph id="ph1">`parallel_for_each`</ph> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>This example prints to the console each value in a <bpt id="p1">[</bpt>std::array<ept id="p1">](../../standard-library/array-class-stl.md)</ept> object in parallel.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-for-each-structure#1</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>This example produces the following sample output:</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`parallel_for_each`</ph> algorithm acts on each item in parallel, the order in which the values are printed to the console will vary.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>For a complete example that uses the <ph id="ph1">`parallel_for_each`</ph> algorithm, see <bpt id="p1">[</bpt>How to: Write a parallel_for_each Loop<ept id="p1">](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The parallel_invoke Algorithm</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::parallel_invoke<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_invoke)</ept> algorithm executes a set of tasks in parallel.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>It does not return until each task finishes.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>This algorithm is useful when you have several independent tasks that you want to execute at the same time.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_invoke`</ph> algorithm takes as its parameters a series of work functions (lambda functions, function objects, or function pointers).</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_invoke`</ph> algorithm is overloaded to take between two and ten parameters.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Every function that you pass to <ph id="ph1">`parallel_invoke`</ph> must take zero parameters.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Like other parallel algorithms, <ph id="ph1">`parallel_invoke`</ph> does not execute the tasks in a specific order.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The topic <bpt id="p1">[</bpt>Task Parallelism<ept id="p1">](../../parallel/concrt/task-parallelism-concurrency-runtime.md)</ept> explains how the <ph id="ph1">`parallel_invoke`</ph> algorithm relates to tasks and task groups.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The following example shows the basic structure of the <ph id="ph1">`parallel_invoke`</ph> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>This example concurrently calls the <ph id="ph1">`twice`</ph> function on three local variables and prints the result to the console.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-invoke-structure#1</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>This example produces the following output:</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>For complete examples that use the <ph id="ph1">`parallel_invoke`</ph> algorithm, see <bpt id="p1">[</bpt>How to: Use parallel_invoke to Write a Parallel Sort Routine<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)</ept> and <bpt id="p2">[</bpt>How to: Use parallel_invoke to Execute Parallel Operations<ept id="p2">](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The parallel_transform and parallel_reduce Algorithms</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>concurrency::parallel_transform<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_transform)</ept> and <bpt id="p2">[</bpt>concurrency::parallel_reduce<ept id="p2">](reference/concurrency-namespace-functions.md#parallel_reduce)</ept> algorithms are parallel versions of the STL algorithms <bpt id="p3">[</bpt>std::transform<ept id="p3">](../../standard-library/algorithm-functions.md#transform)</ept> and <bpt id="p4">[</bpt>std::accumulate<ept id="p4">](../../standard-library/numeric-functions.md#accumulate)</ept>, respectively.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime versions behave like the STL versions except that the operation order is not determined because they execute in parallel.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Use these algorithms when you work with a set that is large enough to get performance and scalability benefits from being processed in parallel.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_transform`</ph> and <ph id="ph2">`parallel_reduce`</ph> algorithms support only random access, bi-directional, and forward iterators because these iterators produce stable memory addresses.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Also, these iterators must produce non-<ph id="ph1">`const`</ph> l-values.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The parallel_transform Algorithm</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>You can use the <ph id="ph1">`parallel transform`</ph> algorithm to perform many data parallelization operations.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>For example, you can:</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>Adjust the brightness of an image, and perform other image processing operations.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Sum or take the dot product between two vectors, and perform other numeric calculations on vectors.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Perform 3-D ray tracing, where each iteration refers to one pixel that must be rendered.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The following example shows the basic structure that is used to call the <ph id="ph1">`parallel_transform`</ph> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>This example negates each element of a std::<bpt id="p1">[</bpt>vector<ept id="p1">](../../standard-library/vector-class.md)</ept> object in two ways.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The first way uses a lambda expression.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>The second way uses <bpt id="p1">[</bpt>std::negate<ept id="p1">](../../standard-library/negate-struct.md)</ept>, which derives from <bpt id="p2">[</bpt>std::unary_function<ept id="p2">](../../standard-library/unary-function-struct.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>concrt-basic-parallel-transform#1</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>This example demonstrates the basic use of <ph id="ph1">`parallel_transform`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Because the work function does not perform a significant amount of work, a significant increase in performance is not expected in this example.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_transform`</ph> algorithm has two overloads.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>The first overload takes one input range and a unary function.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>The unary function can be a lambda expression that takes one argument, a function object, or a type that derives from <ph id="ph1">`unary_function`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>The second overload takes two input ranges and a binary function.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>The binary function can be a lambda expression that takes two arguments, a function object, or a type that derives from <bpt id="p1">[</bpt>std::binary_function<ept id="p1">](../../standard-library/binary-function-struct.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>The following example illustrates these differences.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-transform-vectors#2</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The iterator that you supply for the output of <ph id="ph1">`parallel_transform`</ph> must completely overlap the input iterator or not overlap at all.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>The behavior of this algorithm is unspecified if the input and output iterators partially overlap.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The parallel_reduce Algorithm</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_reduce`</ph> algorithm is useful when you have a sequence of operations that satisfy the associative property.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>(This algorithm does not require the commutative property.) Here are some of the operations that you can perform with <ph id="ph1">`parallel_reduce`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Multiply sequences of matrices to produce a matrix.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>Multiply a vector by a sequence of matrices to produce a vector.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>Compute the length of a sequence of strings.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Combine a list of elements, such as strings, into one element.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>The following basic example shows how to use the <ph id="ph1">`parallel_reduce`</ph> algorithm to combine a sequence of strings into one string.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>As with the examples for <ph id="ph1">`parallel_transform`</ph>, performance gains are not expected in this basic example.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>concrt-basic-parallel-reduce#1</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>In many cases, you can think of <ph id="ph1">`parallel_reduce`</ph> as shorthand for the use of the <ph id="ph2">`parallel_for_each`</ph> algorithm together with the <bpt id="p1">[</bpt>concurrency::combinable<ept id="p1">](../../parallel/concrt/reference/combinable-class.md)</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Example: Performing Map and Reduce in Parallel</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>map<ept id="p1">*</ept> operation applies a function to each value in a sequence.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">*</bpt>reduce<ept id="p1">*</ept> operation combines the elements of a sequence into one value.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>You can use the Standard Template Library (STL) <bpt id="p1">[</bpt>std::transform<ept id="p1">](../../standard-library/algorithm-functions.md#transform)</ept><bpt id="p2">[</bpt>std::accumulate<ept id="p2">](../../standard-library/numeric-functions.md#accumulate)</ept> classes to perform map and reduce operations.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>However, for many problems, you can use the <ph id="ph1">`parallel_transform`</ph> algorithm to perform the map operation in parallel and the <ph id="ph2">`parallel_reduce`</ph> algorithm perform the reduce operation in parallel.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>The following example compares the time that it takes to compute the sum of prime numbers serially and in parallel.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>The map phase transforms non-prime values to 0 and the reduce phase sums the values.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-map-reduce-sum-of-primes#1</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>For another example that performs a map and reduce operation in parallel, see <bpt id="p1">[</bpt>How to: Perform Map and Reduce Operations in Parallel<ept id="p1">](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>Partitioning Work</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>To parallelize an operation on a data source, an essential step is to <bpt id="p1">*</bpt>partition<ept id="p1">*</ept> the source into multiple sections that can be accessed concurrently by multiple threads.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>A partitioner specifies how a parallel algorithm should partition ranges among threads.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>As explained previously in this document, the PPL uses a default partitioning mechanism that creates an initial workload and then uses a work-stealing algorithm and range stealing to balance these partitions when workloads are unbalanced.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>For example, when one loop iteration completes a range of iterations, the runtime redistributes work from other threads to that thread.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>However, for some scenarios, you might want to specify a different partitioning mechanism that is better suited to your problem.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for`</ph>, <ph id="ph2">`parallel_for_each`</ph>, and <ph id="ph3">`parallel_transform`</ph> algorithms provide overloaded versions that take an additional parameter, <ph id="ph4">`_Partitioner`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>This parameter defines the partitioner type that divides work.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Here are the kinds of partitioners that the PPL defines:</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>concurrency::affinity_partitioner</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Divides work into a fixed number of ranges (typically the number of worker threads that are available to work on the loop).</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>This partitioner type resembles <ph id="ph1">`static_partitioner`</ph>, but improves cache affinity by the way it maps ranges to worker threads.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>This partitioner type can improve performance when a loop is executed over the same data set multiple times (such as a loop within a loop) and the data fits in cache.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>This partitioner does not fully participate in cancellation.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>It also does not use cooperative blocking semantics and therefore cannot be used with parallel loops that have a forward dependency.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>concurrency::auto_partitioner</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Divides work into an initial number of ranges (typically the number of worker threads that are available to work on the loop).</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>The runtime uses this type by default when you do not call an overloaded parallel algorithm that takes a <ph id="ph1">`_Partitioner`</ph> parameter.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Each range can be divided into sub-ranges, and thereby enables load balancing to occur.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>When a range of work completes, the runtime redistributes sub-ranges of work from other threads to that thread.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Use this partitioner if your workload does not fall under one of the other categories or you require full support for cancellation or cooperative blocking.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>concurrency::simple_partitioner</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Divides work into ranges such that each range has at least the number of iterations that are specified by the given chunk size.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>This partitioner type participates in load balancing; however, the runtime does not divide ranges into sub-ranges.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>For each worker, the runtime checks for cancellation and performs load-balancing after <ph id="ph1">`_Chunk_size`</ph> iterations complete.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>concurrency::static_partitioner</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Divides work into a fixed number of ranges (typically the number of worker threads that are available to work on the loop).</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>This partitioner type can improve performance because it does not use work-stealing and therefore has less overhead.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>Use this partitioner type when each iteration of a parallel loop performs a fixed and uniform amount of work and you do not require support for cancellation or forward cooperative blocking.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_for_each`</ph> and <ph id="ph2">`parallel_transform`</ph> algorithms support only containers that use random access iterators (such as std::<bpt id="p1">[</bpt>vector<ept id="p1">](../../standard-library/vector-class.md)</ept>) for the static, simple, and affinity partitioners.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>The use of containers that use bidirectional and forward iterators produces a compile-time error.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>The default partitioner, <ph id="ph1">`auto_partitioner`</ph>, supports all three of these iterator types.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>Typically, these partitioners are used in the same way, except for <ph id="ph1">`affinity_partitioner`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>Most partitioner types do not maintain state and are not modified by the runtime.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>Therefore you can create these partitioner objects at the call site, as shown in the following example.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>concrt-static-partitioner#1</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>However, you must pass an <ph id="ph1">`affinity_partitioner`</ph> object as a non-<ph id="ph2">`const`</ph>, l-value reference so that the algorithm can store state for future loops to reuse.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>The following example shows a basic application that performs the same operation on a data set in parallel multiple times.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>The use of <ph id="ph1">`affinity_partitioner`</ph> can improve performance because the array is likely to fit in cache.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>concrt-affinity-partitioner#1</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>Use caution when you modify existing code that relies on cooperative blocking semantics to use <ph id="ph1">`static_partitioner`</ph> or <ph id="ph2">`affinity_partitioner`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>These partitioner types do not use load balancing or range stealing, and therefore can alter the behavior of your application.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>The best way to determine whether to use a partitioner in any given scenario is to experiment and measure how long it takes operations to complete under representative loads and computer configurations.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>For example, static partitioning might provide significant speedup on a multi-core computer that has only a few cores, but it might result in slowdowns on computers that have relatively many cores.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>Parallel Sorting</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>The PPL provides three sorting algorithms: <bpt id="p1">[</bpt>concurrency::parallel_sort<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_sort)</ept>, <bpt id="p2">[</bpt>concurrency::parallel_buffered_sort<ept id="p2">](reference/concurrency-namespace-functions.md#parallel_buffered_sort)</ept>, and <bpt id="p3">[</bpt>concurrency::parallel_radixsort<ept id="p3">](reference/concurrency-namespace-functions.md#parallel_radixsort)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>These sorting algorithms are useful when you have a data set that can benefit from being sorted in parallel.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>In particular, sorting in parallel is useful when you have a large dataset or when you use a computationally-expensive compare operation to sort your data.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>Each of these algorithms sorts elements in place.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_sort`</ph> and <ph id="ph2">`parallel_buffered_sort`</ph> algorithms are both compare-based algorithms.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>That is, they compare elements by value.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_sort`</ph> algorithm has no additional memory requirements, and is suitable for general-purpose sorting.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_buffered_sort`</ph> algorithm can perform better than <ph id="ph2">`parallel_sort`</ph>, but it requires O(N) space.</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_radixsort`</ph> algorithm is hash-based.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>That is, it uses integer keys to sort elements.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>By using keys, this algorithm can directly compute the destination of an element instead of using comparisons.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>Like <ph id="ph1">`parallel_buffered_sort`</ph>, this algorithm requires O(N) space.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>The following table summarizes the important properties of the three parallel sorting algorithms.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>Algorithm</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>Sorting mechanism</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>Sort Stability</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>Memory requirements</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>Time Complexity</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>Iterator access</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>General-purpose compare-based sort.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>Compare-based (ascending)</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Unstable</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>None</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>O((N/P)log(N/P) + 2N((P-1)/P))</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>Random</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>Faster general-purpose compare-based sort that requires O(N) space.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>Compare-based (ascending)</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>Unstable</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>Requires additional O(N) space</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>O((N/P)log(N))</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>Random</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>Integer key-based sort that requires O(N) space.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>Hash-based</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>Stable</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>Requires additional O(N) space</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>O(N/P)</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>Random</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>The following illustration  shows the important properties of the three parallel sorting algorithms more graphically.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>Comparison of the sorting algorithms</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>These parallel sorting algorithms follow the rules of cancellation and exception handling.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>For more information about cancellation and exception handling in the Concurrency Runtime, see <bpt id="p1">[</bpt>Canceling Parallel Algorithms<ept id="p1">](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)</ept> and <bpt id="p2">[</bpt>Exception Handling<ept id="p2">](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>These parallel sorting algorithms support move semantics.</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>You can define a move assignment operator to enable swap operations to occur more efficiently.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>For more information about move semantics and the move assignment operator, see <bpt id="p1">[</bpt>Rvalue Reference Declarator: &amp;&amp;<ept id="p1">](../../cpp/rvalue-reference-declarator-amp-amp.md)</ept>, and <bpt id="p2">[</bpt>Move Constructors and Move Assignment Operators (C++)<ept id="p2">](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>If you do not provide a move assignment operator or swap function, the sorting algorithms use the copy constructor.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>The following basic example shows how to use <ph id="ph1">`parallel_sort`</ph> to sort a <ph id="ph2">`vector`</ph> of <ph id="ph3">`int`</ph> values.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>By default, <ph id="ph1">`parallel_sort`</ph> uses <bpt id="p1">[</bpt>std::less<ept id="p1">](../../standard-library/less-struct.md)</ept> to compare values.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>concrt-basic-parallel-sort#1</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>This example shows how to provide a custom compare function.</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>It uses the <bpt id="p1">[</bpt>std::complex::real<ept id="p1">](../../standard-library/complex-class.md#complex__real)</ept> method to sort <bpt id="p2">[</bpt>std::complex<ph id="ph1">\&lt;</ph>double&gt;<ept id="p2">](../../standard-library/complex-double.md)</ept> values in ascending order.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source>concrt-basic-parallel-sort#2</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>This example shows how to provide a hash function to the <ph id="ph1">`parallel_radixsort`</ph> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>This example sorts 3-D points.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>The points are sorted based on their distance from a reference point.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sort-points#1</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>For illustration, this example uses a relatively small data set.</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source>You can increase the initial size of the vector to experiment with performance improvements over larger sets of data.</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>This example uses a lambda expression as the hash function.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>You can also use one of the built-in implementations of the std::<bpt id="p1">[</bpt>hash class<ept id="p1">](../../standard-library/hash-class.md)</ept> or define your own specialization.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>You can also use a custom hash function object, as shown in this example:</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sort-points#2</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sort-points#3</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source>The hash function must return an integral type (<bpt id="p1">[</bpt>std::is_integral::value<ept id="p1">](../../standard-library/is-integral-class.md)</ept> must be <ph id="ph1">`true`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve">
+          <source>This integral type must be convertible to type <ph id="ph1">`size_t`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve">
+          <source>Choosing a Sorting Algorithm</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>In many cases, <ph id="ph1">`parallel_sort`</ph> provides the best balance of speed and memory performance.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>However, as you increase the size of your data set, the number of available processors, or the complexity of your compare function, <ph id="ph1">`parallel_buffered_sort`</ph> or <ph id="ph2">`parallel_radixsort`</ph> can perform better.</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>The best way to determine which sorting algorithm to use in any given scenario is to experiment and measure how long it takes to sort typical data under representative computer configurations.</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>Keep the following guidelines in mind when you choose a sorting strategy.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>The size of your data set.</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source>In this document, a <bpt id="p1">*</bpt>small<ept id="p1">*</ept> dataset contains fewer than 1,000 elements, a <bpt id="p2">*</bpt>medium<ept id="p2">*</ept> dataset contains between 10,000 and 100,000 elements, and a <bpt id="p3">*</bpt>large<ept id="p3">*</ept> dataset contains more than 100,000 elements.</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve">
+          <source>The amount of work that your compare function or hash function performs.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve">
+          <source>The amount of available computing resources.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve">
+          <source>The characteristics of your data set.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve">
+          <source>For example, one algorithm might perform well for data that is already nearly sorted, but not as well for data that is completely unsorted.</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>The chunk size.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>The optional <ph id="ph1">`_Chunk_size`</ph> argument specifies when the algorithm switches from a parallel to a serial sort implementation as it subdivides the overall sort into smaller units of work.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>For example, if you provide 512, the algorithm switches to serial implementation when a unit of work contains 512 or fewer elements.</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>A serial implementation can improve overall performance because it eliminates the overhead that is required to process data in parallel.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>It might not be worthwhile to sort a small dataset in parallel, even when you have a large number of available computing resources or your compare function or hash function performs a relatively large amount of work.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>You can use <bpt id="p1">[</bpt>std::sort<ept id="p1">](http://msdn.microsoft.com/library/9b0a4fc1-5131-4c73-9c2e-d72211f2d0ae)</ept> function to sort small datasets.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source>(<ph id="ph1">`parallel_sort`</ph> and <ph id="ph2">`parallel_buffered_sort`</ph> call <ph id="ph3">`sort`</ph> when you specify a chunk size that is larger than the dataset; however, <ph id="ph4">`parallel_buffered_sort`</ph> would have to allocate O(N) space, which could take additional time due to lock contention or memory allocation.)</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source>If you must conserve memory or your memory allocator is subject to lock contention, use <ph id="ph1">`parallel_sort`</ph> to sort a medium-sized dataset.</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source>requires no additional space; the other algorithms require O(N) space.</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`parallel_buffered_sort`</ph> to sort medium-sized datasets and when your application meets the additional O(N) space requirement.</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>can be especially useful when you have a large number of computing resources or an expensive compare function or hash function.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`parallel_radixsort`</ph> to sort large datasets and when your application meets the additional O(N) space requirement.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>can be especially useful when the equivalent compare operation is more expensive or when both operations are expensive.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>Implementing a good hash function requires that you know the dataset range and how each element in the dataset is transformed to a corresponding unsigned value.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source>Because the hash operation works on unsigned values, consider a different sorting strategy if unsigned hash values cannot be produced.</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>The following example compares the performance of <ph id="ph1">`sort`</ph>, <ph id="ph2">`parallel_sort`</ph>, <ph id="ph3">`parallel_buffered_sort`</ph>, and <ph id="ph4">`parallel_radixsort`</ph> against the same large set of random data.</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve">
+          <source>concrt-choosing-parallel-sort#1</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve">
+          <source>In this example, which assumes that it is acceptable to allocate O(N) space during the sort, <ph id="ph1">`parallel_radixsort`</ph> performs the best on this dataset on this computer configuration.</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve">
+          <source>Related Topics</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve">
+          <source>Title</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>How to: Write a parallel_for Loop</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source>Shows how to use the <ph id="ph1">`parallel_for`</ph> algorithm to perform matrix multiplication.</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve">
+          <source>How to: Write a parallel_for_each Loop</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve">
+          <source>Shows how to use the <ph id="ph1">`parallel_for_each`</ph> algorithm to compute the count of prime numbers in a <bpt id="p1">[</bpt>std::array<ept id="p1">](../../standard-library/array-class-stl.md)</ept> object in parallel.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve">
+          <source>How to: Use parallel_invoke to Write a Parallel Sort Routine</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve">
+          <source>Shows how to use the <ph id="ph1">`parallel_invoke`</ph> algorithm to improve the performance of the bitonic sort algorithm.</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve">
+          <source>How to: Use parallel_invoke to Execute Parallel Operations</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve">
+          <source>Shows how to use the <ph id="ph1">`parallel_invoke`</ph> algorithm to improve the performance of a program that performs multiple operations on a shared data source.</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve">
+          <source>How to: Perform Map and Reduce Operations in Parallel</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve">
+          <source>Shows how to use the <ph id="ph1">`parallel_transform`</ph> and <ph id="ph2">`parallel_reduce`</ph> algorithms to perform a map and reduce operation that counts the occurrences of words in files.</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library (PPL)</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve">
+          <source>Describes the PPL, which provides an imperative programming model that promotes scalability and ease-of-use for developing concurrent applications.</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve">
+          <source>Cancellation in the PPL</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve">
+          <source>Explains the role of cancellation in the PPL, how to cancel parallel work, and how to determine when a task group is canceled.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve">
+          <source>Exception Handling</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve">
+          <source>Explains the role of exception handling in the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve">
+          <source>Reference</source>
+        </trans-unit>
+        <trans-unit id="402" translate="yes" xml:space="preserve">
+          <source>parallel_for Function</source>
+        </trans-unit>
+        <trans-unit id="403" translate="yes" xml:space="preserve">
+          <source>parallel_for_each Function</source>
+        </trans-unit>
+        <trans-unit id="404" translate="yes" xml:space="preserve">
+          <source>parallel_invoke Function</source>
+        </trans-unit>
+        <trans-unit id="405" translate="yes" xml:space="preserve">
+          <source>affinity_partitioner Class</source>
+        </trans-unit>
+        <trans-unit id="406" translate="yes" xml:space="preserve">
+          <source>auto_partitioner Class</source>
+        </trans-unit>
+        <trans-unit id="407" translate="yes" xml:space="preserve">
+          <source>simple_partitioner Class</source>
+        </trans-unit>
+        <trans-unit id="408" translate="yes" xml:space="preserve">
+          <source>static_partitioner Class</source>
+        </trans-unit>
+        <trans-unit id="409" translate="yes" xml:space="preserve">
+          <source>parallel_sort Function</source>
+        </trans-unit>
+        <trans-unit id="410" translate="yes" xml:space="preserve">
+          <source>parallel_buffered_sort Function</source>
+        </trans-unit>
+        <trans-unit id="411" translate="yes" xml:space="preserve">
+          <source>parallel_radixsort Function</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
