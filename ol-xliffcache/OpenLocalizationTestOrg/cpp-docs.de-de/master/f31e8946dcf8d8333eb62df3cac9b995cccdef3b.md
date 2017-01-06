@@ -1,38 +1,42 @@
 ---
-title: "Linker Tools Error LNK1123 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1123"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1123"
+title: Linker Tools Error LNK1123 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK1123
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK1123
 ms.assetid: fe47af69-0f42-4792-9133-541192cd8514
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f31e8946dcf8d8333eb62df3cac9b995cccdef3b
+
 ---
 # Linker Tools Error LNK1123
 failure during conversion to COFF: file invalid or corrupt  
@@ -60,3 +64,8 @@ failure during conversion to COFF: file invalid or corrupt
  [.Obj Files as Linker Input](../../build/reference/dot-obj-files-as-linker-input.md)   
  [EDITBIN Reference](../../build/reference/editbin-reference.md)   
  [DUMPBIN Reference](../../build/reference/dumpbin-reference.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

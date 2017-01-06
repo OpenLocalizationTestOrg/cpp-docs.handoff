@@ -1,75 +1,79 @@
 ---
-title: "sin, sinf, sinl, sinh, sinhf, sinhl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "sinl"
-  - "sinf"
-  - "sinhf"
-  - "sinh"
-  - "sin"
-  - "sinhl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_sinl"
-  - "sinf"
-  - "sinhl"
-  - "sinl"
-  - "sin"
-  - "sinhf"
-  - "_sinhl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "sinh function"
-  - "_sinl function"
-  - "_sinhl function"
-  - "sinhf function"
-  - "sinl function"
-  - "calculating sines"
-  - "sin function"
-  - "trigonometric functions"
-  - "sinf function"
-  - "sinhl function"
-  - "hyperbolic functions"
+title: sin, sinf, sinl, sinh, sinhf, sinhl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- sinl
+- sinf
+- sinhf
+- sinh
+- sin
+- sinhl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _sinl
+- sinf
+- sinhl
+- sinl
+- sin
+- sinhf
+- _sinhl
+dev_langs:
+- C++
+- C
+helpviewer_keywords:
+- sinh function
+- _sinl function
+- _sinhl function
+- sinhf function
+- sinl function
+- calculating sines
+- sin function
+- trigonometric functions
+- sinf function
+- sinhl function
+- hyperbolic functions
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: abe9c5d9ce05bfa426cbbcd2d3f0c25c8a5db246
+
 ---
 # sin, sinf, sinl, sinh, sinhf, sinhl
 Calculates sines and hyperbolic sines.  
@@ -185,3 +189,8 @@ cosh( 1.570796 ) = 2.509178
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
  [_CIsin](../../c-runtime-library/cisin.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+
