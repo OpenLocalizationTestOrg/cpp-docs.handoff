@@ -1,53 +1,57 @@
 ---
-title: "Automation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automation servers, about Automation servers"
-  - "clients, Automation"
-  - "programmatic control [C++]"
-  - "properties [MFC], Automation"
-  - "MFC [C++], COM support"
-  - "OLE Automation"
-  - "Automation"
-  - "servers [C++], Automation"
-  - "Automation clients"
-  - "sample applications [MFC], Automation"
-  - "methods [MFC]"
-  - "passing parameters, Automation"
-  - "Automation method"
-  - "Automation, passing parameters"
-  - "Automation property"
-  - "MFC COM, Automation"
-  - "methods [MFC], Automation"
+title: Automation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers, about Automation servers
+- clients, Automation
+- programmatic control [C++]
+- properties [MFC], Automation
+- MFC [C++], COM support
+- OLE Automation
+- Automation
+- servers [C++], Automation
+- Automation clients
+- sample applications [MFC], Automation
+- methods [MFC]
+- passing parameters, Automation
+- Automation method
+- Automation, passing parameters
+- Automation property
+- MFC COM, Automation
+- methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
+ms.openlocfilehash: 8dcf5d5a5518f2e1baf72f7fc60bf2eb80edd9e3
+
 ---
 # Automation
 Automation (formerly known as OLE Automation) makes it possible for one application to manipulate objects implemented in another application, or to expose objects so they can be manipulated.  
@@ -111,3 +115,9 @@ Automation (formerly known as OLE Automation) makes it possible for one applicat
   
 ## See Also  
  [MFC COM](../mfc/mfc-com.md)
+
+
+
+<!--HONumber=Jan17_HO1-->
+
+

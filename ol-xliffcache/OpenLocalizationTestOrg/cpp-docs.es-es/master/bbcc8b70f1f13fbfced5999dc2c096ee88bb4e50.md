@@ -1,45 +1,49 @@
 ---
-title: "-NODEFAULTLIB (Ignore Libraries) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.IgnoreAllDefaultLibraries"
-  - "VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames"
-  - "/nodefaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default libraries, removing"
-  - "-NODEFAULTLIB linker option"
-  - "libraries, ignore"
-  - "NODEFAULTLIB linker option"
-  - "/NODEFAULTLIB linker option"
-  - "ignore libraries linker option"
+title: -NODEFAULTLIB (Ignore Libraries) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.IgnoreAllDefaultLibraries
+- VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames
+- /nodefaultlib
+dev_langs:
+- C++
+helpviewer_keywords:
+- default libraries, removing
+- -NODEFAULTLIB linker option
+- libraries, ignore
+- NODEFAULTLIB linker option
+- /NODEFAULTLIB linker option
+- ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: bbcc8b70f1f13fbfced5999dc2c096ee88bb4e50
+
 ---
 # /NODEFAULTLIB (Ignore Libraries)
 ```  
@@ -82,3 +86,8 @@ translation.priority.ht:
 ## See Also  
  [Setting Linker Options](../../build/reference/setting-linker-options.md)   
  [Linker Options](../../build/reference/linker-options.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+
