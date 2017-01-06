@@ -1,41 +1,45 @@
 ---
-title: "-cgthreads (Code Generation Threads) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/cgthreads"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/cgthreads compiler option (C++)"
-  - "-cgthreads compiler option (C++)"
-  - "cgthreads compiler option (C++)"
-  - "cgthreads"
+title: -cgthreads (Code Generation Threads) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /cgthreads
+dev_langs:
+- C++
+helpviewer_keywords:
+- /cgthreads compiler option (C++)
+- -cgthreads compiler option (C++)
+- cgthreads compiler option (C++)
+- cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
+ms.openlocfilehash: 091ffda0fa16e3ed3badc8240a1dd7fc4bd7a34c
+
 ---
 # /cgthreads (Code Generation Threads)
 Sets number of cl.exe threads to use for optimization and code generation.  
@@ -72,3 +76,8 @@ Sets number of cl.exe threads to use for optimization and code generation.
 ## See Also  
  [Compiler Options](../../build/reference/compiler-options.md)   
  [Setting Compiler Options](../../build/reference/setting-compiler-options.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+
