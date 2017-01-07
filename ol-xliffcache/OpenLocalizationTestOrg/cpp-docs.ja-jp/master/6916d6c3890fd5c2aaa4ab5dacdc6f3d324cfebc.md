@@ -1,38 +1,42 @@
 ---
-title: "queue::front_item (STL-CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::front_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_item member [STL/CLR]"
+title: queue::front_item (STL-CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::queue::front_item
+dev_langs:
+- C++
+helpviewer_keywords:
+- front_item member [STL/CLR]
 ms.assetid: 389ab030-4351-48e6-9b03-417f1d3fcb86
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6916d6c3890fd5c2aaa4ab5dacdc6f3d324cfebc
+
 ---
 # queue::front_item (STL/CLR)
 Accesses the first element.  
@@ -96,3 +100,8 @@ front_item = a
  [queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)   
  [queue::front (STL/CLR)](../dotnet/queue-front-stl-clr.md)   
  [queue::front (STL/CLR)](../dotnet/queue-front-stl-clr.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

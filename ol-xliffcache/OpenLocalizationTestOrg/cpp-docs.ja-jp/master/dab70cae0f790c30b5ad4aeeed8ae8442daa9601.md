@@ -1,41 +1,45 @@
 ---
-title: "Exception Handling in the Concurrency Runtime | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lightweight tasks, exception handling [Concurrency Runtime]"
-  - "exception handling [Concurrency Runtime]"
-  - "structured task groups, exception handling [Concurrency Runtime]"
-  - "agents, exception handling [Concurrency Runtime]"
-  - "task groups, exception handling [Concurrency Runtime]"
+title: Exception Handling in the Concurrency Runtime | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lightweight tasks, exception handling [Concurrency Runtime]
+- exception handling [Concurrency Runtime]
+- structured task groups, exception handling [Concurrency Runtime]
+- agents, exception handling [Concurrency Runtime]
+- task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 caps.latest.revision: 29
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
+ms.openlocfilehash: dab70cae0f790c30b5ad4aeeed8ae8442daa9601
+
 ---
 # Exception Handling in the Concurrency Runtime
 The Concurrency Runtime uses C++ exception handling to communicate many kinds of errors. These errors include invalid use of the runtime, runtime errors such as failure to acquire a resource, and errors that occur in work functions that you provide to tasks and task groups. When a task or task group throws an exception, the runtime holds that exception and marshals it to the context that waits for the task or task group to finish. For components such as lightweight tasks and agents, the runtime does not manage exceptions for you. In these cases, you must implement your own exception-handling mechanism. This topic describes how the runtime handles exceptions that are thrown by tasks, task groups, lightweight tasks, and asynchronous agents, and how to respond to exceptions in your applications.  
@@ -211,4 +215,10 @@ the status of the agent is: done
  [Cancellation in the PPL](cancellation-in-the-ppl.md)   
  [Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Asynchronous Agents](../../parallel/concrt/asynchronous-agents.md)
+
+
+
+
+<!--HONumber=Jan17_HO1-->
+
 
