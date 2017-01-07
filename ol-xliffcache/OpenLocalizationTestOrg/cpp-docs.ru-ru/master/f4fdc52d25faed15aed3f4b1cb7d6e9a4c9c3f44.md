@@ -1,38 +1,42 @@
 ---
-title: "hash_set::insert (STL-CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert member [STL/CLR]"
+title: hash_set::insert (STL-CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::hash_set::insert
+dev_langs:
+- C++
+helpviewer_keywords:
+- insert member [STL/CLR]
 ms.assetid: 0a9bc9aa-012e-4101-9e8c-f1f4b6b76af7
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f4fdc52d25faed15aed3f4b1cb7d6e9a4c9c3f44
+
 ---
 # hash_set::insert (STL/CLR)
 Adds elements.  
@@ -155,3 +159,8 @@ insert(begin(), L'y') = y
   
 ## See Also  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

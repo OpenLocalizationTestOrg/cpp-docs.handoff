@@ -1,45 +1,49 @@
 ---
-title: "CRowset::GetData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset<TAccessor>::GetData"
-  - "ATL::CRowset<TAccessor>::GetData"
-  - "ATL::CRowset::GetData"
-  - "ATL.CRowset<TAccessor>.GetData"
-  - "CRowset<TAccessor>.GetData"
-  - "CRowset::GetData"
-  - "CRowset.GetData"
-  - "ATL.CRowset.GetData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetData method [OLE DB]"
+title: CRowset::GetData | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset<TAccessor>::GetData
+- ATL::CRowset<TAccessor>::GetData
+- ATL::CRowset::GetData
+- ATL.CRowset<TAccessor>.GetData
+- CRowset<TAccessor>.GetData
+- CRowset::GetData
+- CRowset.GetData
+- ATL.CRowset.GetData
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetData method [OLE DB]
 ms.assetid: 1e0347b5-3e24-4ff8-a790-839616c1522f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 1ea5792deba2c9debe1e00365f1fb816dfc6adbc
+
 ---
 # CRowset::GetData
 Retrieves data from the rowset's copy of the row.  
@@ -48,9 +52,9 @@ Retrieves data from the rowset's copy of the row.
   
 ```  
   
-      HRESULT GetData( ) throw( );   
-HRESULT GetData(   
-   int nAccessor    
+      HRESULT GetData( ) throw( );   
+HRESULT GetData(   
+   int nAccessor    
 ) throw( );  
 ```  
   
@@ -69,3 +73,8 @@ HRESULT GetData( 
   
 ## See Also  
  [CRowset Class](../../data/oledb/crowset-class.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

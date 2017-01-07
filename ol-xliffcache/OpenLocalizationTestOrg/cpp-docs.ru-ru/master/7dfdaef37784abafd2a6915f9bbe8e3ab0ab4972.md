@@ -1,38 +1,42 @@
 ---
-title: "max (STL-CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::max"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max function [STL/CLR]"
+title: max (STL-CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::max
+dev_langs:
+- C++
+helpviewer_keywords:
+- max function [STL/CLR]
 ms.assetid: bf51aedc-b7a0-4b6c-a76e-fdbc4af042fa
 caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 7dfdaef37784abafd2a6915f9bbe8e3ab0ab4972
+
 ---
 # max (STL/CLR)
 Compares two objects and returns the larger of the two, where the ordering criterion may be specified by a binary predicate.  
@@ -56,3 +60,8 @@ template<class _Ty, class _Pr> inline
   
 ## See Also  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+
