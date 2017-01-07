@@ -1,38 +1,42 @@
 ---
-title: "vector::operator(STL-CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatormember [] [STL/CLR]"
+title: vector::operator(STL-CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::vector::operator[]
+dev_langs:
+- C++
+helpviewer_keywords:
+- operatormember [] [STL/CLR]
 ms.assetid: 379a7029-460d-4de8-918b-c79e3e13b9d4
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: fd33bade651a05c5abca3d4ee9dea2f54711c26a
+
 ---
 # vector::operator(STL/CLR)
 Accesses an element at a specified position.  
@@ -92,3 +96,8 @@ a x c
 ## See Also  
  [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

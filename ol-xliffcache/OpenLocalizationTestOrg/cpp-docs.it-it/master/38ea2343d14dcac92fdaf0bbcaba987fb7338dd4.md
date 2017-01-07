@@ -1,40 +1,44 @@
 ---
-title: "hash_set (STL-CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/hash_set> header [STL/CLR]"
-  - "hash_set class [STL/CLR]"
-  - "<hash_set> header [STL/CLR]"
+title: hash_set (STL-CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::hash_set
+dev_langs:
+- C++
+helpviewer_keywords:
+- <cliext/hash_set> header [STL/CLR]
+- hash_set class [STL/CLR]
+- <hash_set> header [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 38ea2343d14dcac92fdaf0bbcaba987fb7338dd4
+
 ---
 # hash_set (STL/CLR)
 The template class describes an object that controls a varying-length sequence of elements that has bidirectional access. You use the container `hash_set` to manage a sequence of elements as a hash table, each table entry storing a bidirectional linked list of nodes, and each node storing one element. The value of each element is used as a key, for ordering the sequence.  
@@ -173,3 +177,8 @@ template<typename Key>
  [set (STL/CLR)](../dotnet/set-stl-clr.md)   
  [set (STL/CLR)](../dotnet/set-stl-clr.md)   
  [STL/CLR Library Reference](../dotnet/stl-clr-library-reference.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+
