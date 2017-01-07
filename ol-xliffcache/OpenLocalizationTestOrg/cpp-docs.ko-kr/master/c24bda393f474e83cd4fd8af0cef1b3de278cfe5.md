@@ -971,3 +971,8 @@
 ### [How to: Use gcnew to Create Value Types and Use Implicit Boxing](how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 ### [How to: Unbox](how-to-unbox.md)
 ### [Standard Conversions and Implicit Boxing](standard-conversions-and-implicit-boxing.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

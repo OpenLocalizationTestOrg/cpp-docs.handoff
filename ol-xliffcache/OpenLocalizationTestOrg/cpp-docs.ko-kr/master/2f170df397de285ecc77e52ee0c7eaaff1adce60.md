@@ -1,38 +1,42 @@
 ---
-title: "hash_multiset::rbegin (STL-CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin member [STL/CLR]"
+title: hash_multiset::rbegin (STL-CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::hash_multiset::rbegin
+dev_langs:
+- C++
+helpviewer_keywords:
+- rbegin member [STL/CLR]
 ms.assetid: 69a06d99-3262-495b-9956-5f155162da33
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2f170df397de285ecc77e52ee0c7eaaff1adce60
+
 ---
 # hash_multiset::rbegin (STL/CLR)
 Designates the beginning of the reversed controlled sequence.  
@@ -91,3 +95,8 @@ int main()
  [hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)   
  [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)   
  [hash_multiset::rend (STL/CLR)](../dotnet/hash-multiset-rend-stl-clr.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

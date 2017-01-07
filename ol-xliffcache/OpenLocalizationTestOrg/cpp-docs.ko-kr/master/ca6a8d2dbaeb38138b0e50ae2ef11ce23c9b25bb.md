@@ -1,40 +1,44 @@
 ---
-title: "-diagnostics (Compiler diagnostic options) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/11/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/diagnostics"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/diagnostics compiler diagnostic options [C++]"
-  - "-diagnostics compiler diagnostic options [C++]"
-  - "diagnostics compiler diagnostic options [C++]"
+title: -diagnostics (Compiler diagnostic options) | Microsoft Docs
+ms.custom: 
+ms.date: 11/11/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /diagnostics
+dev_langs:
+- C++
+helpviewer_keywords:
+- /diagnostics compiler diagnostic options [C++]
+- -diagnostics compiler diagnostic options [C++]
+- diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 585cdf8ba49b9794713b27255d0a30c4aac49084
+ms.openlocfilehash: ca6a8d2dbaeb38138b0e50ae2ef11ce23c9b25bb
+
 ---
 # /diagnostics (Compiler diagnostic options)  
 Use the **/diagnostics** compiler option to specify the display of error and warning location information.  
@@ -60,3 +64,8 @@ The /diagnostics option is available starting in Visual Studio 2017 RC.
 ## See Also  
  [Compiler Options](../../build/reference/compiler-options.md)   
  [Setting Compiler Options](../../build/reference/setting-compiler-options.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

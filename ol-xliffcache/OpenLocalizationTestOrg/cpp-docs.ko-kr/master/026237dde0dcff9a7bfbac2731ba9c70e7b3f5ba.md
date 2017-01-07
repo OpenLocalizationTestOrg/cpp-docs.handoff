@@ -1,41 +1,45 @@
 ---
-title: "is_trivially_move_constructible Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_trivially_move_constructible"
-  - "std.is_trivially_move_constructible"
-  - "std::is_trivially_move_constructible"
-  - "type_traits/std::is_trivially_move_constructible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_trivially_move_constructible"
+title: is_trivially_move_constructible Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_trivially_move_constructible
+- std.is_trivially_move_constructible
+- std::is_trivially_move_constructible
+- type_traits/std::is_trivially_move_constructible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 026237dde0dcff9a7bfbac2731ba9c70e7b3f5ba
+
 ---
 # is_trivially_move_constructible Class
 Tests if type has trivial move constructor.  
@@ -80,5 +84,11 @@ struct is_trivially_move_constructible;
 ## See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
+
+
+
+
+
+<!--HONumber=Jan17_HO1-->
 
 
