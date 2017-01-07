@@ -1,40 +1,44 @@
 ---
-title: "&lt;iostream&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<iostream>"
-  - "std::<iostream>"
-  - "<iostream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iostream header"
+title: '&lt;iostream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<iostream>
+- std::<iostream>
+- <iostream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d0dfbf4aabab9e06ba1d04dbdd77eaba96e32635
+
 ---
 # &lt;iostream&gt;
 Declares objects that control reading from and writing to the standard streams. This is often the only header you need to include to perform input and output from a C++ program.  
@@ -276,4 +280,10 @@ extern wostream wcout;
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream Programming](../standard-library/iostream-programming.md)   
  [iostreams Conventions](../standard-library/iostreams-conventions.md)
+
+
+
+
+<!--HONumber=Jan17_HO1-->
+
 

@@ -1,41 +1,45 @@
 ---
-title: "CWinThread Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CWinThread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "worker threads"
-  - "threading [MFC], safety"
-  - "CWinThread class"
-  - "threading [MFC], creating threads"
+title: CWinThread Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CWinThread
+dev_langs:
+- C++
+helpviewer_keywords:
+- worker threads
+- threading [MFC], safety
+- CWinThread class
+- threading [MFC], creating threads
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 6b918be24aba52d6143e8f98dd529a8ec9f196aa
+ms.openlocfilehash: 8f4df8ee9ddb89236b9cbd03a1ccb42896a0aece
+
 ---
 # CWinThread Class
 Represents a thread of execution within an application.  
@@ -549,3 +553,9 @@ DWORD SuspendThread();
  [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CWinApp Class](../../mfc/reference/cwinapp-class.md)   
  [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)
+
+
+
+<!--HONumber=Jan17_HO1-->
+
+

@@ -1,40 +1,44 @@
 ---
-title: "CPoint Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CPoint"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LPPOINT structure"
-  - "POINT structure"
-  - "CPoint class"
+title: CPoint Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CPoint
+dev_langs:
+- C++
+helpviewer_keywords:
+- LPPOINT structure
+- POINT structure
+- CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
+ms.openlocfilehash: bbad481fe6abf7c3423548db75f24b6cdbb6d1ff
+
 ---
 # CPoint Class
 Similar to the Windows `POINT` structure.  
@@ -372,5 +376,11 @@ CSize operator-(POINT point) const throw();
  [CRect Class](../../atl-mfc-shared/reference/crect-class.md)   
  [CSize Class](../../atl-mfc-shared/reference/csize-class.md)
 
+
+
+
+
+
+<!--HONumber=Jan17_HO1-->
 
 
