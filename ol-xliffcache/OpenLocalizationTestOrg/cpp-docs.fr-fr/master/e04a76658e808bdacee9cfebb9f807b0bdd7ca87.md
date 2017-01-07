@@ -1,40 +1,44 @@
 ---
-title: "Functions (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaults, arguments"
-  - "function definitions"
-  - "function definitions, about function definitions"
-  - "default arguments"
-  - "declarators, functions"
+title: Functions (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- defaults, arguments
+- function definitions
+- function definitions, about function definitions
+- default arguments
+- declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: e04a76658e808bdacee9cfebb9f807b0bdd7ca87
+
 ---
 # Functions (C++)
 A function is a block of code that performs some operation. A function can optionally define input parameters that enable callers to pass arguments into the function. A function can optionally return a value as output. Functions are useful for encapsulating common operations in a single reusable block, ideally with a name that clearly describes what the function does. The following function accepts two integers from a caller and returns their sum; `a` and `b` are *parameters* of type `int`.  
@@ -288,3 +292,8 @@ int (*myFunction(char* s))(int);
  [Argument-Dependent Name (Koenig) Lookup on Functions](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
  [Default Arguments](../cpp/default-arguments.md)   
  [Inline Functions](../cpp/inline-functions-cpp.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+
