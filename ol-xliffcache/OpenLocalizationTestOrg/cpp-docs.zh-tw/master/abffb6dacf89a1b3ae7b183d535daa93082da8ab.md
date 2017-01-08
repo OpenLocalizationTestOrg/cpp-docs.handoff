@@ -1,37 +1,41 @@
 ---
-title: "Deployment in Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "deploying applications [C++]"
-  - "application deployment [C++]"
+title: Deployment in Visual C++ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- deploying applications [C++]
+- application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: abffb6dacf89a1b3ae7b183d535daa93082da8ab
+
 ---
 # Deployment in Visual C++
 When you deploy a [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] application to another computer, you must install both the application and any library files it depends on. If a library is updated—for example, when a security vulnerability is corrected—you'll probably want to apply the update wherever your application is deployed.  
@@ -62,3 +66,8 @@ When you deploy a [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] application
   
 ## See Also  
  [Deploying Desktop Applications](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

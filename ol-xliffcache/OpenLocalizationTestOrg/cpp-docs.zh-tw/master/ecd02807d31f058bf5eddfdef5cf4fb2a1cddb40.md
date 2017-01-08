@@ -1,47 +1,51 @@
 ---
-title: "Frame Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "document frame windows"
-  - "windows [C++], MDI"
-  - "window classes [C++], frame"
-  - "single document interface (SDI)"
-  - "single document interface (SDI), frame windows"
-  - "views [C++], and frame windows"
-  - "CFrameWnd class, frame windows"
-  - "frame windows [C++]"
-  - "frame windows [C++], about frame widows"
-  - "MFC [C++], frame windows"
-  - "MDI [C++], frame windows"
-  - "splitter windows, and frame windows"
+title: Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document frame windows
+- windows [C++], MDI
+- window classes [C++], frame
+- single document interface (SDI)
+- single document interface (SDI), frame windows
+- views [C++], and frame windows
+- CFrameWnd class, frame windows
+- frame windows [C++]
+- frame windows [C++], about frame widows
+- MFC [C++], frame windows
+- MDI [C++], frame windows
+- splitter windows, and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: ecd02807d31f058bf5eddfdef5cf4fb2a1cddb40
+
 ---
 # Frame Windows
 When an application runs under Windows, the user interacts with documents displayed in frame windows. A document frame window has two major components: the frame and the contents that it frames. A document frame window can be a [single document interface](../mfc/sdi-and-mdi.md) (SDI) frame window or a [multiple document interface](../mfc/sdi-and-mdi.md) (MDI) child window. Windows manages most of the user's interaction with the frame window: moving and resizing the window, closing it, and minimizing and maximizing it. You manage the contents inside the frame.  
@@ -102,4 +106,10 @@ Frame Window and View
   
 ## See Also  
  [Windows](../mfc/windows.md)
+
+
+
+
+<!--HONumber=Jan17_HO1-->
+
 

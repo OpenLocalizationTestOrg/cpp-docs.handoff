@@ -1,41 +1,45 @@
 ---
-title: "How to: Call Properties and Methods of the Windows Forms Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "method calls, Windows Forms"
-  - "calling methods, Windows Forms control"
-  - "calling properties, Windows Forms control"
-  - "Windows Forms controls [C++], methods"
-  - "calling properties"
-  - "Windows Forms controls [C++], properties"
+title: 'How to: Call Properties and Methods of the Windows Forms Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs:
+- C++
+helpviewer_keywords:
+- method calls, Windows Forms
+- calling methods, Windows Forms control
+- calling properties, Windows Forms control
+- Windows Forms controls [C++], methods
+- calling properties
+- Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 3ece0dfc99e0bc67a3fdcce13aa5ccf89345fcf2
+
 ---
 # How to: Call Properties and Methods of the Windows Forms Control
 Because [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#cwinformsview__getcontrol) returns a pointer to <xref:System.Windows.Forms.Control?displayProperty=fullName>, and not a pointer to `WindowsControlLibrary1::UserControl1`, it is advisable to add a member of the user control type and initialize it in [IView::OnInitialUpdate](.../mfc/reference/iview-interface.md#iview__oninitialupdate). Now you can call methods and properties using `m_ViewControl`.  
@@ -70,3 +74,8 @@ Because [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#cwin
   
 ## See Also  
  [Hosting a Windows Forms User Control as an MFC View](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+
