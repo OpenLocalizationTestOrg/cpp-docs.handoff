@@ -1,41 +1,45 @@
 ---
-title: "Methods of Creating a Status Bar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBar class, vs. CStatusBarCtrl"
-  - "methods [MFC], creating status bars"
-  - "CStatusBarCtrl class, vs. CStatusBar"
-  - "CStatusBarCtrl class, creating"
-  - "methods [MFC]"
-  - "status bars, creating"
+title: Methods of Creating a Status Bar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStatusBar class, vs. CStatusBarCtrl
+- methods [MFC], creating status bars
+- CStatusBarCtrl class, vs. CStatusBar
+- CStatusBarCtrl class, creating
+- methods [MFC]
+- status bars, creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9ccaec3202803f92d3f87acef9ed7eef3feee566
+
 ---
 # Methods of Creating a Status Bar
 MFC provides two classes to create status bars: [CStatusBar](../mfc/reference/cstatusbar-class.md) and [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (which wraps the Windows common control API). `CStatusBar` provides all of the functionality of the status bar common control, it automatically interacts with menus and toolbars, and it handles many of the required common control settings and structures for you; however, your resulting executable usually will be larger than that created by using `CStatusBarCtrl`.  
@@ -53,4 +57,10 @@ MFC provides two classes to create status bars: [CStatusBar](../mfc/reference/cs
 ## See Also  
  [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
  [Controls](../mfc/controls-mfc.md)
+
+
+
+
+<!--HONumber=Jan17_HO1-->
+
 

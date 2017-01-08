@@ -1,31 +1,35 @@
 ---
-title: "Download, Install and Setup the Linux Workload | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-    - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Download, Install and Setup the Linux Workload | Microsoft Docs
+ms.custom: 
+ms.date: 11/16/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-translation.priority.ht: 
-    - "cs-cz"
-    - "de-de"
-    - "es-es"
-    - "fr-fr"
-    - "it-it"
-    - "ja-jp"
-    - "ko-kr"
-    - "pl-pl"
-    - "pt-br"
-    - "ru-ru"
-    - "tr-tr"
-    - "zh-cn"
-    - "zh-tw"
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: fd3df8d2ce1d9ad74aabbb15e87102aadd64f6b5
+
 ---
 
 # Download, Install and Setup the Linux Workload
@@ -51,3 +55,9 @@ The target Linux computer must have *openssh-server*, *g++*, *gdb*, and *gdbserv
    `sudo service ssh start`
    
    This will start the service and run it in the background, ready to accept connections.
+
+
+
+<!--HONumber=Jan17_HO1-->
+
+
