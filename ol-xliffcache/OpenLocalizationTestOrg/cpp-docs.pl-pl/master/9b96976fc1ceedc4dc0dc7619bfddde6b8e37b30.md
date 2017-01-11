@@ -1,40 +1,44 @@
 ---
-title: "_mm_stream_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movnti instruction"
-  - "_mm_stream_si64x intrinsic"
+title: _mm_stream_si64x | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _mm_stream_si64x
+dev_langs:
+- C++
+helpviewer_keywords:
+- movnti instruction
+- _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9b96976fc1ceedc4dc0dc7619bfddde6b8e37b30
+
 ---
 # _mm_stream_si64x
 **Microsoft Specific**  
@@ -44,9 +48,9 @@ translation.priority.mt:
 ## Syntax  
   
 ```  
-void _mm_stream_si64x(   
-   __int64 * Dest,   
-   __int64 Source   
+void _mm_stream_si64x(   
+   __int64 * Dest,   
+   __int64 Source   
 );  
 ```  
   
@@ -99,3 +103,8 @@ int main()
 ## See Also  
  [Cache Support for Streaming SIMD Extensions 2 Integer Operations](http://msdn.microsoft.com/en-us/a9c9b42f-de9e-4374-aeb6-5f65bfb669b6)   
  [Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+

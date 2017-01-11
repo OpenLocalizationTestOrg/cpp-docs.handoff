@@ -1,64 +1,68 @@
 ---
-title: "catan, catanf, catanl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "catan"
-  - "catanf"
-  - "catanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "catan"
-  - "catanf"
-  - "catanl"
-  - "complex/catan"
-  - "complex/catanf"
-  - "complex/catanl"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "catan function"
-  - "catanf function"
-  - "catanl function"
+title: catan, catanf, catanl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- catan
+- catanf
+- catanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- catan
+- catanf
+- catanl
+- complex/catan
+- complex/catanf
+- complex/catanl
+dev_langs:
+- C
+- C++
+helpviewer_keywords:
+- catan function
+- catanf function
+- catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9b7edb454fd6eed2b549d1eefdfbaa14872e24f7
+
 ---
 # catan, catanf, catanl
 Retrieves the arctangent of a complex number with branch cuts outside the interval [−1; +1] along the imaginary axis.  
@@ -115,3 +119,8 @@ _Lcomplex catanl(
  [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
  [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
  [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+
+<!--HONumber=Jan17_HO1-->
+
+
