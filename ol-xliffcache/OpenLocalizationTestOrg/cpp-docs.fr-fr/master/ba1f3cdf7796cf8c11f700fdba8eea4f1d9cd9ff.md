@@ -1,44 +1,40 @@
 ---
-title: tuple_size Class &lt;tuple&gt; | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- tuple_size
-- std::tr1::tuple_size
-- std.tr1.tuple_size
-dev_langs:
-- C++
-helpviewer_keywords:
-- tuple_size Class <tuple> (TR1)
+title: "tuple_size Class &lt;tuple&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "tuple_size"
+  - "std::tr1::tuple_size"
+  - "std.tr1.tuple_size"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "tuple_size Class <tuple> (TR1)"
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
 caps.latest.revision: 23
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ba1f3cdf7796cf8c11f700fdba8eea4f1d9cd9ff
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # tuple_size Class &lt;tuple&gt;
 Reports the number of elements that a `tuple` contains.  
@@ -114,9 +110,3 @@ Output:
  [\<tuple>](../standard-library/tuple.md)   
  [tuple](../standard-library/tuple-class.md)  
  [tuple_element Class](../standard-library/tuple-element-class-tuple.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
