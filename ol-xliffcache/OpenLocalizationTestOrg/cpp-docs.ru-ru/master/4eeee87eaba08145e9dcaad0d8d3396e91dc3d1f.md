@@ -1,38 +1,42 @@
 ---
-title: "Compiler Warning (level 1) C4103 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4103"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4103"
+title: Compiler Warning (level 1) C4103 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4103
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4103
 ms.assetid: 9021b514-375e-4d62-b261-ccb06f299e8e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4eeee87eaba08145e9dcaad0d8d3396e91dc3d1f
+
 ---
 # Compiler Warning (level 1) C4103
 'filename' : alignment changed after including header, may be due to missing #pragma pack(pop)  
@@ -60,3 +64,8 @@ translation.priority.ht:
 // compile with: /LD /W1  
 #include "c4103.h"   // C4103  
 ```
+
+
+<!--HONumber=Jan17_HO2-->
+
+
