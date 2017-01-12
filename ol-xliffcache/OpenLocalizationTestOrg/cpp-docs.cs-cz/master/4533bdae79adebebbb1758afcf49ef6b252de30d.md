@@ -1,40 +1,44 @@
 ---
-title: "CPrintDialogEx Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CPrintDialogEx"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Print Setup dialog box"
-  - "CPrintDialogEx class"
-  - "Print dialog box"
+title: CPrintDialogEx Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CPrintDialogEx
+dev_langs:
+- C++
+helpviewer_keywords:
+- Print Setup dialog box
+- CPrintDialogEx class
+- Print dialog box
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4533bdae79adebebbb1758afcf49ef6b252de30d
+
 ---
 # CPrintDialogEx Class
 Encapsulates the services provided by the Windows 2000 Print property sheet.  
@@ -345,3 +349,9 @@ BOOL PrintSelection() const;
  [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
  [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CPrintInfo Structure](../../mfc/reference/cprintinfo-structure.md)
+
+
+
+<!--HONumber=Jan17_HO2-->
+
+

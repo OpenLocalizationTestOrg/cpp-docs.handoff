@@ -1,39 +1,43 @@
 ---
-title: "Dynamically Binding Columns in Your Provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "columns [C++], dynamic column binding"
-  - "dynamic column binding"
-  - "providers [C++], dynamic column binding"
+title: Dynamically Binding Columns in Your Provider | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- columns [C++], dynamic column binding
+- dynamic column binding
+- providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: daee2fe0c8d0cc0e003fde3f87a9ddcd059838a4
+
 ---
 # Dynamically Binding Columns in Your Provider
 Make sure you really need dynamic column binding. You might need it because:  
@@ -109,3 +113,8 @@ Make sure you really need dynamic column binding. You might need it because:
   
 ## See Also  
  [Working with OLE DB Provider Templates](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+
