@@ -1,48 +1,44 @@
 ---
-title: add_pointer Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- std::tr1::add_pointer
-- std.tr1.add_pointer
-- add_pointer
-- std.add_pointer
-- std::add_pointer
-- type_traits/std::add_pointer
-dev_langs:
-- C++
-helpviewer_keywords:
-- add_pointer class [TR1]
-- add_pointer
+title: "add_pointer Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "std::tr1::add_pointer"
+  - "std.tr1.add_pointer"
+  - "add_pointer"
+  - "std.add_pointer"
+  - "std::add_pointer"
+  - "type_traits/std::add_pointer"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "add_pointer class [TR1]"
+  - "add_pointer"
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
 caps.latest.revision: 22
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 453fb67caff6b575fd58acdeb72b49af20dceb65
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # add_pointer Class
 Makes a pointer-to-type from a specified type.  
@@ -97,9 +93,3 @@ add_pointer_t<int> == int *
 ## See Also  
  [<type_traits>](../standard-library/type-traits.md)   
  [remove_pointer Class](../standard-library/remove-pointer-class.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
