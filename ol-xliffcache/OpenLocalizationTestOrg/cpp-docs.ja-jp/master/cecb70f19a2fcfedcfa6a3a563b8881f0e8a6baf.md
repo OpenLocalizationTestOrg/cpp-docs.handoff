@@ -1,38 +1,42 @@
 ---
-title: "includelib (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.includelib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "includelib attribute"
+title: includelib (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- vc-attr.includelib
+dev_langs:
+- C++
+helpviewer_keywords:
+- includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: cecb70f19a2fcfedcfa6a3a563b8881f0e8a6baf
+
 ---
 # includelib (C++)
 Causes an .idl or .h file to be included in the generated .idl file.  
@@ -84,3 +88,8 @@ Causes an .idl or .h file to be included in the generated .idl file.
  [include](../windows/include-cpp.md)   
  [importlib](../windows/importlib.md)   
  [Attributes Samples](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

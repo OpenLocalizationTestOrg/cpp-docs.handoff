@@ -1,40 +1,44 @@
 ---
-title: "Explicit Type Conversion Operator: () | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "explicit data type conversion operator"
-  - "conversions [C++], explicit"
-  - "operators [C++], explicit type conversion"
-  - "data type conversion [C++], explicit"
-  - "type conversion [C++], explicit conversions"
+title: 'Explicit Type Conversion Operator: () | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- explicit data type conversion operator
+- conversions [C++], explicit
+- operators [C++], explicit type conversion
+- data type conversion [C++], explicit
+- type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: af9bad9bcb6fcadbb8caa5178bc2e95428f2b227
+
 ---
 # Explicit Type Conversion Operator: ()
 C++ allows explicit type conversion using syntax similar to the function-call syntax.  
@@ -147,3 +151,8 @@ Point pt = Point( 3, 10 );
 ## See Also  
  [Postfix Expressions](../cpp/postfix-expressions.md)   
  [C++ Built-in Operators, Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

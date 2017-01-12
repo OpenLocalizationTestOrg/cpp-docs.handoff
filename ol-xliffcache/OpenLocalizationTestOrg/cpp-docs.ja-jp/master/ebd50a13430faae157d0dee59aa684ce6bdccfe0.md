@@ -1,42 +1,46 @@
 ---
-title: "CComObject Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComObject<Base>"
-  - "ATL::CComObject"
-  - "ATL::CComObject<Base>"
-  - "ATL.CComObject"
-  - "CComObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComObject class"
+title: CComObject Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComObject<Base>
+- ATL::CComObject
+- ATL::CComObject<Base>
+- ATL.CComObject
+- CComObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: ebd50a13430faae157d0dee59aa684ce6bdccfe0
+
 ---
 # CComObject Class
 This class implements **IUnknown** for a nonaggregated object.  
@@ -183,3 +187,9 @@ STDMETHOD_(ULONG, Release)();
  [DECLARE_AGGREGATABLE](http://msdn.microsoft.com/library/e7e568d7-04e0-4226-b5dc-224deed229ab)   
  [DECLARE_NOT_AGGREGATABLE](http://msdn.microsoft.com/library/2a116c7c-bab8-4f2a-a9ad-03d7aba0f762)   
  [Class Overview](../../atl/atl-class-overview.md)
+
+
+
+<!--HONumber=Jan17_HO2-->
+
+

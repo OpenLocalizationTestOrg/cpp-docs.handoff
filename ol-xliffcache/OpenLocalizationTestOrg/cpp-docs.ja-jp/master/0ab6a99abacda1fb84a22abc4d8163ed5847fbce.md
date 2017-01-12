@@ -1,38 +1,42 @@
 ---
-title: "operator&lt; (vector) (STL-CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator< member [STL/CLR]"
+title: operator&lt; (vector) (STL-CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::vector::operator<
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator< member [STL/CLR]
 ms.assetid: 41fbd028-e937-4337-9429-57e79a993eef
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 0ab6a99abacda1fb84a22abc4d8163ed5847fbce
+
 ---
 # operator&lt; (vector) (STL/CLR)
 Vector less than comparison.  
@@ -113,3 +117,8 @@ int main()
  [operator>= (vector) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
  [operator> (vector) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)   
  [operator<= (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+
