@@ -1,38 +1,42 @@
 ---
-title: "SOCKADDR Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SOCKADDR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SOCKADDR structure"
+title: SOCKADDR Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SOCKADDR
+dev_langs:
+- C++
+helpviewer_keywords:
+- SOCKADDR structure
 ms.assetid: df1ed66a-f4b8-43f8-8db8-8c2533d25f68
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f6aceb751a7e7ab598fed510ce1061cf01c9bebf
+
 ---
 # SOCKADDR Structure
 The `SOCKADDR` structure is used to store an Internet Protocol (IP) address for a machine participating in a Windows Sockets communication.  
@@ -64,4 +68,10 @@ struct sockaddr {
  [SOCKADDR_IN Structure](../../mfc/reference/sockaddr-in-structure.md)   
  [CAsyncSocket::Create](../../mfc/reference/casyncsocket-class.md#casyncsocket__create)   
  [CSocket::Create](../../mfc/reference/csocket-class.md#csocket__create)
+
+
+
+
+<!--HONumber=Jan17_HO2-->
+
 

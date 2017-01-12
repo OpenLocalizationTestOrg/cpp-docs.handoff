@@ -1,43 +1,47 @@
 ---
-title: "Checked Iterators | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_SECURE_SCL"
-  - "_SECURE_SCL_THROWS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Safe Libraries"
-  - "Safe Libraries, Standard C++ Library"
-  - "Safe Standard C++ Library"
-  - "iterators, checked"
-  - "checked iterators"
+title: Checked Iterators | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _SECURE_SCL
+- _SECURE_SCL_THROWS
+dev_langs:
+- C++
+helpviewer_keywords:
+- Safe Libraries
+- Safe Libraries, Standard C++ Library
+- Safe Standard C++ Library
+- iterators, checked
+- checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: d5bdf6b7ea0fb279cd22e6c42cddd7eca8a132fc
+
 ---
 # Checked Iterators
 Checked iterators ensure that the bounds of your container are not overwritten.  
@@ -242,4 +246,10 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 ## See Also  
  [STL Overview](../standard-library/cpp-standard-library-overview.md)   
  [Debug Iterator Support](../standard-library/debug-iterator-support.md)
+
+
+
+
+<!--HONumber=Jan17_HO2-->
+
 

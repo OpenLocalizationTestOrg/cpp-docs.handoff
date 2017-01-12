@@ -1,46 +1,50 @@
 ---
-title: "FreeLibrary and AfxFreeLibrary | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FreeLibrary"
-  - "AfxFreeLibrary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extension DLLs [C++], unloading"
-  - "AfxFreeLibrary method"
-  - "unloading DLLs"
-  - "FreeLibrary method"
-  - "DLLs [C++], linking"
-  - "explicit linking [C++]"
-  - "DLLs [C++], unloading"
+title: FreeLibrary and AfxFreeLibrary | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FreeLibrary
+- AfxFreeLibrary
+dev_langs:
+- C++
+helpviewer_keywords:
+- extension DLLs [C++], unloading
+- AfxFreeLibrary method
+- unloading DLLs
+- FreeLibrary method
+- DLLs [C++], linking
+- explicit linking [C++]
+- DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: b6daea3ba8a9cef86aa31f7f688cebb421f021e9
+
 ---
 # FreeLibrary and AfxFreeLibrary
 Processes that explicitly link to a DLL call the [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) function when the DLL module is no longer needed. This function decrements the module's reference count and, if the reference count is zero, unmaps it from the address space of the process.  
@@ -63,3 +67,8 @@ Processes that explicitly link to a DLL call the [FreeLibrary](http://go.microso
  [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)   
  [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
  [AfxFreeLibrary](http://msdn.microsoft.com/Library/0e06e292-710b-402f-9692-2cdcbab306f9)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

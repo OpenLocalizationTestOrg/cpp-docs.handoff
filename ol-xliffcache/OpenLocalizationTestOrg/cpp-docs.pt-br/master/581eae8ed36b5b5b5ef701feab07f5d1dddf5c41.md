@@ -1,39 +1,43 @@
 ---
-title: "Templates (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "template"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "templates, C++"
-  - "templates"
+title: Templates (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- template
+dev_langs:
+- C++
+helpviewer_keywords:
+- templates, C++
+- templates
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: 581eae8ed36b5b5b5ef701feab07f5d1dddf5c41
+
 ---
 # Templates (C++)
 Templates are the basis for generic programming in C++. As a strongly-typed language, C++ requires all variables to have a specific type, either explicitly declared by the programmer or deduced by the compiler. However, many data structures and algorithms look the same no matter what type they are operating on. Templates enable you to define the operations of a class or function, and let the user specify what concrete types those operations should work on.  
@@ -240,3 +244,8 @@ MyMap<string, MyClass> classes2; // uses the partial specialization
  A template can have any number of specializations as long as each specialized type parameter is unique.   Only class templates may be partially specialized. All complete and partial specializations of a template must be declared in the same namespace as the original template.  
   
  For more information, see [Template Specialization](../cpp/template-specialization-cpp.md).
+
+
+<!--HONumber=Jan17_HO2-->
+
+

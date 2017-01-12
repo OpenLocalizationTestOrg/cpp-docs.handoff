@@ -1,38 +1,42 @@
 ---
-title: "__shiftright128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__shiftright128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__shiftright128 intrinsic"
+title: __shiftright128 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __shiftright128
+dev_langs:
+- C++
+helpviewer_keywords:
+- __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 52340eecfc264aca2d17dab805edfe9cfff34c8c
+
 ---
 # __shiftright128
 **Microsoft Specific**  
@@ -42,10 +46,10 @@ translation.priority.ht:
 ## Syntax  
   
 ```  
-unsigned __int64 __shiftright128(   
-   unsigned __int64 LowPart,   
-   unsigned __int64 HighPart,   
-   unsigned char Shift   
+unsigned __int64 __shiftright128(   
+   unsigned __int64 LowPart,   
+   unsigned __int64 HighPart,   
+   unsigned char Shift   
 );  
 ```  
   
@@ -81,3 +85,8 @@ unsigned __int64 __shiftright128( 
 ## See Also  
  [__shiftleft128](../intrinsics/shiftleft128.md)   
  [Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

@@ -1,34 +1,38 @@
 ---
-title: "Porting Guide: COM Spy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'Porting Guide: COM Spy | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: aec7ba33643e1efc5402ab7ce99febf3dc6d23e5
+
 ---
 # Porting Guide: COM Spy
 This topic is the second in a series of articles that demonstrates the process of upgrading older Visual C++ projects to the latest version of Visual Studio. The example code in this topic was last compiled with Visual Studio 2005.  
@@ -188,3 +192,8 @@ private void button1_Click(object sender, EventArgs e)
  [Porting and Upgrading: Examples and Case Studies](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [Next Example: Spy++](../porting/porting-guide-spy-increment.md)   
  [Previous Example: MFC Scribble](../porting/porting-guide-mfc-scribble.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+
