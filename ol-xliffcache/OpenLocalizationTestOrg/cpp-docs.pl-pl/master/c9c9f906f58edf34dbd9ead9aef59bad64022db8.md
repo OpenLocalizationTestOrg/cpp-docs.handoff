@@ -1,40 +1,44 @@
 ---
-title: "IAtlMemMgr Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IAtlMemMgr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IAtlMemMgr class"
-  - "memory, managing"
-  - "memory, memory manager"
+title: IAtlMemMgr Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IAtlMemMgr
+dev_langs:
+- C++
+helpviewer_keywords:
+- IAtlMemMgr class
+- memory, managing
+- memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 89790d1a56f64e6479ae32d72c529142ba8df1de
+ms.openlocfilehash: c9c9f906f58edf34dbd9ead9aef59bad64022db8
+
 ---
 # IAtlMemMgr Class
 This class represents the interface to a memory manager.  
@@ -819,3 +823,9 @@ STDMETHOD(CreateControlLicEx)(LPCOLESTR lpszTricsData,
   
 ## See Also  
  [Class Overview](../../atl/atl-class-overview.md)
+
+
+
+<!--HONumber=Jan17_HO2-->
+
+

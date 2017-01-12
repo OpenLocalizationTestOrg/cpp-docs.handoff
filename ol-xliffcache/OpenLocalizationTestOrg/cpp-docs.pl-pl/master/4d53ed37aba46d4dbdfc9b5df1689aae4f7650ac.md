@@ -1,43 +1,47 @@
 ---
-title: "CAsyncSocket Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CAsyncSocket"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "network communications"
-  - "asynchronous Windows Sockets"
-  - "CAsyncSocket class"
-  - "Windows Sockets [C++], asynchronous"
-  - "communications [C++], network"
-  - "sockets [C++], Windows"
+title: CAsyncSocket Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CAsyncSocket
+dev_langs:
+- C++
+helpviewer_keywords:
+- network communications
+- asynchronous Windows Sockets
+- CAsyncSocket class
+- Windows Sockets [C++], asynchronous
+- communications [C++], network
+- sockets [C++], Windows
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 6b918be24aba52d6143e8f98dd529a8ec9f196aa
+ms.openlocfilehash: 4d53ed37aba46d4dbdfc9b5df1689aae4f7650ac
+
 ---
 # CAsyncSocket Class
 Represents a Windows Socket — an endpoint of network communication.  
@@ -1672,3 +1676,9 @@ BOOL Socket(
  [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CSocket Class](../../mfc/reference/csocket-class.md)   
  [CSocketFile Class](../../mfc/reference/csocketfile-class.md)
+
+
+
+<!--HONumber=Jan17_HO2-->
+
+

@@ -1,41 +1,45 @@
 ---
-title: "Recordset: How Recordsets Select Records (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "recordsets, selecting records"
-  - "record selection, ODBC recordsets"
-  - "SQL statements, recordset"
-  - "records, selecting"
-  - "recordsets, constructing SQL statements"
-  - "ODBC recordsets, selecting records"
+title: 'Recordset: How Recordsets Select Records (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- recordsets, selecting records
+- record selection, ODBC recordsets
+- SQL statements, recordset
+- records, selecting
+- recordsets, constructing SQL statements
+- ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: d1cecbad0d8dbb8bba6dee6ee92409797cfa34bc
+
 ---
 # Recordset: How Recordsets Select Records (ODBC)
 This topic applies to the MFC ODBC classes.  
@@ -120,3 +124,8 @@ This topic applies to the MFC ODBC classes.
  [ODBC Basics](../../data/odbc/odbc-basics.md)   
  [SQL](../../data/odbc/sql.md)   
  [Recordset: Locking Records (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

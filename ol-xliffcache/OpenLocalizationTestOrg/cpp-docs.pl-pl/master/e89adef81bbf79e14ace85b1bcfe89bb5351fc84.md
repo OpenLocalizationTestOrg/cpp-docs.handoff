@@ -1,34 +1,38 @@
 ---
-title: "Adding a Property to the Control (ATL Tutorial, Part 3) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: Adding a Property to the Control (ATL Tutorial, Part 3) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs:
+- C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: e89adef81bbf79e14ace85b1bcfe89bb5351fc84
+
 ---
 # Adding a Property to the Control (ATL Tutorial, Part 3)
 `IPolyCtl` is the interface that contains the control's custom methods and properties, and you will add a property to it.  
@@ -77,4 +81,10 @@ translation.priority.ht:
   
 ## See Also  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)
+
+
+
+
+<!--HONumber=Jan17_HO2-->
+
 
