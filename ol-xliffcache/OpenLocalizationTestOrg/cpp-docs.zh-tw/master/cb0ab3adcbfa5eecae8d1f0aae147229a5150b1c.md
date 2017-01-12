@@ -1,45 +1,41 @@
 ---
-title: -Zs (Syntax Check Only) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- /zs
-dev_langs:
-- C++
-helpviewer_keywords:
-- -Zs compiler option [C++]
-- Syntax Check Only compiler option
-- Zs compiler option
-- /Zs compiler option [C++]
+title: "-Zs (Syntax Check Only) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "/zs"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "-Zs compiler option [C++]"
+  - "Syntax Check Only compiler option"
+  - "Zs compiler option"
+  - "/Zs compiler option [C++]"
 ms.assetid: b4b41e6a-3f41-4d09-9cb6-fde5aa2cfecf
 caps.latest.revision: 9
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9dee257bec0f09bd729bf10c4a1468ecb20dfa61
-ms.openlocfilehash: cb0ab3adcbfa5eecae8d1f0aae147229a5150b1c
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # /Zs (Syntax Check Only)
 Tells the compiler to check only the syntax of the source files on the command line.  
@@ -72,8 +68,3 @@ Tells the compiler to check only the syntax of the source files on the command l
 ## See Also  
  [Compiler Options](../../build/reference/compiler-options.md)   
  [Setting Compiler Options](../../build/reference/setting-compiler-options.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

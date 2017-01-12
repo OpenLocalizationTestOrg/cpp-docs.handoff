@@ -1,41 +1,37 @@
 ---
-title: Design Principles for Collection and Enumerator Interfaces | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- enumerator interfaces
-- collection interfaces
+title: "Design Principles for Collection and Enumerator Interfaces | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "enumerator interfaces"
+  - "collection interfaces"
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
 caps.latest.revision: 10
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c7bb9505ae4f780e5791dbb0e0a5e19affbec0ba
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Design Principles for Collection and Enumerator Interfaces
 There are different design principles behind each type of interface:  
@@ -48,10 +44,4 @@ There are different design principles behind each type of interface:
   
 ## See Also  
  [Collections and Enumerators](../atl/atl-collections-and-enumerators.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

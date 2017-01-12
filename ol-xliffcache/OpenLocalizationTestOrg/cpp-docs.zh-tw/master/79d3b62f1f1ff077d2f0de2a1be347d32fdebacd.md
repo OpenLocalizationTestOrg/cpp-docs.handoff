@@ -1,50 +1,46 @@
 ---
-title: -GF (Eliminate Duplicate Strings) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- VC.Project.VCCLCompilerTool.StringPooling
-- VC.Project.VCCLWCECompilerTool.StringPooling
-- /gf
-dev_langs:
-- C++
-helpviewer_keywords:
-- duplicate strings
-- Eliminate Duplicate Strings compiler option [C++]
-- pooling strings compiler option [C++]
-- -GF compiler option [C++]
-- /GF compiler option [C++]
-- GF compiler option [C++]
-- strings [C++], pooling
+title: "-GF (Eliminate Duplicate Strings) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "VC.Project.VCCLCompilerTool.StringPooling"
+  - "VC.Project.VCCLWCECompilerTool.StringPooling"
+  - "/gf"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "duplicate strings"
+  - "Eliminate Duplicate Strings compiler option [C++]"
+  - "pooling strings compiler option [C++]"
+  - "-GF compiler option [C++]"
+  - "/GF compiler option [C++]"
+  - "GF compiler option [C++]"
+  - "strings [C++], pooling"
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
 caps.latest.revision: 17
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9dee257bec0f09bd729bf10c4a1468ecb20dfa61
-ms.openlocfilehash: 79d3b62f1f1ff077d2f0de2a1be347d32fdebacd
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # /GF (Eliminate Duplicate Strings)
 Enables the compiler to create a single copy of identical strings in the program image and in memory during execution. This is an optimization called *string pooling* that can create smaller programs.  
@@ -92,8 +88,3 @@ char *t = "This is a character buffer";
 ## See Also  
  [Compiler Options](../../build/reference/compiler-options.md)   
  [Setting Compiler Options](../../build/reference/setting-compiler-options.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

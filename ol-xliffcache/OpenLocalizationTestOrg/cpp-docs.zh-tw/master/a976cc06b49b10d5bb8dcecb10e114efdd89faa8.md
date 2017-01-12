@@ -1,20 +1,16 @@
 ---
-title: Concurrency namespace functions (AMP) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Concurrency namespace functions (AMP) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 caps.latest.revision: 9
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: a976cc06b49b10d5bb8dcecb10e114efdd89faa8
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
 # Concurrency namespace functions (AMP)
 ||||  
@@ -664,9 +660,3 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
   
 ## See Also  
  [Concurrency Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

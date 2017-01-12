@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">84d830ccbdb2af19dab5404d022f5e42831a68d0</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\static-cast-operator.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3595f093ba46c1ed5ce9f9a319291983431068b3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">81cd93f11a8bf83d136d73f293355f39a9e7b6ea</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>static_cast Operator | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>static_cast Operator</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Converts an <bpt id="p1">*</bpt>expression<ept id="p1">*</ept> to the type of <bpt id="p2">*</bpt>type-id,<ept id="p2">*</ept> based only on the types that are present in the expression.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In standard C++, no run-time type check is made to help ensure the safety of the conversion.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In C++/CX, a compile time and runtime check are performed.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Casting<ept id="p1">](http://msdn.microsoft.com/Library/5247f6c7-6a0a-4021-97c9-21c868bd9455)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`static_cast`</ph> operator can be used for operations such as converting a pointer to a base class to a pointer to a derived class.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Such conversions are not always safe.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In general you use <ph id="ph1">`static_cast`</ph> when you want to convert numeric data types such as enums to ints or ints to floats, and you are certain of the data types involved in the conversion.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>conversions are not as safe as <ph id="ph1">`dynamic_cast`</ph> conversions, because <ph id="ph2">`static_cast`</ph> does no run-time type check, while <ph id="ph3">`dynamic_cast`</ph> does.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`dynamic_cast`</ph> to an ambiguous pointer will fail, while a <ph id="ph2">`static_cast`</ph> returns as if nothing were wrong; this can be dangerous.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Although <ph id="ph1">`dynamic_cast`</ph> conversions are safer, <ph id="ph2">`dynamic_cast`</ph> only works on pointers or references, and the run-time type check is an overhead.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>dynamic_cast Operator<ept id="p1">](../cpp/dynamic-cast-operator.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In the example that follows, the line <ph id="ph1">`D* pd2 = static_cast&lt;D*&gt;(pb);`</ph> is not safe because <ph id="ph2">`D`</ph> can have fields and methods that are not in <ph id="ph3">`B`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>However, the line <ph id="ph1">`B* pb2 = static_cast&lt;B*&gt;(pd);`</ph> is a safe conversion because <ph id="ph2">`D`</ph> always contains all of <ph id="ph3">`B`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In contrast to <bpt id="p1">[</bpt>dynamic_cast<ept id="p1">](../cpp/dynamic-cast-operator.md)</ept>, no run-time check is made on the <ph id="ph1">`static_cast`</ph> conversion of <ph id="ph2">`pb`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The object pointed to by <ph id="ph1">`pb`</ph> may not be an object of type <ph id="ph2">`D`</ph>, in which case the use of <ph id="ph3">`*pd2`</ph> could be disastrous.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For instance, calling a function that is a member of the <ph id="ph1">`D`</ph> class, but not the <ph id="ph2">`B`</ph> class, could result in an access violation.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`dynamic_cast`</ph> and <ph id="ph2">`static_cast`</ph> operators move a pointer throughout a class hierarchy.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>However, <ph id="ph1">`static_cast`</ph> relies exclusively on the information provided in the cast statement and can therefore be unsafe.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`pb`</ph> really points to an object of type <ph id="ph2">`D`</ph>, then <ph id="ph3">`pd1`</ph> and <ph id="ph4">`pd2`</ph> will get the same value.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>They will also get the same value if <ph id="ph1">`pb == 0`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`pb`</ph> points to an object of type <ph id="ph2">`B`</ph> and not to the complete <ph id="ph3">`D`</ph> class, then <ph id="ph4">`dynamic_cast`</ph> will know enough to return zero.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>However, <ph id="ph1">`static_cast`</ph> relies on the programmer's assertion that <ph id="ph2">`pb`</ph> points to an object of type <ph id="ph3">`D`</ph> and simply returns a pointer to that supposed <ph id="ph4">`D`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Consequently, <ph id="ph1">`static_cast`</ph> can do the inverse of implicit conversions, in which case the results are undefined.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>It is left to the programmer to verify that the results of a <ph id="ph1">`static_cast`</ph> conversion are safe.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>This behavior also applies to types other than class types.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>For instance, <ph id="ph1">`static_cast`</ph> can be used to convert from an int to a <ph id="ph2">`char`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>However, the resulting <ph id="ph1">`char`</ph> may not have enough bits to hold the entire <ph id="ph2">`int`</ph> value.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Again, it is left to the programmer to verify that the results of a<ph id="ph1">`static_cast`</ph> conversion are safe.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`static_cast`</ph> operator can also be used to perform any implicit conversion, including standard conversions and user-defined conversions.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`static_cast`</ph> operator can explicitly convert an integral value to an enumeration type.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If the value of the integral type does not fall within the range of enumeration values, the resulting enumeration value is undefined.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`static_cast`</ph> operator converts a null pointer value to the null pointer value of the destination type.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Any expression can be explicitly converted to type void by the <ph id="ph1">`static_cast`</ph> operator.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The destination void type can optionally include the <ph id="ph1">`const`</ph>, <ph id="ph2">`volatile`</ph>, or <ph id="ph3">`__unaligned`</ph> attribute.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`static_cast`</ph> operator cannot cast away the <ph id="ph2">`const`</ph>, <ph id="ph3">`volatile`</ph>, or <ph id="ph4">`__unaligned`</ph> attributes.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>const_cast Operator<ept id="p1">](../cpp/const-cast-operator.md)</ept> for information on removing these attributes.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Due to the danger of performing unchecked casts on top of a relocating garbage collector, the use of <ph id="ph1">`static_cast`</ph> should only be in performance-critical code when you are certain it will work correctly.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>If you must use <ph id="ph1">`static_cast`</ph> in release mode, substitute it with <bpt id="p1">[</bpt>safe_cast<ept id="p1">](../windows/safe-cast-cpp-component-extensions.md)</ept> in your debug builds to ensure success.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Casting Operators</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Keywords</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">24f834335174057d4e854dd33c0e12ca18b239d7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\storage-class-specifiers-for-external-level-declarations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1b537fbef54f652cfc85452e4714b21c4e3bdc91</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">46cdbdd97f40f5d5aab2f68f8734f33a188b34f4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Storage-Class Specifiers for External-Level Declarations | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Storage-Class Specifiers for External-Level Declarations</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>External variables are variables at file scope.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>They are defined outside any function, and they are potentially available to many functions.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Functions can only be defined at the external level and, therefore, cannot be nested.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>By default, all references to external variables and functions of the same name are references to the same object, which means they have "external linkage."</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>(You can use the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> keyword to override this.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>See information later in this section for more details on <bpt id="p1">**</bpt>static<ept id="p1">**</ept>.)</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Variable declarations at the external level are either definitions of variables ("defining declarations"), or references to variables defined elsewhere ("referencing declarations").</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>An external variable declaration that also initializes the variable (implicitly or explicitly) is a defining declaration of the variable.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A definition at the external level can take several forms:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A variable that you declare with the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> storage-class specifier.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>You can explicitly initialize the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> variable with a constant expression, as described in <bpt id="p2">[</bpt>Initialization<ept id="p2">](../c-language/initialization.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If you omit the initializer, the variable is initialized to 0 by default.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For example, these two statements are both considered definitions of the variable <ph id="ph1">`k`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A variable that you explicitly initialize at the external level.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For example, <ph id="ph1">`int j = 3;`</ph> is a definition of the variable <ph id="ph2">`j`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In variable declarations at the external level (that is, outside all functions), you can use the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> or <ph id="ph1">`extern`</ph> storage-class specifier or omit the storage-class specifier entirely.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You cannot use the <bpt id="p1">**</bpt>auto<ept id="p1">**</ept> and <bpt id="p2">**</bpt>register<ept id="p2">**</ept> <bpt id="p3">*</bpt>storage-class-specifier<ept id="p3">*</ept> terminals at the external level.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Once a variable is defined at the external level, it is visible throughout the rest of the translation unit.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The variable is not visible prior to its declaration in the same source file.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Also, it is not visible in other source files of the program, unless a referencing declaration makes it visible, as described below.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The rules relating to <bpt id="p1">**</bpt>static<ept id="p1">**</ept> include:</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Variables declared outside all blocks without the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> keyword always retain their values throughout the program.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>To restrict their access to a particular translation unit, you must use the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> keyword.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This gives them "internal linkage."</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To make them global to an entire program, omit the explicit storage class or use the keyword <ph id="ph1">`extern`</ph> (see the rules in the next list).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>This gives them "external linkage."</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Internal and external linkage are also discussed in <bpt id="p1">[</bpt>Linkage<ept id="p1">](../c-language/linkage.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>You can define a variable at the external level only once within a program.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You can define another variable with the same name and the <bpt id="p1">**</bpt>static<ept id="p1">**</ept> storage-class specifier in a different translation unit.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Since each <bpt id="p1">**</bpt>static<ept id="p1">**</ept> definition is visible only within its own translation unit, no conflict occurs.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This provides a useful way to hide identifier names that must be shared among functions of a single translation unit, but not visible to other translation units.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>static<ept id="p1">**</ept> storage-class specifier can apply to functions as well.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If you declare a function <bpt id="p1">**</bpt>static<ept id="p1">**</ept>, its name is invisible outside of the file in which it is declared.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The rules for using <ph id="ph1">`extern`</ph> are:</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`extern`</ph> storage-class specifier declares a reference to a variable defined elsewhere.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You can use an <ph id="ph1">`extern`</ph> declaration to make a definition in another source file visible, or to make a variable visible prior to its definition in the same source file.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Once you have declared a reference to the variable at the external level, the variable is visible throughout the remainder of the translation unit in which the declared reference occurs.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>For an <ph id="ph1">`extern`</ph> reference to be valid, the variable it refers to must be defined once, and only once, at the external level.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>This definition (without the <ph id="ph1">`extern`</ph> storage class) can be in any of the translation units that make up the program.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The example below illustrates external declarations:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>The two source files in this example contain a total of three external declarations of <ph id="ph1">`i`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Only one declaration is a "defining declaration."</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>That declaration,</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>defines the global variable <ph id="ph1">`i`</ph> and initializes it with initial value 3.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The "referencing" declaration of <ph id="ph1">`i`</ph> at the top of the first source file using <ph id="ph2">`extern`</ph> makes the global variable visible prior to its defining declaration in the file.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The referencing declaration of <ph id="ph1">`i`</ph> in the second source file also makes the variable visible in that source file.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>If a defining instance for a variable is not provided in the translation unit, the compiler assumes there is an</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>referencing declaration and that a defining reference</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>appears in another translation unit of the program.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>All three functions, <ph id="ph1">`main`</ph>, <ph id="ph2">`next`</ph>, and <ph id="ph3">`other`</ph>, perform the same task: they increase <ph id="ph4">`i`</ph> and print it.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The values 4, 5, and 6 are printed.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>If the variable <ph id="ph1">`i`</ph> had not been initialized, it would have been set to 0 automatically.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>In this case, the values 1, 2, and 3 would have been printed.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>Initialization<ept id="p1">](../c-language/initialization.md)</ept> for information about variable initialization.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>C Storage Classes</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

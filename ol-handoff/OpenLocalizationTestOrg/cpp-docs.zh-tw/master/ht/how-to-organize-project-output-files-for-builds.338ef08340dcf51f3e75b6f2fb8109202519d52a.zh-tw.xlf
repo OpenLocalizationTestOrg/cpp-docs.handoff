@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-tw">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">03d6b3297790d364695807156d2d4b804f7ce755</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\ide\how-to-organize-project-output-files-for-builds.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">af5d7eecc6c17cad064c9a1ea5d9b285e1aa6b77</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">aeb5f18e1dcf75184d155d9a947f3649ffb3e2c0</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Organize Project Output Files for Builds | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Organize Project Output Files for Builds</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic describes best practices for organizing project output files.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Build errors can occur when you set up project output files incorrectly.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This topic also outlines the advantages and disadvantages of each alternative for organizing your project output files.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Referencing CLR Assemblies</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>To reference assemblies with #using</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You can reference an assembly directly from your code by using the #using directive, such as <ph id="ph1">`#using &lt;System.Data.dll&gt;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>#using Directive<ept id="p1">](../preprocessor/hash-using-directive-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The file specified can be a .dll, .exe, .netmodule, or .obj, as long as it is in MSIL.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The referenced component can be built in any language.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Using this option, you will have access to Intellisense since the metadata will be extracted from the MSIL.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The file in question must be in the path for the project; otherwise, the project will not compile and Intellisense will not be available.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>An easy way to determine whether the file is in the path is to right-click on the #using line and choose the <bpt id="p1">**</bpt>Open document<ept id="p1">**</ept> command.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>You will be notified if the file cannot be found.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>If you do not want to put the full path to the file, you can use the <bpt id="p1">**</bpt>/AI<ept id="p1">**</ept> compiler option to edit the search path for #using references.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/AI (Specify Metadata Directories)<ept id="p1">](../build/reference/ai-specify-metadata-directories.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>To reference assemblies with /FU</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Instead of referencing an assembly directly from a code file as described above, you can use the <bpt id="p1">**</bpt>/FU<ept id="p1">**</ept> compiler option.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The advantage to this method is that you do not have to add a separate #using statement to every file that references a given assembly.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To set this option, open the <bpt id="p1">**</bpt>Properties Pages<ept id="p1">**</ept> for the project.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Expand the <bpt id="p1">**</bpt>Configuration Properties<ept id="p1">**</ept> node, and then expand the <bpt id="p2">**</bpt>C/C++<ept id="p2">**</ept> node and select <bpt id="p3">**</bpt>Advanced<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Add the desired assemblies next to <bpt id="p1">**</bpt>Force #using<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/FU (Name Forced #using File)<ept id="p1">](../build/reference/fu-name-forced-hash-using-file.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>To reference assemblies with Add New Reference</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This is the easiest way to use CLR assemblies.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>First, make sure the project is compiled with the <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> compiler option.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Then, right click the project from the <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept> and select <bpt id="p2">**</bpt>Add<ept id="p2">**</ept>, <bpt id="p3">**</bpt>References<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog will appear.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>From the <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog, select <bpt id="p2">**</bpt>Add New Reference<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>A dialog will appear listing all .NET, COM, and other assemblies available in the current project.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Select the desired assembly and click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Once a project reference is set, the corresponding dependencies are automatically handled.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>In addition, since metadata is part of an assembly, there is no need to add a header file or prototype the elements that are being used from managed assemblies.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Referencing Native DLLs or Static Libraries</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>To reference native DLLs or static libraries</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Reference the appropriate header file in your code using the #include directive.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The header file must be in the include path or part of the current project.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>#include Directive (C/C++)<ept id="p1">](../preprocessor/hash-include-directive-c-cpp.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>You can also set project dependencies.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Setting project dependencies guarantees two things.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>First, it ensures that projects are built in the right order so that a project can always find the dependent files it needs.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Second, it implicitly adds the dependent project’s output directory to the path so that files can be found easily at link-time.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>To deploy the application, you will need to place the DLL in an appropriate place.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This can be one of the following:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The same path as the executable.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Anywhere in the system path (the <bpt id="p1">**</bpt>path<ept id="p1">**</ept> environment variable).</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>In the side-by-side assembly.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Building C/C++ Side-by-side Assemblies<ept id="p1">](../build/building-c-cpp-side-by-side-assemblies.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Working with Multiple Projects</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>By default, projects are built such that all output files are created in a subdirectory of the project directory.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The directory is named based on the build configuration (e.g. Debug or Release).</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>In order for sibling projects to refer to each other, each project must explicitly add the other project output directories to their path in order for linking to succeed.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>This is done automatically when you set the project dependencies.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>However, if you do not use dependencies, you must carefully handle this because builds can become very difficult to manage.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For example, when a project has Debug and Release configurations, and it includes an external library from a sibling project, it should use a different library file depending on which configuration is being built.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Thus, hard-coding these paths can be tricky.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>All essential output files (such as executables, incremental linker files, and PDB files) are copied into a common solution directory.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Thus, when working with a solution that contains a number of C++ projects with equivalent configurations, all the output files are centralized for simplified linking and deployment.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>You can be sure that their application/library will work as expected if they keep those files together (since the files are guaranteed to be in the path).</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The location of output files can be a major issue when deploying to a production environment.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>While running projects in the IDE, the paths to included libraries are not necessarily the same as in the production environment.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>For example, if you have <ph id="ph1">`#using "../../lib/debug/mylib.dll"`</ph> in your code but then deploy mylib.dll into a different relative position, the application will fail at runtime.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>To prevent this, you should avoid using relative paths in #include statements in your code.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>It is better to ensure that the necessary files are in the project build path and similarly ensuring that the corresponding production files are properly placed.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>How to specify where output files go</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>The location of project output settings can be found in the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Expand the node next to <bpt id="p1">**</bpt>Configuration Properties<ept id="p1">**</ept> and select <bpt id="p2">**</bpt>General<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The output location is specified next to <bpt id="p1">**</bpt>Output Directory<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>General Property Page (Project)<ept id="p1">](../ide/general-property-page-project.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Visual C++ Project Types</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
