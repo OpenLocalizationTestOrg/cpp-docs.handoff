@@ -1,41 +1,37 @@
 ---
-title: lock_guard Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- mutex/std::lock_guard
-dev_langs:
-- C++
+title: "lock_guard Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "mutex/std::lock_guard"
+dev_langs: 
+  - "C++"
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
 caps.latest.revision: 9
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2ed9af0142dde5a68aaf1dae4dce94b4e4e61cf6
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # lock_guard Class
 Represents a template that can be instantiated to create an object whose destructor unlocks a `mutex`.  
@@ -102,11 +98,5 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
  [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
-
-
-
-
-
-<!--HONumber=Jan17_HO2-->
 
 
