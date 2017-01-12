@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9822def5bf02f57d9903b7bb20249da677a5c049</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\windows-sockets-byte-ordering.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">87fa33d167426ecac1ea383605314b2cf7af3a42</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">41ab8a73575d6a7e84eae68affe963b4118d7a34</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Byte Ordering | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Byte Ordering</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article and two companion articles explain several issues in Windows Sockets programming.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This article covers byte ordering.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The other issues are covered in the articles: <bpt id="p1">[</bpt>Windows Sockets: Blocking<ept id="p1">](../mfc/windows-sockets-blocking.md)</ept> and <bpt id="p2">[</bpt>Windows Sockets: Converting Strings<ept id="p2">](../mfc/windows-sockets-converting-strings.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If you use or derive from class <bpt id="p1">[</bpt>CAsyncSocket<ept id="p1">](../mfc/reference/casyncsocket-class.md)</ept>, you will need to manage these issues yourself.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If you use or derive from class <bpt id="p1">[</bpt>CSocket<ept id="p1">](../mfc/reference/csocket-class.md)</ept>, MFC manages them for you.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Byte Ordering</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Different machine architectures sometimes store data using different byte orders.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For example, Intel-based machines store data in the reverse order of Macintosh (Motorola) machines.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The Intel byte order, called "little-Endian," is also the reverse of the network standard "big-Endian" order.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The following table explains these terms.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Big- and Little-Endian Byte Ordering</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Byte ordering</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Meaning</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Big-Endian</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The most significant byte is on the left end of a word.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Little-Endian</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The most significant byte is on the right end of a word.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Typically, you do not have to worry about byte-order conversion for data that you send and receive over the network, but there are situations in which you must convert byte orders.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>When You Must Convert Byte Orders</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>You need to convert byte orders in the following situations:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You are passing information that needs to be interpreted by the network, as opposed to the data you are sending to another machine.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For example, you might pass ports and addresses, which the network must understand.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The server application with which you are communicating is not an MFC application (and you do not have source code for it).</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This calls for byte order conversions if the two machines do not share the same byte ordering.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>When You Do Not Have to Convert Byte Orders</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>You can avoid the work of converting byte orders in the following situations:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The machines on both ends can agree not to swap bytes, and both machines use the same byte order.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The server you are communicating with is an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You have source code for the server you're communicating with, so you can tell explicitly whether you must convert byte orders or not.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>You can port the server to MFC.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This is fairly easy to do, and the result is usually smaller, faster code.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Working with <bpt id="p1">[</bpt>CAsyncSocket<ept id="p1">](../mfc/reference/casyncsocket-class.md)</ept>, you must manage any necessary byte-order conversions yourself.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Windows Sockets standardizes the "big-Endian" byte-order model and provides functions to convert between this order and others.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>CArchive<ept id="p1">](../mfc/reference/carchive-class.md)</ept>, however, which you use with <bpt id="p2">[</bpt>CSocket<ept id="p2">](../mfc/reference/csocket-class.md)</ept>, uses the opposite ("little-Endian") order, but <ph id="ph1">`CArchive`</ph> takes care of the details of byte-order conversions for you.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>By using this standard ordering in your applications, or using Windows Sockets byte-order conversion functions, you can make your code more portable.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The ideal case for using MFC sockets is when you are writing both ends of the communication: using MFC at both ends.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>If you are writing an application that will communicate with non-MFC applications, such as an FTP server, you will probably need to manage byte-swapping yourself before you pass data to the archive object, using the Windows Sockets conversion routines <bpt id="p1">**</bpt>ntohs<ept id="p1">**</ept>, <bpt id="p2">**</bpt>ntohl<ept id="p2">**</ept>, <bpt id="p3">**</bpt>htons<ept id="p3">**</ept>, and <bpt id="p4">**</bpt>htonl<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>An example of these functions used in communicating with a non-MFC application appears later in this article.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>When the other end of the communication is not an MFC application, you also must avoid streaming C++ objects derived from <ph id="ph1">`CObject`</ph> into your archive because the receiver will not be able to handle them.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>See the note in <bpt id="p1">[</bpt>Windows Sockets: Using Sockets with Archives<ept id="p1">](../mfc/windows-sockets-using-sockets-with-archives.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For more information about byte orders, see the Windows Sockets specification, available in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>A Byte-Order Conversion Example</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The following example shows a serialization function for a <ph id="ph1">`CSocket`</ph> object that uses an archive.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>It also illustrates using the byte-order conversion functions in the Windows Sockets API.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>This example presents a scenario in which you are writing a client that communicates with a non-MFC server application for which you have no access to the source code.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>In this scenario, you must assume that the non-MFC server uses standard network byte order.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>In contrast, your MFC client application uses a <ph id="ph1">`CArchive`</ph> object with a <ph id="ph2">`CSocket`</ph> object, and <ph id="ph3">`CArchive`</ph> uses "little-Endian" byte order, the opposite of the network standard.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Suppose the non-MFC server with which you plan to communicate has an established protocol for a message packet like the following:</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSimpleSocket#5</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>In MFC terms, this would be expressed as follows:</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSimpleSocket#6</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>In C++, a <ph id="ph1">`struct`</ph> is essentially the same thing as a class.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Message`</ph> structure can have member functions, such as the <ph id="ph2">`Serialize`</ph> member function declared above.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Serialize`</ph> member function might look like this:</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>NVC_MFCSimpleSocket#7</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>This example calls for byte-order conversions of data because there is a clear mismatch between the byte ordering of the non-MFC server application on one end and the <ph id="ph1">`CArchive`</ph> used in your MFC client application on the other end.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The example illustrates several of the byte-order conversion functions that Windows Sockets supplies.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The following table describes these functions.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Windows Sockets Byte-Order Conversion Functions</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Purpose</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>ntohs</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Convert a 16-bit quantity from network byte order to host byte order (big-Endian to little-Endian).</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>ntohl</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Convert a 32-bit quantity from network byte order to host byte order (big-Endian to little-Endian).</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Htons</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Convert a 16-bit quantity from host byte order to network byte order (little-Endian to big-Endian).</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Htonl</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Convert a 32-bit quantity from host byte order to network byte order (little-Endian to big-Endian).</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Another point of this example is that when the socket application on the other end of the communication is a non-MFC application, you must avoid doing something like the following:</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>where <ph id="ph1">`pMsg`</ph> is a pointer to a C++ object derived from class <ph id="ph2">`CObject`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>This will send extra MFC information associated with objects and the server will not understand it, as it would if it were an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>For more information, see:</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Using Class CAsyncSocket</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Background</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Stream Sockets</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Windows Sockets: Datagram Sockets</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Windows Sockets in MFC</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

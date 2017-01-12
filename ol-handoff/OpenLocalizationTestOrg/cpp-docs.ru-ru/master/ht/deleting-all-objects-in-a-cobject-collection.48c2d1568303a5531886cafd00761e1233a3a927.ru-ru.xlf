@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">339ac2d27eda4f3d2dae4c2ff107550d686191a7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\deleting-all-objects-in-a-cobject-collection.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4219b3d4f62683f86a2a114325e22e0c36febe04</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8947ea78afc47d09849162daf120f4ce7b5a656a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Deleting All Objects in a CObject Collection | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Deleting All Objects in a CObject Collection</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This article explains how to delete all objects in a collection (without deleting the collection object itself).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To delete all the objects in a collection of <ph id="ph1">`CObject`</ph>s (or of objects derived from <ph id="ph2">`CObject`</ph>), you use one of the iteration techniques described in the article <bpt id="p1">[</bpt>Accessing All Members of a Collection<ept id="p1">](../mfc/accessing-all-members-of-a-collection.md)</ept> to delete each object in turn.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Objects in collections can be shared.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>That is, the collection keeps a pointer to the object, but other parts of the program may also have pointers to the same object.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You must be careful not to delete an object that is shared until all the parts have finished using the object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>This article shows you how to delete the objects in:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>A list</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>An array</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>A map</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To delete all objects in a list of pointers to CObject</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`GetHeadPosition`</ph> and <ph id="ph2">`GetNext`</ph> to iterate through the list.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> operator to delete each object as it is encountered in the iteration.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Call the <ph id="ph1">`RemoveAll`</ph> function to remove all elements from the list after the objects associated with those elements have been deleted.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The following example shows how to delete all objects from a list of <ph id="ph1">`CPerson`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Each object in the list is a pointer to a <ph id="ph1">`CPerson`</ph> object that was originally allocated on the heap.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCollections#17</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The last function call, <ph id="ph1">`RemoveAll`</ph>, is a list member function that removes all elements from the list.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The member function <ph id="ph1">`RemoveAt`</ph> removes a single element.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Notice the difference between deleting an element's object and removing the element itself.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Removing an element from the list merely removes the list's reference to the object.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The object still exists in memory.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When you delete an object, it ceases to exist and its memory is reclaimed.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Thus, it is important to remove an element immediately after the element's object has been deleted so that the list won't try to access objects that no longer exist.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>To delete all elements in an array</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`GetSize`</ph> and integer index values to iterate through the array.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> operator to delete each element as it is encountered in the iteration.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Call the <ph id="ph1">`RemoveAll`</ph> function to remove all elements from the array after they have been deleted.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The code for deleting all elements of an array is as follows:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCollections#18</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>As with the list example above, you can call <ph id="ph1">`RemoveAll`</ph> to remove all elements in an array or <ph id="ph2">`RemoveAt`</ph> to remove an individual element.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>To delete all elements in a map</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`GetStartPosition`</ph> and <ph id="ph2">`GetNextAssoc`</ph> to iterate through the array.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>delete<ept id="p1">**</ept> operator to delete the key and/or value for each map element as it is encountered in the iteration.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Call the <ph id="ph1">`RemoveAll`</ph> function to remove all elements from the map after they have been deleted.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>The code for deleting all elements of a <ph id="ph1">`CMap`</ph> collection is as follows.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Each element in the map has a string as the key and a <ph id="ph1">`CPerson`</ph> object (derived from <ph id="ph2">`CObject`</ph>) as the value.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>NVC_MFCCollections#19</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>You can call <ph id="ph1">`RemoveAll`</ph> to remove all elements in a map or <ph id="ph2">`RemoveKey`</ph> to remove an individual element with the specified key.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Accessing All Members of a Collection</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

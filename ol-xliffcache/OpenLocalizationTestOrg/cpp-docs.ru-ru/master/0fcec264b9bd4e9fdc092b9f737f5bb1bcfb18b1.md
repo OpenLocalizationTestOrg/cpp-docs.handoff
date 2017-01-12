@@ -1,41 +1,37 @@
 ---
-title: Demotion of Integers | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-- C
-helpviewer_keywords:
-- demoting integers
+title: "Demotion of Integers | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "demoting integers"
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
 caps.latest.revision: 6
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0fcec264b9bd4e9fdc092b9f737f5bb1bcfb18b1
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Demotion of Integers
 **ANSI 3.2.1.2** The result of converting an integer to a shorter signed integer, or the result of converting an unsigned integer to a signed integer of equal length, if the value cannot be represented  
@@ -60,8 +56,3 @@ char y = (char)0x1234;
   
 ## See Also  
  [Integers](../c-language/integers.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

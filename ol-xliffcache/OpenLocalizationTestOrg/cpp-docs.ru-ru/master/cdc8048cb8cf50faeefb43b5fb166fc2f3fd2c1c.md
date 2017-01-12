@@ -1,43 +1,39 @@
 ---
-title: Compiler Error C3872 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: error-reference
-f1_keywords:
-- C3872
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3872
+title: "Compiler Error C3872 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C3872"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C3872"
 ms.assetid: 519e95be-5641-40cc-894c-da4819506604
 caps.latest.revision: 11
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cdc8048cb8cf50faeefb43b5fb166fc2f3fd2c1c
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # Compiler Error C3872
 'char': this character is not allowed in an identifier  
@@ -56,8 +52,3 @@ int main() {
    int \u30A2_abc_\u3042;   // OK, UCNs in allowed range  
 }  
 ```
-
-
-<!--HONumber=Jan17_HO1-->
-
-

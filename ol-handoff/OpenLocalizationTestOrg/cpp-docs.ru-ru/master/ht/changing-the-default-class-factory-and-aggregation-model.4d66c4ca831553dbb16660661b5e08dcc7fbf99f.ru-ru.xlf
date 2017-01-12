@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0e3761d91a6ddb9109c7ef3c151c8013e129e966</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\changing-the-default-class-factory-and-aggregation-model.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">340e9a636411f66f02e7d76d16dd5e1c3929a3f9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">094a1bbc4165dd52365db35845808419fd925afb</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Changing the Default Class Factory and Aggregation Model | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Changing the Default Class Factory and Aggregation Model</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>ATL uses <bpt id="p1">[</bpt>CComCoClass<ept id="p1">](../atl/reference/ccomcoclass-class.md)</ept> to define the default class factory and aggregation model for your object.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>specifies the following two macros:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>DECLARE_CLASSFACTORY<ept id="p1">](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4)</ept> Declares the class factory to be <bpt id="p2">[</bpt>CComClassFactory<ept id="p2">](../atl/reference/ccomclassfactory-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>DECLARE_AGGREGATABLE<ept id="p1">](http://msdn.microsoft.com/library/e7e568d7-04e0-4226-b5dc-224deed229ab)</ept> Declares that your object can be aggregated.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You can override either of these defaults by specifying another macro in your class definition.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, to use <bpt id="p1">[</bpt>CComClassFactory2<ept id="p1">](../atl/reference/ccomclassfactory2-class.md)</ept> instead of <ph id="ph1">`CComClassFactory`</ph>, specify the <bpt id="p2">[</bpt>DECLARE_CLASSFACTORY2<ept id="p2">](http://msdn.microsoft.com/library/38a6c969-7297-4bb1-9ba6-1fe2d355b285)</ept> macro:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_COM#2</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Two other macros that define a class factory are <bpt id="p1">[</bpt>DECLARE_CLASSFACTORY_AUTO_THREAD<ept id="p1">](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f)</ept> and <bpt id="p2">[</bpt>DECLARE_CLASSFACTORY_SINGLETON<ept id="p2">](http://msdn.microsoft.com/library/0e4a3964-c03d-463e-884c-fe3b416db478)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>ATL also uses the <ph id="ph1">`typedef`</ph> mechanism to implement default behavior.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For example, the <ph id="ph1">`DECLARE_AGGREGATABLE`</ph> macro uses <ph id="ph2">`typedef`</ph> to define a type called <bpt id="p1">**</bpt>_CreatorClass<ept id="p1">**</ept>, which is then referenced throughout ATL.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Note that in a derived class, a <ph id="ph1">`typedef`</ph> using the same name as the base class's <ph id="ph2">`typedef`</ph> results in ATL using your definition and overriding the default behavior.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Fundamentals of ATL COM Objects</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Aggregation and Class Factory Macros</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

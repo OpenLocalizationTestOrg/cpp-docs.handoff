@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">27a01abbd7a6499273850d130efb9030e40584f6</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\multithreaded-libraries-performance.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cdc4a4dc16c0a220a0f32063e0347168391bd770</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1777a05ae8355da4f3f50a7508d5101c6f12ae12</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Multithreaded Libraries Performance | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Multithreaded Libraries Performance</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The single-threaded CRT is no longer available.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic discusses how to get the maximum performance from the multithreaded libraries.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Maximizing performance</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The performance of the multithreaded libraries has been improved and is close to the performance of the now-eliminated single-threaded libraries.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For those situations when even higher performance is required, there are several new features.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Independent stream locking allows you to lock a stream and then use <bpt id="p1">[</bpt>_nolock Functions<ept id="p1">](../c-runtime-library/nolock-functions.md)</ept> that access the stream directly.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This allows lock usage to be hoisted outside critical loops.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Per-thread locale reduces the cost of locale access for multithreaded scenarios (see <bpt id="p1">[</bpt>_configthreadlocale<ept id="p1">](../c-runtime-library/reference/configthreadlocale.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Locale-dependent functions (with names ending in _l) take the locale as a parameter, removing substantial cost (for example, <bpt id="p1">[</bpt>printf, _printf_l, wprintf, _wprintf_l<ept id="p1">](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Optimizations for common codepages reduce the cost of many short operations.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Defining <bpt id="p1">[</bpt>_CRT_DISABLE_PERFCRIT_LOCKS<ept id="p1">](../c-runtime-library/crt-disable-perfcrit-locks.md)</ept> forces all I/O operations to assume a single-threaded I/O model and use the _nolock forms of the functions.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This allows highly I/O-based single-threaded applications to get better performance.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Exposure of the CRT heap handle allows you to enable the Windows Low Fragmentation Heap (LFH) for the CRT heap, which can substantially improve performance in highly scaled scenarios.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>CRT Library Features</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

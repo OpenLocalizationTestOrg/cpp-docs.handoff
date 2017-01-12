@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6250cfa805ca5d1f59c638fc897d6ac2d4753be8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\e-implementation-defined-behaviors-in-openmp-c-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9c404110563347aa2456d3ff2965a72df1d0d88a</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ab8cbf0d6b396894bda8a680b21baee88ef8285e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>E.</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Implementation-Defined Behaviors in OpenMP C-C++ | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>E.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Implementation-Defined Behaviors in OpenMP C/C++</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This appendix summarizes the behaviors that are described as "implementation-defined" in this API.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Each behavior is cross-referenced back to its description in the main specification.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>An implementation is required to define and document its behavior in these cases, but this list may be incomplete.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Number of threads:<ept id="p1">**</ept> If a parallel region is encountered while dynamic adjustment of the number of threads is disabled, and the number of threads requested for the parallel region exceeds the number that the run-time system can supply, the behavior of the program is implementation-defined (see page 9).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>In Visual C++, for a non-nested parallel region, 64 threads (the maximum) will be provided.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Number of processors:<ept id="p1">**</ept> The number of physical processors actually hosting the threads at any given time is implementation-defined (see page 10).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In Visual C++, this number is not constant, and is controlled by the operating system.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Creating teams of threads:<ept id="p1">**</ept> The number of threads in a team that execute a nested parallel region is implementation-defined.(see page 10).</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In Visual C++, this is determined by the operating system.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>schedule(runtime):<ept id="p1">**</ept> The decision regarding scheduling is deferred until run time.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The schedule type and chunk size can be chosen at run time by setting the <ph id="ph1">`OMP_SCHEDULE`</ph> environment variable.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If this environment variable is not set, the resulting schedule is implementation-defined (see page 13).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In Visual C++, schedule type is <ph id="ph1">`static`</ph> with no chunk size.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Default scheduling:<ept id="p1">**</ept> In the absence of the schedule clause, the default schedule is implementation-defined (see page 13).</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In Visual C++, the default schedule type is <ph id="ph1">`static`</ph> with no chunk size.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>ATOMIC:<ept id="p1">**</ept> It is implementation-defined whether an implementation replaces all <ph id="ph1">`atomic`</ph> directives with <bpt id="p2">**</bpt>critical<ept id="p2">**</ept> directives that have the same unique name (see page 20).</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>In Visual C++, if data modified by <bpt id="p1">[</bpt>atomic<ept id="p1">](../../parallel/openmp/reference/atomic.md)</ept> is not on a natural alignment or if it is 1 or 2 bytes long all atomic operations that satisfy that property will use one critical section.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Otherwise, critical sections will not be used.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>omp_get_num_threads:<ept id="p1">**</ept> If the number of threads has not been explicitly set by the user, the default is implementation-defined (see page 9, and <bpt id="p2">[</bpt>Section 3.1.2<ept id="p2">](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)</ept> on page 37).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In Visual C++, the default number of threads is equal to the number of processors.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>omp_set_dynamic:<ept id="p1">**</ept> The default for dynamic thread adjustment is implementation-defined (see <bpt id="p2">[</bpt>Section 3.1.7<ept id="p2">](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)</ept> on page 39).</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In Visual C++, the default is <ph id="ph1">`FALSE`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>omp_set_nested:<ept id="p1">**</ept> When nested parallelism is enabled, the number of threads used to execute nested parallel regions is implementation-defined (see <bpt id="p2">[</bpt>Section 3.1.9<ept id="p2">](../../parallel/openmp/3-1-9-omp-set-nested-function.md)</ept> on page 40).</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In Visual C++, the number of threads is determined by the operating system.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>environment variable: The default value for this environment variable is implementation-defined (see <bpt id="p1">[</bpt>Section 4.1<ept id="p1">](../../parallel/openmp/4-1-omp-schedule.md)</ept> on page 48).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In Visual C++, schedule type is <ph id="ph1">`static`</ph> with no chunk size.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>environment variable: If no value is specified for the <ph id="ph1">`OMP_NUM_THREADS`</ph> environment variable, or if the value specified is not a positive integer, or if the value is greater than the maximum number of threads the system can support, the number of threads to use is implementation-defined (see <bpt id="p1">[</bpt>Section 4.2<ept id="p1">](../../parallel/openmp/4-2-omp-num-threads.md)</ept> on page 48).</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In Visual C++, if value specified is zero or less, the number of threads is equal to the number of processors.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>If value is greater than 64, the number of threads is 64.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>environment variable: The default value is implementation-defined (see <bpt id="p1">[</bpt>Section 4.3<ept id="p1">](../../parallel/openmp/4-3-omp-dynamic.md)</ept> on page 49).</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In Visual C++, the default is <ph id="ph1">`FALSE`</ph>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d5e6ff0b5a4948776c51d748c5f1ff52f5b32180</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\exit-exit-exit.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">38c04c5c2d6224afe6c5e79e04e85cdc5ea5c068</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">94fc61c378ff966b36350c61683d2a9dd04d5434</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>exit, _Exit, _exit | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>exit, _Exit, _exit</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Terminates the calling process.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`exit`</ph> function terminates it after cleanup; <ph id="ph2">`_exit`</ph> and <ph id="ph3">`_Exit`</ph> terminate it immediately.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Do not use this method to shut down a Universal Windows Platform (UWP) app or a <ph id="ph1">[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]</ph> app, except in testing or debugging scenarios.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Programmatic or UI ways to close a <ph id="ph1">[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]</ph> app are not permitted.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For more information about Windows 8 and 8.1 apps, see <bpt id="p1">[</bpt>App lifecycle<ept id="p1">](http://go.microsoft.com/fwlink/?LinkId=262853)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For more information about Windows 10 apps, see <bpt id="p1">[</bpt>How-to guides for Windows 10 apps<ept id="p1">](http://go.microsoft.com/fwlink/p/?linkid=619133)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Exit status code.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`exit`</ph>, <ph id="ph2">`_Exit`</ph> and <ph id="ph3">`_exit`</ph> functions terminate the calling process.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`exit`</ph> function calls destructors for thread-local objects, then calls—in last-in-first-out (LIFO) order—the functions that are registered by <ph id="ph2">`atexit`</ph> and <ph id="ph3">`_onexit`</ph>, and then flushes all file buffers before it terminates the process.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`_Exit`</ph> and <ph id="ph2">`_exit`</ph> functions terminate the process without destroying thread-local objects or processing <ph id="ph3">`atexit`</ph> or <ph id="ph4">`_onexit`</ph> functions, and without flushing stream buffers.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Although the <ph id="ph1">`exit`</ph>, <ph id="ph2">`_Exit`</ph> and <ph id="ph3">`_exit`</ph> calls do not return a value, the low-order byte of <ph id="ph4">`status`</ph> is made available to the host environment or waiting calling process, if one exists, after the process exits.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Typically, the caller sets the <ph id="ph1">`status`</ph> value to 0 to indicate a normal exit, or to some other value to indicate an error.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`status`</ph> value is available to the operating-system batch command <ph id="ph2">`ERRORLEVEL`</ph> and is represented by one of two constants: <ph id="ph3">`EXIT_SUCCESS`</ph>, which represents a value of 0, or <ph id="ph4">`EXIT_FAILURE`</ph>, which represents a value of 1.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`exit`</ph>, <ph id="ph2">`_Exit`</ph>, <ph id="ph3">`_exit`</ph>, <ph id="ph4">`quick_exit`</ph>, <ph id="ph5">`_cexit`</ph>, and <ph id="ph6">`_c_exit`</ph> functions behave as follows.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Performs complete C library termination procedures, terminates the process, and provides the supplied status code to the host environment.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Performs minimal C library termination procedures, terminates the process, and provides the supplied status code to the host environment.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Performs minimal C library termination procedures, terminates the process, and provides the supplied status code to the host environment.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Performs quick C library termination procedures, terminates the process, and provides the supplied status code to the host environment.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Performs complete C library termination procedures and returns to the caller.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Does not terminate the process.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Performs minimal C library termination procedures and returns to the caller.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Does not terminate the process.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>When you call the <ph id="ph1">`exit`</ph>,  <ph id="ph2">`_Exit`</ph> or <ph id="ph3">`_exit`</ph> function, the destructors for any temporary or automatic objects that exist at the time of the call are not called.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>An automatic object is defined in a function where the object is not declared to be static.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>A temporary object is an object that's created by the compiler.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>To destroy an automatic object before you call <ph id="ph1">`exit`</ph>, <ph id="ph2">`_Exit`</ph>, or <ph id="ph3">`_exit`</ph>, explicitly call the destructor for the object, as follows:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Do not use <ph id="ph1">`DLL_PROCESS_ATTACH`</ph> to call <ph id="ph2">`exit`</ph> from <ph id="ph3">`DllMain`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If you want to exit the <ph id="ph1">`DLLMain`</ph> function, return <ph id="ph2">`FALSE`</ph> from <ph id="ph3">`DLL_PROCESS_ATTACH`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Function</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`_Exit`</ph>,</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>process.h&gt; or <ph id="ph1">\&lt;</ph>stdlib.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>For additional compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>System::Diagnostics::Process::Kill</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Process and Environment Control</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>abort</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>atexit</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>_cexit, _c_exit</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>_exec, _wexec Functions</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>_onexit, _onexit_m</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>quick_exit</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>_spawn, _wspawn Functions</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>system, _wsystem</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,42 +1,38 @@
 ---
-title: IDocHostUIHandlerDispatch Interface | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- IDocHostUIHandlerDispatch
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDocHostUIHandlerDispatch interface
+title: "IDocHostUIHandlerDispatch Interface | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "IDocHostUIHandlerDispatch"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "IDocHostUIHandlerDispatch interface"
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
 caps.latest.revision: 22
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ba89697fb1c0e81d648d8faaaff1a97bb6a5d9ea
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # IDocHostUIHandlerDispatch Interface
 An interface to the Microsoft HTML parsing and rendering engine.  
@@ -95,11 +91,5 @@ interface IDocHostUIHandlerDispatch : IDispatch
 
 
 
-
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

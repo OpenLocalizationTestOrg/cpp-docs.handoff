@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ru-ru">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8c7a705c99bdcaa5982ef6f8ee0e25c0dbfb0ea0</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\fp-specify-floating-point-behavior.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b484b6d0e34801dffdb0016cfdbc05ef6745cffe</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c7ae6c45a2cd205a86ab69ac851102773e69ac12</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-fp (Specify Floating-Point Behavior) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/fp (Specify Floating-Point Behavior)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Specifies floating-point behavior in a source code file.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Flags</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>precise</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The default.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Improves the consistency of floating-point tests for equality and inequality by disabling optimizations that could change the precision of floating-point calculations.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>(Maintaining specific precision is required for strict ANSI conformance.) By default, in code for x86 architectures the compiler uses the coprocessor's 80-bit registers to hold the intermediate results of floating-point calculations.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This increases program speed and decreases program size.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>However, because the calculation involves floating-point data types that are represented in memory by less than 80 bits, carrying the extra bits of precision—80 bits minus the number of bits in a smaller floating-point type—through a lengthy calculation can produce inconsistent results.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>/fp:precise<ept id="p1">**</ept> on x86 processors, the compiler performs rounding on variables of type <ph id="ph1">`float`</ph> to the correct precision for assignments and casts and when parameters are passed to a function.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This rounding guarantees that the data does not retain any significance greater than the capacity of its type.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>A program compiled with <bpt id="p1">**</bpt>/fp:precise<ept id="p1">**</ept> can be slower and larger than one compiled without <bpt id="p2">**</bpt>/fp:precise<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:precise<ept id="p1">**</ept> disables intrinsics; the standard run-time library routines are used instead.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/Oi (Generate Intrinsic Functions)<ept id="p1">](../../build/reference/oi-generate-intrinsic-functions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The following floating-point behavior is enabled with <bpt id="p1">**</bpt>/fp:precise<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Contractions—that is, using a composite operation that has just one rounding at the end to replace multiple operations.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Expression optimizations that are invalid for special values (NaN, +infinity, -infinity, +0, -0) are not allowed.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The optimizations x-x =&gt; 0, x*0 =&gt; 0, x-0 =&gt; x, x+0 =&gt; x, and 0-x =&gt; -x are invalid for various reasons.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>(See IEEE 754 and the C99 standard.)</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The compiler correctly handles comparisons that involve NaN.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For example, x != x evaluates to <bpt id="p1">**</bpt>true<ept id="p1">**</ept> if <ph id="ph1">`x`</ph> is NaN and ordered comparisons involving NaN raise an exception.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Expression evaluation follows the C99 FLT_EVAL_METHOD=2, with this exception: When you program for x86 processors, because the FPU is set to 53-bit precision, this is considered long-double precision.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Multiplication by exactly 1.0 transformed into a use of the other factor.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>x*y<ph id="ph1">\*</ph>1.0 is transformed into x<ph id="ph2">\*</ph>y.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Similarly, x<ph id="ph1">\*</ph>1.0<ph id="ph2">\*</ph>y is transformed into x<ph id="ph3">\*</ph>y.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Division by exactly 1.0 is transformed into a use of the dividend.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>x*y/1.0 is transformed into x<ph id="ph1">\*</ph>y.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Similarly, x/1.0<ph id="ph1">\*</ph>y is transformed into x<ph id="ph2">\*</ph>y.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Using <bpt id="p1">**</bpt>/fp:precise<ept id="p1">**</ept> when <bpt id="p2">[</bpt>fenv_access<ept id="p2">](../../preprocessor/fenv-access.md)</ept> is ON disables optimizations such as compile-time evaluations of floating-point expressions.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For example, if you use <bpt id="p1">[</bpt>_control87, _controlfp, <ph id="ph1">\_</ph>_control87_2<ept id="p1">](../../c-runtime-library/reference/control87-controlfp-control87-2.md)</ept> to change the rounding mode, and the compiler performs a floating-point calculation, the rounding mode you specified is not in effect unless <ph id="ph2">`fenv_access`</ph> is ON.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:precise<ept id="p1">**</ept> replaces the <bpt id="p2">**</bpt>/Op<ept id="p2">**</ept> compiler option.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>fast</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Creates the fastest code in most cases by relaxing the rules for optimizing floating-point operations.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This enables the compiler to optimize floating-point code for speed at the expense of accuracy and correctness.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/fp:fast<ept id="p1">**</ept> is specified, the compiler may not round correctly at assignment statements, typecasts, or function calls, and may not perform rounding of intermediate expressions.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The compiler may reorder operations or perform algebraic transforms—for example, by following associative and distributive rules—without regard to the effect on finite precision results.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The compiler may change operations and operands to single-precision instead of following the C++ type promotion rules.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Floating-point-specific contraction optimizations are always enabled (<bpt id="p1">[</bpt>fp_contract<ept id="p1">](../../preprocessor/fp-contract.md)</ept> is ON).</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Floating-point exceptions and FPU environment access are disabled (<bpt id="p1">**</bpt>/fp:except-<ept id="p1">**</ept> is implied and <bpt id="p2">[</bpt>fenv_access<ept id="p2">](../../preprocessor/fenv-access.md)</ept> is OFF).</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:fast<ept id="p1">**</ept> cannot be used with <bpt id="p2">**</bpt>/fp:strict<ept id="p2">**</ept> or <bpt id="p3">**</bpt>/fp:precise<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The last option specified on the command line is used.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Specifying both <bpt id="p1">**</bpt>/fp:fast<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/fp:except<ept id="p2">**</ept> generates a compiler error.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Specifying <bpt id="p1">[</bpt>/Za, /Ze (Disable Language Extensions)<ept id="p1">](../../build/reference/za-ze-disable-language-extensions.md)</ept> (ANSI compatibility) and <bpt id="p2">**</bpt>/fp:fast<ept id="p2">**</ept> may cause unexpected behavior.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>For example, single-precision floating-point operations may not be rounded to single precision.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>except[-]</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Reliable floating-point exception model.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Exceptions are raised immediately after they are triggered.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>By default, this option is off.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Appending a minus sign to the option explicitly disables it.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>strict</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The strictest floating-point model.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:strict<ept id="p1">**</ept> causes <bpt id="p2">[</bpt>fp_contract<ept id="p2">](../../preprocessor/fp-contract.md)</ept> to be OFF and <bpt id="p3">[</bpt>fenv_access<ept id="p3">](../../preprocessor/fenv-access.md)</ept> to be ON.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:except<ept id="p1">**</ept> is implied and can be disabled by explicitly specifying <bpt id="p2">**</bpt>/fp:except-<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>When used with <bpt id="p1">**</bpt>/fp:except-<ept id="p1">**</ept>, <bpt id="p2">**</bpt>/fp:strict<ept id="p2">**</ept> enforces strict floating-point semantics but without respect for exceptional events.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Multiple <bpt id="p1">**</bpt>/fp<ept id="p1">**</ept> options can be specified in the same compilation.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>To control floating-point behavior by function, see the <bpt id="p1">[</bpt>float_control<ept id="p1">](../../preprocessor/float-control.md)</ept> pragma.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>This overrides the <bpt id="p1">**</bpt>/fp<ept id="p1">**</ept> compiler setting.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>We recommend you save and restore local floating-point behavior as good engineering practice:</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Most of the floating-point optimizations related to <bpt id="p1">**</bpt>/fp:strict<ept id="p1">**</ept>, <bpt id="p2">**</bpt>/fp:except<ept id="p2">**</ept> (and its corresponding pragmas), and the <ph id="ph1">`fp_contract`</ph> pragma are machine-dependent.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:strict<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/fp:except<ept id="p2">**</ept> are not compatible with <bpt id="p3">**</bpt>/clr<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:precise<ept id="p1">**</ept> should address most of an application's floating-point requirements.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>You can use <bpt id="p1">**</bpt>/fp:except<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/fp:strict<ept id="p2">**</ept>, but there may be some decrease in performance.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>If performance is most important, consider whether to use <bpt id="p1">**</bpt>/fp:fast<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/fp:strict<ept id="p1">**</ept>, <bpt id="p2">**</bpt>/fp:fast<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>/fp:precise<ept id="p3">**</ept> are precision (correctness) modes.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Only one can be in effect at a time.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>If both <bpt id="p1">**</bpt>/fp:strict<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/fp:precise<ept id="p2">**</ept> are specified, the compiler uses the one that it processes last.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Both <bpt id="p1">**</bpt>/fp:strict<ept id="p1">**</ept> and <bpt id="p2">**</bpt>/fp:fast<ept id="p2">**</ept> cannot be specified.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Microsoft Visual C++ Floating-Point Optimization<ept id="p1">](http://msdn.microsoft.com/library/aa289157.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>To set this compiler option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Working with Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Expand the <bpt id="p1">**</bpt>Configuration Properties<ept id="p1">**</ept> node.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>Expand the <bpt id="p1">**</bpt>C/C++<ept id="p1">**</ept> node.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Code Generation<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Modify the <bpt id="p1">**</bpt>Floating Point Model<ept id="p1">**</ept> property.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>To set this compiler option programmatically</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>See &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Compiler Options</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Setting Compiler Options</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Microsoft Visual C++ Floating Point Optimization</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
