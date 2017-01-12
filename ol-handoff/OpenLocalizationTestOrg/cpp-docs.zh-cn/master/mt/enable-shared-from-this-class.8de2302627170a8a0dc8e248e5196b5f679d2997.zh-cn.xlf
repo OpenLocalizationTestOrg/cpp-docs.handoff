@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4d9ecedbebb275725f338cdaf0d2e4343fe2b8d0</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\enable-shared-from-this-class.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">11ae71da12b48aac1bd5d22c2ee331caf256a5ee</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">31678bc33df5d97194c3fa59a47b22c8399e13d6</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>enable_shared_from_this Class | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>enable_shared_from_this Class</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Helps generate a <ph id="ph1">`shared_ptr`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The type controlled by the shared pointer.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Objects derived from <ph id="ph1">`enable_shared_from_this`</ph> can use the <ph id="ph2">`shared_from_this`</ph> methods in member functions to create <bpt id="p1">[</bpt>shared_ptr<ept id="p1">](../standard-library/shared-ptr-class.md)</ept> owners of the instance that share ownership with existing <ph id="ph3">`shared_ptr`</ph> owners.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Otherwise, if you create a new <ph id="ph1">`shared_ptr`</ph> by using <ph id="ph2">`this`</ph>, it is distinct from existing <ph id="ph3">`shared_ptr`</ph> owners, which can lead to invalid references or cause the object to be deleted more than once.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The constructors, destructor, and assignment operator are protected to help prevent accidental misuse.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The template argument type <ph id="ph1">`Ty`</ph> must be the type of the derived class.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For an example of usage, see <bpt id="p1">[</bpt>enable_shared_from_this::shared_from_this<ept id="p1">](#enable_shared_from_this__shared_from_this)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> <ph id="ph1">\&lt;</ph>memory&gt;</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Namespace:<ept id="p1">**</ept> std</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>enable_shared_from_this::shared_from_this</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Generates a <ph id="ph1">`shared_ptr`</ph> that shares ownership of the instance with existing <ph id="ph2">`shared_ptr`</ph> owners.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When you derive objects from the <ph id="ph1">`enable_shared_from_this`</ph> base class, the <ph id="ph2">`shared_from_this`</ph> template member functions return a <bpt id="p1">[</bpt>shared_ptr Class<ept id="p1">](../standard-library/shared-ptr-class.md)</ept> object that shares ownership of this instance with existing <ph id="ph3">`shared_ptr`</ph> owners.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Otherwise, if you create a new <ph id="ph1">`shared_ptr`</ph> from <ph id="ph2">`this`</ph>, it is distinct from existing <ph id="ph3">`shared_ptr`</ph> owners, which can lead to invalid references or cause the object to be deleted more than once.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The  behavior is undefined if you call <ph id="ph1">`shared_from_this`</ph> on an instance that is not already owned by a <ph id="ph2">`shared_ptr`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>enable_shared_from_this::shared_from_this</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>shared_ptr Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

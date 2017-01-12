@@ -1,47 +1,43 @@
 ---
-title: minus Struct | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- minus
-- std.minus
-- std::minus
-- xfunctional/std::minus
-dev_langs:
-- C++
-helpviewer_keywords:
-- minus struct
-- minus class
+title: "minus Struct | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "minus"
+  - "std.minus"
+  - "std::minus"
+  - "xfunctional/std::minus"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "minus struct"
+  - "minus class"
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
 caps.latest.revision: 20
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: e2ed81d3d990e9c9f2a9a21d04fabcbbfbb94f9a
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # minus Struct
 A predefined function object that performs the subtraction operation (binary `operator-`)  on its arguments.  
@@ -142,11 +138,5 @@ The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
-
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

@@ -1,45 +1,41 @@
 ---
-title: umpunct_byname Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- std.numpunct_byname
-- numpunct_byname
-- xlocnum/std::numpunct_byname
-- std::numpunct_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- numpunct_byname class
+title: "numpunct_byname Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "std.numpunct_byname"
+  - "numpunct_byname"
+  - "xlocnum/std::numpunct_byname"
+  - "std::numpunct_byname"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "numpunct_byname class"
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
 caps.latest.revision: 24
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: eea856d76ee0fcf12c1cdb4bf1bf0dd0f3125d5f
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # numpunct_byname Class
 The derived template class describes an object that can serve as a `numpunct` facet of a given locale enabling the formatting and punctuation of numeric and Boolean expressions.  
@@ -75,11 +71,5 @@ protected:
 ## See Also  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
-
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

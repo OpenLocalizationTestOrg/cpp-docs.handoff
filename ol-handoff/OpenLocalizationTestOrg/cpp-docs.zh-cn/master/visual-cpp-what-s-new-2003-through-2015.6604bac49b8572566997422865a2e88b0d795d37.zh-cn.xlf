@@ -1,0 +1,922 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">895ed016c8bd12d4fca0322ff1374f3af56e64b5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\porting\visual-cpp-what-s-new-2003-through-2015.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">
+      </xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">887fc73493f82d489752af0f53dcd9ccbda869f3</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3a033fe98b3f881ccbdc9c803dbb158c4e4cb099</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Visual C++ What&amp;#39;s New 2003 through 2015 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Visual C++ What&amp;#39;s New 2003 through 2015</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In Visual C++ 2015, ongoing improvements to compiler conformance can sometimes change how the compiler understands your existing source code.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When this happens, you might encounter new or different errors during your build, or even behavioral differences in code that previously built and seemed to run correctly.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Fortunately, these differences  have little or no impact on most of your source code and when source code or other changes are needed to address these differences,  fixes are usually small and straight-forward.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>We've included many examples of previously-acceptable source code that might need to be changed <bpt id="p1">*</bpt>(before)<ept id="p1">*</ept> and the fixes to correct them <bpt id="p2">*</bpt>(after)<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Although these differences can affect your source code or other build artifacts, they don't affect binary compatibility between updates to Visual C++ versions.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A more-severe kind of change, the  <bpt id="p1">*</bpt>breaking change<ept id="p1">*</ept> can affect binary compatibility, but these kinds of binary compatibility breaks only occur between major versions of Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For example, between Visual C++ 2013 and Visual C++ 2015.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For information on the breaking changes that occurred between Visual C++ 2013 and Visual C++ 2015, see <bpt id="p1">[</bpt>Visual C++ change history 2003 - 2015<ept id="p1">](../porting/visual-cpp-change-history-2003-2015.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Conformance Improvements in Visual C++ 2015</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Conformance Improvements in Update 1</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Conformance Improvements in Update 2</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Conformance Improvements in Update 3</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Conformance Improvements in Visual C++ 2015</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>/Zc:forScope- option</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The compiler option <bpt id="p1">**</bpt>/Zc:forScope-<ept id="p1">**</ept> is deprecated and will be removed in a future release.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The option was usually used in order to allow nonstandard code that uses loop variables after the point where, according to the standard, they should have gone out of scope.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>It was only necessary when you are compiling with the /Za option, since without /Za, using a for loop variable after the end of the loop is always allowed.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If you don't care about standards conformance (for example, if your code isn't meant to portable to other compilers), you could turn off the /Za option (or set the Disable Language Extensions property to No).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If you do care about writing portable, standards-compliant code, you should rewrite your code so that it conforms to the standard by moving the declaration of such variables to a point outside the loop.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>/Zg compiler option</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The /Zg compiler option (Generate Function Prototypes) is no longer available.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>This compiler option was previously deprecated.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can no longer run unit tests with C++/CLI from the command-line with mstest.exe.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Instead, use vstest.console.exe.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>VSTest.Console.exe command-line options<ept id="p1">](/devops-test-docs/test/vstest-console-exe-command-line-options)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>mutable keyword</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`mutable`</ph> storage class specifier is no longer allowed in places where previously it compiled without error.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Now, the compiler gives error C2071 (illegal storage class).</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>According to the standard, the mutable specifier can be applied only to names of class data members, and cannot be applied to names declared const or static, and cannot be applied to reference members.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For example, consider the following code:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Previous versions of the Visual C++ compiler accepted this, but now the compiler gives the following error:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>To fix the error, simply remove the redundant mutable keyword.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>char_16_t and char32_t</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>You can no longer use <ph id="ph1">`char16_t`</ph> or <ph id="ph2">`char32_t`</ph> as aliases in a typedef, because these types are now treated as built-in.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>It was common for users and library authors to define char16_t and char32_t as aliases of uint16_t and uint32_t, respectively.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>To update your code, remove the typedef declarations and rename any other identifiers that collide with these names.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Non-type template parameters</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Certain code that involves non-type template parameters is now correctly checked for type compatibility when you provide explicit template arguments.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>For example, the following code compiled without error in previous versions of Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The current compiler correctly gives an error, because the template parameter type doesn't match the template argument (the parameter is a pointer to a const member, but the function f is non-const):</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>To address this error in your code, make sure that the type of the template argument you use matches the declared type of the template parameter.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>__declspec(align)</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The compiler no longer accepts <ph id="ph1">`__declspec(align)`</ph> on functions.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>This was always ignored, but now it produces a compiler error.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>To fix this problem, remove <ph id="ph1">`__declspec(align)`</ph> from the function declaration.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Since it had no effect, removing it does not change anything.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Exception handling</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>There are a couple of changes to exception handling.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>First, exception objects have to be either copyable or movable.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The following code compiled in <ph id="ph1">[!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)]</ph>, but does not compile in <ph id="ph2">[!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]</ph>:</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The problem is that the copy constructor is private, so the object cannot be copied as happens in the normal course of handling an exception.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The same applies when the copy constructor is declared <ph id="ph1">`explicit`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>To update your code, make sure that the copy constructor for your exception object is public and not marked <ph id="ph1">`explicit`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Catching an exception by value also requires the exception object to be copyable.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The following code compiled in <ph id="ph1">[!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)]</ph>, but does not compile in <ph id="ph2">[!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]</ph>:</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>You can fix this issue by changing the parameter type for the <ph id="ph1">`catch`</ph> to a reference.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>String literals followed by macros</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The compiler now supports user defined literals.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>As a consequence, string literals followed by macros without any intervening whitespace are interpreted as user-defined literals, which might produce errors or unexpected results.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>For example, in previous compilers the following code compiled successfully:</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The compiler interpreted this as a string literal "hello" followed by a macro, which is expanded "there", and then the two string literals were concatenated into one.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">[!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]</ph>, the compiler interprets this as a user-defined literal, but since there is no matching user-defined literal _x defined, it gives an error.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>To fix this problem, add a space between the string literal and the macro.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Adjacent string literals</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Similarly to the previous, due to related changes in string parsing, adjacent string literals (either wide or narrow character string literals) without any whitespace were interpreted as a single concatenated string in previous releases of Visaul C++.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">[!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]</ph>, you must now add whitespace between the two strings.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>For example, the following code must be changed:</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Simply add a space in between the two strings.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Placement new and delete</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>A change has been made to the delete operator in order to bring it into conformance with C++14 standard.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>Details of the standards change can be found at <bpt id="p1">[</bpt>C++ Sized Deallocation<ept id="p1">](http://isocpp.org/files/papers/n3778.html)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The changes add a form of the global delete operator that takes a size parameter.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The breaking change is that if you were previously using an operator delete with the same signature (to correspond with a placement new operator), you will receive a compiler error (C2956, which occurs at the point where the placement new is used, since that's the position in code where the compiler tries to identify an appropriate matching delete operator).</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The function <ph id="ph1">`void operator delete(void *, size_t)`</ph> was a placement delete operator corresponding to the placement new function "void <ph id="ph2">\*</ph> operator new(size_t, size_t)" in C++11.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>With C++14 sized deallocation, this delete function is now a <bpt id="p1">*</bpt>usual deallocation function<ept id="p1">*</ept> (global delete operator).</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The standard requires that if the use of a placement new looks up a corresponding delete function and finds a usual deallocation function, the program is ill-formed.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>For example, suppose your code defines both a placement new and a placement delete:</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The problem occurs because of the match in function signatures between a placement delete operator you've defined, and the new global sized delete operator.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>Consider whether you can use a different type other than size_t for any placement new and delete operators.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Note that the type of the size_t typedef is compiler-dependent; it is a typedef for unsigned int in Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>A good solution is to use an enumerated type such as this:</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Then, change your definition of placement new and delete to use this type as the second argument instead of size_t.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>You’ll also need to update the calls to placement new to pass the new type (for example, by using <ph id="ph1">`static_cast&lt;my_type&gt;`</ph> to convert from the integer value) and update the definition of new and delete to cast back to the integer type.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>You don’t need to use an enum for this; a class type with a size_t member would also work.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>An alternative solution is that you might be able to eliminate the placement new altogether.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>If your code uses placement new to implement a memory pool where the placement argument is the size of the object being allocated or deleted, then sized deallocation feature might be suitable to replace your own custom memory pool code, and you can get rid of the placement functions and just use your own two-argument delete operator instead of the placement functions.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>If you don't want to update your code immediately, you can revert to the old behavior by using the compiler option /Zc:sizedDealloc-.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>If you use this option, the two-argument delete functions don’t exist and won't cause a conflict with your placement delete operator.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Union data members</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>Data members of unions can no longer have reference types.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The following code compiled successfully in <ph id="ph1">[!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)]</ph>, but produces an error in <ph id="ph2">[!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The preceding code produces the following errors:</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>To address this issue, change reference types either to a pointer or a value.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>Changing the type to a pointer requires changes in the code that uses the union field.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Changing the code to a value would change the data stored in the union, which affects other fields since fields in union types share the same memory.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Depending on the size of the value, it might also change the size of the union.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Anonymous unions are now more conformant to the standard.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler generated an explicit constructor and destructor for anonymous unions.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>These are deleted in <ph id="ph1">[!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The preceding code generates the following error in <ph id="ph1">[!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]</ph>:</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>To resolve this issue, provide your own definitions of the constructor and/or destructor.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Unions with anonymous structs</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>In order to conform with the standard, the runtime behavior has changed for members of anonymous structures in unions.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The constructor for anonymous structure members in a union is no longer implicitly called when such a union is created.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Also, the destructor for anonymous structure members in a union is no longer implicitly called when the union goes out of scope.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Consider the following code, in which a union U contains an anonymous structure that contains a member which is a named structure S that has a destructor.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>In <ph id="ph1">[!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)]</ph>, the constructor for S is called when the union is created, and the destructor for S is called when the stack for function f is cleaned up.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>But in <ph id="ph1">[!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]</ph>, the constructor and destructor are not called.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The compiler gives a warning about this behavior change.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>To restore the original behavior, give the anonymous structure a name.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>The runtime behavior of non-anonymous structures is the same, regardless of the compiler version.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Alternatively, try moving the constructor and destructor code into new functions, and add calls to these functions from the constructor and destructor for the union.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>Template resolution</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Changes have been made to name resolution for templates.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>In C++, when considering candidates for the resolution of a name, it can be the case that one or more names under consideration as potential matches produces an invalid template instantiation.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>These invalid instantiations do not normally cause compiler errors, a principle which is known as SFINAE (Substitution Failure Is Not An Error).</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Now, if SFINAE requires the compiler to instantiate the specialization of a class template, then any errors that occur during this process are compiler errors.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>In previous versions, the compiler would ignore such errors.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>For example, consider the following code:</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>If you compile with the current compiler, you get the following error:</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>This is because at the point of the first invocation of the is_base_of the class 'D' has not yet been defined.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>In this case, the fix is not to use such type traits until the class has been defined.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>If you move the definitions of B and D to the beginning of the code file, the error is resolved.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>If the definitions are in header files, check the order of the include statements for the header files to make sure that any class definitions are compiled before the problematic templates are used.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Copy constructors</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>In both <ph id="ph1">[!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)]</ph> and <ph id="ph2">[!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]</ph>, the compiler generates a copy constructor for a class if that class has a user-defined move constructor but no user-defined copy constructor.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>In Dev14, this implicitly generated copy constructor is also marked "= delete".</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Conformance Improvements in Update 1</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Private virtual base classes and indirect inheritance</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler allowed a derived class to call member functions of its <bpt id="p1">*</bpt>indirectly-derived<ept id="p1">*</ept><ph id="ph1">`private virtual`</ph> base classes.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>This old behavior was incorrect and does not conform to the C++ standard.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>The compiler no longer accepts code written in this way and issues compiler error C2280 as a result.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Overloaded operator new and operator delete</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler allowed non-member <ph id="ph1">`operator new`</ph> and non-member <ph id="ph2">`operator delete`</ph> to be declared static, and to be declared in namespaces other than the global namespace.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>This old behavior created a risk that the program would not call the <ph id="ph1">`new`</ph> or <ph id="ph2">`delete`</ph> operator implementation that the programmer intended, resulting in silent bad runtime behavior.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>The compiler no longer accepts code written in this way and issues compiler error C2323 instead.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt><bpt id="p2">*</bpt>Calling 'operator <ept id="p2">*</ept>type<ept id="p1">*</ept>()' (user-defined conversion) on non-class types**</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler allowed 'operator <bpt id="p1">*</bpt>type<ept id="p1">*</ept>()' to be called on non-class types while silently ignoring it.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>This old behavior created a risk of silent bad code generation, resulting in unpredictable runtime behavior.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>The compiler no longer accepts code written in this way and issues compiler error C2228 instead.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Redundant typename in elaborated type specifiers</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler allowed <ph id="ph1">`typename`</ph> in an elaborated type specifiers; code written in this way is semantically incorrect.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>The compiler no longer accepts code written in this way and issues compiler error C3406 instead.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>Type deduction of arrays from an initializer list</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler did not support type deduction of arrays from an initializer list.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>The compiler now supports this form of type deduction and, as a result, calls to function templates using initializer lists might now be ambiguous or a different overload might be chosen than in previous versions of the compiler.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>To resolve these issues, the program must now explicitly specify the overload that the programmer intended.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>When this new behavior causes overload resolution to consider an additional candidate that is equally as good as the historic candidate, the call becomes ambiguous and the compiler issues compiler error C2668 as a result.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Example 1: Ambiguous call to overloaded function (before)</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Example 1: ambiguous call to overloaded function (after)</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>When this new behavior causes overload resolution to consider an additional candidate that is a better match than the historic candidate, the call resolves unambiguously to the new candidate, causing a change in program behavior that is probably different than the programmer intended.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Example 2: change in overload resolution (before)</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>Example 2: change in overload resolution (after)</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>Restoration of switch statement warnings</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>A Previous version of the compiler removed previously-existing warnings related to <ph id="ph1">`switch`</ph> statements; these warnings have now been restored.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>The compiler now issues the restored warnings, and warnings related to specific cases (including the default case) are now issued on the line containing the offending case, rather than on the last line of the switch statement.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>As a result of now issuing those warnings on different lines than in the past, warnings previously suppressed by using <ph id="ph1">`#pragma warning(disable:####)`</ph> may no longer be suppressed as intended.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>To suppress these warnings as intended, it might be necessary to move the <ph id="ph1">`#pragma warning(disable:####)`</ph> directive to a line above the first potentially-offending case.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>The following are the restored warnings.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Example of C4063 (before)</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>Example of C4063 (after)</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>Examples of the other restored warnings are provided in their documentation.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>#include: use of parent-directory specifier '..' in pathname<ept id="p1">**</ept> (only affects /Wall /WX)</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler did not detect the use of the parent-directory specifier '..'</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>in the pathname of  <ph id="ph1">`#include`</ph> directives.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>Code written in this way is usually intended to include headers that exist outside of the project by incorrectly using project-relative paths.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>This old behavior created a risk that the program could be compiled by including a different source file than the programmer intended, or that these relative paths would not be portable to other build environments.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C4464, if enabled.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>Additionally, although the compiler does not give a specific diagnostic, we also recommend that the parent-directory specifier ".." should note be used to specify your project's include directories.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>#pragma optimize() extends past end of header file<ept id="p1">**</ept> (only affects /Wall /WX)</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler did not detect changes to  optimization flag settings that escape a header file included within a translation unit.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C4426 at the location of the offending <ph id="ph1">`#include`</ph>, if enabled.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>This warning is only issued if the changes conflict with the optimization flags set by command-line arguments to the compiler.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Mismatched #pragma warning(push)<ept id="p1">**</ept> and <bpt id="p2">**</bpt>#pragma warning(pop)<ept id="p2">**</ept> (only affects /Wall /WX)</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler did not detect <ph id="ph1">`#pragma warning(push)`</ph> state changes being paired with <ph id="ph2">`#pragma warning(pop)`</ph> state changes in a different source file, which is rarely intended.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>This old behavior created a risk that the program would be compiled with a different set of warnings enabled than the programmer intended, possibly resulting in silent bad runtime behavior.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C5031 at the location of the matching <ph id="ph1">`#pragma warning(pop)`</ph>, if enabled.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>This warning includes a note referencing the location of the corresponding #pragma warning(push).</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Though uncommon, code written in this way is sometimes intentional.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>Code written in this way is sensitive to changes in <ph id="ph1">`#include`</ph> order; when possible, we recommend that source code files manage warning state in a self-contained way.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Unmatched #pragma warning(push)<ept id="p1">**</ept> (only affects /Wall /WX)</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler did not detect unmatched <ph id="ph1">`#pragma warning(push)`</ph> state changes at the end of a translation unit.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C5032 at the location of the unmatched #pragma warning(push), if enabled.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>This warning is only issued if there are no compilation errors in the translation unit.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>Additional warnings might be issued as a result of improved #pragma warning state tracking</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler tracked #pragma warning state changes insufficiently well to issue all intended warnings.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>This behavior created a risk that certain warnings would be effectively suppressed in circumstances different than the programmer intended.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>The compiler now tracks #pragma warning state more robustly -- especially related to #pragma warning state changes inside of templates -- and optionally issues new warnings C5031 and C5032 which are intended to help the programmer locate unintended uses of <ph id="ph1">`#pragma warning(push)`</ph> and <ph id="ph2">`#pragma warning(pop)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>As a result of improved #pragma warning state change tracking, warnings formerly incorrectly suppressed or warnings related to issues formerly misdiagnosed might now be issued.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>Improved identification of unreachable code</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>C++ Standard Library changes and improved ability to inline function calls over previous versions of the compiler might allow the compiler to prove that certain code is now unreachable.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>This new behavior can result in new and more-frequently issued instances of warning C4720.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>In many cases, this warning might only be issued when compiling with optimizations enabled, since optimizations may inline more function calls, eliminate redundant code, or otherwise make it possible to determine that certain code is unreachable.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>We have observed that new instances of warning C4720 have frequently occurred in try/catch blocks, especially in relation to use of <bpt id="p1">[</bpt>std::find<ept id="p1">](assetId:///std::find?qualifyHint=False&amp;autoUpgrade=True)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>Conformance Improvements in Update 2</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>Additional warnings and errors might be issued as a result of partial support for expression SFINAE</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler did not parse certain kinds of expressions inside <ph id="ph1">`decltype`</ph> specifiers due to lack of  support for expression SFINAE.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>This old behavior was incorrect and does not conform to the C++ standard.</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>The compiler now parses these expressions and has partial support for expression SFINAE due to  ongoing conformance improvements.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>As a result, the compiler now issues warnings and errors found in  expressions that previous versions of the compiler did not parse.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>When this new behavior parses a <ph id="ph1">`decltype`</ph> expression that includes a type that has not yet been declared, the compiler issues compiler error C2039 as a result.</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>Example 1:  use of an undeclared type (before)</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>Example 1 (after)</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>When this new behavior parses a <ph id="ph1">`decltype`</ph> expression that is missing a necessary use of the <ph id="ph2">`typename`</ph> keyword to specify that a dependent name is a type, the compiler issues  compiler warning C4346 together with compiler error C2923.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>Example 2: dependent name is not a type (before)</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>Example 2 (after)</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>member variables prevent implicitly defined constructors and assignment operators</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler allowed a class that has <ph id="ph1">`volatile`</ph> member variables to have default copy/move constructors and default copy/move assignment operators automatically generated.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>This old behavior was incorrect and does not conform to the C++ standard.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>The compiler now considers a class that has volatile member variables to have non-trivial construction and assignment operators which prevents default implementations of these operators from being automatically generated.</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>When such a class is a member of a union (or an anonymous union inside of a class), the copy/move constructors and copy/move assignment operators of the union (or the class containing the unonymous union) will be implicitly defined as deleted.</source>
+        </trans-unit>
+        <trans-unit id="334" translate="yes" xml:space="preserve">
+          <source>Attempting to construct or copy the union (or class containing the anonymous union) without explicitly defining them is an error and the compiler  issues compiler error C2280 as a result.</source>
+        </trans-unit>
+        <trans-unit id="335" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="336" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="337" translate="yes" xml:space="preserve">
+          <source>Static member functions do not support cv-qualifiers.</source>
+        </trans-unit>
+        <trans-unit id="338" translate="yes" xml:space="preserve">
+          <source>Previous versions of Visual C++ 2015 allowed static member functions to have cv-qualifiers.</source>
+        </trans-unit>
+        <trans-unit id="339" translate="yes" xml:space="preserve">
+          <source>This behavior is due to a regression in Visual C++ 2015 and Visual C++ 2015 Update 1; Visual C++ 2013 and previous versions of Visual C++ reject code written in this way.</source>
+        </trans-unit>
+        <trans-unit id="340" translate="yes" xml:space="preserve">
+          <source>The behavior of Visual C++ 2015 and Visual C++ 2015 Update 1 is incorrect and does not conform to the C++ standard.</source>
+        </trans-unit>
+        <trans-unit id="341" translate="yes" xml:space="preserve">
+          <source>Visual Studio 2015 Update 2 rejects code written in this way and issues compiler error C2511 instead.</source>
+        </trans-unit>
+        <trans-unit id="342" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="343" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="344" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Forward declaration of enum is not allowed in WinRT code<ept id="p1">**</ept> (affects /ZW only)</source>
+        </trans-unit>
+        <trans-unit id="345" translate="yes" xml:space="preserve">
+          <source>Code compiled for the Windows Runtime (WinRT) doesn't allow <ph id="ph1">`enum`</ph> types to be forward declared, similarly to when managed C++ code is compiled for the .Net Framework using the /clr compiler switch.</source>
+        </trans-unit>
+        <trans-unit id="346" translate="yes" xml:space="preserve">
+          <source>This behavior is ensures that the size of an enumeration is always known and can be correctly projected to the WinRT type system.</source>
+        </trans-unit>
+        <trans-unit id="347" translate="yes" xml:space="preserve">
+          <source>The compiler rejects code written in this way and  issues compiler error C2599 together with compiler error C3197.</source>
+        </trans-unit>
+        <trans-unit id="348" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="349" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="350" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Overloaded non-member operator new and operator delete may not be declared inline<ept id="p1">**</ept> (Level 1 (/W1) on-by-default)</source>
+        </trans-unit>
+        <trans-unit id="351" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler do not issue a warning when non-member operator new and operator delete functions are declared inline.</source>
+        </trans-unit>
+        <trans-unit id="352" translate="yes" xml:space="preserve">
+          <source>Code written in this way is ill-formed (no diagnostic required) and can cause memory issues  resulting from mismatched new and delete operators (especially when used together with sized deallocation) that can be difficult to diagnose.</source>
+        </trans-unit>
+        <trans-unit id="353" translate="yes" xml:space="preserve">
+          <source>The compiler now issues compiler warning C4595 to help identify code written in this way.</source>
+        </trans-unit>
+        <trans-unit id="354" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="355" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="356" translate="yes" xml:space="preserve">
+          <source>Fixing code that's written in this way might require that the operator definitions be moved out of a header file and into a corresponding source file.</source>
+        </trans-unit>
+        <trans-unit id="357" translate="yes" xml:space="preserve">
+          <source>Conformance Improvements in Update 3</source>
+        </trans-unit>
+        <trans-unit id="358" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>std::is_convertable now detects self-assignment<ept id="p1">**</ept>  (standard library)</source>
+        </trans-unit>
+        <trans-unit id="359" translate="yes" xml:space="preserve">
+          <source>Previous versions of the <ph id="ph1">`std::is_convertable`</ph> type-trait did not correctly detect self-assignment of a class type when its copy constructor is deleted or private.</source>
+        </trans-unit>
+        <trans-unit id="360" translate="yes" xml:space="preserve">
+          <source>Now, <ph id="ph1">`std::is_convertable&lt;&gt;::value`</ph> is correctly set to <ph id="ph2">`false`</ph> when applied to a class type with a deleted or private copy constructor.</source>
+        </trans-unit>
+        <trans-unit id="361" translate="yes" xml:space="preserve">
+          <source>There is no compiler diagnostic associated with this change.</source>
+        </trans-unit>
+        <trans-unit id="362" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="363" translate="yes" xml:space="preserve">
+          <source>In previous versions of Visual C++, the static assertions at the bottom of this example pass because <ph id="ph1">`std::is_convertable&lt;&gt;::value`</ph> was incorrectly set to <ph id="ph2">`true`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="364" translate="yes" xml:space="preserve">
+          <source>Now, <ph id="ph1">`std::is_convertable&lt;&gt;::value`</ph> is correctly set to <ph id="ph2">`false`</ph>, causing the static assertions to fail.</source>
+        </trans-unit>
+        <trans-unit id="365" translate="yes" xml:space="preserve">
+          <source>Defaulted or deleted trivial copy and move constructors respect access specifiers</source>
+        </trans-unit>
+        <trans-unit id="366" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler did not check the access specifier of defaulted or deleted trivial copy and move constructors before allowing them to be called.</source>
+        </trans-unit>
+        <trans-unit id="367" translate="yes" xml:space="preserve">
+          <source>This old behavior was incorrect and does not conform to the C++ standard.</source>
+        </trans-unit>
+        <trans-unit id="368" translate="yes" xml:space="preserve">
+          <source>In some cases, this old  behavior created a risk of silent bad code generation, resulting in unpredictable runtime behavior.</source>
+        </trans-unit>
+        <trans-unit id="369" translate="yes" xml:space="preserve">
+          <source>The compiler now checks the access specifier  of defaulted or deleted trivial copy and move constructors to determine whether it can be called, and if not, issues compiler warning C2248 as a result.</source>
+        </trans-unit>
+        <trans-unit id="370" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="371" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="372" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Deprecation of attributed ATL code support<ept id="p1">**</ept> (Level 1 (/W1) on-by-default)</source>
+        </trans-unit>
+        <trans-unit id="373" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler supported attributed ATL code.</source>
+        </trans-unit>
+        <trans-unit id="374" translate="yes" xml:space="preserve">
+          <source>As the next phase of removing support for attributed ATL code that <bpt id="p1">[</bpt>began in Visual C++ 2008<ept id="p1">](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)</ept>, attributed ATL code has been deprecated.</source>
+        </trans-unit>
+        <trans-unit id="375" translate="yes" xml:space="preserve">
+          <source>The compiler now issues compiler warning C4467 to help identify this kind of deprecated code.</source>
+        </trans-unit>
+        <trans-unit id="376" translate="yes" xml:space="preserve">
+          <source>If you want to continue using attributed ATL code until support is removed from the compiler, you can disable this warning by passing the <ph id="ph1">`/Wv:18`</ph> or <ph id="ph2">`/wd:4467`</ph> command line arguments to the compiler, or by adding  <ph id="ph3">`#pragma warning(disable:4467)`</ph> in your source code.</source>
+        </trans-unit>
+        <trans-unit id="377" translate="yes" xml:space="preserve">
+          <source>Example 1 (before)</source>
+        </trans-unit>
+        <trans-unit id="378" translate="yes" xml:space="preserve">
+          <source>Example 1 (after)</source>
+        </trans-unit>
+        <trans-unit id="379" translate="yes" xml:space="preserve">
+          <source>Sometimes you might need or want to create an IDL file to avoid the use deprecated ATL attributes, as in the example code below</source>
+        </trans-unit>
+        <trans-unit id="380" translate="yes" xml:space="preserve">
+          <source>Example 2 (before)</source>
+        </trans-unit>
+        <trans-unit id="381" translate="yes" xml:space="preserve">
+          <source>First, create the *.idl file; the vc140.idl generated file can be used to obtain an <ph id="ph1">\*</ph>.idl file containing the interfaces and annotations.</source>
+        </trans-unit>
+        <trans-unit id="382" translate="yes" xml:space="preserve">
+          <source>Next, add a MIDL step to your build to make sure that the C++ interface definitions are generated.</source>
+        </trans-unit>
+        <trans-unit id="383" translate="yes" xml:space="preserve">
+          <source>Example 2 IDL (after)</source>
+        </trans-unit>
+        <trans-unit id="384" translate="yes" xml:space="preserve">
+          <source>Then, use ATL directly in the implementation file, as in the example code below.</source>
+        </trans-unit>
+        <trans-unit id="385" translate="yes" xml:space="preserve">
+          <source>Example 2  Implementation (after)</source>
+        </trans-unit>
+        <trans-unit id="386" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Precompiled header (PCH) files and mismatched #include directives<ept id="p1">**</ept> (only affects /Wall /WX)</source>
+        </trans-unit>
+        <trans-unit id="387" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler accepted mismatched <ph id="ph1">`#include`</ph> directives in source files between <ph id="ph2">`-Yc`</ph> and <ph id="ph3">`-Yu`</ph> compilations when using precompiled header (PCH)  files.</source>
+        </trans-unit>
+        <trans-unit id="388" translate="yes" xml:space="preserve">
+          <source>Code written in this way is no longer accepted by the compiler.</source>
+        </trans-unit>
+        <trans-unit id="389" translate="yes" xml:space="preserve">
+          <source>The compiler now issues compiler warning CC4598 to help identify mismatched <ph id="ph1">`#include`</ph> directives when using PCH files.</source>
+        </trans-unit>
+        <trans-unit id="390" translate="yes" xml:space="preserve">
+          <source>Example (before):</source>
+        </trans-unit>
+        <trans-unit id="391" translate="yes" xml:space="preserve">
+          <source>X.cpp (-Ycc.h)</source>
+        </trans-unit>
+        <trans-unit id="392" translate="yes" xml:space="preserve">
+          <source>Z.cpp (-Yuc.h)</source>
+        </trans-unit>
+        <trans-unit id="393" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+        <trans-unit id="394" translate="yes" xml:space="preserve">
+          <source>X.cpp (-Ycc.h)</source>
+        </trans-unit>
+        <trans-unit id="395" translate="yes" xml:space="preserve">
+          <source>Z.cpp (-Yuc.h)</source>
+        </trans-unit>
+        <trans-unit id="396" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Precompiled header (PCH) files and mismatched include directories<ept id="p1">**</ept> (only affects /Wall /WX)</source>
+        </trans-unit>
+        <trans-unit id="397" translate="yes" xml:space="preserve">
+          <source>Previous versions of the compiler accepted mismatched include directory (<ph id="ph1">`-I`</ph>) command line arguments to the compiler between <ph id="ph2">`-Yc`</ph> and <ph id="ph3">`-Yu`</ph> compilations when using precompiled header (PCH)  files.</source>
+        </trans-unit>
+        <trans-unit id="398" translate="yes" xml:space="preserve">
+          <source>Code written in this way is no longer accepted by the compiler.</source>
+        </trans-unit>
+        <trans-unit id="399" translate="yes" xml:space="preserve">
+          <source>The compiler now issues compiler warning CC4599 to help identify mismatched include directory (<ph id="ph1">`-I`</ph>) command line arguments when using PCH files.</source>
+        </trans-unit>
+        <trans-unit id="400" translate="yes" xml:space="preserve">
+          <source>Example (before)</source>
+        </trans-unit>
+        <trans-unit id="401" translate="yes" xml:space="preserve">
+          <source>Example (after)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

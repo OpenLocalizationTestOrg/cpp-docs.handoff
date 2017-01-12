@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6f898a0242a091d8484096a27a03773f47c57595</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\windows\how-to-activate-and-use-a-windows-runtime-component-using-wrl.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0075f2d21e73869fa28368f28666fa238d6c9d0f</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8a4405c6952cf36289417afb42af8b2597d1d52b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Activate and Use a Windows Runtime Component Using WRL | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Activate and Use a Windows Runtime Component Using WRL</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document shows how to use the <ph id="ph1">[!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)]</ph> (<ph id="ph2">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph>) to initialize the <ph id="ph3">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> and how to activate and use a <ph id="ph4">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> component.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This example activates a built-in <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> component.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>To learn how to create your own component that you can activate in a similar manner, see <bpt id="p1">[</bpt>Walkthrough: Creating a Basic Windows Runtime Component<ept id="p1">](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To use a component, you must acquire an interface pointer to the type that is implemented by the component.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>And because the underlying technology of the <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> is the Component Object Model (COM), you must follow COM rules to maintain an instance of the type.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, you must maintain the <bpt id="p1">*</bpt>reference count<ept id="p1">*</ept> that determines when the type is deleted from memory.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To simplify the use of the <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph>, <ph id="ph2">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph> provides the smart pointer template, <bpt id="p1">[</bpt>ComPtr<ph id="ph3">\&lt;</ph>T&gt;<ept id="p1">](../windows/comptr-class.md)</ept>, that automatically performs reference counting.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>When you declare a variable, specify <ph id="ph1">`ComPtr&lt;`</ph><bpt id="p1">*</bpt>interface-name<ept id="p1">*</ept><ph id="ph2">`&gt;`</ph> <bpt id="p2">*</bpt>identifier<ept id="p2">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>To access an interface member, apply the arrow member-access operator (<ph id="ph1">`-&gt;`</ph>) to the identifier.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When you call an interface function, always test the <ph id="ph1">`HRESULT`</ph> return value.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Activating and Using a Windows Runtime Component</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following steps use the <ph id="ph1">`Windows::Foundation::IUriRuntimeClass`</ph> interface to demonstrate how to create an activation factory for a <ph id="ph2">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> component, create an instance of that component, and retrieve a property value.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>They also show how to initialize the <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The complete example follows.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Although you typically use the <ph id="ph1">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph> in a <ph id="ph2">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app, this example uses a console app for illustration.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Functions such as <ph id="ph1">`wprintf_s`</ph> are not available from a <ph id="ph2">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information about the types and functions that you can use in a <ph id="ph1">[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]</ph> app, see <bpt id="p1">[</bpt>CRT functions not supported with /ZW<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)</ept> and <bpt id="p2">[</bpt>Win32 and COM for Windows Store apps<ept id="p2">](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To activate and use a Windows Runtime component</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Include (<ph id="ph1">`#include`</ph>) any required <ph id="ph2">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph>, <ph id="ph3">[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]</ph>, or standard C++ library headers.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>wrl-consume-component#2</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>We recommend that you utilize the <ph id="ph1">`using namespace`</ph> directive in your .cpp file to make the code more readable.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Initialize the thread in which the app executes.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Every app must initialize its thread and threading model.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">[</bpt>Microsoft::WRL::Wrappers::RoInitializeWrapper<ept id="p1">](../windows/roinitializewrapper-class.md)</ept> class to initialize the <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> and specifies <bpt id="p2">[</bpt>RO_INIT_MULTITHREADED<ept id="p2">](http://msdn.microsoft.com/library/windows/apps/br224661.aspx)</ept> as the threading model.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`RoInitializeWrapper`</ph> class calls <ph id="ph2">`Windows::Foundation::Initialize`</ph> at construction, and <ph id="ph3">`Windows::Foundation::Uninitialize`</ph> when it is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>wrl-consume-component#3</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In the second statement, the <bpt id="p1">[</bpt>RoInitializeWrapper::HRESULT<ept id="p1">](../windows/roinitializewrapper-hresult-parens-operator.md)</ept> operator returns the <ph id="ph1">`HRESULT`</ph> from the call to <ph id="ph2">`Windows::Foundation::Initialize`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Create an <bpt id="p1">*</bpt>activation factory<ept id="p1">*</ept> for the <ph id="ph1">`ABI::Windows::Foundation::IUriRuntimeClassFactory`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>wrl-consume-component#4</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> uses fully-qualified names to identify types.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`RuntimeClass_Windows_Foundation_Uri`</ph> parameter is a string that's provided by the <ph id="ph2">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> and contains the required runtime class name.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Initialize a <bpt id="p1">[</bpt>Microsoft::WRL::Wrappers::HString<ept id="p1">](../windows/hstring-class.md)</ept> variable that represents the URI <ph id="ph1">`"http://www.microsoft.com"`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>wrl-consume-component#6</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph>, you don’t allocate memory for a string that the <ph id="ph2">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> will use.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Instead, the <ph id="ph1">[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]</ph> creates a copy of your string in a buffer that it maintains and uses for operations, and then returns a handle to the buffer that it created.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Use the <ph id="ph1">`IUriRuntimeClassFactory::CreateUri`</ph> factory method to create a <ph id="ph2">`ABI::Windows::Foundation::IUriRuntimeClass`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>wrl-consume-component#7</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Call the <ph id="ph1">`IUriRuntimeClass::get_Domain`</ph> method to retrieve the value of the <ph id="ph2">`Domain`</ph> property.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>wrl-consume-component#8</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Print the domain name to the console and return.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>All <ph id="ph1">`ComPtr`</ph> and RAII objects leave scope and are released automatically.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>wrl-consume-component#9</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>WindowsGetStringRawBuffer<ept id="p1">](http://msdn.microsoft.com/library/windows/apps/br224636.aspx)</ept> function retrieves the underlying Unicode form of the URI string.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Here's the complete example:</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>wrl-consume-component#1</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>To compile the code, copy it and then paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`wrl-consume-component.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>cl.exe wrl-consume-component.cpp runtimeobject.lib</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Windows Runtime C++ Template Library (WRL)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

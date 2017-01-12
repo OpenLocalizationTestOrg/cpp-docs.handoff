@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c52343e62a3618ec43513fd175a00da2ac72659c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\og-global-optimizations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0e8d31252ef0e94192a2d98ce316a1c9cbf9c204</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7dee5416b8901c6a0bccf018f0d95d7a17562a5f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-Og (Global Optimizations) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/Og (Global Optimizations)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Deprecated.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Provides local and global optimizations, automatic-register allocation, and loop optimization.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/Og<ept id="p1">**</ept> is deprecated.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>These optimizations are now generally enabled by default.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For more information on optimizations, see <bpt id="p1">[</bpt>/O1, /O2 (Minimize Size, Maximize Speed)<ept id="p1">](../../build/reference/o1-o2-minimize-size-maximize-speed.md)</ept> or <bpt id="p2">[</bpt>/Ox (Full Optimization)<ept id="p2">](../../build/reference/ox-full-optimization.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The following optimizations are available under <bpt id="p1">**</bpt>/Og<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Local and global common subexpression elimination</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>In this optimization, the value of a common subexpression is calculated once.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In the following example, if the values of <ph id="ph1">`b`</ph> and <ph id="ph2">`c`</ph> do not change between the three expressions, the compiler can assign the calculation of <ph id="ph3">`b + c`</ph> to a temporary variable, and substitute the variable for <ph id="ph4">`b + c`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For local common subexpression optimization, the compiler examines short sections of code for common subexpressions.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For global common subexpression optimization, the compiler searches entire functions for common subexpressions.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Automatic register allocation</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This optimization allows the compiler to store frequently used variables and subexpressions in registers; the <ph id="ph1">`register`</ph> keyword is ignored.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Loop optimization</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This optimization removes invariant subexpressions from the body of a loop.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>An optimal loop contains only expressions whose values change through each execution of the loop.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>In the following example, the expression <ph id="ph1">`x + y`</ph> does not change in the loop body:</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>After optimization, <ph id="ph1">`x + y`</ph> is calculated once rather than every time the loop is executed:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Loop optimization is much more effective when the compiler can assume no aliasing, which you set with <bpt id="p1">[</bpt>__restrict<ept id="p1">](../../cpp/extension-restrict.md)</ept>, <bpt id="p2">[</bpt>noalias<ept id="p2">](../../cpp/noalias.md)</ept>, or <bpt id="p3">[</bpt>restrict<ept id="p3">](../../cpp/restrict.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You can enable or disable global optimization on a function-by-function basis using the <ph id="ph1">`optimize`</ph> pragma with the <ph id="ph2">`g`</ph> option.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/Og<ept id="p1">**</ept> also enables the Named Return Value optimization, which eliminates the copy constructor and destructor of a stack based return value.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>/O1, /O2 (Minimize Size, Maximize Speed)<ept id="p1">](../../build/reference/o1-o2-minimize-size-maximize-speed.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For related information, see <bpt id="p1">[</bpt>Generate Intrinsic Functions (/Oi)<ept id="p1">](../../build/reference/oi-generate-intrinsic-functions.md)</ept> and <bpt id="p2">[</bpt>Full Optimization (/Ox)<ept id="p2">](../../build/reference/ox-full-optimization.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To set this compiler option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Working with Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>C/C++<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Click the <bpt id="p1">**</bpt>Command Line<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Type the compiler option in the <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept> box.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>To set this compiler option programmatically</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>See &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>/O Options (Optimize Code)</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Compiler Options</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Setting Compiler Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

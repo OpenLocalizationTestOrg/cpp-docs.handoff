@@ -1,77 +1,73 @@
 ---
-title: _mbsnbicmp, _mbsnbicmp_l | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname:
-- _mbsnbicmp_l
-- _mbsnbicmp
-apilocation:
-- msvcrt.dll
-- msvcr80.dll
-- msvcr90.dll
-- msvcr100.dll
-- msvcr100_clr0400.dll
-- msvcr110.dll
-- msvcr110_clr0400.dll
-- msvcr120.dll
-- msvcr120_clr0400.dll
-- ucrtbase.dll
-- api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
-f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
-- _mbsnbicmp
-- mbsnbicmp
-- mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
-- _mbsnbicmp_l
-dev_langs:
-- C++
-- C
-helpviewer_keywords:
-- _tcsnicmp_l function
-- _strnicmp function
-- mbsnbicmp_l function
-- _wcsnicmp_l function
-- _mbsnbicmp function
-- _mbsnbicmp_l function
-- _tcsnicmp function
-- _strnicmp_l function
-- mbsnbicmp function
-- _wcsnicmp function
+title: "_mbsnbicmp, _mbsnbicmp_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_mbsnbicmp_l"
+  - "_mbsnbicmp"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-multibyte-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "_strnicmp"
+  - "_wcsnicmp_l"
+  - "_mbsnbicmp"
+  - "mbsnbicmp"
+  - "mbsnbicmp_l"
+  - "_tcsnicmp"
+  - "_strnicmp_l"
+  - "_tcsnicmp_l"
+  - "_wcsnicmp"
+  - "_mbsnbicmp_l"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "_tcsnicmp_l function"
+  - "_strnicmp function"
+  - "mbsnbicmp_l function"
+  - "_wcsnicmp_l function"
+  - "_mbsnbicmp function"
+  - "_mbsnbicmp_l function"
+  - "_tcsnicmp function"
+  - "_strnicmp_l function"
+  - "mbsnbicmp function"
+  - "_wcsnicmp function"
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
 caps.latest.revision: 16
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: cc5faa6846bee14047edcd09d6bbf6649bdec4f1
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # _mbsnbicmp, _mbsnbicmp_l
 Compares `n` bytes of two multibyte-character strings, and ignores case.  
@@ -144,8 +140,3 @@ int _mbsnbicmp(
  [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
  [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
  [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

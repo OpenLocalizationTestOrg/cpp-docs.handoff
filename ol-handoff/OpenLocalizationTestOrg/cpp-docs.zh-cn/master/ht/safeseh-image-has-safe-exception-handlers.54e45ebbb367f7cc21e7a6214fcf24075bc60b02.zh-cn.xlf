@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="zh-cn">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f8db127dc3fc90b409e5f5e528a68cfa829784fb</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\safeseh-image-has-safe-exception-handlers.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5277ba3e94040429ae0f479aa558b4a6dd3512b8</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1b4387b81d68616377f5ffc05c037f283c008f0d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-SAFESEH (Image has Safe Exception Handlers) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/SAFESEH (Image has Safe Exception Handlers)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/SAFESEH<ept id="p1">**</ept> is specified, the linker will only produce an image if it can also produce a table of the image's safe exception handlers.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This table specifies for the operating system which exception handlers are valid for the image.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/SAFESEH<ept id="p1">**</ept> is only valid when linking for x86 targets.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>/SAFESEH<ept id="p1">**</ept> is not supported for platforms that already have the exception handlers noted.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For example, on <ph id="ph1">[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]</ph> and ARM, all exception handlers are noted in the PDATA.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>ML64.exe has support for adding annotations that emit SEH information (XDATA and PDATA) into the image, allowing you to unwind through ml64 functions.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>MASM for x64 (ml64.exe)<ept id="p1">](../../assembler/masm/masm-for-x64-ml64-exe.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>/SAFESEH<ept id="p1">**</ept> is not specified, the linker will produce an image with a table of safe exceptions handlers if all modules are compatible with the safe exception handling feature.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If any modules were not compatible with safe exception handling feature, the resulting image will not contain a table of safe exception handlers.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">[</bpt>/SUBSYSTEM<ept id="p1">](../../build/reference/subsystem-specify-subsystem.md)</ept> specifies WINDOWSCE or one of the EFI_* options, the linker will not attempt to produce an image with a table of safe exceptions handlers, as neither of those subsystems can make use of the information.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>/SAFESEH:NO<ept id="p1">**</ept> is specified, the linker will not produce an image with a table of safe exceptions handlers even if all modules are compatible with the safe exception handling feature.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The most common reason for the linker not to be able to produce an image is because one or more of the input files (modules) to the linker was not compatible with the safe exception handlers feature.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A common reason for a module to not be compatible with safe exception handlers is because it was created with a compiler from a previous version of Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>You can also register a function as a structured exception handler by using <bpt id="p1">[</bpt>.SAFESEH<ept id="p1">](../../assembler/masm/dot-safeseh.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>It is not possible to mark an existing binary as having safe exception handlers (or no exception handlers); information on safe exception handling must be added at build time.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The linker's ability to build a table of safe exception handlers depends on the application using the C runtime library.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>If you link with <bpt id="p1">[</bpt>/NODEFAULTLIB<ept id="p1">](../../build/reference/nodefaultlib-ignore-libraries.md)</ept> and you want a table of safe exception handlers, you need to supply a load config struct (such as can be found in loadcfg.c CRT source file) that contains all the entries defined for Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To set this linker option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Setting Visual C++ Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Linker<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Command Line<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Enter the option into the <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept> box.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To set this linker option programmatically</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>See &lt;xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A&gt;.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Setting Linker Options</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Linker Options</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

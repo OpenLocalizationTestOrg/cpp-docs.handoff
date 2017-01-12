@@ -1,42 +1,38 @@
 ---
-title: hash_map::bucket_count (STL-CLR) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- cliext::hash_map::bucket_count
-dev_langs:
-- C++
-helpviewer_keywords:
-- bucket_count member [STL/CLR]
+title: "hash_map::bucket_count (STL-CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "cliext::hash_map::bucket_count"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "bucket_count member [STL/CLR]"
 ms.assetid: 67cbcb76-1edd-44a0-8779-fa61410c3aff
 caps.latest.revision: 8
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 08e9aead3ed48d0a70b8bcee5e20c118effeec74
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # hash_map::bucket_count (STL/CLR)
 Counts the number of buckets.  
@@ -120,8 +116,3 @@ max_load_factor() = 0.25
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)   
  [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-
