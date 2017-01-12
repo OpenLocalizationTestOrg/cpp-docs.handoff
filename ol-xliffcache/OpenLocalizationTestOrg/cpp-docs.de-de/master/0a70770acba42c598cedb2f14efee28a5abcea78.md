@@ -1,40 +1,36 @@
 ---
-title: 'How to: Iterate Over Arrays with for each | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- arrays [C++], iterating with for each
+title: "How to: Iterate Over Arrays with for each | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "arrays [C++], iterating with for each"
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0a70770acba42c598cedb2f14efee28a5abcea78
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # How to: Iterate Over Arrays with for each
 This topic shows how to use the [for each, in](../dotnet/for-each-in.md) keyword on different types of arrays.  
@@ -165,8 +161,3 @@ IntArray[1] = 11
   
 ## See Also  
  [for each, in](../dotnet/for-each-in.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

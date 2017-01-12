@@ -1,47 +1,43 @@
 ---
-title: -fp (Specify Floating-Point Behavior) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- VC.Project.VCCLCompilerTool.floatingPointModel
-- VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
-- /fp
-- VC.Project.VCCLWCECompilerTool.floatingPointModel
-- VC.Project.VCCLCompilerTool.FloatingPointExceptions
-dev_langs:
-- C++
-helpviewer_keywords:
-- -fp compiler option [C++]
-- /fp compiler option [C++]
+title: "-fp (Specify Floating-Point Behavior) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "VC.Project.VCCLCompilerTool.floatingPointModel"
+  - "VC.Project.VCCLWCECompilerTool.FloatingPointExceptions"
+  - "/fp"
+  - "VC.Project.VCCLWCECompilerTool.floatingPointModel"
+  - "VC.Project.VCCLCompilerTool.FloatingPointExceptions"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "-fp compiler option [C++]"
+  - "/fp compiler option [C++]"
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
 caps.latest.revision: 21
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9dee257bec0f09bd729bf10c4a1468ecb20dfa61
-ms.openlocfilehash: 8c7a705c99bdcaa5982ef6f8ee0e25c0dbfb0ea0
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # /fp (Specify Floating-Point Behavior)
 Specifies floating-point behavior in a source code file.  
@@ -130,8 +126,3 @@ Specifies floating-point behavior in a source code file.
  [Compiler Options](../../build/reference/compiler-options.md)   
  [Setting Compiler Options](../../build/reference/setting-compiler-options.md)   
  [Microsoft Visual C++ Floating Point Optimization](http://msdn.microsoft.com/library/aa289157.aspx)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,60 +1,56 @@
 ---
-title: wctob | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname:
-- wctob
-apilocation:
-- msvcrt.dll
-- msvcr80.dll
-- msvcr90.dll
-- msvcr100.dll
-- msvcr100_clr0400.dll
-- msvcr110.dll
-- msvcr110_clr0400.dll
-- msvcr120.dll
-- msvcr120_clr0400.dll
-- ucrtbase.dll
-- api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
-f1_keywords:
-- wctob
-dev_langs:
-- C++
-- C
-helpviewer_keywords:
-- wide characters, converting
-- wctob function
-- characters, converting
+title: "wctob | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "wctob"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-convert-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "wctob"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "wide characters, converting"
+  - "wctob function"
+  - "characters, converting"
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
 caps.latest.revision: 14
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: eb69d31fbd0b63fb3af2ce9ad1b06a4f826ad16e
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # wctob
 Determines if a wide character corresponds to a multibyte character and returns its multibyte character representation.  
@@ -132,8 +128,3 @@ Determined the corresponding multibyte character to be "A".
  [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
  [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">59200ee2af006a61b3dace9b5c56d681c6fbe7d0</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\zc-inline-remove-unreferenced-comdat.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">07b63223a0ba582323152a8bfb15dc2c1a6745d6</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1b244fe961f9a925e18d54a34a6b07a7a2688412</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>-Zc:inline (Remove unreferenced COMDAT) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>/Zc:inline (Remove unreferenced COMDAT)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Removes unreferenced functions or data that are COMDATs or only have internal linkage.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/Zc:inline<ept id="p1">**</ept> is specified, the compiler requires that translation units that use inline data or inline functions must also include the definitions for the data or functions.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/Zc:inline<ept id="p1">**</ept> is specified, the compiler does not emit symbol information for unreferenced COMDAT functions or data, or for functions or data that have internal linkage only.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>By default, this option is off (<bpt id="p1">**</bpt>/Zc:inline-<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This optimization simplifies some of the work performed by the linker in release builds or when the linker option <bpt id="p1">[</bpt>/OPT:REF<ept id="p1">](../../build/reference/opt-optimizations.md)</ept> is specified.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>When the compiler performs this optimization, it can significantly reduce .obj file size and improve linker speeds.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This compiler option is not enabled when optimizations are disabled (<bpt id="p1">[</bpt>/Od<ept id="p1">](../../build/reference/od-disable-debug.md)</ept>) or when <bpt id="p2">[</bpt>/GL (Whole Program Optimization)<ept id="p2">](../../build/reference/gl-whole-program-optimization.md)</ept> is specified.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>/Zc:inline<ept id="p1">**</ept> is specified, the compiler enforces the C++11 requirement that all functions declared <ph id="ph1">`inline`</ph> must have a definition available in the same translation unit if they are used.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When the option is not specified, <ph id="ph1">[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]</ph> allows non-conformant code that invokes functions declared <ph id="ph2">`inline`</ph> even if no definition is visible.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For more information, see the C++11 standard, in section 3.2 and section 7.1.2.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This compiler option was introduced in Visual Studio 2013 Update 2.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To use the <bpt id="p1">**</bpt>/Zc:inline<ept id="p1">**</ept> option, update non-compliant code.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This example shows how the non-compliant use of an inline function declaration without a definition still compiles and links when the default <bpt id="p1">**</bpt>/Zc:inline-<ept id="p1">**</ept> option is used:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">**</bpt>/Zc:inline<ept id="p1">**</ept> is enabled, the same code causes a <bpt id="p2">[</bpt>LNK2019<ept id="p2">](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)</ept> error, because the compiler does not emit a non-inlined code body for <ph id="ph1">`Example::inline_call`</ph> in example.obj.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This causes the non-inlined call in <ph id="ph1">`main`</ph> to reference an undefined external symbol.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To resolve this error, you can remove the <ph id="ph1">`inline`</ph> keyword from the declaration of <ph id="ph2">`Example::inline_call`</ph>, move the definition of <ph id="ph3">`Example::inline_call`</ph> into the header file, or move the implementation of <ph id="ph4">`Example`</ph> into main.cpp.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The next example moves the definition into the header file, where it is visible to any caller that includes the header.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For more information about conformance issues in Visual C++, see <bpt id="p1">[</bpt>Nonstandard Behavior<ept id="p1">](../../cpp/nonstandard-behavior.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To set this compiler option in the Visual Studio development environment</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Open the project's <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>For details, see <bpt id="p1">[</bpt>Working with Project Properties<ept id="p1">](../../ide/working-with-project-properties.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>C/C++<ept id="p1">**</ept> folder.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Select the <bpt id="p1">**</bpt>Command Line<ept id="p1">**</ept> property page.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Modify the <bpt id="p1">**</bpt>Additional Options<ept id="p1">**</ept> property to include <ph id="ph1">`/Zc:inline`</ph> and then choose <bpt id="p2">**</bpt>OK<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>/Zc (Conformance)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

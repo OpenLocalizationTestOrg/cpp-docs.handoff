@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="de-de">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a1c20a019d4f8c60057695f38d12622969e30806</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\reference\exports.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b3f1e20ca36bc102a00a3475579866594157929d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3b9197f5d0bf154660869302e49e535ee7f9dc47</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>EXPORTS | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>EXPORTS</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Introduces a section of one or more export definitions that specify the exported names or ordinals of functions or data.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Each definition must be on a separate line.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The first <ph id="ph1">`definition`</ph> can be on the same line as the <ph id="ph2">`EXPORTS`</ph> keyword or on a subsequent line.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The .DEF file can contain one or more <ph id="ph1">`EXPORTS`</ph> statements.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The syntax for an export <ph id="ph1">`definition`</ph> is:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>is the function or variable name that you want to export.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This is required.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If the name that you export differs from the name in the DLL, specify the export's name in the DLL by using <ph id="ph1">`internalname`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>For example, if your DLL exports a function <ph id="ph1">`func1`</ph> and you want callers to use it as <ph id="ph2">`func2`</ph>, you would specify:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Because the Visual C++ compiler uses name decoration for C++ functions, you must either use the decorated name as the <ph id="ph1">`entryname`</ph> or <ph id="ph2">`internalname`</ph>, or define the exported functions by using <ph id="ph3">`extern "C"`</ph> in the source code.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The compiler also decorates C functions that use the <bpt id="p1">[</bpt>__stdcall<ept id="p1">](../../cpp/stdcall.md)</ept> calling convention with an underscore (_) prefix and a suffix composed of the at sign (@) followed by the number of bytes (in decimal) in the argument list.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>To find the decorated names produced by the compiler, use the <bpt id="p1">[</bpt>DUMPBIN<ept id="p1">](../../build/reference/dumpbin-reference.md)</ept> tool or the linker <bpt id="p2">[</bpt>/MAP<ept id="p2">](../../build/reference/map-generate-mapfile.md)</ept> option.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The decorated names are compiler-specific.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>If you export the decorated names in the .DEF file, executables that link to the DLL must also be built by using the same version of the compiler.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This ensures that the decorated names in the caller match the exported names in the .DEF file.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You can use @<ph id="ph1">`ordinal`</ph> to specify that a number, and not the function name, will go into the DLL's export table.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Many Windows DLLs export ordinals to support legacy code.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>It was common to use ordinals in 16-bit Windows code, because it can help minimize the size of a DLL.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>We don’t recommend exporting functions by ordinal unless your DLL’s clients need it for legacy support.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Because the .LIB file will contain the mapping between the ordinal and the function, you can use the function name as you normally would in projects that use the DLL.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>By using the optional <ph id="ph1">`NONAME`</ph> keyword, you can export by ordinal only and reduce the size of the export table in the resulting DLL.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>However, if you want to use <bpt id="p1">[</bpt>GetProcAddress<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)</ept> on the DLL, you must know the ordinal because the name will not be valid.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The optional keyword <ph id="ph1">`PRIVATE`</ph> prevents <ph id="ph2">`entryname`</ph> from being included in the import library generated by LINK.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>It does not affect the export in the image also generated by LINK.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The optional keyword <ph id="ph1">`DATA`</ph> specifies that an export is data, not code.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>This example shows how you could export a data variable named <ph id="ph1">`exported_global`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>There are four ways to export a definition, listed in recommended order:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>__declspec(dllexport)<ept id="p1">](../../cpp/dllexport-dllimport.md)</ept> keyword in the source code</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>An <ph id="ph1">`EXPORTS`</ph> statement in a .DEF file</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">[</bpt>/EXPORT<ept id="p1">](../../build/reference/export-exports-a-function.md)</ept> specification in a LINK command</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">[</bpt>comment<ept id="p1">](../../preprocessor/comment-c-cpp.md)</ept> directive in the source code, of the form</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>All four methods can be used in the same program.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>When LINK builds a program that contains exports, it also creates an import library, unless an .EXP file is used in the build.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Here's an example of an EXPORTS section:</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>When you export a variable from a DLL by using a .DEF file, you do not have to specify <ph id="ph1">`__declspec(dllexport)`</ph> on the variable.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>However, in any file that uses the DLL, you must still use <ph id="ph1">`__declspec(dllimport)`</ph> on the declaration of data.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Rules for Module-Definition Statements</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

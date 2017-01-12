@@ -1,41 +1,37 @@
 ---
-title: C Sequence Points | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-- C
-helpviewer_keywords:
-- sequence points
+title: "C Sequence Points | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "sequence points"
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
 caps.latest.revision: 6
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 34a2b2e854ca4b35fdf7a0d717b09bedfadcaa28
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # C Sequence Points
 Between consecutive "sequence points" an object's value can be modified only once by an expression. The C language defines the following sequence points:  
@@ -64,8 +60,3 @@ Between consecutive "sequence points" an object's value can be modified only onc
   
 ## See Also  
  [Expression Evaluation](../c-language/expression-evaluation-c.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-
