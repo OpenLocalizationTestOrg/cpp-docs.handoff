@@ -1,43 +1,39 @@
 ---
-title: Add Class Dialog Box | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vc.addclass
-dev_langs:
-- C++
-helpviewer_keywords:
-- Add Class dialog box
+title: "Add Class Dialog Box | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vc.addclass"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "Add Class dialog box"
 ms.assetid: 916259b8-8e5f-4267-bd10-313483beba67
 caps.latest.revision: 12
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: afe01cea51fdf1dd5cbf3ebe72627bc866410ecf
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # Add Class Dialog Box
 The **Add Class** dialog box contains templates that allow you to:  
@@ -103,8 +99,3 @@ The **Add Class** dialog box contains templates that allow you to:
  [Overriding a Virtual Function](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [MFC Message Handler](../mfc/reference/adding-an-mfc-message-handler.md)   
  [Navigating the Class Structure](../ide/navigating-the-class-structure-visual-cpp.md)
-
-
-<!--HONumber=Jan17_HO2-->
-
-
