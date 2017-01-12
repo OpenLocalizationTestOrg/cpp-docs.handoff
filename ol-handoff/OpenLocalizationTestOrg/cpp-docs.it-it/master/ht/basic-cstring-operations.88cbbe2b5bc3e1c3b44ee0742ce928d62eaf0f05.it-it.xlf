@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6b50c6a41579a9a40a1181f160c89f94eb390b2c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl-mfc-shared\basic-cstring-operations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5858dc942b99d45243514ab9663a3ac9d0c71e42</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0dedba6bda61cfd258dd799f0dbc4c52097d400b</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Basic CString Operations | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Basic CString Operations</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic explains the following basic <bpt id="p1">[</bpt>CString<ept id="p1">](../atl-mfc-shared/reference/cstringt-class.md)</ept> operations:</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Creating CString objects from standard C literal strings</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Accessing individual characters in a CString</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Concatenating two CString objects</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Comparing CString objects</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Converting CString objects</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>is based on class template <bpt id="p1">[</bpt>CStringT Class<ept id="p1">](../atl-mfc-shared/reference/cstringt-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>is a <ph id="ph1">`typedef`</ph> of <ph id="ph2">`CStringT`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>More exactly, <ph id="ph1">`CString`</ph> is a <ph id="ph2">`typedef`</ph> of an <bpt id="p1">*</bpt>explicit specialization<ept id="p1">*</ept> of <ph id="ph3">`CStringT`</ph>, which is a common way to use a class template to define a class.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Similarly defined classes are <ph id="ph1">`CStringA`</ph> and <ph id="ph2">`CStringW`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`CStringA`</ph>, and <ph id="ph2">`CStringW`</ph> are defined in atlstr.h.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>is defined in cstringt.h.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`CStringA`</ph>, and <ph id="ph2">`CStringW`</ph> each get a set of the methods and operators defined by <ph id="ph3">`CStringT`</ph> for use with the string data they support.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Some of the methods duplicate and, in some cases, surpass the string services of the C run-time libraries.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Note: <ph id="ph1">`CString`</ph> is a native class.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>For a string class that is for use in a C++/CLI managed project, use <ph id="ph1">`System.String`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Creating CString Objects from Standard C Literal Strings</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>You can assign C-style literal strings to a <ph id="ph1">`CString`</ph> just as you can assign one <ph id="ph2">`CString`</ph> object to another.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Assign the value of a C literal string to a <ph id="ph1">`CString`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>NVC_ATLMFC_Utilities#183</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Assign the value of one <ph id="ph1">`CString`</ph> to another <ph id="ph2">`CString`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>NVC_ATLMFC_Utilities#184</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The contents of a <ph id="ph1">`CString`</ph> object are copied when one <ph id="ph2">`CString`</ph> object is assigned to another.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Therefore, the two strings do not share a reference to the actual characters that make up the string.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For more information about how to use <ph id="ph1">`CString`</ph> objects as values, see <bpt id="p1">[</bpt>CString Semantics<ept id="p1">](../atl-mfc-shared/cstring-semantics.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To write your application so that it can be compiled for Unicode or for ANSI, code literal strings by using the _T macro.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Unicode and Multibyte Character Set (MBCS) Support<ept id="p1">](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Accessing Individual Characters in a CString</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>You can access individual characters in a <ph id="ph1">`CString`</ph> object by using the <ph id="ph2">`GetAt`</ph> and <ph id="ph3">`SetAt`</ph> methods.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>You can also use the array element, or subscript, operator ( [ ] ) instead of <ph id="ph1">`GetAt`</ph> to get individual characters.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>(This resembles accessing array elements by index, as in standard C-style strings.) Index values for <ph id="ph1">`CString`</ph> characters are zero-based.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Concatenating Two CString Objects</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>To concatenate two <ph id="ph1">`CString`</ph> objects, use the concatenation operators (+ or +=), as follows.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>NVC_ATLMFC_Utilities#185</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>At least one argument to the concatenation operators (+ or +=) must be a <ph id="ph1">`CString`</ph> object, but you can use a constant character string (for example, <ph id="ph2">`"big"`</ph>) or a <ph id="ph3">`char`</ph> (for example, 'x') for the other argument.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Comparing CString Objects</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Compare`</ph> method and the == operator for <ph id="ph2">`CString`</ph> are equivalent.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`operator==`</ph>, and <ph id="ph2">`CompareNoCase`</ph> are MBCS and Unicode aware; <ph id="ph3">`CompareNoCase`</ph> is also case-insensitive.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Collate`</ph> method of <ph id="ph2">`CString`</ph> is locale-sensitive and is often slower than <ph id="ph3">`Compare`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Use <ph id="ph1">`Collate`</ph> only where you must abide by the sorting rules as specified by the current locale.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The following table shows the available <bpt id="p1">[</bpt>CString<ept id="p1">](../atl-mfc-shared/reference/cstringt-class.md)</ept> comparison functions and their equivalent Unicode/MBCS-portable functions in the C run-time library.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>CString function</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>MBCS function</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Unicode function</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CStringT`</ph> class template defines the relational operators (&lt;, <ph id="ph2">\&lt;</ph>=, &gt;=, &gt;, ==, and !=), which are available for use by <ph id="ph3">`CString`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>You can compare two <ph id="ph1">`CStrings`</ph> by using these operators, as shown in the following example.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>NVC_ATLMFC_Utilities#186</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Converting CString Objects</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>For information about converting CString objects to other string types, see <bpt id="p1">[</bpt>How to: Convert Between Various String Types<ept id="p1">](../text/how-to-convert-between-various-string-types.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Using CString with wcout</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>To use a CString with <ph id="ph1">`wcout`</ph> you must explicitly cast the object to a <ph id="ph2">`const wchar_t*`</ph> as shown in the following example:</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Without the cast, <ph id="ph1">`cs`</ph> is treated as a <ph id="ph2">`void*`</ph> and <ph id="ph3">`wcout`</ph> prints the address of the object.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>This behavior is caused by subtle interactions between template argument deduction and overload resolution which are in themselves correct and conformant with the C++ standard.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Strings (ATL/MFC)</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>CStringT Class</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Template Specialization</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>How to: Convert Between Various String Types</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

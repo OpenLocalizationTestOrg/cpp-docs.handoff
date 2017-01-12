@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">341ec6a0448d85e106819fe955b9c9d1e64dc6c0</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\cpp\exception-handling-differences.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8357d1c2924155e82dbb0bc994a4756c377c947e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9e2f1b4572c5fff4b3fc2a327ea3a1c087847947</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Exception Handling Differences | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Exception Handling Differences</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The major difference between structured exception handling and C++ exception handling is that the C++ exception handling model deals in types, while the C structured exception handling model deals with exceptions of one type — specifically, <ph id="ph1">`unsigned int`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>That is, C exceptions are identified by an unsigned integer value, whereas C++ exceptions are identified by data type.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>When an exception is raised in C, each possible handler executes a filter that examines the C exception context and determines whether to accept the exception, pass it to some other handler, or ignore it.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When an exception is thrown in C++, it may be of any type.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A second difference is that the C structured exception handling model is referred to as "asynchronous" in that exceptions occur secondary to the normal flow of control.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The C++ exception handling mechanism is fully "synchronous," which means that exceptions occur only when they are thrown.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If a C exception is raised in a C++ program, it can be handled by a structured exception handler with its associated filter or by a C++ <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> handler, whichever is dynamically nearer to the exception context.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For example, the following C++ program raises a C exception inside a C++ <bpt id="p1">**</bpt>try<ept id="p1">**</ept> context:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>C Exception Wrapper Class</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>In a simple example like the above, the C exception can be caught only by an ellipsis (<bpt id="p1">**</bpt>...<ept id="p1">**</ept>) <bpt id="p2">**</bpt>catch<ept id="p2">**</ept> handler.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>No information about the type or nature of the exception is communicated to the handler.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>While this method works, in some cases you may need to define a transformation between the two exception handling models so that each C exception is associated with a specific class.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To do this, you can define a C exception "wrapper" class, which can be used or derived from in order to attribute a specific class type to a C exception.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>By doing so, each C exception can be handled by a C++ <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> handler more separately than in the preceding example.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Your wrapper class might have an interface consisting of some member functions that determine the value of the exception, and that access the extended exception context information provided by the C exception model.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You might also want to define a default constructor and a constructor that accepts an <ph id="ph1">`unsigned int`</ph> argument (to provide for the underlying C exception representation), and a bitwise copy constructor.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The following is a possible implementation of a C exception wrapper class:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>To use this class, you install a custom C exception translation function that is called by the internal exception handling mechanism each time a C exception is thrown.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Within your translation function, you can throw any typed exception (perhaps an <ph id="ph1">`SE_Exception`</ph> type, or a class type derived from <ph id="ph2">`SE_Exception`</ph>) that can be caught by an appropriate matching C++ <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> handler.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The translation function can simply return, which indicates that it did not handle the exception.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If the translation function itself raises a C exception, <bpt id="p1">[</bpt>terminate<ept id="p1">](../c-runtime-library/reference/terminate-crt.md)</ept> is called.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>To specify a custom translation function, call the <bpt id="p1">[</bpt>_set_se_translator<ept id="p1">](../c-runtime-library/reference/set-se-translator.md)</ept> function with the name of your translation function as its single argument.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The translation function that you write is called once for each function invocation on the stack that has <bpt id="p1">**</bpt>try<ept id="p1">**</ept> blocks.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>There is no default translation function; if you do not specify one by calling <ph id="ph1">`_set_se_translator`</ph>, the C exception can only be caught by an ellipsis <bpt id="p1">**</bpt>catch<ept id="p1">**</ept> handler.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For example, the following code installs a custom translation function, and then raises a C exception that is wrapped by the <ph id="ph1">`SE_Exception`</ph> class:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Mixing C (Structured) and C++ Exceptions</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

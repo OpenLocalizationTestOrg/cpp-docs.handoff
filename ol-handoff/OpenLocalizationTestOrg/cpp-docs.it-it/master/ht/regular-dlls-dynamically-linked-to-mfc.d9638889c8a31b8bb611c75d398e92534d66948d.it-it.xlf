@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7231deaa04da651710da5cb14cfda4b2df50981c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\regular-dlls-dynamically-linked-to-mfc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ae549943d567da8122852ec655fb8419a19d0474</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c7efa962d2f76a07010676854aeffcdd8154bb06</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Regular DLLs Dynamically Linked to MFC | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Regular DLLs Dynamically Linked to MFC</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A regular DLL dynamically linked to MFC is a DLL that uses MFC internally, and the exported functions in the DLL can be called by either MFC or non-MFC executables.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As the name describes, this kind of DLL is built using the dynamic-link library version of MFC (also known as the shared version of MFC).</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Functions are usually exported from a regular DLL using the standard C interface.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>You must add the <ph id="ph1">`AFX_MANAGE_STATE`</ph> macro at the beginning of all the exported functions in regular DLLs that dynamically link to MFC to set the current module state to the one for the DLL.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This is done by adding the following line of code to the beginning of functions exported from the DLL:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A regular DLL, dynamically linked to MFC has the following features:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This is a new type of DLL introduced by Visual C++ 4.0.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The client executable can be written in any language that supports the use of DLLs (C, C++, Pascal, Visual Basic, and so on); it does not have to be an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Unlike the statically linked regular DLL, this type of DLL is dynamically linked to the MFC DLL (also known as the shared MFC DLL).</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The MFC import library linked to this type of DLL is the same one used for extension DLLs or applications using the MFC DLL: MFCxx(D).lib.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A regular DLL, dynamically linked to MFC has the following requirements:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>These DLLs are compiled with <bpt id="p1">**</bpt>_AFXDLL<ept id="p1">**</ept> defined, just like an executable that is dynamically linked to the MFC DLL.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>But <bpt id="p1">**</bpt>_USRDLL<ept id="p1">**</ept> is also defined, just like a regular DLL that is statically linked to MFC.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>This type of DLL must instantiate a <ph id="ph1">`CWinApp`</ph>-derived class.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This type of DLL uses the <ph id="ph1">`DllMain`</ph> provided by MFC.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Place all DLL-specific initialization code in the <ph id="ph1">`InitInstance`</ph> member function and termination code in <ph id="ph2">`ExitInstance`</ph> as in a normal MFC application.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Because this kind of DLL uses the dynamic-link library version of MFC, you must explicitly set the current module state to the one for the DLL.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>To do this, use the <bpt id="p1">[</bpt>AFX_MANAGE_STATE<ept id="p1">](http://msdn.microsoft.com/Library/620cb840-4227-4a75-b36d-f7d507f44606)</ept> macro at the beginning of every function exported from the DLL.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Regular DLLs must have a <ph id="ph1">`CWinApp`</ph>-derived class and a single object of that application class, as does an MFC application.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>However, the <ph id="ph1">`CWinApp`</ph> object of the DLL does not have a main message pump, as does the <ph id="ph2">`CWinApp`</ph> object of an application.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Note that the <ph id="ph1">`CWinApp::Run`</ph> mechanism does not apply to a DLL, because the application owns the main message pump.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If your DLL brings up modeless dialogs or has a main frame window of its own, your application's main message pump must call a DLL-exported routine that calls <ph id="ph1">`CWinApp::PreTranslateMessage`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Place all DLL-specific initialization in the <ph id="ph1">`CWinApp::InitInstance`</ph> member function as in a normal MFC application.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CWinApp::ExitInstance`</ph> member function of your <ph id="ph2">`CWinApp`</ph> derived class is called from the MFC provided <ph id="ph3">`DllMain`</ph> function before the DLL is unloaded.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>You must distribute the shared DLLs MFCx0.dll and Msvcr*0.dll (or similar files) with your application.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>A DLL that is dynamically linked to MFC cannot also statically link to MFC.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Applications link to regular DLLs dynamically linked to MFC it just like any other DLL.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Symbols are usually exported from a regular DLL using the standard C interface.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The declaration of a function exported from a regular DLL looks something like this:</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>All memory allocations within a regular DLL should stay within the DLL; the DLL should not pass to or receive from the calling executable any of the following:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>pointers to MFC objects</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>pointers to memory allocated by MFC</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If you need to do any of the above, or if you need to pass MFC-derived objects between the calling executable and the DLL, then you must build an extension DLL.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>It is safe to pass pointers to memory that were allocated by the C run-time libraries between an application and a DLL only if you make a copy of the data.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>You must not delete or resize these pointers or use them without making a copy of the memory.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>When building a regular DLL that dynamically links to MFC, you need to use the macro <bpt id="p1">[</bpt>AFX_MANAGE_STATE<ept id="p1">](http://msdn.microsoft.com/Library/620cb840-4227-4a75-b36d-f7d507f44606)</ept> to switch the MFC module state correctly.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>This is done by adding the following line of code to the beginning of functions exported from the DLL:</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>AFX_MANAGE_STATE<ept id="p1">**</ept> macro should not be used in regular DLLs that statically link to MFC or in extension DLLs.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Managing the State Data of MFC Modules<ept id="p1">](../mfc/managing-the-state-data-of-mfc-modules.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For an example of how to write, build, and use a regular DLL, see the sample <bpt id="p1">[</bpt>DLLScreenCap<ept id="p1">](http://msdn.microsoft.com/en-us/2171291d-3a50-403b-90a1-d93c2acb4f4a)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For more information about regular DLLs that dynamically link to MFC, see the section titled "Converting DLLScreenCap to Dynamically Link with the MFC DLL" in the abstract for the sample.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>What do you want to do?</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Initialize regular DLLs</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about?</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>The module states of a regular DLL dynamically linked to MFC</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Managing the state data of MFC modules</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Using Database, OLE, and Sockets Extension DLLs in Regular DLLs</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Using MFC as Part of a DLL</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Kinds of DLLs</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8138436e69f9f1e30f8ee08034ed3a05f5789358</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\ado-rdo\limitations-of-databinding.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b950a3dad844f1be69d5cb7377e427a535b22c89</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8191754c7ccfad8ec35c9571d20536bf7a575578</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Limitations of Databinding | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Limitations of Databinding</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Databinding is a powerful way to create data applications quickly.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>However, the current databinding controls architecture is inherently two tier.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Scalability</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>ADO data-bound controls can only access data from the ADO data control.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>RDO data-bound controls can only access data from the RDO RemoteData control.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For RDO RemoteData control, there is no workaround but to use a two-tier architecture, which results in the database server receiving all data retrieval requests directly.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To avoid directly connecting to the database server, write a provider that allows access to middle-tier business and data objects.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The ADO data control connects to these objects, rather than the database server.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Such middle-tier objects can be cached and managed in a transaction server such as COM+ 1.0 services.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Versioning and Distribution</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>When new versions of controls are released, the application will have to be tested with the new versions.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If another application is installed on a user's computer, and it has a different version of the controls, the application will have to be checked.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Finally, when new versions of controls are released, the new controls will have to be distributed to application users.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Drivers and Providers</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Databinding is only as good as the ODBC driver or OLE DB provider you are using.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Because the drivers and providers are responsible for exposing data to data controls, it is important to ensure that the driver or provider supports the functionality that you need.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When you select a driver or provider, you must also ensure that your users have the driver or provider installed.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>This includes installing any middleware that the driver or provider requires.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>For example, for ODBC Oracle connectivity, the user should have installed not only an ODBC Oracle driver, but also Oracle's SQL*Net middleware.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For connectivity to Oracle 7.3 servers, the Microsoft Oracle ODBC driver is recommended.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Programmability</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Because ActiveX controls were designed to be black-box components, programmability is limited to a developer's access to the control's interfaces.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>In the databinding model in the resource editor, this is implemented through <bpt id="p1">[</bpt>wrapper classes<ept id="p1">](../../data/ado-rdo/wrapper-classes.md)</ept> generated by the Insert ActiveX Control Wizard.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If the wizard is unable to detect a coclass, no wrapper class is generated and there is no programmatic access.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Despite these limitations, databinding affords a way to rapidly prototype data applications using Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If speed of development is important, databinding should be considered when designing your application.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Databinding with ActiveX Controls in Visual C++</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,18 +1,14 @@
 ---
-title: '&lt;memory&gt; functions | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "&lt;memory&gt; functions | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 caps.latest.revision: 12
-manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 60df3a7caba5de741bc636e8b9fd2f4e3ed258ec
-
+manager: "ghogen"
 ---
 # &lt;memory&gt; functions
 ||||  
@@ -1100,9 +1096,3 @@ int main() {
   
 ## See Also  
  [\<memory>](../standard-library/memory.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

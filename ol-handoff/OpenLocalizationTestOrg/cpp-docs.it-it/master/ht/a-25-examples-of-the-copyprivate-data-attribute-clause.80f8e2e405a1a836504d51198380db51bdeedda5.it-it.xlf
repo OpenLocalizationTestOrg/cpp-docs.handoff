@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0fe8b2462dd0d05f1c11b9f0dfbaed2fcaefd48c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\openmp\a-25-examples-of-the-copyprivate-data-attribute-clause.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">14a633b929ab730607ad4192852b8c6e1aee7d75</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">68aae315cf6d585255260916cdfd9a4aabf34be7</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>A.25   Examples of the copyprivate Data Attribute Clause | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>A.25   Examples of the copyprivate Data Attribute Clause</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Example 1:<ept id="p1">**</ept> The <ph id="ph1">`copyprivate`</ph> clause (<bpt id="p2">[</bpt>Section 2.7.2.8<ept id="p2">](../../parallel/openmp/2-7-2-8-copyprivate.md)</ept> on page 32) can be used to broadcast values acquired by a single thread directly to all instances of the private variables in the other threads.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If routine <bpt id="p1">*</bpt>init<ept id="p1">*</ept> is called from a serial region, its behavior is not affected by the presence of the directives.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>After the call to the <bpt id="p1">*</bpt>get_values<ept id="p1">*</ept> routine has been executed by one thread, no thread leaves the construct until the private objects designated by <bpt id="p2">*</bpt>a<ept id="p2">*</ept>, <bpt id="p3">*</bpt>b<ept id="p3">*</ept>, <bpt id="p4">*</bpt>x<ept id="p4">*</ept>, and <bpt id="p5">*</bpt>y<ept id="p5">*</ept> in all threads have become defined with the values read.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Example 2:<ept id="p1">**</ept> In contrast to the previous example, suppose the read must be performed by a particular thread, say the master thread.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>In this case, the <ph id="ph1">`copyprivate`</ph> clause cannot be used to do the broadcast directly, but it can be used to provide access to a temporary shared object.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Example 3:<ept id="p1">**</ept> Suppose that the number of lock objects required within a parallel region cannot easily be determined prior to entering it.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`copyprivate`</ph> clause can be used to provide access to shared lock objects that are allocated within that parallel region.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

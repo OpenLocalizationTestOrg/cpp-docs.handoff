@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6b1be76da83de354fa4993137e0a6eaadc854e51</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\optimizing-control-drawing.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f4885fb66d0e530d64bef18c6ace3649692c8bfb</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ab4f25976d4056bf243defd3ec155f8b983bb443</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Optimizing Control Drawing | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Optimizing Control Drawing</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>When a control is instructed to draw itself into a container-supplied device context, it typically selects GDI objects (such as pens, brushes, and fonts) into the device context, performs its drawing operations, and restores the previous GDI objects.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If the container has multiple controls that are to be drawn into the same device context, and each control selects the GDI objects it requires, time can be saved if the controls do not individually restore previously selected objects.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>After all the controls have been drawn, the container can automatically restore the original objects.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To detect whether a container supports this technique, a control can call the <bpt id="p1">[</bpt>COleControl::IsOptimizedDraw<ept id="p1">](../mfc/reference/colecontrol-class.md#colecontrol__isoptimizeddraw)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If this function returns <bpt id="p1">**</bpt>TRUE<ept id="p1">**</ept>, the control can skip the normal step of restoring the previously selected objects.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Consider a control that has the following (unoptimized) <ph id="ph1">`OnDraw`</ph> function:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#15</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The pen and brush in this example are local variables, meaning their destructors will be called when they go out of scope (when the <ph id="ph1">`OnDraw`</ph> function ends).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The destructors will attempt to delete the corresponding GDI objects.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>But they should not be deleted if you plan to leave them selected into the device context upon returning from <ph id="ph1">`OnDraw`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To prevent the <bpt id="p1">[</bpt>CPen<ept id="p1">](../mfc/reference/cpen-class.md)</ept> and <bpt id="p2">[</bpt>CBrush<ept id="p2">](../mfc/reference/cbrush-class.md)</ept> objects from being destroyed when <ph id="ph1">`OnDraw`</ph> finishes, store them in member variables instead of local variables.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>In the control's class declaration, add declarations for two new member variables:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#16</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#17</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Then, the <ph id="ph1">`OnDraw`</ph> function can be rewritten as follows:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#18</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>This approach avoids creation of the pen and brush every time <ph id="ph1">`OnDraw`</ph> is called.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The speed improvement comes at the cost of maintaining additional instance data.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If the ForeColor or BackColor property changes, the pen or brush needs to be created again.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To do this, override the <bpt id="p1">[</bpt>OnForeColorChanged<ept id="p1">](../mfc/reference/colecontrol-class.md#colecontrol__onforecolorchanged)</ept> and <bpt id="p2">[</bpt>OnBackColorChanged<ept id="p2">](../mfc/reference/colecontrol-class.md#colecontrol__onbackcolorchanged)</ept> member functions:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#19</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Finally, to eliminate unnecessary <ph id="ph1">`SelectObject`</ph> calls, modify <ph id="ph2">`OnDraw`</ph> as follows:</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_AxOpt#20</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Optimization</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>COleControl Class</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Control Wizard</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>MFC ActiveX Controls: Painting an ActiveX Control</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

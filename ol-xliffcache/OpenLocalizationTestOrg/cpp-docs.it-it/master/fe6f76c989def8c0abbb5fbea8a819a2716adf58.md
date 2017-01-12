@@ -1,46 +1,42 @@
 ---
-title: Switching Between Dialog Box Controls and Code | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- events [C++], viewing for controls
-- Windows messages [C++], controls
-- messages [C++], viewing for dialog boxes
-- Dialog editor, accessing code
-- code [C++], switching from Dialog Editor
-- controls [C++], jumping to code
-- Dialog editor, switching between controls and code
+title: "Switching Between Dialog Box Controls and Code | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "events [C++], viewing for controls"
+  - "Windows messages [C++], controls"
+  - "messages [C++], viewing for dialog boxes"
+  - "Dialog editor, accessing code"
+  - "code [C++], switching from Dialog Editor"
+  - "controls [C++], jumping to code"
+  - "Dialog editor, switching between controls and code"
 ms.assetid: 7da73815-b853-4203-ba45-bbe570695122
 caps.latest.revision: 9
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: fe6f76c989def8c0abbb5fbea8a819a2716adf58
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Switching Between Dialog Box Controls and Code
 In MFC applications, you can double-click on dialog box controls to jump to their handler code or to quickly create stub handler functions.  
@@ -72,10 +68,4 @@ In MFC applications, you can double-click on dialog box controls to jump to thei
   
 ## See Also  
  [Dialog Editor](../mfc/dialog-editor.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

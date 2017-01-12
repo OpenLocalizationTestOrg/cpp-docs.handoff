@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="it-it">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8cf0f95e1c2ebd92ee0d3d41df0e7fa420d8aa4d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\parsing-c-command-line-arguments.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">08e98c01988559f0ed3163d31fc82df0dec93870</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b198c369463e7b9f14682abdcc76916d15515663</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Parsing C Command-Line Arguments | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Parsing C Command-Line Arguments</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Microsoft C startup code uses the following rules when interpreting arguments given on the operating system command line:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Arguments are delimited by white space, which is either a space or a tab.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>A string surrounded by double quotation marks is interpreted as a single argument, regardless of white space contained within.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>A quoted string can be embedded in an argument.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Note that the caret (<bpt id="p1">**</bpt><ph id="ph1">^</ph><ept id="p1">**</ept>) is not recognized as an escape character or delimiter.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>A double quotation mark preceded by a backslash, <bpt id="p1">**</bpt><ph id="ph1">\\</ph>"<ept id="p1">**</ept>, is interpreted as a literal double quotation mark (<bpt id="p2">**</bpt>"<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Backslashes are interpreted literally, unless they immediately precede a double quotation mark.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If an even number of backslashes is followed by a double quotation mark, then one backslash (<bpt id="p1">**</bpt><ph id="ph1">\\</ph><ept id="p1">**</ept>) is placed in the <ph id="ph2">`argv`</ph> array for every pair of backslashes (<bpt id="p2">**</bpt><ph id="ph3">\\\\</ph><ept id="p2">**</ept>), and the double quotation mark (<bpt id="p3">**</bpt>"<ept id="p3">**</ept>) is interpreted as a string delimiter.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If an odd number of backslashes is followed by a double quotation mark, then one backslash (<bpt id="p1">**</bpt><ph id="ph1">\\</ph><ept id="p1">**</ept>) is placed in the <ph id="ph2">`argv`</ph> array for every pair of backslashes (<bpt id="p2">**</bpt><ph id="ph3">\\\\</ph><ept id="p2">**</ept>) and the double quotation mark is interpreted as an escape sequence by the remaining backslash, causing a literal double quotation mark (<bpt id="p3">**</bpt>"<ept id="p3">**</ept>) to be placed in <ph id="ph4">`argv`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This list illustrates the rules above by showing the interpreted result passed to <ph id="ph1">`argv`</ph> for several examples of command-line arguments.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The output listed in the second, third, and fourth columns is from the ARGS.C program that follows the list.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Command-Line Input</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>argv[1]</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>argv[2]</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>argv[3]</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Code</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>One example of output from this program is:</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>main Function and Program Execution</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
