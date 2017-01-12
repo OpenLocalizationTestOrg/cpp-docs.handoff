@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c1e11391d55e367b8faeea4291470fbb7075e3d7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\recordset-how-addnew-edit-and-delete-work-odbc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f62cc36e67b0daec0d09fcf8dfeb05d722ad013e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fccef8f1142e4031e0f92411569774e9afb071f9</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Recordset: How AddNew, Edit, and Delete Work (ODBC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Recordset: How AddNew, Edit, and Delete Work (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This topic applies to the MFC ODBC classes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This topic explains how the <ph id="ph1">`AddNew`</ph>, <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> member functions of class <ph id="ph2">`CRecordset`</ph> work.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Topics covered include:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>How Adding Records Works</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Visibility of Added Records</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>How Editing Records Works</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>How Deleting Records Works</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This topic applies to objects derived from <ph id="ph1">`CRecordset`</ph> in which bulk row fetching has not been implemented.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If you are using bulk row fetching, see <bpt id="p1">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p1">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>As a supplement, you might want to read <bpt id="p1">[</bpt>Record Field Exchange: How RFX Works<ept id="p1">](../../data/odbc/record-field-exchange-how-rfx-works.md)</ept>, which describes the corresponding role of RFX in update operations.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Adding a Record</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Adding a new record to a recordset involves calling the recordset's <bpt id="p1">[</bpt>AddNew<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__addnew)</ept> member function, setting the values of the new record's field data members, and calling the <bpt id="p2">[</bpt>Update<ept id="p2">](../../mfc/reference/crecordset-class.md#crecordset__update)</ept> member function to write the record to the data source.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>As a precondition for calling <ph id="ph1">`AddNew`</ph>, the recordset must not have been opened as read-only.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CanUpdate`</ph> and <ph id="ph2">`CanAppend`</ph> member functions let you determine these conditions.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>When you call <ph id="ph1">`AddNew`</ph>:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The record in the edit buffer is stored, so its contents can be restored if the operation is canceled.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The field data members are flagged so it is possible to detect changes in them later.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The field data members are also marked clean (unchanged) and set to a Null.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>After you call <ph id="ph1">`AddNew`</ph>, the edit buffer represents a new, empty record, ready to be filled in with values.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To do this, you manually set the values by assigning to them.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Instead of specifying an actual data value for a field, you can call <ph id="ph1">`SetFieldNull`</ph> to specify the value Null.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>To commit your changes, you call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>When you call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> for the new record:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If your ODBC driver supports the <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> ODBC API function, MFC uses the function to add the record on the data source.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept>, MFC can add a record more efficiently because it does not have to construct and process a SQL statement.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> cannot be used, MFC does the following:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>If no changes are detected, <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> does nothing and returns 0.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If there are changes, <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> constructs a SQL <bpt id="p2">**</bpt>INSERT<ept id="p2">**</ept> statement.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The columns represented by all dirty field data members are listed in the <bpt id="p1">**</bpt>INSERT<ept id="p1">**</ept> statement.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>To force a column to be included, call the <bpt id="p1">[</bpt>SetFieldDirty<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__setfielddirty)</ept> member function:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Update<ept id="p1">**</ept> commits the new record — the <bpt id="p2">**</bpt>INSERT<ept id="p2">**</ept> statement is executed and the record is committed to the table on the data source (and the recordset, if not a snapshot) unless a transaction is in progress.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The stored record is restored to the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The record that was current before the <ph id="ph1">`AddNew`</ph> call is current again regardless of whether the <bpt id="p1">**</bpt>INSERT<ept id="p1">**</ept> statement was successfully executed.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For complete control of a new record, take the following approach: set the values of any fields that will have values and then explicitly set any fields that will remain Null by calling <ph id="ph1">`SetFieldNull`</ph> with a pointer to the field and the parameter <bpt id="p1">**</bpt>TRUE<ept id="p1">**</ept> (the default).</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If you want to ensure that a field is not written to the data source, call <ph id="ph1">`SetFieldDirty`</ph> with a pointer to the field and the parameter <bpt id="p1">**</bpt>FALSE<ept id="p1">**</ept>, and do not modify the field's value.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>To determine whether a field is allowed to be Null, call <ph id="ph1">`IsFieldNullable`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>To detect when recordset data members change value, MFC uses a <bpt id="p1">**</bpt>PSEUDO_NULL<ept id="p1">**</ept> value appropriate to each data type that you can store in a recordset.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>If you must explicitly set a field to the <bpt id="p1">**</bpt>PSEUDO_NULL<ept id="p1">**</ept> value and the field happens already to be marked Null, you must also call <ph id="ph1">`SetFieldNull`</ph>, passing the address of the field in the first parameter and <bpt id="p2">**</bpt>FALSE<ept id="p2">**</ept> in the second parameter.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Visibility of Added Records</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>When is an added record visible to your recordset?</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Added records sometimes show up and sometimes are not visible, depending on two things:</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>What your driver is capable of.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>What the framework can take advantage of.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>If your ODBC driver supports the <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> ODBC API function, MFC uses the function to add records.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept>, added records are visible to any updatable MFC recordset.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Without support for the function, added records are not visible and you must call <bpt id="p1">**</bpt>Requery<ept id="p1">**</ept> to see them.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Using <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> is also more efficient.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Editing an Existing Record</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Editing an existing record in a recordset involves scrolling to the record, calling the recordset's <bpt id="p1">[</bpt>Edit<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__edit)</ept> member function, setting the values of the new record's field data members, and calling the <bpt id="p2">[</bpt>Update<ept id="p2">](../../mfc/reference/crecordset-class.md#crecordset__update)</ept> member function to write the changed record to the data source.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>As a precondition for calling <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, the recordset must be updatable and on a record.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CanUpdate`</ph> and <ph id="ph2">`IsDeleted`</ph> member functions let you determine these conditions.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The current record also must not already have been deleted, and there must be records in the recordset (both <ph id="ph1">`IsBOF`</ph> and <ph id="ph2">`IsEOF`</ph> return 0).</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>When you call <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, the record in the edit buffer (the current record) is stored.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The stored record's values are later used to detect whether any fields have changed.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>After you call <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, the edit buffer still represents the current record but is now ready to accept changes to the field data members.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>To change the record, you manually set the values of any field data members you want to edit.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Instead of specifying an actual data value for a field, you can call <ph id="ph1">`SetFieldNull`</ph> to specify the value Null.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>To commit your changes, call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>To get out of <ph id="ph1">`AddNew`</ph> or <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> mode, call <bpt id="p2">**</bpt>Move<ept id="p2">**</ept> with the parameter <bpt id="p3">**</bpt>AFX_MOVE_REFRESH<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>As a precondition for calling <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>, the recordset must not be empty and the current record must not have been deleted.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">`IsEOF`</ph>, and <ph id="ph2">`IsDeleted`</ph> should all return 0.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>When you call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> for the edited record:</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>If your ODBC driver supports the <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> ODBC API function, MFC uses the function to update the record on the data source.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept>, the driver compares your edit buffer with the corresponding record on the server, updating the record on the server if the two are different.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>With <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept>, MFC can update a record more efficiently because it does not have to construct and process a SQL statement.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> cannot be used, MFC does the following:</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>If there have been no changes, <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> does nothing and returns 0.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>If there are changes, <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> constructs a SQL <bpt id="p2">**</bpt>UPDATE<ept id="p2">**</ept> statement.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The columns listed in the <bpt id="p1">**</bpt>UPDATE<ept id="p1">**</ept> statement are based on the field data members that have changed.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Update<ept id="p1">**</ept> commits the changes — executes the <bpt id="p2">**</bpt>UPDATE<ept id="p2">**</ept> statement — and the record is changed on the data source, but not committed if a transaction is in progress (see <bpt id="p3">[</bpt>Transaction: Performing a Transaction in a Recordset (ODBC)<ept id="p3">](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)</ept> for information about how the transaction affects the update).</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>ODBC keeps a copy of the record, which also changes.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>Unlike the process for <ph id="ph1">`AddNew`</ph>, the <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> process does not restore the stored record.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The edited record remains in place as the current record.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>When you prepare to update a recordset by calling <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>, take care that your recordset includes all columns making up the primary key of the table (or all of the columns of any unique index on the table, or enough columns to uniquely identify the row).</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>In some cases, the framework can use only the columns selected in your recordset to identify which record in your table to update.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Without all the necessary columns, multiple records might be updated in the table.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>In this case, the framework throws exceptions when you call <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>If you call <ph id="ph1">`AddNew`</ph> or <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> after having called either function previously but before you call <bpt id="p2">**</bpt>Update<ept id="p2">**</ept>, the edit buffer is refreshed with the stored record, replacing the new or edited record in progress.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>This behavior gives you a way to abort an <ph id="ph1">`AddNew`</ph> or <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> and begin a new one: if you determine that the record-in-progress is faulty, simply call <bpt id="p2">**</bpt>Edit<ept id="p2">**</ept> or <ph id="ph2">`AddNew`</ph> again.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Deleting a Record</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Deleting a record from a recordset involves scrolling to the record and calling the recordset's <bpt id="p1">[</bpt>Delete<ept id="p1">](../../mfc/reference/crecordset-class.md#crecordset__delete)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Unlike <ph id="ph1">`AddNew`</ph> and <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> does not require a matching call to <bpt id="p3">**</bpt>Update<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>As a precondition for calling <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>, the recordset must be updatable and it must be on a record.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CanUpdate`</ph>, <ph id="ph2">`IsBOF`</ph>, <ph id="ph3">`IsEOF`</ph>, and <ph id="ph4">`IsDeleted`</ph> member functions let you determine these conditions.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>When you call <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>If your ODBC driver supports the <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> ODBC API function, MFC uses the function to delete the record on the data source.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Using <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> is usually more efficient than using SQL.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>-or-</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">**</bpt>::SQLSetPos<ept id="p1">**</ept> cannot be used, MFC does the following:</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The current record in the edit buffer is not backed up as in <ph id="ph1">`AddNew`</ph> and <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> constructs a SQL <bpt id="p2">**</bpt>DELETE<ept id="p2">**</ept> statement that removes the record.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The current record in the edit buffer is not stored as in <ph id="ph1">`AddNew`</ph> and <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> commits the deletion — executes the <bpt id="p2">**</bpt>DELETE<ept id="p2">**</ept> statement.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>The record is marked deleted on the data source and, if the record is a snapshot, in ODBC.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>The deleted record's values are still in the field data members of the recordset, but the field data members are marked Null and the recordset's <ph id="ph1">`IsDeleted`</ph> member function returns a nonzero value.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>After deleting a record, you should scroll to another record to refill the edit buffer with the new record's data.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>It is an error to call <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> again or to call <bpt id="p2">**</bpt>Edit<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>For information about the SQL statements used in update operations, see <bpt id="p1">[</bpt>SQL<ept id="p1">](../../data/odbc/sql.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Recordset: More About Updates (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Record Field Exchange (RFX)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e78fa9faf3c95d356f227917a39335200eeb43db</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\reference\cdaoindexfieldinfo-structure.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a25a1a9490d8de5720a88e5a97167c72c30f9aa2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0fec1260952066c4a377679a3f1b60b8620f1714</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CDaoIndexFieldInfo Structure | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CDaoIndexFieldInfo Structure</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CDaoIndexFieldInfo`</ph> structure contains information about an index field object defined for data access objects (DAO).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Uniquely names the index field object.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For details, see the topic "Name Property" in DAO Help.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>m_bDescending</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Indicates the index ordering defined by the index object.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>TRUE<ept id="p1">**</ept> if the order is descending.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>An index object can have a number of fields, indicating which fields a tabledef (or a recordset based on a table) is indexed on.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The references to Primary above indicate how the information is returned in the <ph id="ph1">`m_pFieldInfos`</ph> member of a <bpt id="p1">[</bpt>CDaoIndexInfo<ept id="p1">](../../mfc/reference/cdaoindexinfo-structure.md)</ept> object obtained by calling the <ph id="ph2">`GetIndexInfo`</ph> member function of class <bpt id="p2">[</bpt>CDaoTableDef<ept id="p2">](../../mfc/reference/cdaotabledef-class.md#cdaotabledef__getindexinfo)</ept> or <bpt id="p3">[</bpt>CDaoRecordset<ept id="p3">](../../mfc/reference/cdaorecordset-class.md#cdaorecordset__getindexinfo)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Index objects and index field objects are not represented by an MFC class.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Instead, the DAO objects underlying MFC objects of class <bpt id="p1">[</bpt>CDaoTableDef<ept id="p1">](../../mfc/reference/cdaotabledef-class.md)</ept> or <bpt id="p2">[</bpt>CDaoRecordset<ept id="p2">](../../mfc/reference/cdaorecordset-class.md)</ept> contain a collection of index objects, called the Indexes collection.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Each index object, in turn, contains a collection of field objects.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>These classes supply member functions to access individual items of index information, or you can access them all at once with a <ph id="ph1">`CDaoIndexInfo`</ph> object by calling the <ph id="ph2">`GetIndexInfo`</ph> member function of the containing object.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CDaoIndexInfo`</ph> object, then, has a data member, <ph id="ph2">`m_pFieldInfos`</ph>, that points to an array of <ph id="ph3">`CDaoIndexFieldInfo`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Call the <ph id="ph1">`GetIndexInfo`</ph> member function of the containing tabledef or recordset object in whose Indexes collection is stored the index object you are interested in.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Then access the <ph id="ph1">`m_pFieldInfos`</ph> member of the <bpt id="p1">[</bpt>CDaoIndexInfo<ept id="p1">](../../mfc/reference/cdaoindexinfo-structure.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The length of the <ph id="ph1">`m_pFieldInfos`</ph> array is stored in <ph id="ph2">`m_nFields`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>also defines a <ph id="ph1">`Dump`</ph> member function in debug builds.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You can use <ph id="ph1">`Dump`</ph> to dump the contents of a <ph id="ph2">`CDaoIndexFieldInfo`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> afxdao.h</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Structures, Styles, Callbacks, and Message Maps</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>CDaoTableDef::GetIndexInfo</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>CDaoRecordset::GetIndexInfo</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

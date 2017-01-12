@@ -1,44 +1,40 @@
 ---
-title: _com_error::WCodeToHRESULT | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords:
-- _com_error::WCodeToHRESULT
-- _com_error.WCodeToHRESULT
-- WCodeToHRESULT
-dev_langs:
-- C++
-helpviewer_keywords:
-- WCodeToHRESULT method
+title: "_com_error::WCodeToHRESULT | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+f1_keywords: 
+  - "_com_error::WCodeToHRESULT"
+  - "_com_error.WCodeToHRESULT"
+  - "WCodeToHRESULT"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "WCodeToHRESULT method"
 ms.assetid: 0ec43a4b-ca91-42d5-b270-3fde9c8412ea
 caps.latest.revision: 6
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d565d21a8df7eaceea4044f41ff0c7a1c73ba1dd
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # _com_error::WCodeToHRESULT
 **Microsoft Specific**  
@@ -70,8 +66,3 @@ ms.openlocfilehash: d565d21a8df7eaceea4044f41ff0c7a1c73ba1dd
  [_com_error::WCode](../cpp/com-error-wcode.md)   
  [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)   
  [_com_error Class](../cpp/com-error-class.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,43 +1,39 @@
 ---
-title: CAnimationController Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CAnimationController
-- afxanimationcontroller/CAnimationController
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAnimationController class
+title: "CAnimationController Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CAnimationController"
+  - "afxanimationcontroller/CAnimationController"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CAnimationController class"
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
 caps.latest.revision: 18
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: afea0996abc2b6eec9c48d6e2c7ee619b2f0f62b
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CAnimationController Class
 Implements the animation controller, which provides a central interface for creating and managing animations.  
@@ -925,9 +921,3 @@ virtual void UpdateAnimationManager();
   
 ## See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

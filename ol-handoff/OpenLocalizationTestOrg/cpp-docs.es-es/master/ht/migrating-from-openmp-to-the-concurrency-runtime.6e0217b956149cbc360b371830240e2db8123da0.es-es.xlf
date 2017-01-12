@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f8f5550e89e24f867e8b79f2ce2789648e512eb4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\migrating-from-openmp-to-the-concurrency-runtime.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3f1ae1acdf6d9b03f12a2e062e9792e9a87928c9</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d133afdaf0f2198ee441aecd5c1d0f567672970e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Migrating from OpenMP to the Concurrency Runtime | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Migrating from OpenMP to the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime enables a variety of programming models.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>These models may overlap or complement the models of other libraries.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The documents in this section compare <bpt id="p1">[</bpt>OpenMP<ept id="p1">](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)</ept> to the Concurrency Runtime and provide examples about how to migrate existing OpenMP code to use the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The OpenMP programming model is defined by an open standard and has well-defined bindings to the Fortran and C/C++ programming languages.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>OpenMP versions 2.0 and 2.5, which are supported by the Visual C++ compiler, are well-suited for parallel algorithms that are iterative; that is, they perform parallel iteration over an array of data.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>OpenMP 3.0 supports non-iterative tasks in addition to iterative tasks.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>OpenMP is most efficient when the degree of parallelism is pre-determined and matches the available resources on the system.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The OpenMP model is an especially good match for high-performance computing, where very large computational problems are distributed across the processing resources of one computer.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>In this scenario, the hardware environment is generally fixed and the developer can reasonably expect to have exclusive access to all computing resources when the algorithm is executed.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>However, less constrained computing environments may not be a good match for OpenMP.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For example, recursive problems (such as the quicksort algorithm or searching a tree of data) are more difficult to implement by using OpenMP 2.0 and 2.5.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime complements the capabilities of OpenMP by providing the <bpt id="p1">[</bpt>Asynchronous Agents Library<ept id="p1">](../../parallel/concrt/asynchronous-agents-library.md)</ept> and the <bpt id="p2">[</bpt>Parallel Patterns Library<ept id="p2">](../../parallel/concrt/parallel-patterns-library-ppl.md)</ept> (PPL).</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The Asynchronous Agents Library supports coarse-grained task parallelism; the PPL supports more fine-grained parallel tasks.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime provides the infrastructure that is required to perform operations in parallel so that you can focus on the logic of your application.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>However, because the Concurrency Runtime enables a variety of programming models, its scheduling overhead can be greater than other concurrency libraries such as OpenMP.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Therefore, we recommend that you test performance incrementally when you convert your existing OpenMP code to use the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When to Migrate from OpenMP to the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>It may be advantageous to migrate existing OpenMP code to use the Concurrency Runtime in the following cases.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Cases</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Advantages of the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>You require an extensible concurrent programming framework.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Many of the features in the Concurrency Runtime can be extended.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can also combine existing features to compose new ones.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Because OpenMP relies on compiler directives, it cannot be easily extended.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Your application would benefit from cooperative blocking.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>When a task blocks because it requires a resource that is not yet available, the Concurrency Runtime can perform other tasks while the first task waits for the resource.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Your application would benefit from dynamic load balancing.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime uses a scheduling algorithm that adjusts the allocation of computing resources as workloads change.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In OpenMP, when the scheduler allocates computing resources to a parallel region, those resource allocations are fixed throughout the computation.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>You require exception handling support.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The PPL lets you catch exceptions both inside and outside of a parallel region or loop.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>In OpenMP, you must handle the exception inside of the parallel region or loop.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>You require a cancellation mechanism.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The PPL enables applications to cancel both individual tasks and parallel trees of work.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>OpenMP requires the application to implement its own cancellation mechanism.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You require parallel code to finish in a different context from which it starts.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime lets you start a task in one context, and then wait on or cancel that task in another context.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In OpenMP, all parallel work must finish in the context from which it starts.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>You require enhanced debugging support.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Visual Studio provides the <bpt id="p1">**</bpt>Parallel Stacks<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Parallel Tasks<ept id="p2">**</ept> windows so that you can more easily debug multithreaded applications.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>For more information about debugging support for the Concurrency Runtime, see <bpt id="p1">[</bpt>Using the Tasks Window<ept id="p1">](/visualstudio/debugger/using-the-tasks-window)</ept>, <bpt id="p2">[</bpt>Using the Parallel Stacks Window<ept id="p2">](/visualstudio/debugger/using-the-parallel-stacks-window)</ept>, and <bpt id="p3">[</bpt>Walkthrough: Debugging a Parallel Application<ept id="p3">](http://msdn.microsoft.com/library/2820ac4c-c893-4d87-8c62-83981d561493)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When Not to Migrate from OpenMP to the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The following cases describe when it might not be appropriate to migrate existing OpenMP code to use the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Cases</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Explanation</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Your application already meets your requirements.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>If you are satisfied with application performance and current debugging support, migration might not be appropriate.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Your parallel loop bodies perform little work.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The overhead of the Concurrency Runtime task scheduler might not overcome the benefits of executing the loop body in parallel, especially when the loop body is relatively small.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Your application is written in C.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Because the Concurrency Runtime uses many C++ features, it might not be suitable when you cannot write code that enables the C application to fully use it.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Related Topics</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>How to: Convert an OpenMP parallel for Loop to Use the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Given a basic loop that uses the OpenMP <bpt id="p1">[</bpt>parallel<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)</ept> and <bpt id="p2">[</bpt>for<ept id="p2">](../../parallel/openmp/reference/for-openmp.md)</ept> directives, demonstrates how to convert it to use the Concurrency Runtime <bpt id="p3">[</bpt>concurrency::parallel_for<ept id="p3">](reference/concurrency-namespace-functions.md#parallel_for)</ept> algorithm.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>How to: Convert an OpenMP Loop that Uses Cancellation to Use the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Given an OpenMP <bpt id="p1">[</bpt>parallel<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)</ept><bpt id="p2">[</bpt>for<ept id="p2">](../../parallel/openmp/reference/for-openmp.md)</ept> loop that does not require all iterations to run, demonstrates how to convert it to use the Concurrency Runtime cancellation mechanism.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>How to: Convert an OpenMP Loop that Uses Exception Handling to Use the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Given an OpenMP <bpt id="p1">[</bpt>parallel<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)</ept><bpt id="p2">[</bpt>for<ept id="p2">](../../parallel/openmp/reference/for-openmp.md)</ept> loop that performs exception handling, demonstrates how to convert it to use the Concurrency Runtime exception handling mechanism.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>How to: Convert an OpenMP Loop that Uses a Reduction Variable to Use the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Given an OpenMP <bpt id="p1">[</bpt>parallel<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)</ept><bpt id="p2">[</bpt>for<ept id="p2">](../../parallel/openmp/reference/for-openmp.md)</ept> loop that uses the <bpt id="p3">[</bpt>reduction<ept id="p3">](../../parallel/openmp/reference/reduction.md)</ept> clause, demonstrates how to convert it to use the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>OpenMP</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library (PPL)</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents Library</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

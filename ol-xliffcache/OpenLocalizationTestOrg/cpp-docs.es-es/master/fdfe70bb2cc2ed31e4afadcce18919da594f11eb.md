@@ -1,42 +1,38 @@
 ---
-title: operator== (queue) (STL-CLR) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- cliext::queue::operator==
-dev_langs:
-- C++
-helpviewer_keywords:
-- operator== member [STL/CLR]
+title: "operator== (queue) (STL-CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "cliext::queue::operator=="
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "operator== member [STL/CLR]"
 ms.assetid: ad183c61-a24a-4851-aac7-2a47a1371ec2
 caps.latest.revision: 15
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fdfe70bb2cc2ed31e4afadcce18919da594f11eb
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # operator== (queue) (STL/CLR)
 Queue equal comparison.  
@@ -119,8 +115,3 @@ int main()
  [operator>= (queue) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
  [operator> (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)   
  [operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

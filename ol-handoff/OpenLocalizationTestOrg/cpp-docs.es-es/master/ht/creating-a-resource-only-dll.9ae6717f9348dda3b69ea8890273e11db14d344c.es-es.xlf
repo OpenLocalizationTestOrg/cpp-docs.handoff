@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c074f85fa3af097601cb87203ce0994ccd81df1f</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\build\creating-a-resource-only-dll.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e492e4c08d4366d0471043af871e18a55d92c986</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">0df1f0055b7ffec17539dc1cf4e636ede0113d0d</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Creating a Resource-Only DLL | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Creating a Resource-Only DLL</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>A resource-only DLL is a DLL that contains nothing but resources, such as icons, bitmaps, strings, and dialog boxes.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Using a resource-only DLL is a good way to share the same set of resources among multiple programs.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>It is also a good way to provide an application with resources localized for multiple languages (see <bpt id="p1">[</bpt>Localized Resources in MFC Applications: Satellite DLLs<ept id="p1">](../build/localized-resources-in-mfc-applications-satellite-dlls.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To create a resource-only DLL, you create a new Win32 DLL (non-MFC) project and add your resources to the project.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Select Win32 Project in the <bpt id="p1">**</bpt>New Project<ept id="p1">**</ept> dialog box and specify a DLL project type in the Win32 Project Wizard.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Create a new resource script that contains the resources (such as a string or a menu) for the DLL and save the .rc file.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Project<ept id="p1">**</ept> menu, click <bpt id="p2">**</bpt>Add Existing Item<ept id="p2">**</ept>, and then insert the new .rc file into the project.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Specify the <bpt id="p1">[</bpt>/NOENTRY<ept id="p1">](../build/reference/noentry-no-entry-point.md)</ept> linker option.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>/NOENTRY prevents the linker from linking a reference to _main into the DLL; this option is required to create a resource-only DLL.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Build the DLL.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The application that uses the resource-only DLL should call <bpt id="p1">**</bpt>LoadLibrary<ept id="p1">**</ept> to <bpt id="p2">[</bpt>explicitly link to the DLL<ept id="p2">](../build/loadlibrary-and-afxloadlibrary.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>To access the resources, call the generic functions <bpt id="p1">**</bpt>FindResource<ept id="p1">**</ept> and <bpt id="p2">**</bpt>LoadResource<ept id="p2">**</ept>, which work on any kind of resource, or call one of the following resource-specific functions:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>LoadAccelerators</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The application should call <bpt id="p1">**</bpt>FreeLibrary<ept id="p1">**</ept> when it is finished using the resources.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>What do you want to know more about?</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>DELETE_PENDING_Editing Resources</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>DLLs in Visual C++</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

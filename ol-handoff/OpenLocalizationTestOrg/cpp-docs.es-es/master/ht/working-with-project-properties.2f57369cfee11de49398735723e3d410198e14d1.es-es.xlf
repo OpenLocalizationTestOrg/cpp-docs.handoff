@@ -1,0 +1,717 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="es-es">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5d3b9b907abfda666459343e904d9d29a1fc91c8</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\ide\working-with-project-properties.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a91f34898172756efa597cb1f2aa04bcc76cdb03</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e77a57ca5b0f978798329c35c0ccc083b0a9cb94</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Working with Project Properties | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Working with Project Properties</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>In the IDE, all information that is needed to build a project is exposed as              <bpt id="p1">*</bpt>properties<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>This information includes the application name, extension (such as DLL, LIB, EXE), compiler options, linker options, debugger settings, custom build steps, and many other things.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You use              <bpt id="p1">*</bpt>property pages<ept id="p1">*</ept> (             <bpt id="p2">**</bpt>Project &amp;#124; Properties<ept id="p2">**</ept>) to view and modify these properties.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>When you create a project, the system assigns values for various properties.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The defaults vary somewhat depending on the kind of project and what options you choose in the app wizard.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For example, an ATL project has properties related to MIDL files, but these are absent in a basic console application.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The default properties are shown in the General pane in the Property Pages:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Visual C&amp;#43;&amp;#43; Project Defaults</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Some properties, such as the application name, apply to all build variations, regardless of the target platform or whether it is a debug or release build.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>But most properties are configuration-dependent.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This is because the compiler has to know what specific platform the program will run on and what specific compiler options to use in order to generate the correct code.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Therefore, when you set a property, it is important to pay attention to which configuration and platform the new value should apply to.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Should it apply only to Debug  Win32 builds, or should it also apply to Debug  ARM and Debug  x64?</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For example, the              <bpt id="p1">**</bpt>Optimization<ept id="p1">**</ept> property, by default, is set to              <bpt id="p2">**</bpt>Maximize Speed (/O2)<ept id="p2">**</ept> in a Release configuration, but is disabled in the Debug configuration.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The property pages are designed so that you can always see, and if necessary modify, which configuration and platform a property value should apply to.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the property pages with the configuration and platform information in the list boxes at the top.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When the Optimization property is set here, it will apply only to Debug Win32 builds, which happens to be the active configuration, as shown by the red arrows.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Visual C&amp;#43;&amp;#43; Property Pages showing active configuration</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the same project property page, but the configuration has been changed to Release.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Note the different value for the Optimization property.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Also note that the active configuration is still Debug.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>You can set properties for any configuration here; it doesn't have to be the active one.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Visual C&amp;#43;&amp;#43; Property Pages showing release config</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The project system itself is based on MSBuild, which defines file formats and rules for building projects of any kind.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>MSBuild manages much of the complexity of building for multiple configurations and platforms, but you need to understand a little bit about how it works.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>This is especially important if you want to define custom configurations or create reusable sets of properties that you can share and import into multiple projects.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Project properties are stored either directly in the project file (*.vcxproj) or in other .xml or .props files that the project file imports and which supply default values.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>As shown earlier, the same property for the same configuration may be assigned a different value in different files.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>When you build a project, the MSBuild engine evaluates the project file and all the imported files in a well-defined order (described below).</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>As each file is evaluated, any property values defined in that file will override the existing values.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Any values that are not specified are inherited from files that were evaluated earlier.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Therefore, when you set a property with property pages, it is also important to pay attention to where you set it.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>If you set a property to "X" in a .props file, but the property is set to "Y" in the project file, then the project will build with the property set to "Y".</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If the same property is set to "Z" on a project item, such as a .cpp file, then the MSBuild engine will use the "Z" value.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>For more information, see              <bpt id="p1">[</bpt>Property inheritance<ept id="p1">](#bkmkPropertyInheritance)</ept> later in this article.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Build configurations</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>A configuration is just an arbitrary group of properties that are given a name.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Visual Studio provides Debug and Release configurations and each sets various properties appropriately for a debug build or release build.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>You can use the                  <bpt id="p1">**</bpt>Configuration Manager<ept id="p1">**</ept> to define custom configurations as a convenient way to group properties for a specific flavor of build.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>The Property Manager is used for advanced work with properties, but we introduce it here because it helps visualize property configurations.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>You access it from                  <bpt id="p1">**</bpt>View &amp;#124;  Property Manager<ept id="p1">**</ept> or                  <bpt id="p2">**</bpt>View &amp;#124; Other Windows &amp;#124; Property Manager<ept id="p2">**</ept> depending on your settings.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>It has nodes for each configuration/platform pair in the project.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Under each of these nodes are nodes for property sheets (.props files) that set some specific properties for that configuration.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Property Manager</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>If you go to the General pane in the Property Pages (see the illustration above) and set the Character Set property to "Not Set" instead of "Use Unicode" and click                  <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>,  Property Manager will  show no                  <bpt id="p2">**</bpt>Unicode Support<ept id="p2">**</ept> property sheet for the current configuration, but it will still be there for other configurations.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>For more information about Property Manager and property sheets, see                  <bpt id="p1">[</bpt>Creating reusable property configurations<ept id="p1">](#bkmkPropertySheets)</ept> later in this article.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The .user file is a legacy feature and we recommend that you delete it in order to keep properties correctly grouped according to configuration/platform.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Target platforms</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Target platform<ept id="p1">*</ept> refers to the kind of device and/or operating system that the executable will run on.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>You can build a project for more than one platform.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>The available target platforms for C++ projects depend on the kind of project; they include but are not limited to Win32, x64, ARM, Android, and iOS.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The                   <bpt id="p1">**</bpt>x86<ept id="p1">**</ept> target platform that you might see in                  <bpt id="p2">**</bpt>Configuration Manager<ept id="p2">**</ept> is identical to                  <bpt id="p3">**</bpt>Win32<ept id="p3">**</ept> in native C++ projects.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Win32 means 32-bit Windows and                  <bpt id="p1">**</bpt>x64<ept id="p1">**</ept> means 64-bit Windows.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For more information about these two platforms, see                  <bpt id="p1">[</bpt>Running 32-bit applications<ept id="p1">](https://msdn.microsoft.com/library/windows/desktop/aa384249\(v=vs.85\).aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>The                  <bpt id="p1">**</bpt>Any CPU<ept id="p1">**</ept> target platform value that you might see in                  <bpt id="p2">**</bpt>Configuration Manager<ept id="p2">**</ept> has no effect on native C++ projects; it is relevant for C++/CLI and other .NET project types.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>For more information, see                  <bpt id="p1">[</bpt>/CLRIMAGETYPE (Specify Type of CLR Image)<ept id="p1">](../build/reference/clrimagetype-specify-type-of-clr-image.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Property pages</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>As stated earlier, the Visual C++ project system is based on                  <bpt id="p1">[</bpt>MSBuild<ept id="p1">](/visualstudio/msbuild/msbuild-properties)</ept> and the values are stored in the XML project file, default .props and .targets files that (for Visual Studio 2015) are located in                     <bpt id="p2">**</bpt><ph id="ph1">\&lt;</ph>drive&gt;\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140<ept id="p2">**</ept> and in custom .props files that you might add.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>We highly recommend that you use NOT edit those files manually, and instead use the property pages in the IDE  to modify all properties, especially those that participate in inheritance, unless you have a very good understanding of MSBuild.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the property pages for a Visual C++ project.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>In the left pane, the                  <bpt id="p1">**</bpt>VC++ Directories<ept id="p1">**</ept><bpt id="p2">*</bpt>rule<ept id="p2">*</ept> is selected, and the right pane lists the properties that are associated with that rule.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The                  <ph id="ph1">`$(...)`</ph> values are unfortunately called                  <bpt id="p1">*</bpt>macros<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>These are                  <bpt id="p1">*</bpt>not<ept id="p1">*</ept> C/C++ macros but simply compile-time constants.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Macros are discussed in the                  <bpt id="p1">[</bpt>Property page macros<ept id="p1">](#bkmkPropertiesVersusMacros)</ept> section later in this article.)</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Project property pages</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The                      <bpt id="p1">**</bpt>Common Properties<ept id="p1">**</ept> configurations in earlier versions of Visual Studio have been removed.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>To add a reference to a project, you now use the                      <bpt id="p1">**</bpt>Add Reference<ept id="p1">**</ept> dialog in the same way as for managed languages.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>See                      <bpt id="p1">[</bpt>Managing references in a project<ept id="p1">](/visualstudio/ide/managing-references-in-a-project)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>To set a property for a project</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>For most scenarios, you can set properties at the project level without creating a custom property sheet.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>On the main menu, choose                                  <bpt id="p1">**</bpt>Project &amp;#124; Properties<ept id="p1">**</ept>, or right-click on the project node in                                  <bpt id="p2">**</bpt>Solution Explorer<ept id="p2">**</ept> and choose                                  <bpt id="p3">**</bpt>Properties<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Use the                                  <bpt id="p1">**</bpt>Configuration<ept id="p1">**</ept> and                                  <bpt id="p2">**</bpt>Platform<ept id="p2">**</ept> list boxes at the top of the dialog box to specify which property groups should apply your changes.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>In many cases                                  <bpt id="p1">**</bpt>All Platforms<ept id="p1">**</ept> and                                  <bpt id="p2">**</bpt>All Configurations<ept id="p2">**</ept> are the right choice.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>To set properties for just some configurations, multi-select them in                                  <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept>, and then open the shortcut menu and choose                                  <bpt id="p2">**</bpt>Properties<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The                  <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box shows only the property pages that apply to the current project.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>For example, if the project does not have an .idl file, the MIDL property page is not displayed.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>When you highlight a property in a Property Page, you can press                  <bpt id="p1">**</bpt>F1<ept id="p1">**</ept> to go to the reference topic for more information about the corresponding compiler or linker switch.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>You can find more information about each Property Page in these topics:</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>General Property Page (Project)</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>General Property Page (File)</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>Command Line Property Pages</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Project Settings for a C++ Debug Configuration</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>NMake Property Page</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Linker Property Pages</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Resources Property Pages</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>MIDL Property Pages</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Web References Property Page</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>XML Data Generator Tool Property Page</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>To quickly browse and search all properties</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The                  <bpt id="p1">**</bpt>All Options<ept id="p1">**</ept> property page (under the                  <bpt id="p2">**</bpt>Configuration Properties &amp;#124; C/C++<ept id="p2">**</ept> node in the                  <bpt id="p3">**</bpt>Property Pages<ept id="p3">**</ept> dialog box) provides a quick way to browse and search the properties that are available in the current context.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>It has a special search box and a simple syntax to help you filter results:</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>No prefix:</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Search in property names only (case-insensitive substring).</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>'/' or '-' :</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Search only in compiler switches (case-insensitive prefix)</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>v:</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>Search only in values (case-insensitive substring).</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Property page macros</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>A                  <bpt id="p1">*</bpt>macro<ept id="p1">*</ept> is a compile-time constant that can refer to a value that is defined by Visual Studio or the MSBuild system, or to a user-defined value.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>By using macros instead of hard-coded values such as directory paths, you can more easily share property settings between machines and between versions of Visual Studio, and you can better ensure that your project settings participate correctly in property inheritance.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>You can use the Property Editor to view the values of all available macros.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Predefined macros</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>global macros</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Applies to all items in a project configuration.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Has the syntax                                  <ph id="ph1">`$(name)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>An example of a global macro is                                  <ph id="ph1">`$(VCInstallDir)`</ph>, which stores the root directory of your Visual Studio installation.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>A global macro corresponds to a                                  <ph id="ph1">`PropertyGroup`</ph> in MSBuild.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>item macros</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Has the syntax                                  <ph id="ph1">`%(name)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>For a file, an item macro applies only to that file—for example, you can use                                  <ph id="ph1">`%(AdditionalIncludeDirectories)`</ph> to specify include directories that apply only to a particular file.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>This kind of item macro corresponds to an                                  <ph id="ph1">`ItemGroup`</ph> metadata in MSBuild.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>When it's used in the context of a project configuration, an item macro applies to all files of a certain type.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>For example, the C/C++                                  <bpt id="p1">**</bpt>Preprocessor Definitions<ept id="p1">**</ept> configuration property can take a                                  <ph id="ph1">`%(PreprocessorDefinitions)`</ph> item macro that applies to all .cpp files in the project.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>This kind of item macro corresponds to an                                  <ph id="ph1">`ItemDefinitionGroup`</ph> metadata in MSBuild.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>For more information, see                                  <bpt id="p1">[</bpt>Item Definitions<ept id="p1">](/visualstudio/msbuild/item-definitions)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>User-defined macros</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>You can create                          <bpt id="p1">*</bpt>user-defined macros<ept id="p1">*</ept> to use as variables in project builds.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>For example, you could create a user-defined macro that provides a value to a custom build step or a custom build tool.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>A user-defined macro is a name/value pair.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>In a project file, use the                          <bpt id="p1">**</bpt>$(<ept id="p1">**</ept><bpt id="p2">*</bpt>name<ept id="p2">*</ept><bpt id="p3">**</bpt>)<ept id="p3">**</ept> notation to access the value.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>A user-defined macro is stored in a property sheet.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>If your project does not already contain a property sheet, you can create one by following the steps under                          <bpt id="p1">[</bpt>Creating reusable property configurations<ept id="p1">](#bkmkPropertySheets)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>To create a user-defined macro</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>In the                                          <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept> window (on the menu bar, choose                                          <bpt id="p2">**</bpt>View<ept id="p2">**</ept>,                                          <bpt id="p3">**</bpt>Property Manager<ept id="p3">**</ept>), open the shortcut menu for a property sheet (its name ends in .user) and then choose Properties.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>The                                          <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box for that property sheet opens.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>In the left pane of the dialog box, select                                          <bpt id="p1">**</bpt>User Macros<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>In the right pane, choose the                                          <bpt id="p1">**</bpt>Add Macro<ept id="p1">**</ept> button to open the                                          <bpt id="p2">**</bpt>Add User Macro<ept id="p2">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>In the dialog box, specify a name and value for the macro.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Optionally, select the                                          <bpt id="p1">**</bpt>Set this macro as an environment variable in the build environment<ept id="p1">**</ept> check box.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Property Editor</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>You can use the Property Editor to modify certain string properties and select macros as values.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>To access the Property Editor, select a property on a property page and then choose the down arrow button on the right.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>If the drop-down list contains                  <bpt id="p1">**</bpt><ph id="ph1">\&lt;</ph>Edit&gt;<ept id="p1">**</ept>, then you can choose it to display the Property Editor for that property.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>Property&amp;#95;Editor&amp;#95;Dropdown</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>In the Property Editor, you can choose the                  <bpt id="p1">**</bpt>Macros<ept id="p1">**</ept> button to view the available macros and their current values.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the Property Editor for the                  <bpt id="p1">**</bpt>Additional Include Directories<ept id="p1">**</ept> property after the                  <bpt id="p2">**</bpt>Macros<ept id="p2">**</ept> button was chosen.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>When the                  <bpt id="p1">**</bpt>Inherit from parent or project defaults<ept id="p1">**</ept> check box is selected and you add a new value, it is appended to any values that are currently being inherited.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>If you clear the check box, your new value replaces the inherited values.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>In most cases, leave the check box selected.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>Property editor, Visual C&amp;#43;&amp;#43;</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>Creating reusable property configurations</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Although you can set "global" properties on a per-user, per-computer basis, we no longer recommend it.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>Instead, we recommend that you use                  <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept> to create a                  <bpt id="p2">*</bpt>property sheet<ept id="p2">*</ept> to store the settings for each kind of project that you want to be able to reuse or share with others.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>Property sheets also make it less likely that property settings for other project types will be inadvertently changed.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>Property sheets are discussed in more detail                  <bpt id="p1">[</bpt>Creating reusable property configurations<ept id="p1">](#bkmkPropertySheets)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>.user files and why they are problematic</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Past versions of Visual Studio used global property sheets that had a .user file name extension and were located in the <ph id="ph1">\&lt;</ph>userprofile&gt;\AppData\Local\Microsoft\MSBuild\v4.0\ folder.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>We no longer recommend these files because they set properties for project configurations on a per-user, per-computer basis.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Such "global" settings can interfere with builds, especially when you are targeting more than one platform on your build computer.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>For example, if you have both an MFC project and Windows Phone project, the .user properties would be invalid for one of them.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>Reusable property sheets are more flexible and more robust.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Although .user files are still installed by Visual Studio and participate in property inheritance, they are empty by default.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>The best practice is to delete the reference to them in                      <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept> to ensure that your projects operate independently of any per-user, per-computer settings This is important to ensure correct behavior in a SCC (source code control) environment.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>To display                  <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept>, on the menu bar, choose                  <bpt id="p2">**</bpt>View<ept id="p2">**</ept>,                  <bpt id="p3">**</bpt>Other Windows<ept id="p3">**</ept>,                  <bpt id="p4">**</bpt>Property Manager<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>If you have a common, frequently used set of properties that you want to apply to multiple projects, you can use                  <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept> to capture them in a reusable                  <bpt id="p2">*</bpt>property sheet<ept id="p2">*</ept> file, which by convention has a .props file name extension.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>You can apply the sheet (or sheets) to new projects so that you don't have to set its properties from scratch.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>To access                  <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept>, on the menu bar, choose                  <bpt id="p2">**</bpt>View<ept id="p2">**</ept>,                  <bpt id="p3">**</bpt>Property Manager<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>Property Manager shortcut menu</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Under each configuration node, you see nodes for each property sheet that applies to that configuration.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>The system adds property sheets that set values based on options you choose in the app wizard when you create the project.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Right-click any node and choose Properties to see the properties that apply to that node.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>All the property sheets are imported automatically into the project's "master" property sheet (ms.cpp.props) and are evaluated in the order they appear in Property Manager.</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>You can move them to change the evaluation order.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>Property sheets that are evaluated later will override the values in previously-evaluated sheets.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>If you choose                  <bpt id="p1">**</bpt>Add New Project Property Sheet<ept id="p1">**</ept> and then select, for example, the MyProps.props property sheet, a property page dialog box appears.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>Notice that it applies to the MyProps property sheet; any changes you make are written to the sheet, not to the project file (.vcxproj).</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>Properties in a property sheet are overridden if the same property is set directly in the .vcxproj file.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>You can import a property sheet as often as required.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>Multiple projects in a solution can inherit settings from the same property sheet, and a project can have multiple sheets.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>A property sheet itself can inherit settings from another property sheet.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>You can also create one property sheet for multiple configurations.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>To do this, create a property sheet for each configuration, open the shortcut menu for one of them, choose                  <bpt id="p1">**</bpt>Add Existing Property Sheet<ept id="p1">**</ept>, and then add the other sheets.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>However, if you use one common property sheet, be aware that when you set a property, it gets set for all configurations that the sheet applies to, and that the IDE doesn’t show which projects or other property sheets are inheriting from a given property sheet.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>In large solutions that will have many projects, it can be useful to create a property sheet at the solution level.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>When you add a project to the solution, use                  <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept> to add that property sheet to the project.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>If required at the project level, you can add a new property sheet to set project-specific values.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>A .props file by default does not participate in source control because it isn’t created as a project item.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>You can manually add the file as a solution item if you want to include it in source control.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>To create a property sheet</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>On the menu bar, choose                                  <bpt id="p1">**</bpt>View<ept id="p1">**</ept>,                                  <bpt id="p2">**</bpt>Property Manager<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>The                                  <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept> opens.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>To define the scope of the property sheet, select the item to which it applies.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>This can be a particular configuration, or another property sheet.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>Open the shortcut menu for this item and then choose                                  <bpt id="p1">**</bpt>Add New Project Property Sheet<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>Specify a name and location.</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>In                                  <bpt id="p1">**</bpt>Property Manager<ept id="p1">**</ept>, open the new property sheet and then set the properties you want to include.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>Property inheritance</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>Project properties are layered.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>Each layer inherits the values of the previous layer, but an inherited value can be overridden by setting the property explicitly.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>Here's the basic inheritance tree:</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>Default settings from the MSBuild CPP Toolset (..\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props, which is imported by the .vcxproj file.)</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Property sheets</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>.vcxproj file.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>(Can override the default and property sheet settings.)</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Items metadata</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>On a property page, a property in                      <ph id="ph1">`bold`</ph> is defined in the current context.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>A property in normal font is inherited.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>A project file (.vcxproj) imports other property sheets at build time.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>After all property sheets are imported, the project file is evaluated and the last definition of any property value is the one that's used.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>Sometimes it's useful to view the expanded file to determine how a given property value is inherited.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>To view the expanded version, enter the following command at a Visual Studio command prompt.</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>(Change the placeholder file names to the one you want to use.)</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>msbuild /pp:<ept id="p1">**</ept> <bpt id="p2">*</bpt>temp<ept id="p2">*</ept> <bpt id="p3">**</bpt>.txt<ept id="p3">**</ept> <bpt id="p4">*</bpt>myapp<ept id="p4">*</ept> <bpt id="p5">**</bpt>.vcxproj<ept id="p5">**</ept></source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>Expanded project files can be large and difficult to understand unless you are familiar with MSBuild.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>Here's the basic structure of a project file:</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>Fundamental project properties, which are not exposed in the IDE.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Import of Microsoft.cpp.default.props, which defines some basic, toolset-independent properties.</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>Global Configuration properties (exposed as                          <bpt id="p1">**</bpt>PlatformToolset<ept id="p1">**</ept> and                          <bpt id="p2">**</bpt>Project<ept id="p2">**</ept> default properties on the                          <bpt id="p3">**</bpt>Configuration General<ept id="p3">**</ept> page.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>These properties determine which toolset and intrinsic property sheets are imported in Microsoft.cpp.props in the next step.</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>Import of Microsoft.cpp.props, which sets most of the project defaults.</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>Import of all property sheets, including .user files.</source>
+        </trans-unit>
+        <trans-unit id="314" translate="yes" xml:space="preserve">
+          <source>These property sheets can override everything except the                          <bpt id="p1">**</bpt>PlatformToolset<ept id="p1">**</ept> and                          <bpt id="p2">**</bpt>Project<ept id="p2">**</ept> default properties.</source>
+        </trans-unit>
+        <trans-unit id="315" translate="yes" xml:space="preserve">
+          <source>The remainder of the project configuration properties.</source>
+        </trans-unit>
+        <trans-unit id="316" translate="yes" xml:space="preserve">
+          <source>These values can override what was set in the property sheets.</source>
+        </trans-unit>
+        <trans-unit id="317" translate="yes" xml:space="preserve">
+          <source>Items (files) together with their metadata.</source>
+        </trans-unit>
+        <trans-unit id="318" translate="yes" xml:space="preserve">
+          <source>These are always the last word in MSBuild evaluation rules, even if they occur before other properties and imports.</source>
+        </trans-unit>
+        <trans-unit id="319" translate="yes" xml:space="preserve">
+          <source>For more information, see                  <bpt id="p1">[</bpt>MSBuild Properties<ept id="p1">](/visualstudio/msbuild/msbuild-properties)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="320" translate="yes" xml:space="preserve">
+          <source>Adding an include directory to the set of default directories</source>
+        </trans-unit>
+        <trans-unit id="321" translate="yes" xml:space="preserve">
+          <source>When you add an include directory to a project, it is important not to override all the default directories.</source>
+        </trans-unit>
+        <trans-unit id="322" translate="yes" xml:space="preserve">
+          <source>The correct way to add a directory is to append the new path, for example “C:\MyNewIncludeDir\”, and then to Append the                  <bpt id="p1">**</bpt>$(IncludePath)<ept id="p1">**</ept> macro to the property value.</source>
+        </trans-unit>
+        <trans-unit id="323" translate="yes" xml:space="preserve">
+          <source>Setting environment variables for a build</source>
+        </trans-unit>
+        <trans-unit id="324" translate="yes" xml:space="preserve">
+          <source>The Visual C++ compiler (cl.exe) recognizes certain environment variables, specifically LIB, LIBPATH, PATH, and INCLUDE.</source>
+        </trans-unit>
+        <trans-unit id="325" translate="yes" xml:space="preserve">
+          <source>When you build with the IDE, the properties that are set in the                  <bpt id="p1">[</bpt>VC++ Directories Property Page<ept id="p1">](../ide/vcpp-directories-property-page.md)</ept> property page are used to set those environment variables.</source>
+        </trans-unit>
+        <trans-unit id="326" translate="yes" xml:space="preserve">
+          <source>If LIB, LIBPATH, and INCLUDE values have already been set, for example by a Developer Command Prompt, they are replaced with the values of the corresponding MSBuild properties.</source>
+        </trans-unit>
+        <trans-unit id="327" translate="yes" xml:space="preserve">
+          <source>The build then prepends the value of the VC++ Directories executable directories property to PATH.</source>
+        </trans-unit>
+        <trans-unit id="328" translate="yes" xml:space="preserve">
+          <source>You can set a user-defined environment variable by created a user-defined macro and then checking the box that says                  <bpt id="p1">**</bpt>Set this macro as an environment variable in the build environment<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="329" translate="yes" xml:space="preserve">
+          <source>Setting environment variables for a debugging session</source>
+        </trans-unit>
+        <trans-unit id="330" translate="yes" xml:space="preserve">
+          <source>In the left pane of the project's                  <bpt id="p1">**</bpt>Property Pages<ept id="p1">**</ept> dialog box, expand                  <bpt id="p2">**</bpt>Configuration Properties<ept id="p2">**</ept> and then select                  <bpt id="p3">**</bpt>Debugging<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="331" translate="yes" xml:space="preserve">
+          <source>In the right pane, modify the                  <bpt id="p1">**</bpt>Environment<ept id="p1">**</ept> or                  <bpt id="p2">**</bpt>Merge Environment<ept id="p2">**</ept> project settings and then choose the                  <bpt id="p3">**</bpt>OK<ept id="p3">**</ept> button.</source>
+        </trans-unit>
+        <trans-unit id="332" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="333" translate="yes" xml:space="preserve">
+          <source>Creating and Managing Visual C++ Projects</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,44 +1,40 @@
 ---
-title: utility (STL-CLR) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- <cliext/utility>
-dev_langs:
-- C++
-helpviewer_keywords:
-- <utility> header [STL/CLR]
-- utility header [STL/CLR]
-- <cliext/utility> header [STL/CLR]
+title: "utility (STL-CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "<cliext/utility>"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "<utility> header [STL/CLR]"
+  - "utility header [STL/CLR]"
+  - "<cliext/utility> header [STL/CLR]"
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
 caps.latest.revision: 6
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 03e8d4aa70354931b9d3ae4a33bedbd3fedfa2ce
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # utility (STL/CLR)
 Include the STL/CLR header `<cliext/utility>` to define the template class `pair` and several supporting template functions.  
@@ -75,8 +71,3 @@ Include the STL/CLR header `<cliext/utility>` to define the template class `pair
   
 ## See Also  
  [STL/CLR Library Reference](../dotnet/stl-clr-library-reference.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-
