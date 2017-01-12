@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">67f314989e0069902ae983805a4f8ce839307ea5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-runtime-library\reference\aligned-offset-malloc-dbg.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">70ed0198b71db74cf8ed55b9025e44320931808c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b0383ea67a9b86aa5b7c3fc4dfe620f9bef7e594</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>_aligned_offset_malloc_dbg | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>_aligned_offset_malloc_dbg</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Allocates memory on a specified alignment boundary (debug version only).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>[in]</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The size of the requested memory allocation.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>[in]</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The alignment value, which must be an integer power of 2.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>[in]</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The offset into the memory allocation to force the alignment.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>[in]</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Pointer to the name of the source file that requested the allocation operation or NULL.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>[in]</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Line number in the source file where the allocation operation was requested or NULL.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A pointer to the memory block that was allocated or <ph id="ph1">`NULL`</ph> if the operation failed.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>is a debug version of the <bpt id="p1">[</bpt>_aligned_offset_malloc<ept id="p1">](../../c-runtime-library/reference/aligned-offset-malloc.md)</ept> function.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>When <bpt id="p1">[</bpt>_DEBUG<ept id="p1">](../../c-runtime-library/debug.md)</ept> is not defined, each call to <ph id="ph1">`_aligned_offset_malloc_dbg`</ph> is reduced to a call to <ph id="ph2">`_aligned_offset_malloc`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Both <ph id="ph1">`_aligned_offset_malloc`</ph> and <ph id="ph2">`_aligned_offset_malloc_dbg`</ph> allocate a block of memory in the base heap, but <ph id="ph3">`_aligned_offset_malloc_dbg`</ph> offers several debugging features: buffers on either side of the user portion of the block to test for leaks, a block type parameter to track specific allocation types, and <ph id="ph4">`filename`/`linenumber`</ph> information to determine the origin of allocation requests.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>allocates the memory block with slightly more space than the requested <ph id="ph1">`size`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The additional space is used by the debug heap manager to link the debug memory blocks and to provide the application with debug header information and overwrite buffers.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When the block is allocated, the user portion of the block is filled with the value 0xCD and each of the overwrite buffers are filled with 0xFD.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>is useful in situations where alignment is needed on a nested element; for example, if alignment was needed on a nested class.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>is based on <ph id="ph1">`malloc`</ph>; for more information, see <bpt id="p1">[</bpt>malloc<ept id="p1">](../../c-runtime-library/reference/malloc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This function sets <ph id="ph1">`errno`</ph> to <ph id="ph2">`ENOMEM`</ph> if the memory allocation failed or if the requested size was greater than <ph id="ph3">`_HEAP_MAXREQ`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>For more information about <ph id="ph1">`errno`</ph>, see <bpt id="p1">[</bpt>errno, _doserrno, _sys_errlist, and _sys_nerr<ept id="p1">](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Also, <ph id="ph1">`_aligned_offset_malloc`</ph> validates its parameters.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`alignment`</ph> is not a power of 2 or if <ph id="ph2">`offset`</ph> is greater than or equal to <ph id="ph3">`size`</ph> and nonzero, this function invokes the invalid parameter handler, as described in <bpt id="p1">[</bpt>Parameter Validation<ept id="p1">](../../c-runtime-library/parameter-validation.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If execution is allowed to continue, this function returns <ph id="ph1">`NULL`</ph> and sets <ph id="ph2">`errno`</ph> to <ph id="ph3">`EINVAL`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For information about how memory blocks are allocated, initialized, and managed in the debug version of the base heap, see <bpt id="p1">[</bpt>CRT Debug Heap Details<ept id="p1">](/visualstudio/debugger/crt-debug-heap-details)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>For information about the allocation block types and how they are used, see <bpt id="p1">[</bpt>Types of blocks on the debug heap<ept id="p1">](/visualstudio/debugger/crt-debug-heap-details)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Routine</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Required header</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>crtdbg.h&gt;</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>For more compatibility information, see <bpt id="p1">[</bpt>Compatibility<ept id="p1">](../../c-runtime-library/compatibility.md)</ept> in the Introduction.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Libraries</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Debug versions of <bpt id="p1">[</bpt>C run-time libraries<ept id="p1">](../../c-runtime-library/crt-library-features.md)</ept> only.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>.NET Framework Equivalent</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Not applicable.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>To call the standard C function, use <ph id="ph1">`PInvoke`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Platform Invoke Examples<ept id="p1">](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Debug Routines</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

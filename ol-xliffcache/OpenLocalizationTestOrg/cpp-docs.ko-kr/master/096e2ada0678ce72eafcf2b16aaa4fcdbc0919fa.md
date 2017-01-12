@@ -1,44 +1,40 @@
 ---
-title: 'How to: Convert System::String to wchar_t* or char* | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-dev_langs:
-- C++
-helpviewer_keywords:
-- System::String, converting to char or wchar_t
-- PtrToStringChars method
-- System::String
-- wchart type, converting System::String
-- char data type, converting System::String to
+title: "How to: Convert System::String to wchar_t* or char* | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "get-started-article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "System::String, converting to char or wchar_t"
+  - "PtrToStringChars method"
+  - "System::String"
+  - "wchart type, converting System::String"
+  - "char data type, converting System::String to"
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 096e2ada0678ce72eafcf2b16aaa4fcdbc0919fa
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # How to: Convert System::String to wchar_t* or char*
 You can use `PtrToStringChars` in Vcclr.h to convert <xref:System.String> to native `wchar_t *` or `char *`.  This always returns a wide Unicode string pointer because CLR strings are internally Unicode. You can then convert from wide as shown in the following example.  
@@ -89,8 +85,3 @@ Hello
   
 ## See Also  
  [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

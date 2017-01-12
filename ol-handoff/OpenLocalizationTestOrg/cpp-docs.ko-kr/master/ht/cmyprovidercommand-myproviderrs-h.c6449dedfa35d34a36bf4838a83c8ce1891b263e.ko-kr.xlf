@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ko-kr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9b123a1b96add75e8d4333d6f950a20b2ef8287d</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\cmyprovidercommand-myproviderrs-h.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4bf144c53bf2f834ecf00a65f81f753e69a07293</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c1477ee7fe65f63b44453559129ccb1e0c16745a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CMyProviderCommand (MyProviderRS.H) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CMyProviderCommand (MyProviderRS.H)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CMyProviderCommand`</ph> class is the implementation for the provider command object.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>It provides the implementation for the <ph id="ph1">`IAccessor`</ph>, <ph id="ph2">`ICommandText`</ph>, and <bpt id="p1">**</bpt>ICommandProperties<ept id="p1">**</ept> interfaces.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IAccessor`</ph> interface is the same as the one in the rowset.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The command object uses the accessor to specify bindings for parameters.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The rowset object uses them to specify bindings for output columns.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`ICommandText`</ph> interface is a useful way to specify a command textually.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This example uses the <ph id="ph1">`ICommandText`</ph> interface later when it adds custom code; it also overrides the <ph id="ph2">`ICommand::Execute`</ph> method.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>ICommandProperties<ept id="p1">**</ept> interface handles all of the properties for the command and rowset objects.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IAccessor`</ph> interface manages all the bindings used in commands and rowsets.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The consumer calls <bpt id="p1">**</bpt>IAccessor::CreateAccessor<ept id="p1">**</ept> with an array of <bpt id="p2">**</bpt>DBBINDING<ept id="p2">**</ept> structures.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Each <bpt id="p1">**</bpt>DBBINDING<ept id="p1">**</ept> structure contains the information about how the column bindings should be handled (such as type and length).</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The provider receives the structures and then determines how the data should be transferred and whether any conversions are necessary.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IAccessor`</ph> interface is used in the command object to handle any parameters in the command.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The command object also provides an implementation of <ph id="ph1">`IColumnsInfo`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>OLE DB requires the <ph id="ph1">`IColumnsInfo`</ph> interface.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The interface allows the consumer to retrieve information about parameters from the command.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The rowset object uses the <ph id="ph1">`IColumnsInfo`</ph> interface to return information about the output columns to the provider.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The provider also contains an interface called <ph id="ph1">`IObjectWithSite`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`IObjectWithSite`</ph> interface was implemented in ATL 2.0 and allows the implementer to pass information about itself to its child.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The command object uses the <ph id="ph1">`IObjectWithSite`</ph> information to tell any generated rowset objects about who created them.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Provider Wizard-Generated Files</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

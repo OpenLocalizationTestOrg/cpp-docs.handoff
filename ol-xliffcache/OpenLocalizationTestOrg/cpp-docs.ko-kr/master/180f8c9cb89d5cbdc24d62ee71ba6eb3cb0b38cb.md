@@ -1,42 +1,38 @@
 ---
-title: multiset::size (STL-CLR) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- cliext::multiset::size
-dev_langs:
-- C++
-helpviewer_keywords:
-- size member [STL/CLR]
+title: "multiset::size (STL-CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "cliext::multiset::size"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "size member [STL/CLR]"
 ms.assetid: 29338f4f-c13e-4eb6-844d-1d94769553c8
 caps.latest.revision: 17
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 180f8c9cb89d5cbdc24d62ee71ba6eb3cb0b38cb
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # multiset::size (STL/CLR)
 Counts the number of elements.  
@@ -99,8 +95,3 @@ size() = 2 after adding 2
 ## See Also  
  [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,41 +1,37 @@
 ---
-title: Changing the Font of Text on an Image (Image Editor for Icons) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-- C++
-helpviewer_keywords:
-- fonts, changing on an image
+title: "Changing the Font of Text on an Image (Image Editor for Icons) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C++"
+helpviewer_keywords: 
+  - "fonts, changing on an image"
 ms.assetid: b8849d40-d401-4e06-808f-e615cb2bee3b
 caps.latest.revision: 8
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ba85ed0fe6c5e2842de89b675f22dca1cdafe3cf
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Changing the Font of Text on an Image (Image Editor for Icons)
 The following procedure is an example of how to:  
@@ -71,10 +67,4 @@ The following procedure is an example of how to:
 ## See Also  
  [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
  [Toolbar](../mfc/toolbar-image-editor-for-icons.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
