@@ -1,39 +1,43 @@
 ---
-title: "CCommand::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Close"
-  - "CCommand::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close method"
+title: CCommand::Close | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Close
+- CCommand::Close
+dev_langs:
+- C++
+helpviewer_keywords:
+- Close method
 ms.assetid: 4da9c02c-7082-4e47-a0fa-78b546f0f7d2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 0f921b0a14a88aab79dbb48a1daefbfe17a5feb6
+
 ---
 # CCommand::Close
 Releases the accessor rowset associated with the command.  
@@ -62,3 +66,8 @@ void Close( );
 ## See Also  
  [CCommand Class](../../data/oledb/ccommand-class.md)   
  [CCommand::ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+
