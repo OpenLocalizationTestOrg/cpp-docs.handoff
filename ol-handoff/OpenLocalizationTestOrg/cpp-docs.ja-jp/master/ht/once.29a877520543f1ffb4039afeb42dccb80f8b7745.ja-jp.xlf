@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7d13fb08a6f645b46aec5363e9d69fd6db178c58</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\preprocessor\once.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">288c2ae726252fc517cafb36711273bb6c2b3564</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a3e13f3b00369cf983d1dc175b238d2c062defcd</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>once | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>once</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Specifies that the file will be included (opened) only once by the compiler when compiling a source code file.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>The use of <ph id="ph1">`#pragma once`</ph> can reduce build times as the compiler will not open and read the file after the first #include of the file in the translation unit.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>This is referred to as <bpt id="p1">*</bpt>multiple-include optimization<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>It has an effect similar to the <bpt id="p1">*</bpt>#include guard<ept id="p1">*</ept> idiom, which uses preprocessor macro definitions to prevent multiple inclusion of the contents of the file.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This also helps to prevent violations of the <bpt id="p1">*</bpt>one definition rule<ept id="p1">*</ept>—the requirement that all templates, types, functions, and objects have no more than one definition in your code.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>We recommend the <ph id="ph1">`#pragma once`</ph> directive for new code because it doesn't pollute the global namespace with a preprocessor symbol.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>It requires less typing, is less distracting, and can't cause symbol collisions—errors caused when different header files use the same preprocessor symbol as the guard value.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>It is not part of the C++ Standard, but it is implemented portably by several common compilers.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>There is no advantage to use of both the #include guard idiom and <ph id="ph1">`#pragma once`</ph> in the same file.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The compiler recognizes the #include guard idiom and implements the multiple include optimization the same way as the <ph id="ph1">`#pragma once`</ph> directive if no non-comment code or preprocessor directive comes before or after the standard form of the idiom:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>We recommend the #include guard idiom when code must be portable to compilers that do not implement the <ph id="ph1">`#pragma once`</ph> directive, to maintain consistency with existing code, or when the multiple-include optimization is impossible.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This can occur in complex projects when file system aliasing or aliased include paths prevent the compiler from identifying identical include files by canonical path.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Be careful not to use <ph id="ph1">`#pragma once`</ph> or the #include guard idiom in header files that are designed to be included multiple times, using preprocessor symbols to control their effects.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For an example of this design, see the <ph id="ph1">\&lt;</ph>assert.h&gt; header file.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Also be careful to manage include paths to avoid creating multiple paths to included files, which can defeat the multiple-include optimization for both #include guards and <ph id="ph1">`#pragma once`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Pragma Directives and the __Pragma Keyword</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

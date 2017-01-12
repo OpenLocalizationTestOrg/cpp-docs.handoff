@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1e0c96651086773ff7b109cec9a8f736c275eea5</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\future.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e77f90370de07e4e2c797077508b5361d19d1d21</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">100941c129a4478999383f322879ffa50b47a4fa</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>future<ph id="ph1">&amp;gt;</ph> | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>future</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Include the standard header <ph id="ph1">\&lt;</ph>future&gt; to define template classes and supporting templates that simplify running a function—possibly in a separate thread—and retrieving its result.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The result is either the value that is returned by the function or an exception that is emitted by the function but is not caught in the function.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This header uses Concurrency Runtime (ConcRT) so that you can use it together with other ConcRT mechanisms.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For more information about ConcRT, see <bpt id="p1">[</bpt>Concurrency Runtime<ept id="p1">](../parallel/concrt/concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In code that is compiled by using <bpt id="p1">**</bpt>/clr<ept id="p1">**</ept> or <bpt id="p2">**</bpt>/clr:pure<ept id="p2">**</ept>, this header is blocked.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">*</bpt>asynchronous provider<ept id="p1">*</ept> stores the result of a function call.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">*</bpt>asynchronous return object<ept id="p1">*</ept> is used to retrieve the result of a function call.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>An <bpt id="p1">*</bpt>associated asynchronous state<ept id="p1">*</ept> provides communication between an asynchronous provider and one or more asynchronous return objects.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>A program does not directly create any associated asynchronous state objects.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The program creates an asynchronous provider whenever it needs one and from that it creates an asynchronous return object that shares its associated asynchronous state with the provider.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Asynchronous providers and asynchronous return objects manage the objects that hold their shared associated asynchronous state.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>When the last object that references the associated asynchronous state releases it, the object that holds the associated asynchronous state is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>An asynchronous provider or an asynchronous return object that has no associated asynchronous state is <bpt id="p1">*</bpt>empty<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>An associated asynchronous state is <bpt id="p1">*</bpt>ready<ept id="p1">*</ept> only if its asynchronous provider has stored a return value or stored an exception.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The template function <ph id="ph1">`async`</ph> and the template classes <ph id="ph2">`promise`</ph> and <ph id="ph3">`packaged_task`</ph> are asynchronous providers.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The template classes <ph id="ph1">`future`</ph> and <ph id="ph2">`shared_future`</ph> describe asynchronous return objects.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Each of the template classes <ph id="ph1">`promise`</ph>, <ph id="ph2">`future`</ph>, and <ph id="ph3">`shared_future`</ph> has a specialization for the type <ph id="ph4">`void`</ph> and a partial specialization for storing and retrieving a value by reference.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>These specializations differ from the primary template only in the signatures and semantics of the functions that store and retrieve the returned value.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The template classes <ph id="ph1">`future`</ph> and <ph id="ph2">`shared_future`</ph> never block in their destructors, except in one case that's preserved for backward compatibility: Unlike all other futures, for a <ph id="ph3">`future`</ph>—or the last <ph id="ph4">`shared_future`</ph>—that's attached to a task started with <ph id="ph5">`std::async`</ph>, the destructor blocks if the task has not completed; that is, it blocks if this thread did not yet call <ph id="ph6">`.get()`</ph> or <ph id="ph7">`.wait()`</ph> and the task is still running.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The following usability note has been added to the description of <ph id="ph1">`std::async`</ph> in the draft standard: "[Note: If a future obtained from std::async is moved outside the local scope, other code that uses the future must be aware that the future’s destructor may block for the shared state to become ready.—end note]" In all other cases, <ph id="ph2">`future`</ph> and <ph id="ph3">`shared_future`</ph> destructors are required and are guaranteed to never block.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Members</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Classes</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>future Class</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Describes an asynchronous return object.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>future_error Class</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Describes an exception object that can be thrown by methods of types that manage <ph id="ph1">`future`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>packaged_task Class</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Describes an asynchronous provider that is a call wrapper and whose call signature is <ph id="ph1">`Ty(ArgTypes...)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Its associated asynchronous state holds a copy of its callable object in addition to the potential result.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>promise Class</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Describes an asynchronous provider.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>shared_future Class</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Describes an asynchronous return object.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>In contrast with a <ph id="ph1">`future`</ph> object, an asynchronous provider can be associated with any number of <ph id="ph2">`shared_future`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Structures</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>is_error_code_enum Structure</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Specialization that indicates that <ph id="ph1">`future_errc`</ph> is suitable for storing an <ph id="ph2">`error_code`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>uses_allocator Structure</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Specialization that always holds true.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Functions</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>async Function</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Represents an asynchronous provider.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>future_category Function</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Returns a reference to the <ph id="ph1">`error_category`</ph> object that characterizes errors that are associated with <ph id="ph2">`future`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>make_error_code Function</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Creates an <ph id="ph1">`error_code`</ph> that has the <ph id="ph2">`error_category`</ph> object that characterizes <ph id="ph3">`future`</ph> errors.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>make_error_condition Function</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Creates an <ph id="ph1">`error_condition`</ph> that has the <ph id="ph2">`error_category`</ph> object that characterizes <ph id="ph3">`future`</ph> errors.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>swap Function</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Exchanges the associated asynchronous state of one <ph id="ph1">`promise`</ph> object with that of another.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Enumerations</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Name</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Description</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>future_errc Enumeration</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Supplies symbolic names for the errors that are reported by the <ph id="ph1">`future_error`</ph> class.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>future_status Enumeration</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Supplies symbolic names for the reasons that a timed wait function can return.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>launch Enumeration</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Represents a bitmask type that describes the possible modes for the template function <ph id="ph1">`async`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Header Files Reference</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

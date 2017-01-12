@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">377b0399150d5c312f6200513c7bf871e2106a59</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\callback-items-and-the-callback-mask.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">10487a3804056cb68f9092497d8d0e8d3b72f202</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">422e6c8f362887ccca5cf454bc6e42240c58c082</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Callback Items and the Callback Mask | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Callback Items and the Callback Mask</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>For each of its items, a list view control typically stores the label text, the image list index of the item's icons, and a set of bit flags for the item's state.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>You can define individual items as callback items, which are useful if your application already stores some of the information for an item.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You define an item as a callback item by specifying appropriate values for the <ph id="ph1">`pszText`</ph> and <ph id="ph2">`iImage`</ph> members of the <bpt id="p1">**</bpt>LV_ITEM<ept id="p1">**</ept> structure (see <bpt id="p2">[</bpt>CListCtrl::GetItem<ept id="p2">](../mfc/reference/clistctrl-class.md#clistctrl__getitem)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>If the application maintains the item's or subitem's text, specify the <bpt id="p1">**</bpt>LPSTR_TEXTCALLBACK<ept id="p1">**</ept> value for the <ph id="ph1">`pszText`</ph> member.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If the application keeps track of the icon for the item, specify the <bpt id="p1">**</bpt>I_IMAGECALLBACK<ept id="p1">**</ept> value for the <ph id="ph1">`iImage`</ph> member.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In addition to defining callback items, you can also modify the control's callback mask.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>This mask is a set of bit flags that specify the item states for which the application, rather than the control, stores the current data.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The callback mask applies to all of the control's items, unlike the callback item designation, which applies to a specific item.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The callback mask is zero by default, meaning that the control tracks all item states.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To change this default behavior, initialize the mask to any combination of the following values:</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The item is marked for a cut-and-paste operation.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The item is highlighted as a drag-and-drop target.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The item has the focus.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The item is selected.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>LVIS_OVERLAYMASK<ept id="p1">**</ept> The application stores the image list index of the current overlay image for each item.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>LVIS_STATEIMAGEMASK<ept id="p1">**</ept> The application stores the image list index of the current state image for each item.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For further information on retrieving and setting this mask, see <bpt id="p1">[</bpt>CListCtrl::GetCallbackMask<ept id="p1">](../mfc/reference/clistctrl-class.md#clistctrl__getcallbackmask)</ept> and <bpt id="p2">[</bpt>CListCtrl::SetCallbackMask<ept id="p2">](../mfc/reference/clistctrl-class.md#clistctrl__setcallbackmask)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Using CListCtrl</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

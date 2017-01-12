@@ -1,52 +1,48 @@
 ---
-title: 'Menus and Resources: Container Additions | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDP_OLE_INIT_FAILED
-- IDP_FAILED_TO_CREATE
-- VK_ESCAPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- application accelerator table [C++]
-- VK_ESCAPE key
-- IDP_FAILED_TO_CREATE macro
-- visual editing, application menus and resources
-- OLE containers, menus and resources
-- accelerator tables [C++], container applications
-- IDP_OLE_INIT_FAILED macro
-- CONTAIN tutorial
-- Links menu item
+title: "Menus and Resources: Container Additions | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDP_OLE_INIT_FAILED"
+  - "IDP_FAILED_TO_CREATE"
+  - "VK_ESCAPE"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "application accelerator table [C++]"
+  - "VK_ESCAPE key"
+  - "IDP_FAILED_TO_CREATE macro"
+  - "visual editing, application menus and resources"
+  - "OLE containers, menus and resources"
+  - "accelerator tables [C++], container applications"
+  - "IDP_OLE_INIT_FAILED macro"
+  - "CONTAIN tutorial"
+  - "Links menu item"
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
 caps.latest.revision: 10
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 862e6cccfdde08f65d5baf9cfd5c129091a4cef5
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Menus and Resources: Container Additions
 This article explains the changes that need to be made to the menus and other resources in a visual editing container application.  
@@ -107,10 +103,4 @@ This article explains the changes that need to be made to the menus and other re
 ## See Also  
  [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
  [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

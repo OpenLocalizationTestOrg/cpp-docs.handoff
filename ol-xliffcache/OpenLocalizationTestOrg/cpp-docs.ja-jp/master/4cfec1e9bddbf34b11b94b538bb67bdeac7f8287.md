@@ -1,40 +1,36 @@
 ---
-title: Implementing an STL-Based Collection | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- ICollectionOnSTLImpl interface
+title: "Implementing an STL-Based Collection | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "ICollectionOnSTLImpl interface"
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
 caps.latest.revision: 12
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 4cfec1e9bddbf34b11b94b538bb67bdeac7f8287
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Implementing an STL-Based Collection
 ATL provides the `ICollectionOnSTLImpl` interface to enable you to quickly implement Standard Template Library (STL)-based collection interfaces on your objects. To understand how this class works, you will work through a simple example (below) that uses this class to implement a read-only collection aimed at Automation clients.  
@@ -120,10 +116,4 @@ ATL provides the `ICollectionOnSTLImpl` interface to enable you to quickly imple
  [Collections and Enumerators](../atl/atl-collections-and-enumerators.md)   
  [ATLCollections Sample](../visual-cpp-samples.md)   
  [ATL Copy Policy Classes](../atl/atl-copy-policy-classes.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

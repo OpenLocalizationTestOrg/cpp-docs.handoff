@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7c70243c6fe3acf50e46c6bdf0880ed713b4b16c</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\error-messages\compiler-errors-1\fatal-error-c1128.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cd8d895cc423da96b7bb240c9e4b3617665b7b6e</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b681432c7eca421fb954ef3766c239faffd14f61</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Fatal Error C1128 | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Fatal Error C1128</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>number of sections exceeded object file format limit : compile with /bigobj</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>An .obj file exceeded the number of allowable sections, a COFF object file format limitation.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Reaching this section limitation can be the result of using <bpt id="p1">[</bpt>/Gy<ept id="p1">](../../build/reference/gy-enable-function-level-linking.md)</ept> and a debug build; <bpt id="p2">**</bpt>/Gy<ept id="p2">**</ept> causes functions to go into their own COMDAT sections.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>In a debug build, there is a debug info section for each COMDAT function.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>C1128 can also be caused when there are too many inline functions.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>To correct this error, divide your source file into multiple source code files, compile without <bpt id="p1">**</bpt>/Gy<ept id="p1">**</ept>, or compile with <bpt id="p2">[</bpt>/bigobj (Increase Number of Sections in .Obj file)<ept id="p2">](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you do not compile with <bpt id="p1">**</bpt>/Gy<ept id="p1">**</ept>, you will need to specify the optimizations individually, since <bpt id="p2">**</bpt>/O2<ept id="p2">**</ept> and <bpt id="p3">**</bpt>/O1<ept id="p3">**</ept> both imply <bpt id="p4">**</bpt>/Gy<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>If possible, compile without debugging information.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>You may also need to have specific instantiations of templates in separate source code files, rather than having the compiler emit them.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When porting code, C1128 will likely appear first when using the x64 compiler, and much later with the x86 compiler.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>x64 will have at least 4 sections associated with each function compiled <bpt id="p1">**</bpt>/Gy<ept id="p1">**</ept> or inlined from templates or class-inline: code, pdata, and debug info, and possibly xdata.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>X86 won’t have the pdata.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

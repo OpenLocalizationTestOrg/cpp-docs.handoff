@@ -1,46 +1,42 @@
 ---
-title: Using CObject | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- CObject
-dev_langs:
-- C++
-helpviewer_keywords:
-- examples [MFC], CObject
-- root base class for MFC
-- derived classes, from CObject
-- MFC, base class
-- CObject class
+title: "Using CObject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CObject"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "examples [MFC], CObject"
+  - "root base class for MFC"
+  - "derived classes, from CObject"
+  - "MFC, base class"
+  - "CObject class"
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
 caps.latest.revision: 9
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 608d5cc07a0b061a5ef8eafbdddfbbf72e06b4fa
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Using CObject
 [CObject](../mfc/reference/cobject-class.md) is the root base class for most of the Microsoft Foundation Class Library (MFC). The `CObject` class contains many useful features that you may want to incorporate into your own program objects, including serialization support, run-time class information, and object diagnostic output. If you derive your class from `CObject`, your class can exploit these `CObject` features.  
@@ -69,10 +65,4 @@ ms.openlocfilehash: 608d5cc07a0b061a5ef8eafbdddfbbf72e06b4fa
  [CRuntimeClass Structure](../mfc/reference/cruntimeclass-structure.md)   
  [Files](../mfc/files-in-mfc.md)   
  [Serialization](../mfc/serialization-in-mfc.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

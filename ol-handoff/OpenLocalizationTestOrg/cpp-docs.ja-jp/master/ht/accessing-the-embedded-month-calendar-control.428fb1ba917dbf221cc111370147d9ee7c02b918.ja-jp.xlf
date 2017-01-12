@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="ja-jp">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">4e16b2c3ca03dc8de122782ed950eec0307f3d9a</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\accessing-the-embedded-month-calendar-control.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dfc945e60ae64aaa733c43b46ecb744675eb0556</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">e8f0fc140fd34b57662850b77e8ce49e286b99d4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Accessing the Embedded Month Calendar Control | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Accessing the Embedded Month Calendar Control</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The embedded month calendar control object can be accessed from the <ph id="ph1">`CDateTimeCtrl`</ph> object with a call to the <bpt id="p1">[</bpt>GetMonthCalCtrl<ept id="p1">](../mfc/reference/cdatetimectrl-class.md#cdatetimectrl__getmonthcalctrl)</ept> member function.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The embedded month calendar control is used only when the date and time picker control does not have the <bpt id="p1">**</bpt>DTS_UPDOWN<ept id="p1">**</ept> style set.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This is useful if you want to modify certain attributes before the embedded control is displayed.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>To accomplish this, handle the <bpt id="p1">**</bpt>DTN_DROPDOWN<ept id="p1">**</ept> notification, retrieve the month calendar control (using <bpt id="p2">[</bpt>CDateTimeCtrl::GetMonthCalCtrl<ept id="p2">](../mfc/reference/cdatetimectrl-class.md#cdatetimectrl__getmonthcalctrl)</ept>), and make your modifications.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Unfortunately, the month calendar control is not persistent.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In other words, when the user requests the display of the month calendar control, a new month calendar control is created (before the <bpt id="p1">**</bpt>DTN_DROPDOWN<ept id="p1">**</ept> notification).</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The control is destroyed (after the <bpt id="p1">**</bpt>DTN_CLOSEUP<ept id="p1">**</ept> notification) when dismissed by the user.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>This means that any attributes you modify, before the embedded control is displayed, are lost when the embedded control is dismissed.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates this procedure, using a handler for the <bpt id="p1">**</bpt>DTN_DROPDOWN<ept id="p1">**</ept> notification.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The code changes the background color of the month calendar control, with a call to <bpt id="p1">[</bpt>SetMonthCalColor<ept id="p1">](../mfc/reference/cdatetimectrl-class.md#cdatetimectrl__setmonthcalcolor)</ept>, to gray.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The code is as follows:</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#5</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>As stated previously, all modifications to properties of the month calendar control are lost, with two exceptions, when the embedded control is dismissed.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The first exception, the colors of the month calendar control, has already been discussed.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The second exception is the font used by the month calendar control.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You can modify the default font by making a call to <bpt id="p1">[</bpt>CDateTimeCtrl::SetMonthCalFont<ept id="p1">](../mfc/reference/cdatetimectrl-class.md#cdatetimectrl__setmonthcalfont)</ept>, passing the handle of an existing font.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The following example (where <ph id="ph1">`m_dtPicker`</ph> is the date and time control object) demonstrates one possible method:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#6</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Once the font has been changed, with a call to <ph id="ph1">`CDateTimeCtrl::SetMonthCalFont`</ph>, the new font is stored and used the next time a month calendar is to be displayed.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Using CDateTimeCtrl</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
