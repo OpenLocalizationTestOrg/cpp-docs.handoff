@@ -1,40 +1,44 @@
 ---
-title: "CAtlServiceModuleT::Run Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CServiceModule::Run"
-  - "CServiceModule.Run"
-  - "CSecurityDescriptor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL services, security"
+title: CAtlServiceModuleT::Run Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CServiceModule::Run
+- CServiceModule.Run
+- CSecurityDescriptor
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 31295a07704e272799398aa82c6a9f0bbac17717
+ms.openlocfilehash: 0c1e5bfb19c4c16cdedebcfd31c9db2761e76b5e
+
 ---
 # CAtlServiceModuleT::Run Function
 **Run** contains calls to `PreMessageLoop`, `RunMessageLoop`, and `PostMessageLoop`. After being called, `PreMessageLoop` first stores the service's thread ID. The service will use this ID to close itself by sending a **WM_QUIT** message using the Win32 API function, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
@@ -51,4 +55,10 @@ translation.priority.ht:
  [CSid Class](../atl/reference/csid-class.md)   
  [CDacl Class](../atl/reference/cdacl-class.md)   
  [CAtlServiceModuleT::Run](../atl/reference/catlservicemodulet-class.md#catlservicemodulet__run)
+
+
+
+
+<!--HONumber=Jan17_HO2-->
+
 

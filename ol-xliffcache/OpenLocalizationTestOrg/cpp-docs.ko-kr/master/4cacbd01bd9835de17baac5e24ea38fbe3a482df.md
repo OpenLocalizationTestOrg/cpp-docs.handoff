@@ -1,64 +1,68 @@
 ---
-title: "nearbyint, nearbyintf, nearbyintl1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nerabyintl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nearbyintl"
-  - "math/nearbyint"
-  - "math/narbyintf"
-  - "math/narbyintl"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "nearbyint function"
-  - "nearbyintf function"
-  - "nearbyintl function"
+title: earbyint, nearbyintf, nearbyintl1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- nearbyint
+- nearbyintf
+- nerabyintl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- nearbyint
+- nearbyintf
+- nearbyintl
+- math/nearbyint
+- math/narbyintf
+- math/narbyintl
+dev_langs:
+- C
+- C++
+helpviewer_keywords:
+- nearbyint function
+- nearbyintf function
+- nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4cacbd01bd9835de17baac5e24ea38fbe3a482df
+
 ---
 # nearbyint, nearbyintf, nearbyintl
 Rounds the specified floating-point value to an integer, and returns that value in a floating-point format.  
@@ -118,3 +122,8 @@ long double nearbyintl(
   
 ## See Also  
  [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

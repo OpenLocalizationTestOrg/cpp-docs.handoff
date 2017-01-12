@@ -1,39 +1,43 @@
 ---
-title: "Compiler Error C2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2039"
+title: Compiler Error C2039 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2039
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b1ac1c16cff49587c8822dbaf67a2bbff1a5aff9
+
 ---
 # Compiler Error C2039
 'identifier1' : is not a member of 'identifier2'  
@@ -167,3 +171,8 @@ int main() {
    stateTimer->~Timer();   // OK  
 }  
 ```
+
+
+<!--HONumber=Jan17_HO2-->
+
+

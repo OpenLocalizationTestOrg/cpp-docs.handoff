@@ -1,38 +1,42 @@
 ---
-title: "Making and Using Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [MFC], creating for dialog boxes"
-  - "Windows common controls [C++], about common controls"
-  - "common controls [C++], about common controls"
+title: Making and Using Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], creating for dialog boxes
+- Windows common controls [C++], about common controls
+- common controls [C++], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2abadcdee46ff2d302ced2389ef6ef088619e8ce
+
 ---
 # Making and Using Controls
 You make most controls for dialog boxes in the Visual C++ [dialog editor](../mfc/dialog-editor.md). But you can also create controls in any dialog box or window.  
@@ -63,4 +67,10 @@ You make most controls for dialog boxes in the Visual C++ [dialog editor](../mfc
   
 ## See Also  
  [Controls](../mfc/controls-mfc.md)
+
+
+
+
+<!--HONumber=Jan17_HO2-->
+
 

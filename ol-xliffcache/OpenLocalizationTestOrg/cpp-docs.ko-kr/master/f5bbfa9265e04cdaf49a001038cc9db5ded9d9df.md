@@ -1,38 +1,42 @@
 ---
-title: "Compiler Warning (level 1) C4251 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4251"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4251"
+title: Compiler Warning (level 1) C4251 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4251
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f5bbfa9265e04cdaf49a001038cc9db5ded9d9df
+
 ---
 # Compiler Warning (level 1) C4251
 'identifier' : class 'type' needs to have dll-interface to be used by clients of class 'type2'  
@@ -61,3 +65,8 @@ using namespace std;
 class Node;  
 class __declspec(dllimport) VecWrapper : vector<Node *> {};   // C4251  
 ```
+
+
+<!--HONumber=Jan17_HO2-->
+
+
