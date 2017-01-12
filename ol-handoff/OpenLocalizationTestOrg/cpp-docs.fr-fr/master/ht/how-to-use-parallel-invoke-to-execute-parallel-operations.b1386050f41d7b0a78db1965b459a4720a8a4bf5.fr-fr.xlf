@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">dbf9987e083fc8c8a153f673e3d118f37efb4937</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\how-to-use-parallel-invoke-to-execute-parallel-operations.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b70d914425590b064b0a704b799c3a03a1a6786d</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9da5750754562afd227201e12414511c3aea0674</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Use parallel_invoke to Execute Parallel Operations | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Use parallel_invoke to Execute Parallel Operations</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This example shows how to use the <bpt id="p1">[</bpt>concurrency::parallel_invoke<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_invoke)</ept> algorithm to improve the performance of a program that performs multiple operations on a shared data source.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Because no operations modify the source, they can be executed in parallel in a straightforward manner.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Consider the following code example that creates a variable of type <ph id="ph1">`MyDataType`</ph>, calls a function to initialize that variable, and then performs multiple lengthy operations on that data.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-word-mining#1</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If the <ph id="ph1">`lengthy_operation1`</ph>, <ph id="ph2">`lengthy_operation2`</ph>, and <ph id="ph3">`lengthy_operation3`</ph> functions do not modify the <ph id="ph4">`MyDataType`</ph> variable, these functions can be executed in parallel without additional modifications.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The following example modifies the previous example to run in parallel.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`parallel_invoke`</ph> algorithm executes each task in parallel and returns after all tasks are finished.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-word-mining#2</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following example downloads <bpt id="p1">*</bpt>The Iliad<ept id="p1">*</ept> by Homer from gutenberg.org and performs multiple operations on that file.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>The example first performs these operations serially and then performs the same operations in parallel.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-word-mining#3</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This example produces the following sample output.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This example uses the <ph id="ph1">`parallel_invoke`</ph> algorithm to call multiple functions that act on the same data source.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>You can use the <ph id="ph1">`parallel_invoke`</ph> algorithm to call any set of functions in parallel, not only those that act on the same data.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`parallel_invoke`</ph> algorithm calls each work function in parallel, its performance is bounded by the function that takes the longest time to finish (that is, if the runtime processes each function on a separate processor).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If this example performs more tasks in parallel than the number of available processors, multiple tasks can run on each processor.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>In this case, performance is bounded by the group of tasks that takes the longest time to finish.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Because this example performs three tasks in parallel, you should not expect performance to scale on computers that have more than three processors.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>To improve performance more, you can break the longest-running tasks into smaller tasks and run those tasks in parallel.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>You can use the <ph id="ph1">`parallel_invoke`</ph> algorithm instead of the <bpt id="p1">[</bpt>concurrency::task_group<ept id="p1">](reference/task-group-class.md)</ept> and <bpt id="p2">[</bpt>concurrency::structured_task_group<ept id="p2">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> classes if you do not require support for cancellation.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For an example that compares the usage of the <ph id="ph1">`parallel_invoke`</ph> algorithm versus task groups, see <bpt id="p1">[</bpt>How to: Use parallel_invoke to Write a Parallel Sort Routine<ept id="p1">](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>To compile the code, copy it and then paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`parallel-word-mining.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc /MD /DUNICODE /D_AFXDLL parallel-word-mining.cpp</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Parallel Algorithms</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>parallel_invoke Function</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

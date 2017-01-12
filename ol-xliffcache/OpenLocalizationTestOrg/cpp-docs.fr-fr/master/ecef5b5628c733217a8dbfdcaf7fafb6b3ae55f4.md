@@ -1,41 +1,37 @@
 ---
-title: Compiler Error C3873 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: error-reference
-f1_keywords:
-- C3873
-helpviewer_keywords:
-- C3873
+title: "Compiler Error C3873 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C3873"
+helpviewer_keywords: 
+  - "C3873"
 ms.assetid: e68fd3be-2391-492b-ac3f-d2428901b2e9
 caps.latest.revision: 5
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ecef5b5628c733217a8dbfdcaf7fafb6b3ae55f4
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # Compiler Error C3873
 'char': this character is not allowed as a first character of an identifier  
@@ -53,8 +49,3 @@ int main() {
    int abc_\u036F;   // OK, in allowed range for non-initial character  
 }  
 ```
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,68 +1,64 @@
 ---
-title: puts, _putws | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname:
-- _putws
-- puts
-apilocation:
-- msvcrt.dll
-- msvcr80.dll
-- msvcr90.dll
-- msvcr100.dll
-- msvcr100_clr0400.dll
-- msvcr110.dll
-- msvcr110_clr0400.dll
-- msvcr120.dll
-- msvcr120_clr0400.dll
-- ucrtbase.dll
-- api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
-f1_keywords:
-- _putts
-- _putws
-- puts
-dev_langs:
-- C++
-- C
-helpviewer_keywords:
-- strings [C++], writing
-- _putts function
-- standard output, writing to
-- putws function
-- puts function
-- putts function
-- _putws function
+title: "puts, _putws | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_putws"
+  - "puts"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-stdio-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "_putts"
+  - "_putws"
+  - "puts"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "strings [C++], writing"
+  - "_putts function"
+  - "standard output, writing to"
+  - "putws function"
+  - "puts function"
+  - "putts function"
+  - "_putws function"
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
 caps.latest.revision: 15
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1dbf866fb8401cdcca91ccd4ec9a1c1dafccab10
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # puts, _putws
 Writes a string to **stdout**.  
@@ -141,8 +137,3 @@ Hello world from puts!
  [Stream I/O](../../c-runtime-library/stream-i-o.md)   
  [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
  [fgets, fgetws](../../c-runtime-library/reference/fgets-fgetws.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

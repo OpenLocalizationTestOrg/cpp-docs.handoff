@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d297c6e02f920e6a07ed18d8a32a07d33ea9bd37</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\implementing-working-areas-in-list-controls.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d6d897c5762f633d1fdd57706a98af0279b3e0fc</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">baa922c580db0896815dfcc4e5656998e8e8f779</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Implementing Working Areas in List Controls | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Implementing Working Areas in List Controls</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>By default, a list control arranges all items in a standard grid fashion.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>However, another method is supported, working areas, that arranges the list items into rectangular groups.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For an image of a list control that implements working areas, see Using List-View Controls in the <ph id="ph1">[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Working areas are visible only when the list control is in icon or small icon mode.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>However, any current working areas are maintained if the view is switched to the report or list mode.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Working areas can be used to display an empty border (on the left, top and/or right of the items), or cause a horizontal scroll bar to be displayed when there normally wouldn't be one.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Another common usage is to create multiple working areas to which items can be moved or dropped.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>With this method, you could create areas in a single view that have different meanings.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The user could then categorize the items by placing them in a different area.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>An example of this would be a view of a file system that has an area for read/write files and another area for read-only files.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>If a file item were moved into the read-only area, it would automatically become read-only.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Moving a file from the read-only area into the read/write area would make the file read/write.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>provides several member functions for creating and managing working areas in your list control.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">[</bpt>GetWorkAreas<ept id="p1">](../mfc/reference/clistctrl-class.md#clistctrl__getworkareas)</ept> and <bpt id="p2">[</bpt>SetWorkAreas<ept id="p2">](../mfc/reference/clistctrl-class.md#clistctrl__setworkareas)</ept> retrieve and set an array of <ph id="ph1">`CRect`</ph> objects (or <ph id="ph2">`RECT`</ph> structures), which store the currently implemented working areas for your list control.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>In addition, <bpt id="p1">[</bpt>GetNumberOfWorkAreas<ept id="p1">](../mfc/reference/clistctrl-class.md#clistctrl__getnumberofworkareas)</ept> retrieves the current number of working areas for your list control (by default, zero).</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Items and Working Areas</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>When a working area is created, items that lie within the working area become members of it.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Similarly, if an item is moved into a working area, it becomes a member of the working area to which it was moved.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If an item does not lie within any working area, it automatically becomes a member of the first (index 0) working area.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>If you want to create an item and have it placed within a specific working area, you will need to create the item and then move it into the desired working area with a call to <bpt id="p1">[</bpt>SetItemPosition<ept id="p1">](../mfc/reference/clistctrl-class.md#clistctrl__setitemposition)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The second example below demonstrates this technique.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The following example implements four working areas (<ph id="ph1">`rcWorkAreas`</ph>), of equal size with a 10-pixel-wide border around each working area, in a list control (<ph id="ph2">`m_WorkAreaListCtrl`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#20</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The call to <bpt id="p1">[</bpt>ApproximateViewRect<ept id="p1">](../mfc/reference/clistctrl-class.md#clistctrl__approximateviewrect)</ept> was made to get an estimate of the total area required to display all items in one region.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This estimate is then divided into four regions and padded with a 5-pixel-wide border.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The next example assigns the existing list items to each group (<ph id="ph1">`rcWorkAreas`</ph>) and refreshes the control view (<ph id="ph2">`m_``WorkAreaListCtrl`</ph>) to complete the effect.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>NVC_MFCControlLadenDialog#21</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Using CListCtrl</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Controls</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

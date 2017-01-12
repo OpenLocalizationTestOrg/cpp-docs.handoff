@@ -1,45 +1,41 @@
 ---
-title: 'Windows Sockets: How Sockets with Archives Work | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Windows Sockets [C++], synchronous
-- sockets [C++], synchronous operation
-- sockets [C++], with archives
-- synchronous state socket
-- Windows Sockets [C++], with archives
-- two-state socket object
+title: "Windows Sockets: How Sockets with Archives Work | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "Windows Sockets [C++], synchronous"
+  - "sockets [C++], synchronous operation"
+  - "sockets [C++], with archives"
+  - "synchronous state socket"
+  - "Windows Sockets [C++], with archives"
+  - "two-state socket object"
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 caps.latest.revision: 12
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: cf92d76af80fac517b2b7a8cd3afdc0aa87ee47c
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Windows Sockets: How Sockets with Archives Work
 This article explains how a [CSocket](../mfc/reference/csocket-class.md) object, a [CSocketFile](../mfc/reference/csocketfile-class.md) object, and a [CArchive](../mfc/reference/carchive-class.md) object are combined to simplify sending and receiving data through a Windows Socket.  
@@ -75,10 +71,4 @@ CArchive, CSocketFile, and CSocket
 ## See Also  
  [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
  [CObject::Serialize](../mfc/reference/cobject-class.md#cobject__serialize)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

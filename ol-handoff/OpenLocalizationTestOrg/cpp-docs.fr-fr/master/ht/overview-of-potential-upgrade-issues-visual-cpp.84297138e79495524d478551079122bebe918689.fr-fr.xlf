@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="fr-fr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">52e288020985cb4d684d14ee02bf518381ba392b</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\porting\overview-of-potential-upgrade-issues-visual-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ebb39db297a912f659521dae0f9efbfe22ba64b0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f01ce6d0bba1e14b7c8d1a3fe950defd215b78a0</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Overview of potential upgrade issues (Visual C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Overview of potential upgrade issues (Visual C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Over the years, the Visual C++ compiler has undergone many changes, along with changes in the C++ language itself, the C++ Standard Library, the C runtime (CRT), and other libraries such as MFC and ATL.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, when upgrading an application from an earlier version of Visual C++ you might encounter compiler and linker errors and warnings in code that previously compiled cleanly.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The older the original code base, the greater the potential for such errors.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This overview summarizes the most common classes of issues you are likely to encounter, and provides links to more detailed information.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Note: In the past, we have recommended that upgrades that span several versions of Visual Studio should be performed incrementally one version at a time.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>We no longer recommend this approach.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>We have found that it is almost always simpler to upgrade to the most current version of Visual Studio no matter how old the code base.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Questions or comments about the upgrade process can be sent to vcupgrade at microsoft.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Library and toolset dependencies</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When upgrading an application to a new version of the Visual C++ compiler, it is strongly advisable and in many cases necessary to also upgrade all libs and DLLs that the application links to.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This requires either that you have access to the source code, or that the library vendor can provide new binary files compiled with the same major version of the Visual C++ compiler.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If one of these conditions is true, then you can skip this section, which deals with the details of binary compatibility.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If neither of these are the case, then you might not be able to use the libraries in your upgraded application.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The information in this section will help you understand whether you can proceed with the upgrade.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Toolset</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The obj and lib file formats are well-defined and rarely change.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Sometimes additions are made to these file formats, but these additions generally do not affect the ability of newer toolsets to consume object files and libraries produced by older toolsets.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The one big exception here is if you compile using /GL (Link-Time Code Generation / Whole Program Optimization).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>If you compile using /GL, the resulting object file can only be linked using the same toolset that was used to produce it.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>So, if you produce an object file with /GL and using the VC12 compiler, you must link it using the VC12 linker.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>This is because the internal data structures within the /GL objects are not stable across major versions of the toolset and newer toolsets do not understand the older data formats.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>C++ does not have a stable application binary interface (ABI).</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Visual C++ maintains a stable ABI for all minor versions of a release.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>For example, Visual Studio 2015 and all its updates are binary compatible.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>But the ABI is not necessarily compatible across major versions of Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>That is, we may make breaking changes to C++ type layout, name decoration, exception handling, and other parts of the C++ ABI.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Thus, if you have an object file that has external symbols with C++ linkage, that object file may not link correctly with object files produced with a different major version of the Visual C++ toolset.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Note that here, “may not work” has many possible outcomes: the link may  fail entirely (e.g. if name decoration changed), the link may succeed and things may not work at runtime (e.g. if type layout changed), or things may happen to work in many cases and nothing will go wrong.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Note also that while the C++ ABI is not stable, the C ABI and the subset of the C++ ABI required for COM are stable.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Libraries</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>If you compile a source file using a particular version of the Visual C++ libraries headers (by #including the headers), the resulting object file must be linked with the same version of the Visual C++ libraries.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>So, for example, if your source file is compiled with the Visual Studio 2013 <ph id="ph1">\&lt;</ph>stdio.h&gt;, you must link with the Visual Studio 2013 CRT library.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Similarly, if your source file is compiled with the Visual Studio 2013 <ph id="ph1">\&lt;</ph>iostream&gt;, you must link with the Visual Studio 2013 STL library.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Mixing-and-matching is not supported.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>For the STL, mixing-and-matching has been explicitly disallowed via use of #pragma detect_mismatch in the STL headers since Visual Studio 2010.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If you try to link incompatible object files, or if you try to link with the wrong STL library, the link will fail.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>For the CRT, mixing-and-matching was never supported, but it often just worked, at least until Visual Studio 2015 and the Universal CRT, because the API surface did not change much over time.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The Universal CRT broke backwards compatibility so that in the future we can maintain backwards compatibility.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>In other words, we have no plans to introduce new, versioned Universal CRT binaries in the future.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Instead, we will be updating the existing Universal CRT in-place.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The long-term goal with the libraries stabilization effort (which started with the Universal CRT project) is to make mixing-and-matching possible in some/most cases.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>To provide partial link compatibility with object files (and libraries) compiled with older versions of the Microsoft C Runtime headers, we provide a library, legacy_stdio_definitions.lib, with Visual Studio 2015.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>This library provides compatibility symbols for most of the functions and data exports that were removed from the Universal CRT.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>The set of compatibility symbols provided by legacy_stdio_definitions.lib is sufficient to satisfy most dependencies, including all of the dependencies in libraries included in the Windows SDK.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>However, there are some symbols that were removed from the Universal CRT for which it is not possible to provide compatibility symbols like this.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>These symbols include some functions (e.g., __iob_func) and the data exports (e.g., <ph id="ph1">\_</ph>_imp<ph id="ph2">\_\_</ph>_iob, <ph id="ph3">\_</ph>_imp<ph id="ph4">\_\_</ph>_pctype, <ph id="ph5">\_</ph>_imp<ph id="ph6">\_\_</ph>_mb_cur_max).</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>If you have a static library that was built with an older version of the C Runtime headers, we recommend the following actions (in this order):</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Rebuild the static library using Visual C++ 2015 and the Universal CRT headers to support linking with the Universal CRT.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>This is the fully supported (and thus best) option.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>If you cannot (or do not want to) rebuild the static library, you may try linking with legacy_stdio_definitions.lib.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>If it satisfies the link-time dependencies of your static library, you will want to thoroughly test the static library as it is used in the binary, to make sure that it is not adversely affected by any of the <bpt id="p1">[</bpt>behavioral changes that were made to the Universal CRT<ept id="p1">](visual-cpp-change-history-2003-2015.md#BK_CRT)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>If your static library’s dependencies are not satisfied by legacy_stdio_definitions.lib or if the library does not work with the Universal CRT due to the aforementioned behavioral changes, we would recommend encapsulating your static library into a DLL that you link with the correct version of the Microsoft C Runtime.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>For example, if the static library was built using Visual C++ 2013, you would want to build this DLL using Visual C++ 2013 and the Visual C++ 2013 libraries as well.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>By building the library into a DLL, you encapsulate the implementation detail that is its dependency on a particular version of the Microsoft C Runtime.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>(Note that you will want to be careful that the DLL interface does not “leak” details of which C Runtime it uses, e.g. by returning a FILE* across the DLL boundary or by returning a malloc-allocated pointer and expecting the caller to free it.)</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Use of multiple CRTs in a single process is not in and of itself problematic (indeed, most processes will end up loading multiple CRT DLLs; e.g., Windows operating system components will depend on msvcrt.dll and the CLR will depend on its own private CRT).</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Problems arise when you jumble state from different CRTs.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>For example, you should not allocate memory using msvcr110.dll!malloc and attempt to deallocate that memory using msvcr120.dll!free, and you should not attempt to open a FILE using msvcr110!fopen and attempt to read from that FILE using msvcr120!fread.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>As long as you don’t jumble state from different CRTs, you can safely have multiple CRTs loaded in a single process.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Errors due to project settings</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>To begin the upgrade process, simply open an older project/solution/workspace in the latest version of Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Visual Studio will create a new project based on the old project settings.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>If the older project has library or include paths that are hard-coded to non-standard locations, it is possible that the files in those paths won’t be visible to the compiler when the project uses the default settings.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Linker OutputFile setting<ept id="p1">](porting-guide-spy-increment.md#linker_output_settings)</ept> in Porting Guide: Spy++.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>In general, now is a great time to organize your project code properly in order to simplify project maintenance and help get your upgraded code compiling as quickly as possible.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>If your source code is already well-organized, and your older project is compiled with Visual Studio 2010 or later, you can manually edit the new project file to support compilation on both the old and new compiler.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>The following example shows how to compile for both Visual Studio 2013 and Visual Studio 2015:</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>LNK2019: Unresolved external</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>For unresolved symbols, you might need to fix up your project settings.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>•   If the source file is in a non-default location, did you add the path to the project’s include directories?</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>•   If the external is defined in a .lib file, have you specified the lib path in the project properties and is the correct version of the .lib file actually located there?</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>•   Are you attempting to link to a .lib file that was compiled with a different version of Visual Studio?</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>If so, see the previous section on library and toolset dependencies.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>•   Do the types of the arguments at the call site actually match an existing overload of the function?</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>Verify the underlying types for any typedefs in the function’s signature and in the code that calls the function are what you expect them to be.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>To troubleshoot unresolved symbol errors, you can try using dumpbin.exe to examine the symbols defined in a binary.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Try the following command line to view symbols defined in a library:</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>/Zc:wchar_t (wchar_t Is Native Type)</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>(In Visual C++ 6.0 and earlier, wchar_t was not implemented as a built-in type, but was declared in wchar.h as a typedef for unsigned short.) The C++ standard requires that wchar_t be a built-in type.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Using the typedef version can cause portability problems.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>If you upgrade from earlier versions of Visual C++ and encounter compiler error C2664 because the code is trying to implicitly convert a wchar_t to unsigned short, we recommend that you change the code to fix the error, instead of setting /Zc:wchar_t-.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/Zc:wchar_t (wchar_t Is Native Type)<ept id="p1">](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>Upgrading with the linker options /NODEFAULTLIB, /ENTRY, and /NOENTRY</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The /NODEFAULTLIB linker option (or the Ignore All Default Libraries linker property) tells the linker not to automatically link in the default libraries such as the CRT.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>This means that each library has to be listed as input individually.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>This list of libraries is given in the Additional Dependencies property in the Linker section of the Project Properties.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>Projects that use this option present a problem when upgrading, because the names of some of the default libraries have changed.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Because each library has to be listed in the Additional Dependencies property or on the linker command line, you need to update the list of libraries to use the current names.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>The following table shows the libraries whose names have changed.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>To upgrade, you need to replace the names in the first column with the names in the second column.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Some of these libraries are import libraries, but that shouldn’t matter.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>If you were using:</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>You need to replace it with:</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>libcmt.lib</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>libucrt.lib, libvcruntime.lib</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>libcmtd.lib</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>libucrtd.lib, libvcruntimed.lib</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>msvcrt.lib</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>ucrt.lib, vcruntime.lib</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>msvcrtd.lib</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>ucrtd.lib, vcruntimed.lib</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The same issue applies also if you use the /ENTRY option or the /NOENTRY option, which also have the effect of bypassing the default libraries.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Errors due to improved language conformance</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The Visual C++ compiler has continuously improved its conformance to the C++ standard over the years.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Code that compiled in earlier versions of Visual C++ might fail to compile in Visual Studio 2015 because the compiler correctly flags an error that it previously ignored or explicitly allowed.</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>For example, the /Zc:forScope switch was introduced early in the history of Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>It permits non-conforming behavior for loop variables.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>That switch is now deprecated and might be removed in future versions.</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>It is highly recommended to not use that switch when upgrading your code.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>/Zc:forScope- is deprecated<ept id="p1">](porting-guide-spy-increment.md#deprecated_forscope)</ept> in Porting Guide: Spy++.</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>One example of a common compiler error you might see when upgrading is when a non-const argument is passed to a const parameter.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Older versions of Visual C++ did not always flag this as an error.</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>The compiler's more strict conversions<ept id="p1">](porting-guide-spy-increment.md#stricter_conversions)</ept> in Porting Guide: Spy++.</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>For more information on specific conformance improvements, see <bpt id="p1">[</bpt>Visual C++ change history 2003 – 2015<ept id="p1">](visual-cpp-change-history-2003-2015.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Errors involving <ph id="ph1">\&lt;</ph>stdint.h&gt; integral types</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">\&lt;</ph>stdint.h&gt; header defines typedefs and macros that, unlike built-in integral types, are guaranteed to have a specified length on all platforms.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>Some examples are uint32_t and int64_t.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>Visual C++ added <ph id="ph1">\&lt;</ph>stdint.h&gt; in Visual Studio 2010.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>Code that was written before 2010 might have provided private definitions for those types and those definitions might not always be consistent with the <ph id="ph1">\&lt;</ph>stdint.h&gt; definitions.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>If the error is C2371, and a stdint type is involved, it probably means that the type is defined in a header either in your code or a third-party lib file.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>When upgrading, you should eliminate any custom definitions of <ph id="ph1">\&lt;</ph>stdint.h&gt; types, but first compare the custom definitions to the current standard definitions to ensure you are not introducing new problems.</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>You can press F12 “Go to Definition” to see where the type in question is defined.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>/showIncludes<ept id="p1">](../build/reference/showincludes-list-include-files.md)</ept> compiler option can be useful here.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>In the Property Pages dialog box for your project, open the <bpt id="p1">**</bpt>C/C++<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Advanced<ept id="p2">**</ept> page and set <bpt id="p3">**</bpt>Show Includes<ept id="p3">**</ept> to “Yes”.</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>Then rebuild your project and see the list of #includes in the output window.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>Each header is indented under the header that includes it.</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Errors involving CRT functions</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Many changes have been made to the C runtime over the years.</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>Many secure versions of functions have been added, and some have been removed.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Also, as described earlier in this article, Microsoft’s implementation of the CRT was refactored in Visual Studio 2015 into new binaries and associated .lib files.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>If an error involves a CRT function, search the <bpt id="p1">[</bpt>Visual C++ change history 2003 - 2015<ept id="p1">](visual-cpp-change-history-2003-2015.md)</ept> to see if it contains any additional information.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>If the error is LNK2019, unresolved external, make sure the function has not been removed.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>Otherwise, if you are sure that the function still exists, and the calling code is correct, check to see whether your project uses /NODEFAULTLIB.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>If so you need to update the list of libraries so that the project uses the new universal (UCRT) libraries.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>See the section above on Library and dependencies for more information.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>If the error involves printf or scanf, make sure that you are not privately defining either function without including stdio.h.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>If so, either remove the private definitions or link to legacy_stdio_definitions.lib (Project &amp;#124; Properties &amp;#124; Linker &amp;#124; Linker Input).</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>If you are linking with Windows SDK 8.1 or earlier, then add legacy_stdio_definitions.lib.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>If the error involves format string arguments, this is because the compiler is stricter about enforcing the standard.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>See the change history for more information.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>Please pay close attention to any errors here because they can potentially represent a security risk.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Errors due to changes in the C++ standard</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>The C++ standard itself has evolved in ways that are not always backward compatible.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>The introduction in C++11 of move semantics, new keywords, and other language and standard library features can potentially cause compiler errors and even different runtime behavior.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>For example, an old C++ program might include the iostream.h header.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>This header was deprecated early in the history of C++ and was eventually removed completely from Visual C++.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>In this case, you will need to use <ph id="ph1">\&lt;</ph>iostream&gt; and rewrite your code.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Updating old iostreams code<ept id="p1">](porting-guide-spy-increment.md#updating_iostreams_code)</ept> in Porting Guide: Spy++.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>C4838: narrowing conversion warning</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>The C++ standard now specifies that conversions from unsigned to signed integral values are considered as narrowing conversions.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>The Visual C++ compiler did not raise this warning in earlier versions.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>You should inspect each occurrence to make sure the narrowing does not impact the correctness of your code.</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>Warnings to use secure CRT functions</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>Over the years, secure versions of C runtime functions have been introduced.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>Although the old, non-secure versions are still available, it is recommended to change your code to use the secure versions.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>The compiler will issue a warning for usage of the non-secure versions.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>You can choose to disable or ignore these warnings.</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>To disable the warning for all projects in your solution, open <bpt id="p1">**</bpt>View &amp;#124; Property Manager<ept id="p1">**</ept>, select all projects for which you want to disable the warning, then right-click on the selected items and choose <bpt id="p2">**</bpt>Properties &amp;#124; C/C++ &amp;#124; Advanced &amp;#124; Disable Specific Warnings<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Click the drop-down arrow and then click on Edit.</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Enter 4996 into the text box.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>(Don't include the 'C' prefix.) For more information, see <bpt id="p1">[</bpt>Porting to use the Secure CRT<ept id="p1">](porting-guide-spy-increment.md#porting_to_secure_crt)</ept> in Porting Guide: Spy++.</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Errors due to changes in Windows APIs or obsolete SDKs</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>Over the years, Windows APIs and data types have been added, and sometimes changed or removed.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>Also, other SDKs that did not belong to the core operating system have come and gone.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>Older programs may therefore contain calls to APIs that no longer exist.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>They may also contain calls to APIs in other Microsoft SDKs that are no longer supported.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>If you see an error involving a Windows API or an API from an older Microsoft SDK, it is possible that an API has been removed and/or superseded by a newer, more secure function.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>For more information about the current API set and the minimum supported operating systems for a specific Windows API, see <bpt id="p1">[</bpt>Windows API Index<ept id="p1">](https://msdn.microsoft.com/en-us/library/ff818516\(v=vs.85\).aspx)</ept> and navigate to the API in question.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>Windows version</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>When upgrading a program that uses the Windows API either directly or indirectly, you will need to decide the minimum Windows version to support.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>In most cases Windows 7 is a good choice.</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>For more information see <bpt id="p1">[</bpt>Header file problems<ept id="p1">](porting-guide-spy-increment.md#header_file_problems)</ept> in Porting Guide: Spy++.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>The WINVER macro defines the oldest version of Windows that your program is designed to run on.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>If your MFC program sets WINVER to 0x0501 (Windows XP) you will get a warning because MFC no longer supports XP, even though the compiler itself has an XP mode.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Updating the Target Windows Version<ept id="p1">](porting-guide-spy-increment.md#updating_winver)</ept> and <bpt id="p2">[</bpt>More outdated header files<ept id="p2">](porting-guide-spy-increment.md#outdated_header_files)</ept> in Porting Guide: Spy++.</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>ATL / MFC</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>ATL and MFC are relatively stable APIs but changes are made occasionally.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>See the <bpt id="p1">[</bpt>Visual C++ change history 2003 – 2015<ept id="p1">](visual-cpp-change-history-2003-2015.md)</ept> for more information.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>LNK 2005 _DllMain@12 already defined in MSVCRTD.lib</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>This error can occur in MFC applications.</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>It indicates an ordering issue between the CRT library and the MFC library.</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>MFC needs to be linked first so that it provides new and delete operators.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>To fix the error, use the /NODEFAULTLIB switch to Ignore these default libraries: MSVCRTD.lib and mfcs140d.lib.</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>Then add these same libs as additional dependencies.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>32 vs 64 bit</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>If your original code is compiled for 32-bit systems, you have the option of creating a 64-bit version instead of or in addition to a new 32-bit app.</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>In general, you should get your program compiling in 32-bit mode first, and then attempt 64-bit.</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>Compiling for 64-bit is straightforward, but in some cases it can reveal bugs that were hidden by 32-bit builds.</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>Also, you should be aware of possible compile-time and runtime issues relating to pointer size, time and size values, and format specifiers in printf and scanf functions.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Configuring Programs for 64-Bit (Visual C++)<ept id="p1">](../build/configuring-programs-for-64-bit-visual-cpp.md)</ept> and <bpt id="p2">[</bpt>Common Visual C++ 64-bit Migration Issues<ept id="p2">](../build/common-visual-cpp-64-bit-migration-issues.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>For additional migration tips, see <bpt id="p1">[</bpt>Programming Guide for 64-bit Windows<ept id="p1">](https://msdn.microsoft.com/library/windows/desktop/bb427430\(v=vs.85\).aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Unicode vs MBCS/ASCII</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>Before Unicode was standardized, many programs used the Multibyte Character Set (MBCS) to represent characters that were not included in the ASCII character set.</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>In older MFC projects, MBCS was the default setting, and when you upgrade such a program, you will see warnings that advise to use Unicode instead.</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>You may choose to disable or ignore the warning if you decide that converting to Unicode is not worth the development cost.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>To disable it for all projects in your solution, open <bpt id="p1">**</bpt>View &amp;#124; Property Manager<ept id="p1">**</ept>, select all projects for which you want to disable the warning, then right-click on the selected items and choose <bpt id="p2">**</bpt>Properties &amp;#124; C/C++ &amp;#124; Advanced &amp;#124; Disable Specific Warnings<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>Click the drop-down arrow and then click on Edit.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>Enter 4996 into the text box.</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>(Don't include the 'C' prefix.)</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Porting from MBCS to Unicode<ept id="p1">](porting-guide-spy-increment.md#porting_to_unicode)</ept> in Porting Guide: Spy++.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>For general information about MBCS vs. Unicode, see <bpt id="p1">[</bpt>Text and Strings in Visual C++<ept id="p1">](../text/text-and-strings-in-visual-cpp.md)</ept> and <bpt id="p2">[</bpt>Internationalization<ept id="p2">](../c-runtime-library/internationalization.md)</ept> .</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>Upgrading Projects from Earlier Versions of Visual C++</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
