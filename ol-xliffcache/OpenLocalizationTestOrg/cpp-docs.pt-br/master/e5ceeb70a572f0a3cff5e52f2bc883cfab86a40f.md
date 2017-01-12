@@ -1,43 +1,39 @@
 ---
-title: EventSource::InvokeAll Method | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- event/Microsoft::WRL::EventSource::InvokeAll
-dev_langs:
-- C++
-helpviewer_keywords:
-- InvokeAll method
+title: "EventSource::InvokeAll Method | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "event/Microsoft::WRL::EventSource::InvokeAll"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "InvokeAll method"
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
 caps.latest.revision: 7
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e5ceeb70a572f0a3cff5e52f2bc883cfab86a40f
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # EventSource::InvokeAll Method
 Calls each event handler associated with the current [EventSource](../windows/eventsource-class.md) object using the specified argument types and arguments.  
@@ -266,8 +262,3 @@ void InvokeAll(
  
  ## See Also
  [EventSource Class](../windows/eventsource-class.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

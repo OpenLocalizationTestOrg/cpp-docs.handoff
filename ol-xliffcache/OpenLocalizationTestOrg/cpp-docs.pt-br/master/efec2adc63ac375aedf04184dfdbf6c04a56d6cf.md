@@ -1,42 +1,38 @@
 ---
-title: Customizing the Header Item&#39;s Appearance | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- header controls, customization of items
-- CHeaderCtrl class, customizing the items
-- HDS_ styles
+title: "Customizing the Header Item&#39;s Appearance | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "header controls, customization of items"
+  - "CHeaderCtrl class, customizing the items"
+  - "HDS_ styles"
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: efec2adc63ac375aedf04184dfdbf6c04a56d6cf
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Customizing the Header Item&#39;s Appearance
 By setting the *dwStyle* parameter when you first create a header control ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#cheaderctrl__create)), you can define the appearance and behavior of header items or of the header control itself.  
@@ -60,10 +56,4 @@ By setting the *dwStyle* parameter when you first create a header control ([CHea
 ## See Also  
  [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
  [Controls](../mfc/controls-mfc.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

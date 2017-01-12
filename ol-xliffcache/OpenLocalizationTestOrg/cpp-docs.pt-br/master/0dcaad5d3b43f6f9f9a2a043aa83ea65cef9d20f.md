@@ -1,44 +1,40 @@
 ---
-title: Invoking Scripts | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- StringRegister
-dev_langs:
-- C++
-helpviewer_keywords:
-- StringRegister method
-- scripts, invoking registry in ATL
+title: "Invoking Scripts | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "StringRegister"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "StringRegister method"
+  - "scripts, invoking registry in ATL"
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
 caps.latest.revision: 10
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0dcaad5d3b43f6f9f9a2a043aa83ea65cef9d20f
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # Invoking Scripts
 [Using Replaceable Parameters (The Registrar's Preprocessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) discusses replacement maps and mentions the Registrar method **AddReplacement**. The Registrar has eight other methods specific to scripting, and all are described in the following table.  
@@ -60,10 +56,4 @@ ms.openlocfilehash: 0dcaad5d3b43f6f9f9a2a043aa83ea65cef9d20f
   
 ## See Also  
  [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">11cbb2c4cbb9a14e7b74eab086e316dc9e71ef13</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn061-on-notify-and-wm-notify-messages.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1cf88b8158d1702cc669db1ab7227569fa335fa5</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">5fd81c86980b0034520731a924c8ac8a2f98d46f</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN061: ON_NOTIFY and WM_NOTIFY Messages | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN061: ON_NOTIFY and WM_NOTIFY Messages</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following technical note has not been updated since it was first included in the online documentation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, some procedures and topics might be out of date or incorrect.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For the latest information, it is recommended that you search for the topic of interest in the online documentation index.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This technical note provides background information on the new <bpt id="p1">**</bpt>WM_NOTIFY<ept id="p1">**</ept> message and describes the recommended (and most common) way of handling <bpt id="p2">**</bpt>WM_NOTIFY<ept id="p2">**</ept> messages in your MFC application.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Notification Messages in Windows 3.x</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In Windows 3.x, controls notify their parents of events such as mouse clicks, changes in content and selection, and control background painting by sending a message to the parent.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Simple notifications are sent as special <bpt id="p1">**</bpt>WM_COMMAND<ept id="p1">**</ept> messages, with the notification code (such as <bpt id="p2">**</bpt>BN_CLICKED<ept id="p2">**</ept>) and control ID packed into <ph id="ph1">`wParam`</ph> and the control's handle in <ph id="ph2">`lParam`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Note that since <ph id="ph1">`wParam`</ph> and <ph id="ph2">`lParam`</ph> are full, there is no way to pass any additional data — these messages can be only simple notification.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>For instance, in the <bpt id="p1">**</bpt>BN_CLICKED<ept id="p1">**</ept> notification, there's no way to send information about the location of the mouse cursor when the button was clicked.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>When controls in Windows 3.x need to send a notification message that includes additional data, they use a variety of special-purpose messages, including <ph id="ph1">`WM_CTLCOLOR`</ph>, <ph id="ph2">`WM_VSCROLL`</ph>, <ph id="ph3">`WM_HSCROLL`</ph>, <ph id="ph4">`WM_DRAWITEM`</ph>, <ph id="ph5">`WM_MEASUREITEM`</ph>, <ph id="ph6">`WM_COMPAREITEM`</ph>, <ph id="ph7">`WM_DELETEITEM`</ph>, <ph id="ph8">`WM_CHARTOITEM`</ph>, <ph id="ph9">`WM_VKEYTOITEM`</ph>, and so on.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>These messages can be reflected back to the control that sent them.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>TN062: Message Reflection for Windows Controls<ept id="p1">](../mfc/tn062-message-reflection-for-windows-controls.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Notification Messages in Win32</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>For controls that existed in Windows 3.1, the Win32 API uses most of the notification messages that were used in Windows 3.x.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>However, Win32 also adds a number of sophisticated, complex controls to those supported in Windows 3.x.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Frequently, these controls need to send additional data with their notification messages.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Rather than adding a new <bpt id="p1">**</bpt>WM_<ph id="ph1">\*</ph><ept id="p1">**</ept> message for each new notification that needs additional data, the designers of the Win32 API chose to add just one message, <bpt id="p2">**</bpt>WM_NOTIFY<ept id="p2">**</ept>, which can pass any amount of additional data in a standardized fashion.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>WM_NOTIFY<ept id="p1">**</ept> messages contain the ID of the control sending the message in <ph id="ph1">`wParam`</ph> and a pointer to a structure in <ph id="ph2">`lParam`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>This structure is either an <bpt id="p1">**</bpt>NMHDR<ept id="p1">**</ept> structure or some larger structure that has an <bpt id="p2">**</bpt>NMHDR<ept id="p2">**</ept> structure as its first member.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Note that since the <bpt id="p1">**</bpt>NMHDR<ept id="p1">**</ept> member is first, a pointer to this structure can be used as either a pointer to an <bpt id="p2">**</bpt>NMHDR<ept id="p2">**</ept> or as a pointer to the larger structure depending on how you cast it.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In most cases, the pointer will point to a larger structure and you'll need to cast it when you use it.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In only a few notifications, such as the common notifications (whose names start with <bpt id="p1">**</bpt>NM_<ept id="p1">**</ept>) and the tool tip control's <bpt id="p2">**</bpt>TTN_SHOW<ept id="p2">**</ept> and <bpt id="p3">**</bpt>TTN_POP<ept id="p3">**</ept> notifications, is an <bpt id="p4">**</bpt>NMHDR<ept id="p4">**</ept> structure actually used.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>NMHDR<ept id="p1">**</ept> structure or initial member contains the handle and ID of the control sending the message and the notification code (such as <bpt id="p2">**</bpt>TTN_SHOW<ept id="p2">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The format of the <bpt id="p1">**</bpt>NMHDR<ept id="p1">**</ept> structure is shown below:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>For a <bpt id="p1">**</bpt>TTN_SHOW<ept id="p1">**</ept> message, the <bpt id="p2">**</bpt>code<ept id="p2">**</ept> member would be set to <bpt id="p3">**</bpt>TTN_SHOW<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Most notifications pass a pointer to a larger structure that contains an <bpt id="p1">**</bpt>NMHDR<ept id="p1">**</ept> structure as its first member.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>For instance, consider the structure used by the list view control's <bpt id="p1">**</bpt>LVN_KEYDOWN<ept id="p1">**</ept> notification message, which is sent when a key is pressed in a list view control.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>The pointer points to an <bpt id="p1">**</bpt>LV_KEYDOWN<ept id="p1">**</ept> structure, which is defined as shown below:</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Note that since the <bpt id="p1">**</bpt>NMHDR<ept id="p1">**</ept> member is first in this structure, the pointer you're passed in the notification message can be cast to either a pointer to an <bpt id="p2">**</bpt>NMHDR<ept id="p2">**</ept> or a pointer to an <bpt id="p3">**</bpt>LV_KEYDOWN<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Notifications Common to All New Windows Controls</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Some notifications are common to all of the new Windows controls.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>These notifications pass a pointer to an <bpt id="p1">**</bpt>NMHDR<ept id="p1">**</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Notification code</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Sent because</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>NM_CLICK</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>User clicked left mouse button in the control</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>NM_DBLCLK</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>User double-clicked left mouse button in the control</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>NM_RCLICK</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>User clicked right mouse button in the control</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>NM_RDBLCLK</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>User double-clicked right mouse button in the control</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>NM_RETURN</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>User pressed the ENTER key while control has input focus</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>NM_SETFOCUS</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Control has been given input focus</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>NM_KILLFOCUS</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Control has lost input focus</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>NM_OUTOFMEMORY</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Control could not complete an operation because there was not enough memory available</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>ON_NOTIFY: Handling WM_NOTIFY Messages in MFC Applications</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The function <ph id="ph1">`CWnd::OnNotify`</ph> handles notification messages.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Its default implementation checks the message map for notification handlers to call.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>In general, you do not override <ph id="ph1">`OnNotify`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Instead, you provide a handler function and add a message-map entry for that handler to the message map of your owner window's class.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>ClassWizard, via the ClassWizard property sheet, can create the <ph id="ph1">`ON_NOTIFY`</ph> message-map entry and provide you with a skeleton handler function.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>For more information on using ClassWizard to make this easier, see <bpt id="p1">[</bpt>Mapping Messages to Functions<ept id="p1">](../mfc/reference/mapping-messages-to-functions.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`ON_NOTIFY`</ph> message-map macro has the following syntax:</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>where the italicized parameters are replaced with:</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>The code for the notification message to be handled, such as <bpt id="p1">**</bpt>LVN_KEYDOWN<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The child identifier of the control for which the notification is sent.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The member function to be called when this notification is sent.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Your member function must be declared with the following prototype:</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>where the italicized parameters are:</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>A pointer to the notification structure, as described in the section above.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>result</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>A pointer to the result code you'll set before you return.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>To specify that you want the member function <ph id="ph1">`OnKeydownList1`</ph> to handle <bpt id="p1">**</bpt>LVN_KEYDOWN<ept id="p1">**</ept> messages from the <ph id="ph2">`CListCtrl`</ph> whose ID is <ph id="ph3">`IDC_LIST1`</ph>, you would use ClassWizard to add the following to your message map:</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>In the example above, the function provided by ClassWizard is:</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>Note that ClassWizard provides a pointer of the proper type automatically.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>You can access the notification structure through either <ph id="ph1">`pNMHDR`</ph> or <ph id="ph2">`pLVKeyDow`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>ON_NOTIFY_RANGE</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>If you need to process the same <bpt id="p1">**</bpt>WM_NOTIFY<ept id="p1">**</ept> message for a set of controls, you can use <bpt id="p2">**</bpt>ON_NOTIFY_RANGE<ept id="p2">**</ept> rather than <ph id="ph1">`ON_NOTIFY`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>For instance, you may have a set of buttons for which you want to perform the same action for a certain notification message.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>When you use <bpt id="p1">**</bpt>ON_NOTIFY_RANGE<ept id="p1">**</ept>, you specify a contiguous range of child identifiers for which to handle the notification message by specifying the beginning and ending child identifiers of the range.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>ClassWizard does not handle <bpt id="p1">**</bpt>ON_NOTIFY_RANGE<ept id="p1">**</ept>; to use it, you need to edit your message map yourself.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The message-map entry and function prototype for <bpt id="p1">**</bpt>ON_NOTIFY_RANGE<ept id="p1">**</ept> are as follows:</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>where the italicized parameters are replaced with:</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The code for the notification message to be handled, such as <bpt id="p1">**</bpt>LVN_KEYDOWN<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The first identifier in the contiguous range of identifiers.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>The last identifier in the contiguous range of identifiers.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>The member function to be called when this notification is sent.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Your member function must be declared with the following prototype:</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>where the italicized parameters are:</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The child identifier of the control that sent the notification.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>A pointer to the notification structure, as described above.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>result</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>A pointer to the result code you'll set before you return.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>If you want more than one object in the notification routing to handle a message, you can use <bpt id="p1">**</bpt>ON_NOTIFY_EX<ept id="p1">**</ept> (or <bpt id="p2">**</bpt>ON_NOTIFY_EX_RANGE<ept id="p2">**</ept>) rather than <ph id="ph1">`ON_NOTIFY`</ph> (or <bpt id="p3">**</bpt>ON_NOTIFY_RANGE<ept id="p3">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The only difference between the <bpt id="p1">**</bpt>EX<ept id="p1">**</ept> version and the regular version is that the member function called for the <bpt id="p2">**</bpt>EX<ept id="p2">**</ept> version returns a <bpt id="p3">**</bpt>BOOL<ept id="p3">**</ept> that indicates whether or not message processing should continue.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Returning <bpt id="p1">**</bpt>FALSE<ept id="p1">**</ept> from this function allows you to process the same message in more than one object.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>ClassWizard does not handle <bpt id="p1">**</bpt>ON_NOTIFY_EX<ept id="p1">**</ept> or <bpt id="p2">**</bpt>ON_NOTIFY_EX_RANGE<ept id="p2">**</ept>; if you want to use either of them, you need to edit your message map yourself.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The message-map entry and function prototype for <bpt id="p1">**</bpt>ON_NOTIFY_EX<ept id="p1">**</ept> and <bpt id="p2">**</bpt>ON_NOTIFY_EX_RANGE<ept id="p2">**</ept> are as follows.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>The meanings of the parameters are the same as for the non-<bpt id="p1">**</bpt>EX<ept id="p1">**</ept> versions.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The prototype for both of the above is the same:</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>In both cases, <ph id="ph1">`id`</ph> holds the child identifier of the control that sent the notification.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>Your function must return <bpt id="p1">**</bpt>TRUE<ept id="p1">**</ept> if the notification message has been completely handled or <bpt id="p2">**</bpt>FALSE<ept id="p2">**</ept> if other objects in the command routing should have a chance to handle the message.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,47 +1,43 @@
 ---
-title: CTypedPtrList Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CTypedPtrList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CTypedPtrList class
-- type-safe collections
-- lists [C++]
-- template classes, CTypedPtrList class
-- linked lists [C++]
-- pointer lists
+title: "CTypedPtrList Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CTypedPtrList"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CTypedPtrList class"
+  - "type-safe collections"
+  - "lists [C++]"
+  - "template classes, CTypedPtrList class"
+  - "linked lists [C++]"
+  - "pointer lists"
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
 caps.latest.revision: 24
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 883eb26fac9c93febce3f438cabad82d15d5c00b
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CTypedPtrList Class
 Provides a type-safe "wrapper" for objects of class `CPtrList`.  
@@ -376,9 +372,3 @@ void SetAt(
  [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CPtrList Class](../../mfc/reference/cptrlist-class.md)   
  [CObList Class](../../mfc/reference/coblist-class.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

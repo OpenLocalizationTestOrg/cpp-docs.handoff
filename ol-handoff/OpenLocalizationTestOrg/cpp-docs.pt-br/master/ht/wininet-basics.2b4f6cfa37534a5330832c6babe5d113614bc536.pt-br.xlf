@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pt-br">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c1fcdc0bd497ea24be224772a22d793cc4173755</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\wininet-basics.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">80f157a181b355cbf641853278738e5ddfc480e2</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">17695620164165886bd06af04a40ed32915b9adc</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>WinInet Basics | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>WinInet Basics</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>You can use WinInet to add FTP support to download and upload files from within your application.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>You can override <bpt id="p1">[</bpt>OnStatusCallback<ept id="p1">](../mfc/reference/cinternetsession-class.md#cinternetsession__onstatuscallback)</ept> and use the <ph id="ph1">`dwContext`</ph> parameter to provide progress information to users as you search for and download files.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This article contains the following topics:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Create a Very Simple Browser</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Download a Web Page</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>FTP a File</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Retrieve a Gopher Directory</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Display Progress Information While Transferring Files</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The code excerpts below demonstrate how to create a simple browser, download a Web page, FTP a file, and search for a gopher file.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>They are not meant as complete examples and not all contain exception handling.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>For additional information on WinInet, see <bpt id="p1">[</bpt>Win32 Internet Extensions (WinInet)<ept id="p1">](../mfc/win32-internet-extensions-wininet.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Create a Very Simple Browser</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>NVC_MFCWinInet#1</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Download a Web Page</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>NVC_MFCWinInet#2</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>FTP a File</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>NVC_MFCWinInet#3</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Retrieve a Gopher Directory</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>NVC_MFCWinInet#4</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Use OnStatusCallback</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>When using the WinInet classes, you can use the <bpt id="p1">[</bpt>OnStatusCallback<ept id="p1">](../mfc/reference/cinternetsession-class.md#cinternetsession__onstatuscallback)</ept> member of your application's <bpt id="p2">[</bpt>CInternetSession<ept id="p2">](../mfc/reference/cinternetsession-class.md)</ept> object to retrieve status information.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>If you derive your own <ph id="ph1">`CInternetSession`</ph> object, override <ph id="ph2">`OnStatusCallback`</ph>, and enable status callbacks, MFC will call your <ph id="ph3">`OnStatusCallback`</ph> function with progress information about all the activity in that Internet session.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Because a single session might support several connections (which, over their lifetime, might perform many different distinct operations), <ph id="ph1">`OnStatusCallback`</ph> needs a mechanism to identify each status change with a particular connection or transaction.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>That mechanism is provided by the context ID parameter given to many of the member functions in the WinInet support classes.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>This parameter is always of type <ph id="ph1">`DWORD`</ph> and is always named <ph id="ph2">`dwContext`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The context assigned to a particular Internet object is used only to identify the activity the object causes in the <ph id="ph1">`OnStatusCallback`</ph> member of the <ph id="ph2">`CInternetSession`</ph> object.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The call to <ph id="ph1">`OnStatusCallback`</ph> receives several parameters; these parameters work together to tell your application what progress has been made for which transaction and connection.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>When you create a <ph id="ph1">`CInternetSession`</ph> object, you can specify a <ph id="ph2">`dwContext`</ph> parameter to the constructor.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>itself doesn't use the context ID; instead, it passes the context ID on to any <bpt id="p1">**</bpt>InternetConnection<ept id="p1">**</ept>-derived objects that don't explicitly get a context ID of their own.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>In turn, those <ph id="ph1">`CInternetConnection`</ph> objects will pass the context ID along to <ph id="ph2">`CInternetFile`</ph> objects they create if you don't explicitly specify a different context ID.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>If, on the other hand, you do specify a specific context ID of your own, the object and any work it does will be associated with that context ID.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>You can use the context IDs to identify what status information is being given to you in your <ph id="ph1">`OnStatusCallback`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Display Progress Information While Transferring Files</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>For example, if you write an application that creates a connection with an FTP server to read a file and also connects to an HTTP server to get a Web page, you'll have a <ph id="ph1">`CInternetSession`</ph> object, two <ph id="ph2">`CInternetConnection`</ph> objects (one would be a <bpt id="p1">**</bpt>CFtpSession<ept id="p1">**</ept> and the other would be a <bpt id="p2">**</bpt>CHttpSession<ept id="p2">**</ept>), and two <ph id="ph3">`CInternetFile`</ph> objects (one for each connection).</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If you used default values for the <ph id="ph1">`dwContext`</ph> parameters, you would not be able to distinguish between the <ph id="ph2">`OnStatusCallback`</ph> invocations that indicate progress for the FTP connection and the invocations that indicate progress for the HTTP connection.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>If you specify a <ph id="ph1">`dwContext`</ph> ID, which you can later test for in <ph id="ph2">`OnStatusCallback`</ph>, you will know which operation generated the callback.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>MFC Internet Programming Basics</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Win32 Internet Extensions (WinInet)</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

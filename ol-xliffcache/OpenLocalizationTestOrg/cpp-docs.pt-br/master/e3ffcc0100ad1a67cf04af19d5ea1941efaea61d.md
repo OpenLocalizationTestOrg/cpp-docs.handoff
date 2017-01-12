@@ -1,42 +1,38 @@
 ---
-title: DRAWITEMSTRUCT Structure | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DRAWITEMSTRUCT
-dev_langs:
-- C++
-helpviewer_keywords:
-- DRAWITEMSTRUCT structure
+title: "DRAWITEMSTRUCT Structure | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DRAWITEMSTRUCT"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "DRAWITEMSTRUCT structure"
 ms.assetid: ba9ef1d4-aebb-45e9-b956-4b81a02e50f7
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: bab0fc336db7298de42d9cb302039a6eb2c5827e
-ms.openlocfilehash: e3ffcc0100ad1a67cf04af19d5ea1941efaea61d
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # DRAWITEMSTRUCT Structure
 The `DRAWITEMSTRUCT` structure provides information the owner window must have to determine how to paint an owner-drawn control or menu item.  
@@ -144,10 +140,4 @@ typedef struct tagDRAWITEMSTRUCT {
 ## See Also  
  [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#cwnd__ondrawitem)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

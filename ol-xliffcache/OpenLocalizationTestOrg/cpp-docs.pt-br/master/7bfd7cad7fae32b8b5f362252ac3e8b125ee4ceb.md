@@ -1,42 +1,38 @@
 ---
-title: MFC Classes | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC, classes
-- classes [C++], MFC
+title: "MFC Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "MFC, classes"
+  - "classes [C++], MFC"
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
 caps.latest.revision: 33
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 7bfd7cad7fae32b8b5f362252ac3e8b125ee4ceb
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # MFC Classes
 The classes in the following list are included in the Microsoft Foundation Class (MFC) Library.  
@@ -1330,11 +1326,5 @@ The classes in the following list are included in the Microsoft Foundation Class
  [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)  
  Contains links to topics about the classes, global functions, global variables, and macros that make up the MFC Library.
 
-
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 
