@@ -1,39 +1,43 @@
 ---
-title: "Adding, Editing, or Deleting Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, creating controls"
-  - "dialog box controls, adding to dialog boxes"
-  - "controls [C++], adding to dialog boxes"
+title: Adding, Editing, or Deleting Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+- C++
+helpviewer_keywords:
+- Dialog editor, creating controls
+- dialog box controls, adding to dialog boxes
+- controls [C++], adding to dialog boxes
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 04bb40d8ccdf3d86dab8dc9b9e5e88d9dd547b6f
+
 ---
 # Adding, Editing, or Deleting Controls
 Using the Dialog editor, you can add, resize, edit, and delete controls in dialog boxes. You can also edit the properties of a control, such as its ID, or whether it is initially visible at run time.  
@@ -63,4 +67,10 @@ Using the Dialog editor, you can add, resize, edit, and delete controls in dialo
  [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
  [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
  [Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)
+
+
+
+
+<!--HONumber=Jan17_HO2-->
+
 

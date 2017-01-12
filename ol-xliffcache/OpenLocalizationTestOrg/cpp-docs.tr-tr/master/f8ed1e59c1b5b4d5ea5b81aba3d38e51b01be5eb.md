@@ -1,77 +1,81 @@
 ---
-title: "atol, _atol_l, _wtol, _wtol_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atol"
-  - "_wtol_l"
-  - "_wtol"
-  - "_atol_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_atol_l"
-  - "_ttol_l"
-  - "_tstol_l"
-  - "_tstol"
-  - "_wtol"
-  - "_ttol"
-  - "_wtol_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "tstol function"
-  - "atol function"
-  - "ttol function"
-  - "_atol_l function"
-  - "_tstol_l function"
-  - "string conversion, to integers"
-  - "_tstol function"
-  - "_ttol function"
-  - "_ttol_l function"
-  - "atol_l function"
-  - "wtol_l function"
-  - "_wtol_l function"
-  - "wtol function"
-  - "_wtol function"
+title: atol, _atol_l, _wtol, _wtol_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atol
+- _wtol_l
+- _wtol
+- _atol_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _atol_l
+- _ttol_l
+- _tstol_l
+- _tstol
+- _wtol
+- _ttol
+- _wtol_l
+dev_langs:
+- C++
+- C
+helpviewer_keywords:
+- tstol function
+- atol function
+- ttol function
+- _atol_l function
+- _tstol_l function
+- string conversion, to integers
+- _tstol function
+- _ttol function
+- _ttol_l function
+- atol_l function
+- wtol_l function
+- _wtol_l function
+- wtol function
+- _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f8ed1e59c1b5b4d5ea5b81aba3d38e51b01be5eb
+
 ---
 # atol, _atol_l, _wtol, _wtol_l
 Convert a string to a long integer.  
@@ -199,3 +203,8 @@ Overflow condition occurred.
  [_gcvt](../../c-runtime-library/reference/gcvt.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

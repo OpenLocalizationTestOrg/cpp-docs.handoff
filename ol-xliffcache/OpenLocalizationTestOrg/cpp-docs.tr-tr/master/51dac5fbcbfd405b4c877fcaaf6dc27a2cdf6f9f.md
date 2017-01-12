@@ -1,39 +1,43 @@
 ---
-title: "DUMPBIN Options | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "dumpbin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DUMPBIN program, options"
+title: DUMPBIN Options | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- dumpbin
+dev_langs:
+- C++
+helpviewer_keywords:
+- DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 51dac5fbcbfd405b4c877fcaaf6dc27a2cdf6f9f
+
 ---
 # DUMPBIN Options
 An option consists of an option specifier, which is either a dash ( – ) or a forward slash (/), followed by the name of the option. Option names cannot be abbreviated. Some options take arguments, specified after a colon (:). No spaces or tabs are allowed within an option specification. Use one or more spaces or tabs to separate option specifications on the command line. Option names and their keyword or file name arguments are not case sensitive. Most options apply to all binary files; a few apply only to certain types of files. By default, DUMPBIN sends information to standard output. Use the [/OUT](../../build/reference/out-dumpbin.md) option to send output to a file.  
@@ -91,3 +95,8 @@ An option consists of an option specifier, which is either a dash ( – ) or a f
 ## See Also  
  [C/C++ Build Tools](../../build/reference/c-cpp-build-tools.md)   
  [DUMPBIN Reference](../../build/reference/dumpbin-reference.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+
