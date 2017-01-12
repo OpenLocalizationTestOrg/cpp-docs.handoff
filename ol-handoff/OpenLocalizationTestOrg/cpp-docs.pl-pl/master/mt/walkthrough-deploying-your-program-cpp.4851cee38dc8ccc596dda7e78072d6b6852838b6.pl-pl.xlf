@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a9e74336e581636fb0783734ee1bd6d6f682fe5e</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\ide\walkthrough-deploying-your-program-cpp.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cbe815357856adfe80b5d50fc6b74ac473268bf0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2861ce9c162a26ad8127fee4565510f5f80aa819</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Deploying Your Program (C++) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Deploying Your Program (C++)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Now that you've created your application by completing the earlier related walkthroughs, which are listed in <bpt id="p1">[</bpt>Using the Visual Studio IDE for C++ Desktop Development<ept id="p1">](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)</ept>, the last step is to create an installer so that other users can install the program on their computers.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>To do this, you'll add a new project to your existing solution.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>The output of this new project is a setup.exe file that will install your app on another computer.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This walkthrough shows how to use Windows Installer to deploy your application.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You can also use ClickOnce to deploy an application.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>ClickOnce Deployment for Visual C++ Applications<ept id="p1">](../ide/clickonce-deployment-for-visual-cpp-applications.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For more information about deployment in general, see <bpt id="p1">[</bpt>Deploying Applications, Services, and Components<ept id="p1">](/visualstudio/deployment/deploying-applications-services-and-components)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>This walkthrough assumes that you understand the fundamentals of the C++ language.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>It also assumes that you have completed the earlier related walkthroughs that are listed in <bpt id="p1">[</bpt>Using the Visual Studio IDE for C++ Desktop Development<ept id="p1">](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This walkthrough cannot be completed in Express editions of Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>If you haven’t already done so, download InstallShield Limited Edition (ISLE), as described in the steps later in this article.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>ISLE is free for Visual Studio developers and replaces the functionality of the setup and deployment project templates in earlier editions of Visual Studio.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>To install the ISLE setup and deployment project template</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>When you are connected to the Internet, on the menu bar, choose <bpt id="p1">**</bpt>File<ept id="p1">**</ept>, <bpt id="p2">**</bpt>New<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Project<ept id="p3">**</ept> to open the <bpt id="p4">**</bpt>New Project<ept id="p4">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>In the left pane of the dialog box, expand the <bpt id="p1">**</bpt>Installed<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Templates<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>Other Project Types<ept id="p3">**</ept> nodes, and then select <bpt id="p4">**</bpt>Setup and Deployment<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>In the center pane, select <bpt id="p1">**</bpt>Enable InstallShield Limited Edition<ept id="p1">**</ept> and then choose the <bpt id="p2">**</bpt>OK<ept id="p2">**</ept> button.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Follow the instructions to install InstallShield Limited Edition for Visual Studio (ISLE).</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>After you have downloaded, installed, and activated ISLE, close Visual Studio and re-open it.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>On the menu bar, choose <bpt id="p1">**</bpt>File<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Recent Projects and Solutions<ept id="p2">**</ept>, and then choose the <bpt id="p3">**</bpt>Game<ept id="p3">**</ept> solution to reopen it.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>To create a setup project and install your program</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Change the active solution configuration to Release.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>On the menu bar, choose <bpt id="p1">**</bpt>Build<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Configuration Manager<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Configuration Manager<ept id="p1">**</ept> dialog box, on the <bpt id="p2">**</bpt>Active solution configuration<ept id="p2">**</ept> drop-down list, select <bpt id="p3">**</bpt>Release<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Choose the <bpt id="p1">**</bpt>Close<ept id="p1">**</ept> button to save the configuration.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>On the menu bar, choose <bpt id="p1">**</bpt>File<ept id="p1">**</ept>, <bpt id="p2">**</bpt>New<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Project<ept id="p3">**</ept> to open the <bpt id="p4">**</bpt>New Project<ept id="p4">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>In the left pane of the dialog box, expand the <bpt id="p1">**</bpt>Installed<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Templates<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>Other Project Types<ept id="p3">**</ept> nodes, and then select <bpt id="p4">**</bpt>Setup and Deployment<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>In the center pane, select <bpt id="p1">**</bpt>InstallShield Limited Edition Project<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Enter a name for the setup project in the <bpt id="p1">**</bpt>Name<ept id="p1">**</ept> box.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>For this example, enter <bpt id="p1">**</bpt>Game Installer<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Solution<ept id="p1">**</ept> drop-down list, select <bpt id="p2">**</bpt>Add to solution<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Choose the <bpt id="p1">**</bpt>OK<ept id="p1">**</ept> button to create the setup project.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>Project Assistant (Game Installer)<ept id="p1">**</ept> tab opens in the editor window.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>At the bottom of the <bpt id="p1">**</bpt>Project Assistant (Game Installer)<ept id="p1">**</ept> tab, choose the <bpt id="p2">**</bpt>Application Information<ept id="p2">**</ept> link.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Application Information<ept id="p1">**</ept> page, specify your company name as you want it to appear in the installer.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You can use your own company name, or for this example, use <bpt id="p1">**</bpt>Contoso<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Specify your application name; in this example, specify <bpt id="p1">**</bpt>Game<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Specify your company web address, or for this example, use <bpt id="p1">**</bpt>http://www.contoso.com<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>At the bottom of the <bpt id="p1">**</bpt>Project Assistant (Game Installer)<ept id="p1">**</ept> tab, choose the <bpt id="p2">**</bpt>Installation Interview<ept id="p2">**</ept> link.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Installation Interview<ept id="p1">**</ept> page, under <bpt id="p2">**</bpt>Do you want to display a License Agreement Dialog<ept id="p2">**</ept>, select the <bpt id="p3">**</bpt>No<ept id="p3">**</ept> option button.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Under <bpt id="p1">**</bpt>Do you want to prompt users to enter their Company Name and User Name<ept id="p1">**</ept>, select the <bpt id="p2">**</bpt>No<ept id="p2">**</ept> option button.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept>, expand the <bpt id="p2">**</bpt>Game Installer<ept id="p2">**</ept> project, expand the <bpt id="p3">**</bpt>Organize Your Setup<ept id="p3">**</ept> node, and then open the <bpt id="p4">**</bpt>General Information<ept id="p4">**</ept> page.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>General Information (Game Installer)<ept id="p1">**</ept> tab in the editor window, specify a <bpt id="p2">**</bpt>Tag Creator ID<ept id="p2">**</ept>, for example, <bpt id="p3">**</bpt>regid.2012-12.com.Contoso<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept>, under the <bpt id="p2">**</bpt>Game Installer<ept id="p2">**</ept> project, expand the <bpt id="p3">**</bpt>Specify Application Data<ept id="p3">**</ept> node, and then open the <bpt id="p4">**</bpt>Files<ept id="p4">**</ept> page.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Files (Game Installer)<ept id="p1">**</ept> tab in the editor window, under <bpt id="p2">**</bpt>Source computer’s files<ept id="p2">**</ept>, open the shortcut menu for <bpt id="p3">**</bpt>Primary Output From Game<ept id="p3">**</ept> and choose <bpt id="p4">**</bpt>Copy<ept id="p4">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Open a shortcut menu in the space under the <bpt id="p1">**</bpt>Name<ept id="p1">**</ept> column in <bpt id="p2">**</bpt>Destination computer’s files<ept id="p2">**</ept>, and choose <bpt id="p3">**</bpt>Paste<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>A new item named <bpt id="p1">**</bpt>Game.Primary Output<ept id="p1">**</ept> appears.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>In <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept>, under the <bpt id="p2">**</bpt>Specify Application Data<ept id="p2">**</ept> node, open the <bpt id="p3">**</bpt>Redistributables<ept id="p3">**</ept> page.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>On the <bpt id="p1">**</bpt>Redistributables (Game Installer)<ept id="p1">**</ept> tab in the editor window, select the <bpt id="p2">**</bpt>Visual C++ 11.0 CRT (x86)<ept id="p2">**</ept> check box.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>On the menu bar, choose <bpt id="p1">**</bpt>Build<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Build Solution<ept id="p2">**</ept> to build the Game project and the Game Installer project.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>In the solution folder, locate the setup.exe program that was built from the Game Installer project, and then run it to install the Game application on your computer.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>You can copy this file to install the application and its required library files on another computer.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>You can set many options in the setup project to suit your requirements.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For more information, in <bpt id="p1">**</bpt>Solution Explorer<ept id="p1">**</ept>, under the <bpt id="p2">**</bpt>Game Installer<ept id="p2">**</ept> project, open the <bpt id="p3">**</bpt>Getting Started<ept id="p3">**</ept> page and then choose the F1 key to open the ISLE help library.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Next Steps</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Previous:<ept id="p1">**</ept> <bpt id="p2">[</bpt>Walkthrough: Debugging a Project (C++)<ept id="p2">](../ide/walkthrough-debugging-a-project-cpp.md)</ept></source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>Visual C++ Guided Tour</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Deploying Desktop Applications</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,48 +1,44 @@
 ---
-title: CFieldExchange Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CFieldExchange
-dev_langs:
-- C++
-helpviewer_keywords:
-- enum FieldType, CFieldExchange
-- RFX (record field exchange) [C++]
-- RFX (record field exchange) [C++], classes for
-- CFieldExchange class
-- FieldType enumeration
-- data types [C++], custom
-- enum FieldType
+title: "CFieldExchange Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CFieldExchange"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "enum FieldType, CFieldExchange"
+  - "RFX (record field exchange) [C++]"
+  - "RFX (record field exchange) [C++], classes for"
+  - "CFieldExchange class"
+  - "FieldType enumeration"
+  - "data types [C++], custom"
+  - "enum FieldType"
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
 caps.latest.revision: 24
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 560fb1fdafe7149a2bb5fbc9b9b163325cdfeb3b
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CFieldExchange Class
 Supports the record field exchange (RFX) and bulk record field exchange (Bulk RFX) routines used by the database classes.  
@@ -150,9 +146,3 @@ void SetFieldType(UINT nFieldType);
 ## See Also  
  [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CRecordset Class](../../mfc/reference/crecordset-class.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

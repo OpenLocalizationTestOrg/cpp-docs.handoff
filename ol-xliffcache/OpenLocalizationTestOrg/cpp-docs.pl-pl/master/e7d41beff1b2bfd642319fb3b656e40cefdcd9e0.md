@@ -1,43 +1,39 @@
 ---
-title: 'How to: Provide Work Functions to the call and transformer Classes | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- call class, example
-- using the transformer class [Concurrency Runtime]
-- using the call class [Concurrency Runtime]
+title: "How to: Provide Work Functions to the call and transformer Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "call class, example"
+  - "using the transformer class [Concurrency Runtime]"
+  - "using the call class [Concurrency Runtime]"
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
 caps.latest.revision: 15
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: ef43c6d070fbfa9acc9ae75e2b81b031cb76942a
-ms.openlocfilehash: e7d41beff1b2bfd642319fb3b656e40cefdcd9e0
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # How to: Provide Work Functions to the call and transformer Classes
 This topic illustrates several ways to provide work functions to the [concurrency::call](../../parallel/concrt/reference/call-class.md) and [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) classes.  
@@ -86,9 +82,3 @@ This topic illustrates several ways to provide work functions to the [concurrenc
  [How to: Use transformer in a Data Pipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)   
  [call Class](../../parallel/concrt/reference/call-class.md)   
  [transformer Class](../../parallel/concrt/reference/transformer-class.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

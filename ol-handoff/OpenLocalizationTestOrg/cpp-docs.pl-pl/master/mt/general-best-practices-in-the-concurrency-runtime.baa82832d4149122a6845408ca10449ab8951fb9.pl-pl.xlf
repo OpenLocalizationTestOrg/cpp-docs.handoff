@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">39d362dee487f006276dc505fb7b68fce3b67ee4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\general-best-practices-in-the-concurrency-runtime.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">b07846ced31e42c5f3a088aa7adbfbbc535b5758</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ef46b317b2543e9dc7593e12b18d7f7f0a34e90e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>General Best Practices in the Concurrency Runtime | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>General Best Practices in the Concurrency Runtime</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This document describes best practices that apply to multiple areas of the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Sections</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>This document contains the following sections:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Use Cooperative Synchronization Constructs When Possible</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Avoid Lengthy Tasks That Do Not Yield</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Use Oversubscription to Offset Operations That Block or Have High Latency</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Use Concurrent Memory Management Functions When Possible</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Use RAII to Manage the Lifetime of Concurrency Objects</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Do Not Create Concurrency Objects at Global Scope</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Do Not Use Concurrency Objects in Shared Data Segments</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Use Cooperative Synchronization Constructs When Possible</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime provides many concurrency-safe constructs that do not require an external synchronization object.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>For example, the <bpt id="p1">[</bpt>concurrency::concurrent_vector<ept id="p1">](../../parallel/concrt/reference/concurrent-vector-class.md)</ept> class provides concurrency-safe append and element access operations.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>However, for cases where you require exclusive access to a resource, the runtime provides the <bpt id="p1">[</bpt>concurrency::critical_section<ept id="p1">](../../parallel/concrt/reference/critical-section-class.md)</ept>, <bpt id="p2">[</bpt>concurrency::reader_writer_lock<ept id="p2">](../../parallel/concrt/reference/reader-writer-lock-class.md)</ept>, and <bpt id="p3">[</bpt>concurrency::event<ept id="p3">](../../parallel/concrt/reference/event-class.md)</ept> classes.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>These types behave cooperatively; therefore, the task scheduler can reallocate processing resources to another context as the first task waits for data.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>When possible, use these synchronization types instead of other synchronization mechanisms, such as those provided by the Windows API, which do not behave cooperatively.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>For more information about these synchronization types and a code example, see <bpt id="p1">[</bpt>Synchronization Data Structures<ept id="p1">](../../parallel/concrt/synchronization-data-structures.md)</ept> and <bpt id="p2">[</bpt>Comparing Synchronization Data Structures to the Windows API<ept id="p2">](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Avoid Lengthy Tasks That Do Not Yield</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Because the task scheduler behaves cooperatively, it does not provide fairness among tasks.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Therefore, a task can prevent other tasks from starting.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Although this is acceptable in some cases, in other cases this can cause deadlock or starvation.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The following example performs more tasks than the number of allocated processing resources.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The first task does not yield to the task scheduler and therefore the second task does not start until the first task finishes.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-tasks#1</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>This example produces the following output:</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>There are several ways to enable cooperation between the two tasks.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>One way is to occasionally yield to the task scheduler in a long-running task.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The following example modifies the <ph id="ph1">`task`</ph> function to call the <bpt id="p1">[</bpt>concurrency::Context::Yield<ept id="p1">](reference/context-class.md#yield)</ept> method to yield execution to the task scheduler so that another task can run.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>concrt-cooperative-tasks#2</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>This example produces the following output:</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Context::Yield`</ph> method yields only another active thread on the scheduler to which the current thread belongs, a lightweight task, or another operating system thread.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This method does not yield to work that is scheduled to run in a <bpt id="p1">[</bpt>concurrency::task_group<ept id="p1">](reference/task-group-class.md)</ept> or <bpt id="p2">[</bpt>concurrency::structured_task_group<ept id="p2">](../../parallel/concrt/reference/structured-task-group-class.md)</ept> object but has not yet started.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>There are other ways to enable cooperation among long-running tasks.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>You can break a large task into smaller subtasks.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>You can also enable oversubscription during a lengthy task.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Oversubscription lets you create more threads than the available number of hardware threads.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Oversubscription is especially useful when a lengthy task contains a high amount of latency, for example, reading data from disk or from a network connection.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>For more information about lightweight tasks and oversubscription, see <bpt id="p1">[</bpt>Task Scheduler<ept id="p1">](../../parallel/concrt/task-scheduler-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Use Oversubscription to Offset Operations That Block or Have High Latency</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime provides synchronization primitives, such as <bpt id="p1">[</bpt>concurrency::critical_section<ept id="p1">](../../parallel/concrt/reference/critical-section-class.md)</ept>, that enable tasks to cooperatively block and yield to each other.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>When one task cooperatively blocks or yields, the task scheduler can reallocate processing resources to another context as the first task waits for data.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>There are cases in which you cannot use the cooperative blocking mechanism that is provided by the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>For example, an external library that you use might use a different synchronization mechanism.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>Another example is when you perform an operation that could have a high amount of latency, for example, when you use the Windows API <ph id="ph1">`ReadFile`</ph> function to read data from a network connection.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>In these cases, oversubscription can enable other tasks to run when another task is idle.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Oversubscription lets you create more threads than the available number of hardware threads.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Consider the following function, <ph id="ph1">`download`</ph>, which downloads the file at the given URL.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">[</bpt>concurrency::Context::Oversubscribe<ept id="p1">](reference/context-class.md#oversubscribe)</ept> method to temporarily increase the number of active threads.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>concrt-download-oversubscription#4</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>Because the <ph id="ph1">`GetHttpFile`</ph> function performs a potentially latent operation, oversubscription can enable other tasks to run as the current task waits for data.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>For the complete version of this example, see <bpt id="p1">[</bpt>How to: Use Oversubscription to Offset Latency<ept id="p1">](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Use Concurrent Memory Management Functions When Possible</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Use the memory management functions, <bpt id="p1">[</bpt>concurrency::Alloc<ept id="p1">](reference/concurrency-namespace-functions.md#alloc)</ept> and <bpt id="p2">[</bpt>concurrency::Free<ept id="p2">](reference/concurrency-namespace-functions.md#free)</ept>, when you have fine-grained tasks that frequently allocate small objects that have a relatively short lifetime.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime holds a separate memory cache for each running thread.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`Alloc`</ph> and <ph id="ph2">`Free`</ph> functions allocate and free memory from these caches without the use of locks or memory barriers.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>For more information about these memory management functions, see <bpt id="p1">[</bpt>Task Scheduler<ept id="p1">](../../parallel/concrt/task-scheduler-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>For an example that uses these functions, see <bpt id="p1">[</bpt>How to: Use Alloc and Free to Improve Memory Performance<ept id="p1">](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Use RAII to Manage the Lifetime of Concurrency Objects</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime uses exception handling to implement features such as cancellation.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Therefore, write exception-safe code when you call into the runtime or call another library that calls into the runtime.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>Resource Acquisition Is Initialization<ept id="p1">*</ept> (RAII) pattern is one way to safely manage the lifetime of a concurrency object under a given scope.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>Under the RAII pattern, a data structure is allocated on the stack.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>That data structure initializes or acquires a resource when it is created and destroys or releases that resource when the data structure is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>The RAII pattern guarantees that the destructor is called before the enclosing scope exits.</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>This pattern is useful when a function contains multiple <ph id="ph1">`return`</ph> statements.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>This pattern also helps you write exception-safe code.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>When a <ph id="ph1">`throw`</ph> statement causes the stack to unwind, the destructor for the RAII object is called; therefore, the resource is always correctly deleted or released.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The runtime defines several classes that use the RAII pattern, for example, <bpt id="p1">[</bpt>concurrency::critical_section::scoped_lock<ept id="p1">](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class)</ept> and <bpt id="p2">[</bpt>concurrency::reader_writer_lock::scoped_lock<ept id="p2">](reference/reader-writer-lock-class.md#scoped_lock_class)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>These helper classes are known as <bpt id="p1">*</bpt>scoped locks<ept id="p1">*</ept>.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>These classes provide several benefits when you work with <bpt id="p1">[</bpt>concurrency::critical_section<ept id="p1">](../../parallel/concrt/reference/critical-section-class.md)</ept> or <bpt id="p2">[</bpt>concurrency::reader_writer_lock<ept id="p2">](../../parallel/concrt/reference/reader-writer-lock-class.md)</ept> objects.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The constructor of these classes acquires access to the provided <ph id="ph1">`critical_section`</ph> or <ph id="ph2">`reader_writer_lock`</ph> object; the destructor releases access to that object.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Because a scoped lock releases access to its mutual exclusion object automatically when it is destroyed, you do not manually unlock the underlying object.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Consider the following class, <ph id="ph1">`account`</ph>, which is defined by an external library and therefore cannot be modified.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>concrt-account-transactions#1</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The following example performs multiple transactions on an <ph id="ph1">`account`</ph> object in parallel.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The example uses a <ph id="ph1">`critical_section`</ph> object to synchronize access to the <ph id="ph2">`account`</ph> object because the <ph id="ph3">`account`</ph> class is not concurrency-safe.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>Each parallel operation uses a <ph id="ph1">`critical_section::scoped_lock`</ph> object to guarantee that the <ph id="ph2">`critical_section`</ph> object is unlocked when the operation either succeeds or fails.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>When the account balance is negative, the <ph id="ph1">`withdraw`</ph> operation fails by throwing an exception.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>concrt-account-transactions#2</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>This example produces the following sample output:</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>For additional examples that use the RAII pattern to manage the lifetime of concurrency objects, see <bpt id="p1">[</bpt>Walkthrough: Removing Work from a User-Interface Thread<ept id="p1">](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)</ept>, <bpt id="p2">[</bpt>How to: Use the Context Class to Implement a Cooperative Semaphore<ept id="p2">](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)</ept>, and <bpt id="p3">[</bpt>How to: Use Oversubscription to Offset Latency<ept id="p3">](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>Do Not Create Concurrency Objects at Global Scope</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>When you create a concurrency object at global scope you can cause issues such as deadlock or memory access violations to occur in your application.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>For example, when you create a Concurrency Runtime object, the runtime creates a default scheduler for you if one was not yet created.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>A runtime object that is created during global object construction will accordingly cause the runtime to create this default scheduler.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>However, this process takes an internal lock, which can interfere with the initialization of other objects that support the Concurrency Runtime infrastructure.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>This internal lock might be required by another infrastructure object that has not yet been initialized, and can thus cause deadlock to occur in your application.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The following example demonstrates the creation of a global <bpt id="p1">[</bpt>concurrency::Scheduler<ept id="p1">](../../parallel/concrt/reference/scheduler-class.md)</ept> object.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>This pattern applies not only to the <ph id="ph1">`Scheduler`</ph> class but all other types that are provided by the Concurrency Runtime.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>We recommend that you do not follow this pattern because it can cause unexpected behavior in your application.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>concrt-global-scheduler#1</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>For examples of the correct way to create <ph id="ph1">`Scheduler`</ph> objects, see <bpt id="p1">[</bpt>Task Scheduler<ept id="p1">](../../parallel/concrt/task-scheduler-concurrency-runtime.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Do Not Use Concurrency Objects in Shared Data Segments</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>The Concurrency Runtime does not support the use of concurrency objects in a shared data section, for example, a data section that is created by the <bpt id="p1">[</bpt>data_seg<ept id="p1">](../../preprocessor/data-seg.md)</ept><ph id="ph1">`#pragma`</ph> directive.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>A concurrency object that is shared across process boundaries could put the runtime in an inconsistent or invalid state.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>[<bpt id="p1">[</bpt>Top<ept id="p1">](#top)</ept>]</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Concurrency Runtime Best Practices</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>Parallel Patterns Library (PPL)</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>Asynchronous Agents Library</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Task Scheduler</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>Synchronization Data Structures</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>Comparing Synchronization Data Structures to the Windows API</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>How to: Use Alloc and Free to Improve Memory Performance</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>How to: Use Oversubscription to Offset Latency</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>How to: Use the Context Class to Implement a Cooperative Semaphore</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Walkthrough: Removing Work from a User-Interface Thread</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>Best Practices in the Parallel Patterns Library</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>Best Practices in the Asynchronous Agents Library</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

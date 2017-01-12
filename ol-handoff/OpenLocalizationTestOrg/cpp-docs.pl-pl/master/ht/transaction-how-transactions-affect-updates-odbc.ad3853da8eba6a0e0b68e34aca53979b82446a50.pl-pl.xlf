@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6ca7321d4bbe88426438441530bd224002779bbd</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\odbc\transaction-how-transactions-affect-updates-odbc.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">81000894d9685af0c5537c5508e6a37d09bcd69c</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">2d073a79756a3b11a9d3dc5239db59b47d438ada</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Transaction: How Transactions Affect Updates (ODBC) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Transaction: How Transactions Affect Updates (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Updates to the <bpt id="p1">[</bpt>data source<ept id="p1">](../../data/odbc/data-source-odbc.md)</ept> are managed during transactions through the use of an edit buffer (the same method used outside of transactions).</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The field data members of a recordset collectively serve as an edit buffer that contains the current record, which the recordset backs up temporarily during an <ph id="ph1">`AddNew`</ph> or <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>During a <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> operation, the current record is not backed up within a transaction.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For more information about the edit buffer and how updates store the current record, see <bpt id="p1">[</bpt>Recordset: How Recordsets Update Records (ODBC)<ept id="p1">](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>If you have implemented bulk row fetching, you cannot call <ph id="ph1">`AddNew`</ph>, <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, or <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>You must instead write your own functions to perform updates to the data source.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>For more information about bulk row fetching, see <bpt id="p1">[</bpt>Recordset: Fetching Records in Bulk (ODBC)<ept id="p1">](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>During transactions, <ph id="ph1">`AddNew`</ph>, <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> operations can be committed or rolled back.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>The effects of <bpt id="p1">**</bpt>CommitTrans<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Rollback<ept id="p2">**</ept> might cause the current record to not be restored to the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>To make sure that the current record is properly restored, it is important to understand how the <bpt id="p1">**</bpt>CommitTrans<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Rollback<ept id="p2">**</ept> member functions of <ph id="ph1">`CDatabase`</ph> work with the update functions of <ph id="ph2">`CRecordset`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>How CommitTrans Affects Updates</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>The following table explains the effects of <bpt id="p1">**</bpt>CommitTrans<ept id="p1">**</ept> on transactions.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>How CommitTrans Affects Updates</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Operation</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Status of data source</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>and <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>CommitTrans<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>New record are added to data source.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>(without <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>), and then <bpt id="p2">**</bpt>CommitTrans<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>New record is lost.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Record not added to data source.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Update<ept id="p2">**</ept>, and then <bpt id="p3">**</bpt>CommitTrans<ept id="p3">**</ept></source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>Edits committed to data source.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> (without <bpt id="p2">**</bpt>Update<ept id="p2">**</ept>), and then <bpt id="p3">**</bpt>CommitTrans<ept id="p3">**</ept></source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Edits to the record are lost.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Record remains unchanged on the data source.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> then <bpt id="p2">**</bpt>CommitTrans<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Records deleted from data source.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>How Rollback Affects Transactions</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The following table explains the effects of <bpt id="p1">**</bpt>Rollback<ept id="p1">**</ept> on transactions.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>How Rollback Affects Transactions</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Operation</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Status of current record</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>You must also</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Status of data source</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>and <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>, then <bpt id="p2">**</bpt>Rollback<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Content of the current record is stored temporarily to make room for new record.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>New record is entered into edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>After <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> is called, the current record is restored to the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>Addition to data source made by <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> is reversed.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>(without <bpt id="p1">**</bpt>Update<ept id="p1">**</ept>), then <bpt id="p2">**</bpt>Rollback<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Content of the current record is stored temporarily to make room for new record.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Edit buffer contains new record.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Call <ph id="ph1">`AddNew`</ph> again to restore the edit buffer to an empty, new record.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Or call <bpt id="p1">**</bpt>Move<ept id="p1">**</ept>(0) to restore the old values to the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Because <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> was not called, there were no changes made to the data source.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Update<ept id="p2">**</ept>, then <bpt id="p3">**</bpt>Rollback<ept id="p3">**</ept></source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>An unedited version of the current record is stored temporarily.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>Edits are made to the content of the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>After <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> is called, the unedited version of the record is still temporarily stored.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Dynaset<ept id="p1">*</ept>: Scroll off the current record then back to restore the unedited version of the record to the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>Snapshot<ept id="p1">*</ept>: Call <bpt id="p2">**</bpt>Requery<ept id="p2">**</ept> to refresh the recordset from the data source.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Changes to data source made by <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> are reversed.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> (without <bpt id="p2">**</bpt>Update<ept id="p2">**</ept>), then <bpt id="p3">**</bpt>Rollback<ept id="p3">**</ept></source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>An unedited version of the current record is stored temporarily.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Edits are made to the content of the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">**</bpt>Edit<ept id="p1">**</ept> again to restore the unedited version of the record to the edit buffer.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Because <bpt id="p1">**</bpt>Update<ept id="p1">**</ept> was not called, there were no changes made to the data source.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Delete<ept id="p1">**</ept> then <bpt id="p2">**</bpt>Rollback<ept id="p2">**</ept></source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Content of the current record is deleted.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Call <bpt id="p1">**</bpt>Requery<ept id="p1">**</ept> to restore the content of the current record from the data source.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>Deletion of data from data source is reversed.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Transaction (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>Transaction (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Transaction: Performing a Transaction in a Recordset (ODBC)</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>CDatabase Class</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>CRecordset Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,64 +1,60 @@
 ---
-title: rint, rintf, rintl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname:
-- rintf
-- rintl
-- rint
-apilocation:
-- msvcrt.dll
-- msvcr80.dll
-- msvcr90.dll
-- msvcr100.dll
-- msvcr100_clr0400.dll
-- msvcr110.dll
-- msvcr110_clr0400.dll
-- msvcr120.dll
-- msvcr120_clr0400.dll
-- ucrtbase.dll
-- api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
-f1_keywords:
-- rintf
-- rintl
-- rint
-dev_langs:
-- C++
-helpviewer_keywords:
-- rintf function
-- rint function
-- rintl function
+title: "rint, rintf, rintl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "rintf"
+  - "rintl"
+  - "rint"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-math-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "rintf"
+  - "rintl"
+  - "rint"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "rintf function"
+  - "rint function"
+  - "rintl function"
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 caps.latest.revision: 8
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 43afc4c9e39fdf8eaf2719afa0a79dceafd7de7b
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # rint, rintf, rintl
 Rounds a floating-point value to the nearest integer in floating-point format.  
@@ -145,8 +141,3 @@ rintl(-2.500000) is -3
  [lround, lroundf, lroundl, llround, llroundf, llroundl](../../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)   
  [nearbyint, nearbyintf, nearbyintl](http://msdn.microsoft.com/en-us/15111e73-331d-41d1-81b7-3e10df894848)   
  [rint](../../c-runtime-library/reference/rint-rintf-rintl.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

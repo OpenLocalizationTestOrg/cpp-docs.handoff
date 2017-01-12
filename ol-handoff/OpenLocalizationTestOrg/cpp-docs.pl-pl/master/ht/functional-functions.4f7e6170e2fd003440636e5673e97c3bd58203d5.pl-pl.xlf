@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="pl-pl">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9cbf3fb281b28f41cbddf698a2c1d11c8d3c41c1</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\standard-library\functional-functions.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">6ab54dbe8bb223b3b81a201efb59a19de6535df0</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8fbd1a91d066e9624d67d9a035b17b214fdb03aa</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>functional<ph id="ph1">&amp;gt;</ph> functions | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>functional<ph id="ph1">&amp;gt;</ph> functions</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>bind</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>bind1st</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>bind2nd</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>bit_and</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>bit_not</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>bit_or</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>bit_xor</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>cref</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>mem_fn</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>mem_fun</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>mem_fun_ref</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>not1</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>not2</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>ptr_fun</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>ref</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>swap</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>bind</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Binds arguments to a callable object.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The type of the object to call.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The type of the Nth call argument.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The object to call.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The Nth call argument.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The types <ph id="ph1">`Fty, T1, T2, ..., TN`</ph> must be copy constructible, and <ph id="ph2">`INVOKE(fn, t1, ..., tN)`</ph> must be a valid expression for some values <ph id="ph3">`w1, w2, ..., wN`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The first template function returns a forwarding call wrapper <ph id="ph1">`g`</ph> with a weak result type.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The effect of <ph id="ph1">`g(u1, u2, ..., uM)`</ph> is <ph id="ph2">`INVOKE(f, v1, v2, ..., vN,`</ph> <bpt id="p1">[</bpt>result_of Class<ept id="p1">](../standard-library/result-of-class2.md)</ept><ph id="ph3">`&lt;Fty`</ph> <ph id="ph4">`cv`</ph> <ph id="ph5">`(V1, V2, ..., VN)&gt;::type)`</ph>, where <ph id="ph6">`cv`</ph> is the cv-qualifiers of <ph id="ph7">`g`</ph> and the values and types of the bound arguments <ph id="ph8">`v1, v2, ..., vN`</ph> are determined as specified below.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>You use it to bind arguments to a callable object to make a callable object with a tailored argument list.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>The second template function returns a forwarding call wrapper <ph id="ph1">`g`</ph> with a nested type <ph id="ph2">`result_type`</ph> that is a synonym for <ph id="ph3">`Ret`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The effect of <ph id="ph1">`g(u1, u2, ..., uM)`</ph> is <ph id="ph2">`INVOKE(f, v1, v2, ..., vN, Ret)`</ph>, where <ph id="ph3">`cv`</ph> is the cv-qualifiers of <ph id="ph4">`g`</ph> and the values and types of the bound arguments <ph id="ph5">`v1, v2, ..., vN`</ph> are determined as specified below.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>You use it to bind arguments to a callable object to make a callable object with a tailored argument list and with a specified return type.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The values of the bound arguments <ph id="ph1">`v1, v2, ..., vN`</ph> and their corresponding types <ph id="ph2">`V1, V2, ..., VN`</ph> depend on the type of the corresponding argument <ph id="ph3">`ti`</ph> of type <ph id="ph4">`Ti`</ph> in the call to <ph id="ph5">`bind`</ph> and the cv-qualifiers <ph id="ph6">`cv`</ph> of the call wrapper <ph id="ph7">`g`</ph> as follows:</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>if <ph id="ph1">`ti`</ph> is of type <ph id="ph2">`reference_wrapper&lt;T&gt;`</ph> the argument <ph id="ph3">`vi`</ph> is <ph id="ph4">`ti.get()`</ph> and its type <ph id="ph5">`Vi`</ph> is <ph id="ph6">`T&amp;`</ph>;</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>if the value of <ph id="ph1">`std::is_bind_expression&lt;Ti&gt;::value`</ph> is <ph id="ph2">`true`</ph> the argument <ph id="ph3">`vi`</ph> is <ph id="ph4">`ti(u1, u2, ..., uM)`</ph> and its type <ph id="ph5">`Vi`</ph> is <ph id="ph6">`result_of&lt;Ti`</ph> <ph id="ph7">`cv`</ph> <ph id="ph8">`(U1&amp;, U2&amp;, ..., UN&amp;&gt;::type`</ph>;</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>if the value <ph id="ph1">`j`</ph> of <ph id="ph2">`std::is_placeholder&lt;Ti&gt;::value`</ph> is not zero the argument <ph id="ph3">`vi`</ph> is <ph id="ph4">`uj`</ph> and its type <ph id="ph5">`Vi`</ph> is <ph id="ph6">`Uj&amp;`</ph>;</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>otherwise the argument <ph id="ph1">`vi`</ph> is <ph id="ph2">`ti`</ph> and its type <ph id="ph3">`Vi`</ph> is <ph id="ph4">`Ti`</ph> <ph id="ph5">`cv`</ph> <ph id="ph6">`&amp;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>For example, given a function <ph id="ph1">`f(int, int)`</ph> the expression <ph id="ph2">`bind(f, _1, 0)`</ph> returns a forwarding call wrapper <ph id="ph3">`cw`</ph> such that <ph id="ph4">`cw(x)`</ph> calls <ph id="ph5">`f(x, 0)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The expression <ph id="ph1">`bind(f, 0, _1)`</ph> returns a forwarding call wrapper <ph id="ph2">`cw`</ph> such that <ph id="ph3">`cw(x)`</ph> calls <ph id="ph4">`f(0, x)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>The number of arguments in a call to <ph id="ph1">`bind`</ph> in addition to the argument <ph id="ph2">`fn`</ph> must be equal to the number of arguments that can be passed to the callable object <ph id="ph3">`fn`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Thus, <ph id="ph1">`bind(cos, 1.0)`</ph> is correct, and both <ph id="ph2">`bind(cos)`</ph> and <ph id="ph3">`bind(cos, _1, 0.0)`</ph> are incorrect.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The number of arguments in the function call to the call wrapper returned by <ph id="ph1">`bind`</ph> must be at least as large as the highest numbered value of <ph id="ph2">`is_placeholder&lt;PH&gt;::value`</ph> for all of the placeholder arguments in the call to <ph id="ph3">`bind`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>Thus, <ph id="ph1">`bind(cos, _2)(0.0, 1.0)`</ph> is correct (and returns <ph id="ph2">`cos(1.0)`</ph>), and <ph id="ph3">`bind(cos, _2)(0.0)`</ph> is incorrect.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>bind1st</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the first argument of the binary function to a specified value.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The binary function object to be converted to a unary function object.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The value to which the first argument of the binary function object is to be bound.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The unary function object that results from binding the first argument of the binary function object to the value</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>Function binders are a kind of function adaptor and, because they return function objects, can be used in certain types of function composition to construct more complicated and powerful expressions.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`func`</ph> is an object of type <ph id="ph2">`Operation`</ph> and <ph id="ph3">`c`</ph> is a constant, then <ph id="ph4">`bind1st`</ph> ( <ph id="ph5">`func`</ph>, <ph id="ph6">`c`</ph>) is equivalent to the <bpt id="p1">[</bpt>binder1st<ept id="p1">](../standard-library/binder1st-class.md)</ept> class constructor <ph id="ph7">`binder1st`&lt; `Operation`</ph>&gt; ( <ph id="ph8">`func`</ph>, <ph id="ph9">`c`</ph>) and is more convenient.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>bind2nd</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the second argument of the binary function to a specified value.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>The binary function object to be converted to a unary function object.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>The value to which the second argument of the binary function object is to be bound.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>The unary function object that results from binding the second argument of the binary function object to the value</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Function binders are a kind of function adaptor and, because they return function objects, can be used in certain types of function composition to construct more complicated and powerful expressions.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>If <ph id="ph1">`func`</ph> is an object of type <bpt id="p1">**</bpt>Operation<ept id="p1">**</ept> and <ph id="ph2">`c`</ph> is a constant, then <ph id="ph3">`bind2nd`</ph> ( <ph id="ph4">`func`</ph>, <ph id="ph5">`c`</ph> ) is equivalent to the <bpt id="p2">[</bpt>binder2nd<ept id="p2">](../standard-library/binder2nd-class.md)</ept> class constructor <bpt id="p3">**</bpt>binder2nd<ph id="ph6">\&lt;</ph>Operation&gt;<ept id="p3">**</ept> ( <ph id="ph7">`func`</ph>, <ph id="ph8">`c`</ph> ) and more convenient.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>bit_and</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>A predefined function object that performs the bitwise AND operation (binary <ph id="ph1">`operator&amp;`</ph>) on its arguments.</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">` T`</ph>,</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>Any type that supports an <ph id="ph1">`operator&amp;`</ph> that takes operands of the specified or inferred types.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>The left operand of the bitwise AND operation.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The unspecialized template takes an lvalue reference argument of type <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type <ph id="ph1">` T`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>The right operand of the bitwise AND operation.</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source>The unspecialized template takes an lvalue reference argument of type <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type <ph id="ph1">` U`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>The result of <ph id="ph1">`Left``&amp;``Right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of the result, which has the type that's returned by <ph id="ph1">`operator&amp;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`bit_and`</ph> functor is restricted to integral types for the basic data types, or to user-defined types that implement binary <ph id="ph2">`operator&amp;`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>bit_not</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>A predefined function object that performs the bitwise complement (NOT) operation (unary <ph id="ph1">`operator~`</ph>) on its argument.</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>A type that supports a unary <ph id="ph1">`operator~`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>The operand of the bitwise complement operation.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>The unspecialized template takes an lvalue reference argument of type <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of an lvalue or rvalue reference argument of inferred type <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>The result of <ph id="ph1">`~``Right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of the result, which has the type that's returned by <ph id="ph1">`operator~`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`bit_not`</ph> functor is restricted to integral types for the basic data types, or to user-defined types that implement binary <ph id="ph2">`operator~`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>bit_or</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>A predefined function object that performs the bitwise OR operation ( <ph id="ph1">`operator|`</ph>) on its arguments.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">` T`</ph>,</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Any type that supports an <ph id="ph1">`operator|`</ph> that takes operands of the specified or inferred types.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The left operand of the bitwise OR operation.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>The unspecialized template takes an lvalue reference argument of type <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type <ph id="ph1">` T`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>The right operand of the bitwise OR operation.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>The unspecialized template takes an lvalue reference argument of type <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type <ph id="ph1">` U`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>The result of <ph id="ph1">`Left``|``Right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of the result, which has the type that's returned by <ph id="ph1">`operator|`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`bit_or`</ph> functor is restricted to integral types for the basic data types, or to user-defined types that implement <ph id="ph2">`operator|`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>bit_xor</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>A predefined function object that performs the bitwise XOR operation (binary <ph id="ph1">`operator^`</ph>) on its arguments.</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>, <ph id="ph1">` T`</ph>,</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>Any type that supports an <ph id="ph1">`operator^`</ph> that takes operands of the specified or inferred types.</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>The left operand of the bitwise XOR operation.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>The unspecialized template takes an lvalue reference argument of type <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type <ph id="ph1">` T`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>The right operand of the bitwise XOR operation.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The unspecialized template takes an lvalue reference argument of type <ph id="ph1">`Type`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type <ph id="ph1">` U`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>The result of <ph id="ph1">`Left``^``Right`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>The specialized template does perfect forwarding of the result, which has the type that's returned by <ph id="ph1">`operator^`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`bit_xor`</ph> functor is restricted to integral types for the basic data types, or to user-defined types that implement binary <ph id="ph2">`operator^`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>cref</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>Constructs a const <ph id="ph1">`reference_wrapper`</ph> from an argument.</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>The type of the argument to wrap.</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>The argument to wrap.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>The first function returns <ph id="ph1">`reference_wrapper&lt;const Ty&gt;(arg.get())`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>You use it to wrap a const reference.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>The second function returns <ph id="ph1">`reference_wrapper&lt;const Ty&gt;(arg)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>You use it to rewrap a wrapped reference as a const reference.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>mem_fn</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>Generates a simple call wrapper.</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>The return type of the wrapped function.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>The type of the member function pointer.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>The template function returns a simple call wrapper <ph id="ph1">`cw`</ph>, with a weak result type, such that the expression <ph id="ph2">`cw(t, a2, ..., aN)`</ph> is equivalent to <ph id="ph3">`INVOKE(pm, t, a2, ..., aN)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>It does not throw any exceptions.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>The returned call wrapper is derived from <ph id="ph1">`std::unary_function&lt;cv Ty*, Ret&gt;`</ph> (hence defining the nested type <ph id="ph2">`result_type`</ph> as a synonym for <ph id="ph3">`Ret`</ph> and the nested type <ph id="ph4">`argument_type`</ph> as a synonym for <ph id="ph5">`cv Ty*`</ph>) only if the type <ph id="ph6">`Ty`</ph> is a pointer to member function with cv-qualifier <ph id="ph7">`cv`</ph> that takes no arguments.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>The returned call wrapper is derived from <ph id="ph1">`std::binary_function&lt;cv Ty*, T2, Ret&gt;`</ph> (hence defining the nested type <ph id="ph2">`result_type`</ph> as a synonym for <ph id="ph3">`Ret`</ph>, the nested type <ph id="ph4">`first argument_type`</ph> as a synonym for <ph id="ph5">`cv Ty*`</ph>, and the nested type <ph id="ph6">`second argument_type`</ph> as a synonym for <ph id="ph7">`T2`</ph>) only if the type <ph id="ph8">`Ty`</ph> is a pointer to member function with cv-qualifier <ph id="ph9">`cv`</ph> that takes one argument, of type <ph id="ph10">`T2`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>mem_fun</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Helper template functions used to construct function object adaptors for member functions when initialized with pointer arguments.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>A pointer to the member function of class <bpt id="p1">**</bpt>Type<ept id="p1">**</ept> to be converted to a function object.</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>const<ept id="p1">**</ept> or <bpt id="p2">**</bpt>non_const<ept id="p2">**</ept> function object of type <ph id="ph1">`mem_fun_t`</ph> or <ph id="ph2">`mem_fun1_t`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>mem_fun_ref</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>Helper template functions used to construct function object adaptors for member functions when initialized by using reference arguments.</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>A pointer to the member function of class <ph id="ph1">`Type`</ph> to be converted to a function object.</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`const`</ph> or <ph id="ph2">`non_const`</ph> function object of type <ph id="ph3">`mem_fun_ref_t`</ph> or <ph id="ph4">`mem_fun1_ref_t`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>not1</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>Returns the complement of a unary predicate.</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>The unary predicate to be negated.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>A unary predicate that is the negation of the unary predicate modified.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>If a <ph id="ph1">`unary_negate`</ph> is constructed from a unary predicate <bpt id="p1">**</bpt>Pred<ept id="p1">**</ept>( <bpt id="p2">*</bpt>x<ept id="p2">*</ept>), then it returns <bpt id="p3">**</bpt>!Pred<ept id="p3">**</ept>( <bpt id="p4">*</bpt>x<ept id="p4">*</ept>).</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>not2</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>Returns the complement of a binary predicate.</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>The binary predicate to be negated.</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>A binary predicate that is the negation of the binary predicate modified.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>If a <ph id="ph1">`binary_negate`</ph> is constructed from a binary predicate <bpt id="p1">**</bpt>BinPred<ept id="p1">**</ept>( <bpt id="p2">*</bpt>x<ept id="p2">*</ept>, <bpt id="p3">*</bpt>y<ept id="p3">*</ept>), then it returns !</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>BinPred<ept id="p1">**</ept>( <bpt id="p2">*</bpt>x<ept id="p2">*</ept>, <bpt id="p3">*</bpt>y<ept id="p3">*</ept>).</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>ptr_fun</source>
+        </trans-unit>
+        <trans-unit id="284" translate="yes" xml:space="preserve">
+          <source>Helper template functions used to convert unary and binary function pointers, respectively, into unary and binary adaptable functions.</source>
+        </trans-unit>
+        <trans-unit id="285" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="286" translate="yes" xml:space="preserve">
+          <source>The unary or binary function pointer to be converted to an adaptable function.</source>
+        </trans-unit>
+        <trans-unit id="287" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="288" translate="yes" xml:space="preserve">
+          <source>The first template function returns the unary function <bpt id="p1">[</bpt>pointer_to_unary_function<ept id="p1">](../standard-library/pointer-to-unary-function-class.md)</ept><ph id="ph1"> &lt; `Arg`</ph>, <bpt id="p2">**</bpt>Result<ept id="p2">**</ept>&gt;(* <ph id="ph2">`pfunc`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="289" translate="yes" xml:space="preserve">
+          <source>The second template function returns binary function <bpt id="p1">[</bpt>pointer_to_binary_function<ept id="p1">](../standard-library/pointer-to-binary-function-class.md)</ept> <ph id="ph1">\&lt;</ph> <bpt id="p2">**</bpt>Arg1<ept id="p2">**</ept>, <bpt id="p3">**</bpt>Arg2<ept id="p3">**</ept>, <bpt id="p4">**</bpt>Result<ept id="p4">**</ept>&gt;(* <ph id="ph2">`pfunc`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="290" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="291" translate="yes" xml:space="preserve">
+          <source>A function pointer is a function object and may be passed to any Standard Template Library algorithm that is expecting a function as a parameter, but it is not adaptable.</source>
+        </trans-unit>
+        <trans-unit id="292" translate="yes" xml:space="preserve">
+          <source>To use it with an adaptor, such as binding a value to it or using it with a negator, it must be supplied with the nested types that make such an adaptation possible.</source>
+        </trans-unit>
+        <trans-unit id="293" translate="yes" xml:space="preserve">
+          <source>The conversion of unary and binary function pointers by the <ph id="ph1">`ptr_fun`</ph> helper function allows the function adaptors to work with unary and binary function pointers.</source>
+        </trans-unit>
+        <trans-unit id="294" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="295" translate="yes" xml:space="preserve">
+          <source>functional_ptr_fun#1</source>
+        </trans-unit>
+        <trans-unit id="296" translate="yes" xml:space="preserve">
+          <source>ref</source>
+        </trans-unit>
+        <trans-unit id="297" translate="yes" xml:space="preserve">
+          <source>Constructs a <ph id="ph1">`reference_wrapper`</ph> from an argument.</source>
+        </trans-unit>
+        <trans-unit id="298" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+        </trans-unit>
+        <trans-unit id="299" translate="yes" xml:space="preserve">
+          <source>A reference to <ph id="ph1">`arg`</ph>; specifically, <ph id="ph2">`reference_wrapper&lt;Ty&gt;(arg)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="300" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="301" translate="yes" xml:space="preserve">
+          <source>The following example defines two functions: one bound to a string variable, the other bound to a reference of the string variable computed by a call to <ph id="ph1">`ref`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="302" translate="yes" xml:space="preserve">
+          <source>When the value of the variable changes, the first function continues to use the old value and the second function uses the new value.</source>
+        </trans-unit>
+        <trans-unit id="303" translate="yes" xml:space="preserve">
+          <source>swap</source>
+        </trans-unit>
+        <trans-unit id="304" translate="yes" xml:space="preserve">
+          <source>Swaps two <ph id="ph1">`function`</ph> objects.</source>
+        </trans-unit>
+        <trans-unit id="305" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="306" translate="yes" xml:space="preserve">
+          <source>The type controlled by the function objects.</source>
+        </trans-unit>
+        <trans-unit id="307" translate="yes" xml:space="preserve">
+          <source>The first function object.</source>
+        </trans-unit>
+        <trans-unit id="308" translate="yes" xml:space="preserve">
+          <source>The second function object.</source>
+        </trans-unit>
+        <trans-unit id="309" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="310" translate="yes" xml:space="preserve">
+          <source>The function returns <ph id="ph1">`f1.swap(f2)`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="311" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="312" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="313" translate="yes" xml:space="preserve">
+          <source>functional&gt;</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

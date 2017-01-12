@@ -1,18 +1,14 @@
 ---
-title: '&lt;deque&gt; operators | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "&lt;deque&gt; operators | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
 caps.latest.revision: 7
-manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 18fafc735fe05dbba24058394bbcd7fefd45cffd
-
+manager: "ghogen"
 ---
 # &lt;deque&gt; operators
 ||||  
@@ -327,11 +323,5 @@ Deque c1 is greater than or equal to deque c2.
 ## See Also  
  [\<deque>](../standard-library/deque.md)
 
-
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

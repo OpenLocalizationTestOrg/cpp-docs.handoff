@@ -1,42 +1,38 @@
 ---
-title: if (OpenMP) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- if
-dev_langs:
-- C++
-helpviewer_keywords:
-- if OpenMP clause
+title: "if (OpenMP) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "if"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "if OpenMP clause"
 ms.assetid: db5940b6-2414-4bf8-934d-3edd8393c0f8
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fc179d8d96cbabbc7060a89ba0f2922a5edcff5b
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # if (OpenMP)
 Specifies whether a loop should be executed in parallel or in serial.  
@@ -102,8 +98,3 @@ val = 2, parallelized with 2 threads
   
 ## See Also  
  [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-
