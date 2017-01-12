@@ -1,64 +1,68 @@
 ---
-title: "ccosh, ccoshf, ccoshl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ccosh"
-  - "ccoshf"
-  - "ccoshl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ccosh"
-  - "ccoshf"
-  - "ccoshl"
-  - "complex/ccosh"
-  - "complex/ccoshf"
-  - "complex/ccoshl"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "ccosh function"
-  - "ccoshf function"
-  - "ccoshl function"
+title: ccosh, ccoshf, ccoshl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ccosh
+- ccoshf
+- ccoshl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ccosh
+- ccoshf
+- ccoshl
+- complex/ccosh
+- complex/ccoshf
+- complex/ccoshl
+dev_langs:
+- C
+- C++
+helpviewer_keywords:
+- ccosh function
+- ccoshf function
+- ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5e3dd4dc118cd8e94f9c8aead9b57c02eeb6deb2
+
 ---
 # ccosh, ccoshf, ccoshl
 Retrieves the hyperbolic cosine of a complex number.  
@@ -115,3 +119,8 @@ _Lcomplex ccoshl(
  [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
  [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
  [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+
