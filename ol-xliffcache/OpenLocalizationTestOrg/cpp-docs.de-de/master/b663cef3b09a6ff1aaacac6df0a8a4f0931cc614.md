@@ -1,38 +1,42 @@
 ---
-title: "Recordset: Sorting Records (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sorting data, recordset data"
-  - "ODBC recordsets, sorting"
-  - "recordsets, sorting"
+title: 'Recordset: Sorting Records (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sorting data, recordset data
+- ODBC recordsets, sorting
+- recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: bce5429029fb0e8fe9f9d0d05a09b44879fde415
+ms.openlocfilehash: b663cef3b09a6ff1aaacac6df0a8a4f0931cc614
+
 ---
 # Recordset: Sorting Records (ODBC)
 This topic applies to the MFC ODBC classes.  
@@ -83,3 +87,8 @@ rsStudent.Open( );
  [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
  [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
  [Recordset: Filtering Records (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

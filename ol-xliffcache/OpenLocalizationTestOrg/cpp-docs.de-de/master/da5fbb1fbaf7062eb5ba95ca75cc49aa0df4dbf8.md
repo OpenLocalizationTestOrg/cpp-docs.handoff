@@ -1,61 +1,65 @@
 ---
-title: "_getche, _getwche | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getwche"
-  - "_getche"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getwche"
-  - "_getche"
-  - "_getwche"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "characters, getting from console"
-  - "_getwche function"
-  - "getche function"
-  - "console, reading from"
-  - "getwche function"
-  - "_getche function"
+title: _getche, _getwche | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getwche
+- _getche
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- getwche
+- _getche
+- _getwche
+dev_langs:
+- C++
+- C
+helpviewer_keywords:
+- characters, getting from console
+- _getwche function
+- getche function
+- console, reading from
+- getwche function
+- _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: da5fbb1fbaf7062eb5ba95ca75cc49aa0df4dbf8
+
 ---
 # _getche, _getwche
 Gets a character from the console with echo.  
@@ -134,3 +138,8 @@ abcdeyType 'Y' when finished typing keys: Y
  [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
  [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

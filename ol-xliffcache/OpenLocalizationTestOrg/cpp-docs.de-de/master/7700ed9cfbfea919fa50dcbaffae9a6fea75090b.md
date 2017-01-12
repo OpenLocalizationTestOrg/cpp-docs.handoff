@@ -1,16 +1,20 @@
 ---
-title: "concurrency namespace enums | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: concurrency namespace enums | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translationtype: Human Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 7700ed9cfbfea919fa50dcbaffae9a6fea75090b
+
 ---
 # concurrency namespace enums
 ||||  
@@ -129,3 +133,9 @@ enum WinRTInitializationType;
   
 ## See Also  
  [concurrency Namespace](concurrency-namespace.md)
+
+
+
+<!--HONumber=Jan17_HO2-->
+
+

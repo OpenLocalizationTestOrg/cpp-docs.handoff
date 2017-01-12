@@ -1,42 +1,46 @@
 ---
-title: "CAutoPtrList Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CAutoPtrList"
-  - "CAutoPtrList"
-  - "ATL.CAutoPtrList"
-  - "ATL::CAutoPtrList<E>"
-  - "ATL.CAutoPtrList<E>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAutoPtrList class"
+title: CAutoPtrList Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CAutoPtrList
+- CAutoPtrList
+- ATL.CAutoPtrList
+- ATL::CAutoPtrList<E>
+- ATL.CAutoPtrList<E>
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: da1de19d2f66cd34c75af9bcc6f5bd166a52cbc1
+
 ---
 # CAutoPtrList Class
 This class provides methods useful when constructing a list of smart pointers.  
@@ -95,3 +99,9 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
  [CAtlList Class](../../atl/reference/catllist-class.md)   
  [CAutoPtrElementTraits Class](../../atl/reference/cautoptrelementtraits-class.md)   
  [Class Overview](../../atl/atl-class-overview.md)
+
+
+
+<!--HONumber=Jan17_HO2-->
+
+

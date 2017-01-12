@@ -1,40 +1,44 @@
 ---
-title: "Converting an Image From One Format to Another (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], stand-alone editing"
-  - "Image editor [C++], converting image formats"
-  - "graphics [C++], converting formats"
-  - "images [C++], converting formats"
+title: Converting an Image From One Format to Another (Image Editor for Icons) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+- C++
+helpviewer_keywords:
+- images [C++], stand-alone editing
+- Image editor [C++], converting image formats
+- graphics [C++], converting formats
+- images [C++], converting formats
 ms.assetid: 0409c2bd-3bd8-4d72-9c71-c683b6cf51be
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 3d0ce0bff4fdd1ff37267f15f9fe014daefdb7f5
+
 ---
 # Converting an Image From One Format to Another (Image Editor for Icons)
 You can open GIF or JPEG images in the Image editor and save them as bitmaps. Also, you can open a bitmap file and save it as a GIF or JPEG. Images you work with need not be part of a project for editing in the development environment (see [stand-alone image editing](../mfc/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  
@@ -58,4 +62,10 @@ You can open GIF or JPEG images in the Image editor and save them as bitmaps. Al
 ## See Also  
  [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
  [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+
+
+
+
+<!--HONumber=Jan17_HO2-->
+
 
