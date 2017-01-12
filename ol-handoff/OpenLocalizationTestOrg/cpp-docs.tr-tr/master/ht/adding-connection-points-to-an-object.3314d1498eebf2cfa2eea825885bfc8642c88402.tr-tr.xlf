@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">a2c93f0d3fb64d6dae0b226874aec29b49675ddf</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\atl\adding-connection-points-to-an-object.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">79013eb865865ae990bf1810d89c389105730545</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">7463c7afe4284f19ae7e8f67b8ec7688e9145d2a</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Adding Connection Points to an Object | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Adding Connection Points to an Object</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">[</bpt>ATL Tutorial<ept id="p1">](../atl/active-template-library-atl-tutorial.md)</ept> demonstrates how to create a control with support for connection points, how to add events, and then how to implement the connection point.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>ATL implements connection points with the <bpt id="p1">[</bpt>IConnectionPointImpl<ept id="p1">](../atl/reference/iconnectionpointimpl-class.md)</ept> class.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>To implement a connection point, you have two choices:</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Implement your own outgoing event source, by adding a connection point to the control or object.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Reuse a connection point interface defined in another type library.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>In either case, the Implement Connection Point Wizard uses a type library to do its work.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>To add a connection point to a control or object</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Define a dispinterface in the library block of the .idl file.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>If you enabled support for connection points when you created the control with the ATL Control Wizard, the dispinterface will already be created.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>If you did not enable support for connection points when you created the control, you must manually add a dispinterface to the .idl file.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The following is an example of a dispinterface.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Outgoing interfaces are not required to be dispatch interfaces but many scripting languages such as VBScript and JScript require this, so this example uses two dispinterfaces:</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#81</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Use either the uuidgen.exe or guidgen.exe utility to generate a GUID.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Add the dispinterface as the <ph id="ph1">`[default,source]`</ph> interface in the coclass for the object in the project's .idl file.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Again, if you enabled support for connection points when you created the control, the ATL Control Wizard will create the <ph id="ph1">`[default,source`</ph>] entry.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>To manually add this entry, add the line in bold:</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>NVC_ATL_Windowing#82</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>See the .idl file in the <bpt id="p1">[</bpt>Circ<ept id="p1">](../visual-cpp-samples.md)</ept> ATL sample for an example.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Use Class View to add methods and properties to the event interface.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Right-click the class in Class View, point to <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> on the shortcut menu, and click <bpt id="p2">**</bpt>Add Connection Point<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>In the <bpt id="p1">**</bpt>Source Interfaces<ept id="p1">**</ept> list box of the Implement Connection Point Wizard, select <bpt id="p2">**</bpt>Project's interfaces<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>If you choose an interface for your control and press <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>, you will:</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>Generate a header file with an event proxy class that implements the code that will make the outgoing calls for the event.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Add an entry to the connection point map.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>You will also see a list of all of the type libraries on your computer.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>You should only use one of these other type libraries to define your connection point if you want to implement the exact same outgoing interface found in another type library.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>To reuse a connection point interface defined in another type library</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In Class View, right-click a class that implements a <bpt id="p1">**</bpt>BEGIN_COM_MAP<ept id="p1">**</ept> macro, point to <bpt id="p2">**</bpt>Add<ept id="p2">**</ept> on the shortcut menu, and click <bpt id="p3">**</bpt>Add Connection Point<ept id="p3">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>In the Implement Connection Point Wizard, select a type library and an interface in the type library and click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Edit the .idl file to either:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Copy the dispinterface from the .idl file for the object whose event-source is being used.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Use the <bpt id="p1">**</bpt>importlib<ept id="p1">**</ept> instruction on that type library.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Connection Point</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

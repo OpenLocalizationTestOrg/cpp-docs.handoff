@@ -1,41 +1,37 @@
 ---
-title: Command Modifiers | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- NMAKE program, command modifiers
-- command modifiers
+title: "Command Modifiers | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "NMAKE program, command modifiers"
+  - "command modifiers"
 ms.assetid: b661c432-210f-4f05-bc56-744a46e0fc0b
 caps.latest.revision: 7
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d8dfc11f72f7aae84eecf1cbf9263ccbfb1ef272
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Command Modifiers
 You can specify one or more command modifiers preceding a command, optionally separated by spaces or tabs. As with commands, modifiers must be indented.  
@@ -48,8 +44,3 @@ You can specify one or more command modifiers preceding a command, optionally se
   
 ## See Also  
  [Commands in a Makefile](../build/commands-in-a-makefile.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

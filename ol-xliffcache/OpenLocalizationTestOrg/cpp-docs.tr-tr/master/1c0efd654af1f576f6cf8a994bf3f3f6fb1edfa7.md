@@ -1,44 +1,40 @@
 ---
-title: _bstr_t::_bstr_t | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords:
-- _bstr_t::_bstr_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- BSTR object
-- _bstr_t method
-- _bstr_t class
+title: "_bstr_t::_bstr_t | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+f1_keywords: 
+  - "_bstr_t::_bstr_t"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "BSTR object"
+  - "_bstr_t method"
+  - "_bstr_t class"
 ms.assetid: 116d994e-5a72-4351-afbe-866c80b4c165
 caps.latest.revision: 10
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1c0efd654af1f576f6cf8a994bf3f3f6fb1edfa7
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # _bstr_t::_bstr_t
 **Microsoft Specific**  
@@ -48,7 +44,7 @@ ms.openlocfilehash: 1c0efd654af1f576f6cf8a994bf3f3f6fb1edfa7
 ## Syntax  
   
 ```  
-_bstr_t( ) throw( );   
+_bstr_t( ) throw( );   
 _bstr_t(  
    const _bstr_t& s1   
 ) throw( );  
@@ -103,8 +99,3 @@ _bstr_t(
 ## See Also  
  [_bstr_t Class](../cpp/bstr-t-class.md)   
  [_variant_t Class](../cpp/variant-t-class.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

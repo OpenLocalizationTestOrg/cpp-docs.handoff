@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f995fda4beacb9fb7454656a5845cf68a131c205</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\tn031-control-bars.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">11ab3a8cd0eefe87d9a9a9436f785c9349bc88dc</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cc8fc68ac05a2d48dbcf5660c98416f69b3cd679</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>TN031: Control Bars | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>TN031: Control Bars</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The following technical note has not been updated since it was first included in the online documentation.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>As a result, some procedures and topics might be out of date or incorrect.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>For the latest information, it is recommended that you search for the topic of interest in the online documentation index.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>This note describes the control bar classes in MFC: the general <bpt id="p1">[</bpt>CControlBar<ept id="p1">](#_mfcnotes_ccontrolbar)</ept>, <bpt id="p2">[</bpt>CStatusBar<ept id="p2">](#_mfcnotes_cstatusbar)</ept>, <bpt id="p3">[</bpt>CToolBar<ept id="p3">](#_mfcnotes_ctoolbar)</ept>, <bpt id="p4">[</bpt>CDialogBar<ept id="p4">](#_mfcnotes_cdialogbar)</ept>, and <bpt id="p5">**</bpt>CDockBar<ept id="p5">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>CControlBar</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>A <bpt id="p1">**</bpt>ControlBar<ept id="p1">**</ept> is a <ph id="ph1">`CWnd`</ph>-derived class that:</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Is aligned to the top or bottom of a frame window.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>May contain child items that are either HWND-based controls (for example, <ph id="ph1">`CDialogBar`</ph>) or non-<ph id="ph2">`HWND`</ph> based items (for example, <ph id="ph3">`CToolBar`</ph>, <ph id="ph4">`CStatusBar`</ph>).</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Control bars support the additional styles:</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>(The default) pin the control bar to the top.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Pin the control bar to the bottom.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Do not reposition the control bar when the parent resizes.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>Classes derived from <ph id="ph1">`CControlBar`</ph> provide more interesting implementations:</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>A status bar, items are status bar panes containing text.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>A toolbar, items are bitmap buttons aligned in a row.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>A toolbar-like frame containing standard windows controls (created from a dialog template resource).</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>CDockBar<ept id="p1">**</ept> A generalized docking area for other <ph id="ph1">`CControlBar`</ph> derived objects.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The specific member functions and variables available in this class are likely to change in future releases.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>All control bar objects/windows will be child windows of some parent frame window.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>They are usually added as a sibling to the client area of the frame (for example, an MDI Client or view).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The child window ID of a control bar is important.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The default layout of control bar only works for control bars with IDs in the range of <bpt id="p1">**</bpt>AFX_IDW_CONTROLBAR_FIRST<ept id="p1">**</ept> to <bpt id="p2">**</bpt>AFX_IDW_CONTROLBAR_LAST<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Note that even though there is a range of 256 control bar IDs, the first 32 of these control bar IDs are special since they are directly supported by the print preview architecture.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`CControlBar`</ph> class gives standard implementation for:</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Aligning the control bar to the top, bottom, or either side of the frame.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>Allocating control item arrays.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Supporting the implementation of derived classes.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>C++ control bar objects will usually be embedded as members of a <ph id="ph1">`CFrameWnd`</ph> derived class, and will be cleaned up when the parent <ph id="ph2">`HWND`</ph> and object are destroyed.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If you need to allocate a control bar object on the heap, you can simply set the <bpt id="p1">**</bpt>m_bAutoDestruct<ept id="p1">**</ept> member to <bpt id="p2">**</bpt>TRUE<ept id="p2">**</ept> to make the control bar "<bpt id="p3">**</bpt>delete this<ept id="p3">**</ept>" when the <ph id="ph1">`HWND`</ph> is destroyed.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>If you create your own <ph id="ph1">`CControlBar`</ph>-derived class, rather than using one of MFC's derived classes, such as <ph id="ph2">`CStatusBar`</ph>, <ph id="ph3">`CToolBar`</ph>, or <ph id="ph4">`CDialogBar`</ph>, you will need to set the <ph id="ph5">`m_dwStyle`</ph> data member.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>This can be done in the override of <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>:</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>Control Bar Layout Algorithm</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The control bar layout algorithm is very simple.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The frame window sends a message <bpt id="p1">**</bpt>WM_SIZEPARENT<ept id="p1">**</ept> to all children in the control bar range.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Along with this message, a pointer to the parent's client rectangle is passed.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>This message is sent to children in Z-order.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The control-bar children use this information to position themselves and to decrease the size of the parent's client area.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The final rectangle that is left for the normal client area (less control bars) is used to position the main client window (usually an MDI client, view or splitter window).</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>See <ph id="ph1">`CWnd::RepositionBars`</ph> and <ph id="ph2">`CFrameWnd::RecalcLayout`</ph> for more details.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>MFC private Windows messages, including <bpt id="p1">**</bpt>WM_SIZEPARENT<ept id="p1">**</ept>, are documented in <bpt id="p2">[</bpt>Technical Note 24<ept id="p2">](../mfc/tn024-mfc-defined-messages-and-resources.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>CStatusBar</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>A status bar is a control bar that has a row of text output panes.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>There are two common ways to use text output panes:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>As a message line</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>(for example, the standard menu help message line).</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>These are usually accessed by a 0-based indexed</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>As status indicators</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>(for example, the CAP, NUM and SCRL indicators).</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>These are usually accessed by string/command ID.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>The font for the status bar is 10-point MS Sans Serif (dictated by the Windows Interface Application Design Guide or the font mappers best match of a 10-point Swiss proportional font).</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>On certain versions of Windows, such as the Japanese edition, the fonts selected are different.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The colors used in the status bar are also consistent with the recommendation of the Windows Interface Application Design Guide.</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>Item</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>Windows COLOR value</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Default RGB</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>Status bar background</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNFACE</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>RGB(192, 192, 192)</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>Status bar text</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNTEXT</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>RGB(000, 000, 000)</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>Status bar top/left edges</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNHIGHLIGHT</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>RGB(255, 255, 255)</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Status bar bot/right edges</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNSHADOW</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>RGB(128, 128, 128)</source>
+        </trans-unit>
+        <trans-unit id="171" translate="yes" xml:space="preserve">
+          <source>CCmdUI Support for CStatusBar</source>
+        </trans-unit>
+        <trans-unit id="172" translate="yes" xml:space="preserve">
+          <source>The way indicators are usually updated is through the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> mechanism.</source>
+        </trans-unit>
+        <trans-unit id="173" translate="yes" xml:space="preserve">
+          <source>On idle time, the status bar will call the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler with the string ID of the indicator pane.</source>
+        </trans-unit>
+        <trans-unit id="174" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler can call:</source>
+        </trans-unit>
+        <trans-unit id="175" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Enable<ept id="p1">**</ept>: To enable or disable the pane.</source>
+        </trans-unit>
+        <trans-unit id="176" translate="yes" xml:space="preserve">
+          <source>A disabled pane looks exactly like an enabled pane but the text is invisible (that is, turns off the text indicator).</source>
+        </trans-unit>
+        <trans-unit id="177" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>SetText<ept id="p1">**</ept>: To change the text.</source>
+        </trans-unit>
+        <trans-unit id="178" translate="yes" xml:space="preserve">
+          <source>Be careful if you use this because the pane will not automatically resize.</source>
+        </trans-unit>
+        <trans-unit id="179" translate="yes" xml:space="preserve">
+          <source>Refer to class <bpt id="p1">[</bpt>CStatusBar<ept id="p1">](../mfc/reference/cstatusbar-class.md)</ept> in the <bpt id="p2">*</bpt>Class Library Reference<ept id="p2">*</ept> for details about <ph id="ph1">`CStatusBar`</ph> creation and customization APIs.</source>
+        </trans-unit>
+        <trans-unit id="180" translate="yes" xml:space="preserve">
+          <source>Most customization of status bars should be done before the status bar is initially made visible.</source>
+        </trans-unit>
+        <trans-unit id="181" translate="yes" xml:space="preserve">
+          <source>The status bar supports only one stretchy pane, usually the first pane.</source>
+        </trans-unit>
+        <trans-unit id="182" translate="yes" xml:space="preserve">
+          <source>The size of that pane is really a minimum size.</source>
+        </trans-unit>
+        <trans-unit id="183" translate="yes" xml:space="preserve">
+          <source>If the status bar is bigger than the minimum size of all the panes, any extra width will be given to the stretchy pane.</source>
+        </trans-unit>
+        <trans-unit id="184" translate="yes" xml:space="preserve">
+          <source>The default application with a status bar has right-aligned indicators for CAP, NUM and SCRL since the first pane is stretchy.</source>
+        </trans-unit>
+        <trans-unit id="185" translate="yes" xml:space="preserve">
+          <source>CToolBar</source>
+        </trans-unit>
+        <trans-unit id="186" translate="yes" xml:space="preserve">
+          <source>A toolbar is a control bar with a row of bitmap buttons that may include separators.</source>
+        </trans-unit>
+        <trans-unit id="187" translate="yes" xml:space="preserve">
+          <source>Two styles of buttons are supported: pushbuttons and check box buttons.</source>
+        </trans-unit>
+        <trans-unit id="188" translate="yes" xml:space="preserve">
+          <source>Radio group functionality can be built with check box buttons and <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="189" translate="yes" xml:space="preserve">
+          <source>All the bitmap buttons in the toolbar are taken from one bitmap.</source>
+        </trans-unit>
+        <trans-unit id="190" translate="yes" xml:space="preserve">
+          <source>This bitmap must contain one image or glyph for each button.</source>
+        </trans-unit>
+        <trans-unit id="191" translate="yes" xml:space="preserve">
+          <source>Typically the order of the images/glyphs in the bitmap is the same order they will be drawn on the screen.</source>
+        </trans-unit>
+        <trans-unit id="192" translate="yes" xml:space="preserve">
+          <source>(This can be changed using the customization APIs.)</source>
+        </trans-unit>
+        <trans-unit id="193" translate="yes" xml:space="preserve">
+          <source>Each button must be the same size.</source>
+        </trans-unit>
+        <trans-unit id="194" translate="yes" xml:space="preserve">
+          <source>The default is the standard 24x22 pixels.</source>
+        </trans-unit>
+        <trans-unit id="195" translate="yes" xml:space="preserve">
+          <source>Each image/glyph must be the same size and must be side-by-side in the bitmap.</source>
+        </trans-unit>
+        <trans-unit id="196" translate="yes" xml:space="preserve">
+          <source>The default image/glyph size is 16x15 pixels.</source>
+        </trans-unit>
+        <trans-unit id="197" translate="yes" xml:space="preserve">
+          <source>Therefore, for a toolbar with 10 buttons (using standard sizes), you need a bitmap that is 160 pixels wide and 15 pixels high.</source>
+        </trans-unit>
+        <trans-unit id="198" translate="yes" xml:space="preserve">
+          <source>Each button has one and only one image/glyph.</source>
+        </trans-unit>
+        <trans-unit id="199" translate="yes" xml:space="preserve">
+          <source>The different button states and styles (for example, pressed, up, down, disabled, disabled down, indeterminate) are algorithmically generated from that one image/glyph.</source>
+        </trans-unit>
+        <trans-unit id="200" translate="yes" xml:space="preserve">
+          <source>Any color bitmap or DIB can be used in theory.</source>
+        </trans-unit>
+        <trans-unit id="201" translate="yes" xml:space="preserve">
+          <source>The algorithm for generating the different button states works best if the original image is shades of gray.</source>
+        </trans-unit>
+        <trans-unit id="202" translate="yes" xml:space="preserve">
+          <source>Look at the standard toolbar buttons and the toolbar button clipart provided in MFC General sample <bpt id="p1">[</bpt>CLIPART<ept id="p1">](../visual-cpp-samples.md)</ept> for examples.</source>
+        </trans-unit>
+        <trans-unit id="203" translate="yes" xml:space="preserve">
+          <source>The colors used in the toolbar are also consistent with the recommendation of the Windows Interface Application Design Guide.</source>
+        </trans-unit>
+        <trans-unit id="204" translate="yes" xml:space="preserve">
+          <source>These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.</source>
+        </trans-unit>
+        <trans-unit id="205" translate="yes" xml:space="preserve">
+          <source>Item</source>
+        </trans-unit>
+        <trans-unit id="206" translate="yes" xml:space="preserve">
+          <source>Windows COLOR value</source>
+        </trans-unit>
+        <trans-unit id="207" translate="yes" xml:space="preserve">
+          <source>Default RGB</source>
+        </trans-unit>
+        <trans-unit id="208" translate="yes" xml:space="preserve">
+          <source>ToolBar background</source>
+        </trans-unit>
+        <trans-unit id="209" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNFACE</source>
+        </trans-unit>
+        <trans-unit id="210" translate="yes" xml:space="preserve">
+          <source>RGB(192,192,192)</source>
+        </trans-unit>
+        <trans-unit id="211" translate="yes" xml:space="preserve">
+          <source>ToolBar buttons top/left edges</source>
+        </trans-unit>
+        <trans-unit id="212" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNHIGHLIGHT</source>
+        </trans-unit>
+        <trans-unit id="213" translate="yes" xml:space="preserve">
+          <source>RGB(255,255,255)</source>
+        </trans-unit>
+        <trans-unit id="214" translate="yes" xml:space="preserve">
+          <source>ToolBar buttons bot/right edges</source>
+        </trans-unit>
+        <trans-unit id="215" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNSHADOW</source>
+        </trans-unit>
+        <trans-unit id="216" translate="yes" xml:space="preserve">
+          <source>RGB(128,128,128)</source>
+        </trans-unit>
+        <trans-unit id="217" translate="yes" xml:space="preserve">
+          <source>In addition, the toolbar bitmap buttons are recolored as though they were standard Windows button controls.</source>
+        </trans-unit>
+        <trans-unit id="218" translate="yes" xml:space="preserve">
+          <source>This recoloring occurs when the bitmap is loaded from the resource and in response to a change in system colors in response to user customization in Control Panel.</source>
+        </trans-unit>
+        <trans-unit id="219" translate="yes" xml:space="preserve">
+          <source>The following colors in a toolbar bitmap will be recolored automatically so they should be used with caution.</source>
+        </trans-unit>
+        <trans-unit id="220" translate="yes" xml:space="preserve">
+          <source>If you do not wish to have a portion of your bitmap recolored, then use a color that closely approximates one of the mapped RGB values.</source>
+        </trans-unit>
+        <trans-unit id="221" translate="yes" xml:space="preserve">
+          <source>The mapping is done based on exact RGB values.</source>
+        </trans-unit>
+        <trans-unit id="222" translate="yes" xml:space="preserve">
+          <source>RGB value</source>
+        </trans-unit>
+        <trans-unit id="223" translate="yes" xml:space="preserve">
+          <source>Dynamically mapped COLOR value</source>
+        </trans-unit>
+        <trans-unit id="224" translate="yes" xml:space="preserve">
+          <source>RGB(000, 000, 000)</source>
+        </trans-unit>
+        <trans-unit id="225" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNTEXT</source>
+        </trans-unit>
+        <trans-unit id="226" translate="yes" xml:space="preserve">
+          <source>RGB(128, 128, 128)</source>
+        </trans-unit>
+        <trans-unit id="227" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNSHADOW</source>
+        </trans-unit>
+        <trans-unit id="228" translate="yes" xml:space="preserve">
+          <source>RGB(192, 192, 192)</source>
+        </trans-unit>
+        <trans-unit id="229" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNFACE</source>
+        </trans-unit>
+        <trans-unit id="230" translate="yes" xml:space="preserve">
+          <source>RGB(255, 255, 255)</source>
+        </trans-unit>
+        <trans-unit id="231" translate="yes" xml:space="preserve">
+          <source>COLOR_BTNHIGHLIGHT</source>
+        </trans-unit>
+        <trans-unit id="232" translate="yes" xml:space="preserve">
+          <source>Refer to class <bpt id="p1">[</bpt>CToolBar<ept id="p1">](../mfc/reference/ctoolbar-class.md)</ept> the <bpt id="p2">*</bpt>Class Library Reference<ept id="p2">*</ept> for details about the <ph id="ph1">`CToolBar`</ph> creation and customization APIs.</source>
+        </trans-unit>
+        <trans-unit id="233" translate="yes" xml:space="preserve">
+          <source>Most customization of toolbars should be done before the toolbar is initially made visible.</source>
+        </trans-unit>
+        <trans-unit id="234" translate="yes" xml:space="preserve">
+          <source>The customization APIs can be used to adjust the button IDs, styles, spacer width and which image/glyph is used for what button.</source>
+        </trans-unit>
+        <trans-unit id="235" translate="yes" xml:space="preserve">
+          <source>By default you do not need to use these APIs.</source>
+        </trans-unit>
+        <trans-unit id="236" translate="yes" xml:space="preserve">
+          <source>CCmdUI Support for CToolBar</source>
+        </trans-unit>
+        <trans-unit id="237" translate="yes" xml:space="preserve">
+          <source>The way toolbar buttons are always updated is through the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> mechanism.</source>
+        </trans-unit>
+        <trans-unit id="238" translate="yes" xml:space="preserve">
+          <source>On idle time, the toolbar will call the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler with the command ID of that button.</source>
+        </trans-unit>
+        <trans-unit id="239" translate="yes" xml:space="preserve">
+          <source>is not called for separators, but it is called for pushbuttons and check box buttons.</source>
+        </trans-unit>
+        <trans-unit id="240" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler can call:</source>
+        </trans-unit>
+        <trans-unit id="241" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Enable<ept id="p1">**</ept>: To enable or disable the button.</source>
+        </trans-unit>
+        <trans-unit id="242" translate="yes" xml:space="preserve">
+          <source>This works equally for pushbuttons and check box buttons.</source>
+        </trans-unit>
+        <trans-unit id="243" translate="yes" xml:space="preserve">
+          <source>: To set the check state of a button.</source>
+        </trans-unit>
+        <trans-unit id="244" translate="yes" xml:space="preserve">
+          <source>Calling this for a toolbar button will turn it into a check box button.</source>
+        </trans-unit>
+        <trans-unit id="245" translate="yes" xml:space="preserve">
+          <source>takes a parameter which can be 0 (not checked), 1 (checked) or 2 (indeterminate)</source>
+        </trans-unit>
+        <trans-unit id="246" translate="yes" xml:space="preserve">
+          <source>: Shorthand for <ph id="ph1">`SetCheck`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="247" translate="yes" xml:space="preserve">
+          <source>Check box buttons are "AUTO" check box buttons; that is, when the user presses them they will immediately change state.</source>
+        </trans-unit>
+        <trans-unit id="248" translate="yes" xml:space="preserve">
+          <source>Checked is the down or depressed state.</source>
+        </trans-unit>
+        <trans-unit id="249" translate="yes" xml:space="preserve">
+          <source>There is no built-in user interface way to change a button into the "indeterminate" state; that must be done through code.</source>
+        </trans-unit>
+        <trans-unit id="250" translate="yes" xml:space="preserve">
+          <source>The customization APIs will permit you to change the state of a given toolbar button, preferably you should change these states in the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler for the command the toolbar button represents.</source>
+        </trans-unit>
+        <trans-unit id="251" translate="yes" xml:space="preserve">
+          <source>Remember, the idle processing will change the state of toolbar buttons with the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler, so any changes to these states made through SetButtonStyle may get lost after the next idle.</source>
+        </trans-unit>
+        <trans-unit id="252" translate="yes" xml:space="preserve">
+          <source>Toolbar buttons will send <bpt id="p1">**</bpt>WM_COMMAND<ept id="p1">**</ept> messages like normal buttons or menu items and are normally handled by an <ph id="ph1">`ON_COMMAND`</ph> handler in the same class that provides the <ph id="ph2">`ON_UPDATE_COMMAND_UI`</ph> handler.</source>
+        </trans-unit>
+        <trans-unit id="253" translate="yes" xml:space="preserve">
+          <source>There are four Toolbar button styles (TBBS_ values) used for display states:</source>
+        </trans-unit>
+        <trans-unit id="254" translate="yes" xml:space="preserve">
+          <source>TBBS_CHECKED:   Check box is currently checked (down).</source>
+        </trans-unit>
+        <trans-unit id="255" translate="yes" xml:space="preserve">
+          <source>TBBS_INDETERMINATE:   Check box is currently indeterminate.</source>
+        </trans-unit>
+        <trans-unit id="256" translate="yes" xml:space="preserve">
+          <source>TBBS_DISABLED:   Button is currently disabled.</source>
+        </trans-unit>
+        <trans-unit id="257" translate="yes" xml:space="preserve">
+          <source>TBBS_PRESSED:   Button is currently pressed.</source>
+        </trans-unit>
+        <trans-unit id="258" translate="yes" xml:space="preserve">
+          <source>The six official Windows Interface Application Design Guide button styles are represented by the following TBBS values:</source>
+        </trans-unit>
+        <trans-unit id="259" translate="yes" xml:space="preserve">
+          <source>Up = 0</source>
+        </trans-unit>
+        <trans-unit id="260" translate="yes" xml:space="preserve">
+          <source>Mouse Down = TBBS_PRESSED (&amp;#124; any other style)</source>
+        </trans-unit>
+        <trans-unit id="261" translate="yes" xml:space="preserve">
+          <source>Disabled = TBBS_DISABLED</source>
+        </trans-unit>
+        <trans-unit id="262" translate="yes" xml:space="preserve">
+          <source>Down = TBBS_CHECKED</source>
+        </trans-unit>
+        <trans-unit id="263" translate="yes" xml:space="preserve">
+          <source>Down Disabled = TBBS_CHECKED &amp;#124; TBBS_DISABLED</source>
+        </trans-unit>
+        <trans-unit id="264" translate="yes" xml:space="preserve">
+          <source>Indeterminate = TBBS_INDETERMINATE</source>
+        </trans-unit>
+        <trans-unit id="265" translate="yes" xml:space="preserve">
+          <source>CDialogBar</source>
+        </trans-unit>
+        <trans-unit id="266" translate="yes" xml:space="preserve">
+          <source>A dialog bar is a control bar that contains standard Windows controls.</source>
+        </trans-unit>
+        <trans-unit id="267" translate="yes" xml:space="preserve">
+          <source>It acts like a dialog in that it contains the controls and supports tabbing between them.</source>
+        </trans-unit>
+        <trans-unit id="268" translate="yes" xml:space="preserve">
+          <source>It also acts like a dialog in that it uses a dialog template to represent the bar.</source>
+        </trans-unit>
+        <trans-unit id="269" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`CDialogBar`</ph> is used for the print-preview toolbar, which contains standard pushbutton controls.</source>
+        </trans-unit>
+        <trans-unit id="270" translate="yes" xml:space="preserve">
+          <source>Using a <ph id="ph1">`CDialogBar`</ph> is like using a <ph id="ph2">`CFormView`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="271" translate="yes" xml:space="preserve">
+          <source>You must define a dialog template for the dialog bar and remove all the styles except <bpt id="p1">**</bpt>WS_CHILD<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="272" translate="yes" xml:space="preserve">
+          <source>Note that the dialog must not be visible.</source>
+        </trans-unit>
+        <trans-unit id="273" translate="yes" xml:space="preserve">
+          <source>The control notifications for a <ph id="ph1">`CDialogBar`</ph> will be sent to the parent of the control bar (just like toolbar buttons).</source>
+        </trans-unit>
+        <trans-unit id="274" translate="yes" xml:space="preserve">
+          <source>CCmdUI Support for CDialogBar</source>
+        </trans-unit>
+        <trans-unit id="275" translate="yes" xml:space="preserve">
+          <source>Dialog bar buttons should be updated through the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler mechanism.</source>
+        </trans-unit>
+        <trans-unit id="276" translate="yes" xml:space="preserve">
+          <source>At idle time, the dialog bar will call the <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler with the command ID of all the buttons that have a ID &gt;= 0x8000 (that is, in the range of command IDs).</source>
+        </trans-unit>
+        <trans-unit id="277" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`ON_UPDATE_COMMAND_UI`</ph> handler can call:</source>
+        </trans-unit>
+        <trans-unit id="278" translate="yes" xml:space="preserve">
+          <source>Enable: to enable or disable the button.</source>
+        </trans-unit>
+        <trans-unit id="279" translate="yes" xml:space="preserve">
+          <source>SetText: to change the text of the button.</source>
+        </trans-unit>
+        <trans-unit id="280" translate="yes" xml:space="preserve">
+          <source>Customization can be done through standard window manager APIs.</source>
+        </trans-unit>
+        <trans-unit id="281" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="282" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Number</source>
+        </trans-unit>
+        <trans-unit id="283" translate="yes" xml:space="preserve">
+          <source>Technical Notes by Category</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

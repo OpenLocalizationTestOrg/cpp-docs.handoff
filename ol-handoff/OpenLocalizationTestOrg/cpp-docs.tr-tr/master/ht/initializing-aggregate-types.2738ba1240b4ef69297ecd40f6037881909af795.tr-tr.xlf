@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">76e94821ca8489244323937b9af30d20285042a4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\c-language\initializing-aggregate-types.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">995c6bf45aa1c38663d52fd89cdf25b4ea31a3fa</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">cec6fe690b0623ba413d04b34d280eb35fa6f68e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>Initializing Aggregate Types | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>Initializing Aggregate Types</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>An "aggregate" type is a structure, union, or array type.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>If an aggregate type contains members of aggregate types, the initialization rules apply recursively.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>initializer<ept id="p1">*</ept>:</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source><bpt id="p1"> **</bpt>{<ept id="p1">**</ept>  <bpt id="p2">*</bpt>initializer-list<ept id="p2">*</ept>  <bpt id="p3">**</bpt>}<ept id="p3">**</ept> /* For aggregate initialization</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>{<ept id="p1">**</ept>  <bpt id="p2">*</bpt>initializer-list<ept id="p2">*</ept>  <bpt id="p3">**</bpt>, }<ept id="p3">**</ept></source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>initializer-list<ept id="p1">*</ept>:</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>initializer</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">*</bpt>initializer-list<ept id="p1">*</ept>  <bpt id="p2">**</bpt>,<ept id="p2">**</ept>  <bpt id="p3">*</bpt>initializer<ept id="p3">*</ept></source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">*</bpt>initializer-list<ept id="p1">*</ept> is a list of initializers separated by commas.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Each initializer in the list is either a constant expression or an initializer list.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Therefore, initializer lists can be nested.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>This form is useful for initializing aggregate members of an aggregate type, as shown in the examples in this section.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>However, if the initializer for an automatic identifier is a single expression, it need not be a constant expression; it merely needs to have appropriate type for assignment to the identifier.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>For each initializer list, the values of the constant expressions are assigned, in order, to the corresponding members of the aggregate variable.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">*</bpt>initializer-list<ept id="p1">*</ept> has fewer values than an aggregate type, the remaining members or elements of the aggregate type are initialized to 0.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The initial value of an automatic identifier not explicitly initialized is undefined.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>If <bpt id="p1">*</bpt>initializer-list<ept id="p1">*</ept> has more values than an aggregate type, an error results.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>These rules apply to each embedded initializer list, as well as to the aggregate as a whole.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>A structure's initializer is either an expression of the same type, or a list of initializers for its members enclosed in curly braces (<bpt id="p1">**</bpt>{ }<ept id="p1">**</ept>).</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>Unnamed bit-field members are not initialized.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>When a union is initialized, <bpt id="p1">*</bpt>initializer-list<ept id="p1">*</ept> must be a single constant expression.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The value of the constant expression is assigned to the first member of the union.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If an array has unknown size, the number of initializers determines the size of the array, and its type becomes complete.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>There is no way to specify repetition of an initializer in C, or to initialize an element in the middle of an array without providing all preceding values as well.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>If you need this operation in your program, write the routine in assembly language.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>Note that the number of initializers can set the size of the array:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If you specify the size and give the wrong number of initializers, however, the compiler generates an error.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The maximum size for an array is defined by <bpt id="p1">**</bpt>size_t<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Defined in the header file STDDEF.H, <bpt id="p1">**</bpt>size_t<ept id="p1">**</ept> is an <ph id="ph1">`unsigned int`</ph> with the range 0x00000000 to 0x7CFFFFFF.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>END Microsoft Specific</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>Examples</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>This example shows initializers for an array.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>This statement declares <ph id="ph1">`P`</ph> as a four-by-three array and initializes the elements of its first row to 1, the elements of its second row to 2, and so on through the fourth row.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Note that the initializer list for the third and fourth rows contains commas after the last constant expression.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The last initializer list (<ph id="ph1">`{4, 4, 4,},`</ph>) is also followed by a comma.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>These extra commas are permitted but are not required; only commas that separate constant expressions from one another, and those that separate one initializer list from another, are required.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>If an aggregate member has no embedded initializer list, values are simply assigned, in order, to each member of the subaggregate.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Therefore, the initialization in the previous example is equivalent to the following:</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>Braces can also appear around individual initializers in the list and would help to clarify the example above.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>When you initialize an aggregate variable, you must be careful to use braces and initializer lists properly.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The following example illustrates the compiler's interpretation of braces in more detail:</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>In this example, <ph id="ph1">`nlist`</ph> is declared as a 2-by-3 array of structures, each structure having three members.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Row 1 of the initialization assigns values to the first row of <ph id="ph1">`nlist`</ph>, as follows:</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>The first left brace on row 1 signals the compiler that initialization of the first aggregate member of <ph id="ph1">`nlist`</ph> (that is, <ph id="ph2">`nlist[0]`</ph>) is beginning.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>The second left brace indicates that initialization of the first aggregate member of <ph id="ph1">`nlist[0]`</ph> (that is, the structure at <ph id="ph2">`nlist[0][0]`</ph>) is beginning.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The first right brace ends initialization of the structure <ph id="ph1">`nlist[0][0]`</ph>; the next left brace starts initialization of <ph id="ph2">`nlist[0][1]`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>The process continues until the end of the line, where the closing right brace ends initialization of <ph id="ph1">`nlist[0]`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>Row 2 assigns values to the second row of <ph id="ph1">`nlist`</ph> in a similar way.</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Note that the outer sets of braces enclosing the initializers on rows 1 and 2 are required.</source>
+        </trans-unit>
+        <trans-unit id="154" translate="yes" xml:space="preserve">
+          <source>The following construction, which omits the outer braces, would cause an error:</source>
+        </trans-unit>
+        <trans-unit id="155" translate="yes" xml:space="preserve">
+          <source>In this construction, the first left brace on line 1 starts the initialization of <ph id="ph1">`nlist[0]`</ph>, which is an array of three structures.</source>
+        </trans-unit>
+        <trans-unit id="156" translate="yes" xml:space="preserve">
+          <source>The values 1, 2, and 3 are assigned to the three members of the first structure.</source>
+        </trans-unit>
+        <trans-unit id="157" translate="yes" xml:space="preserve">
+          <source>When the next right brace is encountered (after the value 3), initialization of <ph id="ph1">`nlist[0]`</ph> is complete, and the two remaining structures in the three-structure array are automatically initialized to 0.</source>
+        </trans-unit>
+        <trans-unit id="158" translate="yes" xml:space="preserve">
+          <source>Similarly, <ph id="ph1">`{ 4,5,6 }`</ph> initializes the first structure in the second row of <ph id="ph2">`nlist`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="159" translate="yes" xml:space="preserve">
+          <source>The remaining two structures of <ph id="ph1">`nlist[1]`</ph> are set to 0.</source>
+        </trans-unit>
+        <trans-unit id="160" translate="yes" xml:space="preserve">
+          <source>When the compiler encounters the next initializer list ( <ph id="ph1">`{ 7,8,9 }`</ph> ), it tries to initialize <ph id="ph2">`nlist[2]`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="161" translate="yes" xml:space="preserve">
+          <source>Since <ph id="ph1">`nlist`</ph> has only two rows, this attempt causes an error.</source>
+        </trans-unit>
+        <trans-unit id="162" translate="yes" xml:space="preserve">
+          <source>In this next example, the three <ph id="ph1">`int`</ph> members of <ph id="ph2">`x`</ph> are initialized to 1, 2, and 3, respectively.</source>
+        </trans-unit>
+        <trans-unit id="163" translate="yes" xml:space="preserve">
+          <source>In the <ph id="ph1">`list`</ph> structure above, the three elements in the first row of <ph id="ph2">`m`</ph> are initialized to 4.0; the elements of the remaining row of <ph id="ph3">`m`</ph> are initialized to 0.0 by default.</source>
+        </trans-unit>
+        <trans-unit id="164" translate="yes" xml:space="preserve">
+          <source>The union variable <ph id="ph1">`y`</ph>, in this example, is initialized.</source>
+        </trans-unit>
+        <trans-unit id="165" translate="yes" xml:space="preserve">
+          <source>The first element of the union is an array, so the initializer is an aggregate initializer.</source>
+        </trans-unit>
+        <trans-unit id="166" translate="yes" xml:space="preserve">
+          <source>The initializer list <ph id="ph1">`{'1'}`</ph> assigns values to the first row of the array.</source>
+        </trans-unit>
+        <trans-unit id="167" translate="yes" xml:space="preserve">
+          <source>Since only one value appears in the list, the element in the first column is initialized to the character <ph id="ph1">`1`</ph>, and the remaining two elements in the row are initialized to the value 0 by default.</source>
+        </trans-unit>
+        <trans-unit id="168" translate="yes" xml:space="preserve">
+          <source>Similarly, the first element of the second row of <ph id="ph1">`x`</ph> is initialized to the character <ph id="ph2">`4`</ph>, and the remaining two elements in the row are initialized to the value 0.</source>
+        </trans-unit>
+        <trans-unit id="169" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="170" translate="yes" xml:space="preserve">
+          <source>Initialization</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

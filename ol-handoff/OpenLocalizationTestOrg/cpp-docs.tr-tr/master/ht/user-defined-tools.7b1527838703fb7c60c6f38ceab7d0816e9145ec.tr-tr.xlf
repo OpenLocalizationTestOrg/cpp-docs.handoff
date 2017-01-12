@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">58c77f1eecb5d199e46c2662f029ce9284dcefd4</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\user-defined-tools.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">d6c68eec278124997a331b1f3ce32aa2fcf5a30b</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">793f915cf59e1b8c72268260f1e10a420d74bb8e</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>User-defined Tools | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>User-defined Tools</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>MFC supports user-defined tools.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>A user-defined tool is a special command that executes an external, user-specified program.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>You can use the customization process to manage user-defined tools.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>However, you cannot use this process if your application object is not derived from <bpt id="p1">[</bpt>CWinAppEx Class<ept id="p1">](../mfc/reference/cwinappex-class.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>For more information about customization, see <bpt id="p1">[</bpt>Customization for MFC<ept id="p1">](../mfc/customization-for-mfc.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>If you enabled user-defined tools support, the customization dialog box automatically includes the <bpt id="p1">**</bpt>Tools<ept id="p1">**</ept> tab.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The following illustration shows the <bpt id="p1">**</bpt>Tools<ept id="p1">**</ept> page.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Tools tab in the Customize dialog box</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Customization dialog box Tools tab</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>Enabling user-defined tools support</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>To enable user-defined tools in an application, call <bpt id="p1">[</bpt>CWinAppEx::EnableUserTools<ept id="p1">](../mfc/reference/cwinappex-class.md#cwinappex__enableusertools)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>However, you must first define several constants in the resource files of your application to use as parameters for this call.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>In the resource editor create a dummy command that uses an appropriate command ID.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>In the following example, we use <bpt id="p1">**</bpt>ID_TOOLS_ENTRY<ept id="p1">**</ept> as the command ID.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>This command ID marks a location in one or more menus where the framework will insert the user-defined tools.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>You must set aside some consecutive IDs in the string table to represent the user-defined tools.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>The number of strings that you set aside is equal to the maximum number of user tools that the users can define.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>In the following example, these are named <bpt id="p1">**</bpt>ID_USER_TOOL1<ept id="p1">**</ept> through <bpt id="p2">**</bpt>ID_USER_TOOL10<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>You can offer suggestions to the users to help them select directories and arguments for the external programs that will be called as tools.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>To do this, create two popup menus in the resource editor.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>In the following example these are named <bpt id="p1">**</bpt>IDR_MENU_ARGS<ept id="p1">**</ept> and <bpt id="p2">**</bpt>IDR_MENU_DIRS<ept id="p2">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>For each command in these menus, define a string in your application string table.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The resource ID of the string must be equal to the command ID.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>You can also create a derived class from <bpt id="p1">[</bpt>CUserTool Class<ept id="p1">](../mfc/reference/cusertool-class.md)</ept> to replace the default implementation.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>To do this, pass the runtime information for your derived class as the fourth parameter in CWinAppEx::EnableUserTools, instead of RUNTIME_CLASS(<bpt id="p1">[</bpt>CUserTool Class<ept id="p1">](../mfc/reference/cusertool-class.md)</ept>).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>After you define the appropriate constants, call <bpt id="p1">[</bpt>CWinAppEx::EnableUserTools<ept id="p1">](../mfc/reference/cwinappex-class.md#cwinappex__enableusertools)</ept> to enable user-defined tools.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The following method call shows how to use these constants:</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>NVC_MFC_VisualStudioDemo#1</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>In this example, the tools tab will be included on the <bpt id="p1">**</bpt>Customization<ept id="p1">**</ept> dialog box.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The framework will replace any command that matches the command ID <bpt id="p1">**</bpt>ID_TOOLS_ENTRY<ept id="p1">**</ept> in any menu with the set of currently defined user tools whenever a user opens that menu.</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The command IDs <bpt id="p1">**</bpt>ID_USER_TOOL1<ept id="p1">**</ept> through <bpt id="p2">**</bpt>ID_USER_TOOL10<ept id="p2">**</ept> are reserved for use for user-defined tools.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The class <bpt id="p1">[</bpt>CUserTool Class<ept id="p1">](../mfc/reference/cusertool-class.md)</ept> handles calls to the user tools.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>The tool tab of the <bpt id="p1">**</bpt>Customization<ept id="p1">**</ept> dialog box provides buttons to the right of the argument and directory entry fields to access the menus <bpt id="p2">**</bpt>IDR_MENU_ARGS<ept id="p2">**</ept> and <bpt id="p3">**</bpt>IDR_MENU_DIRS<ept id="p3">**</ept>.When a user selects a command from one of these menus, the framework appends to the appropriate text box the string that has the resource ID equal to the command ID.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Including predefined tools</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>If you want to predefine some tools on the application startup, you must override the <bpt id="p1">[</bpt>CFrameWnd::LoadFrame<ept id="p1">](../mfc/reference/cframewnd-class.md#cframewnd__loadframe)</ept> method of the main window of your application.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>In that method, you must perform the following steps.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>To add new tools in LoadFrame</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Obtain a pointer to the <bpt id="p1">[</bpt>CUserToolsManager Class<ept id="p1">](../mfc/reference/cusertoolsmanager-class.md)</ept> object by calling <bpt id="p2">[</bpt>CWinAppEx::GetUserToolsManager<ept id="p2">](../mfc/reference/cwinappex-class.md#cwinappex__getusertoolsmanager)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>For every tool that you want to create, call <bpt id="p1">[</bpt>CUserToolsManager::CreateNewTool<ept id="p1">](../mfc/reference/cusertoolsmanager-class.md#cusertoolsmanager__createnewtool)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>This method returns a pointer to a <bpt id="p1">[</bpt>CUserTool Class<ept id="p1">](../mfc/reference/cusertool-class.md)</ept> object and adds the newly created user tool to the internal collection of tools.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>If you provided the runtime information for a derived class of <bpt id="p1">[</bpt>CUserTool Class<ept id="p1">](../mfc/reference/cusertool-class.md)</ept> as the fourth parameter of <bpt id="p2">[</bpt>CWinAppEx::EnableUserTools<ept id="p2">](../mfc/reference/cwinappex-class.md#cwinappex__enableusertools)</ept>, <bpt id="p3">[</bpt>CUserToolsManager::CreateNewTool<ept id="p3">](../mfc/reference/cusertoolsmanager-class.md#cusertoolsmanager__createnewtool)</ept> will instantiate and return an instance of that class instead.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>For each tool, set its text label by setting <ph id="ph1">`CUserTool::m_strLabel`</ph> and set its command by calling <ph id="ph2">`CUserTool::SetCommand`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>The default implementation of <bpt id="p1">[</bpt>CUserTool Class<ept id="p1">](../mfc/reference/cusertool-class.md)</ept> automatically retrieves available icons from the program that is specified in the call to <ph id="ph1">`SetCommand`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>Customization for MFC</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>CUserTool Class</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>CUserToolsManager Class</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>CWinAppEx Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

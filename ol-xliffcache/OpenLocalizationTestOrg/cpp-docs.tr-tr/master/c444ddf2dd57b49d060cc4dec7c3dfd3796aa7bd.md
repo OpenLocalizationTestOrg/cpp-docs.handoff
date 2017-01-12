@@ -1,43 +1,39 @@
 ---
-title: CComModule Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CComModule
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComModule class
-- DLL modules [C++], ATL
+title: "CComModule Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CComModule"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CComModule class"
+  - "DLL modules [C++], ATL"
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
 caps.latest.revision: 23
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: c444ddf2dd57b49d060cc4dec7c3dfd3796aa7bd
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CComModule Class
 As of ATL 7.0, `CComModule` is deprecated: see [ATL Module Classes](../../atl/atl-module-classes.md) for more details.  
@@ -603,9 +599,3 @@ virtual HRESULT UpdateRegistryFromResourceS(UINT nResID,
   
 ## See Also  
  [Class Overview](../../atl/atl-class-overview.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

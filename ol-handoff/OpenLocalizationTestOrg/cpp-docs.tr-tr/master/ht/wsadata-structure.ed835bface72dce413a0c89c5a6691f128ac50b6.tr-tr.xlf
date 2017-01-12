@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="tr-tr">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">221e83f6bc926bbe632cdb1255898b91c257a1c9</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\mfc\reference\wsadata-structure.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f27b1ec4af29b2ebc707a9f3d1a0224a242f4f15</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f9ecc26dfb96d80b3d9e5241c6ab6cf1ac4d2ba4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>WSADATA Structure | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>WSADATA Structure</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`WSADATA`</ph> structure is used to store Windows Sockets initialization information returned by a call to the <ph id="ph2">`AfxSocketInit`</ph> global function.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Syntax</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>wVersion</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>The version of the Windows Sockets specification that the Windows Sockets DLL expects the caller to use.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>wHighVersion</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>The highest version of the Windows Sockets specification that this DLL can support (also encoded as above).</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>Normally, this is the same as <bpt id="p1">**</bpt>wVersion<ept id="p1">**</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>szDescription</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>A null-terminated ASCII string into which the Windows Sockets DLL copies a description of the Windows Sockets implementation, including vendor identification.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>The text (up to 256 characters in length) can contain any characters, but vendors are cautioned against including control and formatting characters: the most likely use that an application will put this to is to display it (possibly truncated) in a status message.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>szSystemStatus</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>A null-terminated ASCII string into which the Windows Sockets DLL copies relevant status or configuration information.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>The Windows Sockets DLL should use this field only if the information might be useful to the user or support staff; it should not be considered as an extension of the <bpt id="p1">**</bpt>szDescription<ept id="p1">**</ept> field.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>iMaxSockets</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The maximum number of sockets that a single process can potentially open.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A Windows Sockets implementation can provide a global pool of sockets for allocation to any process; alternately, it can allocate per-process resources for sockets.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The number can well reflect the way in which the Windows Sockets DLL or the networking software was configured.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Application writers can use this number as a crude indication of whether the Windows Sockets implementation is usable by the application.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>For example, an X Windows server might check <bpt id="p1">**</bpt>iMaxSockets<ept id="p1">**</ept> when first started: if it is less than 8, the application would display an error message instructing the user to reconfigure the networking software.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>(This is a situation in which the <bpt id="p1">**</bpt>szSystemStatus<ept id="p1">**</ept> text might be used.) Obviously there is no guarantee that a particular application can actually allocate <bpt id="p2">**</bpt>iMaxSockets<ept id="p2">**</ept> sockets, since there can be other Windows Sockets applications in use.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>iMaxUdpDg</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The size in bytes of the largest User Datagram Protocol (UDP) datagram that can be sent or received by a Windows Sockets application.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If the implementation imposes no limit, <bpt id="p1">**</bpt>iMaxUdpDg<ept id="p1">**</ept> is zero.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>In many implementations of Berkeley sockets, there is an implicit limit of 8192 bytes on UDP datagrams (which are fragmented if necessary).</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>A Windows Sockets implementation can impose a limit based, for instance, on the allocation of fragment reassembly buffers.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The minimum value of <bpt id="p1">**</bpt>iMaxUdpDg<ept id="p1">**</ept> for a compliant Windows Sockets implementation is 512.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Note that regardless of the value of <bpt id="p1">**</bpt>iMaxUdpDg<ept id="p1">**</ept>, it is inadvisable to attempt to send a broadcast datagram that is larger than the Maximum Transmission Unit (MTU) for the network.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>(The Windows Sockets API does not provide a mechanism to discover the MTU, but it must be no less than 512 bytes.)</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>lpVendorInfo</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>A far pointer to a vendor-specific data structure.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>The definition of this structure (if supplied) is beyond the scope of the Windows Sockets specification.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>In MFC, the <ph id="ph1">`WSADATA`</ph> structure is returned by the <ph id="ph2">`AfxSocketInit`</ph> function, which you call in your <ph id="ph3">`InitInstance`</ph> function.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>You can retrieve the structure and store it in your program if you need to use information from it later.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Requirements</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source><bpt id="p1">**</bpt>Header:<ept id="p1">**</ept> winsock2.h</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>Structures, Styles, Callbacks, and Message Maps</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>AfxSocketInit</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
