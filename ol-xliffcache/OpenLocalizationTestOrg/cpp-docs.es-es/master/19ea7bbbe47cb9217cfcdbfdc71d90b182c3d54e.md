@@ -1,35 +1,39 @@
 ---
-title: "Graphics (C++ AMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Graphics (C++ AMP) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 2da1f6724392697e133f5e7ec008a8eea3a38593
+ms.openlocfilehash: 19ea7bbbe47cb9217cfcdbfdc71d90b182c3d54e
+
 ---
 # Graphics (C++ AMP)
 C++ AMP contains several APIs in the [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) namespace that you can use to access the texture support on GPUs. Some common scenarios are:  
@@ -471,3 +475,9 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
  [unorm_2 Class](../../parallel/amp/reference/unorm-2-class.md)   
  [unorm_3 Class](../../parallel/amp/reference/unorm-3-class.md)   
  [unorm_4 Class](../../parallel/amp/reference/unorm-4-class.md)
+
+
+
+<!--HONumber=Jan17_HO2-->
+
+

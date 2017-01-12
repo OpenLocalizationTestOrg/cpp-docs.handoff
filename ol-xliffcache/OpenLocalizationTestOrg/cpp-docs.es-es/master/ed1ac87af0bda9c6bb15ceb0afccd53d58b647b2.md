@@ -1,40 +1,44 @@
 ---
-title: "CSecurityDesc Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CSecurityDesc"
-  - "ATL.CSecurityDesc"
-  - "CSecurityDesc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSecurityDesc class"
+title: CSecurityDesc Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CSecurityDesc
+- ATL.CSecurityDesc
+- CSecurityDesc
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
+ms.openlocfilehash: ed1ac87af0bda9c6bb15ceb0afccd53d58b647b2
+
 ---
 # CSecurityDesc Class
 This class is a wrapper for the **SECURITY_DESCRIPTOR** structure.  
@@ -488,8 +492,7 @@ bool SetControl(SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest,  SECURITY_DES
  Sets information in a discretionary access-control list (DACL). If a DACL is already present in the security descriptor, it is replaced.  
   
 ```
-inline void SetDacl(bool bPresent = true,
-    bool bDefaulted = false) throw(...);
+inline void SetDacl(bool bPresent = true, bool bDefaulted = false) throw(...);
 
     inline void SetDacl(const CDacl& Dacl,
     bool bDefaulted = false) throw(...);
@@ -566,10 +569,7 @@ bool SetSacl(const CSacl& Sacl,  bool bDefaulted = false) throw(...);
  Converts a security descriptor to a string format.  
   
 ```
-bool ToString(
-    CString* pstr,  SECURITY_INFORMATION si = OWNER_SECURITY_INFORMATION |
-    GROUP_SECURITY_INFORMATION | DACL_SECURITY_INFORMATION |
-    SACL_SECURITY_INFORMATION) const throw(...);
+bool ToString( CString* pstr,  SECURITY_INFORMATION si = OWNER_SECURITY_INFORMATION | GROUP_SECURITY_INFORMATION | DACL_SECURITY_INFORMATION | SACL_SECURITY_INFORMATION) const throw(...);
 ```  
   
 ### Parameters  
@@ -605,3 +605,9 @@ bool ToString(
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [Class Overview](../../atl/atl-class-overview.md)   
  [Security Global Functions](../../atl/reference/security-global-functions.md)
+
+
+
+<!--HONumber=Jan17_HO2-->
+
+
