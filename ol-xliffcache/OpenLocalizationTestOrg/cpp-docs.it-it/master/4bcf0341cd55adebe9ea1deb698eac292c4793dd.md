@@ -1,67 +1,71 @@
 ---
-title: "_getdcwd_nolock, _wgetdcwd_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wgetdcwd_nolock"
-  - "_getdcwd_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wgetdcwd_nolock"
-  - "tgetdcwd_nolock"
-  - "wgetdcwd_nolock"
-  - "_getdcwd_nolock"
-  - "_tgetdcwd_nolock"
-  - "getdcwd_nolock"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "getdcwd_nolock function"
-  - "_tgetdcwd_nolock function"
-  - "working directory"
-  - "tgetdcwd_nolock function"
-  - "_getdcwd_nolock function"
-  - "current working directory"
-  - "wgetdcwd_nolock function"
-  - "_wgetdcwd_nolock function"
-  - "directories [C++], current working"
+title: _getdcwd_nolock, _wgetdcwd_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wgetdcwd_nolock
+- _getdcwd_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _wgetdcwd_nolock
+- tgetdcwd_nolock
+- wgetdcwd_nolock
+- _getdcwd_nolock
+- _tgetdcwd_nolock
+- getdcwd_nolock
+dev_langs:
+- C++
+- C
+helpviewer_keywords:
+- getdcwd_nolock function
+- _tgetdcwd_nolock function
+- working directory
+- tgetdcwd_nolock function
+- _getdcwd_nolock function
+- current working directory
+- wgetdcwd_nolock function
+- _wgetdcwd_nolock function
+- directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4bcf0341cd55adebe9ea1deb698eac292c4793dd
+
 ---
 # _getdcwd_nolock, _wgetdcwd_nolock
 Gets the full path of the current working directory on the specified drive.  
@@ -125,3 +129,8 @@ wchar_t *_wgetdcwd_nolock(
  [_getdrive](../../c-runtime-library/reference/getdrive.md)   
  [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
  [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

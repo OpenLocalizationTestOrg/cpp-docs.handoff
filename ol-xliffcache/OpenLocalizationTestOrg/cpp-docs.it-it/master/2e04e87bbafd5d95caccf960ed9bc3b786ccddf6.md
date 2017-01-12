@@ -1,38 +1,42 @@
 ---
-title: "set::set (STL-CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "set member [STL/CLR]"
+title: set::set (STL-CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::set::set
+dev_langs:
+- C++
+helpviewer_keywords:
+- set member [STL/CLR]
 ms.assetid: 0cce8501-92ed-431c-b711-14e0b7be7375
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2e04e87bbafd5d95caccf960ed9bc3b786ccddf6
+
 ---
 # set::set (STL/CLR)
 Constructs a container object.  
@@ -220,3 +224,8 @@ size() = 0
  [set (STL/CLR)](../dotnet/set-stl-clr.md)   
  [set::generic_container (STL/CLR)](../dotnet/set-generic-container-stl-clr.md)   
  [set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+

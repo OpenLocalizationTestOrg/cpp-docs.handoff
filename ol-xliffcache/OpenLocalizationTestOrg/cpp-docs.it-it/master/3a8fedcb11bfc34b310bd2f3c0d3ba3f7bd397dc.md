@@ -1,40 +1,44 @@
 ---
-title: "Wizard Support for Other Languages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.EastAsianLanguages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wizards [C++], language support"
-  - "language support for MFC projects"
-  - "projects [C++], language support"
+title: Wizard Support for Other Languages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.EastAsianLanguages
+dev_langs:
+- C++
+helpviewer_keywords:
+- wizards [C++], language support
+- language support for MFC projects
+- projects [C++], language support
 ms.assetid: b653c673-0687-455c-885f-15d7e2f4149d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3a8fedcb11bfc34b310bd2f3c0d3ba3f7bd397dc
+
 ---
 # Wizard Support for Other Languages
 When you install Visual Studio, the setup application detects the locale listed in your system and installs the appropriate language template or templates for that locale. For example, for Western European locales, setup installs English, French, Italian, Spanish, and German. These languages appear in the **Resource language** list on the [Application Type](../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard.  
@@ -71,3 +75,8 @@ When you install Visual Studio, the setup application detects the locale listed 
 ## See Also  
  [File Types Created for Visual C++ Projects](../ide/file-types-created-for-visual-cpp-projects.md)   
  [Creating and Managing Visual C++ Projects](../ide/creating-and-managing-visual-cpp-projects.md)
+
+
+<!--HONumber=Jan17_HO2-->
+
+
