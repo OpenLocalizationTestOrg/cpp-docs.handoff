@@ -1,18 +1,14 @@
 ---
-title: '&lt;unordered_set&gt; operators | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "&lt;unordered_set&gt; operators | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 caps.latest.revision: 7
-manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 13f949465ee92e9ecfa19bdb15aa5cc3f9eb3ccd
-
+manager: "ghogen"
 ---
 # &lt;unordered_set&gt; operators
 |||||  
@@ -290,11 +286,5 @@ int main()
 ## See Also  
  [<unordered_set>](../standard-library/unordered-set.md)
 
-
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

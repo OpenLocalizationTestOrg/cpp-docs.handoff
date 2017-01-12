@@ -1,39 +1,35 @@
 ---
-title: Porting to the Universal Windows Platform (C++) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- C++
+title: "Porting to the Universal Windows Platform (C++) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
 caps.latest.revision: 14
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 7382929457de6ce5e39743570d576cc1699a5a0f
-ms.openlocfilehash: c09eed58d2ac7b1869c7f5ea58bafafaaee11925
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # Porting to the Universal Windows Platform (C++)
 In this topic, you can find information on how to port existing C++ code to the Windows 10 app platform, the Universal Windows Platform. What is meant by the term *universal* is that your code can run on any of the devices that run Windows 10, including desktop, phone, tablets, and future devices that run Windows 10. With Windows 8.1, you created an app that targeted both Windows 8.1 and Windows Phone 8.1 by using a special project system feature called a shared project. Universal Windows Apps do not use this mechanism, but instead you use a single project and a single XAML that works well on any device that runs Windows 10. You can use dynamic layout features in XAML to allow the app's UI to adapt to different display sizes.  
@@ -131,8 +127,3 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## See Also  
  [Visual C++ Porting Guide](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [Develop apps for the Universal Windows Platform (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,44 +1,40 @@
 ---
-title: 'Walkthrough: Compile a C program on the command line | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-dev_langs:
-- C++
-helpviewer_keywords:
-- command-line applications [C++], C programs
-- Visual C, compiling
-- compiling programs [C++]
-- C program compiling [C++]
+title: "Walkthrough: Compile a C program on the command line | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "get-started-article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "command-line applications [C++], C programs"
+  - "Visual C, compiling"
+  - "compiling programs [C++]"
+  - "C program compiling [C++]"
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 caps.latest.revision: 46
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 337ebef54ebb6c50f7c50ededc2a70cff8d8a64e
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
 # Walkthrough: Compile a C program on the command line
 Visual C++ includes a C compiler that you can use to create everything from basic console programs to full Windows Desktop applications, mobile apps, and more.  
@@ -185,8 +181,3 @@ Visual C++ includes a C compiler that you can use to create everything from basi
  [C Language Reference](../c-language/c-language-reference.md)   
  [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
  [Compatibility](../c-runtime-library/compatibility.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-

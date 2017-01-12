@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">beacb4967b5566fc3df2af735c05453f74861c99</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\data\oledb\cmyprovidersource-myproviderds-h.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8b165e1d6184249f03448360e264fd0a6e34dea1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">c9a13966633e47ae33046a94ff58a116505907fc</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>CMyProviderSource (MyProviderDS.H) | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>CMyProviderSource (MyProviderDS.H)</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>The provider classes use multiple inheritance.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The following code shows the inheritance chain for the data source object:</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>All the COM components derive from <ph id="ph1">`CComObjectRootEx`</ph> and <ph id="ph2">`CComCoClass`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>provides all the implementation for the <bpt id="p1">**</bpt>IUnknown<ept id="p1">**</ept> interface.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>It can handle any threading model.</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>handles any error support required.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>If you want to send richer error information to the client, you can use some of the error APIs in <ph id="ph1">`CComCoClass`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>The data source object also inherits from several 'Impl' classes.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Each class provides the implementation for an interface.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The data source object implements the <ph id="ph1">`IPersist`</ph>, <ph id="ph2">`IDBProperties`</ph>, <bpt id="p1">**</bpt>IDBInitialize<ept id="p1">**</ept>, and <bpt id="p2">**</bpt>IDBCreateSession<ept id="p2">**</ept> interfaces.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>Each interface is required by OLE DB to implement the data source object.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>You can choose to support or not support particular functionality by inheriting or not inheriting from one of these 'Impl' classes.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>If you want to support the <bpt id="p1">**</bpt>IDBDataSourceAdmin<ept id="p1">**</ept> interface, you inherit from the <bpt id="p2">**</bpt>IDBDataSourceAdminImpl<ept id="p2">**</ept> class to get the functionality required.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>COM Map</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Whenever the client calls <ph id="ph1">`QueryInterface`</ph> for an interface on the data source, it goes through the following COM map:</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>The COM_INTERFACE_ENTRY macros are from ATL and tell the implementation of <ph id="ph1">`QueryInterface`</ph> in <ph id="ph2">`CComObjectRootEx`</ph> to return the appropriate interfaces.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Property Map</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>The property map specifies all the properties designated by the provider:</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Properties in OLE DB are grouped.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>The data source object has two groups of properties: one for the <bpt id="p1">**</bpt>DBPROPSET_DATASOURCEINFO<ept id="p1">**</ept> set and one for the <bpt id="p2">**</bpt>DBPROPSET_DBINIT<ept id="p2">**</ept> set.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>DBPROPSET_DATASOURCEINFO<ept id="p1">**</ept> set corresponds to properties about the provider and its data source.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The <bpt id="p1">**</bpt>DBPROPSET_DBINIT<ept id="p1">**</ept> set corresponds to properties used at initialization.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>The OLE DB Provider Templates handle these sets with the PROPERTY_SET macros.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The macros create a block that contains an array of properties.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Whenever the client calls the <ph id="ph1">`IDBProperties`</ph> interface, the provider uses the property map.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>You do not need to implement every property in the specification.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>However, you must support the required properties; see the level 0 conformance specification for more information.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>If you do not want to support a property, you can remove it from the map.</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>If you want to support a property, add it into the map by using a PROPERTY_INFO_ENTRY macro.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>The macro corresponds to the <bpt id="p1">**</bpt>UPROPINFO<ept id="p1">**</ept> structure as shown in the following code:</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Each element in the structure represents information to handle the property.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>It contains a <bpt id="p1">**</bpt>DBPROPID<ept id="p1">**</ept> to determine the GUID and ID for the property.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>It also contains entries to determine the type and value of the property.</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>If you want to change the default value of a property (note that a consumer can change the value of a writable property at any time), you can use either the PROPERTY_INFO_ENTRY_VALUE or PROPERTY_INFO_ENTRY_EX macro.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>These macros allow you to specify a value for a corresponding property.</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>The PROPERTY_INFO_ENTRY_VALUE macro is a shorthand notation that allows you to change the value.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>The PROPERTY_INFO_ENTRY_VALUE macro calls the PROPERTY_INFO_ENTRY_EX macro.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>This macro allows you to add or change all of the attributes in the <bpt id="p1">**</bpt>UPROPINFO<ept id="p1">**</ept> structure.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>If you want to define your own property set, you can add one by making an additional BEGIN_PROPSET_MAP/END_PROPSET_MAP combination.</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>You need to define a GUID for the property set and then define your own properties.</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>If you have provider-specific properties, add them to a new property set instead of using an existing one.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>This avoids problems in later versions of OLE DB.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>User-Defined Property Sets</source>
+        </trans-unit>
+        <trans-unit id="146" translate="yes" xml:space="preserve">
+          <source>Visual C++ .NET supports user-defined property sets.</source>
+        </trans-unit>
+        <trans-unit id="147" translate="yes" xml:space="preserve">
+          <source>You no longer have to override <bpt id="p1">**</bpt>GetProperties<ept id="p1">**</ept> or <ph id="ph1">`GetPropertyInfo`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="148" translate="yes" xml:space="preserve">
+          <source>Instead, the templates detect any user-defined property set and add it to the appropriate object.</source>
+        </trans-unit>
+        <trans-unit id="149" translate="yes" xml:space="preserve">
+          <source>If you have a user-defined property set that needs to be available at initialization time (that is, before the consumer calls <bpt id="p1">**</bpt>IDBInitialize::Initialize<ept id="p1">**</ept>), you can specify this by using the <bpt id="p2">**</bpt>UPROPSET_USERINIT<ept id="p2">**</ept> flag in conjunction with the BEGIN_PROPERTY_SET_EX macro.</source>
+        </trans-unit>
+        <trans-unit id="150" translate="yes" xml:space="preserve">
+          <source>The property set must be in the data source object for this to work (as the OLE DB specification requires).</source>
+        </trans-unit>
+        <trans-unit id="151" translate="yes" xml:space="preserve">
+          <source>For example:</source>
+        </trans-unit>
+        <trans-unit id="152" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="153" translate="yes" xml:space="preserve">
+          <source>Provider Wizard-Generated Files</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

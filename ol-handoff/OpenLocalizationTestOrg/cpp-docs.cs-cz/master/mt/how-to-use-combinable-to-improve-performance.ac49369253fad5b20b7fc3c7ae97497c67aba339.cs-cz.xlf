@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">08a9087b08ec33ba08904286302a541bbb8d08e7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\parallel\concrt\how-to-use-combinable-to-improve-performance.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">mt</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Machine Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">64c7d1f60e2fd80b5f6c5b612091d17aeddecf9b</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">249f888ee0f38686ba527f6e20e5c497c8c244a4</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Use combinable to Improve Performance | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Use combinable to Improve Performance</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>This example shows how to use the <bpt id="p1">[</bpt>concurrency::combinable<ept id="p1">](../../parallel/concrt/reference/combinable-class.md)</ept> class to compute the sum of the numbers in a <bpt id="p2">[</bpt>std::array<ept id="p2">](../../standard-library/array-class-stl.md)</ept> object that are prime.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>The <ph id="ph1">`combinable`</ph> class improves performance by eliminating shared state.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>In some cases, parallel map (<bpt id="p1">[</bpt>concurrency::parallel_transform<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_transform)</ept>) and reduce (<bpt id="p2">[</bpt>concurrency:: parallel_reduce<ept id="p2">](reference/concurrency-namespace-functions.md#parallel_reduce)</ept>) can provide performance improvements over <ph id="ph1">`combinable`</ph>.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>For an example that uses map and reduce operations to produce the same results as this example, see <bpt id="p1">[</bpt>Parallel Algorithms<ept id="p1">](../../parallel/concrt/parallel-algorithms.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>The following example uses the <bpt id="p1">[</bpt>std::accumulate<ept id="p1">](../../standard-library/numeric-functions.md#accumulate)</ept> function to compute the sum of the elements in an array that are prime.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>In this example, <ph id="ph1">`a`</ph> is an <ph id="ph2">`array`</ph> object and the <ph id="ph3">`is_prime`</ph> function determines whether its input value is prime.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sum-of-primes#1</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The following example shows a naïve way to parallelize the previous example.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">[</bpt>concurrency::parallel_for_each<ept id="p1">](reference/concurrency-namespace-functions.md#parallel_for_each)</ept> algorithm to process the array in parallel and a <bpt id="p2">[</bpt>concurrency::critical_section<ept id="p2">](../../parallel/concrt/reference/critical-section-class.md)</ept> object to synchronize access to the <ph id="ph1">`prime_sum`</ph> variable.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>This example does not scale because each thread must wait for the shared resource to become available.</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sum-of-primes#2</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>The following example uses a <ph id="ph1">`combinable`</ph> object to improve the performance of the previous example.</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>This example eliminates the need for synchronization objects; it scales because the <ph id="ph1">`combinable`</ph> object enables each thread to perform its task independently.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>A <ph id="ph1">`combinable`</ph> object is typically used in two steps.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>First, produce a series of fine-grained computations by performing work in parallel.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>Next, combine (or reduce) the computations into a final result.</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>This example uses the <bpt id="p1">[</bpt>concurrency::combinable::local<ept id="p1">](reference/combinable-class.md#local)</ept> method to obtain a reference to the local sum.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>It then uses the <bpt id="p1">[</bpt>concurrency::combinable::combine<ept id="p1">](reference/combinable-class.md#combine)</ept> method and a <bpt id="p2">[</bpt>std::plus<ept id="p2">](../../standard-library/plus-struct.md)</ept> object to combine the local computations into the final result.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sum-of-primes#3</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Example</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>The following complete example computes the sum of prime numbers both serially and in parallel.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>The example prints to the console the time that is required to perform both computations.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>concrt-parallel-sum-of-primes#4</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>The following sample output is for a computer that has four processors.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Compiling the Code</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>To compile the code, copy it and then paste it in a Visual Studio project, or paste it in a file that is named <ph id="ph1">`parallel-sum-of-primes.cpp`</ph> and then run the following command in a Visual Studio Command Prompt window.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>cl.exe /EHsc parallel-sum-of-primes.cpp</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>Robust Programming</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>For an example that uses map and reduce operations to produce the same results, see <bpt id="p1">[</bpt>Parallel Algorithms<ept id="p1">](../../parallel/concrt/parallel-algorithms.md)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>See Also</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>Parallel Containers and Objects</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>combinable Class</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>critical_section Class</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

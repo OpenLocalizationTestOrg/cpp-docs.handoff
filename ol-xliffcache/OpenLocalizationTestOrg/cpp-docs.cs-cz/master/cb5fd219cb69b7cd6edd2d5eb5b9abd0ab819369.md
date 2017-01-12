@@ -1,45 +1,41 @@
 ---
-title: const_mem_fun_ref_t Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- std::const_mem_fun_ref_t
-- const_mem_fun_ref_t
-- std.const_mem_fun_ref_t
-- xfunctional/std::const_mem_fun_ref_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- const_mem_fun_ref_t class
+title: "const_mem_fun_ref_t Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "std::const_mem_fun_ref_t"
+  - "const_mem_fun_ref_t"
+  - "std.const_mem_fun_ref_t"
+  - "xfunctional/std::const_mem_fun_ref_t"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "const_mem_fun_ref_t class"
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
 caps.latest.revision: 20
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: cb5fd219cb69b7cd6edd2d5eb5b9abd0ab819369
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # const_mem_fun_ref_t Class
 An adapter class that allows a **const** member function that takes no arguments to be called as a unary function object when initialized with a reference argument.  
@@ -81,11 +77,5 @@ class const_mem_fun_ref_t
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
-
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

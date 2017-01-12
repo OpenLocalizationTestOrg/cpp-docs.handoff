@@ -1,42 +1,38 @@
 ---
-title: Control Settings, MFC ActiveX Control Wizard | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.ctl.settings
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC ActiveX Control Wizard, control settings
+title: "Control Settings, MFC ActiveX Control Wizard | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vc.appwiz.mfc.ctl.settings"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "MFC ActiveX Control Wizard, control settings"
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
 caps.latest.revision: 16
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 880b31cb2fcdb8b5fca00afccaad105458bcec6f
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Control Settings, MFC ActiveX Control Wizard
 Use this page of the wizard to specify how you want the control to behave. For example, you can base the control on standard Windows control types, optimize its behavior and appearance, or indicate that the control can act as a container for other controls.  
@@ -108,10 +104,4 @@ Use this page of the wizard to specify how you want the control to behave. For e
  [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
  [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
  [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

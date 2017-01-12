@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="markdown" source-language="en-US" target-language="cs-cz">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-787e512" tool-company="Microsoft" />
+      <xliffext:olfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8c5680c3d195c9d365a45ffc1d63f3588d25dba7</xliffext:olfilehash>
+      <xliffext:olfilepath xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">docs\windows\use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md</xliffext:olfilepath>
+      <xliffext:oltranslationpriority xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">ht</xliffext:oltranslationpriority>
+      <xliffext:oltranslationtype xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">Human Translation</xliffext:oltranslationtype>
+      <xliffext:olskeletonhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">8e748d37be9c0a31637df84c930d7cf2c05db3c1</xliffext:olskeletonhash>
+      <xliffext:olxliffhash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">3f8fe2ab55c3d6a359708a91e7cbf9e3e476b1de</xliffext:olxliffhash>
+    </header>
+    <body>
+      <group id="content" extype="content">
+        <trans-unit id="101" translate="yes" xml:space="preserve">
+          <source>How to: Use winmdidl.exe and midlrt.exe to create .h files from windows metadata | Microsoft Docs</source>
+        </trans-unit>
+        <trans-unit id="102" translate="yes" xml:space="preserve">
+          <source>How to: Use winmdidl.exe and midlrt.exe to create .h files from windows metadata</source>
+        </trans-unit>
+        <trans-unit id="103" translate="yes" xml:space="preserve">
+          <source>Winmdidl.exe and midlrt.exe enable COM-level interaction between native C++ code and Windows Runtime components.</source>
+        </trans-unit>
+        <trans-unit id="104" translate="yes" xml:space="preserve">
+          <source>Winmdidl.exe takes as input a .winmd file that contains metadata for a Windows Runtime component and outputs an IDL file.</source>
+        </trans-unit>
+        <trans-unit id="105" translate="yes" xml:space="preserve">
+          <source>Midlrt.exe converts that IDL file into header files that the C++ code can consume.</source>
+        </trans-unit>
+        <trans-unit id="106" translate="yes" xml:space="preserve">
+          <source>Both tools run on the command line.</source>
+        </trans-unit>
+        <trans-unit id="107" translate="yes" xml:space="preserve">
+          <source>You use these tools in two main scenarios:</source>
+        </trans-unit>
+        <trans-unit id="108" translate="yes" xml:space="preserve">
+          <source>Creating custom IDL and header files so that a  C++ app written by using the Windows Runtime Template Library (WRL) can consume a custom Windows Runtime component.</source>
+        </trans-unit>
+        <trans-unit id="109" translate="yes" xml:space="preserve">
+          <source>Generating proxy and stub files for user-defined event types in a Windows Runtime Component.</source>
+        </trans-unit>
+        <trans-unit id="110" translate="yes" xml:space="preserve">
+          <source>For more information, see <bpt id="p1">[</bpt>Raising Events in Windows Runtime Components<ept id="p1">](http://msdn.microsoft.com/Library/52e42521-a80d-455d-b5ff-82f03980936e)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="111" translate="yes" xml:space="preserve">
+          <source>These tools are required only for parsing custom .winmd files.</source>
+        </trans-unit>
+        <trans-unit id="112" translate="yes" xml:space="preserve">
+          <source>The .idl and .h files for Windows operating system components are already generated for you.</source>
+        </trans-unit>
+        <trans-unit id="113" translate="yes" xml:space="preserve">
+          <source>By default in <ph id="ph1">[!INCLUDE[win81](../misc/includes/win81_md.md)]</ph>, they are located in \Program Files (x86)\Windows Kits\8.1\Include\winrt<ph id="ph2">\\</ph>.</source>
+        </trans-unit>
+        <trans-unit id="114" translate="yes" xml:space="preserve">
+          <source>Location of the tools</source>
+        </trans-unit>
+        <trans-unit id="115" translate="yes" xml:space="preserve">
+          <source>By default in <ph id="ph1">[!INCLUDE[win81](../misc/includes/win81_md.md)]</ph>, winmdidl.exe and midlrt.exe are located in  C:\Program Files (x86)\Windows Kits\8.1<ph id="ph2">\\</ph>.</source>
+        </trans-unit>
+        <trans-unit id="116" translate="yes" xml:space="preserve">
+          <source>Versions of the tools are also available in the \bin\x86\ and \bin\x64\ folders.</source>
+        </trans-unit>
+        <trans-unit id="117" translate="yes" xml:space="preserve">
+          <source>Winmdidl command-line arguments</source>
+        </trans-unit>
+        <trans-unit id="118" translate="yes" xml:space="preserve">
+          <source>Prevents console display of the winmdidl copyright message and version number.</source>
+        </trans-unit>
+        <trans-unit id="119" translate="yes" xml:space="preserve">
+          <source>Not used.</source>
+        </trans-unit>
+        <trans-unit id="120" translate="yes" xml:space="preserve">
+          <source>Displays the total execution time in the console output.</source>
+        </trans-unit>
+        <trans-unit id="121" translate="yes" xml:space="preserve">
+          <source>/outdir:<ph id="ph1">\&lt;</ph>dir&gt;</source>
+        </trans-unit>
+        <trans-unit id="122" translate="yes" xml:space="preserve">
+          <source>Specifies an output directory.</source>
+        </trans-unit>
+        <trans-unit id="123" translate="yes" xml:space="preserve">
+          <source>If the path contains spaces, use quotation marks.</source>
+        </trans-unit>
+        <trans-unit id="124" translate="yes" xml:space="preserve">
+          <source>The default output directory is <bpt id="p1">*</bpt><ph id="ph1">\&lt;</ph>drive&gt;<ept id="p1">*</ept>:\Users<ph id="ph2">\\</ph><bpt id="p2">*</bpt><ph id="ph3">\&lt;</ph>username&gt;<ept id="p2">*</ept>\AppData\Local\VirtualStore\Program Files (x86)\Microsoft Visual Studio 12.0<ph id="ph4">\\</ph>.</source>
+        </trans-unit>
+        <trans-unit id="125" translate="yes" xml:space="preserve">
+          <source>Specifies a file that contains custom text to prepend to the default copyright message and winmdidl version number at the top of the generated .idl file.</source>
+        </trans-unit>
+        <trans-unit id="126" translate="yes" xml:space="preserve">
+          <source>If the path contains spaces, use quotation marks.</source>
+        </trans-unit>
+        <trans-unit id="127" translate="yes" xml:space="preserve">
+          <source>Causes the file to be formatted as UTF-8.</source>
+        </trans-unit>
+        <trans-unit id="128" translate="yes" xml:space="preserve">
+          <source>The name of the .winmd file to parse.</source>
+        </trans-unit>
+        <trans-unit id="129" translate="yes" xml:space="preserve">
+          <source>If the path contains spaces, use quotation marks.</source>
+        </trans-unit>
+        <trans-unit id="130" translate="yes" xml:space="preserve">
+          <source>Midlrt command-line arguments</source>
+        </trans-unit>
+        <trans-unit id="131" translate="yes" xml:space="preserve">
+          <source>See <bpt id="p1">[</bpt>MIDLRT and Windows Runtime components<ept id="p1">](http://msdn.microsoft.com/library/windows/desktop/hh869900\(v=vs.85\).aspx)</ept>.</source>
+        </trans-unit>
+        <trans-unit id="132" translate="yes" xml:space="preserve">
+          <source>Examples</source>
+        </trans-unit>
+        <trans-unit id="133" translate="yes" xml:space="preserve">
+          <source>The following example shows a winmdidl command at a Visual Studio x86 command prompt.</source>
+        </trans-unit>
+        <trans-unit id="134" translate="yes" xml:space="preserve">
+          <source>It specifies an output directory, and a file that contains special banner text to add to the generated .idl file.</source>
+        </trans-unit>
+        <trans-unit id="135" translate="yes" xml:space="preserve">
+          <source>C:\Program Files (x86)\Microsoft Visual Studio 12.0&gt;winmdidl /nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt "C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\Test_for_winmdidl\test_for_winmdidl.winmd"</source>
+        </trans-unit>
+        <trans-unit id="136" translate="yes" xml:space="preserve">
+          <source>The next example shows the console display from winmdidl that indicates that the operation succeeded.</source>
+        </trans-unit>
+        <trans-unit id="137" translate="yes" xml:space="preserve">
+          <source>Generating c:\users\giraffe\documents<ph id="ph1">\\</ph>\Test_for_winmdidl.idl</source>
+        </trans-unit>
+        <trans-unit id="138" translate="yes" xml:space="preserve">
+          <source>Next, midlrt is run on the generated IDL file.</source>
+        </trans-unit>
+        <trans-unit id="139" translate="yes" xml:space="preserve">
+          <source>Notice that the <bpt id="p1">**</bpt>metadata_dir<ept id="p1">**</ept> argument is specified after the name of the .idl file.</source>
+        </trans-unit>
+        <trans-unit id="140" translate="yes" xml:space="preserve">
+          <source>The path of \WinMetadata\ is required—it's the location for windows.winmd.</source>
+        </trans-unit>
+        <trans-unit id="141" translate="yes" xml:space="preserve">
+          <source>C:\Program Files (x86)\Microsoft Visual Studio 12.0&gt; midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"</source>
+        </trans-unit>
+        <trans-unit id="142" translate="yes" xml:space="preserve">
+          <source>Remarks</source>
+        </trans-unit>
+        <trans-unit id="143" translate="yes" xml:space="preserve">
+          <source>The output file from a winmdidl operation has the same name as the input file but has the .idl file name extension.</source>
+        </trans-unit>
+        <trans-unit id="144" translate="yes" xml:space="preserve">
+          <source>If you are developing a Windows Runtime component that will be accessed from the WRL, you can specify winmdidl.exe and midlrt.exe to run as post-build steps so that the .idl and .h files are generated on each build.</source>
+        </trans-unit>
+        <trans-unit id="145" translate="yes" xml:space="preserve">
+          <source>For an example, see <bpt id="p1">[</bpt>Raising Events in Windows Runtime Components<ept id="p1">](http://msdn.microsoft.com/Library/52e42521-a80d-455d-b5ff-82f03980936e)</ept>.</source>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

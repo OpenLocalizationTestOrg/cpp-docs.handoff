@@ -1,42 +1,38 @@
 ---
-title: PROVIDER_COLUMN_ENTRY_WSTR | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- PROVIDER_COLUMN_ENTRY_WSTR
-dev_langs:
-- C++
-helpviewer_keywords:
-- PROVIDER_COLUMN_ENTRY_WSTR macro
+title: "PROVIDER_COLUMN_ENTRY_WSTR | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "PROVIDER_COLUMN_ENTRY_WSTR"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "PROVIDER_COLUMN_ENTRY_WSTR macro"
 ms.assetid: 70630bd5-d782-473b-9777-aebbbf5321c5
 caps.latest.revision: 8
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6cfce68febf04c5af4271da9e1a7b8b3b6b53fcf
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # PROVIDER_COLUMN_ENTRY_WSTR
 Represents a specific column supported by the provider.  
@@ -71,8 +67,3 @@ name
  [OLE DB Provider Templates](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB Provider Template Architecture](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Creating an OLE DB Provider](../../data/oledb/creating-an-ole-db-provider.md)
-
-
-<!--HONumber=Jan17_HO1-->
-
-
