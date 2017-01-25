@@ -1,43 +1,39 @@
 ---
-title: CD2DPointU Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CD2DPointU
-- afxrendertarget/CD2DPointU
-dev_langs:
-- C++
-helpviewer_keywords:
-- CD2DPointU class
+title: "CD2DPointU Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CD2DPointU"
+  - "afxrendertarget/CD2DPointU"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CD2DPointU class"
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
 caps.latest.revision: 18
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 6b918be24aba52d6143e8f98dd529a8ec9f196aa
-ms.openlocfilehash: f1bfc24cfacb9c433a074a3ae601ac8bffe04d68
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CD2DPointU Class
 A wrapper for `D2D1_POINT_2U`.  
@@ -113,9 +109,3 @@ operator CPoint();
   
 ## See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

@@ -1,18 +1,14 @@
 ---
-title: '&lt;allocators&gt; macros | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "&lt;allocators&gt; macros | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 9cb5ee07-1ff9-4594-ae32-3c8c6efb511a
 caps.latest.revision: 12
-manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: da17f9af1f14df13eb3871ef9ccf785356e02de4
-ms.openlocfilehash: abc1dd29ba68540a6669f7aff1bbd3dffdab616a
-
+manager: "ghogen"
 ---
 # &lt;allocators&gt; macros
 ||||  
@@ -97,11 +93,5 @@ public:
  [\<allocators>](../standard-library/allocators-header.md)
 
 
-
-
-
-
-
-<!--HONumber=Jan17_HO2-->
 
 

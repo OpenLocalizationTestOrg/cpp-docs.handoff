@@ -1,42 +1,38 @@
 ---
-title: ITopologyExecutionResource Structure | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- concrtrm/concurrency::ITopologyExecutionResource
-dev_langs:
-- C++
-helpviewer_keywords:
-- ITopologyExecutionResource structure
+title: "ITopologyExecutionResource Structure | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "concrtrm/concurrency::ITopologyExecutionResource"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "ITopologyExecutionResource structure"
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
 caps.latest.revision: 10
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: cc54beb4790c9d2ea5bfcb2c8ffd4bca7dca399e
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # ITopologyExecutionResource Structure
 An interface to an execution resource as defined by the Resource Manager.  
@@ -89,9 +85,3 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
   
 ## See Also  
  [concurrency Namespace](concurrency-namespace.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
