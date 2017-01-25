@@ -1,42 +1,38 @@
 ---
-title: omp_get_wtime | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- omp_get_wtime
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_get_wtime OpenMP function
+title: "omp_get_wtime | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "omp_get_wtime"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "omp_get_wtime OpenMP function"
 ms.assetid: c8dee105-ec1b-42e5-a6e3-edeedcf9854c
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: eaf83132da9ce5d348e5ed9a5bbd1e1afcd67ebd
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # omp_get_wtime
 Returns a value in seconds of the time elapsed from some point.  
@@ -88,8 +84,3 @@ wtick = 2.793651148400146e-007
   
 ## See Also  
  [Functions](../../../parallel/openmp/reference/openmp-functions.md)
-
-
-<!--HONumber=Jan17_HO2-->
-
-
