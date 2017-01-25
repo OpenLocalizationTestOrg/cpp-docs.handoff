@@ -1,42 +1,38 @@
 ---
-title: CMFCColorPickerCtrl Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CMFCColorPickerCtrl
-dev_langs:
-- C++
-helpviewer_keywords:
-- CMFCColorPickerCtrl class
+title: "CMFCColorPickerCtrl Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CMFCColorPickerCtrl"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CMFCColorPickerCtrl class"
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
 caps.latest.revision: 33
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: d25fd3b7406cfe70cbaf42e55f029ff3d03bbcfb
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CMFCColorPickerCtrl Class
 The `CMFCColorPickerCtrl` class provides functionality for a control that is used to select colors.  
@@ -405,9 +401,3 @@ void SetType(COLORTYPE colorType);
  [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

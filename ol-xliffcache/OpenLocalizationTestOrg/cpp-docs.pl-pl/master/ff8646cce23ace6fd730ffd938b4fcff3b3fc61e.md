@@ -1,45 +1,41 @@
 ---
-title: CDateTimeCtrl Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CDateTimeCtrl
-dev_langs:
-- C++
-helpviewer_keywords:
-- DateTimePicker control [MFC], CDateTimeCtrl class
-- date-picking functionality
-- CDateTimeCtrl class
-- DateTimePicker control [MFC]
+title: "CDateTimeCtrl Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CDateTimeCtrl"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "DateTimePicker control [MFC], CDateTimeCtrl class"
+  - "date-picking functionality"
+  - "CDateTimeCtrl class"
+  - "DateTimePicker control [MFC]"
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 caps.latest.revision: 23
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: ff8646cce23ace6fd730ffd938b4fcff3b3fc61e
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CDateTimeCtrl Class
 Encapsulates the functionality of a date and time picker control.  
@@ -556,9 +552,3 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
  [CWnd Class](../../mfc/reference/cwnd-class.md)   
  [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CMonthCalCtrl Class](../../mfc/reference/cmonthcalctrl-class.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
