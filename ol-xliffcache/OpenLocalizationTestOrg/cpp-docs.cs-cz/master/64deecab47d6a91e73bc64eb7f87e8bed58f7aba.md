@@ -1,41 +1,45 @@
 ---
-title: "Compiler Error C3033 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3033"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3033"
+title: Compiler Error C3033 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3033
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3033
 ms.assetid: 8628b6bb-a650-4ed2-af13-57acd2f7ddbb
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 64deecab47d6a91e73bc64eb7f87e8bed58f7aba
+
 ---
-# Compiler Error C3033
+# <a name="compiler-error-c3033"></a>Compiler Error C3033
 'var' : variable in 'clause' clause cannot have const-qualified type  
   
  Values passed to certain clauses cannot be `const` variables.  
@@ -56,3 +60,8 @@ int main() {
    ;  
 }  
 ```
+
+
+<!--HONumber=Jan17_HO4-->
+
+
