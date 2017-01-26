@@ -1,46 +1,42 @@
 ---
-title: CCachedDataPathProperty Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CCachedDataPathProperty
-dev_langs:
-- C++
-helpviewer_keywords:
-- ActiveX controls [C++], asynchronous
-- CCachedDataPathProperty class
-- OLE controls [C++], asynchronous
-- asynchronous controls [C++]
-- memory files [C++]
+title: "CCachedDataPathProperty Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CCachedDataPathProperty"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "ActiveX controls [C++], asynchronous"
+  - "CCachedDataPathProperty class"
+  - "OLE controls [C++], asynchronous"
+  - "asynchronous controls [C++]"
+  - "memory files [C++]"
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
 caps.latest.revision: 22
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: da6a2e61e8c0e2919edf3047faa45b0f5ecca2bc
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CCachedDataPathProperty Class
 Implements an OLE control property transferred asynchronously and cached in a memory file.  
@@ -133,9 +129,3 @@ CMemFile m_Cache;
  [CDataPathProperty Class](../../mfc/reference/cdatapathproperty-class.md)   
  [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CDataPathProperty Class](../../mfc/reference/cdatapathproperty-class.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
