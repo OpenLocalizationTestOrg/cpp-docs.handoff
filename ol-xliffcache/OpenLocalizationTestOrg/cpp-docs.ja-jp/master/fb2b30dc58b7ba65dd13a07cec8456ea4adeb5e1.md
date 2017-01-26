@@ -1,18 +1,14 @@
 ---
-title: '&lt;set&gt; functions | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "&lt;set&gt; functions | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
-manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fb2b30dc58b7ba65dd13a07cec8456ea4adeb5e1
-
+manager: "ghogen"
 ---
 # &lt;set&gt; functions
 |||  
@@ -72,11 +68,5 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 ## See Also  
  [\<set>](../standard-library/set.md)
 
-
-
-
-
-
-<!--HONumber=Jan17_HO2-->
 
 
