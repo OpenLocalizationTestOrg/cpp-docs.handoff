@@ -1,42 +1,38 @@
 ---
-title: Compiler Error C2514 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: error-reference
-f1_keywords:
-- C2514
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2514
+title: "Compiler Error C2514 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2514"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2514"
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
 caps.latest.revision: 8
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ff83de0ee313e7a0dfa1ebbeeab1d471264571ba
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Compiler Error C2514
 'class' : class has no constructors  
@@ -67,8 +63,3 @@ class fmaker {
    }  
 };   
 ```
-
-
-<!--HONumber=Jan17_HO2-->
-
-

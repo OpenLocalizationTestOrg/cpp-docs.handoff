@@ -1,44 +1,40 @@
 ---
-title: CAtlComModule Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- ATL.CAtlComModule
-- CAtlComModule
-- ATL::CAtlComModule
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlComModule class
+title: "CAtlComModule Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "ATL.CAtlComModule"
+  - "CAtlComModule"
+  - "ATL::CAtlComModule"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CAtlComModule class"
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
 caps.latest.revision: 19
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 070f847ec50cfaca8f4e56a58bef0fe3ce9b1aa2
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CAtlComModule Class
 This class implements a COM server module.  
@@ -181,9 +177,3 @@ HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 ## See Also  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
  [Class Overview](../../atl/atl-class-overview.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
