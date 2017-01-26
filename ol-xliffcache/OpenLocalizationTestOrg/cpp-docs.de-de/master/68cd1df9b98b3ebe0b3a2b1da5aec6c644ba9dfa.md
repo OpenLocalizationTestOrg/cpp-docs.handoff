@@ -1,44 +1,40 @@
 ---
-title: CAtlArray Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- ATL::CAtlArray
-- ATL.CAtlArray
-- CAtlArray
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlArray class
+title: "CAtlArray Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "ATL::CAtlArray"
+  - "ATL.CAtlArray"
+  - "CAtlArray"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CAtlArray class"
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
 caps.latest.revision: 21
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 68cd1df9b98b3ebe0b3a2b1da5aec6c644ba9dfa
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CAtlArray Class
 This class implements an array object.  
@@ -491,9 +487,3 @@ void SetAtGrow(size_t iElement,  INARGTYPE element);
  [Marquee Sample](../../visual-cpp-samples.md)   
  [CArray Class](../../mfc/reference/carray-class.md)   
  [Class Overview](../../atl/atl-class-overview.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

@@ -1,42 +1,38 @@
 ---
-title: task_completion_event Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- ppltasks/concurrency::task_completion_event
-dev_langs:
-- C++
-helpviewer_keywords:
-- task_completion_event class
+title: "task_completion_event Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "ppltasks/concurrency::task_completion_event"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "task_completion_event class"
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 2bc9d493a493efdb2bb68c8a2caaedcd2ff11d53
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # task_completion_event Class
 The `task_completion_event` class allows you to delay the execution of a task until a condition is satisfied, or start a task in response to an external event.  
@@ -132,9 +128,3 @@ task_completion_event();
   
 ## See Also  
  [concurrency Namespace](concurrency-namespace.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
