@@ -1,45 +1,41 @@
 ---
-title: reverse_iterator Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- reverse_iterator
-- std::reverse_iterator
-- std.reverse_iterator
-- xutility/std::reverse_iterator
-dev_langs:
-- C++
-helpviewer_keywords:
-- reverse_iterator class
+title: "reverse_iterator Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "reverse_iterator"
+  - "std::reverse_iterator"
+  - "std.reverse_iterator"
+  - "xutility/std::reverse_iterator"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "reverse_iterator class"
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
 caps.latest.revision: 21
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: ad71eee60d2dd39ddfc861f6cbccc1d60e730dde
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # reverse_iterator Class
 The template class is an iterator adaptor that describes a reverse iterator object that behaves like a random-access or bidirectional iterator, only in reverse. It enables the backward traversal of a range.  
@@ -988,10 +984,4 @@ int main( )
  [\<iterator>](../standard-library/iterator.md)   
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
-
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

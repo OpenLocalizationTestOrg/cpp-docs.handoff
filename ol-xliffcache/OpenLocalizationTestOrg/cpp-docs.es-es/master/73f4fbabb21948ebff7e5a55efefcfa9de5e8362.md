@@ -1,57 +1,53 @@
 ---
-title: vsscanf_s, vswscanf_s | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname:
-- vswscanf_s
-- vsscanf_s
-apilocation:
-- msvcrt.dll
-- msvcr80.dll
-- msvcr90.dll
-- msvcr100.dll
-- msvcr100_clr0400.dll
-- msvcr110.dll
-- msvcr110_clr0400.dll
-- msvcr120.dll
-- msvcr120_clr0400.dll
-- ucrtbase.dll
-apitype: DLLExport
-f1_keywords:
-- vsscanf_s
-- vswscanf_s
-- _vstscanf_s
-dev_langs:
-- C++
+title: "vsscanf_s, vswscanf_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "vswscanf_s"
+  - "vsscanf_s"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "vsscanf_s"
+  - "vswscanf_s"
+  - "_vstscanf_s"
+dev_langs: 
+  - "C++"
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
 caps.latest.revision: 6
-author: corob-msft
-ms.author: corob
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 73f4fbabb21948ebff7e5a55efefcfa9de5e8362
-
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # vsscanf_s, vswscanf_s
 Reads formatted data from a string. These versions of [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) have security enhancements, as described in [Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -179,8 +175,3 @@ Real:     = 15.000000
  [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
  [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md)
-
-
-<!--HONumber=Jan17_HO2-->
-
-

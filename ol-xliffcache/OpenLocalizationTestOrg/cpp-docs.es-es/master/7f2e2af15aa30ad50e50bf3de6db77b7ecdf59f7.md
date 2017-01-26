@@ -1,42 +1,38 @@
 ---
-title: Handlers for WM_ Messages | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- WM_
-dev_langs:
-- C++
-helpviewer_keywords:
-- WM_ messages
+title: "Handlers for WM_ Messages | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "WM_"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "WM_ messages"
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7f2e2af15aa30ad50e50bf3de6db77b7ecdf59f7
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # Handlers for WM_ Messages
 The following topics correspond to the map entries.  
@@ -54,10 +50,4 @@ The following topics correspond to the map entries.
   
 ## See Also  
  [Message Maps](../../mfc/reference/message-maps-mfc.md)
-
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 
