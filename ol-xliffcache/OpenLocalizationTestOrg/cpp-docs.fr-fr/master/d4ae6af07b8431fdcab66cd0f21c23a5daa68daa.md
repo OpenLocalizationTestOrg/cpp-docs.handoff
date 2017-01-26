@@ -1,42 +1,38 @@
 ---
-title: CMFCRibbonProgressBar Class | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- CMFCRibbonProgressBar
-dev_langs:
-- C++
-helpviewer_keywords:
-- CMFCRibbonProgressBar class
+title: "CMFCRibbonProgressBar Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "CMFCRibbonProgressBar"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CMFCRibbonProgressBar class"
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
 caps.latest.revision: 26
-author: mikeblome
-ms.author: mblome
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: d4ae6af07b8431fdcab66cd0f21c23a5daa68daa
-
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
 # CMFCRibbonProgressBar Class
 Implements a control that visually indicates the progress of a lengthy operation.  
@@ -249,9 +245,3 @@ void SetRange(
  [Classes](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)   
  [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
